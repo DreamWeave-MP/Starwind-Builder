@@ -13,8 +13,8 @@ make:
   image: ${build_img}
   stage: build
   script:
-  - apt update && apt-get install -y --force-yes git zip
-  - ./build.sh
+  - apt update && apt-get install -y --force-yes git zip make
+  - make
   artifacts:
     paths:
       - "Starwind.omwaddon"
