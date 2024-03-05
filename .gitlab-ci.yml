@@ -3,7 +3,7 @@ stages:
   - deploy
 
 variables:
-  build_img: "$CI_REGISTRY/magicaldave1/makron:0.0.1"
+  build_img: "$CI_REGISTRY/magicaldave1/makron:0.0.2"
   curl_img: curlimages/curl:7.83.0
   pkg_name: "${CI_PROJECT_NAME}.zip"
   pkg_url:
