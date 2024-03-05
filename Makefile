@@ -1,5 +1,5 @@
 build: plugins-bin
-	./build.sh 2> grep -v "Can't find \"Data Files\"" | grep -v "<DATADIR> is\|Output saved in\|Original backed up to\|Can't find \"Data Files\""
+	./build.sh 2> grep -v "Can't find \"Data Files\"" | grep -v "<DATADIR> is\|Output saved in\|Original backed up to\|Can't find \"Data Files\"\|Log"
 
 plugins-bin:
 	mkdir -p build
