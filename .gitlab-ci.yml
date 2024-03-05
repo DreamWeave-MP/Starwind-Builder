@@ -1,5 +1,6 @@
 stages:
   - build
+  - dump
 
 variables:
   build_img: "$CI_REGISTRY/magicaldave1/makron:0.0.2"
@@ -8,7 +9,7 @@ variables:
   pkg_url:
     "${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/generic/${CI_PROJECT_NAME}/${CI_COMMIT_TAG}"
 
-make:
+build_tsi:
   image: ${build_img}
   stage: build
   script:
@@ -17,5 +18,21 @@ make:
   artifacts:
     paths:
       - "Starwind.omwaddon"
+  rules:
+    - if: $CI_COMMIT_BRANCH == "master"
+
+dump_merchants:
+  image: ${build_img}
+  stage: dump
+  script:
+  - apt update && apt-get install -y --force-yes unzip
+  - curl -sSL -o Starwind.omwaddon.zip "$CI_JOB_NAME:build_starwind:Starwind.omwaddon"
+  - unzip -o Starwind.omwaddon.zip
+  - merchantIndexGrabber
+  artifacts:
+    paths:
+      - "merchantIndexDatabase.json"
+  dependencies:
+    - build_starwind
   rules:
     - if: $CI_COMMIT_BRANCH == "master"
