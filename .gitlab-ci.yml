@@ -1,6 +1,5 @@
 stages:
   - build
-  - deploy
 
 variables:
   build_img: "$CI_REGISTRY/magicaldave1/makron:0.0.2"
@@ -20,11 +19,3 @@ make:
       - "Starwind.omwaddon"
   rules:
     - if: $CI_COMMIT_BRANCH == "master"
-
-upload:
-  stage: deploy
-  image: ${curl_img}
-  script:
-    - 'curl -s --header "JOB-TOKEN: ${CI_JOB_TOKEN}" --upload-file ${pkg_name} "${pkg_url}/${pkg_name}"'
-    - 'curl -s --header "JOB-TOKEN: ${CI_JOB_TOKEN}" --upload-file ${pkg_name}.sha256sum.txt "${pkg_url}/${pkg_name}.sha256sum.txt"'
-    - 'curl -s --header "JOB-TOKEN: ${CI_JOB_TOKEN}" --upload-file ${pkg_name}.sha512sum.txt "${pkg_url}/${pkg_name}.sha512sum.txt"'
