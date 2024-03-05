@@ -26,7 +26,7 @@ dump_merchants:
   stage: dump
   script:
   - apt update && apt-get install -y --force-yes unzip curl
-  - curl -sSL -o Starwind.omwaddon.zip "$CI_JOB_NAME:build_starwind:Starwind.omwaddon"
+  - curl -sSL -o Starwind.omwaddon.zip "${CI_JOB_NAME}_build_tsi/artifacts/raw/Starwind.omwaddon?job=build_tsi"
   - unzip -o Starwind.omwaddon.zip
   - merchantIndexGrabber
   artifacts:
