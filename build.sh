@@ -96,8 +96,9 @@ tes3cmd modify --type CELL --replace "/SW_ManaKoltoMedTank/tsi_kolto_wall/" Star
 # When I ran a global search against it and tried to dump instances of it out of the plugin it didn't appear to have any references
 tes3cmd delete --type SCPT --exact-id sw_ StarwindRemasteredV1.15.esm
 # Delete junk cells added by the CS bug
+echo "Cleaning junk cells..."
 for cell in "${JUNK_CELL[@]}"; do tes3cmd delete --type CELL --type PGRD --hide-backups --exact-id "$cell" StarwindRemasteredV1.15.esm StarwindRemasteredPatch.esm; done
-tes3cmd delete --type CELL --exterior StarwindRemasteredV1.15.esm StarwindRemasteredPatch.esm
+tes3cmd delete --type CELL --exterior StarwindRemasteredV1.15.esm StarwindRemasteredPatch.esm alt_start1.5.esp "bings race pack.esp"
 # Original plugin is dirty
 echo "Cleaning bings race pack..."
 tes3cmd delete --type GMST "bings race pack.esp"
@@ -110,13 +111,6 @@ tes3cmd modify --type TES3 --replace "/Starwind Enhanced/StarwindRemasteredPatch
 tes3cmd modify --type TES3 --replace "/431652/11437434/" "bings race pack.esp" StarwindRacesJMC.esp
 tes3cmd delete --type CELL --instance-match "MastIdx:6" "bings race pack.esp" StarwindRacesJMC.esp
 tes3cmd delete --type CELL --instance-match "SWE_DoorFrameLight1" "bings race pack.esp"
-# Delete exteriors for plugins that shouldn't need them
-echo "Stripping exteriors..."
-tes3cmd delete --type CELL --exterior "StarwindRemasteredV1.15.esm" \
-    "StarwindRemasteredPatch.esm" \
-    "alt_start1.5.esp" \
-    "bings race pack.esp"
-
 
 tes3cmd dump --type BSGN --match "deleted" --raw-with-header deletedbirthsigns.esp StarwindRemasteredV1.15.esm
 
