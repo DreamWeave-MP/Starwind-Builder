@@ -8,7 +8,7 @@ plugins-bin:
 plugins-text:
 	find . -type f -name "*.omwaddon" -exec sh -c 'OUT_FILE="$$(echo "$$1" | sed "s/\.omwaddon$$/.json/")"; tes3conv "$$1" "$$OUT_FILE"; rm -rf src/"$$OUT_FILE"; mv "$$OUT_FILE" src/' sh {} \;
 
-deploy: build
+deploy: plugins-text build
 	mv Starwind.omwaddon $$HOME/.local/share/openmw/data/
 
 clean:
