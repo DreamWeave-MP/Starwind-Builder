@@ -1,0 +1,286 @@
+[
+  {
+    "type": "Header",
+    "flags": "",
+    "version": 1.3,
+    "file_type": "Esp",
+    "author": "",
+    "description": "",
+    "num_objects": 11,
+    "masters": [
+      [
+        "Morrowind.esm",
+        79837557
+      ],
+      [
+        "Tribunal.esm",
+        4565686
+      ],
+      [
+        "Bloodmoon.esm",
+        9631798
+      ],
+      [
+        "StarwindRemasteredV1.15.esm",
+        4162099
+      ],
+      [
+        "StarwindRemasteredPatch.esm",
+        11432889
+      ]
+    ]
+  },
+  {
+    "type": "Script",
+    "flags": "",
+    "id": "SW_FTravelNarShaddaa",
+    "header": {
+      "num_shorts": 0,
+      "num_longs": 0,
+      "num_floats": 0,
+      "bytecode_length": 692,
+      "variables_length": 0
+    },
+    "variables": "AAAAAA==",
+    "bytecode": "tAIAAAYBHgkgWBgQID09IDEGARoWIEcNRnJlaWdodFRyYXZlbCAhPSAyNQUBRw1GcmVpZ2h0VHJhdmVsAyAyNSwRD1NoaXBUcmF2ZWxTb3VuZAwBF1NXX0ZyZWlnaHRlclRvRGFudG9vaW5l2xAMARZTV19GcmVpZ2h0ZXJUb1RhdG9vaW5l2xAMARRTV19GcmVpZ2h0ZXJUb01hbmFhbtsQDAEVU1dfRnJlaWdodGVyVG9LYXNoeXlr2xAMARZTV19GcmVpZ2h0ZXJUb0RhdGhvbWly2xAMARRTV19GcmVpZ2h0ZXJUb0dhbW9yctsQDAESU1dfRnJlaWdodGVyVG9Ib3Ro2xAMARNTV19GcmVpZ2h0ZXJUb1Rhcmlz2xAMARBTV19GcmVpZ2h0ZXJUb0002xAMARVTV19GcmVpZ2h0ZXJUb05hclNoYWTaEAwBElNXX0ZyZWlnaHRlclRvTm9uZdsQDAERU1dfRnJlaWdodGVyVG9Mb2vbEAwBClNXX1BsYW5Mb2vbEAUBRwpTV19MVFNQRUVEAiAxDAESU1dfRnJlaWdodFBsYW5EYXRo2xAMARJTV19GcmVpZ2h0UGxhbkthc2jbEAwBElNXX0ZyZWlnaHRQbGFuSG90aNsQDAETU1dfRnJlaWdodFBsYW5HYW1vctsQDAETU1dfRnJlaWdodGVyUGxhblRhdNsQDAESU1dfRnJlaWdodFBsYW5EYW502xAMARFTV19GcmVpZ2h0UGxhbk5hctoQDAESU1dfRnJlaWdodFBsYW5NYW5h2xAMARJTV19GcmVpZ2h0UGxhbk00NzjbEAwBE1NXX0ZyZWlnaHRQbGFuVGFyaXPbEAcBAQAQJgBZb3UgYXJlIGFscmVhZHkgbGFuZGVkIG9uIE5hciBTaGFkZGFhIQAACQEJAQEB",
+    "text": "Begin SW_FTravelNarShaddaa\n\nIf ( OnActivate == 1 )\n\tIf ( FreightTravel != 25 )\n\t\tSet FreightTravel to 25\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\t\tSW_FreighterToDantooine->Disable\n\t\t\tSW_FreighterToTatooine->Disable\n\t\t\tSW_FreighterToManaan->Disable\n\t\t\tSW_FreighterToKashyyk->Disable\n\t\t\tSW_FreighterToDathomir->Disable\n\t\t\tSW_FreighterToGamorr->Disable\n\t\t\tSW_FreighterToHoth->Disable\n\t\t\tSW_FreighterToTaris->Disable\n\t\t\tSW_FreighterToM4->Disable\n\t\t\tSW_FreighterToNarShad->Enable\n\t\t\tSW_FreighterToNone->Disable\n\t\t\tSW_FreighterToLok->Disable\n\t\t\tSet SW_LTSPEED to 1\n\t\t\tSW_FreightPlanDath->Disable\n\t\t\tSW_FreightPlanKash->Disable\n\t\t\tSW_FreightPlanHoth->Disable\n\t\t\tSW_FreightPlanGamor->Disable\n\t\t\tSW_FreighterPlanTat->Disable\n\t\t\tSW_FreightPlanDant->Disable\n\t\t\tSW_FreightPlanNar->Enable\n\t\t\tSW_FreightPlanMana->Disable\n\t\t\tSW_FreightPlanM478->Disable\n\t\t\tSW_FreightPlanTaris->Disable\n\telse\n\t\tMessageBox \"You are already landed on Nar Shaddaa!\"\n\tendif\nEndif\n\nEnd"
+  },
+  {
+    "type": "Script",
+    "flags": "",
+    "id": "SW_FTravelTaris",
+    "header": {
+      "num_shorts": 1,
+      "num_longs": 0,
+      "num_floats": 0,
+      "bytecode_length": 711,
+      "variables_length": 9
+    },
+    "variables": "CQAAAE1hZ2ljVmFyAA==",
+    "bytecode": "xwIAAAYBAgkgcwEAID09IDDbEAUBcwEAAiAxCQEGAR4JIFgYECA9PSAxBgEaFiBHDUZyZWlnaHRUcmF2ZWwgIT0gNDAFAUcNRnJlaWdodFRyYXZlbAMgNDAsEQ9TaGlwVHJhdmVsU291bmQMARdTV19GcmVpZ2h0ZXJUb0RhbnRvb2luZdsQDAEWU1dfRnJlaWdodGVyVG9UYXRvb2luZdsQDAEUU1dfRnJlaWdodGVyVG9NYW5hYW7bEAwBFVNXX0ZyZWlnaHRlclRvS2FzaHl5a9sQDAEWU1dfRnJlaWdodGVyVG9EYXRob21pctsQDAEUU1dfRnJlaWdodGVyVG9HYW1vcnLbEAwBElNXX0ZyZWlnaHRlclRvSG90aNsQDAETU1dfRnJlaWdodGVyVG9UYXJpc9oQDAEQU1dfRnJlaWdodGVyVG9NNNsQDAEVU1dfRnJlaWdodGVyVG9OYXJTaGFk2xAMARJTV19GcmVpZ2h0ZXJUb05vbmXbEAwBEVNXX0ZyZWlnaHRlclRvTG9r2xAMAQpTV19QbGFuTG9r2xAFAUcKU1dfTFRTUEVFRAIgMQwBElNXX0ZyZWlnaHRQbGFuRGF0aNsQDAESU1dfRnJlaWdodFBsYW5LYXNo2xAMARJTV19GcmVpZ2h0UGxhbkhvdGjbEAwBE1NXX0ZyZWlnaHRQbGFuR2Ftb3LbEAwBE1NXX0ZyZWlnaHRlclBsYW5UYXTbEAwBElNXX0ZyZWlnaHRQbGFuRGFudNsQDAERU1dfRnJlaWdodFBsYW5OYXLbEAwBElNXX0ZyZWlnaHRQbGFuTWFuYdsQDAESU1dfRnJlaWdodFBsYW5NNDc42xAMARNTV19GcmVpZ2h0UGxhblRhcmlz2hAHAQEAECAAWW91IGFyZSBhbHJlYWR5IGxhbmRlZCBvbiBUYXJpcyEAAAkBCQEBAQ==",
+    "text": "Begin SW_FTravelTaris\n\nShort MagicVar\n\nIf ( MagicVar == 0 )\n\tDisable\n\tSet MagicVar to 1\nEndif\n\nIf ( OnActivate == 1 )\n\tIf ( FreightTravel != 40 )\n\t\tSet FreightTravel to 40\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\t\tSW_FreighterToDantooine->Disable\n\t\t\tSW_FreighterToTatooine->Disable\n\t\t\tSW_FreighterToManaan->Disable\n\t\t\tSW_FreighterToKashyyk->Disable\n\t\t\tSW_FreighterToDathomir->Disable\n\t\t\tSW_FreighterToGamorr->Disable\n\t\t\tSW_FreighterToHoth->Disable\n\t\t\tSW_FreighterToTaris->Enable\n\t\t\tSW_FreighterToM4->Disable\n\t\t\tSW_FreighterToNarShad->Disable\n\t\t\tSW_FreighterToNone->Disable\n\t\t\tSW_FreighterToLok->Disable\n\t\t\tSet SW_LTSPEED to 1\n\t\t\tSW_FreightPlanDath->Disable\n\t\t\tSW_FreightPlanKash->Disable\n\t\t\tSW_FreightPlanHoth->Disable\n\t\t\tSW_FreightPlanGamor->Disable\n\t\t\tSW_FreighterPlanTat->Disable\n\t\t\tSW_FreightPlanDant->Disable\n\t\t\tSW_FreightPlanNar->Disable\n\t\t\tSW_FreightPlanMana->Disable\n\t\t\tSW_FreightPlanM478->Disable\n\t\t\tSW_FreightPlanTaris->Enable\n\telse\n\t\tMessageBox \"You are already landed on Taris!\"\n\tendif\nEndif\n\nEnd\n"
+  },
+  {
+    "type": "Script",
+    "flags": "",
+    "id": "SW_FTravelTatooine",
+    "header": {
+      "num_shorts": 0,
+      "num_longs": 0,
+      "num_floats": 0,
+      "bytecode_length": 687,
+      "variables_length": 0
+    },
+    "variables": "AAAAAA==",
+    "bytecode": "rwIAAAYBHgkgWBgQID09IDEGARoVIEcNRnJlaWdodFRyYXZlbCAhPSA1BQFHDUZyZWlnaHRUcmF2ZWwCIDUsEQ9TaGlwVHJhdmVsU291bmQMARdTV19GcmVpZ2h0ZXJUb0RhbnRvb2luZdsQDAEWU1dfRnJlaWdodGVyVG9UYXRvb2luZdoQDAEUU1dfRnJlaWdodGVyVG9NYW5hYW7bEAwBFVNXX0ZyZWlnaHRlclRvS2FzaHl5a9sQDAEWU1dfRnJlaWdodGVyVG9EYXRob21pctsQDAEUU1dfRnJlaWdodGVyVG9HYW1vcnLbEAwBElNXX0ZyZWlnaHRlclRvSG90aNsQDAETU1dfRnJlaWdodGVyVG9UYXJpc9sQDAEQU1dfRnJlaWdodGVyVG9NNNsQDAEVU1dfRnJlaWdodGVyVG9OYXJTaGFk2xAMARJTV19GcmVpZ2h0ZXJUb05vbmXbEAwBEVNXX0ZyZWlnaHRlclRvTG9r2xAMAQpTV19QbGFuTG9r2xAFAUcKU1dfTFRTUEVFRAIgMQwBElNXX0ZyZWlnaHRQbGFuRGF0aNsQDAESU1dfRnJlaWdodFBsYW5LYXNo2xAMARJTV19GcmVpZ2h0UGxhbkhvdGjbEAwBE1NXX0ZyZWlnaHRQbGFuR2Ftb3LbEAwBE1NXX0ZyZWlnaHRlclBsYW5UYXTaEAwBElNXX0ZyZWlnaHRQbGFuRGFudNsQDAERU1dfRnJlaWdodFBsYW5OYXLbEAwBElNXX0ZyZWlnaHRQbGFuTWFuYdsQDAESU1dfRnJlaWdodFBsYW5NNDc42xAMARNTV19GcmVpZ2h0UGxhblRhcmlz2xAHAQEAECMAWW91IGFyZSBhbHJlYWR5IGxhbmRlZCBvbiBUYXRvb2luZSEAAAkBCQEBAQ==",
+    "text": "Begin SW_FTravelTatooine\n\nIf ( OnActivate == 1 )\n\tIf ( FreightTravel != 5 )\n\t\tSet FreightTravel to 5\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\t\tSW_FreighterToDantooine->Disable\n\t\t\tSW_FreighterToTatooine->Enable\n\t\t\tSW_FreighterToManaan->Disable\n\t\t\tSW_FreighterToKashyyk->Disable\n\t\t\tSW_FreighterToDathomir->Disable\n\t\t\tSW_FreighterToGamorr->Disable\n\t\t\tSW_FreighterToHoth->Disable\n\t\t\tSW_FreighterToTaris->Disable\n\t\t\tSW_FreighterToM4->Disable\n\t\t\tSW_FreighterToNarShad->Disable\n\t\t\tSW_FreighterToNone->Disable\n\t\t\tSW_FreighterToLok->Disable\n\t\t\tSet SW_LTSPEED to 1\n\t\t\tSW_FreightPlanDath->Disable\n\t\t\tSW_FreightPlanKash->Disable\n\t\t\tSW_FreightPlanHoth->Disable\n\t\t\tSW_FreightPlanGamor->Disable\n\t\t\tSW_FreighterPlanTat->Enable\n\t\t\tSW_FreightPlanDant->Disable\n\t\t\tSW_FreightPlanNar->Disable\n\t\t\tSW_FreightPlanMana->Disable\n\t\t\tSW_FreightPlanM478->Disable\n\t\t\tSW_FreightPlanTaris->Disable\n\telse\n\t\tMessageBox \"You are already landed on Tatooine!\"\n\tendif\nEndif\n\nEnd\n"
+  },
+  {
+    "type": "Weapon",
+    "flags": "",
+    "id": "SW_DisruptPistol",
+    "name": "Disruptor Pistols",
+    "script": "",
+    "mesh": "Ig\\Weapons\\DisruptorPistol.nif",
+    "icon": "Ig\\BlasterPistols.dds",
+    "enchanting": "",
+    "data": {
+      "weight": 5.0,
+      "value": 1500,
+      "weapon_type": "MarksmanBow",
+      "health": 800,
+      "speed": 2.0,
+      "reach": 10.0,
+      "enchantment": 80,
+      "chop_min": 1,
+      "chop_max": 35,
+      "slash_min": 1,
+      "slash_max": 35,
+      "thrust_min": 4,
+      "thrust_max": 45,
+      "flags": ""
+    }
+  },
+  {
+    "type": "Weapon",
+    "flags": "",
+    "id": "SW_DocsPistols",
+    "name": "Doc's Bowcaster",
+    "script": "",
+    "mesh": "Ig\\Weapons\\bowcastunique.nif",
+    "icon": "Ig\\BowcasterUni.dds",
+    "enchanting": "",
+    "data": {
+      "weight": 8.0,
+      "value": 1500,
+      "weapon_type": "MarksmanCrossbow",
+      "health": 800,
+      "speed": 4.0,
+      "reach": 10.0,
+      "enchantment": 80,
+      "chop_min": 1,
+      "chop_max": 30,
+      "slash_min": 1,
+      "slash_max": 30,
+      "thrust_min": 8,
+      "thrust_max": 40,
+      "flags": ""
+    }
+  },
+  {
+    "type": "Weapon",
+    "flags": "",
+    "id": "SW_PistolBlastArk",
+    "name": "Arkanian Blaster Pistol",
+    "script": "",
+    "mesh": "Ig\\Weapons\\PistTest3.nif",
+    "icon": "Ig\\Pis3.dds",
+    "enchanting": "SW_SanctPist3",
+    "data": {
+      "weight": 8.0,
+      "value": 1500,
+      "weapon_type": "MarksmanBow",
+      "health": 800,
+      "speed": 6.0,
+      "reach": 10.0,
+      "enchantment": 80,
+      "chop_min": 2,
+      "chop_max": 20,
+      "slash_min": 2,
+      "slash_max": 20,
+      "thrust_min": 1,
+      "thrust_max": 25,
+      "flags": ""
+    }
+  },
+  {
+    "type": "Weapon",
+    "flags": "",
+    "id": "SW_PistolBlastEch",
+    "name": "Disruptor Pistol",
+    "script": "",
+    "mesh": "Ig\\Weapons\\PistTest2.nif",
+    "icon": "Ig\\Pis2.dds",
+    "enchanting": "SW_SanctPist2",
+    "data": {
+      "weight": 8.0,
+      "value": 600,
+      "weapon_type": "MarksmanBow",
+      "health": 800,
+      "speed": 4.0,
+      "reach": 10.0,
+      "enchantment": 80,
+      "chop_min": 1,
+      "chop_max": 15,
+      "slash_min": 1,
+      "slash_max": 15,
+      "thrust_min": 1,
+      "thrust_max": 15,
+      "flags": ""
+    }
+  },
+  {
+    "type": "Weapon",
+    "flags": "",
+    "id": "SW_PistolBlastStrong",
+    "name": "Pistol Blaster",
+    "script": "",
+    "mesh": "Ig\\Weapons\\PistTest1.nif",
+    "icon": "Ig\\Pis1.dds",
+    "enchanting": "SW_SanctPist3",
+    "data": {
+      "weight": 8.0,
+      "value": 1500,
+      "weapon_type": "MarksmanBow",
+      "health": 800,
+      "speed": 6.0,
+      "reach": 10.0,
+      "enchantment": 80,
+      "chop_min": 3,
+      "chop_max": 20,
+      "slash_min": 3,
+      "slash_max": 20,
+      "thrust_min": 2,
+      "thrust_max": 25,
+      "flags": ""
+    }
+  },
+  {
+    "type": "Weapon",
+    "flags": "",
+    "id": "SW_PistolBlastStrongUn",
+    "name": "Pistol Blaster",
+    "script": "",
+    "mesh": "Ig\\Weapons\\PistTest1.nif",
+    "icon": "Ig\\Pis1.dds",
+    "enchanting": "",
+    "data": {
+      "weight": 8.0,
+      "value": 4500,
+      "weapon_type": "MarksmanBow",
+      "health": 800,
+      "speed": 6.0,
+      "reach": 10.0,
+      "enchantment": 80,
+      "chop_min": 3,
+      "chop_max": 20,
+      "slash_min": 3,
+      "slash_max": 20,
+      "thrust_min": 2,
+      "thrust_max": 25,
+      "flags": ""
+    }
+  },
+  {
+    "type": "Weapon",
+    "flags": "",
+    "id": "SW_PistolBlastUni",
+    "name": "Pistol Blaster",
+    "script": "",
+    "mesh": "Ig\\Weapons\\PistTest4.nif",
+    "icon": "Ig\\Pis4.dds",
+    "enchanting": "SW_SanctPist4",
+    "data": {
+      "weight": 8.0,
+      "value": 1500,
+      "weapon_type": "MarksmanBow",
+      "health": 800,
+      "speed": 6.0,
+      "reach": 10.0,
+      "enchantment": 80,
+      "chop_min": 3,
+      "chop_max": 20,
+      "slash_min": 3,
+      "slash_max": 32,
+      "thrust_min": 2,
+      "thrust_max": 25,
+      "flags": ""
+    }
+  },
+  {
+    "type": "Weapon",
+    "flags": "",
+    "id": "SW_PistolBlaster",
+    "name": "Blaster Pistol",
+    "script": "",
+    "mesh": "Ig\\Weapons\\PistTest1.nif",
+    "icon": "Ig\\Pis1.dds",
+    "enchanting": "SW_SanctPist1",
+    "data": {
+      "weight": 8.0,
+      "value": 100,
+      "weapon_type": "MarksmanBow",
+      "health": 800,
+      "speed": 1.4,
+      "reach": 10.0,
+      "enchantment": 80,
+      "chop_min": 1,
+      "chop_max": 8,
+      "slash_min": 1,
+      "slash_max": 8,
+      "thrust_min": 1,
+      "thrust_max": 10,
+      "flags": ""
+    }
+  }
+]

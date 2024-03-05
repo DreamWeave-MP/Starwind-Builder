@@ -1,0 +1,2042 @@
+[
+  {
+    "type": "Header",
+    "flags": "",
+    "version": 1.3,
+    "file_type": "Esp",
+    "author": "",
+    "description": "",
+    "num_objects": 5,
+    "masters": [
+      [
+        "Morrowind.esm",
+        79837557
+      ],
+      [
+        "Tribunal.esm",
+        4565686
+      ],
+      [
+        "Bloodmoon.esm",
+        9631798
+      ],
+      [
+        "StarwindRemasteredV1.15.esm",
+        4162099
+      ],
+      [
+        "StarwindRemasteredPatch.esm",
+        11437434
+      ]
+    ]
+  },
+  {
+    "type": "Npc",
+    "flags": "",
+    "id": "SW_VvardenfellTranspor1",
+    "name": "Flies-Ship-Far",
+    "script": "nolore",
+    "mesh": "base_anim.nif",
+    "inventory": [
+      [
+        1,
+        "SW_AlienHelmA"
+      ],
+      [
+        1,
+        "SW_FlightSuit1"
+      ],
+      [
+        1,
+        "SW_FlightSuit1Top"
+      ],
+      [
+        1,
+        "common_shoes_05"
+      ]
+    ],
+    "spells": [],
+    "ai_data": {
+      "hello": 30,
+      "fight": 30,
+      "flee": 30,
+      "alarm": 0,
+      "services": ""
+    },
+    "ai_packages": [],
+    "travel_destinations": [
+      {
+        "translation": [
+          30238.92,
+          -71415.016,
+          711.65015
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.183187
+        ],
+        "cell": ""
+      }
+    ],
+    "race": "SW_Cyborg",
+    "class": "Sharpshooter",
+    "faction": "",
+    "head": "SW_CyborgHead",
+    "hair": "SW_NoHairCyborg",
+    "npc_flags": "RESPAWN | IS_BASE",
+    "blood_type": 2,
+    "data": {
+      "level": 20,
+      "stats": {
+        "attributes": [
+          57,
+          100,
+          86,
+          89,
+          51,
+          57,
+          57,
+          40
+        ],
+        "skills": [
+          21,
+          7,
+          64,
+          21,
+          21,
+          21,
+          21,
+          21,
+          48,
+          49,
+          49,
+          12,
+          12,
+          17,
+          17,
+          44,
+          12,
+          7,
+          34,
+          49,
+          34,
+          7,
+          7,
+          49,
+          7,
+          34,
+          7
+        ],
+        "health": 152,
+        "magicka": 200,
+        "fatigue": 289
+      },
+      "disposition": 50,
+      "reputation": 0,
+      "rank": 0,
+      "gold": 200
+    }
+  },
+  {
+    "type": "Npc",
+    "flags": "",
+    "id": "SW_VvardenfellTranspor2",
+    "name": "Flies-Ship-Far",
+    "script": "nolore",
+    "mesh": "base_anim.nif",
+    "inventory": [
+      [
+        1,
+        "SW_AlienHelmA"
+      ],
+      [
+        1,
+        "SW_FlightSuit1"
+      ],
+      [
+        1,
+        "SW_FlightSuit1Top"
+      ],
+      [
+        1,
+        "common_shoes_05"
+      ]
+    ],
+    "spells": [],
+    "ai_data": {
+      "hello": 30,
+      "fight": 30,
+      "flee": 30,
+      "alarm": 0,
+      "services": ""
+    },
+    "ai_packages": [],
+    "travel_destinations": [
+      {
+        "translation": [
+          4191.7925,
+          5319.124,
+          12557.948
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.183187
+        ],
+        "cell": "Nar Shaddaa, Vvardenfell Hanger"
+      }
+    ],
+    "race": "SW_Cyborg",
+    "class": "Sharpshooter",
+    "faction": "",
+    "head": "SW_CyborgHead",
+    "hair": "SW_NoHairCyborg",
+    "npc_flags": "RESPAWN | IS_BASE",
+    "blood_type": 2,
+    "data": {
+      "level": 20,
+      "stats": {
+        "attributes": [
+          57,
+          100,
+          86,
+          89,
+          51,
+          57,
+          57,
+          40
+        ],
+        "skills": [
+          21,
+          7,
+          64,
+          21,
+          21,
+          21,
+          21,
+          21,
+          48,
+          49,
+          49,
+          12,
+          12,
+          17,
+          17,
+          44,
+          12,
+          7,
+          34,
+          49,
+          34,
+          7,
+          7,
+          49,
+          7,
+          34,
+          7
+        ],
+        "health": 152,
+        "magicka": 200,
+        "fatigue": 289
+      },
+      "disposition": 50,
+      "reputation": 0,
+      "rank": 0,
+      "gold": 200
+    }
+  },
+  {
+    "type": "Cell",
+    "flags": "",
+    "name": "Vivec",
+    "data": {
+      "flags": "HAS_WATER | RESTING_IS_ILLEGAL | 0x40",
+      "grid": [
+        3,
+        -9
+      ]
+    },
+    "region": "AVvardenfell Region",
+    "map_color": [
+      202,
+      165,
+      96,
+      0
+    ],
+    "references": [
+      {
+        "mast_index": 0,
+        "refr_index": 1,
+        "id": "SW_VvardenfellTranspor2",
+        "temporary": false,
+        "translation": [
+          30494.895,
+          -71175.836,
+          689.77026
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.9415922
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 2,
+        "id": "SW_ShipSith",
+        "temporary": true,
+        "translation": [
+          30960.855,
+          -70807.83,
+          766.7406
+        ],
+        "rotation": [
+          0.1,
+          0.10000002,
+          2.870795
+        ],
+        "scale": 0.8
+      }
+    ]
+  },
+  {
+    "type": "Cell",
+    "flags": "",
+    "name": "Nar Shaddaa, Makacheesa Market",
+    "data": {
+      "flags": "IS_INTERIOR | HAS_WATER | RESTING_IS_ILLEGAL | BEHAVES_LIKE_EXTERIOR",
+      "grid": [
+        0,
+        0
+      ]
+    },
+    "region": "Ascadian Isles Region",
+    "references": [
+      {
+        "mast_index": 0,
+        "refr_index": 3,
+        "id": "SW_DoorNar2",
+        "temporary": false,
+        "translation": [
+          2224.9502,
+          3028.3528,
+          12599.3125
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.712389
+        ],
+        "scale": 0.93000007,
+        "destination": {
+          "translation": [
+            4358.2354,
+            3545.0928,
+            12921.648
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "cell": "Nar Shaddaa, Vvardenfell Hanger"
+        }
+      },
+      {
+        "mast_index": 5,
+        "refr_index": 16220,
+        "id": "SW_Nar_Walkway",
+        "temporary": true,
+        "translation": [
+          2445.9673,
+          3029.0598,
+          11865.202
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          6.2831855
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 4,
+        "id": "SW_Nar_Walkway",
+        "temporary": true,
+        "translation": [
+          4179.3936,
+          2831.4128,
+          11956.764
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          1.5707964
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 5,
+        "id": "SW_Nar_Walkway",
+        "temporary": true,
+        "translation": [
+          2884.6482,
+          3029.0598,
+          11865.202
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          6.2831855
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 6,
+        "id": "SW_Nar_Walkway",
+        "temporary": true,
+        "translation": [
+          3763.2449,
+          3029.0598,
+          11865.202
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          6.2831855
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 7,
+        "id": "SW_Nar_Walkway",
+        "temporary": true,
+        "translation": [
+          3324.564,
+          3029.0598,
+          11865.202
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          6.2831855
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 8,
+        "id": "SW_SignDockingBay",
+        "temporary": true,
+        "translation": [
+          2360.8474,
+          2857.189,
+          12449.49
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.926991
+        ],
+        "scale": 0.85
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 9,
+        "id": "SW_Nar_Int_Doorway",
+        "temporary": true,
+        "translation": [
+          2234.5557,
+          3030.0125,
+          12594.066
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.712389
+        ],
+        "scale": 0.93000007
+      }
+    ]
+  },
+  {
+    "type": "Cell",
+    "flags": "",
+    "name": "Nar Shaddaa, Vvardenfell Hanger",
+    "data": {
+      "flags": "IS_INTERIOR",
+      "grid": [
+        0,
+        1065353216
+      ]
+    },
+    "water_height": 0.0,
+    "atmosphere_data": {
+      "ambient_color": [
+        71,
+        71,
+        71,
+        0
+      ],
+      "sunlight_color": [
+        242,
+        217,
+        217,
+        0
+      ],
+      "fog_color": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fog_density": 1.0
+    },
+    "references": [
+      {
+        "mast_index": 0,
+        "refr_index": 10,
+        "id": "SW_NarGuardBountyHunte3",
+        "temporary": false,
+        "translation": [
+          4084.2554,
+          3433.7605,
+          12844.482
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 11,
+        "id": "SW_NarGuardBountyHunte2",
+        "temporary": false,
+        "translation": [
+          2405.0159,
+          3754.3223,
+          12847.74
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.90000004
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 12,
+        "id": "SW_NarGuardBountyHunte4",
+        "temporary": false,
+        "translation": [
+          2518.3125,
+          4887.583,
+          12497.016
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          1.5000011
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 13,
+        "id": "SW_VvardenfellTranspor1",
+        "temporary": false,
+        "translation": [
+          4145.5386,
+          5707.971,
+          12509.384
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.926991
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 14,
+        "id": "SW_DoorNar2",
+        "temporary": false,
+        "translation": [
+          4369.8877,
+          3363.98,
+          13003.213
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.1415927
+        ],
+        "destination": {
+          "translation": [
+            2403.0933,
+            3016.8372,
+            12544.348
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            1.5707964
+          ],
+          "cell": "Nar Shaddaa, Makacheesa Market"
+        }
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 15,
+        "id": "SW_Nar_Int_Stairs",
+        "temporary": true,
+        "translation": [
+          2988.926,
+          4113.42,
+          12674.853
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 16,
+        "id": "SW_Nar_Int_Platform",
+        "temporary": true,
+        "translation": [
+          3905.1895,
+          3602.3577,
+          12828.639
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 17,
+        "id": "SW_Nar_Int_Hanger",
+        "temporary": true,
+        "translation": [
+          3948.1577,
+          4984.1396,
+          12871.126
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 18,
+        "id": "SW_Nar_Int_Doorway",
+        "temporary": true,
+        "translation": [
+          4368.228,
+          3373.5854,
+          12997.965
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.1415927
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 19,
+        "id": "SW_Crate",
+        "temporary": true,
+        "translation": [
+          5402.881,
+          3447.448,
+          12553.493
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          5.3831854
+        ],
+        "owner": "SW_NarGuard",
+        "health_left": 0,
+        "object_count": 1
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 20,
+        "id": "SW_Crate",
+        "temporary": true,
+        "translation": [
+          5488.3496,
+          3733.4912,
+          12834.4
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          5.7831855
+        ],
+        "owner": "SW_NarGuard",
+        "health_left": 0,
+        "object_count": 1
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 21,
+        "id": "SW_Crate",
+        "temporary": true,
+        "translation": [
+          5044.1167,
+          3442.7385,
+          12834.4
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.783186
+        ],
+        "owner": "SW_NarGuard",
+        "health_left": 0,
+        "object_count": 1
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 22,
+        "id": "SW_Crate",
+        "temporary": true,
+        "translation": [
+          5448.8247,
+          3457.8755,
+          12473.986
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.783186
+        ],
+        "owner": "SW_NarGuard",
+        "health_left": 0,
+        "object_count": 1
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 23,
+        "id": "SW_Crate",
+        "temporary": true,
+        "translation": [
+          5502.832,
+          3676.8687,
+          12473.986
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          5.583185
+        ],
+        "owner": "SW_NarGuard",
+        "health_left": 0,
+        "object_count": 1
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 24,
+        "id": "SW_Crate",
+        "temporary": true,
+        "translation": [
+          5347.174,
+          3441.581,
+          12473.986
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.683186
+        ],
+        "owner": "SW_NarGuard",
+        "health_left": 0,
+        "object_count": 1
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 25,
+        "id": "SW_Crate",
+        "temporary": true,
+        "translation": [
+          5312.1953,
+          4000.3818,
+          12473.986
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          5.2831855
+        ],
+        "owner": "SW_NarGuard",
+        "health_left": 0,
+        "object_count": 1
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 26,
+        "id": "SW_Crate",
+        "temporary": true,
+        "translation": [
+          5288.394,
+          3450.7048,
+          12553.493
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.783186
+        ],
+        "owner": "SW_NarGuard",
+        "health_left": 0,
+        "object_count": 1
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 27,
+        "id": "SW_Crate",
+        "temporary": true,
+        "translation": [
+          5485.5767,
+          3561.4644,
+          12473.986
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          5.0831857
+        ],
+        "owner": "SW_NarGuard",
+        "health_left": 0,
+        "object_count": 1
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 28,
+        "id": "SW_Crate",
+        "temporary": true,
+        "translation": [
+          5243.74,
+          3438.728,
+          12473.986
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          5.1831856
+        ],
+        "owner": "SW_NarGuard",
+        "health_left": 0,
+        "object_count": 1
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 29,
+        "id": "SW_Crate",
+        "temporary": true,
+        "translation": [
+          4140.8936,
+          4593.0786,
+          12473.986
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          2.9831865
+        ],
+        "owner": "SW_NarGuard",
+        "health_left": 0,
+        "object_count": 1
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 30,
+        "id": "SW_Crate",
+        "temporary": true,
+        "translation": [
+          3982.694,
+          4615.646,
+          12473.986
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.8831859
+        ],
+        "owner": "SW_NarGuard",
+        "health_left": 0,
+        "object_count": 1
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 31,
+        "id": "SW_Crate",
+        "temporary": true,
+        "translation": [
+          2405.0083,
+          3524.043,
+          12553.493
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          5.4831853
+        ],
+        "owner": "SW_NarGuard",
+        "health_left": 0,
+        "object_count": 1
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 32,
+        "id": "SW_Crate",
+        "temporary": true,
+        "translation": [
+          2407.4033,
+          3475.7217,
+          12473.986
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          5.683185
+        ],
+        "owner": "SW_NarGuard",
+        "health_left": 0,
+        "object_count": 1
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 33,
+        "id": "SW_Crate",
+        "temporary": true,
+        "translation": [
+          2403.8203,
+          3577.8462,
+          12473.986
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.983186
+        ],
+        "owner": "SW_NarGuard",
+        "health_left": 0,
+        "object_count": 1
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 34,
+        "id": "SW_ChestGreater",
+        "temporary": true,
+        "translation": [
+          2694.8591,
+          3422.0002,
+          12840.088
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.1415927
+        ],
+        "scale": 0.6,
+        "owner": "SW_NarGuardBountyHunte2",
+        "health_left": 0,
+        "object_count": 1
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 35,
+        "id": "SW_ChestGreater",
+        "temporary": true,
+        "translation": [
+          2403.0977,
+          3752.3496,
+          12479.674
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.783186
+        ],
+        "scale": 0.6,
+        "owner": "SW_NarGuardBountyHunte2",
+        "health_left": 0,
+        "object_count": 1
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 36,
+        "id": "SW_FurnBarrel",
+        "temporary": true,
+        "translation": [
+          3791.9067,
+          3284.4104,
+          12508.869
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.20000002
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 37,
+        "id": "SW_FurnBarrel",
+        "temporary": true,
+        "translation": [
+          3931.1738,
+          3608.9915,
+          12508.869
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          5.2831864
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 38,
+        "id": "SW_FurnBarrel",
+        "temporary": true,
+        "translation": [
+          4945.5747,
+          3220.7168,
+          12508.869
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          1.2
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 39,
+        "id": "SW_FurnBarrel",
+        "temporary": true,
+        "translation": [
+          5293.9463,
+          3278.9,
+          12508.869
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 40,
+        "id": "SW_FurnBarrel",
+        "temporary": true,
+        "translation": [
+          5488.7324,
+          3524.695,
+          12508.869
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 41,
+        "id": "SW_FurnBarrel",
+        "temporary": true,
+        "translation": [
+          5717.7007,
+          3793.6228,
+          12508.869
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          5.583186
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 42,
+        "id": "SW_FurnBarrel",
+        "temporary": true,
+        "translation": [
+          3825.161,
+          3251.3704,
+          12508.869
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.70000005
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 43,
+        "id": "SW_FurnBarrel",
+        "temporary": true,
+        "translation": [
+          5465.8726,
+          5048.372,
+          12508.869
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          5.583186
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 44,
+        "id": "SW_FurnBarrel",
+        "temporary": true,
+        "translation": [
+          5430.0225,
+          4753.163,
+          12508.869
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          7.450581e-9
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 45,
+        "id": "SW_FurnBarrel",
+        "temporary": true,
+        "translation": [
+          5502.03,
+          5098.9434,
+          12508.869
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          5.0831866
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 46,
+        "id": "SW_FurnBarrel",
+        "temporary": true,
+        "translation": [
+          5197.7485,
+          4805.2183,
+          12508.869
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          7.450581e-9
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 47,
+        "id": "SW_FurnBarrel",
+        "temporary": true,
+        "translation": [
+          5269.756,
+          5150.997,
+          12508.869
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          5.0831866
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 48,
+        "id": "SW_FurnBarrel",
+        "temporary": true,
+        "translation": [
+          5236.904,
+          4779.4434,
+          12508.869
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 49,
+        "id": "SW_FurnMonitorRed",
+        "temporary": true,
+        "translation": [
+          2419.132,
+          4470.331,
+          12896.844
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.712389
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 50,
+        "id": "SW_FurnSupplyLock",
+        "temporary": true,
+        "translation": [
+          2234.013,
+          4124.0063,
+          12256.821
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.712389
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 51,
+        "id": "SW_FurnSupplyLock",
+        "temporary": true,
+        "translation": [
+          4168.037,
+          3273.7588,
+          12256.943
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.1415927
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 52,
+        "id": "SW_FurnSupplyLock",
+        "temporary": true,
+        "translation": [
+          4655.6646,
+          3273.7588,
+          12256.943
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.1415927
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 53,
+        "id": "SW_FurnSupplyLock",
+        "temporary": true,
+        "translation": [
+          4410.0273,
+          3273.7588,
+          12256.943
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.1415927
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 54,
+        "id": "SW_FurnSupplyLock",
+        "temporary": true,
+        "translation": [
+          3922.4,
+          3273.7588,
+          12256.943
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.1415927
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 55,
+        "id": "SW_FurnSupplyLock",
+        "temporary": true,
+        "translation": [
+          2234.013,
+          4371.416,
+          12256.821
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.712389
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 56,
+        "id": "SW_FurnSupplyLock",
+        "temporary": true,
+        "translation": [
+          2234.013,
+          4619.228,
+          12256.821
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.712389
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 57,
+        "id": "SW_FurnManaBench",
+        "temporary": true,
+        "translation": [
+          4162.3525,
+          4003.431,
+          12523.578
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": 0.70000005
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 58,
+        "id": "SW_FurnManaBench",
+        "temporary": true,
+        "translation": [
+          3558.333,
+          4003.431,
+          12523.578
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": 0.70000005
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 59,
+        "id": "SW_FurnManaBench",
+        "temporary": true,
+        "translation": [
+          3870.0017,
+          4003.431,
+          12523.578
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": 0.70000005
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 60,
+        "id": "SW_PipeStraightShort",
+        "temporary": true,
+        "translation": [
+          5482.0146,
+          4935.736,
+          12475.073
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": 2.0
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 61,
+        "id": "SW_In_TableGround",
+        "temporary": true,
+        "translation": [
+          2556.0457,
+          4761.9155,
+          12502.835
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.1415927
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 62,
+        "id": "SW_Terminal",
+        "temporary": true,
+        "translation": [
+          2646.318,
+          4953.7256,
+          12484.081
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.9801364
+        ],
+        "scale": 1.5000001
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 63,
+        "id": "SW_In_TableGround",
+        "temporary": true,
+        "translation": [
+          2380.7917,
+          3541.1853,
+          12863.248
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.712389
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 64,
+        "id": "SW_In_TableGround",
+        "temporary": true,
+        "translation": [
+          2372.1199,
+          4873.3467,
+          12502.835
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.712389
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 65,
+        "id": "SW_In_TableGround",
+        "temporary": true,
+        "translation": [
+          4960.719,
+          3779.0835,
+          12863.248
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 66,
+        "id": "SW_Terminal",
+        "temporary": true,
+        "translation": [
+          2465.497,
+          5029.3047,
+          12484.081
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          5.1633224
+        ],
+        "scale": 1.5000001
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 67,
+        "id": "SW_Terminal",
+        "temporary": true,
+        "translation": [
+          4745.406,
+          3793.8394,
+          12844.495
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": 1.5000001
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 68,
+        "id": "SW_PipeStraightShort",
+        "temporary": true,
+        "translation": [
+          2420.7532,
+          5490.207,
+          12475.073
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.0831861
+        ],
+        "scale": 2.0
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 69,
+        "id": "SW_PipeStraightShort",
+        "temporary": true,
+        "translation": [
+          2420.7532,
+          5704.085,
+          12475.073
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.0831861
+        ],
+        "scale": 2.0
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 70,
+        "id": "SW_PipeStraightShort",
+        "temporary": true,
+        "translation": [
+          5482.0146,
+          4154.3135,
+          12475.073
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": 2.0
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 71,
+        "id": "SW_PipeStraightShort",
+        "temporary": true,
+        "translation": [
+          5482.0146,
+          4467.863,
+          12475.073
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": 2.0
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 72,
+        "id": "SW_PipeStraightShort",
+        "temporary": true,
+        "translation": [
+          5482.0146,
+          4627.9443,
+          12475.073
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": 2.0
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 73,
+        "id": "SW_In_TableGround",
+        "temporary": true,
+        "translation": [
+          3032.1294,
+          3410.5364,
+          12502.835
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.1415927
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 74,
+        "id": "SW_FurnMonitorRed",
+        "temporary": true,
+        "translation": [
+          3489.8254,
+          3457.8196,
+          13100.646
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.1415927
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 75,
+        "id": "SW_FurnCargoCrate2",
+        "temporary": true,
+        "translation": [
+          5051.9478,
+          3864.6904,
+          12449.529
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 76,
+        "id": "SW_FurnCargoCrate2",
+        "temporary": true,
+        "translation": [
+          4779.748,
+          3963.2053,
+          12449.529
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          1.6000003
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 77,
+        "id": "SW_ShipSith",
+        "temporary": true,
+        "translation": [
+          4798.0205,
+          5850.623,
+          12499.998
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          2.3561945
+        ],
+        "scale": 0.8
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 78,
+        "id": "SW_NarMarket",
+        "temporary": true,
+        "translation": [
+          7009.3027,
+          8779.373,
+          10878.586
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.1415927
+        ],
+        "scale": 0.62
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 79,
+        "id": "SW_Nar_Walkway",
+        "temporary": true,
+        "translation": [
+          7009.917,
+          6078.2637,
+          11321.221
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          1.5707964
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 80,
+        "id": "SW_Nar_Walkway",
+        "temporary": true,
+        "translation": [
+          7009.917,
+          6880.9937,
+          11321.221
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          1.5707964
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 81,
+        "id": "SW_Nar_Walkway",
+        "temporary": true,
+        "translation": [
+          6593.7676,
+          6066.039,
+          11229.659
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          6.2831855
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 82,
+        "id": "SW_Nar_Walkway",
+        "temporary": true,
+        "translation": [
+          6155.087,
+          6066.039,
+          11229.659
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          6.2831855
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 83,
+        "id": "SW_Nar_Walkway",
+        "temporary": true,
+        "translation": [
+          5715.171,
+          6066.039,
+          11229.659
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          6.2831855
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 84,
+        "id": "SW_Nar_Walkway",
+        "temporary": true,
+        "translation": [
+          5276.49,
+          6066.039,
+          11229.659
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          6.2831855
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 85,
+        "id": "SW_Nar_Tower5",
+        "temporary": true,
+        "translation": [
+          11122.982,
+          5168.148,
+          11877.762
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.712389
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 86,
+        "id": "SW_Nar_Tower8",
+        "temporary": true,
+        "translation": [
+          -506.5777,
+          6569.7544,
+          10400.323
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          2.7415931
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 87,
+        "id": "SW_Nar_Tower5",
+        "temporary": true,
+        "translation": [
+          -3025.095,
+          8747.679,
+          10561.732
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          5.883186
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 88,
+        "id": "SW_Nar_Tower6",
+        "temporary": true,
+        "translation": [
+          9900.241,
+          11716.6455,
+          11111.203
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          1.5707964
+        ],
+        "scale": 0.70000005
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 89,
+        "id": "SW_Nar_Tower5",
+        "temporary": true,
+        "translation": [
+          4867.9927,
+          12220.147,
+          11877.762
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.712389
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 90,
+        "id": "SW_Nar_Tower2",
+        "temporary": true,
+        "translation": [
+          1817.5916,
+          9208.181,
+          9032.441
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          1.5707964
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 91,
+        "id": "SW_Nar_Tower5",
+        "temporary": true,
+        "translation": [
+          1838.5641,
+          13648.978,
+          11526.367
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          2.1415932
+        ],
+        "scale": 1.2
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 92,
+        "id": "SW_Nar_Tower2",
+        "temporary": true,
+        "translation": [
+          -2964.2295,
+          5806.7544,
+          12598.627
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          2.7415931
+        ],
+        "scale": 1.3000001
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 93,
+        "id": "SW_Nar_Tower2",
+        "temporary": true,
+        "translation": [
+          5413.623,
+          15481.6045,
+          11659.05
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          1.5707964
+        ],
+        "scale": 1.3000001
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 94,
+        "id": "SW_Nar_Tower1",
+        "temporary": true,
+        "translation": [
+          8091.1777,
+          13299.022,
+          12555.719
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.712389
+        ],
+        "scale": 1.5000001
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 95,
+        "id": "SW_Nar_Tower1",
+        "temporary": true,
+        "translation": [
+          10914.894,
+          14632.011,
+          12555.719
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.712389
+        ],
+        "scale": 1.5000001
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 96,
+        "id": "SW_Nar_Tower5",
+        "temporary": true,
+        "translation": [
+          8886.486,
+          17432.855,
+          11526.367
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.1415927
+        ],
+        "scale": 1.2
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 97,
+        "id": "SW_Nar_Walkway",
+        "temporary": true,
+        "translation": [
+          7009.917,
+          6460.566,
+          11321.221
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          1.5707964
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 98,
+        "id": "SW_Nar_Tower5",
+        "temporary": true,
+        "translation": [
+          11594.803,
+          11178.085,
+          10561.732
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 99,
+        "id": "SW_Nar_Tower8",
+        "temporary": true,
+        "translation": [
+          13066.39,
+          8191.3257,
+          10400.323
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.1415927
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 100,
+        "id": "SW_Nar_Tower2",
+        "temporary": true,
+        "translation": [
+          -963.0577,
+          11681.403,
+          12598.627
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.1415927
+        ],
+        "scale": 1.3000001
+      }
+    ]
+  }
+]

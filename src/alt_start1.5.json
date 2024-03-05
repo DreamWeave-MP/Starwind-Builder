@@ -1,0 +1,2495 @@
+[
+  {
+    "type": "Header",
+    "flags": "",
+    "version": 1.3,
+    "file_type": "Esp",
+    "author": "",
+    "description": "",
+    "num_objects": 44,
+    "masters": [
+      [
+        "Morrowind.esm",
+        79837557
+      ],
+      [
+        "Tribunal.esm",
+        4565686
+      ],
+      [
+        "Bloodmoon.esm",
+        9631798
+      ],
+      [
+        "StarwindRemasteredV1.15.esm",
+        4162099
+      ],
+      [
+        "StarwindRemasteredPatch.esm",
+        11437434
+      ]
+    ]
+  },
+  {
+    "type": "Script",
+    "flags": "",
+    "id": "",
+    "header": {
+      "num_shorts": 0,
+      "num_longs": 0,
+      "num_floats": 0,
+      "bytecode_length": 0,
+      "variables_length": 0
+    },
+    "variables": "AAAAAA==",
+    "bytecode": "AAAAAA==",
+    "text": ""
+  },
+  {
+    "type": "Script",
+    "flags": "",
+    "id": "Alt_Mando",
+    "header": {
+      "num_shorts": 0,
+      "num_longs": 0,
+      "num_floats": 0,
+      "bytecode_length": 652,
+      "variables_length": 0
+    },
+    "variables": "AAAAAA==",
+    "bytecode": "jAIAAAYBGQUgWBgQAAwBEVNXX1N0b3J5U2NlbmVBY3Qz2xAMARJTV19TaGFkZUxhbmRpbmdUYXTbEMwQDVNXX1RhcmlzQ2hhcDEKAP//DAESU1dfU2hhZGVDYW50aW5hVGF02xAMARJTV19TaGFkZU1lZGljYWxUYXTaEAwBFFNXX01hbmRvU3RhcnRGb2xsb3cxABEAAPBBDAEUU1dfTWFuZG9TdGFydEZvbGxvdzEJEQAA8EEMARRTV19NYW5kb1N0YXJ0Rm9sbG93MgARAADwQQwBFFNXX01hbmRvU3RhcnRGb2xsb3cyCREAAPBBDAEUU1dfTWFuZG9TdGFydEZvbGxvdzH2EAZQbGF5ZXIAAAAAAAAAAAAAAAAAAAAMARRTV19NYW5kb1N0YXJ0Rm9sbG93MvYQBlBsYXllcgAAAAAAAAAAAAAAAAAAAAwBBnBsYXllctQQDlNXX0ltcGxhbnRDb21iAQAMAQZwbGF5ZXLUEAxTV19CZWx0UG93ZXIBAAwBBnBsYXllctQQDVNXX01hbmRvQm9vdHMBAAwBBnBsYXllctQQDVNXX01hbmRvQ2hlc3QBAAwBBnBsYXllctQQDFNXX01hbmRvTGVmdAEADAEGcGxheWVy1BANU1dfTWFuZG9SaWdodAEADAEGcGxheWVy1BAMU1dfTWFuZG9MZWdzAQAMAQZwbGF5ZXLUEApTV19NYW5IZWxtAQAMAQZwbGF5ZXLUEBNTV19CbGFzdEJvbHRHcmVhdGVyZAAMAQZwbGF5ZXLUEBRTV19CbGFzdGVyUmlmbGVNYW5kbwEADAEGcGxheWVy1BAIR29sZF8wMDHQByIQBmZvbGxvdyIQBHdhaXQXEAkBAQE=",
+    "text": "Begin Alt_Mando\r\n\r\n    If (OnActivate)\r\n        ;Standard Intro Skip\r\n        SW_StorySceneAct3->Disable\r\n        SW_ShadeLandingTat->Disable\r\n        Journal SW_TarisChap1 10\r\n\t   SW_ShadeCantinaTat->Disable\r\n\t   SW_ShadeMedicalTat->Enable\r\n        ;End Intro Skip\r\n        SW_MandoStartFollow1->SetFight 30\r\n        SW_MandoStartFollow1->SetHello 30\r\n        SW_MandoStartFollow2->SetFight 30\r\n        SW_MandoStartFollow2->SetHello 30\r\n        SW_MandoStartFollow1->AIFollow Player 0, 0, 0, 0\r\n        SW_MandoStartFollow2->AIFollow Player 0, 0, 0, 0\r\n        player->additem SW_ImplantComb 1\r\n        player->additem SW_BeltPower 1\r\n        player->additem SW_MandoBoots 1\r\n        player->additem SW_MandoChest 1\r\n        player->additem SW_MandoLeft 1\r\n        player->additem SW_MandoRight 1\r\n        player->additem SW_MandoLegs 1\r\n        player->additem SW_ManHelm 1\r\n        player->additem SW_BlastBoltGreater 100\r\n        player->additem SW_BlasterRifleMando 1\r\n        player->additem Gold_001 2000\r\n\t\tAddTopic \"follow\"\r\n\t\tAddTopic \"wait\"\r\n        Activate\r\n    Endif\r\n\r\nEnd"
+  },
+  {
+    "type": "Script",
+    "flags": "",
+    "id": "Alt_Ship",
+    "header": {
+      "num_shorts": 0,
+      "num_longs": 0,
+      "num_floats": 0,
+      "bytecode_length": 293,
+      "variables_length": 0
+    },
+    "variables": "AAAAAA==",
+    "bytecode": "JQEAAAYBDwUgWBgQAAwBEVNXX1N0b3J5U2NlbmVBY3Qz2xAMARJTV19TaGFkZUxhbmRpbmdUYXTbEAwBElNXX1NoYWRlQ2FudGluYVRhdNsQDAESU1dfU2hhZGVNZWRpY2FsVGF02xDMEA1TV19UYXJpc0NoYXAxIwD//wwBBnBsYXllctQQD1NXX1NwQ2FyRnJlaWdodAEAzBAPU1dfVGFyaXNDaGFwMS0yDwD//8wQClNXX1NoaXBPd24PAP//DAERU1dfU3RvcnlTY2VuZUFjdDTbEAwBDlNXX1NoaXBRdWVzdGVy2xAMAQ9TV19TaGFkZU1hbmFhbjHbEAwBBnBsYXllctQQCEdvbGRfMDAxiBMiEAZmb2xsb3ciEAR3YWl0FxAJAQEB",
+    "text": "Begin Alt_Ship\r\n    If (OnActivate)\r\n\t\t;Standard Intro Skip\r\n\t\tSW_StorySceneAct3->Disable\r\n\t\tSW_ShadeLandingTat->Disable\r\n\t\tSW_ShadeCantinaTat->Disable\r\n\t\tSW_ShadeMedicalTat->Disable\r\n\t\tJournal SW_TarisChap1 35\r\n\t\t;End Intro Skip\r\n\t\tplayer->additem SW_SpCarFreight 1\r\n\t\tJournal SW_TarisChap1-2 15\r\n\t\tJournal SW_ShipOwn 15\r\n\t\tSW_StorySceneAct4->Disable\r\n\t\tSW_ShipQuester->Disable\r\n\t\tSW_ShadeManaan1->Disable\r\n        player->additem Gold_001 5000\r\n\t\tAddTopic \"follow\"\r\n\t\tAddTopic \"wait\"\r\n        Activate\r\n    Endif\r\nEnd"
+  },
+  {
+    "type": "Script",
+    "flags": "",
+    "id": "BornaJedi",
+    "header": {
+      "num_shorts": 0,
+      "num_longs": 0,
+      "num_floats": 0,
+      "bytecode_length": 583,
+      "variables_length": 0
+    },
+    "variables": "AAAAAA==",
+    "bytecode": "RwIAAAYBGgUgWBgQAAwBEVNXX1N0b3J5U2NlbmVBY3Qz2xAMARJTV19TaGFkZUxhbmRpbmdUYXTbEMwQDVNXX1RhcmlzQ2hhcDEFAP//DAESU1dfU2hhZGVMYW5kaW5nVGF02xAMARJTV19TaGFkZU1lZGljYWxUYXTaEMwQDXN3X2N6ZXJrYW11cmQPAP//zBANc3dfdGFyaXNjaGFwMQoA///MEA5TV19KaXRhaWlKb3Vybg8A///MEA9TV19aYW5vdHRpSm91cm4PAP//zBAPU1dfRGFudGFyaUpvdXJuCgD//8wQDFNXX0RhbnRKb3Vybh4A//8MAQZwbGF5ZXLUEAhHb2xkXzAwMbgLDAEGcGxheWVy1BAUU1dfTGlnaHRTYWJHcmRHcmVlbkIBAAwBBnBsYXllctQQEFNXX0pSb2JlQnJvd25Ub3ABAAwBBnBsYXllctQQEVNXX0pSb2JlQnJvd25QYW50AQAMAQZwbGF5ZXLUEBNTV19JbXBsYW50TWFuYU1pbm9yAQAMAQZwbGF5ZXJdEAAAcEIMAQZwbGF5ZXKQEAAASEMMAQZwbGF5ZXIdEQxTV19mb3JjZXB1c2gMARZTV19Eb29yRW5jbGF2ZVRyYWluZXJz2xAMARFTV19DemVya2FDb3VydGUyMtoQDAERU1dfQ3plcmthQ291cnRlMjL2EAZQbGF5ZXIAAAAAAAAAAAAAAAAAAAAMAQ9TV19DemVya2FDb3VydGXbECIQBmZvbGxvdyIQBHdhaXQXEAkBAQE=",
+    "text": "begin BornaJedi \r\n\tIf (OnActivate)\r\n\t\t;Standard Intro Skip\r\n\t\tSW_StorySceneAct3->Disable\r\n\t\tSW_ShadeLandingTat->Disable\r\n\t\tJournal SW_TarisChap1 5\r\n\t\tSW_ShadeLandingTat->Disable\r\n\t\tSW_ShadeMedicalTat->Enable\r\n\t\tjournal sw_czerkamurd 15\r\n\t\tjournal sw_tarischap1 10\r\n\t\tJournal SW_JitaiiJourn 15\r\n\t\tJournal SW_ZanottiJourn 15\r\n\t\tJournal SW_DantariJourn 10\r\n\t\tJournal SW_DantJourn 30\r\n\t\tplayer->additem Gold_001 3000\r\n\t\tplayer->additem SW_LightSabGrdGreenB 1\r\n\t\tplayer->additem SW_JRobeBrownTop 1\r\n\t\tplayer->additem SW_JRobeBrownPant 1\r\n\t\tplayer->additem SW_ImplantManaMinor 1\r\n\t\tplayer->setalteration 60\r\n\t\tplayer->setmagicka 200\r\n\t\tplayer->addspell SW_forcepush \r\n\t\tSW_DoorEnclaveTrainers->Disable\r\n\t\tSW_CzerkaCourte22->Enable\r\n\t\tSW_CzerkaCourte22->AIFollow Player 0, 0, 0, 0\r\n\t\tSW_CzerkaCourte->Disable\r\n\t\tAddTopic \"follow\"\r\n\t\tAddTopic \"wait\"\r\n\t\tActivate\r\n\tendif\r\nEnd"
+  },
+  {
+    "type": "Script",
+    "flags": "",
+    "id": "Drugdealer",
+    "header": {
+      "num_shorts": 0,
+      "num_longs": 0,
+      "num_floats": 0,
+      "bytecode_length": 291,
+      "variables_length": 0
+    },
+    "variables": "AAAAAA==",
+    "bytecode": "IwEAAAYBDgUgWBgQAAwBEVNXX1N0b3J5U2NlbmVBY3Qz2xAMARJTV19TaGFkZUxhbmRpbmdUYXTbEMwQDVNXX1RhcmlzQ2hhcDEFAP//DAESU1dfU2hhZGVMYW5kaW5nVGF02xAMARJTV19TaGFkZU1lZGljYWxUYXTaEMwQDXN3X2N6ZXJrYW11cmQPAP//zBANc3dfdGFyaXNjaGFwMQoA//8MAQZwbGF5ZXLUEAhHb2xkXzAwMbgLDAEGcGxheWVy1BAIU1dfc3BpY2X0AQwBBnBsYXllctQQDFNXX2h1bWFubWVhdAEADAEGcGxheWVy1BAZbWlzY19jb21fc2lsdmVyd2FyZV9zcG9vbgEAIhAGZm9sbG93IhAEd2FpdBcQCQEBAQ==",
+    "text": "begin Drugdealer\r\n    If (OnActivate)\r\n        ;Standard Intro Skip\r\n        SW_StorySceneAct3->Disable\r\n        SW_ShadeLandingTat->Disable\r\nJournal SW_TarisChap1 5\r\nSW_ShadeLandingTat->Disable\r\nSW_ShadeMedicalTat->Enable\r\njournal sw_czerkamurd 15\r\njournal sw_tarischap1 10\r\n        player->additem Gold_001 3000\r\n        player->additem SW_spice 500\r\n        player->additem SW_humanmeat 1\r\n        player->additem misc_com_silverware_spoon 1\r\n\t\tAddTopic \"follow\"\r\n\t\tAddTopic \"wait\"\r\n\t\tActivate\r\nendif\r\nEnd\r\n"
+  },
+  {
+    "type": "Script",
+    "flags": "",
+    "id": "dickrich",
+    "header": {
+      "num_shorts": 0,
+      "num_longs": 0,
+      "num_floats": 0,
+      "bytecode_length": 270,
+      "variables_length": 0
+    },
+    "variables": "AAAAAA==",
+    "bytecode": "DgEAAAYBDQUgWBgQAAwBEVNXX1N0b3J5U2NlbmVBY3Qz2xAMARJTV19TaGFkZUxhbmRpbmdUYXTbEMwQDVNXX1RhcmlzQ2hhcDEFAP//DAESU1dfU2hhZGVMYW5kaW5nVGF02xAMARJTV19TaGFkZU1lZGljYWxUYXTaEMwQDXN3X3RhcmlzY2hhcDEKAP//zBANc3dfY3plcmthbXVyZA8A//8MAQZwbGF5ZXLUEAhHb2xkXzAwMaCGDAERU1dfQ3plcmthQ291cnRlMjLaEAwBEVNXX0N6ZXJrYUNvdXJ0ZTIy9hAGUGxheWVyAAAAAAAAAAAAAAAAAAAAIhAGZm9sbG93IhAEd2FpdBcQCQEBAQ==",
+    "text": "begin dickrich\r\n\tIf (OnActivate)\r\n\t\t;Standard Intro Skip\r\n\t\tSW_StorySceneAct3->Disable\r\n\t\tSW_ShadeLandingTat->Disable\r\n\t\tJournal SW_TarisChap1 5\r\n\t\tSW_ShadeLandingTat->Disable\r\n\t\tSW_ShadeMedicalTat->Enable\r\n\t\tjournal sw_tarischap1 10\r\n\t\tjournal sw_czerkamurd 15\r\n\t\tplayer->additem Gold_001 100000\r\n\t\tSW_CzerkaCourte22->Enable\r\n\t\tSW_CzerkaCourte22->AIFollow Player 0, 0, 0, 0\r\n\t\tAddTopic \"follow\"\r\n\t\tAddTopic \"wait\"\r\n\t\tActivate\r\n\tendif\r\nEnd\r\n"
+  },
+  {
+    "type": "Script",
+    "flags": "",
+    "id": "gangster",
+    "header": {
+      "num_shorts": 0,
+      "num_longs": 0,
+      "num_floats": 0,
+      "bytecode_length": 824,
+      "variables_length": 0
+    },
+    "variables": "AAAAAA==",
+    "bytecode": "OAMAAAYBHwUgWBgQAAwBEVNXX1N0b3J5U2NlbmVBY3Qz2xAMARJTV19TaGFkZUxhbmRpbmdUYXTbEMwQDVNXX1RhcmlzQ2hhcDEFAP//DAESU1dfU2hhZGVMYW5kaW5nVGF02xAMARJTV19TaGFkZU1lZGljYWxUYXTaEMwQDXN3X3RhcmlzY2hhcDEKAP//zBANc3dfY3plcmthbXVyZA8A//8MAQZwbGF5ZXLUEAhHb2xkXzAwMSwBDAEGcGxheWVy1BATU1dfVmlicm9ibGFkZXN0cm9uZwEADAEGcGxheWVy1BAOU1dfVHVza2VucmlmbGUBAAwBBnBsYXllctQQFlNXX0JsYXN0ZXJQaXN0b2xUd2l0Y2gBAAwBBnBsYXllctQQDFNXX2JsYXN0Ym9sdAEADAEGcGxheWVy1BAIR29sZF8wMDG4CwwBF1NXX1JvZGlhbl9aaWxsb3dfd2Vha2VyABEAAPBBDAEXU1dfUm9kaWFuX1ppbGxvd193ZWFrZXIJEQAA8EEMARdTV19Sb2RpYW5fWmlsbG93X3dlYWtyUAARAADwQQwBF1NXX1JvZGlhbl9aaWxsb3dfd2Vha3JQCREAAPBBDAEVU1dfUm9kaWFuX1ppbGxvd193ZWFrABEAAPBBDAEVU1dfUm9kaWFuX1ppbGxvd193ZWFrCREAAPBBDAEXU1dfUm9kaWFuX1ppbGxvd193ZWFrUGkAEQAA8EEMARdTV19Sb2RpYW5fWmlsbG93X3dlYWtQaQkRAADwQQwBF1NXX1JvZGlhbl9aaWxsb3dfTm9ybWFsABEAAPBBDAEXU1dfUm9kaWFuX1ppbGxvd19Ob3JtYWwJEQAA8EEMARdTV19Sb2RpYW5fWmlsbG93X05vcm1TdAARAADwQQwBF1NXX1JvZGlhbl9aaWxsb3dfTm9ybVN0CREAAPBBDAEXU1dfUm9kaWFuX1ppbGxvd19TdHJvbmcAEQAA8EEMARdTV19Sb2RpYW5fWmlsbG93X1N0cm9uZwkRAADwQQwBBnBsYXllctQQEVNXX0JsYXN0Qm9sdEFycm93KAAiEAZmb2xsb3ciEAR3YWl0FxAJAQEB",
+    "text": "begin gangster\r\n    If (OnActivate)\r\n\t\t;Standard Intro Skip\r\n\t\tSW_StorySceneAct3->Disable\r\n\t\tSW_ShadeLandingTat->Disable\r\n\t\tJournal SW_TarisChap1 5\r\n\t\tSW_ShadeLandingTat->Disable\r\n\t\tSW_ShadeMedicalTat->Enable\r\n\t\tjournal sw_tarischap1 10\r\n\t\tjournal sw_czerkamurd 15\r\n\t\tplayer->additem Gold_001 300\r\n\t\tplayer->additem SW_Vibrobladestrong 1\r\n\t\tplayer->additem SW_Tuskenrifle 1\r\n\t\tplayer->additem SW_BlasterPistolTwitch 1\r\n\t\tplayer->additem SW_blastbolt 1\r\n\t\tplayer->additem Gold_001 3000\r\n\t\tSW_Rodian_Zillow_weaker->SetFight 30\r\n\t\tSW_Rodian_Zillow_weaker->SetHello 30\r\n\t\tSW_Rodian_Zillow_weakrP->SetFight 30\r\n\t\tSW_Rodian_Zillow_weakrP->SetHello 30\r\n\t\tSW_Rodian_Zillow_weak->SetFight 30\r\n\t\tSW_Rodian_Zillow_weak->SetHello 30\r\n\t\tSW_Rodian_Zillow_weakPi->SetFight 30\r\n\t\tSW_Rodian_Zillow_weakPi->SetHello 30\r\n\t\tSW_Rodian_Zillow_Normal->SetFight 30\r\n\t\tSW_Rodian_Zillow_Normal->SetHello 30\r\n\t\tSW_Rodian_Zillow_NormSt->SetFight 30\r\n\t\tSW_Rodian_Zillow_NormSt->SetHello 30\r\n\t\tSW_Rodian_Zillow_Strong->SetFight 30\r\n\t\tSW_Rodian_Zillow_Strong->SetHello 30\r\n\t\tplayer->additem SW_BlastBoltArrow 40\r\n\t\t\t\tAddTopic \"follow\"\r\n\t\tAddTopic \"wait\"\r\n\t\tActivate\r\n\tendif\r\nEnd\r\n"
+  },
+  {
+    "type": "Script",
+    "flags": "",
+    "id": "manlyman",
+    "header": {
+      "num_shorts": 0,
+      "num_longs": 0,
+      "num_floats": 0,
+      "bytecode_length": 616,
+      "variables_length": 0
+    },
+    "variables": "AAAAAA==",
+    "bytecode": "aAIAAAYBHQUgWBgQAAwBEVNXX1N0b3J5U2NlbmVBY3Qz2xAMARJTV19TaGFkZUxhbmRpbmdUYXTbEMwQDVNXX1RhcmlzQ2hhcDEFAP//zBANc3dfdGFyaXNjaGFwMQoA///MEA1zd19jemVya2FtdXJkAQD//8wQDXN3X3RhcmlzY2hhcDEMAP//zBANc3dfY3plcmthbXVyZAUA///MEA1zd19jemVya2FtdXJkCgD//8wQDXN3X2N6ZXJrYW11cmQPAP//zBANc3dfY3plcmthbXVyZBQA///MEA1zd19jemVya2FtdXJkGQD//8wQDXN3X2N6ZXJrYW11cmQeAP//zBAHc3dfd29yax8A///MEA1zd190YXJpc2NoYXAxFAD//wwBFlNXX0N6ZXJrYU9mZmljZURvb3JUYXQ3EQwBElNXX1NoYWRlQ2FudGluYVRhdNoQDAESU1dfU2hhZGVNZWRpY2FsVGF02xAMARJUYXRvb2luZVdhcm5pbmdHdXnbEAwBFlNXX0N6ZXJrYU9mZmljZURvb3JUYXQ3EQUBRwxTaGFkZU1lZGljYWwCIDIMAQZwbGF5ZXLUEAhHb2xkXzAwMSwBDAEGcGxheWVy1BAHU1dfd2hpcAEADAEGcGxheWVy1BAOU1dfdHVza2VubWVsZWUBAAwBBnBsYXllctQQDVNXX3NoaXJ0aGVhdnkBAAwBEVNXX0N6ZXJrYUNvdXJ0ZTIy2hAMARFTV19DemVya2FDb3VydGUyMvYQBlBsYXllcgAAAAAAAAAAAAAAAAAAACIQBmZvbGxvdyIQBHdhaXQXEAkBAQE=",
+    "text": "begin manlyman\r\n    If (OnActivate)\r\n        ;Standard Intro Skip\r\n        SW_StorySceneAct3->Disable\r\n        SW_ShadeLandingTat->Disable\r\nJournal SW_TarisChap1 5\r\njournal sw_tarischap1 10\r\njournal sw_czerkamurd 1\r\njournal sw_tarischap1 12\r\njournal sw_czerkamurd 5\r\njournal sw_czerkamurd 10\r\njournal sw_czerkamurd 15\r\njournal sw_czerkamurd 20\r\njournal sw_czerkamurd 25\r\njournal sw_czerkamurd 30\r\nJournal sw_work 31\r\n\r\njournal sw_tarischap1 20\r\n\"SW_CzerkaOfficeDoorTat\"->unlock\r\nSW_ShadeCantinaTat->Enable\r\nSW_ShadeMedicalTat->Disable\r\nTatooinewarningguy->disable\r\n\"SW_CzerkaOfficeDoorTat\"->unlock\r\nSet ShadeMedical to 2\r\n\r\n\r\n        player->additem Gold_001 300\r\n        player->additem SW_whip 1\r\n        player->additem SW_tuskenmelee 1\r\n        player->additem SW_shirtheavy 1\r\n      SW_CzerkaCourte22->Enable\r\n        SW_CzerkaCourte22->AIFollow Player 0, 0, 0, 0\r\n\t\tAddTopic \"follow\"\r\n\t\tAddTopic \"wait\"\r\n        Activate\r\nendif\r\nEnd\r\n"
+  },
+  {
+    "type": "Static",
+    "flags": "",
+    "id": "SW_EndarPod",
+    "mesh": "Ig\\Static\\endarpod.nif"
+  },
+  {
+    "type": "Door",
+    "flags": "",
+    "id": "SW_CharGenPodDoor2",
+    "name": "Born a jedi",
+    "script": "BornaJedi",
+    "mesh": "Ig\\Static\\endarpodopen.nif",
+    "open_sound": "Door Metal Open",
+    "close_sound": "Door Metal Close"
+  },
+  {
+    "type": "Door",
+    "flags": "",
+    "id": "SW_CharGenPodDoor3",
+    "name": "Born To Hunt",
+    "script": "manlyman",
+    "mesh": "Ig\\Static\\endarpodopen.nif",
+    "open_sound": "Door Metal Open",
+    "close_sound": "Door Metal Close"
+  },
+  {
+    "type": "Door",
+    "flags": "",
+    "id": "SW_CharGenPodDoor4",
+    "name": "Richie Rich",
+    "script": "dickrich",
+    "mesh": "Ig\\Static\\endarpodopen.nif",
+    "open_sound": "Door Metal Open",
+    "close_sound": "Door Metal Close"
+  },
+  {
+    "type": "Door",
+    "flags": "",
+    "id": "SW_CharGenPodDoor5",
+    "name": "Drug boss",
+    "script": "Drugdealer",
+    "mesh": "Ig\\Static\\endarpodopen.nif",
+    "open_sound": "Door Metal Open",
+    "close_sound": "Door Metal Close"
+  },
+  {
+    "type": "Door",
+    "flags": "",
+    "id": "SW_CharGenPodDoor6",
+    "name": "Gangster",
+    "script": "gangster",
+    "mesh": "Ig\\Static\\endarpodopen.nif",
+    "open_sound": "Door Metal Open",
+    "close_sound": "Door Metal Close"
+  },
+  {
+    "type": "Door",
+    "flags": "",
+    "id": "SW_CharGenPodDoor7",
+    "name": "Rodian gangster",
+    "script": "gangster",
+    "mesh": "Ig\\Static\\endarpodopen.nif",
+    "open_sound": "Door Metal Open",
+    "close_sound": "Door Metal Close"
+  },
+  {
+    "type": "Door",
+    "flags": "",
+    "id": "SW_CharGenPodDoorMando",
+    "name": "Mandalorian Raider",
+    "script": "Alt_Mando",
+    "mesh": "Ig\\Static\\endarpodopen.nif",
+    "open_sound": "Door Metal Open",
+    "close_sound": "Door Metal Close"
+  },
+  {
+    "type": "Door",
+    "flags": "",
+    "id": "SW_CharGenPodDoorShipCap",
+    "name": "Ship Captain",
+    "script": "Alt_Ship",
+    "mesh": "Ig\\Static\\endarpodopen.nif",
+    "open_sound": "Door Metal Open",
+    "close_sound": "Door Metal Close"
+  },
+  {
+    "type": "Npc",
+    "flags": "",
+    "id": "SW_MandoStartFollow1",
+    "name": "Mandalorian Warrior",
+    "script": "nolore",
+    "mesh": "base_anim.nif",
+    "inventory": [
+      [
+        32,
+        "SW_BlastBolt"
+      ],
+      [
+        1,
+        "SW_BlasterRifleMando"
+      ],
+      [
+        1,
+        "SW_ImplantRandom"
+      ],
+      [
+        1,
+        "SW_ManHelm"
+      ],
+      [
+        1,
+        "SW_MandoBoots"
+      ],
+      [
+        1,
+        "SW_MandoChest"
+      ],
+      [
+        1,
+        "SW_MandoLeft"
+      ],
+      [
+        1,
+        "SW_MandoLegs"
+      ],
+      [
+        1,
+        "SW_MandoRight"
+      ],
+      [
+        3,
+        "SW_RandoGrenade"
+      ],
+      [
+        1,
+        "SW_ShockStickLesser"
+      ],
+      [
+        1,
+        "common_shirt_03"
+      ]
+    ],
+    "spells": [],
+    "ai_data": {
+      "hello": 0,
+      "fight": 90,
+      "flee": 0,
+      "alarm": 0,
+      "services": ""
+    },
+    "ai_packages": [],
+    "travel_destinations": [],
+    "race": "Nord",
+    "class": "Warrior",
+    "faction": "",
+    "head": "b_n_nord_m_head_02",
+    "hair": "b_n_nord_m_hair03",
+    "npc_flags": "IS_BASE",
+    "blood_type": 2,
+    "data": {
+      "level": 13,
+      "stats": {
+        "attributes": [
+          80,
+          46,
+          50,
+          59,
+          59,
+          90,
+          37,
+          40
+        ],
+        "skills": [
+          53,
+          27,
+          63,
+          58,
+          48,
+          54,
+          48,
+          43,
+          53,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          50,
+          58,
+          6,
+          6,
+          6
+        ],
+        "health": 157,
+        "magicka": 92,
+        "fatigue": 279
+      },
+      "disposition": 50,
+      "reputation": 0,
+      "rank": 0,
+      "gold": 0
+    }
+  },
+  {
+    "type": "Npc",
+    "flags": "",
+    "id": "SW_MandoStartFollow2",
+    "name": "Mandalorian Warrior",
+    "script": "nolore",
+    "mesh": "base_anim.nif",
+    "inventory": [
+      [
+        32,
+        "SW_BlastBolt"
+      ],
+      [
+        1,
+        "SW_BlasterRifleMando"
+      ],
+      [
+        1,
+        "SW_ImplantRandom"
+      ],
+      [
+        1,
+        "SW_ManHelm"
+      ],
+      [
+        1,
+        "SW_MandoBoots"
+      ],
+      [
+        1,
+        "SW_MandoChest"
+      ],
+      [
+        1,
+        "SW_MandoLeft"
+      ],
+      [
+        1,
+        "SW_MandoLegs"
+      ],
+      [
+        1,
+        "SW_MandoRight"
+      ],
+      [
+        3,
+        "SW_RandoGrenade"
+      ],
+      [
+        1,
+        "SW_ShockStickLesser"
+      ],
+      [
+        1,
+        "common_shirt_03"
+      ]
+    ],
+    "spells": [],
+    "ai_data": {
+      "hello": 0,
+      "fight": 90,
+      "flee": 0,
+      "alarm": 0,
+      "services": ""
+    },
+    "ai_packages": [],
+    "travel_destinations": [],
+    "race": "Nord",
+    "class": "Warrior",
+    "faction": "",
+    "head": "b_n_nord_m_head_02",
+    "hair": "b_n_nord_m_hair03",
+    "npc_flags": "IS_BASE",
+    "blood_type": 2,
+    "data": {
+      "level": 13,
+      "stats": {
+        "attributes": [
+          80,
+          46,
+          50,
+          59,
+          59,
+          90,
+          37,
+          40
+        ],
+        "skills": [
+          53,
+          27,
+          63,
+          58,
+          48,
+          54,
+          48,
+          43,
+          53,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          50,
+          58,
+          6,
+          6,
+          6
+        ],
+        "health": 157,
+        "magicka": 92,
+        "fatigue": 279
+      },
+      "disposition": 50,
+      "reputation": 0,
+      "rank": 0,
+      "gold": 0
+    }
+  },
+  {
+    "type": "Npc",
+    "flags": "",
+    "id": "TatooineWarningGuy",
+    "name": "Ny Vash",
+    "script": "NyVashScript",
+    "mesh": "base_anim.nif",
+    "inventory": [
+      [
+        15,
+        "Gold_001"
+      ],
+      [
+        1,
+        "SW_BanthaPauldronLef"
+      ],
+      [
+        1,
+        "SW_BanthaPauldronRigh"
+      ],
+      [
+        1,
+        "SW_EchBoots"
+      ],
+      [
+        1,
+        "SW_EchVibroblade"
+      ],
+      [
+        1,
+        "SW_HuntersChest"
+      ],
+      [
+        1,
+        "SW_HuntersHat"
+      ],
+      [
+        1,
+        "SW_PantsBlack"
+      ],
+      [
+        1,
+        "SW_ShirtCommon"
+      ]
+    ],
+    "spells": [
+      "soul trap"
+    ],
+    "ai_data": {
+      "hello": 30,
+      "fight": 30,
+      "flee": 30,
+      "alarm": 0,
+      "services": ""
+    },
+    "ai_packages": [],
+    "travel_destinations": [],
+    "race": "Nikto",
+    "class": "Warrior",
+    "faction": "SW_Hunters",
+    "head": "SW_NiktoHead",
+    "hair": "SW_NoHairNikto",
+    "npc_flags": "IS_BASE",
+    "blood_type": 0,
+    "data": {
+      "level": 5,
+      "stats": {
+        "attributes": [
+          67,
+          55,
+          53,
+          60,
+          56,
+          70,
+          52,
+          50
+        ],
+        "skills": [
+          41,
+          19,
+          41,
+          41,
+          26,
+          41,
+          26,
+          26,
+          41,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          19,
+          5,
+          5,
+          5
+        ],
+        "health": 92,
+        "magicka": 110,
+        "fatigue": 250
+      },
+      "disposition": 50,
+      "reputation": 2,
+      "rank": 0,
+      "gold": 0
+    }
+  },
+  {
+    "type": "Activator",
+    "flags": "",
+    "id": "SW_CharGenPodAct",
+    "name": "Escape Pod",
+    "script": "SW_EndarEscapePodScr",
+    "mesh": "Ig\\Static\\endarpodopen.nif"
+  },
+  {
+    "type": "Activator",
+    "flags": "PERSISTENT",
+    "id": "SW_StorySceneAct3",
+    "name": "",
+    "script": "SW_StorySceneScr3",
+    "mesh": "EditorMarker.NIF"
+  },
+  {
+    "type": "Activator",
+    "flags": "PERSISTENT",
+    "id": "SW_StorySceneAct4",
+    "name": "",
+    "script": "SW_StorySceneScr4",
+    "mesh": "EditorMarker.NIF"
+  },
+  {
+    "type": "Cell",
+    "flags": "",
+    "name": "Dantooine, Dantari Wilds",
+    "data": {
+      "flags": "IS_INTERIOR | HAS_WATER | RESTING_IS_ILLEGAL | BEHAVES_LIKE_EXTERIOR",
+      "grid": [
+        0,
+        0
+      ]
+    },
+    "region": "Grazelands Region",
+    "references": [
+      {
+        "mast_index": 0,
+        "refr_index": 36,
+        "id": "SW_MandoStartFollow1",
+        "temporary": false,
+        "translation": [
+          23873.316,
+          11918.948,
+          256.0111
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.2000003
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 37,
+        "id": "SW_MandoStartFollow2",
+        "temporary": false,
+        "translation": [
+          23922.945,
+          11644.415,
+          256.7024
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.8
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Cell",
+    "flags": "",
+    "name": "Dantooine, Estate Grounds",
+    "data": {
+      "flags": "IS_INTERIOR | HAS_WATER | RESTING_IS_ILLEGAL | BEHAVES_LIKE_EXTERIOR",
+      "grid": [
+        0,
+        0
+      ]
+    },
+    "region": "Grazelands Region",
+    "references": [
+      {
+        "mast_index": 5,
+        "refr_index": 23179,
+        "id": "SW_MandoKashyykHost",
+        "temporary": false,
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "deleted": true
+      },
+      {
+        "mast_index": 5,
+        "refr_index": 23182,
+        "id": "SW_MandoKashyykHost",
+        "temporary": false,
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "deleted": true
+      }
+    ]
+  },
+  {
+    "type": "Cell",
+    "flags": "",
+    "name": "Dantooine, Valley of the Jedi",
+    "data": {
+      "flags": "IS_INTERIOR | HAS_WATER | BEHAVES_LIKE_EXTERIOR",
+      "grid": [
+        0,
+        0
+      ]
+    },
+    "region": "Grazelands Region",
+    "references": []
+  },
+  {
+    "type": "Cell",
+    "flags": "",
+    "name": "Imperial Prison Ship",
+    "data": {
+      "flags": "IS_INTERIOR",
+      "grid": [
+        4537908,
+        1066192077
+      ]
+    },
+    "water_height": 0.0,
+    "atmosphere_data": {
+      "ambient_color": [
+        52,
+        40,
+        27,
+        0
+      ],
+      "sunlight_color": [
+        66,
+        51,
+        34,
+        0
+      ],
+      "fog_color": [
+        52,
+        62,
+        69,
+        0
+      ],
+      "fog_density": 1.1
+    },
+    "references": [
+      {
+        "mast_index": 5,
+        "refr_index": 20,
+        "id": "SW_SithCharGen",
+        "temporary": false,
+        "translation": [
+          1873.1627,
+          7341.676,
+          652.25757
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          6.2831855
+        ]
+      },
+      {
+        "mast_index": 5,
+        "refr_index": 37,
+        "id": "SW_InEndarDoorLJed",
+        "temporary": false,
+        "translation": [
+          1600.0,
+          9280.0,
+          832.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          1.5707965
+        ],
+        "scale": 1.5000001
+      },
+      {
+        "mast_index": 5,
+        "refr_index": 38,
+        "id": "SW_InEndarDoorRJed",
+        "temporary": false,
+        "translation": [
+          1600.0,
+          9280.0,
+          832.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          1.5707965
+        ],
+        "scale": 1.5000001
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 1,
+        "id": "SW_Rodian_Zillow_Normal",
+        "temporary": false,
+        "translation": [
+          1490.9792,
+          6954.418,
+          -346.61807
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 2,
+        "id": "SW_Rodian_Zillow_NormSt",
+        "temporary": false,
+        "translation": [
+          1565.0758,
+          6958.303,
+          -354.3686
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 3,
+        "id": "SW_Rodian_Zillow_weak",
+        "temporary": false,
+        "translation": [
+          1636.9904,
+          6957.143,
+          -344.2933
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 4,
+        "id": "SW_Rodian_Zillow_weaker",
+        "temporary": false,
+        "translation": [
+          1492.342,
+          6879.4556,
+          -339.30243
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 5,
+        "id": "SW_Rodian_Zillow_Strong",
+        "temporary": false,
+        "translation": [
+          1560.0281,
+          6881.439,
+          -344.45782
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 6,
+        "id": "SW_Rodian_Zillow_weak",
+        "temporary": false,
+        "translation": [
+          1644.1735,
+          6889.7383,
+          -349.41666
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 7,
+        "id": "SW_Rodian_Zillow_weakMe",
+        "temporary": false,
+        "translation": [
+          1480.0148,
+          6800.3394,
+          -356.83304
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 8,
+        "id": "SW_Rodian_Zillow_weakPi",
+        "temporary": false,
+        "translation": [
+          1556.6396,
+          6797.3174,
+          -346.90735
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 9,
+        "id": "SW_Rodian_Zillow_weakrP",
+        "temporary": false,
+        "translation": [
+          1644.7137,
+          6792.1733,
+          -349.40106
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 10,
+        "id": "SW_CharGenPodDoor4",
+        "temporary": false,
+        "translation": [
+          1233.8494,
+          6598.376,
+          655.0161
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.7123895
+        ],
+        "scale": 0.70000005,
+        "destination": {
+          "translation": [
+            2974.7778,
+            3086.5574,
+            7552.161
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            4.7831864
+          ],
+          "cell": "Manaan, Docking Bay"
+        }
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 11,
+        "id": "SW_CharGenPodDoor7",
+        "temporary": false,
+        "translation": [
+          1960.8011,
+          7490.6694,
+          654.7731
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          1.6000001
+        ],
+        "scale": 0.70000005,
+        "destination": {
+          "translation": [
+            5693.812,
+            7680.233,
+            9978.483
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            5.483186
+          ],
+          "cell": "Tatooine, Rodian District"
+        }
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 12,
+        "id": "SW_CharGenPodDoor5",
+        "temporary": false,
+        "translation": [
+          1936.2078,
+          6612.038,
+          661.10443
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          1.6000001
+        ],
+        "scale": 0.70000005,
+        "destination": {
+          "translation": [
+            9.910196,
+            -102.95845,
+            -375.52905
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "cell": "Nar Shaddaa, Cantina"
+        }
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 13,
+        "id": "SW_CharGenPodDoorShipCap",
+        "temporary": false,
+        "translation": [
+          1216.0,
+          8256.0,
+          640.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.712389
+        ],
+        "scale": 0.70000005,
+        "destination": {
+          "translation": [
+            4468.4766,
+            5654.3296,
+            15342.847
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            5.783185
+          ],
+          "cell": "The Outer Rim, Freighter"
+        }
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 14,
+        "id": "SW_CharGenPodDoor2",
+        "temporary": false,
+        "translation": [
+          1231.093,
+          7040.3857,
+          656.2033
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.683186
+        ],
+        "scale": 0.70000005,
+        "destination": {
+          "translation": [
+            -429.03564,
+            9078.896,
+            148.29718
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            1.6999999
+          ],
+          "cell": "Dantooine, Valley of the Jedi"
+        }
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 15,
+        "id": "SW_CharGenPodDoor3",
+        "temporary": false,
+        "translation": [
+          1231.093,
+          7471.571,
+          655.01605
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.712389
+        ],
+        "scale": 0.70000005,
+        "destination": {
+          "translation": [
+            4266.9,
+            4396.8354,
+            15625.402
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            3.2831852
+          ],
+          "cell": "Tatooine, Hunter's Lodge"
+        }
+      },
+      {
+        "mast_index": 5,
+        "refr_index": 109,
+        "id": "SW_InEndarPillar",
+        "temporary": true,
+        "translation": [
+          1790.3395,
+          7825.316,
+          768.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          1.5707964
+        ],
+        "scale": 1.72
+      },
+      {
+        "mast_index": 5,
+        "refr_index": 166,
+        "id": "SW_InEndarWall05",
+        "temporary": true,
+        "translation": [
+          1216.0,
+          8448.0,
+          832.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          6.2831855
+        ],
+        "scale": 1.5000001
+      },
+      {
+        "mast_index": 5,
+        "refr_index": 175,
+        "id": "SW_EndarPod",
+        "temporary": true,
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": 0.70000005,
+        "deleted": true
+      },
+      {
+        "mast_index": 5,
+        "refr_index": 178,
+        "id": "SW_InEndarPillar",
+        "temporary": true,
+        "translation": [
+          1406.3392,
+          7825.316,
+          768.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          1.5707964
+        ],
+        "scale": 1.72
+      },
+      {
+        "mast_index": 5,
+        "refr_index": 186,
+        "id": "SW_InEndarCenter03",
+        "temporary": true,
+        "translation": [
+          1600.0,
+          6848.0,
+          -203.48639
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": 1.5000001
+      },
+      {
+        "mast_index": 5,
+        "refr_index": 187,
+        "id": "SW_InEndarCenter03",
+        "temporary": true,
+        "translation": [
+          1600.0,
+          8832.0,
+          832.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": 1.5000001
+      },
+      {
+        "mast_index": 5,
+        "refr_index": 188,
+        "id": "SW_InEndarCorner2",
+        "temporary": true,
+        "translation": [
+          1215.9998,
+          8064.0,
+          832.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.1415925
+        ],
+        "scale": 1.5000001
+      },
+      {
+        "mast_index": 5,
+        "refr_index": 189,
+        "id": "SW_InEndarDoorjamb",
+        "temporary": true,
+        "translation": [
+          1600.0,
+          8000.0,
+          832.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.7123895
+        ],
+        "scale": 1.5000001
+      },
+      {
+        "mast_index": 5,
+        "refr_index": 190,
+        "id": "SW_InEndarCorner",
+        "temporary": true,
+        "translation": [
+          1984.0,
+          8064.0,
+          832.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.7683716e-7
+        ],
+        "scale": 1.5000001
+      },
+      {
+        "mast_index": 5,
+        "refr_index": 193,
+        "id": "SW_InEndarWall05",
+        "temporary": true,
+        "translation": [
+          1984.0,
+          8832.0,
+          832.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.1415927
+        ],
+        "scale": 1.5000001
+      },
+      {
+        "mast_index": 5,
+        "refr_index": 194,
+        "id": "SW_InEndarWall05",
+        "temporary": true,
+        "translation": [
+          1216.0,
+          8832.0,
+          832.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          6.2831855
+        ],
+        "scale": 1.5000001
+      },
+      {
+        "mast_index": 5,
+        "refr_index": 261,
+        "id": "SW_InEndarCorner2",
+        "temporary": true,
+        "translation": [
+          1984.0,
+          9216.0,
+          832.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          6.283185
+        ],
+        "scale": 1.5000001
+      },
+      {
+        "mast_index": 5,
+        "refr_index": 262,
+        "id": "SW_InEndarDoorjamb",
+        "temporary": true,
+        "translation": [
+          1600.0,
+          9280.0,
+          832.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          1.5707964
+        ],
+        "scale": 1.5000001
+      },
+      {
+        "mast_index": 5,
+        "refr_index": 263,
+        "id": "SW_InEndarCorner",
+        "temporary": true,
+        "translation": [
+          1216.0,
+          9216.0,
+          832.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.1415932
+        ],
+        "scale": 1.5000001
+      },
+      {
+        "mast_index": 5,
+        "refr_index": 264,
+        "id": "SW_InEndarWall05",
+        "temporary": true,
+        "translation": [
+          1984.0,
+          8448.0,
+          832.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.1415927
+        ],
+        "scale": 1.5000001
+      },
+      {
+        "mast_index": 5,
+        "refr_index": 275,
+        "id": "SW_EndarPod",
+        "temporary": true,
+        "translation": [
+          -1636.6667,
+          5697.8994,
+          640.014
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": 0.70000005
+      },
+      {
+        "mast_index": 5,
+        "refr_index": 276,
+        "id": "SW_EndarPod",
+        "temporary": true,
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": 0.70000005,
+        "deleted": true
+      },
+      {
+        "mast_index": 5,
+        "refr_index": 277,
+        "id": "SW_EndarPod",
+        "temporary": true,
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": 0.70000005,
+        "deleted": true
+      },
+      {
+        "mast_index": 5,
+        "refr_index": 278,
+        "id": "SW_EndarPod",
+        "temporary": true,
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": 0.70000005,
+        "deleted": true
+      },
+      {
+        "mast_index": 5,
+        "refr_index": 279,
+        "id": "SW_EndarPod",
+        "temporary": true,
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": 0.70000005,
+        "deleted": true
+      },
+      {
+        "mast_index": 5,
+        "refr_index": 328,
+        "id": "SW_CharGenPodAct",
+        "temporary": true,
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": 0.70000005,
+        "deleted": true
+      },
+      {
+        "mast_index": 5,
+        "refr_index": 330,
+        "id": "red_512_pulse",
+        "temporary": true,
+        "translation": [
+          1528.2871,
+          7185.2993,
+          941.87415
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "mast_index": 5,
+        "refr_index": 340,
+        "id": "red_512_pulse",
+        "temporary": true,
+        "translation": [
+          1532.7043,
+          7016.5483,
+          941.87415
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 16,
+        "id": "SW_CharGenPodAct",
+        "temporary": true,
+        "translation": [
+          1937.0311,
+          7043.7085,
+          654.7731
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          1.6292032
+        ],
+        "scale": 0.70000005
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 17,
+        "id": "SW_InEndarCorner",
+        "temporary": true,
+        "translation": [
+          1216.0,
+          7616.0005,
+          832.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.1415932
+        ],
+        "scale": 1.5000001
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 18,
+        "id": "SW_InEndarWall05",
+        "temporary": true,
+        "translation": [
+          1216.0,
+          7232.0,
+          832.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          6.2831855
+        ],
+        "scale": 1.5000001
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 19,
+        "id": "SW_InEndarWall05",
+        "temporary": true,
+        "translation": [
+          1216.0,
+          6848.0,
+          832.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          6.2831855
+        ],
+        "scale": 1.5000001
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 20,
+        "id": "SW_InEndarCorner2",
+        "temporary": true,
+        "translation": [
+          1215.9998,
+          6464.001,
+          832.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.1415925
+        ],
+        "scale": 1.5000001
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 21,
+        "id": "SW_InEndarDoorjamb",
+        "temporary": true,
+        "translation": [
+          1600.0,
+          6400.0005,
+          832.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.7123895
+        ],
+        "scale": 1.5000001
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 22,
+        "id": "SW_InEndarCenter03",
+        "temporary": true,
+        "translation": [
+          1600.0,
+          6848.0,
+          832.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": 1.5000001
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 23,
+        "id": "SW_InEndarCenter03",
+        "temporary": true,
+        "translation": [
+          1600.0,
+          7232.0,
+          832.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": 1.5000001
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 24,
+        "id": "SW_InEndarDoorjamb",
+        "temporary": true,
+        "translation": [
+          1600.0,
+          7680.0,
+          832.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          1.5707964
+        ],
+        "scale": 1.5000001
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 25,
+        "id": "SW_InEndarCorner",
+        "temporary": true,
+        "translation": [
+          1984.0,
+          6464.0,
+          832.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.7683716e-7
+        ],
+        "scale": 1.5000001
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 26,
+        "id": "SW_InEndarWall05",
+        "temporary": true,
+        "translation": [
+          1984.0,
+          6848.0,
+          832.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.1415927
+        ],
+        "scale": 1.5000001
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 27,
+        "id": "SW_InEndarWall05",
+        "temporary": true,
+        "translation": [
+          1984.0,
+          7232.0,
+          832.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.1415927
+        ],
+        "scale": 1.5000001
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 28,
+        "id": "SW_InEndarCorner2",
+        "temporary": true,
+        "translation": [
+          1984.0,
+          7616.0,
+          832.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          6.283185
+        ],
+        "scale": 1.5000001
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 29,
+        "id": "SW_InEndarPillar",
+        "temporary": true,
+        "translation": [
+          1407.9998,
+          6272.0,
+          768.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.712389
+        ],
+        "scale": 1.72
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 30,
+        "id": "SW_InEndarPillar",
+        "temporary": true,
+        "translation": [
+          1792.0,
+          6272.0,
+          768.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.712389
+        ],
+        "scale": 1.72
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 31,
+        "id": "SW_InEndarCenter03",
+        "temporary": true,
+        "translation": [
+          1600.0,
+          8448.0,
+          832.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": 1.5000001
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 32,
+        "id": "SW_InEndarCenter03",
+        "temporary": true,
+        "translation": [
+          1596.912,
+          7857.1646,
+          831.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": 1.5000001
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 33,
+        "id": "SW_InEndarPillar",
+        "temporary": true,
+        "translation": [
+          1794.0126,
+          7861.006,
+          768.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.712389
+        ],
+        "scale": 1.72
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 34,
+        "id": "SW_InEndarPillar",
+        "temporary": true,
+        "translation": [
+          1410.0123,
+          7861.006,
+          768.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.712389
+        ],
+        "scale": 1.72
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 35,
+        "id": "SW_CharGenPodDoorMando",
+        "temporary": true,
+        "translation": [
+          1216.0,
+          8704.0,
+          640.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.712389
+        ],
+        "scale": 0.70000005
+      }
+    ]
+  },
+  {
+    "type": "Cell",
+    "flags": "",
+    "name": "Manaan, Docking Bay",
+    "data": {
+      "flags": "IS_INTERIOR | HAS_WATER | RESTING_IS_ILLEGAL",
+      "grid": [
+        6703177,
+        1056964608
+      ]
+    },
+    "water_height": 0.0,
+    "atmosphere_data": {
+      "ambient_color": [
+        149,
+        149,
+        149,
+        0
+      ],
+      "sunlight_color": [
+        147,
+        147,
+        147,
+        0
+      ],
+      "fog_color": [
+        73,
+        72,
+        102,
+        0
+      ],
+      "fog_density": 0.5
+    },
+    "references": [
+      {
+        "mast_index": 5,
+        "refr_index": 1032,
+        "id": "SW_StorySceneAct4",
+        "temporary": false,
+        "translation": [
+          6992.5566,
+          11585.366,
+          7731.342
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "mast_index": 4,
+        "refr_index": 4146,
+        "id": "SW_ManaanBay",
+        "temporary": true,
+        "translation": [
+          7459.243,
+          8804.222,
+          8502.081
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Cell",
+    "flags": "",
+    "name": "Tatooine Czerka Office",
+    "data": {
+      "flags": "IS_INTERIOR | RESTING_IS_ILLEGAL",
+      "grid": [
+        0,
+        1036831949
+      ]
+    },
+    "water_height": 0.0,
+    "atmosphere_data": {
+      "ambient_color": [
+        71,
+        71,
+        71,
+        0
+      ],
+      "sunlight_color": [
+        255,
+        240,
+        136,
+        0
+      ],
+      "fog_color": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fog_density": 0.1
+    },
+    "references": [
+      {
+        "mast_index": 4,
+        "refr_index": 3255,
+        "id": "SW_CzerkaOfficeGuy",
+        "temporary": false,
+        "translation": [
+          4107.0703,
+          3729.5977,
+          13758.999
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          5.883186
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Cell",
+    "flags": "",
+    "name": "Tatooine, Dex's Hut",
+    "data": {
+      "flags": "IS_INTERIOR",
+      "grid": [
+        0,
+        1065353216
+      ]
+    },
+    "water_height": 0.0,
+    "atmosphere_data": {
+      "ambient_color": [
+        71,
+        71,
+        71,
+        0
+      ],
+      "sunlight_color": [
+        242,
+        217,
+        217,
+        0
+      ],
+      "fog_color": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fog_density": 1.0
+    },
+    "references": [
+      {
+        "mast_index": 4,
+        "refr_index": 4865,
+        "id": "SW_Door1",
+        "temporary": false,
+        "translation": [
+          4010.151,
+          3807.4028,
+          12249.808
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.1485739
+        ],
+        "destination": {
+          "translation": [
+            5934.2627,
+            7640.5825,
+            9922.523
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            3.9831843
+          ],
+          "cell": "Tatooine, Rodian District"
+        }
+      }
+    ]
+  },
+  {
+    "type": "Cell",
+    "flags": "",
+    "name": "Tatooine, Hunter's Lodge",
+    "data": {
+      "flags": "IS_INTERIOR",
+      "grid": [
+        0,
+        1065353216
+      ]
+    },
+    "water_height": 0.0,
+    "atmosphere_data": {
+      "ambient_color": [
+        251,
+        238,
+        168,
+        0
+      ],
+      "sunlight_color": [
+        251,
+        238,
+        168,
+        0
+      ],
+      "fog_color": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fog_density": 1.0
+    },
+    "references": []
+  },
+  {
+    "type": "Cell",
+    "flags": "",
+    "name": "Tatooine, Medical Bay",
+    "data": {
+      "flags": "IS_INTERIOR",
+      "grid": [
+        0,
+        1065353216
+      ]
+    },
+    "water_height": 0.0,
+    "atmosphere_data": {
+      "ambient_color": [
+        71,
+        71,
+        71,
+        0
+      ],
+      "sunlight_color": [
+        242,
+        217,
+        217,
+        0
+      ],
+      "fog_color": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fog_density": 1.0
+    },
+    "references": []
+  },
+  {
+    "type": "Cell",
+    "flags": "",
+    "name": "Tatooine, Rodian District",
+    "data": {
+      "flags": "IS_INTERIOR | HAS_WATER | RESTING_IS_ILLEGAL | BEHAVES_LIKE_EXTERIOR",
+      "grid": [
+        6274556,
+        1065353216
+      ]
+    },
+    "region": "Thirsk Region",
+    "references": [
+      {
+        "mast_index": 4,
+        "refr_index": 8990,
+        "id": "SW_DoorTestCantina",
+        "temporary": false,
+        "translation": [
+          3781.597,
+          6724.6963,
+          9838.808
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          5.016812
+        ],
+        "scale": 0.8,
+        "destination": {
+          "translation": [
+            4002.771,
+            3936.2249,
+            12333.034
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "cell": "Tatooine, Roomo's Hut"
+        },
+        "lock_level": 10
+      }
+    ]
+  },
+  {
+    "type": "Cell",
+    "flags": "",
+    "name": "Tatooine, Sandriver",
+    "data": {
+      "flags": "IS_INTERIOR | HAS_WATER | RESTING_IS_ILLEGAL | BEHAVES_LIKE_EXTERIOR",
+      "grid": [
+        6274556,
+        1065353216
+      ]
+    },
+    "region": "Thirsk Region",
+    "references": [
+      {
+        "mast_index": 4,
+        "refr_index": 4384,
+        "id": "SW_CzerkaOfficeTatGuard",
+        "temporary": false,
+        "translation": [
+          6882.1543,
+          3787.169,
+          12298.573
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          6.119518
+        ]
+      },
+      {
+        "mast_index": 4,
+        "refr_index": 4419,
+        "id": "SW_CzerkaOfficeDoorTat",
+        "temporary": false,
+        "translation": [
+          6785.525,
+          3810.231,
+          12290.504
+        ],
+        "rotation": [
+          5.7316613,
+          0.3351032,
+          3.6826446
+        ],
+        "scale": 0.75000006,
+        "destination": {
+          "translation": [
+            3517.7395,
+            4155.6045,
+            13807.4
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            3.1
+          ],
+          "cell": "Tatooine Czerka Office"
+        },
+        "lock_level": 100
+      },
+      {
+        "mast_index": 4,
+        "refr_index": 4440,
+        "id": "SW_SandriverGateRod2",
+        "temporary": false,
+        "translation": [
+          1009.33484,
+          4364.6255,
+          12493.089
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          5.499999
+        ],
+        "scale": 1.5000001,
+        "destination": {
+          "translation": [
+            7266.7705,
+            4942.726,
+            9922.523
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            5.483186
+          ],
+          "cell": "Tatooine, Rodian District"
+        }
+      },
+      {
+        "mast_index": 5,
+        "refr_index": 1150,
+        "id": "SW_StorySceneAct3",
+        "temporary": false,
+        "translation": [
+          2651.9175,
+          9530.98,
+          12190.189
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "mast_index": 4,
+        "refr_index": 4473,
+        "id": "SW_BuildArchway",
+        "temporary": true,
+        "translation": [
+          7941.877,
+          2747.1912,
+          12424.414
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          2.4
+        ],
+        "scale": 1.94
+      }
+    ]
+  },
+  {
+    "type": "Dialogue",
+    "flags": "",
+    "id": "SW_TarisChap1",
+    "dialogue_type": "Journal"
+  },
+  {
+    "type": "DialogueInfo",
+    "flags": "",
+    "id": "1462320817770225231",
+    "prev_id": "17369122481145129698",
+    "next_id": "",
+    "data": {
+      "dialogue_type": "Journal",
+      "disposition": 35,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "",
+    "speaker_race": "",
+    "speaker_class": "",
+    "speaker_faction": "",
+    "speaker_cell": "",
+    "player_faction": "",
+    "sound_path": "",
+    "text": "[]",
+    "quest_state": {
+      "type": "Finished"
+    },
+    "filters": [],
+    "script_text": ""
+  },
+  {
+    "type": "Dialogue",
+    "flags": "",
+    "id": "Authority Murders",
+    "dialogue_type": "Topic"
+  },
+  {
+    "type": "DialogueInfo",
+    "flags": "",
+    "id": "27092150533120432315",
+    "prev_id": "",
+    "next_id": "305145253498031338",
+    "data": {
+      "dialogue_type": "Topic",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "SW_CzerkaOfficeTatGuard",
+    "speaker_race": "",
+    "speaker_class": "",
+    "speaker_faction": "",
+    "speaker_cell": "",
+    "player_faction": "",
+    "sound_path": "",
+    "text": "Barney Halligan? No good trash was as worthless as a Cathar! The Czerka Office is now reopened to the public. Thank you, stranger, and welcome to Sandriver.",
+    "filters": [
+      {
+        "slot": "Slot0",
+        "filter_type": "Journal",
+        "function": "JournalType",
+        "comparison": "Equal",
+        "id": "SW_CzerkaMurd",
+        "value": {
+          "type": "Integer",
+          "data": 25
+        }
+      }
+    ],
+    "script_text": "Journal SW_CzerkaMurd 30\r\n\"SW_CzerkaOfficeDoorTat\"->unlock\r\nSW_ShadeCantinaTat->Enable\r\nSW_ShadeMedicalTat->Disable\r\nStartScript SW_StoryComlink2\r\nJournal SW_TarisChap1 15\r\nplayer->additem \"Gold_001\", 200\r\nSet ShadeMedical to 2\r\nplayer->modReputation 1\r\nStopSound \"AMurders1\"\r\nStopSound \"AMurders2\"\r\nPlaySound3d \"AMurders3\""
+  },
+  {
+    "type": "Dialogue",
+    "flags": "",
+    "id": "Greeting 7",
+    "dialogue_type": "Greeting"
+  },
+  {
+    "type": "DialogueInfo",
+    "flags": "",
+    "id": "6661233271017012512",
+    "prev_id": "",
+    "next_id": "1697221321147925749",
+    "data": {
+      "dialogue_type": "Greeting",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "SW_MandoStartFollow2",
+    "speaker_race": "",
+    "speaker_class": "",
+    "speaker_faction": "",
+    "speaker_cell": "",
+    "player_faction": "",
+    "sound_path": "",
+    "text": "What glorious end awaits us?",
+    "filters": [],
+    "script_text": ""
+  },
+  {
+    "type": "DialogueInfo",
+    "flags": "",
+    "id": "1697221321147925749",
+    "prev_id": "6661233271017012512",
+    "next_id": "135455773145618326",
+    "data": {
+      "dialogue_type": "Greeting",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "SW_MandoStartFollow1",
+    "speaker_race": "",
+    "speaker_class": "",
+    "speaker_faction": "",
+    "speaker_cell": "",
+    "player_faction": "",
+    "sound_path": "",
+    "text": "Let's find a fight worthy of a Mandalorian!",
+    "filters": [],
+    "script_text": ""
+  },
+  {
+    "type": "DialogueInfo",
+    "flags": "",
+    "id": "135455773145618326",
+    "prev_id": "1697221321147925749",
+    "next_id": "3066525290450511779",
+    "data": {
+      "dialogue_type": "Greeting",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "SW_GravePirate6Wan",
+    "speaker_race": "",
+    "speaker_class": "",
+    "speaker_faction": "",
+    "speaker_cell": "",
+    "player_faction": "",
+    "sound_path": "",
+    "text": "Just waiting on my ransom to cash out and then I'll pick him from the jailhouse and be out of here for a while.",
+    "filters": [],
+    "script_text": ""
+  },
+  {
+    "type": "Dialogue",
+    "flags": "",
+    "id": "Duros gang",
+    "dialogue_type": "Topic"
+  },
+  {
+    "type": "DialogueInfo",
+    "flags": "",
+    "id": "302024745522713674",
+    "prev_id": "27364145011640417555",
+    "next_id": "",
+    "data": {
+      "dialogue_type": "Topic",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "SW_CzerkaOfficeGuy",
+    "speaker_race": "",
+    "speaker_class": "",
+    "speaker_faction": "",
+    "speaker_cell": "",
+    "player_faction": "",
+    "sound_path": "",
+    "text": "Scoundrels won't get anything from us. We'll ignore them until they run off like the other back-slum gangsters that come from other city planets.",
+    "filters": [],
+    "script_text": "StopSound \"COBantha1\"\r\nStopSound \"COBantha3\"\r\nStopSound \"CODurelium\"\r\nPlaySound3d \"CODurosGang\"\r\nStopSound \"COGizka\"\r\nStopSound \"COGreet\"\r\nStopSound \"COHome\"\r\nStopSound \"COHungox\"\r\nStopSound \"COInvest1\"\r\nStopSound \"COInvest2\"\r\nStopSound \"COJawa\"\r\nStopSound \"COJedi\"\r\nStopSound \"COKash\"\r\nStopSound \"CORodian\"\r\nStopSound \"COSandtusk\"\r\nStopSound \"COSwoop1\"\r\nStopSound \"COSwoop2\"\r\nStopSound \"COTaris\"\r\nStopSound \"COVibro\"\r\nStopSound \"COWomen1\"\r\nStopSound \"COWomen2\"\r\nStopSound \"COZilloReal\"\r\nStopSound \"COZillows1\"\r\nStopSound \"COZillows2\"\r\nStopSound \"COZillows3\"\r\nStopSound \"COZillows4\"\r\nStopSound \"COZillows5\"\r\nStopSound \"COZillows6\""
+  }
+]

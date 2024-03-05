@@ -1,0 +1,1791 @@
+[
+  {
+    "type": "Header",
+    "flags": "",
+    "version": 1.3,
+    "file_type": "Esp",
+    "author": "",
+    "description": "",
+    "num_objects": 30,
+    "masters": [
+      [
+        "Morrowind.esm",
+        79837557
+      ],
+      [
+        "Tribunal.esm",
+        4565686
+      ],
+      [
+        "Bloodmoon.esm",
+        9631798
+      ],
+      [
+        "StarwindRemasteredV1.15.esm",
+        4162099
+      ],
+      [
+        "StarwindRemasteredPatch.esm",
+        11437434
+      ],
+      [
+        "Starwind Enhanced.esm",
+        431652
+      ]
+    ]
+  },
+  {
+    "type": "Race",
+    "flags": "",
+    "id": "SW_Quar",
+    "name": "Quarren",
+    "spells": [
+      "argonian breathing"
+    ],
+    "description": "",
+    "data": {
+      "skill_bonuses": {
+        "skill_0": "Conjuration",
+        "bonus_0": 10,
+        "skill_1": "Spear",
+        "bonus_1": 5,
+        "skill_2": "LightArmor",
+        "bonus_2": 5,
+        "skill_3": "Athletics",
+        "bonus_3": 10,
+        "skill_4": "HandToHand",
+        "bonus_4": 5,
+        "skill_5": "None",
+        "bonus_5": 0,
+        "skill_6": "None",
+        "bonus_6": 0
+      },
+      "strength": [
+        40,
+        40
+      ],
+      "intelligence": [
+        40,
+        40
+      ],
+      "willpower": [
+        40,
+        40
+      ],
+      "agility": [
+        40,
+        40
+      ],
+      "speed": [
+        50,
+        50
+      ],
+      "endurance": [
+        40,
+        40
+      ],
+      "personality": [
+        30,
+        30
+      ],
+      "luck": [
+        40,
+        40
+      ],
+      "height": [
+        1.11,
+        1.0
+      ],
+      "weight": [
+        1.0,
+        1.0
+      ],
+      "flags": "PLAYABLE"
+    }
+  },
+  {
+    "type": "Container",
+    "flags": "",
+    "id": "SW_Chest_QuarSpeederMer",
+    "name": "Chest",
+    "script": "",
+    "mesh": "Ig\\Activators\\chestfuture.nif",
+    "encumbrance": 200.0,
+    "container_flags": "IS_BASE",
+    "inventory": [
+      [
+        -1,
+        "SW_Speeder1Test"
+      ],
+      [
+        -1,
+        "SW_Speeder2Test"
+      ],
+      [
+        -1,
+        "SW_Speeder3Test"
+      ],
+      [
+        -1,
+        "SW_Speeder5Test"
+      ],
+      [
+        -1,
+        "SW_SpeederPodRace"
+      ]
+    ]
+  },
+  {
+    "type": "Container",
+    "flags": "",
+    "id": "SW_Chest_Vhadeer",
+    "name": "Chest",
+    "script": "",
+    "mesh": "Ig\\Activators\\chestfuture.nif",
+    "encumbrance": 200.0,
+    "container_flags": "IS_BASE",
+    "inventory": [
+      [
+        -1,
+        "SW_AdrenBelt"
+      ],
+      [
+        -1,
+        "SW_AlienHelm2"
+      ],
+      [
+        -3,
+        "SW_AlienHelmA"
+      ],
+      [
+        -2,
+        "SW_BeltCham"
+      ],
+      [
+        -3,
+        "SW_BeltPower"
+      ],
+      [
+        -100,
+        "SW_BlastArrowBest"
+      ],
+      [
+        -100,
+        "SW_BlastArrowGreater"
+      ],
+      [
+        -100,
+        "SW_BlastBolt"
+      ],
+      [
+        -100,
+        "SW_BlastBoltArrow"
+      ],
+      [
+        -100,
+        "SW_BlastBoltBest"
+      ],
+      [
+        -100,
+        "SW_BlastBoltGreater"
+      ],
+      [
+        -100,
+        "SW_BlastBoltMult"
+      ],
+      [
+        -2,
+        "SW_BlasterRepeaterLok"
+      ],
+      [
+        -1,
+        "SW_CleaningDroid"
+      ],
+      [
+        -1,
+        "SW_CleaningDroidM1"
+      ],
+      [
+        -1,
+        "SW_CleaningDroidM2"
+      ],
+      [
+        -1,
+        "SW_CleaningDroidM3"
+      ],
+      [
+        -4,
+        "SW_CzerkaBelt"
+      ],
+      [
+        -2,
+        "SW_HealthBelt"
+      ],
+      [
+        -3,
+        "SW_ImplantBlock"
+      ],
+      [
+        -3,
+        "SW_ImplantComb"
+      ],
+      [
+        -2,
+        "SW_ImplantHealthMinor"
+      ],
+      [
+        -1,
+        "SW_ImplantHealthMinorCheap"
+      ],
+      [
+        -2,
+        "SW_ImplantManaMinor"
+      ],
+      [
+        -1,
+        "SW_ImplantPoison"
+      ],
+      [
+        -4,
+        "SW_ImplantSpeed"
+      ],
+      [
+        -4,
+        "SW_LWristBlaster"
+      ],
+      [
+        -1,
+        "SW_LWristBlaster2"
+      ],
+      [
+        -1,
+        "SW_NewJunk1"
+      ],
+      [
+        -1,
+        "SW_NewJunk10"
+      ],
+      [
+        -1,
+        "SW_NewJunk11"
+      ],
+      [
+        -1,
+        "SW_NewJunk2"
+      ],
+      [
+        -1,
+        "SW_NewJunk3"
+      ],
+      [
+        -1,
+        "SW_NewJunk4"
+      ],
+      [
+        -1,
+        "SW_NewJunk5"
+      ],
+      [
+        -1,
+        "SW_NewJunk6"
+      ],
+      [
+        -1,
+        "SW_NewJunk7"
+      ],
+      [
+        -1,
+        "SW_NewJunk8"
+      ],
+      [
+        -1,
+        "SW_NewJunk9"
+      ],
+      [
+        -1,
+        "SW_PlasmaCells"
+      ],
+      [
+        -1,
+        "SW_PowerWrench"
+      ],
+      [
+        -4,
+        "SW_RWristBlaster"
+      ],
+      [
+        -1,
+        "SW_RWristBlaster2"
+      ],
+      [
+        -10,
+        "SW_RepairKit"
+      ],
+      [
+        -2,
+        "SW_Revolver"
+      ],
+      [
+        -4,
+        "SW_SenseBeltEnch"
+      ],
+      [
+        -2,
+        "SW_SenseBeltHeart"
+      ],
+      [
+        -1,
+        "SW_ShieldBeltGr"
+      ],
+      [
+        -4,
+        "SW_ShieldBeltMin"
+      ],
+      [
+        -2,
+        "SW_ShockBelt"
+      ],
+      [
+        -4,
+        "SW_Spare"
+      ],
+      [
+        -1,
+        "SW_SpareHeavy"
+      ],
+      [
+        -3,
+        "SW_StealthBelt"
+      ],
+      [
+        -3,
+        "SW_TechCuir1"
+      ],
+      [
+        -2,
+        "SW_TechCuir2"
+      ],
+      [
+        -1,
+        "SW_TechCuir3"
+      ],
+      [
+        -3,
+        "SW_Vis1"
+      ],
+      [
+        -2,
+        "SW_Vis3"
+      ],
+      [
+        -3,
+        "SW_Vis4"
+      ],
+      [
+        -2,
+        "SW_Vis5"
+      ],
+      [
+        -1,
+        "SW_Vis6"
+      ]
+    ]
+  },
+  {
+    "type": "Container",
+    "flags": "",
+    "id": "SW_Chest_Yortal",
+    "name": "Chest",
+    "script": "",
+    "mesh": "Ig\\Activators\\chestfuture.nif",
+    "encumbrance": 200.0,
+    "container_flags": "IS_BASE",
+    "inventory": [
+      [
+        1,
+        "SW_CleaningDroid"
+      ],
+      [
+        1,
+        "SW_CleaningDroidM1"
+      ],
+      [
+        1,
+        "SW_CleaningDroidM2"
+      ],
+      [
+        1,
+        "SW_CleaningDroidM3"
+      ],
+      [
+        -10,
+        "SW_RepairKit"
+      ],
+      [
+        -10,
+        "SW_SecuritySpike"
+      ],
+      [
+        -2,
+        "SW_SecuritySpikeGreat"
+      ],
+      [
+        -2,
+        "SW_ShieldBeltGr"
+      ],
+      [
+        7,
+        "SW_Spare"
+      ],
+      [
+        1,
+        "SW_SpareHeavy"
+      ]
+    ]
+  },
+  {
+    "type": "Creature",
+    "flags": "",
+    "id": "SW_Vhadeer",
+    "name": "Vhadeer",
+    "script": "",
+    "mesh": "r\\AscendedSleeper.NIF",
+    "inventory": [
+      [
+        1,
+        "SW_AdrenBelt"
+      ],
+      [
+        -1,
+        "SW_AlienHelm2"
+      ],
+      [
+        -3,
+        "SW_AlienHelmA"
+      ],
+      [
+        -2,
+        "SW_BeltCham"
+      ],
+      [
+        -3,
+        "SW_BeltPower"
+      ],
+      [
+        -100,
+        "SW_BlastArrowBest"
+      ],
+      [
+        -100,
+        "SW_BlastArrowGreater"
+      ],
+      [
+        -100,
+        "SW_BlastBolt"
+      ],
+      [
+        -100,
+        "SW_BlastBoltArrow"
+      ],
+      [
+        -100,
+        "SW_BlastBoltBest"
+      ],
+      [
+        -100,
+        "SW_BlastBoltGreater"
+      ],
+      [
+        -100,
+        "SW_BlastBoltMult"
+      ],
+      [
+        -2,
+        "SW_BlasterRepeaterLok"
+      ],
+      [
+        -1,
+        "SW_CleaningDroid"
+      ],
+      [
+        -1,
+        "SW_CleaningDroidM1"
+      ],
+      [
+        -1,
+        "SW_CleaningDroidM2"
+      ],
+      [
+        -1,
+        "SW_CleaningDroidM3"
+      ],
+      [
+        -4,
+        "SW_CzerkaBelt"
+      ],
+      [
+        -2,
+        "SW_HealthBelt"
+      ],
+      [
+        -3,
+        "SW_ImplantBlock"
+      ],
+      [
+        -3,
+        "SW_ImplantComb"
+      ],
+      [
+        -2,
+        "SW_ImplantHealthMinor"
+      ],
+      [
+        1,
+        "SW_ImplantHealthMinorCheap"
+      ],
+      [
+        -2,
+        "SW_ImplantManaMinor"
+      ],
+      [
+        1,
+        "SW_ImplantPoison"
+      ],
+      [
+        -4,
+        "SW_ImplantSpeed"
+      ],
+      [
+        -4,
+        "SW_LWristBlaster"
+      ],
+      [
+        -1,
+        "SW_LWristBlaster2"
+      ],
+      [
+        -1,
+        "SW_NewJunk1"
+      ],
+      [
+        -1,
+        "SW_NewJunk10"
+      ],
+      [
+        -1,
+        "SW_NewJunk11"
+      ],
+      [
+        -1,
+        "SW_NewJunk2"
+      ],
+      [
+        -1,
+        "SW_NewJunk3"
+      ],
+      [
+        -1,
+        "SW_NewJunk4"
+      ],
+      [
+        -1,
+        "SW_NewJunk5"
+      ],
+      [
+        -1,
+        "SW_NewJunk6"
+      ],
+      [
+        -1,
+        "SW_NewJunk7"
+      ],
+      [
+        -1,
+        "SW_NewJunk8"
+      ],
+      [
+        -1,
+        "SW_NewJunk9"
+      ],
+      [
+        -1,
+        "SW_PlasmaCells"
+      ],
+      [
+        -1,
+        "SW_PowerWrench"
+      ],
+      [
+        -4,
+        "SW_RWristBlaster"
+      ],
+      [
+        -1,
+        "SW_RWristBlaster2"
+      ],
+      [
+        -2,
+        "SW_Revolver"
+      ],
+      [
+        -4,
+        "SW_SenseBeltEnch"
+      ],
+      [
+        -2,
+        "SW_SenseBeltHeart"
+      ],
+      [
+        -1,
+        "SW_ShieldBeltGr"
+      ],
+      [
+        -4,
+        "SW_ShieldBeltMin"
+      ],
+      [
+        -2,
+        "SW_ShockBelt"
+      ],
+      [
+        -1,
+        "SW_Spare"
+      ],
+      [
+        -3,
+        "SW_StealthBelt"
+      ],
+      [
+        -3,
+        "SW_TechCuir1"
+      ],
+      [
+        -2,
+        "SW_TechCuir2"
+      ],
+      [
+        -1,
+        "SW_TechCuir3"
+      ],
+      [
+        -3,
+        "SW_Vis1"
+      ],
+      [
+        -2,
+        "SW_Vis3"
+      ],
+      [
+        -3,
+        "SW_Vis4"
+      ],
+      [
+        -2,
+        "SW_Vis5"
+      ],
+      [
+        -1,
+        "SW_Vis6"
+      ]
+    ],
+    "spells": [
+      "SW_ProtocolSum",
+      "SW_BlastFireMobStrong",
+      "SW_ProtocolSumGreater",
+      "SW_SecuritySum",
+      "SW_SecuritySumGreater"
+    ],
+    "ai_data": {
+      "hello": 0,
+      "fight": 30,
+      "flee": 30,
+      "alarm": 0,
+      "services": "BARTERS_WEAPONS | BARTERS_ARMOR | BARTERS_CLOTHING | BARTERS_BOOKS | BARTERS_INGREDIENTS | BARTERS_LOCKPICKS | BARTERS_PROBES | BARTERS_LIGHTS | BARTERS_APPARATUS | BARTERS_REPAIR_ITEMS | BARTERS_MISC_ITEMS | OFFERS_SPELLS | BARTERS_ENCHANTED_ITEMS | BARTERS_ALCHEMY | OFFERS_REPAIRS"
+    },
+    "ai_packages": [],
+    "travel_destinations": [],
+    "sound": "",
+    "creature_flags": "IS_BASE | WALKS",
+    "blood_type": 2,
+    "data": {
+      "creature_type": "Humanoid",
+      "level": 25,
+      "strength": 100,
+      "intelligence": 100,
+      "willpower": 100,
+      "agility": 255,
+      "speed": 50,
+      "endurance": 100,
+      "personality": 100,
+      "luck": 255,
+      "health": 800,
+      "magicka": 200,
+      "fatigue": 600,
+      "soul": 400,
+      "combat": 80,
+      "magic": 80,
+      "stealth": 20,
+      "attack1": [
+        25,
+        75
+      ],
+      "attack2": [
+        25,
+        75
+      ],
+      "attack3": [
+        25,
+        75
+      ],
+      "gold": 2000
+    }
+  },
+  {
+    "type": "Bodypart",
+    "flags": "",
+    "id": "SW_QuarAnk",
+    "race": "SW_Quar",
+    "mesh": "QU\\QAnkle.nif",
+    "data": {
+      "part": "Ankle",
+      "vampire": 0,
+      "female": 0,
+      "bodypart_type": "Skin"
+    }
+  },
+  {
+    "type": "Bodypart",
+    "flags": "",
+    "id": "SW_QuarFoAr",
+    "race": "SW_Quar",
+    "mesh": "QU\\QFore.nif",
+    "data": {
+      "part": "Forearm",
+      "vampire": 0,
+      "female": 0,
+      "bodypart_type": "Skin"
+    }
+  },
+  {
+    "type": "Bodypart",
+    "flags": "",
+    "id": "SW_QuarFoot",
+    "race": "SW_Quar",
+    "mesh": "QU\\QFoot.nif",
+    "data": {
+      "part": "Foot",
+      "vampire": 0,
+      "female": 0,
+      "bodypart_type": "Skin"
+    }
+  },
+  {
+    "type": "Bodypart",
+    "flags": "",
+    "id": "SW_QuarGro",
+    "race": "SW_Quar",
+    "mesh": "Ig\\Body Parts\\IthGroin.nif",
+    "data": {
+      "part": "Groin",
+      "vampire": 0,
+      "female": 0,
+      "bodypart_type": "Skin"
+    }
+  },
+  {
+    "type": "Bodypart",
+    "flags": "",
+    "id": "SW_QuarHand",
+    "race": "SW_Quar",
+    "mesh": "QU\\QSkin.nif",
+    "data": {
+      "part": "Hand",
+      "vampire": 0,
+      "female": 0,
+      "bodypart_type": "Skin"
+    }
+  },
+  {
+    "type": "Bodypart",
+    "flags": "",
+    "id": "SW_QuarHand.1st",
+    "race": "SW_Quar",
+    "mesh": "QU\\QHand.nif",
+    "data": {
+      "part": "Hand",
+      "vampire": 0,
+      "female": 0,
+      "bodypart_type": "Skin"
+    }
+  },
+  {
+    "type": "Bodypart",
+    "flags": "",
+    "id": "SW_QuarHead",
+    "race": "SW_Quar",
+    "mesh": "QU\\QHead.nif",
+    "data": {
+      "part": "Head",
+      "vampire": 0,
+      "female": 0,
+      "bodypart_type": "Skin"
+    }
+  },
+  {
+    "type": "Bodypart",
+    "flags": "",
+    "id": "SW_QuarHead2",
+    "race": "SW_Quar",
+    "mesh": "QU\\QHead2.nif",
+    "data": {
+      "part": "Head",
+      "vampire": 0,
+      "female": 0,
+      "bodypart_type": "Skin"
+    }
+  },
+  {
+    "type": "Bodypart",
+    "flags": "",
+    "id": "SW_QuarHead3",
+    "race": "SW_Quar",
+    "mesh": "QU\\QHead3.nif",
+    "data": {
+      "part": "Head",
+      "vampire": 0,
+      "female": 0,
+      "bodypart_type": "Skin"
+    }
+  },
+  {
+    "type": "Bodypart",
+    "flags": "",
+    "id": "SW_QuarHead4",
+    "race": "SW_Quar",
+    "mesh": "QU\\QHead4.nif",
+    "data": {
+      "part": "Head",
+      "vampire": 0,
+      "female": 0,
+      "bodypart_type": "Skin"
+    }
+  },
+  {
+    "type": "Bodypart",
+    "flags": "",
+    "id": "SW_QuarKnee",
+    "race": "SW_Quar",
+    "mesh": "QU\\QuarKnee.nif",
+    "data": {
+      "part": "Knee",
+      "vampire": 0,
+      "female": 0,
+      "bodypart_type": "Skin"
+    }
+  },
+  {
+    "type": "Bodypart",
+    "flags": "",
+    "id": "SW_QuarLeg",
+    "race": "SW_Quar",
+    "mesh": "QU\\QUL.nif",
+    "data": {
+      "part": "UpperLeg",
+      "vampire": 0,
+      "female": 0,
+      "bodypart_type": "Skin"
+    }
+  },
+  {
+    "type": "Bodypart",
+    "flags": "",
+    "id": "SW_QuarNeck",
+    "race": "SW_Quar",
+    "mesh": "QU\\QNeck.nif",
+    "data": {
+      "part": "Neck",
+      "vampire": 0,
+      "female": 0,
+      "bodypart_type": "Skin"
+    }
+  },
+  {
+    "type": "Bodypart",
+    "flags": "",
+    "id": "SW_QuarTor",
+    "race": "SW_Quar",
+    "mesh": "QU\\QSkin.nif",
+    "data": {
+      "part": "Chest",
+      "vampire": 0,
+      "female": 0,
+      "bodypart_type": "Skin"
+    }
+  },
+  {
+    "type": "Bodypart",
+    "flags": "",
+    "id": "SW_QuarUArm",
+    "race": "SW_Quar",
+    "mesh": "QU\\QUA.nif",
+    "data": {
+      "part": "UpperArm",
+      "vampire": 0,
+      "female": 0,
+      "bodypart_type": "Skin"
+    }
+  },
+  {
+    "type": "Bodypart",
+    "flags": "",
+    "id": "SW_QuarWrist",
+    "race": "SW_Quar",
+    "mesh": "QU\\QWrist.nif",
+    "data": {
+      "part": "Wrist",
+      "vampire": 0,
+      "female": 0,
+      "bodypart_type": "Skin"
+    }
+  },
+  {
+    "type": "Npc",
+    "flags": "",
+    "id": "SW_DipManagerNPC",
+    "name": "Giz Cheern",
+    "script": "nolore",
+    "mesh": "",
+    "inventory": [
+      [
+        1,
+        "expensive_robe_02"
+      ]
+    ],
+    "spells": [],
+    "ai_data": {
+      "hello": 30,
+      "fight": 30,
+      "flee": 30,
+      "alarm": 0,
+      "services": ""
+    },
+    "ai_packages": [],
+    "travel_destinations": [],
+    "race": "SW_Quar",
+    "class": "Smuggler",
+    "faction": "",
+    "head": "SW_QuarHead",
+    "hair": "",
+    "npc_flags": "IS_BASE | AUTO_CALCULATE",
+    "blood_type": 0,
+    "data": {
+      "level": 25,
+      "disposition": 50,
+      "reputation": 0,
+      "rank": 0,
+      "gold": 0
+    }
+  },
+  {
+    "type": "Npc",
+    "flags": "",
+    "id": "SW_NarSpeederMerchNPC",
+    "name": "Melchior",
+    "script": "nolore",
+    "mesh": "base_anim.nif",
+    "inventory": [
+      [
+        1,
+        "SW_PantsBlack"
+      ],
+      [
+        1,
+        "SW_ShirtBlack"
+      ],
+      [
+        1,
+        "SW_ShoesBlack"
+      ]
+    ],
+    "spells": [],
+    "ai_data": {
+      "hello": 30,
+      "fight": 30,
+      "flee": 30,
+      "alarm": 0,
+      "services": ""
+    },
+    "ai_packages": [],
+    "travel_destinations": [],
+    "race": "SW_Quar",
+    "class": "Merchant",
+    "faction": "",
+    "head": "SW_QuarHead",
+    "hair": "",
+    "npc_flags": "IS_BASE | AUTO_CALCULATE",
+    "blood_type": 0,
+    "data": {
+      "level": 25,
+      "disposition": 50,
+      "reputation": 0,
+      "rank": 0,
+      "gold": 2000
+    }
+  },
+  {
+    "type": "Npc",
+    "flags": "",
+    "id": "SW_QuarrenNPC",
+    "name": "Quarren",
+    "script": "nolore",
+    "mesh": "",
+    "inventory": [
+      [
+        1,
+        "expensive_robe_02"
+      ]
+    ],
+    "spells": [],
+    "ai_data": {
+      "hello": 30,
+      "fight": 30,
+      "flee": 30,
+      "alarm": 0,
+      "services": ""
+    },
+    "ai_packages": [
+      {
+        "type": "Wander",
+        "distance": 512,
+        "duration": 5,
+        "game_hour": 0,
+        "idle2": 60,
+        "idle3": 20,
+        "idle4": 10,
+        "idle5": 0,
+        "idle6": 0,
+        "idle7": 0,
+        "idle8": 0,
+        "idle9": 0,
+        "reset": 1
+      }
+    ],
+    "travel_destinations": [],
+    "race": "SW_Quar",
+    "class": "Commoner",
+    "faction": "",
+    "head": "SW_QuarHead",
+    "hair": "",
+    "npc_flags": "IS_BASE | AUTO_CALCULATE",
+    "blood_type": 0,
+    "data": {
+      "level": 1,
+      "disposition": 50,
+      "reputation": 0,
+      "rank": 0,
+      "gold": 0
+    }
+  },
+  {
+    "type": "Npc",
+    "flags": "",
+    "id": "SW_VhadeerNPC",
+    "name": "Vhadeer",
+    "script": "nolore",
+    "mesh": "",
+    "inventory": [],
+    "spells": [
+      "SW_SecuritySumGreater",
+      "SW_SecuritySum",
+      "SW_ProtocolSumGreater",
+      "SW_BlastFireMobStrong",
+      "SW_ProtocolSum"
+    ],
+    "ai_data": {
+      "hello": 30,
+      "fight": 30,
+      "flee": 30,
+      "alarm": 0,
+      "services": "BARTERS_WEAPONS | BARTERS_ARMOR | BARTERS_CLOTHING | BARTERS_BOOKS | BARTERS_INGREDIENTS | BARTERS_LOCKPICKS | BARTERS_PROBES | BARTERS_LIGHTS | BARTERS_APPARATUS | BARTERS_REPAIR_ITEMS | BARTERS_MISC_ITEMS | OFFERS_SPELLS | BARTERS_ENCHANTED_ITEMS | BARTERS_ALCHEMY | OFFERS_REPAIRS"
+    },
+    "ai_packages": [],
+    "travel_destinations": [],
+    "race": "SW_Quar",
+    "class": "Merchant",
+    "faction": "",
+    "head": "SW_QuarHead",
+    "hair": "",
+    "npc_flags": "IS_BASE | AUTO_CALCULATE",
+    "blood_type": 0,
+    "data": {
+      "level": 25,
+      "disposition": 50,
+      "reputation": 0,
+      "rank": 0,
+      "gold": 2000
+    }
+  },
+  {
+    "type": "Npc",
+    "flags": "",
+    "id": "SW_YortalNPC",
+    "name": "Yortal",
+    "script": "nolore",
+    "mesh": "base_anim.nif",
+    "inventory": [],
+    "spells": [
+      "sleep",
+      "distracting touch",
+      "Reflect",
+      "weak spelldrinker",
+      "blood despair"
+    ],
+    "ai_data": {
+      "hello": 30,
+      "fight": 30,
+      "flee": 30,
+      "alarm": 0,
+      "services": "BARTERS_LOCKPICKS | BARTERS_PROBES | BARTERS_REPAIR_ITEMS | BARTERS_ENCHANTED_ITEMS | OFFERS_REPAIRS"
+    },
+    "ai_packages": [],
+    "travel_destinations": [],
+    "race": "SW_Quar",
+    "class": "Merchant",
+    "faction": "",
+    "head": "SW_QuarHead",
+    "hair": "",
+    "npc_flags": "IS_BASE",
+    "blood_type": 1,
+    "data": {
+      "level": 25,
+      "stats": {
+        "attributes": [
+          72,
+          83,
+          78,
+          98,
+          84,
+          54,
+          93,
+          40
+        ],
+        "skills": [
+          56,
+          7,
+          24,
+          24,
+          56,
+          24,
+          24,
+          29,
+          34,
+          7,
+          7,
+          7,
+          7,
+          17,
+          54,
+          7,
+          7,
+          39,
+          54,
+          54,
+          39,
+          12,
+          7,
+          7,
+          54,
+          54,
+          44
+        ],
+        "health": 183,
+        "magicka": 166,
+        "fatigue": 302
+      },
+      "disposition": 50,
+      "reputation": 0,
+      "rank": 0,
+      "gold": 2000
+    }
+  },
+  {
+    "type": "Cell",
+    "flags": "",
+    "name": "Lok, Graveridge Pawnshop",
+    "data": {
+      "flags": "IS_INTERIOR",
+      "grid": [
+        0,
+        1065353216
+      ]
+    },
+    "water_height": 0.0,
+    "atmosphere_data": {
+      "ambient_color": [
+        70,
+        70,
+        70,
+        0
+      ],
+      "sunlight_color": [
+        229,
+        229,
+        229,
+        0
+      ],
+      "fog_color": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fog_density": 1.0
+    },
+    "references": [
+      {
+        "mast_index": 5,
+        "refr_index": 31687,
+        "id": "SW_Vhadeer",
+        "temporary": false,
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "deleted": true
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 6,
+        "id": "SW_VhadeerNPC",
+        "temporary": false,
+        "translation": [
+          3884.8843,
+          4843.3564,
+          16608.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.1999993
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 31688,
+        "id": "SW_Chest_Vhadeer",
+        "temporary": true,
+        "translation": [
+          3843.0178,
+          5128.2285,
+          16484.59
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "owner": "SW_VhadeerNPC"
+      }
+    ]
+  },
+  {
+    "type": "Cell",
+    "flags": "",
+    "name": "Manaan, Yortal's Junkpile",
+    "data": {
+      "flags": "IS_INTERIOR",
+      "grid": [
+        0,
+        1065353216
+      ]
+    },
+    "water_height": 0.0,
+    "atmosphere_data": {
+      "ambient_color": [
+        71,
+        71,
+        71,
+        0
+      ],
+      "sunlight_color": [
+        242,
+        217,
+        217,
+        0
+      ],
+      "fog_color": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fog_density": 1.0
+    },
+    "references": [
+      {
+        "mast_index": 4,
+        "refr_index": 6359,
+        "id": "SW_Yortal",
+        "temporary": false,
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "deleted": true
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 1,
+        "id": "SW_YortalNPC",
+        "temporary": false,
+        "translation": [
+          4205.9478,
+          4695.914,
+          12240.0
+        ],
+        "rotation": [
+          -0.027825065,
+          -0.08108537,
+          -3.0841267
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 2,
+        "id": "SW_Chest_Yortal",
+        "temporary": true,
+        "translation": [
+          4218.433,
+          4042.5518,
+          11986.452
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "owner": "SW_YortalNPC",
+        "health_left": 0
+      }
+    ]
+  },
+  {
+    "type": "Cell",
+    "flags": "",
+    "name": "Nar Shaddaa",
+    "data": {
+      "flags": "IS_INTERIOR | HAS_WATER | BEHAVES_LIKE_EXTERIOR",
+      "grid": [
+        0,
+        0
+      ]
+    },
+    "region": "Bitter Coast Region",
+    "water_height": 0.0,
+    "references": [
+      {
+        "mast_index": 4,
+        "refr_index": 8127,
+        "id": "SW_Quarren",
+        "temporary": false,
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "deleted": true
+      },
+      {
+        "mast_index": 4,
+        "refr_index": 8128,
+        "id": "SW_Quarren",
+        "temporary": false,
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "deleted": true
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 3,
+        "id": "SW_QuarrenNPC",
+        "temporary": false,
+        "translation": [
+          2343.7427,
+          7015.266,
+          4307.85
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          2.8000004
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 4,
+        "id": "SW_QuarrenNPC",
+        "temporary": false,
+        "translation": [
+          864.5499,
+          1946.0491,
+          4309.995
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          2.6000004
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Cell",
+    "flags": "",
+    "name": "Nar Shaddaa, 168 Alley East",
+    "data": {
+      "flags": "IS_INTERIOR",
+      "grid": [
+        0,
+        1065353216
+      ]
+    },
+    "water_height": 0.0,
+    "atmosphere_data": {
+      "ambient_color": [
+        71,
+        71,
+        71,
+        0
+      ],
+      "sunlight_color": [
+        242,
+        217,
+        217,
+        0
+      ],
+      "fog_color": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fog_density": 1.0
+    },
+    "references": [
+      {
+        "mast_index": 5,
+        "refr_index": 18282,
+        "id": "SW_DipManager",
+        "temporary": false,
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "deleted": true
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 18283,
+        "id": "SW_DipManagerNPC",
+        "temporary": false,
+        "translation": [
+          5038.9224,
+          3991.5684,
+          15944.823
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Cell",
+    "flags": "",
+    "name": "Nar Shaddaa, Office Building",
+    "data": {
+      "flags": "IS_INTERIOR | RESTING_IS_ILLEGAL",
+      "grid": [
+        0,
+        1065353216
+      ]
+    },
+    "water_height": 0.0,
+    "atmosphere_data": {
+      "ambient_color": [
+        185,
+        136,
+        136,
+        0
+      ],
+      "sunlight_color": [
+        242,
+        217,
+        217,
+        0
+      ],
+      "fog_color": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fog_density": 1.0
+    },
+    "references": [
+      {
+        "mast_index": 4,
+        "refr_index": 10625,
+        "id": "SW_DipManager",
+        "temporary": false,
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "deleted": true
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 10626,
+        "id": "SW_DipManagerNPC",
+        "temporary": false,
+        "translation": [
+          4753.281,
+          4174.2437,
+          12281.731
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Cell",
+    "flags": "",
+    "name": "Nar Shaddaa, Speeder Shop",
+    "data": {
+      "flags": "IS_INTERIOR | RESTING_IS_ILLEGAL",
+      "grid": [
+        0,
+        1065353216
+      ]
+    },
+    "water_height": 0.0,
+    "atmosphere_data": {
+      "ambient_color": [
+        128,
+        163,
+        172,
+        0
+      ],
+      "sunlight_color": [
+        242,
+        217,
+        217,
+        0
+      ],
+      "fog_color": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fog_density": 1.0
+    },
+    "references": [
+      {
+        "mast_index": 4,
+        "refr_index": 8856,
+        "id": "SW_NarSpeederMerch",
+        "temporary": false,
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "deleted": true
+      },
+      {
+        "mast_index": 5,
+        "refr_index": 8856,
+        "id": "SW_NarSpeederMerch",
+        "temporary": false,
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "deleted": true
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 5,
+        "id": "SW_NarSpeederMerchNPC",
+        "temporary": false,
+        "translation": [
+          235.04134,
+          7200.8296,
+          11421.744
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.2000005
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 8857,
+        "id": "SW_Chest_QuarSpeederMer",
+        "temporary": true,
+        "translation": [
+          533.93787,
+          7361.966,
+          10726.03
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "owner": "SW_NarSpeederMerchNPC"
+      }
+    ]
+  },
+  {
+    "type": "Dialogue",
+    "flags": "",
+    "id": "Greeting 7",
+    "dialogue_type": "Greeting"
+  },
+  {
+    "type": "DialogueInfo",
+    "flags": "",
+    "id": "962516807145627149",
+    "prev_id": "234119748236129525",
+    "next_id": "679168001388631897",
+    "data": {
+      "dialogue_type": "Greeting",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "SW_WyyyschokkBoss",
+    "speaker_race": "",
+    "speaker_class": "",
+    "speaker_faction": "",
+    "speaker_cell": "",
+    "player_faction": "",
+    "sound_path": "",
+    "text": "My merchandise comes straight from the planet Mon Cala!",
+    "filters": [],
+    "script_text": "PlaySound \"oil bubbly\""
+  },
+  {
+    "type": "DialogueInfo",
+    "flags": "",
+    "id": "679168001388631897",
+    "prev_id": "962516807145627149",
+    "next_id": "421324247145021288",
+    "data": {
+      "dialogue_type": "Greeting",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "SW_NarSpeederMerchNPC",
+    "speaker_race": "",
+    "speaker_class": "",
+    "speaker_faction": "",
+    "speaker_cell": "",
+    "player_faction": "",
+    "sound_path": "",
+    "text": "Looking for some faster travel?",
+    "filters": [],
+    "script_text": "PlaySound \"oil bubbly\""
+  },
+  {
+    "type": "Dialogue",
+    "flags": "",
+    "id": "Pazaak Killer",
+    "dialogue_type": "Topic"
+  },
+  {
+    "type": "DialogueInfo",
+    "flags": "",
+    "id": "479311173073221874",
+    "prev_id": "521230162896924231",
+    "next_id": "252441278806514603",
+    "data": {
+      "dialogue_type": "Topic",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "SW_NarSpeederMerchNPC",
+    "speaker_race": "",
+    "speaker_class": "",
+    "speaker_faction": "",
+    "speaker_cell": "",
+    "player_faction": "",
+    "sound_path": "",
+    "text": "Never heard of him, I don't leave my shop.",
+    "filters": [],
+    "script_text": ""
+  }
+]
