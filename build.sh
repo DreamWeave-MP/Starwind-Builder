@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 JUNK_CELL=("ashinabi, smuggler den"
 "balmora, drarayne thelas' storage"
