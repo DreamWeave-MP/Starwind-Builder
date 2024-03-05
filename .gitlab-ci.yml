@@ -33,6 +33,6 @@ dump_merchants:
     paths:
       - "merchantIndexDatabase.json"
   dependencies:
-    - build_starwind
+    - build_tsi
   rules:
     - if: $CI_COMMIT_BRANCH == "master"
