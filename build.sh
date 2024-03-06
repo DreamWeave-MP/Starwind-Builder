@@ -46,8 +46,17 @@ do_merge() {
 
 cd build
 
-cp /plugins/StarwindRemasteredV1.15.esm .
-cp /plugins/nomq_StarwindRemasteredPatch.esm StarwindRemasteredPatch.esm
+if [ -f "../StarwindRemasteredV1.15.esm" ]; then
+    cp "../StarwindRemasteredV1.15.esm" .
+else
+    cp "/plugins/StarwindRemasteredV1.15.esm" .
+fi
+
+if [ -f "../nomq_StarwindRemasteredPatch.esm" ]; then
+    cp "../nomq_StarwindRemasteredPatch.esm" StarwindRemasteredPatch.esm
+else
+    cp "/plugins/nomq_StarwindRemasteredPatch.esm" StarwindRemasteredPatch.esm
+fi
 
 # Remove replaced records, make mp-specific patches
 
