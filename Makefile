@@ -19,7 +19,6 @@ deploy-only: plugins-text build
 
 requiredfiles:
 	for m in Morrowind.esm Tribunal.esm Bloodmoon.esm Starwind.omwaddon; do \
-		touch $$m; \
 		echo "content=\"$$m\"" >> $$HOME/.config/openmw/openmw.cfg; \
 	done
 	t3crc
