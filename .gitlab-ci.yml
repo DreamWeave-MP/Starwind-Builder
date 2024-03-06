@@ -52,6 +52,7 @@ dump_DFL:
   image: ${build_img}
   stage: dump
   script:
+  - apt update && apt-get install -y --force-yes wget zip make
   - make tes3conv
   artifacts:
     paths:
