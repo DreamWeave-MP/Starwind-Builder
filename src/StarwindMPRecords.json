@@ -22,7 +22,7 @@
       ],
       [
         "Starwind.omwaddon",
-        13550674
+        13748942
       ]
     ]
   },
@@ -560,8 +560,8 @@
         "range": "OnSelf",
         "area": 0,
         "duration": 0,
-        "min_magnitude": 0,
-        "max_magnitude": 0
+        "min_magnitude": 1,
+        "max_magnitude": 1
       }
     ],
     "data": {
@@ -1015,7 +1015,7 @@
     "script": "",
     "mesh": "c\\C_Ring_common01.NIF",
     "icon": "c\\Tx_ring_common01.tga",
-    "enchanting": "",
+    "enchanting": "tsi_sneakyDev",
     "biped_objects": [],
     "data": {
       "clothing_type": "Ring",
