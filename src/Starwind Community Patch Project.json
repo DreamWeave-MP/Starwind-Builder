@@ -6,7 +6,7 @@
     "file_type": "Esp",
     "author": "",
     "description": "",
-    "num_objects": 11,
+    "num_objects": 13,
     "masters": [
       [
         "Morrowind.esm",
@@ -29,6 +29,64 @@
         11432889
       ]
     ]
+  },
+  {
+    "type": "MagicEffect",
+    "flags": "",
+    "effect_id": "SummonCenturionSphere",
+    "icon": "s\\Tx_S_Smmn_Clnfear.tga",
+    "texture": "vfx_conj_flare02.tga",
+    "bolt_sound": "",
+    "cast_sound": "",
+    "hit_sound": "",
+    "area_sound": "",
+    "cast_visual": "VFX_ConjureCast",
+    "bolt_visual": "",
+    "hit_visual": "",
+    "area_visual": "",
+    "description": "Call a loading droid to take the heavy load for you in battle. This droid can take heavy damage and and will engage the enemy up close.",
+    "data": {
+      "school": "Conjuration",
+      "base_cost": 25.0,
+      "flags": "NO_MAGNITUDE | CAN_CAST_SELF | ALLOW_SPELLMAKING | ALLOW_ENCHANTING | APPLIED_ONCE",
+      "color": [
+        214,
+        214,
+        214
+      ],
+      "speed": 1.0,
+      "size": 1.0,
+      "size_cap": 50.0
+    }
+  },
+  {
+    "type": "MagicEffect",
+    "flags": "",
+    "effect_id": "SummonWolf",
+    "icon": "s\\Tx_S_Smmn_Wolf.dds",
+    "texture": "vfx_summon.tga",
+    "bolt_sound": "",
+    "cast_sound": "",
+    "hit_sound": "",
+    "area_sound": "",
+    "cast_visual": "",
+    "bolt_visual": "",
+    "hit_visual": "",
+    "area_visual": "",
+    "description": "Call in a small security droid that packs a mean blaster attachment but can be killed rather easily.",
+    "data": {
+      "school": "Conjuration",
+      "base_cost": 30.0,
+      "flags": "NO_MAGNITUDE | CAN_CAST_SELF | ALLOW_SPELLMAKING | ALLOW_ENCHANTING | APPLIED_ONCE",
+      "color": [
+        214,
+        214,
+        214
+      ],
+      "speed": 1.0,
+      "size": 1.0,
+      "size_cap": 50.0
+    }
   },
   {
     "type": "Script",
