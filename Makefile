@@ -30,13 +30,13 @@ MIG:
 espParser:
 	./espParser.sh
 
-tes3conv:
+DFL:
 	mkdir -p data/custom/DFL_input
 	find ./src -type f -name "*.json" -exec cp {} data/custom/DFL_input/ \;
 	zip -r DFLDB data/custom/DFL_input/
 	rm -rf data/
 
-databases: MIG espParser tes3conv
+databases: MIG espParser tes3conv requiredfiles
 
 clean:
-	rm -rf *.tmp *\~* src/*.esp build *.zip *.gz* TES3MP-server StarwindDB.zip Starwind.omwaddon merchantIndexDatabase.json DFLDB.zip
+	rm -rf *.tmp *\~* src/*.esp *.zip *.gz* *.json TES3MP-server build Starwind.omwaddon

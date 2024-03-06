@@ -50,7 +50,7 @@ dump_DFL:
   image: ${build_img}
   stage: dump
   script:
-  - make tes3conv
+  - make DFL
   artifacts:
     paths:
       - "DFLDB.zip"
