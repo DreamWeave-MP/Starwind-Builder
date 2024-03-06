@@ -29,13 +29,10 @@ MIG:
 	merchantIndexGrabber
 
 espParser:
-	./espParser.sh
+	./databaseWriter.sh espParser
 
 DFL:
-	mkdir -p data/custom/DFL_input
-	find ./src -type f -name "*.json" -exec cp {} data/custom/DFL_input/ \;
-	zip -r DFLDB data/custom/DFL_input/
-	rm -rf data/
+	./databaseWriter.sh DFL
 
 databases: MIG espParser tes3conv requiredfiles
 
