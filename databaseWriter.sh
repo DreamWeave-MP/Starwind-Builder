@@ -7,7 +7,6 @@ tar -xvf tes3mp.tar.gz
 
 cd TES3MP-server/server
 
-
 if [ "$1" = "espParser" ]; then
     mkdir -p data/custom/Starwind data/custom/esps data/custom/Starwind/Cell scripts/custom/DataManager scripts/custom/espParser
 
@@ -51,6 +50,8 @@ elif [ "$1" = "DFL" ]; then
     echo 'require("custom.data-files-loader.dataFilesLoaderMain")' >> scripts/customScripts.lua
 
     ../tes3mp-server
+elif [ "$1" = "kTools" ]; then
+    echo "kTools, wheee!"
 fi
 
 cd ../../ && rm -rf TES3MP-server tes3mp.tar.gz
