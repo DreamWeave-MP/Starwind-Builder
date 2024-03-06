@@ -3,7 +3,7 @@ stages:
   - dump
 
 variables:
-  build_img: "$CI_REGISTRY/magicaldave1/makron:0.0.3"
+  build_img: "$CI_REGISTRY/magicaldave1/makron:0.0.2"
   curl_img: curlimages/curl:7.83.0
   pkg_name: "${CI_PROJECT_NAME}.zip"
   pkg_url:
@@ -13,6 +13,7 @@ build_tsi:
   image: ${build_img}
   stage: build
   script:
+  - apt update && apt-get install -y --force-yes git zip make
   - make build
   artifacts:
     paths:
@@ -37,6 +38,7 @@ dump_cells:
   image: ${build_img}
   stage: dump
   script:
+  - apt update && apt-get install -y --force-yes wget zip make libluajit-5.1-2
   - ./espParser.sh
   artifacts:
     paths:
@@ -50,6 +52,7 @@ dump_DFL:
   image: ${build_img}
   stage: dump
   script:
+  - apt update && apt-get install -y --force-yes wget zip make
   - make tes3conv
   artifacts:
     paths:
