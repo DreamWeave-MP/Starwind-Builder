@@ -17,6 +17,13 @@ deploy:
 deploy-only: plugins-text build
 	mv Starwind.omwaddon $$HOME/.local/share/openmw/data/
 
+requiredfiles:
+	for m in Morrowind.esm Tribunal.esm Bloodmoon.esm Starwind.omwaddon; do \
+		touch $$m; \
+		echo "content=\"$$m\"" >> $$HOME/.config/openmw/openmw.cfg; \
+	done
+	t3crc
+
 MIG:
 	merchantIndexGrabber
 

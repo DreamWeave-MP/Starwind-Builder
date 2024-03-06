@@ -56,3 +56,14 @@ dump_DFL:
       - "DFLDB.zip"
   rules:
     - if: $CI_COMMIT_BRANCH == "master"
+
+dump_requiredDataFiles:
+  image: ${build_img}
+  stage: dump
+  script:
+  - make requiredfiles
+  artifacts:
+    paths:
+      - "requiredDataFiles.json"
+  rules:
+    - if: $CI_COMMIT_BRANCH == "master"
