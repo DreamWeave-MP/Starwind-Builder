@@ -33,3 +33,27 @@ dump_merchants:
     - build_tsi
   rules:
     - if: $CI_COMMIT_BRANCH == "master"
+
+dump_cells:
+  image: ${build_img}
+  stage: dump
+  script:
+  - ./espParser.sh
+  artifacts:
+    paths:
+      - "StarwindDB.zip"
+  dependencies:
+    - build_tsi
+  rules:
+    - if: $CI_COMMIT_BRANCH == "master"
+
+dump_cells:
+  image: ${build_img}
+  stage: dump
+  script:
+  - make tes3conv
+  artifacts:
+    paths:
+      - "DFLDB.zip"
+  rules:
+    - if: $CI_COMMIT_BRANCH == "master"
