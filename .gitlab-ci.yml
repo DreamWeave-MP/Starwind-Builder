@@ -37,7 +37,7 @@ dump_cells:
   image: ${build_img}
   stage: dump
   script:
-  - ./espParser.sh
+  - make espParser
   artifacts:
     paths:
       - "StarwindDB.zip"
