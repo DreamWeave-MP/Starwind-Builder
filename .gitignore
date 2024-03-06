@@ -1,5 +1,5 @@
 .log
 *.zip
-*.esp
-*.ESP
-*.omwaddon
+*.[eE][sS][pPmM]
+/[Jj][Ss][Oo][Nn]
+*.[oO][mM][wW][aAgG][dDaA][dDmM][oOeE][nN]
