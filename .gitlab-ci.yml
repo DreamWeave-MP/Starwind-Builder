@@ -38,7 +38,7 @@ dump_cells:
   image: ${build_img}
   stage: dump
   script:
-  - apt update && apt-get install -y --force-yes wget zip make
+  - apt update && apt-get install -y --force-yes wget zip make libluajit-5.1-2
   - ./espParser.sh
   artifacts:
     paths:
