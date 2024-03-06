@@ -100,10 +100,6 @@ echo "Applying patches..."
 tes3cmd modify --type CELL --replace "/SW_ManaKoltoTank/tsi_kolto_nowall/" StarwindRemasteredV1.15.esm StarwindRemasteredPatch.esm
 tes3cmd modify --type CELL --replace "/SW_ManaKoltoMedTank/tsi_kolto_wall/" StarwindRemasteredV1.15.esm StarwindRemasteredPatch.esm
 
-# All serenno content in the original esm files is deprecated
-tes3cmd delete --type CELL --instance-match "serenno" StarwindRemasteredPatch.esm StarwindRemasteredV1.15.esm
-tes3cmd delete --type CELL --match "serenno" StarwindRemasteredPatch.esm StarwindRemasteredV1.15.esm
-
 # Just cleaning
 #This script is actually SW_traveltokashyyk but I figure if anybody was actually using this script the typo would have been noticed a long time ago
 # When I ran a global search against it and tried to dump instances of it out of the plugin it didn't appear to have any references
