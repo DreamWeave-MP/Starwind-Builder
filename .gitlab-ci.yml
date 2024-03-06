@@ -47,7 +47,7 @@ dump_cells:
   rules:
     - if: $CI_COMMIT_BRANCH == "master"
 
-dump_cells:
+dump_DFL:
   image: ${build_img}
   stage: dump
   script:
