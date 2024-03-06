@@ -30,7 +30,7 @@ if [ "$1" = "espParser" ]; then
 
 elif [ "$1" = "DFL" ]; then
     echo "Not yet supported due to DFL bug!"
-    exit 127
+    exit 0
     mkdir -p scripts/custom/data-files-loader/ scripts/custom/data-files-loader/dependencies/ data/custom/DFL_input data/custom/DFL_output
 
     find ../../src -type f -name "*.json" -exec cp {} data/custom/DFL_input/ \;
