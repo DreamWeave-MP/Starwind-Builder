@@ -14,7 +14,7 @@ build_tsi:
   stage: build
   script:
   - apt update && apt-get install -y --force-yes git zip make
-  - make
+  - make build
   artifacts:
     paths:
       - "Starwind.omwaddon"
@@ -38,6 +38,7 @@ dump_cells:
   image: ${build_img}
   stage: dump
   script:
+  - apt update && apt-get install -y --force-yes wget zip make
   - ./espParser.sh
   artifacts:
     paths:
