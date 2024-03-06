@@ -7,16 +7,16 @@ tar -xvf tes3mp.tar.gz
 
 cd TES3MP-server/server
 
-mkdir data/custom/Starwind data/custom/esps data/custom/Starwind/Cell scripts/custom/DataManager scripts/custom/espParser
+mkdir -p data/custom/Starwind data/custom/esps data/custom/Starwind/Cell scripts/custom/DataManager scripts/custom/espParser
 
 cp ../../Starwind.omwaddon data/custom/esps/
 
 cp ../../src/DataBaseScript.lua scripts/custom/
 
-curl -sS https://raw.githubusercontent.com/tes3mp-scripts/DataManager/master/main.lua -o scripts/custom/DataManager/main.lua
-curl -sS https://raw.githubusercontent.com/JakobCh/tes3mp_scripts/master/espParser/main.lua -o scripts/custom/espParser
-curl -sS https://raw.githubusercontent.com/JakobCh/tes3mp_scripts/master/espParser/initialConfig.lua -o scripts/custom/espParser
-curl -sS https://raw.githubusercontent.com/iryont/lua-struct/master/src/struct.lua -o scripts/custom/
+curl -L https://raw.githubusercontent.com/tes3mp-scripts/DataManager/master/main.lua -o scripts/custom/DataManager/main.lua
+curl -L https://raw.githubusercontent.com/JakobCh/tes3mp_scripts/master/espParser/main.lua -o scripts/custom/espParser/main.lua
+curl -L https://raw.githubusercontent.com/JakobCh/tes3mp_scripts/master/espParser/initialConfig.lua -o scripts/custom/espParser/initialConfig.lua
+curl -L https://raw.githubusercontent.com/iryont/lua-struct/master/src/struct.lua -o scripts/custom/struct.lua
 
 echo "struct = require(\"custom.struct\")
 require(\"custom.DataManager.main\")
