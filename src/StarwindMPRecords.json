@@ -6,7 +6,7 @@
     "file_type": "Esp",
     "author": "tes3cmd",
     "description": "(generated)",
-    "num_objects": 62,
+    "num_objects": 64,
     "masters": [
       [
         "Morrowind.esm",
@@ -22,7 +22,7 @@
       ],
       [
         "Starwind.omwaddon",
-        13754094
+        13550674
       ]
     ]
   },
@@ -549,6 +549,29 @@
     }
   },
   {
+    "type": "Enchanting",
+    "flags": "",
+    "id": "tsi_sneakyDev",
+    "effects": [
+      {
+        "magic_effect": "Invisibility",
+        "skill": "None",
+        "attribute": "None",
+        "range": "OnSelf",
+        "area": 0,
+        "duration": 0,
+        "min_magnitude": 0,
+        "max_magnitude": 0
+      }
+    ],
+    "data": {
+      "enchant_type": "ConstantEffect",
+      "cost": 0,
+      "max_charge": 0,
+      "flags": ""
+    }
+  },
+  {
     "type": "Npc",
     "flags": "",
     "id": "SW_DancerFreighter",
@@ -982,6 +1005,23 @@
       "reputation": 0,
       "rank": 0,
       "gold": 0
+    }
+  },
+  {
+    "type": "Clothing",
+    "flags": "",
+    "id": "tsi_sneakyDevRing",
+    "name": "Sneaky Dev Ring",
+    "script": "",
+    "mesh": "c\\C_Ring_common01.NIF",
+    "icon": "c\\Tx_ring_common01.tga",
+    "enchanting": "",
+    "biped_objects": [],
+    "data": {
+      "clothing_type": "Ring",
+      "weight": 0.1,
+      "value": 2,
+      "enchantment": 10
     }
   },
   {
