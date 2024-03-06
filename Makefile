@@ -14,7 +14,7 @@ plugins-text:
 deploy:
 	mv Starwind.omwaddon $$HOME/.local/share/openmw/data/
 
-deploy-only: plugins-text build
+deploy-only: clean plugins-text build
 	mv Starwind.omwaddon $$HOME/.local/share/openmw/data/
 
 requiredfiles:
