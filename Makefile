@@ -1,4 +1,4 @@
-all: clean plugins-text build databases
+all: clean plugins-text build-tsi databases
 	zip all_data DFLDB.zip StarwindDB.zip Starwind.omwaddon
 
 build-tsi: plugins-bin
@@ -19,7 +19,7 @@ plugins-text:
 deploy:
 	mv Starwind.omwaddon $$HOME/.local/share/openmw/data/
 
-deploy-only: clean plugins-text build
+deploy-only: clean plugins-text build-tsi
 	mv Starwind.omwaddon $$HOME/.local/share/openmw/data/
 
 requiredfiles:
@@ -39,7 +39,7 @@ espParser:
 DFL:
 	./databaseWriter.sh DFL
 
-databases: MIG espParser tes3conv requiredfiles
+databases: MIG espParser DFL requiredfiles
 
 clean:
 	rm -rf *.tmp *\~* src/*.esp *.zip *.gz* *.json TES3MP-server build Starwind.omwaddon
