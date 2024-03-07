@@ -130,10 +130,16 @@ if [ "$1" = "tsi" ]; then
     tes3cmd modify --type TES3 --replace "/431652/11437434/" "bings race pack.esp" StarwindRacesJMC.esp
     tes3cmd delete --type CELL --instance-match "MastIdx:6" "bings race pack.esp" StarwindRacesJMC.esp
     tes3cmd delete --type CELL --instance-match "SWE_DoorFrameLight1" "bings race pack.esp"
-
     tes3cmd delete --type CELL --exterior alt_start1.5.esp "bings race pack.esp"
+
+    tes3cmd delete --type CELL --exact-id "Lok, Graveridge Pawnshop" --instance-match "SW_Vhadeer" StarwindRemasteredPatch.esm
+    tes3cmd delete --type CELL --exact-id "Taris, Upper City Cantina" --instance-match "SW_TarisHuttRagax" StarwindRemasteredPatch.esm
+    tes3cmd delete --type CELL --exact-id "Nar Shaddaa, Hutt Cartel" --instance-match "SW_HuttBadhiya" StarwindRemasteredPatch.esm
+
 fi
 
+# Unused Content
+tes3cmd delete --type CELL --exact-id "Nar Shaddaa, Hutt Base" StarwindRemasteredPatch.esm StarwindRemasteredV1.15.esm
 # Just cleaning
 #This script is actually SW_traveltokashyyk but I figure if anybody was actually using this script the typo would have been noticed a long time ago
 # When I ran a global search against it and tried to dump instances of it out of the plugin it didn't appear to have any references
