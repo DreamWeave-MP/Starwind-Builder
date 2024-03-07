@@ -6,7 +6,7 @@
     "file_type": "Esp",
     "author": "",
     "description": "",
-    "num_objects": 20,
+    "num_objects": 21,
     "masters": [
       [
         "Morrowind.esm",
@@ -444,6 +444,31 @@
       "thrust_min": 1,
       "thrust_max": 10,
       "flags": ""
+    }
+  },
+  {
+    "type": "Armor",
+    "flags": "",
+    "id": "SW_JunkyardHelm",
+    "name": "Junkyard Helm",
+    "script": "NoHelmetAllowed",
+    "mesh": "Ig\\Armor\\JunkYHelm.nif",
+    "icon": "Ig\\JunkHelm.dds",
+    "enchanting": "",
+    "biped_objects": [
+      {
+        "biped_object_type": "Head",
+        "male_bodypart": "SW_JunkHelmBP",
+        "female_bodypart": ""
+      }
+    ],
+    "data": {
+      "armor_type": "Helmet",
+      "weight": 4.0,
+      "value": 600,
+      "health": 800,
+      "enchantment": 60,
+      "armor_rating": 22
     }
   }
 ]
