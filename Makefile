@@ -20,10 +20,7 @@ plugins-text:
 	cp $$HOME/.local/share/openmw/data/StarwindMPRecords.omwaddon "$$HOME/.local/share/openmw/data/Starwind Community Patch Project.omwaddon" .
 	find . -type f -name "*.omwaddon" -exec sh -c 'OUT_FILE="$$(echo "$$1" | sed "s/\.omwaddon$$/.json/")"; tes3conv "$$1" "$$OUT_FILE"; rm -rf src/"$$OUT_FILE"; mv "$$OUT_FILE" src/' sh {} \;
 
-deploy:
-	mv Starwind.omwaddon $$HOME/.local/share/openmw/data/
-
-deploy-only: clean plugins-text tsi
+deploy: clean plugins-text tsi
 	mv Starwind.omwaddon $$HOME/.local/share/openmw/data/
 
 databases: DFL espParser MIG requiredfiles
@@ -46,4 +43,4 @@ requiredfiles:
 	t3crc
 
 clean:
-	rm -rf *.tmp *\~* src/*.esp *.omwaddon *.zip *.gz* *.json TES3MP-server build
+	rm -rf *.tmp *\~* src/*.esp *.omwaddon *.zip *.gz* *.json TES3MP-server build Meshes
