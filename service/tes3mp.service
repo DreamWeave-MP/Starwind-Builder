@@ -1,0 +1,15 @@
+[Unit]
+Description=Tes3mp game server
+After=network.target
+StartLimitIntervalSec=0
+
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=2
+User=corleycomputerrepair
+ExecStart=/home/corleycomputerrepair/tes3mp-init.sh
+
+[Install]
+WantedBy=multi-user.target
