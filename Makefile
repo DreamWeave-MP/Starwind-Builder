@@ -43,4 +43,4 @@ requiredfiles:
 	t3crc
 
 clean:
-	rm -rf *.tmp *\~* src/*.esp *.omwaddon *.zip *.gz* *.json TES3MP-server build Meshes
+	rm -rf *.tmp *\~* src/*.esp *.omwaddon *.zip *.gz* *.json TES3MP-server build Meshes Morrowind.esm Tribunal.esm Bloodmoon.esm
