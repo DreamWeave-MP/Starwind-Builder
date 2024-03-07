@@ -6,7 +6,7 @@
     "file_type": "Esp",
     "author": "",
     "description": "",
-    "num_objects": 21,
+    "num_objects": 22,
     "masters": [
       [
         "Morrowind.esm",
@@ -87,6 +87,21 @@
       "size": 1.0,
       "size_cap": 50.0
     }
+  },
+  {
+    "type": "Script",
+    "flags": "",
+    "id": "NisavMeanieScript",
+    "header": {
+      "num_shorts": 1,
+      "num_longs": 0,
+      "num_floats": 0,
+      "bytecode_length": 124,
+      "variables_length": 7
+    },
+    "variables": "BwAAAERvT25jZQA=",
+    "bytecode": "fAAAAAYBAgkgcwEAICE9IDHbEAUBcwEAAiAxCQEGAQQJIFjwECA9PSAxBgECGyBYzRAgZA5TV19Cb3VudHlRdWVzdCA9PSA1NQwBF1RhdG9vaW5lQ3plcmthQm91bnR5Qm9p2xDMEA5TV19Cb3VudHlRdWVzdEEA//8JAQkBAQE=",
+    "text": "Begin NisavMeanieScript\n\nshort DoOnce\n\nIf (DoOnce != 1)\n\tdisable\n\tset doonce to 1\nendif\n\nif (GetJournalIndex \"SW_BountyQuest\" == 55)\n\tenable\nendif\n\n\tif (OnDeath == 1)\n\t\tif (GetJournalIndex \"SW_BountyQuest\" == 55)\n\t\t\tTatooineCzerkaBountyBoi->Disable\n\t\t\tJournal SW_BountyQuest 65\n\t\tendif\n\tendif\nend"
   },
   {
     "type": "Script",
