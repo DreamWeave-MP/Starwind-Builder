@@ -6,7 +6,7 @@
     "file_type": "Esp",
     "author": "tes3cmd",
     "description": "(generated)",
-    "num_objects": 69,
+    "num_objects": 70,
     "masters": [
       [
         "Morrowind.esm",
@@ -22,7 +22,7 @@
       ],
       [
         "Starwind.omwaddon",
-        12854631
+        12844103
       ]
     ]
   },
@@ -1786,590 +1786,10 @@
     "region": "Ascadian Isles Region",
     "references": [
       {
-        "mast_index": 0,
-        "refr_index": 21091,
-        "id": "SW_DoorNar1",
-        "temporary": false,
-        "translation": [
-          4184.6436,
-          6158.683,
-          12642.7705
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          3.1415927
-        ],
-        "scale": 0.62,
-        "destination": {
-          "translation": [
-            9678.567,
-            5369.0137,
-            14044.122
-          ],
-          "rotation": [
-            0.0,
-            0.0,
-            4.483187
-          ],
-          "cell": "Nar Shaddaa, Lower City"
-        }
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21100,
-        "id": "SW_DoorNar1",
-        "temporary": false,
-        "translation": [
-          3138.2407,
-          5150.145,
-          12642.7705
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          1.5707964
-        ],
-        "scale": 0.62,
-        "destination": {
-          "translation": [
-            3843.3948,
-            657.46686,
-            12440.233
-          ],
-          "rotation": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "cell": "Nar Shaddaa, Junk Dealer"
-        }
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21104,
-        "id": "SW_NarGuardBountyHunte3",
-        "temporary": false,
-        "translation": [
-          2860.551,
-          6252.064,
-          12557.775
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          2.383185
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21112,
-        "id": "SW_Door2",
-        "temporary": false,
-        "translation": [
-          4181.0645,
-          2807.2527,
-          12559.633
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          1.5707964
-        ],
-        "scale": 0.75000006,
-        "destination": {
-          "translation": [
-            4026.533,
-            3649.5828,
-            12452.3955
-          ],
-          "rotation": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "cell": "Nar Shaddaa, Customs"
-        }
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21113,
-        "id": "SW_RemirosFollowAct",
-        "temporary": false,
-        "translation": [
-          5337.843,
-          6304.6177,
-          12509.739
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21127,
-        "id": "SW_DoorNar1",
-        "temporary": false,
-        "translation": [
-          4178.9746,
-          4129.367,
-          12642.7705
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": 0.62,
-        "destination": {
-          "translation": [
-            1397.2168,
-            -990.36664,
-            11540.577
-          ],
-          "rotation": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "cell": "Nar Shaddaa, Modification Shop"
-        }
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21129,
-        "id": "SW_DoorNar1",
-        "temporary": false,
-        "translation": [
-          5219.3433,
-          5152.544,
-          12642.7705
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          4.712389
-        ],
-        "scale": 0.62,
-        "destination": {
-          "translation": [
-            4121.483,
-            3279.002,
-            13231.157
-          ],
-          "rotation": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "cell": "Nar Shaddaa, Droid Shop"
-        }
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21134,
-        "id": "SW_NarBooks",
-        "temporary": false,
-        "translation": [
-          5331.68,
-          3885.7185,
-          12577.107
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          5.2831864
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21152,
-        "id": "SW_NarGuardBountyHunter",
-        "temporary": false,
-        "translation": [
-          4017.2925,
-          2297.483,
-          12557.775
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          1.1999991
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21153,
-        "id": "SW_SpiceMerchant",
-        "temporary": false,
-        "translation": [
-          2945.7659,
-          6347.2476,
-          12630.651
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          2.6000001
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21164,
-        "id": "SW_NarFood",
-        "temporary": false,
-        "translation": [
-          5382.9517,
-          6341.762,
-          12564.576
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          4.4
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21169,
-        "id": "SW_NarGuardBountyHunte2",
-        "temporary": false,
-        "translation": [
-          4339.906,
-          2271.247,
-          12557.775
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          5.4831853
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21184,
-        "id": "SW_ShuttlePilotMark",
-        "temporary": false,
-        "translation": [
-          3972.192,
-          7391.1006,
-          12579.734
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          2.9831877
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21185,
-        "id": "SW_RubberMan",
-        "temporary": false,
-        "translation": [
-          3060.5012,
-          3861.3198,
-          12577.107
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          1.2000002
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21192,
-        "id": "SW_NarGuardBountyHunter",
-        "temporary": false,
-        "translation": [
-          5201.653,
-          4783.952,
-          12545.188
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          1.5999992
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21207,
-        "id": "SW_NarGuardBountyHunte2",
-        "temporary": false,
-        "translation": [
-          3090.2856,
-          6492.119,
-          12557.775
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          3.1831837
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 49952,
-        "id": "SW_DoorNar2",
-        "temporary": false,
-        "translation": [
-          2224.9502,
-          2751.889,
-          12599.3125
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          4.712389
-        ],
-        "scale": 0.93000007,
-        "destination": {
-          "translation": [
-            4358.2354,
-            3545.0928,
-            12921.648
-          ],
-          "rotation": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "cell": "Nar Shaddaa, Vvardenfell Hanger"
-        }
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21086,
-        "id": "SW_CleaningDroidM3",
-        "temporary": true,
-        "translation": [
-          2149.8103,
-          2350.421,
-          12749.109
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          0.8000001
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21087,
-        "id": "SW_Berries",
-        "temporary": true,
-        "translation": [
-          5555.0967,
-          6326.164,
-          12675.447
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          3.0
-        ],
-        "scale": 1.5000001,
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21088,
+        "mast_index": 4,
+        "refr_index": 21054,
         "id": "SW_Nar_Tower1",
-        "temporary": true,
-        "translation": [
-          4185.1143,
-          1521.2463,
-          11719.6045
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          3.1415927
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21089,
-        "id": "SW_Nar_Tower5",
-        "temporary": true,
-        "translation": [
-          11939.354,
-          -209.42598,
-          12066.517
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          6.012388
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21090,
-        "id": "SW_Nar_Tower5",
-        "temporary": true,
-        "translation": [
-          6055.964,
-          13803.698,
-          12161.91
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          3.1415927
-        ],
-        "scale": 1.2
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21092,
-        "id": "SW_Nar_Tower1",
-        "temporary": true,
-        "translation": [
-          956.7302,
-          -3695.3518,
-          11695.739
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          4.712389
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21093,
-        "id": "SW_SandtuskMeat",
-        "temporary": true,
-        "translation": [
-          5533.0635,
-          6139.0376,
-          12630.494
-        ],
-        "rotation": [
-          0.0,
-          5.783186,
-          3.0
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21094,
-        "id": "SW_Jenpod",
-        "temporary": true,
-        "translation": [
-          5583.324,
-          6141.09,
-          12665.791
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          3.0
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21095,
-        "id": "SW_WyyyschokkEggs",
-        "temporary": true,
-        "translation": [
-          5518.7837,
-          6237.3965,
-          12636.135
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          4.4
-        ],
-        "scale": 2.0,
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21096,
-        "id": "SW_RrwiiRoot",
-        "temporary": true,
-        "translation": [
-          5357.084,
-          6468.5386,
-          12616.921
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          1.9000009
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21097,
-        "id": "SW_Nar_Tower2",
-        "temporary": true,
-        "translation": [
-          2583.101,
-          11852.451,
-          12294.593
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          1.5707964
-        ],
-        "scale": 1.3000001
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21098,
-        "id": "SW_Ext_SignDroids",
-        "temporary": true,
-        "translation": [
-          5155.014,
-          5165.499,
-          12726.445
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": 2.0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21099,
-        "id": "SW_Nar_Tower1",
-        "temporary": true,
-        "translation": [
-          15817.287,
-          7294.0005,
-          13191.262
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          4.712389
-        ],
-        "scale": 1.5000001
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21101,
-        "id": "SW_Nar_Tower1",
-        "temporary": true,
+        "temporary": false,
         "translation": [
           1081.0712,
           1764.6921,
@@ -2380,1804 +1800,359 @@
           0.0,
           0.0
         ],
-        "scale": 1.2
+        "scale": 1.2,
+        "destination": {
+          "translation": [
+            4358.0,
+            3545.0,
+            12921.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "cell": "Nar Shaddaa, Vvardenfell Hanger"
+        }
       },
       {
-        "mast_index": 0,
-        "refr_index": 21102,
-        "id": "SW_RrwiiRoot",
-        "temporary": true,
+        "mast_index": 4,
+        "refr_index": 49886,
+        "id": "SW_DoorNar2",
+        "temporary": false,
         "translation": [
-          5327.251,
-          6481.8325,
-          12621.667
+          2252.62,
+          2838.1992,
+          12531.936
         ],
         "rotation": [
-          0.0,
-          0.0,
-          1.9000009
+          -0.0,
+          -0.0,
+          -1.5447778
         ],
-        "owner": "SW_NarFood",
-        "health_left": 0
+        "destination": {
+          "translation": [
+            4407.0,
+            3462.0,
+            12856.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "cell": "Nar Shaddaa, Vvardenfell Hanger"
+        }
       },
       {
-        "mast_index": 0,
-        "refr_index": 21103,
-        "id": "Sound_FlyingSpeeders",
-        "temporary": true,
-        "translation": [
-          4125.5967,
-          5315.13,
-          11862.205
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21105,
-        "id": "SW_IntLightOverhead",
-        "temporary": true,
-        "translation": [
-          4185.9316,
-          2152.2268,
-          12858.018
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          3.1415927
-        ],
-        "scale": 1.08
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21106,
-        "id": "SW_NarFlyingTest2",
-        "temporary": true,
-        "translation": [
-          -5133.442,
-          3734.5461,
-          13396.276
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21107,
-        "id": "SW_SandtuskMeat",
-        "temporary": true,
-        "translation": [
-          5535.516,
-          6153.1,
-          12634.021
-        ],
-        "rotation": [
-          0.0,
-          5.783186,
-          3.0
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21108,
-        "id": "SW_Speeder3",
-        "temporary": true,
-        "translation": [
-          2091.286,
-          2011.0569,
-          12824.768
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": 0.70000005
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21109,
-        "id": "SW_WyyyschokkEggs",
-        "temporary": true,
-        "translation": [
-          5510.0776,
-          6214.2036,
-          12627.967
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          3.0168142
-        ],
-        "scale": 2.0,
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21110,
-        "id": "SW_Kiosk1",
-        "temporary": true,
-        "translation": [
-          5510.0703,
-          6272.5103,
-          12535.725
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          1.4000001
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21111,
-        "id": "SW_Jenpod",
-        "temporary": true,
-        "translation": [
-          5575.6436,
-          6151.8584,
-          12662.529
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          3.0
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21114,
-        "id": "SW_Jenpod",
-        "temporary": true,
-        "translation": [
-          5590.387,
-          6171.2983,
-          12673.189
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          3.0
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21115,
-        "id": "SW_WraidPelt",
-        "temporary": true,
-        "translation": [
-          5214.164,
-          6493.052,
-          12626.221
-        ],
-        "rotation": [
-          0.0,
-          5.783186,
-          1.9000009
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21116,
-        "id": "SW_SignNarArmor",
-        "temporary": true,
-        "translation": [
-          3915.4375,
-          4050.406,
-          12556.297
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21117,
-        "id": "SW_Ext_SignArena",
-        "temporary": true,
-        "translation": [
-          10012.517,
-          5866.524,
-          12759.607
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          4.712389
-        ],
-        "scale": 2.0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21118,
-        "id": "SW_NarMarketSign",
-        "temporary": true,
-        "translation": [
-          4178.7793,
-          5150.2207,
-          14368.659
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": 0.62
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21119,
-        "id": "SW_Chockie",
-        "temporary": true,
-        "translation": [
-          5389.5234,
-          6443.415,
-          12610.777
-        ],
-        "rotation": [
-          0.0,
-          5.883186,
-          1.9000009
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21120,
-        "id": "SW_MushbloomIng",
-        "temporary": true,
-        "translation": [
-          5199.202,
-          6534.9844,
-          12649.819
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          1.0000007
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21121,
-        "id": "SW_Nar_Tower5",
-        "temporary": true,
-        "translation": [
-          -1885.648,
-          1984.4883,
-          12161.91
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          4.441592
-        ],
-        "scale": 1.2
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21122,
-        "id": "SW_Chockie",
-        "temporary": true,
-        "translation": [
-          5381.5596,
-          6470.0273,
-          12626.362
-        ],
-        "rotation": [
-          0.0,
-          5.883186,
-          1.9000009
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21123,
-        "id": "SW_Nar_Tower2",
-        "temporary": true,
-        "translation": [
-          -3793.5808,
-          8052.2505,
-          13234.17
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          3.1415927
-        ],
-        "scale": 1.3000001
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21124,
-        "id": "SW_Nar_Tower5",
-        "temporary": true,
-        "translation": [
-          2783.2275,
-          -2168.1648,
-          12513.305
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          4.712389
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21125,
-        "id": "SW_Nar_Tower5",
-        "temporary": true,
-        "translation": [
-          -6004.0107,
-          2379.3787,
-          12161.91
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          4.0415926
-        ],
-        "scale": 1.2
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21126,
-        "id": "SW_Hubba",
-        "temporary": true,
-        "translation": [
-          5485.61,
-          6327.732,
-          12621.162
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          3.0
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21128,
-        "id": "SW_SignParnell",
-        "temporary": true,
-        "translation": [
-          3682.4263,
-          1890.1953,
-          13485.857
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          3.1415927
-        ],
-        "scale": 2.0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21130,
-        "id": "SW_Nar_Tower5",
-        "temporary": true,
-        "translation": [
-          2037.4697,
-          8590.995,
-          12513.305
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          4.712389
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21131,
-        "id": "SW_RrwiiRoot",
-        "temporary": true,
-        "translation": [
-          5333.9434,
-          6460.9106,
-          12608.669
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          1.9000009
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21132,
-        "id": "SW_Nar_Tower3",
-        "temporary": true,
-        "translation": [
-          3974.095,
-          -2248.2788,
-          11433.852
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          0.8707962
-        ],
-        "scale": 2.0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21133,
-        "id": "SW_Nar_Tower2",
-        "temporary": true,
-        "translation": [
-          -1012.9308,
-          5579.027,
-          9667.984
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          1.5707964
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21135,
-        "id": "SW_Nar_Tower8",
-        "temporary": true,
-        "translation": [
-          10235.868,
-          4562.1704,
-          11035.866
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          3.1415927
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21136,
-        "id": "SW_BanthSteak",
-        "temporary": true,
-        "translation": [
-          5540.268,
-          6377.0903,
-          12672.115
-        ],
-        "rotation": [
-          0.0,
-          5.783186,
-          2.6
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21137,
-        "id": "SW_Hubba",
-        "temporary": true,
-        "translation": [
-          5467.748,
-          6414.8604,
-          12623.846
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          3.0
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21138,
+        "mast_index": 4,
+        "refr_index": 49885,
         "id": "SW_SignDockingBay",
         "temporary": true,
         "translation": [
-          4186.754,
-          2116.6833,
-          13013.33
-        ],
-        "rotation": [
           0.0,
           0.0,
-          3.1415927
-        ],
-        "scale": 2.0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21139,
-        "id": "SW_Witherweed",
-        "temporary": true,
-        "translation": [
-          5509.633,
-          6191.1777,
-          12628.494
-        ],
-        "rotation": [
-          0.19999924,
-          2.4831872,
-          4.0
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21140,
-        "id": "SW_NidusLeaf",
-        "temporary": true,
-        "translation": [
-          5177.627,
-          6555.9717,
-          12657.773
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          1.9000009
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21141,
-        "id": "SW_Booze",
-        "temporary": true,
-        "translation": [
-          5152.442,
-          6505.0566,
-          12630.409
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          1.9000009
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21142,
-        "id": "SW_NarCloud2",
-        "temporary": true,
-        "translation": [
-          4269.125,
-          3457.47,
-          11177.879
+          0.0
         ],
         "rotation": [
           0.0,
           0.0,
           0.0
-        ]
+        ],
+        "deleted": true
       },
       {
-        "mast_index": 0,
-        "refr_index": 21143,
-        "id": "SW_KashyykMeat",
+        "mast_index": 4,
+        "refr_index": 49889,
+        "id": "SW_DoorNar2",
         "temporary": true,
         "translation": [
-          5593.4272,
-          6202.5786,
-          12677.326
-        ],
-        "rotation": [
           0.0,
           0.0,
-          0.61681366
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21144,
-        "id": "SW_WyyyschokkEggs",
-        "temporary": true,
-        "translation": [
-          5510.0776,
-          6214.2036,
-          12627.967
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          4.4
-        ],
-        "scale": 2.0,
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21145,
-        "id": "SW_Kiosk1",
-        "temporary": true,
-        "translation": [
-          5488.2144,
-          4018.1414,
-          12533.133
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          2.1831884
-        ],
-        "scale": 0.70000005
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21146,
-        "id": "SW_Nar_Tower5",
-        "temporary": true,
-        "translation": [
-          10357.544,
-          9501.277,
-          12161.91
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          1.5707964
-        ],
-        "scale": 1.2
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21147,
-        "id": "SW_NidusLeaf",
-        "temporary": true,
-        "translation": [
-          5221.619,
-          6557.791,
-          12665.054
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          1.9000009
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21148,
-        "id": "SW_Nar_Tower5",
-        "temporary": true,
-        "translation": [
-          15133.435,
-          4759.371,
-          10602.475
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          4.712389
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21149,
-        "id": "SW_Hubba",
-        "temporary": true,
-        "translation": [
-          5471.75,
-          6383.2886,
-          12625.318
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          3.0
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21150,
-        "id": "SW_SandtuskMeat",
-        "temporary": true,
-        "translation": [
-          5517.668,
-          6132.5684,
-          12622.549
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          3.0
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21151,
-        "id": "SW_NidusLeaf",
-        "temporary": true,
-        "translation": [
-          5180.8022,
-          6567.038,
-          12664.806
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          1.9000009
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21154,
-        "id": "SW_KashyykMeat",
-        "temporary": true,
-        "translation": [
-          5562.3354,
-          6220.7026,
-          12659.85
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          0.61681366
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21155,
-        "id": "SW_SignNarJunk",
-        "temporary": true,
-        "translation": [
-          3101.7175,
-          5144.2954,
-          12743.413
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          1.6415931
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21156,
-        "id": "SW_Booze",
-        "temporary": true,
-        "translation": [
-          5191.929,
-          6500.335,
-          12632.278
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          1.9000009
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21157,
-        "id": "SW_DoorStat",
-        "temporary": true,
-        "translation": [
-          1978.3998,
-          2457.452,
-          12719.628
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          4.712389
-        ],
-        "scale": 0.70000005
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21158,
-        "id": "SW_Nar_Tower5",
-        "temporary": true,
-        "translation": [
-          8292.461,
-          1538.9949,
-          12513.305
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          4.712389
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21159,
-        "id": "SW_Nar_Tower2",
-        "temporary": true,
-        "translation": [
-          12564.232,
-          2982.78,
-          13112.395
+          0.0
         ],
         "rotation": [
           0.0,
           0.0,
           0.0
-        ]
+        ],
+        "deleted": true
       },
       {
-        "mast_index": 0,
-        "refr_index": 21160,
-        "id": "SW_Nar_Tower5",
-        "temporary": true,
-        "translation": [
-          -991.95886,
-          10019.824,
-          12161.91
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          2.1415932
-        ],
-        "scale": 1.2
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21161,
-        "id": "SW_Nar_Tower6",
-        "temporary": true,
-        "translation": [
-          8697.563,
-          -745.7444,
-          12536.102
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          5.653983
-        ],
-        "scale": 0.70000005
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21162,
-        "id": "SW_Nar_Tower6",
-        "temporary": true,
-        "translation": [
-          7069.7188,
-          8087.4917,
-          11746.746
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          1.5707964
-        ],
-        "scale": 0.70000005
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21163,
-        "id": "SW_Nar_Tower1",
-        "temporary": true,
-        "translation": [
-          -6851.957,
-          5189.843,
-          11719.6045
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          2.3
-        ],
-        "scale": 1.2
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21165,
-        "id": "SW_SignParnell",
-        "temporary": true,
-        "translation": [
-          4698.5273,
-          1890.1953,
-          13485.857
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          3.1415927
-        ],
-        "scale": 2.0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21166,
-        "id": "SW_Nar_Tower3",
-        "temporary": true,
-        "translation": [
-          863.46027,
-          -30.972862,
-          11433.852
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          0.8707962
-        ],
-        "scale": 2.0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21167,
-        "id": "SW_Nar_Tower5",
-        "temporary": true,
-        "translation": [
-          8764.281,
-          7548.9316,
-          11197.275
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21168,
-        "id": "SW_Nar_Tower2",
-        "temporary": true,
-        "translation": [
-          5932.7803,
-          -1647.9436,
-          11971.139
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21170,
-        "id": "SW_WraidPelt",
-        "temporary": true,
-        "translation": [
-          5149.1807,
-          6485.3926,
-          12615.001
-        ],
-        "rotation": [
-          0.0,
-          5.783186,
-          1.9000009
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21171,
-        "id": "SW_Chockie",
-        "temporary": true,
-        "translation": [
-          5400.8135,
-          6457.259,
-          12620.241
-        ],
-        "rotation": [
-          0.0,
-          5.883186,
-          1.9000009
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21172,
-        "id": "SW_MushbloomIng",
-        "temporary": true,
-        "translation": [
-          5234.0977,
-          6535.9233,
-          12656.219
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          1.5000008
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21173,
-        "id": "SW_Nar_Tower1",
-        "temporary": true,
-        "translation": [
-          8084.372,
-          11002.858,
-          13191.262
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          4.712389
-        ],
-        "scale": 1.5000001
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21174,
-        "id": "SW_Berries",
-        "temporary": true,
-        "translation": [
-          5534.566,
-          6325.176,
-          12669.045
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          3.0
-        ],
-        "scale": 1.5000001,
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21175,
-        "id": "SW_SignNarArmor",
-        "temporary": true,
-        "translation": [
-          4445.1753,
-          4050.406,
-          12556.297
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21176,
-        "id": "SW_Fenelar_Helm",
-        "temporary": true,
-        "translation": [
-          4523.985,
-          234.96548,
-          12341.558
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          5.8999996
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21177,
+        "mast_index": 4,
+        "refr_index": 49890,
         "id": "SW_Nar_Walkway",
         "temporary": true,
         "translation": [
-          4179.3936,
-          3251.8408,
-          11956.764
-        ],
-        "rotation": [
           0.0,
           0.0,
-          1.5707964
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21178,
-        "id": "SW_CheaterBook",
-        "temporary": true,
-        "translation": [
-          2051.627,
-          2459.0957,
-          12752.529
+          0.0
         ],
         "rotation": [
           0.0,
           0.0,
           0.0
-        ]
+        ],
+        "deleted": true
       },
       {
-        "mast_index": 0,
-        "refr_index": 21179,
-        "id": "SW_Nar_Tower2",
-        "temporary": true,
-        "translation": [
-          -1644.1025,
-          -1607.0212,
-          13234.17
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          3.1415927
-        ],
-        "scale": 1.3000001
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21180,
-        "id": "SW_Nar_Tower1",
-        "temporary": true,
-        "translation": [
-          12935.204,
-          5615.544,
-          9074.364
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          4.6831865
-        ],
-        "scale": 1.2
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21181,
-        "id": "SW_BlackMelon",
-        "temporary": true,
-        "translation": [
-          5332.751,
-          6545.774,
-          12658.88
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          1.9000009
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21182,
-        "id": "SW_NarFlyingTest1B",
-        "temporary": true,
-        "translation": [
-          117.19415,
-          2129.1072,
-          16334.189
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          3.1415927
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21183,
-        "id": "SW_WraidPelt",
-        "temporary": true,
-        "translation": [
-          5232.4727,
-          6473.692,
-          12617.614
-        ],
-        "rotation": [
-          0.0,
-          5.783186,
-          1.9000009
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21186,
-        "id": "SW_RrwiiRoot",
-        "temporary": true,
-        "translation": [
-          5373.205,
-          6454.1143,
-          12610.912
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          1.9000009
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21187,
-        "id": "SW_Speeder5",
-        "temporary": true,
-        "translation": [
-          4362.908,
-          8402.369,
-          14564.813
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          1.2999978
-        ],
-        "scale": 0.8
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21188,
-        "id": "SW_BanthSteak",
-        "temporary": true,
-        "translation": [
-          5525.8506,
-          6419.3066,
-          12666.721
-        ],
-        "rotation": [
-          0.0,
-          5.783186,
-          2.6
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21189,
-        "id": "SW_NarFlyingTest1B",
-        "temporary": true,
-        "translation": [
-          9560.312,
-          16826.668,
-          15222.196
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21190,
-        "id": "SW_Kiosk1",
-        "temporary": true,
-        "translation": [
-          5279.2173,
-          6491.1494,
-          12536.968
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          0.19999999
-        ],
-        "scale": 0.90000004
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21191,
-        "id": "SW_NarFlyingTest3",
-        "temporary": true,
-        "translation": [
-          3059.762,
-          10404.192,
-          14192.38
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21193,
-        "id": "SW_Kiosk1",
-        "temporary": true,
-        "translation": [
-          2902.953,
-          3975.3967,
-          12533.133
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          4.1831875
-        ],
-        "scale": 0.70000005
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21194,
-        "id": "SW_NarMarket",
-        "temporary": true,
-        "translation": [
-          4178.7793,
-          5150.2207,
-          11514.129
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          3.1415927
-        ],
-        "scale": 0.62
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21195,
-        "id": "SW_Jenpod",
-        "temporary": true,
-        "translation": [
-          5595.0767,
-          6157.3853,
-          12674.213
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          3.0
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21196,
-        "id": "SW_Speeder5",
-        "temporary": true,
-        "translation": [
-          3841.1575,
-          7576.786,
-          12629.794
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          0.79999775
-        ],
-        "scale": 0.8
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21197,
-        "id": "SW_KashyykMeat",
-        "temporary": true,
-        "translation": [
-          5574.094,
-          6234.9385,
-          12669.338
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          0.61681366
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21198,
-        "id": "SW_BlackMelon",
-        "temporary": true,
-        "translation": [
-          5371.611,
-          6533.5737,
-          12657.574
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          1.9000009
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21199,
-        "id": "SW_Witherweed",
-        "temporary": true,
-        "translation": [
-          5526.401,
-          6185.8086,
-          12634.506
-        ],
-        "rotation": [
-          0.0,
-          5.883186,
-          3.0
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21200,
-        "id": "SW_Speeder5",
-        "temporary": true,
-        "translation": [
-          5019.519,
-          8424.662,
-          14564.813
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          4.5831833
-        ],
-        "scale": 0.8
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21201,
+        "mast_index": 4,
+        "refr_index": 49891,
         "id": "SW_Nar_Walkway",
         "temporary": true,
         "translation": [
-          4179.669,
-          2393.084,
-          11956.764
+          0.0,
+          0.0,
+          0.0
         ],
         "rotation": [
           0.0,
           0.0,
-          1.5707964
-        ]
+          0.0
+        ],
+        "deleted": true
       },
       {
         "mast_index": 0,
-        "refr_index": 21202,
-        "id": "SW_Nar_Tower6",
-        "temporary": true,
-        "translation": [
-          12489.147,
-          7596.999,
-          12536.102
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          3.9707954
-        ],
-        "scale": 0.70000005
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21203,
-        "id": "SW_Nar_Tower6",
-        "temporary": true,
-        "translation": [
-          6358.4478,
-          349.22876,
-          12488.762
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          3.0539832
-        ],
-        "scale": 0.70000005
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21204,
+        "refr_index": 402655,
         "id": "SW_Nar_Walkway",
         "temporary": true,
         "translation": [
-          4179.3936,
+          3599.9167,
           2831.4128,
-          11956.764
+          11843.014
         ],
         "rotation": [
           0.0,
           0.0,
-          1.5707964
+          0.0
         ]
       },
       {
         "mast_index": 0,
-        "refr_index": 21205,
-        "id": "SW_Booze",
-        "temporary": true,
-        "translation": [
-          5178.7983,
-          6485.125,
-          12621.0
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          1.9000009
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21206,
-        "id": "SW_WyyyschokkEggs",
-        "temporary": true,
-        "translation": [
-          5508.877,
-          6228.544,
-          12629.424
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          4.4
-        ],
-        "scale": 2.0,
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21208,
-        "id": "SW_Berries",
-        "temporary": true,
-        "translation": [
-          5545.159,
-          6332.3755,
-          12670.162
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          3.0
-        ],
-        "scale": 1.5000001,
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21209,
-        "id": "SW_BlackMelon",
-        "temporary": true,
-        "translation": [
-          5402.986,
-          6515.488,
-          12649.171
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          1.9000009
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21210,
-        "id": "SW_WyyyschokkEggs",
-        "temporary": true,
-        "translation": [
-          5521.3237,
-          6220.4233,
-          12635.568
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          4.4
-        ],
-        "scale": 2.0,
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21211,
-        "id": "SW_Nar_Tower1",
-        "temporary": true,
-        "translation": [
-          5260.6567,
-          9669.869,
-          13191.262
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          4.712389
-        ],
-        "scale": 1.5000001
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 21212,
-        "id": "SW_BlackMelon",
-        "temporary": true,
-        "translation": [
-          5329.3413,
-          6506.7236,
-          12647.163
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          1.9000009
-        ],
-        "owner": "SW_NarFood",
-        "health_left": 0
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 49948,
+        "refr_index": 402656,
         "id": "SW_Nar_Walkway",
         "temporary": true,
         "translation": [
-          2448.968,
-          2736.0151,
-          11860.261
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          6.2831855
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 49949,
-        "id": "SW_SignDockingBay",
-        "temporary": true,
-        "translation": [
-          2360.8474,
-          2574.0671,
-          12449.49
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          3.926991
-        ],
-        "scale": 0.85
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 49951,
-        "id": "SW_Nar_Walkway",
-        "temporary": true,
-        "translation": [
-          4179.3936,
+          2748.9468,
           2831.4128,
-          11956.764
+          11843.014
         ],
         "rotation": [
           0.0,
           0.0,
-          1.5707964
+          0.0
         ]
       },
       {
         "mast_index": 0,
-        "refr_index": 49953,
-        "id": "SW_Nar_Walkway",
-        "temporary": true,
-        "translation": [
-          3912.8408,
-          2736.0151,
-          11921.83
-        ],
-        "rotation": [
-          2.7327278e-23,
-          0.25117448,
-          1.7484555e-7
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 49954,
+        "refr_index": 402657,
         "id": "SW_Nar_Int_Doorway",
         "temporary": true,
         "translation": [
-          2234.5557,
-          2753.5486,
-          12594.066
+          2275.7195,
+          2830.995,
+          12534.254
         ],
         "rotation": [
           0.0,
           0.0,
-          4.712389
-        ],
-        "scale": 0.93000007
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 404914,
-        "id": "SW_Nar_Walkway",
-        "temporary": true,
-        "translation": [
-          2884.6482,
-          2736.0151,
-          11860.261
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          6.2831855
+          -1.5707964
         ]
       },
       {
         "mast_index": 0,
-        "refr_index": 404915,
-        "id": "SW_Nar_Walkway",
+        "refr_index": 402659,
+        "id": "SW_DoorNar2",
         "temporary": true,
         "translation": [
-          3223.4204,
-          2737.3193,
-          11860.266
+          2252.62,
+          2838.1992,
+          12531.936
         ],
         "rotation": [
-          0.0,
-          0.0,
-          6.2831855
+          -0.0,
+          -0.0,
+          -1.5447778
         ]
       },
       {
         "mast_index": 0,
-        "refr_index": 404916,
+        "refr_index": 402665,
         "id": "SW_Nar_Walkway",
         "temporary": true,
         "translation": [
-          3593.585,
-          2736.0151,
-          11860.285
+          2748.9468,
+          2831.4128,
+          11843.014
         ],
         "rotation": [
           0.0,
           0.0,
-          6.2831855
+          0.0
         ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 402666,
+        "id": "SW_Nar_Walkway",
+        "temporary": true,
+        "translation": [
+          3180.9468,
+          2831.4128,
+          11843.014
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 402667,
+        "id": "SW_Nar_Walkway",
+        "temporary": true,
+        "translation": [
+          3180.9468,
+          2831.4128,
+          11843.014
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 402668,
+        "id": "SW_Nar_Walkway",
+        "temporary": true,
+        "translation": [
+          3180.9468,
+          2831.4128,
+          11843.014
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 402669,
+        "id": "SW_Nar_Walkway",
+        "temporary": true,
+        "translation": [
+          2316.9468,
+          2831.4128,
+          11843.014
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 402670,
+        "id": "SW_SignDockingBay",
+        "temporary": true,
+        "translation": [
+          2340.4841,
+          2660.613,
+          12437.005
+        ],
+        "rotation": [
+          -0.0,
+          -0.0,
+          -2.166795
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 402671,
+        "id": "SW_Nar_Walkway",
+        "temporary": true,
+        "translation": [
+          3912.9639,
+          2831.4128,
+          11920.09
+        ],
+        "rotation": [
+          0.0,
+          0.2617994,
+          0.0
+        ],
+        "scale": 0.999
+      }
+    ]
+  },
+  {
+    "type": "Cell",
+    "flags": "",
+    "name": "Nar Shaddaa, Vvardenfell Hanger",
+    "data": {
+      "flags": "IS_INTERIOR",
+      "grid": [
+        0,
+        1065353216
+      ]
+    },
+    "water_height": 0.0,
+    "atmosphere_data": {
+      "ambient_color": [
+        71,
+        71,
+        71,
+        0
+      ],
+      "sunlight_color": [
+        242,
+        217,
+        217,
+        0
+      ],
+      "fog_color": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fog_density": 1.0
+    },
+    "references": [
+      {
+        "mast_index": 4,
+        "refr_index": 25712,
+        "id": "SW_DoorNar2",
+        "temporary": false,
+        "translation": [
+          4369.8877,
+          3363.98,
+          13003.213
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.1415927
+        ],
+        "destination": {
+          "translation": [
+            2365.0,
+            2838.0,
+            12489.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            1.5707964
+          ],
+          "cell": "Nar Shaddaa, Makacheesa Market"
+        }
       }
     ]
   },
