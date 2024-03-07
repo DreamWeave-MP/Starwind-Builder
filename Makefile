@@ -30,16 +30,16 @@ requiredfiles:
 	done
 	t3crc
 
-MIG:
-	merchantIndexGrabber
+DFL:
+	./databaseWriter.sh DFL
 
 espParser:
 	./databaseWriter.sh espParser
 
-DFL:
-	./databaseWriter.sh DFL
+MIG:
+	merchantIndexGrabber
 
-databases: MIG espParser DFL requiredfiles
+databases: DFL espParser MIG requiredfiles
 
 clean:
 	rm -rf *.tmp *\~* src/*.esp *.zip *.gz* *.json TES3MP-server build Starwind.omwaddon
