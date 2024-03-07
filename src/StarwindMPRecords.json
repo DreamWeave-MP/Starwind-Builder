@@ -6,7 +6,7 @@
     "file_type": "Esp",
     "author": "tes3cmd",
     "description": "(generated)",
-    "num_objects": 66,
+    "num_objects": 67,
     "masters": [
       [
         "Morrowind.esm",
@@ -22,7 +22,7 @@
       ],
       [
         "Starwind.omwaddon",
-        13756933
+        12854548
       ]
     ]
   },
@@ -595,6 +595,76 @@
       "cost": 0,
       "max_charge": 0,
       "flags": ""
+    }
+  },
+  {
+    "type": "Npc",
+    "flags": "",
+    "id": "Jett Whisko",
+    "name": "Jett Whisko",
+    "script": "",
+    "mesh": "",
+    "inventory": [
+      [
+        1,
+        "BM_Wool01_Robe"
+      ],
+      [
+        1,
+        "SW_Vis1"
+      ],
+      [
+        1,
+        "common_shoes_04"
+      ],
+      [
+        1,
+        "expensive_glove_left_01"
+      ],
+      [
+        1,
+        "expensive_glove_right_01"
+      ]
+    ],
+    "spells": [],
+    "ai_data": {
+      "hello": 30,
+      "fight": 30,
+      "flee": 30,
+      "alarm": 100,
+      "services": "BARTERS_BOOKS | OFFERS_TRAINING"
+    },
+    "ai_packages": [
+      {
+        "type": "Wander",
+        "distance": 256,
+        "duration": 5,
+        "game_hour": 0,
+        "idle2": 60,
+        "idle3": 20,
+        "idle4": 10,
+        "idle5": 10,
+        "idle6": 0,
+        "idle7": 0,
+        "idle8": 0,
+        "idle9": 0,
+        "reset": 1
+      }
+    ],
+    "travel_destinations": [],
+    "race": "Breton",
+    "class": "Savant Service",
+    "faction": "",
+    "head": "b_n_breton_m_head_03",
+    "hair": "b_n_breton_m_hair_05",
+    "npc_flags": "IS_BASE | AUTO_CALCULATE",
+    "blood_type": 0,
+    "data": {
+      "level": 15,
+      "disposition": 80,
+      "reputation": 4,
+      "rank": 1,
+      "gold": 150
     }
   },
   {
@@ -1631,6 +1701,58 @@
           0.0,
           -0.0,
           2.9831884
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Cell",
+    "flags": "",
+    "name": "Nar Shaddaa, Hutt Cartel",
+    "data": {
+      "flags": "IS_INTERIOR",
+      "grid": [
+        0,
+        1065353216
+      ]
+    },
+    "water_height": 0.0,
+    "atmosphere_data": {
+      "ambient_color": [
+        172,
+        172,
+        172,
+        0
+      ],
+      "sunlight_color": [
+        242,
+        217,
+        217,
+        0
+      ],
+      "fog_color": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fog_density": 1.0
+    },
+    "references": [
+      {
+        "mast_index": 0,
+        "refr_index": 1,
+        "id": "Jett Whisko",
+        "temporary": false,
+        "translation": [
+          4795.0513,
+          6244.113,
+          12032.61
+        ],
+        "rotation": [
+          -0.0,
+          -0.0,
+          -0.3972685
         ]
       }
     ]
@@ -4967,6 +5089,126 @@
   {
     "type": "Dialogue",
     "flags": "",
+    "id": "price on your head",
+    "dialogue_type": "Topic"
+  },
+  {
+    "type": "Dialogue",
+    "flags": "",
+    "id": "Greeting 0",
+    "dialogue_type": "Greeting"
+  },
+  {
+    "type": "DialogueInfo",
+    "flags": "",
+    "id": "1883316893198517213",
+    "prev_id": "875317795149451008",
+    "next_id": "1841853731897017756",
+    "data": {
+      "dialogue_type": "Greeting",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "Jett Whisko",
+    "speaker_race": "",
+    "speaker_class": "",
+    "speaker_faction": "",
+    "speaker_cell": "",
+    "player_faction": "",
+    "sound_path": "",
+    "text": "I've heard you've got a price on your head, traveler. For a small fee, I can take care of that.",
+    "filters": [
+      {
+        "slot": "Slot1",
+        "filter_type": "Function",
+        "function": "PcCrimeLevel",
+        "comparison": "GreaterEqual",
+        "id": "",
+        "value": {
+          "type": "Integer",
+          "data": 1
+        }
+      }
+    ],
+    "script_text": ""
+  },
+  {
+    "type": "DialogueInfo",
+    "flags": "",
+    "id": "1841853731897017756",
+    "prev_id": "1883316893198517213",
+    "next_id": "24122315662111218808",
+    "data": {
+      "dialogue_type": "Topic",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "Jett Whisko",
+    "speaker_race": "",
+    "speaker_class": "",
+    "speaker_faction": "",
+    "speaker_cell": "",
+    "player_faction": "",
+    "sound_path": "",
+    "text": "That's not a problem for you now.",
+    "filters": [
+      {
+        "slot": "Slot0",
+        "filter_type": "Function",
+        "function": "PcCrimeLevel",
+        "comparison": "Equal",
+        "id": "",
+        "value": {
+          "type": "Integer",
+          "data": 0
+        }
+      }
+    ],
+    "script_text": ""
+  },
+  {
+    "type": "DialogueInfo",
+    "flags": "",
+    "id": "24122315662111218808",
+    "prev_id": "1841853731897017756",
+    "next_id": "1224319899288117550",
+    "data": {
+      "dialogue_type": "Topic",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "Jett Whisko",
+    "speaker_race": "",
+    "speaker_class": "",
+    "speaker_faction": "",
+    "speaker_cell": "",
+    "player_faction": "",
+    "sound_path": "",
+    "text": "Well, word on the street is that you've got a bounty of %PCCrimeLevel on your head. The Cartel doesn't discriminate when it comes to these matters - I should be able to fix that for %CrimeGoldDiscount credits. Sound fair to you?",
+    "filters": [
+      {
+        "slot": "Slot0",
+        "filter_type": "Function",
+        "function": "PcCrimeLevel",
+        "comparison": "GreaterEqual",
+        "id": "",
+        "value": {
+          "type": "Integer",
+          "data": 1
+        }
+      }
+    ],
+    "script_text": "Choice \"Thanks. I'll pay it.\" 1 \"No thanks. I can take care of it.\" 2"
+  },
+  {
+    "type": "Dialogue",
+    "flags": "",
     "id": "Greeting 7",
     "dialogue_type": "Greeting"
   },
@@ -5047,125 +5289,6 @@
     "flags": "",
     "id": "docking fee",
     "dialogue_type": "Topic"
-  },
-  {
-    "type": "DialogueInfo",
-    "flags": "",
-    "id": "6237154402270029326",
-    "prev_id": "26365117931630321630",
-    "next_id": "2661410465181708060",
-    "data": {
-      "dialogue_type": "Topic",
-      "disposition": 0,
-      "speaker_rank": -1,
-      "speaker_sex": "Any",
-      "player_rank": -1
-    },
-    "speaker_id": "SW_NarCustom",
-    "speaker_race": "",
-    "speaker_class": "",
-    "speaker_faction": "",
-    "speaker_cell": "",
-    "player_faction": "",
-    "sound_path": "",
-    "text": "Enjoy your stay on Nar Shaddaa.",
-    "filters": [
-      {
-        "slot": "Slot0",
-        "filter_type": "Function",
-        "function": "Choice",
-        "comparison": "Equal",
-        "id": "",
-        "value": {
-          "type": "Integer",
-          "data": 1
-        }
-      },
-      {
-        "slot": "Slot1",
-        "filter_type": "Item",
-        "function": "ItemType",
-        "comparison": "GreaterEqual",
-        "id": "Gold_001",
-        "value": {
-          "type": "Integer",
-          "data": 200
-        }
-      }
-    ],
-    "script_text": "player->removeitem, Gold_001, 200\nJournal SW_CustomJourn 10\ngoodbye"
-  },
-  {
-    "type": "Dialogue",
-    "flags": "",
-    "id": "Duros gang",
-    "dialogue_type": "Topic"
-  },
-  {
-    "type": "DialogueInfo",
-    "flags": "",
-    "id": "302024745522713674",
-    "prev_id": "27364145011640417555",
-    "next_id": "",
-    "data": {
-      "dialogue_type": "Topic",
-      "disposition": 0,
-      "speaker_rank": -1,
-      "speaker_sex": "Any",
-      "player_rank": -1
-    },
-    "speaker_id": "SW_CzerkaOfficeGuy",
-    "speaker_race": "",
-    "speaker_class": "",
-    "speaker_faction": "",
-    "speaker_cell": "",
-    "player_faction": "",
-    "sound_path": "",
-    "text": "Scoundrels won't get anything from us. We'll ignore them until they run off like the other back-slum gangsters that come from other city planets.",
-    "filters": [],
-    "script_text": "StopSound \"COBantha1\"\r\nStopSound \"COBantha3\"\r\nStopSound \"CODurelium\"\r\nPlaySound3d \"CODurosGang\"\r\nStopSound \"COGizka\"\r\nStopSound \"COGreet\"\r\nStopSound \"COHome\"\r\nStopSound \"COHungox\"\r\nStopSound \"COInvest1\"\r\nStopSound \"COInvest2\"\r\nStopSound \"COJawa\"\r\nStopSound \"COJedi\"\r\nStopSound \"COKash\"\r\nStopSound \"CORodian\"\r\nStopSound \"COSandtusk\"\r\nStopSound \"COSwoop1\"\r\nStopSound \"COSwoop2\"\r\nStopSound \"COTaris\"\r\nStopSound \"COVibro\"\r\nStopSound \"COWomen1\"\r\nStopSound \"COWomen2\"\r\nStopSound \"COZilloReal\"\r\nStopSound \"COZillows1\"\r\nStopSound \"COZillows2\"\r\nStopSound \"COZillows3\"\r\nStopSound \"COZillows4\"\r\nStopSound \"COZillows5\"\r\nStopSound \"COZillows6\""
-  },
-  {
-    "type": "Dialogue",
-    "flags": "",
-    "id": "Authority Murders",
-    "dialogue_type": "Topic"
-  },
-  {
-    "type": "DialogueInfo",
-    "flags": "",
-    "id": "27092150533120432315",
-    "prev_id": "",
-    "next_id": "10626318732243215459",
-    "data": {
-      "dialogue_type": "Topic",
-      "disposition": 0,
-      "speaker_rank": -1,
-      "speaker_sex": "Any",
-      "player_rank": -1
-    },
-    "speaker_id": "SW_CzerkaOfficeTatGuard",
-    "speaker_race": "",
-    "speaker_class": "",
-    "speaker_faction": "",
-    "speaker_cell": "",
-    "player_faction": "",
-    "sound_path": "",
-    "text": "Barney Halligan? No good trash was as worthless as a Cathar! The Czerka Office is now reopened to the public. Thank you, stranger, and welcome to Sandriver.",
-    "filters": [
-      {
-        "slot": "Slot0",
-        "filter_type": "Journal",
-        "function": "JournalType",
-        "comparison": "Equal",
-        "id": "SW_CzerkaMurd",
-        "value": {
-          "type": "Integer",
-          "data": 25
-        }
-      }
-    ],
-    "script_text": "Journal SW_CzerkaMurd 30\r\n\"SW_CzerkaOfficeDoorTat\"->unlock\r\nSW_ShadeCantinaTat->Enable\r\nSW_ShadeMedicalTat->Disable\r\nStartScript SW_StoryComlink2\r\nJournal SW_TarisChap1 15\r\nplayer->additem \"Gold_001\", 200\r\nSet ShadeMedical to 2\r\nplayer->modReputation 1\r\nStopSound \"AMurders1\"\r\nStopSound \"AMurders2\"\r\nPlaySound3d \"AMurders3\""
   },
   {
     "type": "Dialogue",
