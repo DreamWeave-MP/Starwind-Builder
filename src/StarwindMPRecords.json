@@ -6,7 +6,7 @@
     "file_type": "Esp",
     "author": "tes3cmd",
     "description": "(generated)",
-    "num_objects": 64,
+    "num_objects": 65,
     "masters": [
       [
         "Morrowind.esm",
@@ -22,7 +22,7 @@
       ],
       [
         "Starwind.omwaddon",
-        13748942
+        13756933
       ]
     ]
   },
@@ -1005,6 +1005,52 @@
       "reputation": 0,
       "rank": 0,
       "gold": 0
+    }
+  },
+  {
+    "type": "Npc",
+    "flags": "",
+    "id": "SW_NarSpeederMerchNPC",
+    "name": "Melchior",
+    "script": "nolore",
+    "mesh": "base_anim.nif",
+    "inventory": [
+      [
+        1,
+        "SW_PantsBlack"
+      ],
+      [
+        1,
+        "SW_ShirtBlack"
+      ],
+      [
+        1,
+        "SW_ShoesBlack"
+      ]
+    ],
+    "spells": [],
+    "ai_data": {
+      "hello": 30,
+      "fight": 30,
+      "flee": 30,
+      "alarm": 0,
+      "services": "BARTERS_CLOTHING"
+    },
+    "ai_packages": [],
+    "travel_destinations": [],
+    "race": "SW_Quar",
+    "class": "Merchant",
+    "faction": "",
+    "head": "SW_QuarHead",
+    "hair": "",
+    "npc_flags": "IS_BASE | AUTO_CALCULATE",
+    "blood_type": 0,
+    "data": {
+      "level": 25,
+      "disposition": 50,
+      "reputation": 0,
+      "rank": 0,
+      "gold": 2000
     }
   },
   {
