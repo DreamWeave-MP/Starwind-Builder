@@ -7,6 +7,9 @@ tsi: plugins-bin
 vanilla: plugins-bin
 	./build.sh vanilla | grep -v "<DATADIR> is\|Output saved in\|Original backed up to\|Can't find \"Data Files\"\|Log"
 
+test-cs: plugins-bin
+	./build.sh tsi nomp | grep -v "<DATADIR> is\|Output saved in\|Original backed up to\|Can't find \"Data Files\"\|Log"
+
 cpp: plugins-bin
 	cp -r ./src/"Community Patch Project"/Meshes .
 	cp ./build/"Starwind Community Patch Project.esp" ./"Starwind Community Patch Project.omwaddon"
@@ -22,6 +25,19 @@ plugins-text:
 
 deploy: clean plugins-text tsi
 	mv Starwind.omwaddon $$HOME/.local/share/openmw/data/
+
+test: deploy
+	~/openmw/tsi-client/tes3mp
+
+edit-tsi: deploy
+	openmw-cs $$HOME/.local/share/openmw/data/Starwind.omwaddon
+
+edit-cpp: deploy
+	openmw-cs $$HOME/.local/share/openmw/data/"Starwind Community Patch Project.omwaddon"
+
+edit-mponly: clean plugins-text test-cs
+	mv Starwind.omwaddon $$HOME/.local/share/openmw/data/
+	openmw-cs $$HOME/.local/share/openmw/data/"StarwindMPRecords.omwaddon"
 
 databases: DFL espParser MIG requiredfiles
 
