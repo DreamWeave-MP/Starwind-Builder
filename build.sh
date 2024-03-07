@@ -60,10 +60,18 @@ else
     cp "/plugins/StarwindRemasteredV1.15.esm" .
 fi
 
-if [ -f "../nomq_StarwindRemasteredPatch.esm" ]; then
-    cp "../nomq_StarwindRemasteredPatch.esm" StarwindRemasteredPatch.esm
+if [ "$1" = "tsi" ]; then
+    if [ -f "../nomq_StarwindRemasteredPatch.esm" ]; then
+        cp "../nomq_StarwindRemasteredPatch.esm" StarwindRemasteredPatch.esm
+    else
+        cp "/plugins/nomq_StarwindRemasteredPatch.esm" StarwindRemasteredPatch.esm
+    fi
 else
-    cp "/plugins/nomq_StarwindRemasteredPatch.esm" StarwindRemasteredPatch.esm
+    if [ -f "../base_StarwindRemasteredPatch.esm" ]; then
+        cp "../base_StarwindRemasteredPatch.esm" StarwindRemasteredPatch.esm
+    else
+        cp "/plugins/base_StarwindRemasteredPatch.esm" StarwindRemasteredPatch.esm
+    fi
 fi
 
 # Remove replaced records, make mp-specific patches
