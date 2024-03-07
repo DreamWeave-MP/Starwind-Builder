@@ -6,6 +6,7 @@ JUNK_CELL=("ashinabi, smuggler den"
 "baram ancestral tomb"
 "berandas, propylon chamber"
 "cavern of the incarnate"
+"dantooine"
 "falensarano, propylon chamber"
 "gnisis, arvs-drelen"
 "gnisis, madach tradehouse"
@@ -19,6 +20,7 @@ JUNK_CELL=("ashinabi, smuggler den"
 "mournhold, plaza brindisi dorom"
 "mournhold, royal palace: basement"
 "mournhold, royal palace: helseth's chambers"
+"Nar Shaddaa, Hutt Base"
 "nerano ancestral tomb"
 "pelagiad, south wall"
 "seyda neen, census and excise office"
@@ -137,9 +139,6 @@ if [ "$1" = "tsi" ]; then
     tes3cmd delete --type CELL --exact-id "Nar Shaddaa, Hutt Cartel" --instance-match "SW_HuttBadhiya" StarwindRemasteredPatch.esm
 
 fi
-
-# Unused Content
-tes3cmd delete --type CELL --exact-id "Nar Shaddaa, Hutt Base" StarwindRemasteredPatch.esm StarwindRemasteredV1.15.esm
 # Just cleaning
 #This script is actually SW_traveltokashyyk but I figure if anybody was actually using this script the typo would have been noticed a long time ago
 # When I ran a global search against it and tried to dump instances of it out of the plugin it didn't appear to have any references
