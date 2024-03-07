@@ -44,7 +44,9 @@ do_mp_merge() {
     merge_to_master --remove-deleted StarwindRemasteredPatch.esm StarwindRemasteredV1.15.esm
     mv StarwindRemasteredV1.15.esm Starwind.omwaddon
     merge_to_master deletedbirthsigns.esp Starwind.omwaddon
-    merge_to_master StarwindMPRecords.esp Starwind.omwaddon
+    if [ "$2" != "nomp" ]; then
+        merge_to_master StarwindMPRecords.esp Starwind.omwaddon
+    fi
 }
 
 do_sp_merge() {
