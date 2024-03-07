@@ -6,7 +6,7 @@
     "file_type": "Esp",
     "author": "tes3cmd",
     "description": "(generated)",
-    "num_objects": 65,
+    "num_objects": 66,
     "masters": [
       [
         "Morrowind.esm",
@@ -461,6 +461,32 @@
     "mesh": "Ig\\Activators\\ConsoleStand.nif",
     "open_sound": "kwamWR roar",
     "close_sound": "kwamQ roar"
+  },
+  {
+    "type": "Weapon",
+    "flags": "",
+    "id": "SW_MandAxe",
+    "name": "Mandalore's Axe",
+    "script": "",
+    "mesh": "Ig\\Weapons\\MandaloreAxe.nif",
+    "icon": "Ig\\MandaAxe.dds",
+    "enchanting": "",
+    "data": {
+      "weight": 12.0,
+      "value": 2000,
+      "weapon_type": "AxeTwoHand",
+      "health": 1500,
+      "speed": 1.0,
+      "reach": 1.0,
+      "enchantment": 800,
+      "chop_min": 15,
+      "chop_max": 60,
+      "slash_min": 15,
+      "slash_max": 60,
+      "thrust_min": 3,
+      "thrust_max": 25,
+      "flags": ""
+    }
   },
   {
     "type": "Container",
