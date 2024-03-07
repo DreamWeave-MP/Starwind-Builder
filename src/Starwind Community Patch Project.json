@@ -6,7 +6,7 @@
     "file_type": "Esp",
     "author": "",
     "description": "",
-    "num_objects": 13,
+    "num_objects": 20,
     "masters": [
       [
         "Morrowind.esm",
@@ -87,6 +87,111 @@
       "size": 1.0,
       "size_cap": 50.0
     }
+  },
+  {
+    "type": "Script",
+    "flags": "",
+    "id": "SW_FTravelDantooine",
+    "header": {
+      "num_shorts": 0,
+      "num_longs": 0,
+      "num_floats": 0,
+      "bytecode_length": 741,
+      "variables_length": 0
+    },
+    "variables": "AAAAAA==",
+    "bytecode": "5QIAAAYBIAkgWBgQID09IDEGARwWIEcNRnJlaWdodFRyYXZlbCAhPSAxMAUBRw1GcmVpZ2h0VHJhdmVsAyAxMCwRD1NoaXBUcmF2ZWxTb3VuZAwBF1NXX0ZyZWlnaHRlclRvRGFudG9vaW5l2hAMARZTV19GcmVpZ2h0ZXJUb1RhdG9vaW5l2xAMARRTV19GcmVpZ2h0ZXJUb01hbmFhbtsQDAEVU1dfRnJlaWdodGVyVG9LYXNoeXlr2xAMARZTV19GcmVpZ2h0ZXJUb0RhdGhvbWly2xAMARRTV19GcmVpZ2h0ZXJUb0dhbW9yctsQDAESU1dfRnJlaWdodGVyVG9Ib3Ro2xAMARNTV19GcmVpZ2h0ZXJUb1Rhcmlz2xAMARBTV19GcmVpZ2h0ZXJUb0002xAMARVTV19GcmVpZ2h0ZXJUb05hclNoYWTbEAwBElNXX0ZyZWlnaHRlclRvTm9uZdsQDAEWU1dfRnJlaWdodGVyVG9EZXJlbGljdNsQDAERU1dfRnJlaWdodGVyVG9Mb2vbEAwBClNXX1BsYW5Mb2vbEAUBRwpTV19MVFNQRUVEAiAxDAESU1dfRnJlaWdodFBsYW5EYXRo2xAMARJTV19GcmVpZ2h0UGxhbkthc2jbEAwBElNXX0ZyZWlnaHRQbGFuSG90aNsQDAETU1dfRnJlaWdodFBsYW5HYW1vctsQDAETU1dfRnJlaWdodGVyUGxhblRhdNsQDAESU1dfRnJlaWdodFBsYW5EYW502hAMARFTV19GcmVpZ2h0UGxhbk5hctsQDAESU1dfRnJlaWdodFBsYW5NYW5h2xAMARJTV19GcmVpZ2h0UGxhbk00NzjbEAwBE1NXX0ZyZWlnaHRQbGFuVGFyaXPbEAwBE1NXX0ZyZWlnaHREZXJlbGljdDHbEAcBAQAQJABZb3UgYXJlIGFscmVhZHkgbGFuZGVkIG9uIERhbnRvb2luZSEAAAkBCQEBAQ==",
+    "text": "Begin SW_FTravelDantooine\n\nIf ( OnActivate == 1 )\n\tIf ( FreightTravel != 10 )\n\t\tSet FreightTravel to 10\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\t\tSW_FreighterToDantooine->Enable\n\t\t\tSW_FreighterToTatooine->Disable\n\t\t\tSW_FreighterToManaan->Disable\n\t\t\tSW_FreighterToKashyyk->Disable\n\t\t\tSW_FreighterToDathomir->Disable\n\t\t\tSW_FreighterToGamorr->Disable\n\t\t\tSW_FreighterToHoth->Disable\n\t\t\tSW_FreighterToTaris->Disable\n\t\t\tSW_FreighterToM4->Disable\n\t\t\tSW_FreighterToNarShad->Disable\n\t\t\tSW_FreighterToNone->Disable\n\t\t\tSW_FreighterToDerelict->Disable\n\t\t\tSW_FreighterToLok->Disable\n\t\t\tSet SW_LTSPEED to 1\n\t\t\tSW_FreightPlanDath->Disable\n\t\t\tSW_FreightPlanKash->Disable\n\t\t\tSW_FreightPlanHoth->Disable\n\t\t\tSW_FreightPlanGamor->Disable\n\t\t\tSW_FreighterPlanTat->Disable\n\t\t\tSW_FreightPlanDant->Enable\n\t\t\tSW_FreightPlanNar->Disable\n\t\t\tSW_FreightPlanMana->Disable\n\t\t\tSW_FreightPlanM478->Disable\n\t\t\tSW_FreightPlanTaris->Disable\n\t\t\tSW_FreightDerelict1->Disable\n\telse\n\t\tMessageBox \"You are already landed on Dantooine!\"\n\tendif\nEndif\n\nEnd"
+  },
+  {
+    "type": "Script",
+    "flags": "",
+    "id": "SW_FTravelDathomir",
+    "header": {
+      "num_shorts": 0,
+      "num_longs": 0,
+      "num_floats": 0,
+      "bytecode_length": 740,
+      "variables_length": 0
+    },
+    "variables": "AAAAAA==",
+    "bytecode": "5AIAAAYBIAkgWBgQID09IDEGARwWIEcNRnJlaWdodFRyYXZlbCAhPSAzNQUBRw1GcmVpZ2h0VHJhdmVsAyAzNSwRD1NoaXBUcmF2ZWxTb3VuZAwBF1NXX0ZyZWlnaHRlclRvRGFudG9vaW5l2xAMARZTV19GcmVpZ2h0ZXJUb1RhdG9vaW5l2xAMARRTV19GcmVpZ2h0ZXJUb01hbmFhbtsQDAEVU1dfRnJlaWdodGVyVG9LYXNoeXlr2xAMARZTV19GcmVpZ2h0ZXJUb0RhdGhvbWly2hAMARRTV19GcmVpZ2h0ZXJUb0dhbW9yctsQDAESU1dfRnJlaWdodGVyVG9Ib3Ro2xAMARNTV19GcmVpZ2h0ZXJUb1Rhcmlz2xAMARBTV19GcmVpZ2h0ZXJUb0002xAMARVTV19GcmVpZ2h0ZXJUb05hclNoYWTbEAwBElNXX0ZyZWlnaHRlclRvTm9uZdsQDAEWU1dfRnJlaWdodGVyVG9EZXJlbGljdNsQDAERU1dfRnJlaWdodGVyVG9Mb2vbEAwBClNXX1BsYW5Mb2vbEAUBRwpTV19MVFNQRUVEAiAxDAESU1dfRnJlaWdodFBsYW5EYXRo2hAMARJTV19GcmVpZ2h0UGxhbkthc2jbEAwBElNXX0ZyZWlnaHRQbGFuSG90aNsQDAETU1dfRnJlaWdodFBsYW5HYW1vctsQDAETU1dfRnJlaWdodGVyUGxhblRhdNsQDAESU1dfRnJlaWdodFBsYW5EYW502xAMARFTV19GcmVpZ2h0UGxhbk5hctsQDAESU1dfRnJlaWdodFBsYW5NYW5h2xAMARJTV19GcmVpZ2h0UGxhbk00NzjbEAwBE1NXX0ZyZWlnaHRQbGFuVGFyaXPbEAwBE1NXX0ZyZWlnaHREZXJlbGljdDHbEAcBAQAQIwBZb3UgYXJlIGFscmVhZHkgbGFuZGVkIG9uIERhdGhvbWlyIQAACQEJAQEB",
+    "text": "Begin SW_FTravelDathomir\n\nIf ( OnActivate == 1 )\n\tIf ( FreightTravel != 35 )\n\t\tSet FreightTravel to 35\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\t\tSW_FreighterToDantooine->Disable\n\t\t\tSW_FreighterToTatooine->Disable\n\t\t\tSW_FreighterToManaan->Disable\n\t\t\tSW_FreighterToKashyyk->Disable\n\t\t\tSW_FreighterToDathomir->Enable\n\t\t\tSW_FreighterToGamorr->Disable\n\t\t\tSW_FreighterToHoth->Disable\n\t\t\tSW_FreighterToTaris->Disable\n\t\t\tSW_FreighterToM4->Disable\n\t\t\tSW_FreighterToNarShad->Disable\n\t\t\tSW_FreighterToNone->Disable\n\t\t\tSW_FreighterToDerelict->Disable\n\t\t\tSW_FreighterToLok->Disable\n\t\t\tSet SW_LTSPEED to 1\n\t\t\tSW_FreightPlanDath->Enable\n\t\t\tSW_FreightPlanKash->Disable\n\t\t\tSW_FreightPlanHoth->Disable\n\t\t\tSW_FreightPlanGamor->Disable\n\t\t\tSW_FreighterPlanTat->Disable\n\t\t\tSW_FreightPlanDant->Disable\n\t\t\tSW_FreightPlanNar->Disable\n\t\t\tSW_FreightPlanMana->Disable\n\t\t\tSW_FreightPlanM478->Disable\n\t\t\tSW_FreightPlanTaris->Disable\n\t\t\tSW_FreightDerelict1->Disable\n\telse\n\t\tMessageBox \"You are already landed on Dathomir!\"\n\tendif\nEndif\n\nEnd\n\n"
+  },
+  {
+    "type": "Script",
+    "flags": "",
+    "id": "SW_FTravelGamorr",
+    "header": {
+      "num_shorts": 0,
+      "num_longs": 0,
+      "num_floats": 0,
+      "bytecode_length": 738,
+      "variables_length": 0
+    },
+    "variables": "AAAAAA==",
+    "bytecode": "4gIAAAYBIAkgWBgQID09IDEGARwWIEcNRnJlaWdodFRyYXZlbCAhPSA1MAUBRw1GcmVpZ2h0VHJhdmVsAyA1MCwRD1NoaXBUcmF2ZWxTb3VuZAwBF1NXX0ZyZWlnaHRlclRvRGFudG9vaW5l2xAMARZTV19GcmVpZ2h0ZXJUb1RhdG9vaW5l2xAMARRTV19GcmVpZ2h0ZXJUb01hbmFhbtsQDAEVU1dfRnJlaWdodGVyVG9LYXNoeXlr2xAMARZTV19GcmVpZ2h0ZXJUb0RhdGhvbWly2xAMARRTV19GcmVpZ2h0ZXJUb0dhbW9yctoQDAESU1dfRnJlaWdodGVyVG9Ib3Ro2xAMARNTV19GcmVpZ2h0ZXJUb1Rhcmlz2xAMARBTV19GcmVpZ2h0ZXJUb0002xAMARVTV19GcmVpZ2h0ZXJUb05hclNoYWTbEAwBElNXX0ZyZWlnaHRlclRvTm9uZdsQDAEWU1dfRnJlaWdodGVyVG9EZXJlbGljdNsQDAERU1dfRnJlaWdodGVyVG9Mb2vbEAwBClNXX1BsYW5Mb2vbEAUBRwpTV19MVFNQRUVEAiAxDAESU1dfRnJlaWdodFBsYW5EYXRo2xAMARJTV19GcmVpZ2h0UGxhbkthc2jbEAwBElNXX0ZyZWlnaHRQbGFuSG90aNsQDAETU1dfRnJlaWdodFBsYW5HYW1vctoQDAETU1dfRnJlaWdodGVyUGxhblRhdNsQDAESU1dfRnJlaWdodFBsYW5EYW502xAMARFTV19GcmVpZ2h0UGxhbk5hctsQDAESU1dfRnJlaWdodFBsYW5NYW5h2xAMARJTV19GcmVpZ2h0UGxhbk00NzjbEAwBE1NXX0ZyZWlnaHRQbGFuVGFyaXPbEAwBE1NXX0ZyZWlnaHREZXJlbGljdDHbEAcBAQAQIQBZb3UgYXJlIGFscmVhZHkgbGFuZGVkIG9uIEdhbW9yciEAAAkBCQEBAQ==",
+    "text": "Begin SW_FTravelGamorr\n\nIf ( OnActivate == 1 )\n\tIf ( FreightTravel != 50 )\n\t\tSet FreightTravel to 50\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\t\tSW_FreighterToDantooine->Disable\n\t\t\tSW_FreighterToTatooine->Disable\n\t\t\tSW_FreighterToManaan->Disable\n\t\t\tSW_FreighterToKashyyk->Disable\n\t\t\tSW_FreighterToDathomir->Disable\n\t\t\tSW_FreighterToGamorr->Enable\n\t\t\tSW_FreighterToHoth->Disable\n\t\t\tSW_FreighterToTaris->Disable\n\t\t\tSW_FreighterToM4->Disable\n\t\t\tSW_FreighterToNarShad->Disable\n\t\t\tSW_FreighterToNone->Disable\n\t\t\tSW_FreighterToDerelict->Disable\n\t\t\tSW_FreighterToLok->Disable\n\t\t\tSet SW_LTSPEED to 1\n\t\t\tSW_FreightPlanDath->Disable\n\t\t\tSW_FreightPlanKash->Disable\n\t\t\tSW_FreightPlanHoth->Disable\n\t\t\tSW_FreightPlanGamor->Enable\n\t\t\tSW_FreighterPlanTat->Disable\n\t\t\tSW_FreightPlanDant->Disable\n\t\t\tSW_FreightPlanNar->Disable\n\t\t\tSW_FreightPlanMana->Disable\n\t\t\tSW_FreightPlanM478->Disable\n\t\t\tSW_FreightPlanTaris->Disable\n\t\t\tSW_FreightDerelict1->Disable\n\telse\n\t\tMessageBox \"You are already landed on Gamorr!\"\n\tendif\nEndif\n\nEnd"
+  },
+  {
+    "type": "Script",
+    "flags": "",
+    "id": "SW_FTravelHoth",
+    "header": {
+      "num_shorts": 0,
+      "num_longs": 0,
+      "num_floats": 0,
+      "bytecode_length": 736,
+      "variables_length": 0
+    },
+    "variables": "AAAAAA==",
+    "bytecode": "4AIAAAYBIAkgWBgQID09IDEGARwWIEcNRnJlaWdodFRyYXZlbCAhPSAzMAUBRw1GcmVpZ2h0VHJhdmVsAyAzMCwRD1NoaXBUcmF2ZWxTb3VuZAwBF1NXX0ZyZWlnaHRlclRvRGFudG9vaW5l2xAMARZTV19GcmVpZ2h0ZXJUb1RhdG9vaW5l2xAMARRTV19GcmVpZ2h0ZXJUb01hbmFhbtsQDAEVU1dfRnJlaWdodGVyVG9LYXNoeXlr2xAMARZTV19GcmVpZ2h0ZXJUb0RhdGhvbWly2xAMARRTV19GcmVpZ2h0ZXJUb0dhbW9yctsQDAESU1dfRnJlaWdodGVyVG9Ib3Ro2hAMARNTV19GcmVpZ2h0ZXJUb1Rhcmlz2xAMARBTV19GcmVpZ2h0ZXJUb0002xAMARVTV19GcmVpZ2h0ZXJUb05hclNoYWTbEAwBElNXX0ZyZWlnaHRlclRvTm9uZdsQDAEWU1dfRnJlaWdodGVyVG9EZXJlbGljdNsQDAERU1dfRnJlaWdodGVyVG9Mb2vbEAwBClNXX1BsYW5Mb2vbEAUBRwpTV19MVFNQRUVEAiAxDAESU1dfRnJlaWdodFBsYW5EYXRo2xAMARJTV19GcmVpZ2h0UGxhbkthc2jbEAwBElNXX0ZyZWlnaHRQbGFuSG90aNoQDAETU1dfRnJlaWdodFBsYW5HYW1vctsQDAETU1dfRnJlaWdodGVyUGxhblRhdNsQDAESU1dfRnJlaWdodFBsYW5EYW502xAMARFTV19GcmVpZ2h0UGxhbk5hctsQDAESU1dfRnJlaWdodFBsYW5NYW5h2xAMARJTV19GcmVpZ2h0UGxhbk00NzjbEAwBE1NXX0ZyZWlnaHRQbGFuVGFyaXPbEAwBE1NXX0ZyZWlnaHREZXJlbGljdDHbEAcBAQAQHwBZb3UgYXJlIGFscmVhZHkgbGFuZGVkIG9uIEhvdGghAAAJAQkBAQE=",
+    "text": "Begin SW_FTravelHoth\n\nIf ( OnActivate == 1 )\n\tIf ( FreightTravel != 30 )\n\t\tSet FreightTravel to 30\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\t\tSW_FreighterToDantooine->Disable\n\t\t\tSW_FreighterToTatooine->Disable\n\t\t\tSW_FreighterToManaan->Disable\n\t\t\tSW_FreighterToKashyyk->Disable\n\t\t\tSW_FreighterToDathomir->Disable\n\t\t\tSW_FreighterToGamorr->Disable\n\t\t\tSW_FreighterToHoth->Enable\n\t\t\tSW_FreighterToTaris->Disable\n\t\t\tSW_FreighterToM4->Disable\n\t\t\tSW_FreighterToNarShad->Disable\n\t\t\tSW_FreighterToNone->Disable\n\t\t\tSW_FreighterToDerelict->Disable\n\t\t\tSW_FreighterToLok->Disable\n\t\t\tSet SW_LTSPEED to 1\n\t\t\tSW_FreightPlanDath->Disable\n\t\t\tSW_FreightPlanKash->Disable\n\t\t\tSW_FreightPlanHoth->Enable\n\t\t\tSW_FreightPlanGamor->Disable\n\t\t\tSW_FreighterPlanTat->Disable\n\t\t\tSW_FreightPlanDant->Disable\n\t\t\tSW_FreightPlanNar->Disable\n\t\t\tSW_FreightPlanMana->Disable\n\t\t\tSW_FreightPlanM478->Disable\n\t\t\tSW_FreightPlanTaris->Disable\n\t\t\tSW_FreightDerelict1->Disable\n\telse\n\t\tMessageBox \"You are already landed on Hoth!\"\n\tendif\nEndif\n\nEnd\n\n"
+  },
+  {
+    "type": "Script",
+    "flags": "",
+    "id": "SW_FTravelKashyyk",
+    "header": {
+      "num_shorts": 0,
+      "num_longs": 0,
+      "num_floats": 0,
+      "bytecode_length": 739,
+      "variables_length": 0
+    },
+    "variables": "AAAAAA==",
+    "bytecode": "4wIAAAYBIAkgWBgQID09IDEGARwWIEcNRnJlaWdodFRyYXZlbCAhPSAxNQUBRw1GcmVpZ2h0VHJhdmVsAyAxNSwRD1NoaXBUcmF2ZWxTb3VuZAwBF1NXX0ZyZWlnaHRlclRvRGFudG9vaW5l2xAMARZTV19GcmVpZ2h0ZXJUb1RhdG9vaW5l2xAMARRTV19GcmVpZ2h0ZXJUb01hbmFhbtsQDAEVU1dfRnJlaWdodGVyVG9LYXNoeXlr2hAMARZTV19GcmVpZ2h0ZXJUb0RhdGhvbWly2xAMARRTV19GcmVpZ2h0ZXJUb0dhbW9yctsQDAESU1dfRnJlaWdodGVyVG9Ib3Ro2xAMARNTV19GcmVpZ2h0ZXJUb1Rhcmlz2xAMARBTV19GcmVpZ2h0ZXJUb0002xAMARVTV19GcmVpZ2h0ZXJUb05hclNoYWTbEAwBElNXX0ZyZWlnaHRlclRvTm9uZdsQDAEWU1dfRnJlaWdodGVyVG9EZXJlbGljdNsQDAERU1dfRnJlaWdodGVyVG9Mb2vbEAwBClNXX1BsYW5Mb2vbEAUBRwpTV19MVFNQRUVEAiAxDAESU1dfRnJlaWdodFBsYW5EYXRo2xAMARJTV19GcmVpZ2h0UGxhbkthc2jaEAwBElNXX0ZyZWlnaHRQbGFuSG90aNsQDAETU1dfRnJlaWdodFBsYW5HYW1vctsQDAETU1dfRnJlaWdodGVyUGxhblRhdNsQDAESU1dfRnJlaWdodFBsYW5EYW502xAMARFTV19GcmVpZ2h0UGxhbk5hctsQDAESU1dfRnJlaWdodFBsYW5NYW5h2xAMARJTV19GcmVpZ2h0UGxhbk00NzjbEAwBE1NXX0ZyZWlnaHRQbGFuVGFyaXPbEAwBE1NXX0ZyZWlnaHREZXJlbGljdDHbEAcBAQAQIgBZb3UgYXJlIGFscmVhZHkgbGFuZGVkIG9uIEthc2h5eWshAAAJAQkBAQE=",
+    "text": "Begin SW_FTravelKashyyk\n\nIf ( OnActivate == 1 )\n\tIf ( FreightTravel != 15 )\n\t\tSet FreightTravel to 15\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\t\tSW_FreighterToDantooine->Disable\n\t\t\tSW_FreighterToTatooine->Disable\n\t\t\tSW_FreighterToManaan->Disable\n\t\t\tSW_FreighterToKashyyk->Enable\n\t\t\tSW_FreighterToDathomir->Disable\n\t\t\tSW_FreighterToGamorr->Disable\n\t\t\tSW_FreighterToHoth->Disable\n\t\t\tSW_FreighterToTaris->Disable\n\t\t\tSW_FreighterToM4->Disable\n\t\t\tSW_FreighterToNarShad->Disable\n\t\t\tSW_FreighterToNone->Disable\n\t\t\tSW_FreighterToDerelict->Disable\n\t\t\tSW_FreighterToLok->Disable\n\t\t\tSet SW_LTSPEED to 1\n\t\t\tSW_FreightPlanDath->Disable\n\t\t\tSW_FreightPlanKash->Enable\n\t\t\tSW_FreightPlanHoth->Disable\n\t\t\tSW_FreightPlanGamor->Disable\n\t\t\tSW_FreighterPlanTat->Disable\n\t\t\tSW_FreightPlanDant->Disable\n\t\t\tSW_FreightPlanNar->Disable\n\t\t\tSW_FreightPlanMana->Disable\n\t\t\tSW_FreightPlanM478->Disable\n\t\t\tSW_FreightPlanTaris->Disable\t\n\t\t\tSW_FreightDerelict1->Disable\n\t\telse\n\t\tMessageBox \"You are already landed on Kashyyk!\"\n\tendif\nEndif\n\nEnd"
+  },
+  {
+    "type": "Script",
+    "flags": "",
+    "id": "SW_FTravelM478",
+    "header": {
+      "num_shorts": 0,
+      "num_longs": 0,
+      "num_floats": 0,
+      "bytecode_length": 737,
+      "variables_length": 0
+    },
+    "variables": "AAAAAA==",
+    "bytecode": "4QIAAAYBIAkgWBgQID09IDEGARwWIEcNRnJlaWdodFRyYXZlbCAhPSA0NQUBRw1GcmVpZ2h0VHJhdmVsAyA0NSwRD1NoaXBUcmF2ZWxTb3VuZAwBF1NXX0ZyZWlnaHRlclRvRGFudG9vaW5l2xAMARZTV19GcmVpZ2h0ZXJUb1RhdG9vaW5l2xAMARRTV19GcmVpZ2h0ZXJUb01hbmFhbtsQDAEVU1dfRnJlaWdodGVyVG9LYXNoeXlr2xAMARZTV19GcmVpZ2h0ZXJUb0RhdGhvbWly2xAMARRTV19GcmVpZ2h0ZXJUb0dhbW9yctsQDAESU1dfRnJlaWdodGVyVG9Ib3Ro2xAMARNTV19GcmVpZ2h0ZXJUb1Rhcmlz2xAMARBTV19GcmVpZ2h0ZXJUb0002hAMARVTV19GcmVpZ2h0ZXJUb05hclNoYWTbEAwBElNXX0ZyZWlnaHRlclRvTm9uZdsQDAEWU1dfRnJlaWdodGVyVG9EZXJlbGljdNsQDAERU1dfRnJlaWdodGVyVG9Mb2vbEAwBClNXX1BsYW5Mb2vbEAUBRwpTV19MVFNQRUVEAiAxDAESU1dfRnJlaWdodFBsYW5EYXRo2xAMARJTV19GcmVpZ2h0UGxhbkthc2jbEAwBElNXX0ZyZWlnaHRQbGFuSG90aNsQDAETU1dfRnJlaWdodFBsYW5HYW1vctsQDAETU1dfRnJlaWdodGVyUGxhblRhdNsQDAESU1dfRnJlaWdodFBsYW5EYW502xAMARFTV19GcmVpZ2h0UGxhbk5hctsQDAESU1dfRnJlaWdodFBsYW5NYW5h2xAMARJTV19GcmVpZ2h0UGxhbk00NzjaEAwBE1NXX0ZyZWlnaHRQbGFuVGFyaXPbEAwBE1NXX0ZyZWlnaHREZXJlbGljdDHbEAcBAQAQIABZb3UgYXJlIGFscmVhZHkgbGFuZGVkIG9uIE00LTc4IQAACQEJAQEB",
+    "text": "Begin SW_FTravelM478\n\nIf ( OnActivate == 1 )\n\tIf ( FreightTravel != 45 )\n\t\tSet FreightTravel to 45\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\t\tSW_FreighterToDantooine->Disable\n\t\t\tSW_FreighterToTatooine->Disable\n\t\t\tSW_FreighterToManaan->Disable\n\t\t\tSW_FreighterToKashyyk->Disable\n\t\t\tSW_FreighterToDathomir->Disable\n\t\t\tSW_FreighterToGamorr->Disable\n\t\t\tSW_FreighterToHoth->Disable\n\t\t\tSW_FreighterToTaris->Disable\n\t\t\tSW_FreighterToM4->Enable\n\t\t\tSW_FreighterToNarShad->Disable\n\t\t\tSW_FreighterToNone->Disable\n\t\t\tSW_FreighterToDerelict->Disable\n\t\t\tSW_FreighterToLok->Disable\n\t\t\tSet SW_LTSPEED to 1\n\t\t\tSW_FreightPlanDath->Disable\n\t\t\tSW_FreightPlanKash->Disable\n\t\t\tSW_FreightPlanHoth->Disable\n\t\t\tSW_FreightPlanGamor->Disable\n\t\t\tSW_FreighterPlanTat->Disable\n\t\t\tSW_FreightPlanDant->Disable\n\t\t\tSW_FreightPlanNar->Disable\n\t\t\tSW_FreightPlanMana->Disable\n\t\t\tSW_FreightPlanM478->Enable\n\t\t\tSW_FreightPlanTaris->Disable\n\t\t\tSW_FreightDerelict1->Disable\n\telse\n\t\tMessageBox \"You are already landed on M4-78!\"\n\tendif\nEndif\n\nEnd\n"
+  },
+  {
+    "type": "Script",
+    "flags": "",
+    "id": "SW_FTravelManaan",
+    "header": {
+      "num_shorts": 0,
+      "num_longs": 0,
+      "num_floats": 0,
+      "bytecode_length": 762,
+      "variables_length": 0
+    },
+    "variables": "AAAAAA==",
+    "bytecode": "+gIAAAYBIQkgWBgQID09IDEGAR0WIEcNRnJlaWdodFRyYXZlbCAhPSAyMAUBRw1GcmVpZ2h0VHJhdmVsAyAyMCwRD1NoaXBUcmF2ZWxTb3VuZAwBF1NXX0ZyZWlnaHRlclRvRGFudG9vaW5l2xAMARZTV19GcmVpZ2h0ZXJUb1RhdG9vaW5l2xAMARRTV19GcmVpZ2h0ZXJUb01hbmFhbtoQDAEVU1dfRnJlaWdodGVyVG9LYXNoeXlr2xAMARZTV19GcmVpZ2h0ZXJUb0RhdGhvbWly2xAMARRTV19GcmVpZ2h0ZXJUb0dhbW9yctsQDAESU1dfRnJlaWdodGVyVG9Ib3Ro2xAMARNTV19GcmVpZ2h0ZXJUb1Rhcmlz2xAMARBTV19GcmVpZ2h0ZXJUb0002xAMARVTV19GcmVpZ2h0ZXJUb05hclNoYWTbEAwBElNXX0ZyZWlnaHRlclRvTm9uZdsQDAETU1dfRnJlaWdodERlcmVsaWN0MdsQDAEWU1dfRnJlaWdodGVyVG9EZXJlbGljdNsQDAERU1dfRnJlaWdodGVyVG9Mb2vbEAwBClNXX1BsYW5Mb2vbEAUBRwpTV19MVFNQRUVEAiAxDAESU1dfRnJlaWdodFBsYW5EYXRo2xAMARJTV19GcmVpZ2h0UGxhbkthc2jbEAwBElNXX0ZyZWlnaHRQbGFuSG90aNsQDAETU1dfRnJlaWdodFBsYW5HYW1vctsQDAETU1dfRnJlaWdodGVyUGxhblRhdNsQDAESU1dfRnJlaWdodFBsYW5EYW502xAMARFTV19GcmVpZ2h0UGxhbk5hctsQDAESU1dfRnJlaWdodFBsYW5NYW5h2hAMARJTV19GcmVpZ2h0UGxhbk00NzjbEAwBE1NXX0ZyZWlnaHRQbGFuVGFyaXPbEAwBE1NXX0ZyZWlnaHREZXJlbGljdDHbEAcBAQAQIQBZb3UgYXJlIGFscmVhZHkgbGFuZGVkIG9uIE1hbmFhbiEAAAkBCQEBAQ==",
+    "text": "Begin SW_FTravelManaan\n\nIf ( OnActivate == 1 )\n\tIf ( FreightTravel != 20 )\n\t\tSet FreightTravel to 20\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\t\tSW_FreighterToDantooine->Disable\n\t\t\tSW_FreighterToTatooine->Disable\n\t\t\tSW_FreighterToManaan->Enable\n\t\t\tSW_FreighterToKashyyk->Disable\n\t\t\tSW_FreighterToDathomir->Disable\n\t\t\tSW_FreighterToGamorr->Disable\n\t\t\tSW_FreighterToHoth->Disable\n\t\t\tSW_FreighterToTaris->Disable\n\t\t\tSW_FreighterToM4->Disable\n\t\t\tSW_FreighterToNarShad->Disable\n\t\t\tSW_FreighterToNone->Disable\n\t\t\tSW_FreightDerelict1->Disable\n\t\t\tSW_FreighterToDerelict->Disable\n\t\t\tSW_FreighterToLok->Disable\n\t\t\tSet SW_LTSPEED to 1\n\t\t\tSW_FreightPlanDath->Disable\n\t\t\tSW_FreightPlanKash->Disable\n\t\t\tSW_FreightPlanHoth->Disable\n\t\t\tSW_FreightPlanGamor->Disable\n\t\t\tSW_FreighterPlanTat->Disable\n\t\t\tSW_FreightPlanDant->Disable\n\t\t\tSW_FreightPlanNar->Disable\n\t\t\tSW_FreightPlanMana->Enable\n\t\t\tSW_FreightPlanM478->Disable\n\t\t\tSW_FreightPlanTaris->Disable\n\t\t\tSW_FreightDerelict1->Disable\n\telse\n\t\tMessageBox \"You are already landed on Manaan!\"\n\tendif\nEndif\n\nEnd"
   },
   {
     "type": "Script",
