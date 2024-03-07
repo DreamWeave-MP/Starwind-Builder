@@ -1,5 +1,5 @@
 all: clean plugins-text build-tsi databases
-	zip all_data DFLDB.zip StarwindDB.zip Starwind.omwaddon
+	zip -r9 all_data DFLDB.zip StarwindDB.zip Starwind.omwaddon requiredDataFiles.json
 
 build-tsi: plugins-bin
 	./build.sh tsi | grep -v "<DATADIR> is\|Output saved in\|Original backed up to\|Can't find \"Data Files\"\|Log"
