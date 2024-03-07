@@ -51,8 +51,8 @@ do_sp_merge() {
     # Merge the plugins into the master
     merge_to_master "Starwind Community Patch Project.esp" StarwindRemasteredPatch.esm
     merge_to_master --remove-deleted StarwindRemasteredPatch.esm StarwindRemasteredV1.15.esm
-    mv StarwindRemasteredV1.15.esm Starwind.omwaddon
-    merge_to_master deletedbirthsigns.esp Starwind.omwaddon
+    mv StarwindRemasteredV1.15.esm vanilla_Starwind.omwaddon
+    merge_to_master deletedbirthsigns.esp vanilla_Starwind.omwaddon
 }
 
 cd build
@@ -155,11 +155,11 @@ tes3cmd dump --type BSGN --match "deleted" --raw-with-header deletedbirthsigns.e
 
 if [ "$1" = "tsi" ]; then
     do_mp_merge
+    mv Starwind.omwaddon ..
 else
     do_sp_merge
+    mv vanilla_Starwind.omwaddon ..
 fi
-
-mv Starwind.omwaddon ..
 
 cd .. && rm -rf build
 

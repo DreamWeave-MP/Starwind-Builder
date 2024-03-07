@@ -27,7 +27,7 @@ build_vanilla:
   - make vanilla
   artifacts:
     paths:
-      - "Starwind.omwaddon"
+      - "vanilla_Starwind.omwaddon"
   rules:
     - if: $CI_COMMIT_BRANCH == "master"
 
