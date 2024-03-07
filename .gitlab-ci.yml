@@ -13,7 +13,7 @@ build_tsi:
   image: ${build_img}
   stage: build
   script:
-  - make build-tsi
+  - make tsi
   artifacts:
     paths:
       - "Starwind.omwaddon"
@@ -24,10 +24,22 @@ build_vanilla:
   image: ${build_img}
   stage: build
   script:
-  - make build-vanilla
+  - make vanilla
   artifacts:
     paths:
       - "Starwind.omwaddon"
+  rules:
+    - if: $CI_COMMIT_BRANCH == "master"
+
+build_cpp:
+  image: ${build_img}
+  stage: build
+  script:
+  - make cpp
+  artifacts:
+    paths:
+      - "Starwind Community Patch Project.omwaddon"
+      - "Meshes"
   rules:
     - if: $CI_COMMIT_BRANCH == "master"
 
