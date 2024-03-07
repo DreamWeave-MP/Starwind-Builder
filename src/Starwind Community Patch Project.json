@@ -6,7 +6,7 @@
     "file_type": "Esp",
     "author": "",
     "description": "",
-    "num_objects": 22,
+    "num_objects": 23,
     "masters": [
       [
         "Morrowind.esm",
@@ -102,6 +102,21 @@
     "variables": "BwAAAERvT25jZQA=",
     "bytecode": "fAAAAAYBAgkgcwEAICE9IDHbEAUBcwEAAiAxCQEGAQQJIFjwECA9PSAxBgECGyBYzRAgZA5TV19Cb3VudHlRdWVzdCA9PSA1NQwBF1RhdG9vaW5lQ3plcmthQm91bnR5Qm9p2xDMEA5TV19Cb3VudHlRdWVzdEEA//8JAQkBAQE=",
     "text": "Begin NisavMeanieScript\n\nshort DoOnce\n\nIf (DoOnce != 1)\n\tdisable\n\tset doonce to 1\nendif\n\nif (GetJournalIndex \"SW_BountyQuest\" == 55)\n\tenable\nendif\n\n\tif (OnDeath == 1)\n\t\tif (GetJournalIndex \"SW_BountyQuest\" == 55)\n\t\t\tTatooineCzerkaBountyBoi->Disable\n\t\t\tJournal SW_BountyQuest 65\n\t\tendif\n\tendif\nend"
+  },
+  {
+    "type": "Script",
+    "flags": "",
+    "id": "SW_EnterSpace",
+    "header": {
+      "num_shorts": 4,
+      "num_longs": 0,
+      "num_floats": 0,
+      "bytecode_length": 695,
+      "variables_length": 36
+    },
+    "variables": "JAAAAE9uUENFcXVpcABEb1R3aWNlAEZseWluZwBSZXNldENoZWNrAA==",
+    "bytecode": "twIAAAYBFAkgcwEAID09IDEFAXMDAAIgMQUBcwQAAiAwDAEGcGxheWVyBQFHDVNQSGVhbHRoQ2hlY2sFIFiMEAAGAQkTIEcLVHJhdmVsU3RhdGUgPT0gMCwRD1NoaXBUcmF2ZWxTb3VuZD0RWhHjEEwRDAEGcGxheWVyBRAAWPVFAJiKRQDEiEYAAOZCDVRoZSBPdXRlciBSaW0MAQZwbGF5ZXIdEQxTV19TaGlwQnVmZjEFAUcLVHJhdmVsU3RhdGUCIDEAEGIAQWN0aXZhdGUgdGhlIEZyZWlnaHRlciBTcGVsbCBpbiB5b3VyIFNwZWxsIE1lbnUgYW5kIHByZXNzIF5BY3Rpb25SZWFkeU1hZ2ljIHRvIGVuYWJsZSB0aGUgY29ja3BpdC4AAQNPSwAJAQYBBAkgcwMAID09IDAGAQIaIFgSESwgYw1UaGUgT3V0ZXIgUmltID09IDEAEGIAQWN0aXZhdGUgdGhlIEZyZWlnaHRlciBTcGVsbCBpbiB5b3VyIFNwZWxsIE1lbnUgYW5kIHByZXNzIF5BY3Rpb25SZWFkeU1hZ2ljIHRvIGVuYWJsZSB0aGUgY29ja3BpdC4AAQNPSwAFAXMDAAIgMQkBCQEIAQoJIHMBACA9PSAwBQFzAwACIDAGAQcaIFgSESwgYw1UaGUgT3V0ZXIgUmltID09IDEGAQUJIHMEACA9PSAwDAEGcGxheWVyBRAAYHdFAHChRQAUb0YAgKNDGFRoZSBPdXRlciBSaW0sIEZyZWlnaHRlcgwBBnBsYXllch4RDFNXX1NoaXBCdWZmMQUBRwtUcmF2ZWxTdGF0ZQIgMAUBcwQAAiAxABAtAFlvdSBjYW5ub3QgdGFrZSBvZmYgeW91ciBzaGlwIHdoaWxlIGluIHNwYWNlLgABA09LAAkBCQEJAQEB",
+    "text": "Begin SW_EnterSpace\n\nshort OnPCEquip\nShort DoTwice\nShort Flying\nShort ResetCheck\n\nIf ( OnPCEquip == 1 )\n\tSet Flying to 1\n\tSet ResetCheck to 0\n\tSet SPHealthCheck to ( Player->GetHealth )\n\tIf ( TravelState == 0 )\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\tPCForce1stPerson\n\t\tDisableplayerfighting\n\t\tDisablePlayerViewSwitch\n\t\tDisableVanityMode\n          Player->PositionCell, 7851, 4435, 17506, 115, \"The Outer Rim\"\n          Player->AddSpell, \"SW_ShipBuff1\"\n\t\tset TravelState to 1\n\t\tMessageBox \"Activate the Freighter Spell in your Spell Menu and press ^ActionReadyMagic to enable the cockpit.\" \"OK\"\n\tEndif\n\tIf ( Flying == 0 )\n\t\tIf (  GetPCCell, \"The Outer Rim\" == 1 )\n\t\t\tMessageBox \"Activate the Freighter Spell in your Spell Menu and press ^ActionReadyMagic to enable the cockpit.\" \"OK\"\n\t\t\tSet Flying to 1\n\t\tEndif\n\tEndif\nElseif ( OnPCEquip == 0 )\n\tSet Flying to 0\n\tIf ( GetPCCell, \"The Outer Rim\" == 1 )\n\t\tIf ( ResetCheck == 0 )\n\t\t\tplayer->additem \"SW_SpCarNone\", 1\n\t\t\tplayer->equip, \"SW_SpCarNone\"\n\t\t\tplayer->removeitem \"SW_SpCarNone\", 1\n\t\t\tEnableplayerfighting\n\t\t\tEnablePlayerViewSwitch\n\t\t\tEnableVanityMode\n\t\t\tPlayer->PositionCell, 3958, 5166, 15301, 327 \"The Outer Rim, Freighter\"\n\t\t\tPlayer->RemoveSpell, \"SW_ShipBuff1\"\n\t\t\tSet TravelState to 0\n\t\t\tSet ResetCheck to 1\n\t\t\tMessageBox \"You cannot take off your ship while in space.\" \"OK\"\n\t\tEndif\n\tEndif\nEndif\n\nEnd"
   },
   {
     "type": "Script",
