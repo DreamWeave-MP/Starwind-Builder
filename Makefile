@@ -1,8 +1,11 @@
 all: clean plugins-text build databases
 	zip all_data DFLDB.zip StarwindDB.zip Starwind.omwaddon
 
-build: plugins-bin
-	./build.sh grep -v "<DATADIR> is\|Output saved in\|Original backed up to\|Can't find \"Data Files\"\|Log"
+build-tsi: plugins-bin
+	./build.sh tsi | grep -v "<DATADIR> is\|Output saved in\|Original backed up to\|Can't find \"Data Files\"\|Log"
+
+build-vanilla: plugins-bin
+	./build.sh vanilla | grep -v "<DATADIR> is\|Output saved in\|Original backed up to\|Can't find \"Data Files\"\|Log"
 
 plugins-bin:
 	mkdir -p build
