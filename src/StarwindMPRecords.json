@@ -6,7 +6,7 @@
     "file_type": "Esp",
     "author": "tes3cmd",
     "description": "(generated)",
-    "num_objects": 70,
+    "num_objects": 72,
     "masters": [
       [
         "Morrowind.esm",
@@ -22,7 +22,7 @@
       ],
       [
         "Starwind.omwaddon",
-        12844103
+        12844123
       ]
     ]
   },
@@ -265,6 +265,21 @@
     "variables": "GgAAAERvT25jZQBkb0Fsc28AU2NlbmUAdGltZXIA",
     "bytecode": "IwIAAAYBBAkgcwEAID09IDAxEQAAgEACEAhUaHVuZGVyMwUBcwEAAiAxBQFzAwACIDEJAQYBDgkgcwMAID09IDEFAWYBAAogZgEAIFgSECArBgEECSBzAgAgPT0gMAYBAgggZgEAID4gMgwBElNXX1NoYWRlTGFuZGluZ1RhdBsREElnXFNoYWRlVGF0MS53YXbhAEFyZSB5b3Ugb2theSE/IFNvbWV0aGluZyBvbiB0aGF0IHNoaXAgbXVzdCBoYXZlIGJlZW4gZGFtYWdlZCBkdXJpbmcgdGhlIGJvbWJhcmRtZW50LiBEYW1uIFNpdGguIFdlknJlIGFsaXZlLCBhbmQgSSB0aGluayBJkm0gZmluZSBqdXN0IHNoYWtlbi4gU2NvdXQgYXJvdW5kIGZvciBtZSBwbGVhc2UsIEmSbGwgbWVldCB5b3UgYXQgdGhlIG5lYXJlc3QgbWVkaWNhbCBiYXkgaW4gdGhpcyB0b3duLgUBcwIAAiAxCQEJAQYBBQkgZgEAID4gMTgMARJTV19TaGFkZUxhbmRpbmdUYXQbERBJZ1xTaGFkZVRhdDIud2F2MwBBbmQgdGFrZSB0aGlzIGNvbWxpbmsgaW5jYXNlIEkgbmVlZCB0byBjb250YWN0IHlvdS4MAQZwbGF5ZXLUEApTV19Db21saW5rAQDdEMwQDVNXX1RhcmlzQ2hhcDEFAP//BQFzAwACIDIJAQkBAQE=",
     "text": "Begin SW_StorySceneScr3\n\nshort DoOnce\nshort doAlso\nshort Scene\nfloat timer\n\nIf ( DoOnce == 0 )\n\tFadeIn 4.0\n\tPlaySound \"Thunder3\"\n\tSet DoOnce to 1\n\tSet Scene to 1\nEndif\n\n; Mp Edit\nStopScript SW_StorySceneScr3\nreturn\n\nIf ( Scene == 1 )\n\tSet timer to ( timer + GetSecondsPassed )\n\t\tif ( doAlso == 0 )\n\t \t\tif ( timer > 2 ) \n\t\t\t\tSW_ShadeLandingTat->Say \"Ig\\ShadeTat1.wav\" \"Are you okay!? Something on that ship must have been damaged during the bombardment. Damn Sith. We’re alive, and I think I’m fine just shaken. Scout around for me please, I’ll meet you at the nearest medical bay in this town.\"\n\t\t\t\tset doAlso to 1\n\t\t\tendif\n\t\tendif\n\tIf ( timer > 18 )\n\t\tSW_ShadeLandingTat->Say \"Ig\\ShadeTat2.wav\" \"And take this comlink incase I need to contact you.\"\n\t\tplayer->AddItem \"SW_Comlink\" 1\n\t\tEnablePlayerControls\n\t\tJournal SW_TarisChap1 5\n\t\tSet Scene to 2\n\tEndif\nEndif\n\nEnd"
+  },
+  {
+    "type": "Script",
+    "flags": "",
+    "id": "SW_TarisGvnBldNpcWater",
+    "header": {
+      "num_shorts": 1,
+      "num_longs": 0,
+      "num_floats": 0,
+      "bytecode_length": 88,
+      "variables_length": 7
+    },
+    "variables": "BwAAAGRvT25jZQA=",
+    "bytecode": "WAAAAAYBAgkgcwEAID09IDDbEAUBcwEAAiAxCQEGAQQJIHMBACA9PSAxBgECHiBYzRAgZBFTV19UYXJpc1NlY3RXYXRlciA+PSAxNdoQBQFzAQACIDIJAQkBAQE=",
+    "text": "Begin SW_TarisGvnBldNpcWater\n; Deprecated, maybe?\nshort doOnce\n\nif ( doOnce == 0 )\nDisable\nset doOnce to 1\nendif\n\nif ( doOnce == 1 )\nif ( GetJournalIndex \"SW_TarisSectWater\" >= 15 )\nEnable\nset doOnce to 2\nendif\nendif\n\nEnd\n"
   },
   {
     "type": "Script",
@@ -1162,6 +1177,116 @@
       "reputation": 0,
       "rank": 0,
       "gold": 2000
+    }
+  },
+  {
+    "type": "Npc",
+    "flags": "",
+    "id": "SW_TarisGvnNpc6",
+    "name": "Brooali Meagas",
+    "script": "",
+    "mesh": "",
+    "inventory": [
+      [
+        1,
+        "SW_PantsGray1"
+      ],
+      [
+        1,
+        "SW_ShirtGray1"
+      ],
+      [
+        1,
+        "SW_ShockStickLesser"
+      ],
+      [
+        1,
+        "SW_ShoesBlack"
+      ]
+    ],
+    "spells": [],
+    "ai_data": {
+      "hello": 30,
+      "fight": 30,
+      "flee": 30,
+      "alarm": 0,
+      "services": "OFFERS_TRAINING"
+    },
+    "ai_packages": [
+      {
+        "type": "Wander",
+        "distance": 0,
+        "duration": 5,
+        "game_hour": 0,
+        "idle2": 60,
+        "idle3": 20,
+        "idle4": 10,
+        "idle5": 0,
+        "idle6": 0,
+        "idle7": 0,
+        "idle8": 0,
+        "idle9": 0,
+        "reset": 1
+      }
+    ],
+    "travel_destinations": [],
+    "race": "Imperial",
+    "class": "Agent",
+    "faction": "",
+    "head": "b_n_imperial_f_head_02",
+    "hair": "b_n_imperial_f_hair_02",
+    "npc_flags": "FEMALE | IS_BASE",
+    "blood_type": 0,
+    "data": {
+      "level": 5,
+      "stats": {
+        "attributes": [
+          36,
+          35,
+          43,
+          61,
+          58,
+          32,
+          48,
+          60
+        ],
+        "skills": [
+          5,
+          5,
+          5,
+          75,
+          5,
+          75,
+          100,
+          5,
+          5,
+          5,
+          5,
+          5,
+          19,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        "health": 50,
+        "magicka": 70,
+        "fatigue": 172
+      },
+      "disposition": 50,
+      "reputation": 0,
+      "rank": 0,
+      "gold": 0
     }
   },
   {
