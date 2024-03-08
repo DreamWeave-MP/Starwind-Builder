@@ -44,7 +44,7 @@ do_mp_merge() {
     merge_to_master --remove-deleted StarwindRemasteredPatch.esm StarwindRemasteredV1.15.esm
     mv StarwindRemasteredV1.15.esm Starwind.omwaddon
     merge_to_master deletedbirthsigns.esp Starwind.omwaddon
-    if [ "$2" != "nomp" ]; then
+    if [ "$1" != "nomp" ]; then
         merge_to_master StarwindMPRecords.esp Starwind.omwaddon
     fi
 }
@@ -156,7 +156,7 @@ tes3cmd delete --type CELL --exterior StarwindRemasteredV1.15.esm StarwindRemast
 tes3cmd dump --type BSGN --match "deleted" --raw-with-header deletedbirthsigns.esp StarwindRemasteredV1.15.esm
 
 if [ "$1" = "tsi" ]; then
-    do_mp_merge
+    do_mp_merge "$2"
     mv Starwind.omwaddon ..
 else
     do_sp_merge
