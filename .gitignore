@@ -3,3 +3,6 @@
 *.[eE][sS][pPmM]
 /[Jj][Ss][Oo][Nn]
 *.[oO][mM][wW][aAgG][dDaA][dDmM][oOeE][nN]
+/src/Morrowind.json
+/src/Tribunal.json
+/src/Bloodmoon.json
