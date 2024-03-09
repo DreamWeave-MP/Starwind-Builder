@@ -1,7 +1,10 @@
 [
   {
     "type": "Header",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "version": 1.3,
     "file_type": "Esp",
     "author": "",
@@ -32,60 +35,19 @@
   },
   {
     "type": "Npc",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_VvardenfellTranspor1",
     "name": "Flies-Ship-Far",
-    "script": "nolore",
     "mesh": "base_anim.nif",
-    "inventory": [
-      [
-        1,
-        "SW_AlienHelmA"
-      ],
-      [
-        1,
-        "SW_FlightSuit1"
-      ],
-      [
-        1,
-        "SW_FlightSuit1Top"
-      ],
-      [
-        1,
-        "common_shoes_05"
-      ]
-    ],
-    "spells": [],
-    "ai_data": {
-      "hello": 30,
-      "fight": 30,
-      "flee": 30,
-      "alarm": 0,
-      "services": ""
-    },
-    "ai_packages": [],
-    "travel_destinations": [
-      {
-        "translation": [
-          30238.92,
-          -71415.016,
-          711.65015
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          4.183187
-        ],
-        "cell": ""
-      }
-    ],
+    "script": "nolore",
     "race": "SW_Cyborg",
     "class": "Sharpshooter",
-    "faction": "",
     "head": "SW_CyborgHead",
     "hair": "SW_NoHairCyborg",
-    "npc_flags": "RESPAWN | IS_BASE",
-    "blood_type": 2,
+    "npc_flags": 2060,
     "data": {
       "level": 20,
       "stats": {
@@ -136,16 +98,12 @@
       "reputation": 0,
       "rank": 0,
       "gold": 200
-    }
-  },
-  {
-    "type": "Npc",
-    "flags": "",
-    "id": "SW_VvardenfellTranspor2",
-    "name": "Flies-Ship-Far",
-    "script": "nolore",
-    "mesh": "base_anim.nif",
+    },
     "inventory": [
+      [
+        1,
+        "common_shoes_05"
+      ],
       [
         1,
         "SW_AlienHelmA"
@@ -157,10 +115,6 @@
       [
         1,
         "SW_FlightSuit1Top"
-      ],
-      [
-        1,
-        "common_shoes_05"
       ]
     ],
     "spells": [],
@@ -169,7 +123,116 @@
       "fight": 30,
       "flee": 30,
       "alarm": 0,
-      "services": ""
+      "services": 0
+    },
+    "ai_packages": [],
+    "travel_destinations": [
+      {
+        "translation": [
+          30238.92,
+          -71415.016,
+          711.65015
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.183187
+        ],
+        "cell": null
+      }
+    ]
+  },
+  {
+    "type": "Npc",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "SW_VvardenfellTranspor2",
+    "name": "Flies-Ship-Far",
+    "mesh": "base_anim.nif",
+    "script": "nolore",
+    "race": "SW_Cyborg",
+    "class": "Sharpshooter",
+    "head": "SW_CyborgHead",
+    "hair": "SW_NoHairCyborg",
+    "npc_flags": 2060,
+    "data": {
+      "level": 20,
+      "stats": {
+        "attributes": [
+          57,
+          100,
+          86,
+          89,
+          51,
+          57,
+          57,
+          40
+        ],
+        "skills": [
+          21,
+          7,
+          64,
+          21,
+          21,
+          21,
+          21,
+          21,
+          48,
+          49,
+          49,
+          12,
+          12,
+          17,
+          17,
+          44,
+          12,
+          7,
+          34,
+          49,
+          34,
+          7,
+          7,
+          49,
+          7,
+          34,
+          7
+        ],
+        "health": 152,
+        "magicka": 200,
+        "fatigue": 289
+      },
+      "disposition": 50,
+      "reputation": 0,
+      "rank": 0,
+      "gold": 200
+    },
+    "inventory": [
+      [
+        1,
+        "common_shoes_05"
+      ],
+      [
+        1,
+        "SW_AlienHelmA"
+      ],
+      [
+        1,
+        "SW_FlightSuit1"
+      ],
+      [
+        1,
+        "SW_FlightSuit1Top"
+      ]
+    ],
+    "spells": [],
+    "ai_data": {
+      "hello": 30,
+      "fight": 30,
+      "flee": 30,
+      "alarm": 0,
+      "services": 0
     },
     "ai_packages": [],
     "travel_destinations": [
@@ -186,72 +249,17 @@
         ],
         "cell": "Nar Shaddaa, Vvardenfell Hanger"
       }
-    ],
-    "race": "SW_Cyborg",
-    "class": "Sharpshooter",
-    "faction": "",
-    "head": "SW_CyborgHead",
-    "hair": "SW_NoHairCyborg",
-    "npc_flags": "RESPAWN | IS_BASE",
-    "blood_type": 2,
-    "data": {
-      "level": 20,
-      "stats": {
-        "attributes": [
-          57,
-          100,
-          86,
-          89,
-          51,
-          57,
-          57,
-          40
-        ],
-        "skills": [
-          21,
-          7,
-          64,
-          21,
-          21,
-          21,
-          21,
-          21,
-          48,
-          49,
-          49,
-          12,
-          12,
-          17,
-          17,
-          44,
-          12,
-          7,
-          34,
-          49,
-          34,
-          7,
-          7,
-          49,
-          7,
-          34,
-          7
-        ],
-        "health": 152,
-        "magicka": 200,
-        "fatigue": 289
-      },
-      "disposition": 50,
-      "reputation": 0,
-      "rank": 0,
-      "gold": 200
-    }
+    ]
   },
   {
     "type": "Cell",
-    "flags": "",
-    "name": "Vivec",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Vivec",
     "data": {
-      "flags": "HAS_WATER | RESTING_IS_ILLEGAL | 0x40",
+      "flags": 70,
       "grid": [
         3,
         -9
@@ -302,10 +310,13 @@
   },
   {
     "type": "Cell",
-    "flags": "",
-    "name": "Nar Shaddaa, Makacheesa Market",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Nar Shaddaa, Makacheesa Market",
     "data": {
-      "flags": "IS_INTERIOR | HAS_WATER | RESTING_IS_ILLEGAL | BEHAVES_LIKE_EXTERIOR",
+      "flags": 135,
       "grid": [
         0,
         0
@@ -329,19 +340,15 @@
           4.712389
         ],
         "scale": 0.93000007,
-        "destination": {
-          "translation": [
-            4358.2354,
-            3545.0928,
-            12921.648
-          ],
-          "rotation": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "cell": "Nar Shaddaa, Vvardenfell Hanger"
-        }
+        "door_destination_coords": [
+          4358.2354,
+          3545.0928,
+          12921.648,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "door_destination_cell": "Nar Shaddaa, Vvardenfell Hanger"
       },
       {
         "mast_index": 5,
@@ -461,10 +468,13 @@
   },
   {
     "type": "Cell",
-    "flags": "",
-    "name": "Nar Shaddaa, Vvardenfell Hanger",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Nar Shaddaa, Vvardenfell Hanger",
     "data": {
-      "flags": "IS_INTERIOR",
+      "flags": 1,
       "grid": [
         0,
         1065353216
@@ -572,19 +582,15 @@
           0.0,
           3.1415927
         ],
-        "destination": {
-          "translation": [
-            2403.0933,
-            3016.8372,
-            12544.348
-          ],
-          "rotation": [
-            0.0,
-            0.0,
-            1.5707964
-          ],
-          "cell": "Nar Shaddaa, Makacheesa Market"
-        }
+        "door_destination_coords": [
+          2403.0933,
+          3016.8372,
+          12544.348,
+          0.0,
+          0.0,
+          1.5707964
+        ],
+        "door_destination_cell": "Nar Shaddaa, Makacheesa Market"
       },
       {
         "mast_index": 0,
@@ -666,8 +672,7 @@
           5.3831854
         ],
         "owner": "SW_NarGuard",
-        "health_left": 0,
-        "object_count": 1
+        "health_left": 0
       },
       {
         "mast_index": 0,
@@ -685,8 +690,7 @@
           5.7831855
         ],
         "owner": "SW_NarGuard",
-        "health_left": 0,
-        "object_count": 1
+        "health_left": 0
       },
       {
         "mast_index": 0,
@@ -704,8 +708,7 @@
           4.783186
         ],
         "owner": "SW_NarGuard",
-        "health_left": 0,
-        "object_count": 1
+        "health_left": 0
       },
       {
         "mast_index": 0,
@@ -723,8 +726,7 @@
           4.783186
         ],
         "owner": "SW_NarGuard",
-        "health_left": 0,
-        "object_count": 1
+        "health_left": 0
       },
       {
         "mast_index": 0,
@@ -742,8 +744,7 @@
           5.583185
         ],
         "owner": "SW_NarGuard",
-        "health_left": 0,
-        "object_count": 1
+        "health_left": 0
       },
       {
         "mast_index": 0,
@@ -761,8 +762,7 @@
           4.683186
         ],
         "owner": "SW_NarGuard",
-        "health_left": 0,
-        "object_count": 1
+        "health_left": 0
       },
       {
         "mast_index": 0,
@@ -780,8 +780,7 @@
           5.2831855
         ],
         "owner": "SW_NarGuard",
-        "health_left": 0,
-        "object_count": 1
+        "health_left": 0
       },
       {
         "mast_index": 0,
@@ -799,8 +798,7 @@
           4.783186
         ],
         "owner": "SW_NarGuard",
-        "health_left": 0,
-        "object_count": 1
+        "health_left": 0
       },
       {
         "mast_index": 0,
@@ -818,8 +816,7 @@
           5.0831857
         ],
         "owner": "SW_NarGuard",
-        "health_left": 0,
-        "object_count": 1
+        "health_left": 0
       },
       {
         "mast_index": 0,
@@ -837,8 +834,7 @@
           5.1831856
         ],
         "owner": "SW_NarGuard",
-        "health_left": 0,
-        "object_count": 1
+        "health_left": 0
       },
       {
         "mast_index": 0,
@@ -856,8 +852,7 @@
           2.9831865
         ],
         "owner": "SW_NarGuard",
-        "health_left": 0,
-        "object_count": 1
+        "health_left": 0
       },
       {
         "mast_index": 0,
@@ -875,8 +870,7 @@
           3.8831859
         ],
         "owner": "SW_NarGuard",
-        "health_left": 0,
-        "object_count": 1
+        "health_left": 0
       },
       {
         "mast_index": 0,
@@ -894,8 +888,7 @@
           5.4831853
         ],
         "owner": "SW_NarGuard",
-        "health_left": 0,
-        "object_count": 1
+        "health_left": 0
       },
       {
         "mast_index": 0,
@@ -913,8 +906,7 @@
           5.683185
         ],
         "owner": "SW_NarGuard",
-        "health_left": 0,
-        "object_count": 1
+        "health_left": 0
       },
       {
         "mast_index": 0,
@@ -932,8 +924,7 @@
           4.983186
         ],
         "owner": "SW_NarGuard",
-        "health_left": 0,
-        "object_count": 1
+        "health_left": 0
       },
       {
         "mast_index": 0,
@@ -952,8 +943,7 @@
         ],
         "scale": 0.6,
         "owner": "SW_NarGuardBountyHunte2",
-        "health_left": 0,
-        "object_count": 1
+        "health_left": 0
       },
       {
         "mast_index": 0,
@@ -972,8 +962,7 @@
         ],
         "scale": 0.6,
         "owner": "SW_NarGuardBountyHunte2",
-        "health_left": 0,
-        "object_count": 1
+        "health_left": 0
       },
       {
         "mast_index": 0,

@@ -1,7 +1,10 @@
 [
   {
     "type": "Header",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "version": 1.3,
     "file_type": "Esp",
     "author": "",
@@ -32,23 +35,15 @@
   },
   {
     "type": "MagicEffect",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "effect_id": "SummonCenturionSphere",
-    "icon": "s\\Tx_S_Smmn_Clnfear.tga",
-    "texture": "vfx_conj_flare02.tga",
-    "bolt_sound": "",
-    "cast_sound": "",
-    "hit_sound": "",
-    "area_sound": "",
-    "cast_visual": "VFX_ConjureCast",
-    "bolt_visual": "",
-    "hit_visual": "",
-    "area_visual": "",
-    "description": "Call a loading droid to take the heavy load for you in battle. This droid can take heavy damage and and will engage the enemy up close.",
     "data": {
       "school": "Conjuration",
       "base_cost": 25.0,
-      "flags": "NO_MAGNITUDE | CAN_CAST_SELF | ALLOW_SPELLMAKING | ALLOW_ENCHANTING | APPLIED_ONCE",
+      "flags": 5704,
       "color": [
         214,
         214,
@@ -57,27 +52,23 @@
       "speed": 1.0,
       "size": 1.0,
       "size_cap": 50.0
-    }
+    },
+    "icon": "s\\Tx_S_Smmn_Clnfear.tga",
+    "texture": "vfx_conj_flare02.tga",
+    "cast_visual": "VFX_ConjureCast",
+    "description": "Call a loading droid to take the heavy load for you in battle. This droid can take heavy damage and and will engage the enemy up close."
   },
   {
     "type": "MagicEffect",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "effect_id": "SummonWolf",
-    "icon": "s\\Tx_S_Smmn_Wolf.dds",
-    "texture": "vfx_summon.tga",
-    "bolt_sound": "",
-    "cast_sound": "",
-    "hit_sound": "",
-    "area_sound": "",
-    "cast_visual": "",
-    "bolt_visual": "",
-    "hit_visual": "",
-    "area_visual": "",
-    "description": "Call in a small security droid that packs a mean blaster attachment but can be killed rather easily.",
     "data": {
       "school": "Conjuration",
       "base_cost": 30.0,
-      "flags": "NO_MAGNITUDE | CAN_CAST_SELF | ALLOW_SPELLMAKING | ALLOW_ENCHANTING | APPLIED_ONCE",
+      "flags": 5704,
       "color": [
         214,
         214,
@@ -86,11 +77,17 @@
       "speed": 1.0,
       "size": 1.0,
       "size_cap": 50.0
-    }
+    },
+    "icon": "s\\Tx_S_Smmn_Wolf.dds",
+    "texture": "vfx_summon.tga",
+    "description": "Call in a small security droid that packs a mean blaster attachment but can be killed rather easily."
   },
   {
     "type": "Script",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "NisavMeanieScript",
     "header": {
       "num_shorts": 1,
@@ -99,13 +96,16 @@
       "bytecode_length": 124,
       "variables_length": 7
     },
-    "variables": "BwAAAERvT25jZQA=",
-    "bytecode": "fAAAAAYBAgkgcwEAICE9IDHbEAUBcwEAAiAxCQEGAQQJIFjwECA9PSAxBgECGyBYzRAgZA5TV19Cb3VudHlRdWVzdCA9PSA1NQwBF1RhdG9vaW5lQ3plcmthQm91bnR5Qm9p2xDMEA5TV19Cb3VudHlRdWVzdEEA//8JAQkBAQE=",
+    "variables": "KLUv/QBYWQAABwAAAERvT25jZQA=",
+    "bytecode": "KLUv/QBYrQMAtAZ8AAAABgECCSBzAQAgIT0gMdsQBQFzAQACIDEJAQYBBAkgWPAQID09IDEGAQIbIFjNECBkDlNXX0JvdW50eVF1ZXN0ID09IDU1DAEXVGF0b29pbmVDemVya2FCb2nbEMwQQQD//wkBCQEBAQIAVnXTyqDM",
     "text": "Begin NisavMeanieScript\n\nshort DoOnce\n\nIf (DoOnce != 1)\n\tdisable\n\tset doonce to 1\nendif\n\nif (GetJournalIndex \"SW_BountyQuest\" == 55)\n\tenable\nendif\n\n\tif (OnDeath == 1)\n\t\tif (GetJournalIndex \"SW_BountyQuest\" == 55)\n\t\t\tTatooineCzerkaBountyBoi->Disable\n\t\t\tJournal SW_BountyQuest 65\n\t\tendif\n\tendif\nend"
   },
   {
     "type": "Script",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_EnterSpace",
     "header": {
       "num_shorts": 4,
@@ -114,13 +114,16 @@
       "bytecode_length": 695,
       "variables_length": 36
     },
-    "variables": "JAAAAE9uUENFcXVpcABEb1R3aWNlAEZseWluZwBSZXNldENoZWNrAA==",
-    "bytecode": "twIAAAYBFAkgcwEAID09IDEFAXMDAAIgMQUBcwQAAiAwDAEGcGxheWVyBQFHDVNQSGVhbHRoQ2hlY2sFIFiMEAAGAQkTIEcLVHJhdmVsU3RhdGUgPT0gMCwRD1NoaXBUcmF2ZWxTb3VuZD0RWhHjEEwRDAEGcGxheWVyBRAAWPVFAJiKRQDEiEYAAOZCDVRoZSBPdXRlciBSaW0MAQZwbGF5ZXIdEQxTV19TaGlwQnVmZjEFAUcLVHJhdmVsU3RhdGUCIDEAEGIAQWN0aXZhdGUgdGhlIEZyZWlnaHRlciBTcGVsbCBpbiB5b3VyIFNwZWxsIE1lbnUgYW5kIHByZXNzIF5BY3Rpb25SZWFkeU1hZ2ljIHRvIGVuYWJsZSB0aGUgY29ja3BpdC4AAQNPSwAJAQYBBAkgcwMAID09IDAGAQIaIFgSESwgYw1UaGUgT3V0ZXIgUmltID09IDEAEGIAQWN0aXZhdGUgdGhlIEZyZWlnaHRlciBTcGVsbCBpbiB5b3VyIFNwZWxsIE1lbnUgYW5kIHByZXNzIF5BY3Rpb25SZWFkeU1hZ2ljIHRvIGVuYWJsZSB0aGUgY29ja3BpdC4AAQNPSwAFAXMDAAIgMQkBCQEIAQoJIHMBACA9PSAwBQFzAwACIDAGAQcaIFgSESwgYw1UaGUgT3V0ZXIgUmltID09IDEGAQUJIHMEACA9PSAwDAEGcGxheWVyBRAAYHdFAHChRQAUb0YAgKNDGFRoZSBPdXRlciBSaW0sIEZyZWlnaHRlcgwBBnBsYXllch4RDFNXX1NoaXBCdWZmMQUBRwtUcmF2ZWxTdGF0ZQIgMAUBcwQAAiAxABAtAFlvdSBjYW5ub3QgdGFrZSBvZmYgeW91ciBzaGlwIHdoaWxlIGluIHNwYWNlLgABA09LAAkBCQEJAQEB",
+    "variables": "KLUv/QBYQQEAJAAAAE9uUENFcXVpcABEb1R3aWNlAEZseWluZwBSZXNldENoZWNrAA==",
+    "bytecode": "KLUv/QBYVQwAZtZQO1BNmwMwraiqyqiIKunqijtIaOH/FvtICW5Pyt9k5UUgo8D/z/cp2mh7uUDdOVNT4JgDx1kPaJCoG0kpQABEAD8AVcaLgCSZvKr877tX9hhPqxhwcQOuIY42YPzRwI+VeLP3DSBckEs/2m9eVqF+TO6ww+GG7YfyqnJu6y7SELPzIa79jRfyNYt/vP73YcgLJ2wRMeVOPxSGbZQq41UhwvWQElyQFK793Sb8YwWEIoLZkgEEWxo4sDUCw5H0IAohTZCqzNxo7aBLpAIYR+A0NDWsO0dD7djBRKOZwZVVAynMLN58p9ehvHgSm8x7iknlhRMKbu1r1TPz+TZfYqMbn9Kz7OsV3e3aPXzV+pT+mYwZXmW0GEb9Ne/6pXM+6BuVwAsipiYFkgMVDxjYQiNsdahsZVjg6HFYd09DABqaJgEdoF0YAAu3BFzXwF4kE9nV7moJt93u0z3ht8VmbTAuEwjcrV5tvEtA4lgCqBVA0GQqs6IFCqMohtBlfMBMS6bCpoPOjNeWJg==",
     "text": "Begin SW_EnterSpace\n\nshort OnPCEquip\nShort DoTwice\nShort Flying\nShort ResetCheck\n\nIf ( OnPCEquip == 1 )\n\tSet Flying to 1\n\tSet ResetCheck to 0\n\tSet SPHealthCheck to ( Player->GetHealth )\n\tIf ( TravelState == 0 )\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\tPCForce1stPerson\n\t\tDisableplayerfighting\n\t\tDisablePlayerViewSwitch\n\t\tDisableVanityMode\n          Player->PositionCell, 7851, 4435, 17506, 115, \"The Outer Rim\"\n          Player->AddSpell, \"SW_ShipBuff1\"\n\t\tset TravelState to 1\n\t\tMessageBox \"Activate the Freighter Spell in your Spell Menu and press ^ActionReadyMagic to enable the cockpit.\" \"OK\"\n\tEndif\n\tIf ( Flying == 0 )\n\t\tIf (  GetPCCell, \"The Outer Rim\" == 1 )\n\t\t\tMessageBox \"Activate the Freighter Spell in your Spell Menu and press ^ActionReadyMagic to enable the cockpit.\" \"OK\"\n\t\t\tSet Flying to 1\n\t\tEndif\n\tEndif\nElseif ( OnPCEquip == 0 )\n\tSet Flying to 0\n\tIf ( GetPCCell, \"The Outer Rim\" == 1 )\n\t\tIf ( ResetCheck == 0 )\n\t\t\tplayer->additem \"SW_SpCarNone\", 1\n\t\t\tplayer->equip, \"SW_SpCarNone\"\n\t\t\tplayer->removeitem \"SW_SpCarNone\", 1\n\t\t\tEnableplayerfighting\n\t\t\tEnablePlayerViewSwitch\n\t\t\tEnableVanityMode\n\t\t\tPlayer->PositionCell, 3958, 5166, 15301, 327 \"The Outer Rim, Freighter\"\n\t\t\tPlayer->RemoveSpell, \"SW_ShipBuff1\"\n\t\t\tSet TravelState to 0\n\t\t\tSet ResetCheck to 1\n\t\t\tMessageBox \"You cannot take off your ship while in space.\" \"OK\"\n\t\tEndif\n\tEndif\nEndif\n\nEnd"
   },
   {
     "type": "Script",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_FTravelDantooine",
     "header": {
       "num_shorts": 0,
@@ -129,13 +132,15 @@
       "bytecode_length": 741,
       "variables_length": 0
     },
-    "variables": "AAAAAA==",
-    "bytecode": "5QIAAAYBIAkgWBgQID09IDEGARwWIEcNRnJlaWdodFRyYXZlbCAhPSAxMAUBRw1GcmVpZ2h0VHJhdmVsAyAxMCwRD1NoaXBUcmF2ZWxTb3VuZAwBF1NXX0ZyZWlnaHRlclRvRGFudG9vaW5l2hAMARZTV19GcmVpZ2h0ZXJUb1RhdG9vaW5l2xAMARRTV19GcmVpZ2h0ZXJUb01hbmFhbtsQDAEVU1dfRnJlaWdodGVyVG9LYXNoeXlr2xAMARZTV19GcmVpZ2h0ZXJUb0RhdGhvbWly2xAMARRTV19GcmVpZ2h0ZXJUb0dhbW9yctsQDAESU1dfRnJlaWdodGVyVG9Ib3Ro2xAMARNTV19GcmVpZ2h0ZXJUb1Rhcmlz2xAMARBTV19GcmVpZ2h0ZXJUb0002xAMARVTV19GcmVpZ2h0ZXJUb05hclNoYWTbEAwBElNXX0ZyZWlnaHRlclRvTm9uZdsQDAEWU1dfRnJlaWdodGVyVG9EZXJlbGljdNsQDAERU1dfRnJlaWdodGVyVG9Mb2vbEAwBClNXX1BsYW5Mb2vbEAUBRwpTV19MVFNQRUVEAiAxDAESU1dfRnJlaWdodFBsYW5EYXRo2xAMARJTV19GcmVpZ2h0UGxhbkthc2jbEAwBElNXX0ZyZWlnaHRQbGFuSG90aNsQDAETU1dfRnJlaWdodFBsYW5HYW1vctsQDAETU1dfRnJlaWdodGVyUGxhblRhdNsQDAESU1dfRnJlaWdodFBsYW5EYW502hAMARFTV19GcmVpZ2h0UGxhbk5hctsQDAESU1dfRnJlaWdodFBsYW5NYW5h2xAMARJTV19GcmVpZ2h0UGxhbk00NzjbEAwBE1NXX0ZyZWlnaHRQbGFuVGFyaXPbEAwBE1NXX0ZyZWlnaHREZXJlbGljdDHbEAcBAQAQJABZb3UgYXJlIGFscmVhZHkgbGFuZGVkIG9uIERhbnRvb2luZSEAAAkBCQEBAQ==",
+    "bytecode": "KLUv/QBYDQsAhpE/NGBFlA7AOxAEQRAEQRAcjd83oJWtGeNdNKbGJbwYs5MwdEZxYX0Y63V9RKGftDK2Svf6yx01ADAAMQAXjZ4OPFgJ69CEFVoGCSALFIoDlkGh2DJhGQGcXjWb0CJ1GMCwJGEbFFss/BAg2MHbcG4RICCN/oqs9LaszoeJ0vk5hmqfmdVXG4VIlIGeMVjpbf33NwUrve2XZKU3iq3NWfvVDNICPdOX1vSqLy2KF9XlYsFL4+nAB2YZfWl5OvAxNZAqoclIY+zJmbBnkJ5T2byV3ha761iHcxPuyVjE+pJF2COV50jPoRnhFJ7bFXgbFYk0MFSm9zd9aZ0zqj3VX/0sIOBCGyoPvJPyOAl8n6AikhsbTcC9tvgaRAehGHLwGOylZQ+acEKgAdyfAE2N8CYNK9dvCY53bZEws5uFpnLLmsoTvJMRqnzlYssTHqnHr7JPag+G/crAys1lbFa7pQc=",
     "text": "Begin SW_FTravelDantooine\n\nIf ( OnActivate == 1 )\n\tIf ( FreightTravel != 10 )\n\t\tSet FreightTravel to 10\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\t\tSW_FreighterToDantooine->Enable\n\t\t\tSW_FreighterToTatooine->Disable\n\t\t\tSW_FreighterToManaan->Disable\n\t\t\tSW_FreighterToKashyyk->Disable\n\t\t\tSW_FreighterToDathomir->Disable\n\t\t\tSW_FreighterToGamorr->Disable\n\t\t\tSW_FreighterToHoth->Disable\n\t\t\tSW_FreighterToTaris->Disable\n\t\t\tSW_FreighterToM4->Disable\n\t\t\tSW_FreighterToNarShad->Disable\n\t\t\tSW_FreighterToNone->Disable\n\t\t\tSW_FreighterToDerelict->Disable\n\t\t\tSW_FreighterToLok->Disable\n\t\t\tSet SW_LTSPEED to 1\n\t\t\tSW_FreightPlanDath->Disable\n\t\t\tSW_FreightPlanKash->Disable\n\t\t\tSW_FreightPlanHoth->Disable\n\t\t\tSW_FreightPlanGamor->Disable\n\t\t\tSW_FreighterPlanTat->Disable\n\t\t\tSW_FreightPlanDant->Enable\n\t\t\tSW_FreightPlanNar->Disable\n\t\t\tSW_FreightPlanMana->Disable\n\t\t\tSW_FreightPlanM478->Disable\n\t\t\tSW_FreightPlanTaris->Disable\n\t\t\tSW_FreightDerelict1->Disable\n\telse\n\t\tMessageBox \"You are already landed on Dantooine!\"\n\tendif\nEndif\n\nEnd"
   },
   {
     "type": "Script",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_FTravelDathomir",
     "header": {
       "num_shorts": 0,
@@ -144,13 +149,15 @@
       "bytecode_length": 740,
       "variables_length": 0
     },
-    "variables": "AAAAAA==",
-    "bytecode": "5AIAAAYBIAkgWBgQID09IDEGARwWIEcNRnJlaWdodFRyYXZlbCAhPSAzNQUBRw1GcmVpZ2h0VHJhdmVsAyAzNSwRD1NoaXBUcmF2ZWxTb3VuZAwBF1NXX0ZyZWlnaHRlclRvRGFudG9vaW5l2xAMARZTV19GcmVpZ2h0ZXJUb1RhdG9vaW5l2xAMARRTV19GcmVpZ2h0ZXJUb01hbmFhbtsQDAEVU1dfRnJlaWdodGVyVG9LYXNoeXlr2xAMARZTV19GcmVpZ2h0ZXJUb0RhdGhvbWly2hAMARRTV19GcmVpZ2h0ZXJUb0dhbW9yctsQDAESU1dfRnJlaWdodGVyVG9Ib3Ro2xAMARNTV19GcmVpZ2h0ZXJUb1Rhcmlz2xAMARBTV19GcmVpZ2h0ZXJUb0002xAMARVTV19GcmVpZ2h0ZXJUb05hclNoYWTbEAwBElNXX0ZyZWlnaHRlclRvTm9uZdsQDAEWU1dfRnJlaWdodGVyVG9EZXJlbGljdNsQDAERU1dfRnJlaWdodGVyVG9Mb2vbEAwBClNXX1BsYW5Mb2vbEAUBRwpTV19MVFNQRUVEAiAxDAESU1dfRnJlaWdodFBsYW5EYXRo2hAMARJTV19GcmVpZ2h0UGxhbkthc2jbEAwBElNXX0ZyZWlnaHRQbGFuSG90aNsQDAETU1dfRnJlaWdodFBsYW5HYW1vctsQDAETU1dfRnJlaWdodGVyUGxhblRhdNsQDAESU1dfRnJlaWdodFBsYW5EYW502xAMARFTV19GcmVpZ2h0UGxhbk5hctsQDAESU1dfRnJlaWdodFBsYW5NYW5h2xAMARJTV19GcmVpZ2h0UGxhbk00NzjbEAwBE1NXX0ZyZWlnaHRQbGFuVGFyaXPbEAwBE1NXX0ZyZWlnaHREZXJlbGljdDHbEAcBAQAQIwBZb3UgYXJlIGFscmVhZHkgbGFuZGVkIG9uIERhdGhvbWlyIQAACQEJAQEB",
+    "bytecode": "KLUv/QBYLQsA1tFANWC1SgdgHAiCIAiCIAin4+R+Y/IfjBxsj9GULu+1HH8C+mz51A6JGwirKmFak+BgyG7adZMkNwAyADEAFr1q9HRgwk5YhygckElo8GioTHhgF5UJWyI8I4HXS5MBslghCjAMWViGhC0WdgoS3OBlSJKiQBzKxu3kNlBWf1U7uU1qNIKqlX6OGdXsQ6V2S4BIJEHPIOzktv77m4NfkJ3cFjujVOsHVX++/nyUBD3Tn28ktVv9+SSssC6XBy+NpwMdmF305/N0oINqHhqAbMYaLcqhsEtYH7vb2IYkRbgpYxHrTxZhj3WeYz2H6ITE4KRdArdJqurBgUK9v+nPd05Tv/rzBSwg8MIaMg9sEPI4E8A+QUUgF2yUAHtn8bURCaJo6PAj3Ou6rXy1cKKW3Ce6FxYXhHyuuyUe72oxYbFR72uJiDUVJ3hBRmj5yM2WeyfSxFxlj2QuuHmRlpWby9isdlkP",
     "text": "Begin SW_FTravelDathomir\n\nIf ( OnActivate == 1 )\n\tIf ( FreightTravel != 35 )\n\t\tSet FreightTravel to 35\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\t\tSW_FreighterToDantooine->Disable\n\t\t\tSW_FreighterToTatooine->Disable\n\t\t\tSW_FreighterToManaan->Disable\n\t\t\tSW_FreighterToKashyyk->Disable\n\t\t\tSW_FreighterToDathomir->Enable\n\t\t\tSW_FreighterToGamorr->Disable\n\t\t\tSW_FreighterToHoth->Disable\n\t\t\tSW_FreighterToTaris->Disable\n\t\t\tSW_FreighterToM4->Disable\n\t\t\tSW_FreighterToNarShad->Disable\n\t\t\tSW_FreighterToNone->Disable\n\t\t\tSW_FreighterToDerelict->Disable\n\t\t\tSW_FreighterToLok->Disable\n\t\t\tSet SW_LTSPEED to 1\n\t\t\tSW_FreightPlanDath->Enable\n\t\t\tSW_FreightPlanKash->Disable\n\t\t\tSW_FreightPlanHoth->Disable\n\t\t\tSW_FreightPlanGamor->Disable\n\t\t\tSW_FreighterPlanTat->Disable\n\t\t\tSW_FreightPlanDant->Disable\n\t\t\tSW_FreightPlanNar->Disable\n\t\t\tSW_FreightPlanMana->Disable\n\t\t\tSW_FreightPlanM478->Disable\n\t\t\tSW_FreightPlanTaris->Disable\n\t\t\tSW_FreightDerelict1->Disable\n\telse\n\t\tMessageBox \"You are already landed on Dathomir!\"\n\tendif\nEndif\n\nEnd\n\n"
   },
   {
     "type": "Script",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_FTravelGamorr",
     "header": {
       "num_shorts": 0,
@@ -159,13 +166,15 @@
       "bytecode_length": 738,
       "variables_length": 0
     },
-    "variables": "AAAAAA==",
-    "bytecode": "4gIAAAYBIAkgWBgQID09IDEGARwWIEcNRnJlaWdodFRyYXZlbCAhPSA1MAUBRw1GcmVpZ2h0VHJhdmVsAyA1MCwRD1NoaXBUcmF2ZWxTb3VuZAwBF1NXX0ZyZWlnaHRlclRvRGFudG9vaW5l2xAMARZTV19GcmVpZ2h0ZXJUb1RhdG9vaW5l2xAMARRTV19GcmVpZ2h0ZXJUb01hbmFhbtsQDAEVU1dfRnJlaWdodGVyVG9LYXNoeXlr2xAMARZTV19GcmVpZ2h0ZXJUb0RhdGhvbWly2xAMARRTV19GcmVpZ2h0ZXJUb0dhbW9yctoQDAESU1dfRnJlaWdodGVyVG9Ib3Ro2xAMARNTV19GcmVpZ2h0ZXJUb1Rhcmlz2xAMARBTV19GcmVpZ2h0ZXJUb0002xAMARVTV19GcmVpZ2h0ZXJUb05hclNoYWTbEAwBElNXX0ZyZWlnaHRlclRvTm9uZdsQDAEWU1dfRnJlaWdodGVyVG9EZXJlbGljdNsQDAERU1dfRnJlaWdodGVyVG9Mb2vbEAwBClNXX1BsYW5Mb2vbEAUBRwpTV19MVFNQRUVEAiAxDAESU1dfRnJlaWdodFBsYW5EYXRo2xAMARJTV19GcmVpZ2h0UGxhbkthc2jbEAwBElNXX0ZyZWlnaHRQbGFuSG90aNsQDAETU1dfRnJlaWdodFBsYW5HYW1vctoQDAETU1dfRnJlaWdodGVyUGxhblRhdNsQDAESU1dfRnJlaWdodFBsYW5EYW502xAMARFTV19GcmVpZ2h0UGxhbk5hctsQDAESU1dfRnJlaWdodFBsYW5NYW5h2xAMARJTV19GcmVpZ2h0UGxhbk00NzjbEAwBE1NXX0ZyZWlnaHRQbGFuVGFyaXPbEAwBE1NXX0ZyZWlnaHREZXJlbGljdDHbEAcBAQAQIQBZb3UgYXJlIGFscmVhZHkgbGFuZGVkIG9uIEdhbW9yciEAAAkBCQEBAQ==",
+    "bytecode": "KLUv/QBYxQoANhE/NECFajq7X1UURVEURVEUgUmhlTMm/wCz2jGLZD4XHthD6J1kbA8htqgETzFliwNtXD4DJQk1AC8AMQAdPR2IoFPGoQkrNg0SQBYmlg1QxsSyF8nKCOCNcdrEFtthILMRBW1Q9nLZlwCxjtWGJC0CBFsfK9DpdRo3Hyid3qh7fp7p7TM17hWFSKSBrjnQ6XX88y2DYxGdXhd5m5PjVxMLI9A1fHlRr/jyouyiwmAuiG08HfjIKIMvL08HPuYGwklsMnasJofKrsE+p2I9nV4HCqrqUIckSXp5bhYzvlxR9tjyG/sbmhGS5EmqAq+jNDBUrPOtPgfCMcUd48srKCDwQhuyA3RSPA4CaEBwASSECXFIhlxiiMdh7yx7WLyTF7bgTgJUasGbNKxcvyU53t1iYWCj/teKAGsqTfBKRmj5lH0nPJrEXLJPMh9u3qVl5eYqNqvd0QM=",
     "text": "Begin SW_FTravelGamorr\n\nIf ( OnActivate == 1 )\n\tIf ( FreightTravel != 50 )\n\t\tSet FreightTravel to 50\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\t\tSW_FreighterToDantooine->Disable\n\t\t\tSW_FreighterToTatooine->Disable\n\t\t\tSW_FreighterToManaan->Disable\n\t\t\tSW_FreighterToKashyyk->Disable\n\t\t\tSW_FreighterToDathomir->Disable\n\t\t\tSW_FreighterToGamorr->Enable\n\t\t\tSW_FreighterToHoth->Disable\n\t\t\tSW_FreighterToTaris->Disable\n\t\t\tSW_FreighterToM4->Disable\n\t\t\tSW_FreighterToNarShad->Disable\n\t\t\tSW_FreighterToNone->Disable\n\t\t\tSW_FreighterToDerelict->Disable\n\t\t\tSW_FreighterToLok->Disable\n\t\t\tSet SW_LTSPEED to 1\n\t\t\tSW_FreightPlanDath->Disable\n\t\t\tSW_FreightPlanKash->Disable\n\t\t\tSW_FreightPlanHoth->Disable\n\t\t\tSW_FreightPlanGamor->Enable\n\t\t\tSW_FreighterPlanTat->Disable\n\t\t\tSW_FreightPlanDant->Disable\n\t\t\tSW_FreightPlanNar->Disable\n\t\t\tSW_FreightPlanMana->Disable\n\t\t\tSW_FreightPlanM478->Disable\n\t\t\tSW_FreightPlanTaris->Disable\n\t\t\tSW_FreightDerelict1->Disable\n\telse\n\t\tMessageBox \"You are already landed on Gamorr!\"\n\tendif\nEndif\n\nEnd"
   },
   {
     "type": "Script",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_FTravelHoth",
     "header": {
       "num_shorts": 0,
@@ -174,13 +183,15 @@
       "bytecode_length": 736,
       "variables_length": 0
     },
-    "variables": "AAAAAA==",
-    "bytecode": "4AIAAAYBIAkgWBgQID09IDEGARwWIEcNRnJlaWdodFRyYXZlbCAhPSAzMAUBRw1GcmVpZ2h0VHJhdmVsAyAzMCwRD1NoaXBUcmF2ZWxTb3VuZAwBF1NXX0ZyZWlnaHRlclRvRGFudG9vaW5l2xAMARZTV19GcmVpZ2h0ZXJUb1RhdG9vaW5l2xAMARRTV19GcmVpZ2h0ZXJUb01hbmFhbtsQDAEVU1dfRnJlaWdodGVyVG9LYXNoeXlr2xAMARZTV19GcmVpZ2h0ZXJUb0RhdGhvbWly2xAMARRTV19GcmVpZ2h0ZXJUb0dhbW9yctsQDAESU1dfRnJlaWdodGVyVG9Ib3Ro2hAMARNTV19GcmVpZ2h0ZXJUb1Rhcmlz2xAMARBTV19GcmVpZ2h0ZXJUb0002xAMARVTV19GcmVpZ2h0ZXJUb05hclNoYWTbEAwBElNXX0ZyZWlnaHRlclRvTm9uZdsQDAEWU1dfRnJlaWdodGVyVG9EZXJlbGljdNsQDAERU1dfRnJlaWdodGVyVG9Mb2vbEAwBClNXX1BsYW5Mb2vbEAUBRwpTV19MVFNQRUVEAiAxDAESU1dfRnJlaWdodFBsYW5EYXRo2xAMARJTV19GcmVpZ2h0UGxhbkthc2jbEAwBElNXX0ZyZWlnaHRQbGFuSG90aNoQDAETU1dfRnJlaWdodFBsYW5HYW1vctsQDAETU1dfRnJlaWdodGVyUGxhblRhdNsQDAESU1dfRnJlaWdodFBsYW5EYW502xAMARFTV19GcmVpZ2h0UGxhbk5hctsQDAESU1dfRnJlaWdodFBsYW5NYW5h2xAMARJTV19GcmVpZ2h0UGxhbk00NzjbEAwBE1NXX0ZyZWlnaHRQbGFuVGFyaXPbEAwBE1NXX0ZyZWlnaHREZXJlbGljdDHbEAcBAQAQHwBZb3UgYXJlIGFscmVhZHkgbGFuZGVkIG9uIEhvdGghAAAJAQkBAQE=",
+    "bytecode": "KLUv/QBYzQoAhtE/NFCFKh2UaqqqqqqqqqqaIGJfMSb/eBzfjtHBYDBngSVA34IDfh1jxlxuwjZAWh/hMYBGkgQ1ADAAMQAYhSHQO1gqa9J8FFp8BJAFioUDlkGxMGbCElacYjVKaJA6DGhYkrCNCmMw7BAe2MHbmKZFgG4pt400eiyylAMQ69xUlE7RNVQTzVhvTZRKcXSOwVJu67/vKTgmWcptsLU5a9+aAVhfXtvonL68qlhv9eVV4YWVyVwP64RA76FZRl9eIdB7zA6kRmgSUmjNT5U9PvrPxRO761jHNE1inRvuyRnM+pJL2SGVZ0jPpAkxKbhpV8BtlUikgeHyvqcvr38gtav6KSAQQxvyOAl4n6Aiyh07lDRfi2BhyBqHzbJa+yDIJ89sxb0J0NTCFcuvuSU83tViYcdGva8REdZUmuC9jNDylYstTnj0iblkj2QOuHmWlo2ba2xWu6oH",
     "text": "Begin SW_FTravelHoth\n\nIf ( OnActivate == 1 )\n\tIf ( FreightTravel != 30 )\n\t\tSet FreightTravel to 30\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\t\tSW_FreighterToDantooine->Disable\n\t\t\tSW_FreighterToTatooine->Disable\n\t\t\tSW_FreighterToManaan->Disable\n\t\t\tSW_FreighterToKashyyk->Disable\n\t\t\tSW_FreighterToDathomir->Disable\n\t\t\tSW_FreighterToGamorr->Disable\n\t\t\tSW_FreighterToHoth->Enable\n\t\t\tSW_FreighterToTaris->Disable\n\t\t\tSW_FreighterToM4->Disable\n\t\t\tSW_FreighterToNarShad->Disable\n\t\t\tSW_FreighterToNone->Disable\n\t\t\tSW_FreighterToDerelict->Disable\n\t\t\tSW_FreighterToLok->Disable\n\t\t\tSet SW_LTSPEED to 1\n\t\t\tSW_FreightPlanDath->Disable\n\t\t\tSW_FreightPlanKash->Disable\n\t\t\tSW_FreightPlanHoth->Enable\n\t\t\tSW_FreightPlanGamor->Disable\n\t\t\tSW_FreighterPlanTat->Disable\n\t\t\tSW_FreightPlanDant->Disable\n\t\t\tSW_FreightPlanNar->Disable\n\t\t\tSW_FreightPlanMana->Disable\n\t\t\tSW_FreightPlanM478->Disable\n\t\t\tSW_FreightPlanTaris->Disable\n\t\t\tSW_FreightDerelict1->Disable\n\telse\n\t\tMessageBox \"You are already landed on Hoth!\"\n\tendif\nEndif\n\nEnd\n\n"
   },
   {
     "type": "Script",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_FTravelKashyyk",
     "header": {
       "num_shorts": 0,
@@ -189,13 +200,15 @@
       "bytecode_length": 739,
       "variables_length": 0
     },
-    "variables": "AAAAAA==",
-    "bytecode": "4wIAAAYBIAkgWBgQID09IDEGARwWIEcNRnJlaWdodFRyYXZlbCAhPSAxNQUBRw1GcmVpZ2h0VHJhdmVsAyAxNSwRD1NoaXBUcmF2ZWxTb3VuZAwBF1NXX0ZyZWlnaHRlclRvRGFudG9vaW5l2xAMARZTV19GcmVpZ2h0ZXJUb1RhdG9vaW5l2xAMARRTV19GcmVpZ2h0ZXJUb01hbmFhbtsQDAEVU1dfRnJlaWdodGVyVG9LYXNoeXlr2hAMARZTV19GcmVpZ2h0ZXJUb0RhdGhvbWly2xAMARRTV19GcmVpZ2h0ZXJUb0dhbW9yctsQDAESU1dfRnJlaWdodGVyVG9Ib3Ro2xAMARNTV19GcmVpZ2h0ZXJUb1Rhcmlz2xAMARBTV19GcmVpZ2h0ZXJUb0002xAMARVTV19GcmVpZ2h0ZXJUb05hclNoYWTbEAwBElNXX0ZyZWlnaHRlclRvTm9uZdsQDAEWU1dfRnJlaWdodGVyVG9EZXJlbGljdNsQDAERU1dfRnJlaWdodGVyVG9Mb2vbEAwBClNXX1BsYW5Mb2vbEAUBRwpTV19MVFNQRUVEAiAxDAESU1dfRnJlaWdodFBsYW5EYXRo2xAMARJTV19GcmVpZ2h0UGxhbkthc2jaEAwBElNXX0ZyZWlnaHRQbGFuSG90aNsQDAETU1dfRnJlaWdodFBsYW5HYW1vctsQDAETU1dfRnJlaWdodGVyUGxhblRhdNsQDAESU1dfRnJlaWdodFBsYW5EYW502xAMARFTV19GcmVpZ2h0UGxhbk5hctsQDAESU1dfRnJlaWdodFBsYW5NYW5h2xAMARJTV19GcmVpZ2h0UGxhbk00NzjbEAwBE1NXX0ZyZWlnaHRQbGFuVGFyaXPbEAwBE1NXX0ZyZWlnaHREZXJlbGljdDHbEAcBAQAQIgBZb3UgYXJlIGFscmVhZHkgbGFuZGVkIG9uIEthc2h5eWshAAAJAQkBAQE=",
+    "bytecode": "KLUv/QBYFQsAFhJBNFCFKh1QEVRVVVVVVVU1AQzkFmzy/yPZ2zE6GAzm6/FoiLfgBsEOuKPPk1kcEeojPAbQSJI3ADIAMgC36FVjhwMRdsI6RGGATMKCBwOlYoFdUCquSHhGAa+XJgFksT4QXDiisIyKKxV2CRHc4GVIkmJA9ZuJxu3kNlBWf1E7uU1qFAJSK/38UrMPldqtkUckkqBjDnZyW/99jcGvyE5ui51RqnWP6s/Xn28kQcf054Pc6s9XscKyWB68Mh0OdFx20Z+vw4GOndzmoZmHNpHNWKNFN9glDLvb2IYkSbgpYxHrTxZhj3WeYz2HqIS04KTdAbdVFOXQMIG8r+nP981Da+1XfwYpIOBCGzIPPJH8OBPIPkFFJDc2moB7bfE1CCasrHFiFqyzfG3hhJbcn5BMecAbViZ/i7wqImC53j4cnpiKE7yXEUq+5WKLEx6xx2+yI5kDbv6kZeXmMjar3dID",
     "text": "Begin SW_FTravelKashyyk\n\nIf ( OnActivate == 1 )\n\tIf ( FreightTravel != 15 )\n\t\tSet FreightTravel to 15\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\t\tSW_FreighterToDantooine->Disable\n\t\t\tSW_FreighterToTatooine->Disable\n\t\t\tSW_FreighterToManaan->Disable\n\t\t\tSW_FreighterToKashyyk->Enable\n\t\t\tSW_FreighterToDathomir->Disable\n\t\t\tSW_FreighterToGamorr->Disable\n\t\t\tSW_FreighterToHoth->Disable\n\t\t\tSW_FreighterToTaris->Disable\n\t\t\tSW_FreighterToM4->Disable\n\t\t\tSW_FreighterToNarShad->Disable\n\t\t\tSW_FreighterToNone->Disable\n\t\t\tSW_FreighterToDerelict->Disable\n\t\t\tSW_FreighterToLok->Disable\n\t\t\tSet SW_LTSPEED to 1\n\t\t\tSW_FreightPlanDath->Disable\n\t\t\tSW_FreightPlanKash->Enable\n\t\t\tSW_FreightPlanHoth->Disable\n\t\t\tSW_FreightPlanGamor->Disable\n\t\t\tSW_FreighterPlanTat->Disable\n\t\t\tSW_FreightPlanDant->Disable\n\t\t\tSW_FreightPlanNar->Disable\n\t\t\tSW_FreightPlanMana->Disable\n\t\t\tSW_FreightPlanM478->Disable\n\t\t\tSW_FreightPlanTaris->Disable\t\n\t\t\tSW_FreightDerelict1->Disable\n\t\telse\n\t\tMessageBox \"You are already landed on Kashyyk!\"\n\tendif\nEndif\n\nEnd"
   },
   {
     "type": "Script",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_FTravelM478",
     "header": {
       "num_shorts": 0,
@@ -204,13 +217,15 @@
       "bytecode_length": 737,
       "variables_length": 0
     },
-    "variables": "AAAAAA==",
-    "bytecode": "4QIAAAYBIAkgWBgQID09IDEGARwWIEcNRnJlaWdodFRyYXZlbCAhPSA0NQUBRw1GcmVpZ2h0VHJhdmVsAyA0NSwRD1NoaXBUcmF2ZWxTb3VuZAwBF1NXX0ZyZWlnaHRlclRvRGFudG9vaW5l2xAMARZTV19GcmVpZ2h0ZXJUb1RhdG9vaW5l2xAMARRTV19GcmVpZ2h0ZXJUb01hbmFhbtsQDAEVU1dfRnJlaWdodGVyVG9LYXNoeXlr2xAMARZTV19GcmVpZ2h0ZXJUb0RhdGhvbWly2xAMARRTV19GcmVpZ2h0ZXJUb0dhbW9yctsQDAESU1dfRnJlaWdodGVyVG9Ib3Ro2xAMARNTV19GcmVpZ2h0ZXJUb1Rhcmlz2xAMARBTV19GcmVpZ2h0ZXJUb0002hAMARVTV19GcmVpZ2h0ZXJUb05hclNoYWTbEAwBElNXX0ZyZWlnaHRlclRvTm9uZdsQDAEWU1dfRnJlaWdodGVyVG9EZXJlbGljdNsQDAERU1dfRnJlaWdodGVyVG9Mb2vbEAwBClNXX1BsYW5Mb2vbEAUBRwpTV19MVFNQRUVEAiAxDAESU1dfRnJlaWdodFBsYW5EYXRo2xAMARJTV19GcmVpZ2h0UGxhbkthc2jbEAwBElNXX0ZyZWlnaHRQbGFuSG90aNsQDAETU1dfRnJlaWdodFBsYW5HYW1vctsQDAETU1dfRnJlaWdodGVyUGxhblRhdNsQDAESU1dfRnJlaWdodFBsYW5EYW502xAMARFTV19GcmVpZ2h0UGxhbk5hctsQDAESU1dfRnJlaWdodFBsYW5NYW5h2xAMARJTV19GcmVpZ2h0UGxhbk00NzjaEAwBE1NXX0ZyZWlnaHRQbGFuVGFyaXPbEAwBE1NXX0ZyZWlnaHREZXJlbGljdDHbEAcBAQAQIABZb3UgYXJlIGFscmVhZHkgbGFuZGVkIG9uIE00LTc4IQAACQEJAQEB",
+    "bytecode": "KLUv/QBY/QoAhlFANECFajrPZ46iKIqiKIqixqRi3zMm/wCz2jGLZD4XHthD6J1kiG8ELYcIHiF9+wNtXD4DJQk2ADAAMQAZjZ4OPNhJ69CEE9wGCR4KlIoDdkGp+CJhGQGcZnWL4CJlGMhwJGEZE75c+CE4cIOXIUmKAAFvp9eBOPoMstPrtjobKErn5xnKfeZWb0mIRBvoGoOdXtd//yp4FtnpdbG5OWvfmgH1WV9ioGv6EqNu9SU2YYWFwWAw23g60JHZRV9ing50zM2jQnAy0mhNDqV9g/ScUXUFu9vYhiRJLJWF6uKerEWtL1mkPVJ5jvQcmg8SP2lX4HUTyMhSqaj3r77EznnUpgIrIABDG+oBOAnYt2IBEJwkLeBetPhaBAkbaxy2lsHaB5lxUkAB3JsATc3wJomVa24Jjne1SBjZqP9rRIQ1FbyxLiOUfORmyxIeaWIu2S2ZDzfv0jJ2c43Napf1",
     "text": "Begin SW_FTravelM478\n\nIf ( OnActivate == 1 )\n\tIf ( FreightTravel != 45 )\n\t\tSet FreightTravel to 45\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\t\tSW_FreighterToDantooine->Disable\n\t\t\tSW_FreighterToTatooine->Disable\n\t\t\tSW_FreighterToManaan->Disable\n\t\t\tSW_FreighterToKashyyk->Disable\n\t\t\tSW_FreighterToDathomir->Disable\n\t\t\tSW_FreighterToGamorr->Disable\n\t\t\tSW_FreighterToHoth->Disable\n\t\t\tSW_FreighterToTaris->Disable\n\t\t\tSW_FreighterToM4->Enable\n\t\t\tSW_FreighterToNarShad->Disable\n\t\t\tSW_FreighterToNone->Disable\n\t\t\tSW_FreighterToDerelict->Disable\n\t\t\tSW_FreighterToLok->Disable\n\t\t\tSet SW_LTSPEED to 1\n\t\t\tSW_FreightPlanDath->Disable\n\t\t\tSW_FreightPlanKash->Disable\n\t\t\tSW_FreightPlanHoth->Disable\n\t\t\tSW_FreightPlanGamor->Disable\n\t\t\tSW_FreighterPlanTat->Disable\n\t\t\tSW_FreightPlanDant->Disable\n\t\t\tSW_FreightPlanNar->Disable\n\t\t\tSW_FreightPlanMana->Disable\n\t\t\tSW_FreightPlanM478->Enable\n\t\t\tSW_FreightPlanTaris->Disable\n\t\t\tSW_FreightDerelict1->Disable\n\telse\n\t\tMessageBox \"You are already landed on M4-78!\"\n\tendif\nEndif\n\nEnd\n"
   },
   {
     "type": "Script",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_FTravelManaan",
     "header": {
       "num_shorts": 0,
@@ -219,13 +234,15 @@
       "bytecode_length": 762,
       "variables_length": 0
     },
-    "variables": "AAAAAA==",
-    "bytecode": "+gIAAAYBIQkgWBgQID09IDEGAR0WIEcNRnJlaWdodFRyYXZlbCAhPSAyMAUBRw1GcmVpZ2h0VHJhdmVsAyAyMCwRD1NoaXBUcmF2ZWxTb3VuZAwBF1NXX0ZyZWlnaHRlclRvRGFudG9vaW5l2xAMARZTV19GcmVpZ2h0ZXJUb1RhdG9vaW5l2xAMARRTV19GcmVpZ2h0ZXJUb01hbmFhbtoQDAEVU1dfRnJlaWdodGVyVG9LYXNoeXlr2xAMARZTV19GcmVpZ2h0ZXJUb0RhdGhvbWly2xAMARRTV19GcmVpZ2h0ZXJUb0dhbW9yctsQDAESU1dfRnJlaWdodGVyVG9Ib3Ro2xAMARNTV19GcmVpZ2h0ZXJUb1Rhcmlz2xAMARBTV19GcmVpZ2h0ZXJUb0002xAMARVTV19GcmVpZ2h0ZXJUb05hclNoYWTbEAwBElNXX0ZyZWlnaHRlclRvTm9uZdsQDAETU1dfRnJlaWdodERlcmVsaWN0MdsQDAEWU1dfRnJlaWdodGVyVG9EZXJlbGljdNsQDAERU1dfRnJlaWdodGVyVG9Mb2vbEAwBClNXX1BsYW5Mb2vbEAUBRwpTV19MVFNQRUVEAiAxDAESU1dfRnJlaWdodFBsYW5EYXRo2xAMARJTV19GcmVpZ2h0UGxhbkthc2jbEAwBElNXX0ZyZWlnaHRQbGFuSG90aNsQDAETU1dfRnJlaWdodFBsYW5HYW1vctsQDAETU1dfRnJlaWdodGVyUGxhblRhdNsQDAESU1dfRnJlaWdodFBsYW5EYW502xAMARFTV19GcmVpZ2h0UGxhbk5hctsQDAESU1dfRnJlaWdodFBsYW5NYW5h2hAMARJTV19GcmVpZ2h0UGxhbk00NzjbEAwBE1NXX0ZyZWlnaHRQbGFuVGFyaXPbEAwBE1NXX0ZyZWlnaHREZXJlbGljdDHbEAcBAQAQIQBZb3UgYXJlIGFscmVhZHkgbGFuZGVkIG9uIE1hbmFhbiEAAAkBCQEBAQ==",
+    "bytecode": "KLUv/QBYFQsAJtE+NGCJ0wEwDLsDQRAEQRAEwRV/bx8rUbn69shrgfvTvHUP8fQMfaDDkN27BqbWUJml0rh+2QI1AC8AMQA0ejrQYCmtQxNOcBsceCRIKAywDAmFLRbLSHGa1S2Ci5RBAMMRhG1M2GLhd+DAk7UNSVpUBEu9DsTRZ5ClXrfV2VDR+TmGcp+51V8SItEGeqZgqTfqv78heBZZ6nWxuTlr/5pZGI2gZ/oSq371JTbhxXW5YDDTeDrQgVlGX2KeDnRMzWNSITgZabwgk1Np3yA9p6tsXrs77SRJFvdkLWp9ySLtkcpzpOfQfJCsJ+0GQBYUKqP3N32JnfOoXdVnfRktIMDCGzIPwZLxVBnAPk0VEwD7biiSMyiChZk1HrbLZkkyvT+2ZY0HEqBQC97wsXLgW+Lxui0SPrPXDUTpCa9+DAkjuyv2xkpGKPIhLyPoJDzixNyyXzIXbh6kZe7mMjar3dID",
     "text": "Begin SW_FTravelManaan\n\nIf ( OnActivate == 1 )\n\tIf ( FreightTravel != 20 )\n\t\tSet FreightTravel to 20\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\t\tSW_FreighterToDantooine->Disable\n\t\t\tSW_FreighterToTatooine->Disable\n\t\t\tSW_FreighterToManaan->Enable\n\t\t\tSW_FreighterToKashyyk->Disable\n\t\t\tSW_FreighterToDathomir->Disable\n\t\t\tSW_FreighterToGamorr->Disable\n\t\t\tSW_FreighterToHoth->Disable\n\t\t\tSW_FreighterToTaris->Disable\n\t\t\tSW_FreighterToM4->Disable\n\t\t\tSW_FreighterToNarShad->Disable\n\t\t\tSW_FreighterToNone->Disable\n\t\t\tSW_FreightDerelict1->Disable\n\t\t\tSW_FreighterToDerelict->Disable\n\t\t\tSW_FreighterToLok->Disable\n\t\t\tSet SW_LTSPEED to 1\n\t\t\tSW_FreightPlanDath->Disable\n\t\t\tSW_FreightPlanKash->Disable\n\t\t\tSW_FreightPlanHoth->Disable\n\t\t\tSW_FreightPlanGamor->Disable\n\t\t\tSW_FreighterPlanTat->Disable\n\t\t\tSW_FreightPlanDant->Disable\n\t\t\tSW_FreightPlanNar->Disable\n\t\t\tSW_FreightPlanMana->Enable\n\t\t\tSW_FreightPlanM478->Disable\n\t\t\tSW_FreightPlanTaris->Disable\n\t\t\tSW_FreightDerelict1->Disable\n\telse\n\t\tMessageBox \"You are already landed on Manaan!\"\n\tendif\nEndif\n\nEnd"
   },
   {
     "type": "Script",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_FTravelNarShaddaa",
     "header": {
       "num_shorts": 0,
@@ -234,13 +251,15 @@
       "bytecode_length": 692,
       "variables_length": 0
     },
-    "variables": "AAAAAA==",
-    "bytecode": "tAIAAAYBHgkgWBgQID09IDEGARoWIEcNRnJlaWdodFRyYXZlbCAhPSAyNQUBRw1GcmVpZ2h0VHJhdmVsAyAyNSwRD1NoaXBUcmF2ZWxTb3VuZAwBF1NXX0ZyZWlnaHRlclRvRGFudG9vaW5l2xAMARZTV19GcmVpZ2h0ZXJUb1RhdG9vaW5l2xAMARRTV19GcmVpZ2h0ZXJUb01hbmFhbtsQDAEVU1dfRnJlaWdodGVyVG9LYXNoeXlr2xAMARZTV19GcmVpZ2h0ZXJUb0RhdGhvbWly2xAMARRTV19GcmVpZ2h0ZXJUb0dhbW9yctsQDAESU1dfRnJlaWdodGVyVG9Ib3Ro2xAMARNTV19GcmVpZ2h0ZXJUb1Rhcmlz2xAMARBTV19GcmVpZ2h0ZXJUb0002xAMARVTV19GcmVpZ2h0ZXJUb05hclNoYWTaEAwBElNXX0ZyZWlnaHRlclRvTm9uZdsQDAERU1dfRnJlaWdodGVyVG9Mb2vbEAwBClNXX1BsYW5Mb2vbEAUBRwpTV19MVFNQRUVEAiAxDAESU1dfRnJlaWdodFBsYW5EYXRo2xAMARJTV19GcmVpZ2h0UGxhbkthc2jbEAwBElNXX0ZyZWlnaHRQbGFuSG90aNsQDAETU1dfRnJlaWdodFBsYW5HYW1vctsQDAETU1dfRnJlaWdodGVyUGxhblRhdNsQDAESU1dfRnJlaWdodFBsYW5EYW502xAMARFTV19GcmVpZ2h0UGxhbk5hctoQDAESU1dfRnJlaWdodFBsYW5NYW5h2xAMARJTV19GcmVpZ2h0UGxhbk00NzjbEAwBE1NXX0ZyZWlnaHRQbGFuVGFyaXPbEAcBAQAQJgBZb3UgYXJlIGFscmVhZHkgbGFuZGVkIG9uIE5hciBTaGFkZGFhIQAACQEJAQEB",
+    "bytecode": "KLUv/QBYhQoAJlE+NFCFKh10ZmZKV1VVVdVKDOQWbPKPx/H9JudlwJyUEAqMW3CDo1cnjkBLwjZAWh/hMYBGkgQ1AC8AMAA1fjwPYSfYIvoAZPIVQBouFRZYxqXCmAnPGOAV0yRFFisEgYYlCtugMAbDLkGCHQvbkKSFgJPbQlk9FtnJbVKjEVStFHRNzUBUaq8qRiMZ+uZgJ7f13+8YHJPs5LbYGaVav6JYtyBaU9qx/rxC3/TnRb3qz4vCiyqTuR7G+XjeQ7OM/rw+nvegHAi1BsDLV29ZOm4Du+tYhyRNfggvH9db3JRhhP3JI/hY5znWs4hOSAxO2h2IPDhYqPc7/XnVJyDgwiO6AWczKLdstIB7YXH5bpYLhngc7M0yup3AUGABcEmAoga8YaXLt8TjQi1WMn2xFsqLlZK2LneUfOXGliY8isTcsiuZB27+0jK6uYrNaif0",
     "text": "Begin SW_FTravelNarShaddaa\n\nIf ( OnActivate == 1 )\n\tIf ( FreightTravel != 25 )\n\t\tSet FreightTravel to 25\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\t\tSW_FreighterToDantooine->Disable\n\t\t\tSW_FreighterToTatooine->Disable\n\t\t\tSW_FreighterToManaan->Disable\n\t\t\tSW_FreighterToKashyyk->Disable\n\t\t\tSW_FreighterToDathomir->Disable\n\t\t\tSW_FreighterToGamorr->Disable\n\t\t\tSW_FreighterToHoth->Disable\n\t\t\tSW_FreighterToTaris->Disable\n\t\t\tSW_FreighterToM4->Disable\n\t\t\tSW_FreighterToNarShad->Enable\n\t\t\tSW_FreighterToNone->Disable\n\t\t\tSW_FreighterToLok->Disable\n\t\t\tSet SW_LTSPEED to 1\n\t\t\tSW_FreightPlanDath->Disable\n\t\t\tSW_FreightPlanKash->Disable\n\t\t\tSW_FreightPlanHoth->Disable\n\t\t\tSW_FreightPlanGamor->Disable\n\t\t\tSW_FreighterPlanTat->Disable\n\t\t\tSW_FreightPlanDant->Disable\n\t\t\tSW_FreightPlanNar->Enable\n\t\t\tSW_FreightPlanMana->Disable\n\t\t\tSW_FreightPlanM478->Disable\n\t\t\tSW_FreightPlanTaris->Disable\n\telse\n\t\tMessageBox \"You are already landed on Nar Shaddaa!\"\n\tendif\nEndif\n\nEnd"
   },
   {
     "type": "Script",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_FTravelTaris",
     "header": {
       "num_shorts": 1,
@@ -249,13 +268,16 @@
       "bytecode_length": 711,
       "variables_length": 9
     },
-    "variables": "CQAAAE1hZ2ljVmFyAA==",
-    "bytecode": "xwIAAAYBAgkgcwEAID09IDDbEAUBcwEAAiAxCQEGAR4JIFgYECA9PSAxBgEaFiBHDUZyZWlnaHRUcmF2ZWwgIT0gNDAFAUcNRnJlaWdodFRyYXZlbAMgNDAsEQ9TaGlwVHJhdmVsU291bmQMARdTV19GcmVpZ2h0ZXJUb0RhbnRvb2luZdsQDAEWU1dfRnJlaWdodGVyVG9UYXRvb2luZdsQDAEUU1dfRnJlaWdodGVyVG9NYW5hYW7bEAwBFVNXX0ZyZWlnaHRlclRvS2FzaHl5a9sQDAEWU1dfRnJlaWdodGVyVG9EYXRob21pctsQDAEUU1dfRnJlaWdodGVyVG9HYW1vcnLbEAwBElNXX0ZyZWlnaHRlclRvSG90aNsQDAETU1dfRnJlaWdodGVyVG9UYXJpc9oQDAEQU1dfRnJlaWdodGVyVG9NNNsQDAEVU1dfRnJlaWdodGVyVG9OYXJTaGFk2xAMARJTV19GcmVpZ2h0ZXJUb05vbmXbEAwBEVNXX0ZyZWlnaHRlclRvTG9r2xAMAQpTV19QbGFuTG9r2xAFAUcKU1dfTFRTUEVFRAIgMQwBElNXX0ZyZWlnaHRQbGFuRGF0aNsQDAESU1dfRnJlaWdodFBsYW5LYXNo2xAMARJTV19GcmVpZ2h0UGxhbkhvdGjbEAwBE1NXX0ZyZWlnaHRQbGFuR2Ftb3LbEAwBE1NXX0ZyZWlnaHRlclBsYW5UYXTbEAwBElNXX0ZyZWlnaHRQbGFuRGFudNsQDAERU1dfRnJlaWdodFBsYW5OYXLbEAwBElNXX0ZyZWlnaHRQbGFuTWFuYdsQDAESU1dfRnJlaWdodFBsYW5NNDc42xAMARNTV19GcmVpZ2h0UGxhblRhcmlz2hAHAQEAECAAWW91IGFyZSBhbHJlYWR5IGxhbmRlZCBvbiBUYXJpcyEAAAkBCQEBAQ==",
+    "variables": "KLUv/QBYaQAACQAAAE1hZ2ljVmFyAA==",
+    "bytecode": "KLUv/QBY7QoABtJANFCFOB10VuzMzMzMzCwC2Mgt2EqUn7D85V8BwZI1AwgbUcHwijPJlGgTQyja36fhIkY3uQM0ADMAMwA8sIrIxBSEpxzwenEZAE1WiAIKPxZ2IWGKYqggwRDDLhaS8PN2WwXsIkxR/HZj6NnFew+BlW5OqdqGZtyrAJ1Otr2CsBHs+u9fDn49NoKdbI1Srl/Rq0pNJiZshDWHRgFaFg0aDZEp/WlJr/rTkvBTTSZWvCyaTGRQVtGfliYTGdTSoBgJexbrMdMFbgQLbFr95dgIdhlHI6Qauwst9B6EmzImsf7kDnZZ51nWM4dOPIZvl8Dx4DBJ71/60zqmwfUr7ld/WtsrAScg0MIjsgNZFH92BuXORhNw7y0ONYKFnc2hEqN3AsMCBcB9AjS1wesCVkK6JR8X3qKS6ccaEWNNhQQvyQgtH7mxxQmPIjGX7JTMh5sHaRndXMamod2JAg==",
     "text": "Begin SW_FTravelTaris\n\nShort MagicVar\n\nIf ( MagicVar == 0 )\n\tDisable\n\tSet MagicVar to 1\nEndif\n\nIf ( OnActivate == 1 )\n\tIf ( FreightTravel != 40 )\n\t\tSet FreightTravel to 40\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\t\tSW_FreighterToDantooine->Disable\n\t\t\tSW_FreighterToTatooine->Disable\n\t\t\tSW_FreighterToManaan->Disable\n\t\t\tSW_FreighterToKashyyk->Disable\n\t\t\tSW_FreighterToDathomir->Disable\n\t\t\tSW_FreighterToGamorr->Disable\n\t\t\tSW_FreighterToHoth->Disable\n\t\t\tSW_FreighterToTaris->Enable\n\t\t\tSW_FreighterToM4->Disable\n\t\t\tSW_FreighterToNarShad->Disable\n\t\t\tSW_FreighterToNone->Disable\n\t\t\tSW_FreighterToLok->Disable\n\t\t\tSet SW_LTSPEED to 1\n\t\t\tSW_FreightPlanDath->Disable\n\t\t\tSW_FreightPlanKash->Disable\n\t\t\tSW_FreightPlanHoth->Disable\n\t\t\tSW_FreightPlanGamor->Disable\n\t\t\tSW_FreighterPlanTat->Disable\n\t\t\tSW_FreightPlanDant->Disable\n\t\t\tSW_FreightPlanNar->Disable\n\t\t\tSW_FreightPlanMana->Disable\n\t\t\tSW_FreightPlanM478->Disable\n\t\t\tSW_FreightPlanTaris->Enable\n\telse\n\t\tMessageBox \"You are already landed on Taris!\"\n\tendif\nEndif\n\nEnd\n"
   },
   {
     "type": "Script",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_FTravelTatooine",
     "header": {
       "num_shorts": 0,
@@ -264,19 +286,16 @@
       "bytecode_length": 687,
       "variables_length": 0
     },
-    "variables": "AAAAAA==",
-    "bytecode": "rwIAAAYBHgkgWBgQID09IDEGARoVIEcNRnJlaWdodFRyYXZlbCAhPSA1BQFHDUZyZWlnaHRUcmF2ZWwCIDUsEQ9TaGlwVHJhdmVsU291bmQMARdTV19GcmVpZ2h0ZXJUb0RhbnRvb2luZdsQDAEWU1dfRnJlaWdodGVyVG9UYXRvb2luZdoQDAEUU1dfRnJlaWdodGVyVG9NYW5hYW7bEAwBFVNXX0ZyZWlnaHRlclRvS2FzaHl5a9sQDAEWU1dfRnJlaWdodGVyVG9EYXRob21pctsQDAEUU1dfRnJlaWdodGVyVG9HYW1vcnLbEAwBElNXX0ZyZWlnaHRlclRvSG90aNsQDAETU1dfRnJlaWdodGVyVG9UYXJpc9sQDAEQU1dfRnJlaWdodGVyVG9NNNsQDAEVU1dfRnJlaWdodGVyVG9OYXJTaGFk2xAMARJTV19GcmVpZ2h0ZXJUb05vbmXbEAwBEVNXX0ZyZWlnaHRlclRvTG9r2xAMAQpTV19QbGFuTG9r2xAFAUcKU1dfTFRTUEVFRAIgMQwBElNXX0ZyZWlnaHRQbGFuRGF0aNsQDAESU1dfRnJlaWdodFBsYW5LYXNo2xAMARJTV19GcmVpZ2h0UGxhbkhvdGjbEAwBE1NXX0ZyZWlnaHRQbGFuR2Ftb3LbEAwBE1NXX0ZyZWlnaHRlclBsYW5UYXTaEAwBElNXX0ZyZWlnaHRQbGFuRGFudNsQDAERU1dfRnJlaWdodFBsYW5OYXLbEAwBElNXX0ZyZWlnaHRQbGFuTWFuYdsQDAESU1dfRnJlaWdodFBsYW5NNDc42xAMARNTV19GcmVpZ2h0UGxhblRhcmlz2xAHAQEAECMAWW91IGFyZSBhbHJlYWR5IGxhbmRlZCBvbiBUYXRvb2luZSEAAAkBCQEBAQ==",
+    "bytecode": "KLUv/QBYZQoAtpA8MWCp0gEhCIIQQRAEUeo4uW9M/sEYbzaabukvBjgJjLN19acbgURZI3M0sWPXuA6PyB0zAC4ALgBVejqxYN/VIRonMiwKPBQqLO2iwhYJT0nxamlYRCZrQwCGIwfLmLDFwtDggRsIy3BOqggWZB/cMI06TLXSzzFbzT4U005JiEQY6JnIPrj1398M7IOjWwT74CY7o1TrU9QK/VmBnunPajrVn9WEJepyqaKl8XSiA7OL/qw8neigmgflTNexWM+hbOA+uIGy+rvb2IZzEm7Kl7z6k0XXZZ1nWc8hCuESoNsFgDAsUKb3N/1ZnfPQ+tRIuxUnIODCG7INQZHkz2SQ3NgoAewti0NBMGFlsxKP6TiDgUAD4JYAlVrwuh4roW/Jjgu1aMn0sEYEWFMpwesyQstHLmyBd6JIzE32SO1j2KcMq9xMxTqzE2U=",
     "text": "Begin SW_FTravelTatooine\n\nIf ( OnActivate == 1 )\n\tIf ( FreightTravel != 5 )\n\t\tSet FreightTravel to 5\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\t\tSW_FreighterToDantooine->Disable\n\t\t\tSW_FreighterToTatooine->Enable\n\t\t\tSW_FreighterToManaan->Disable\n\t\t\tSW_FreighterToKashyyk->Disable\n\t\t\tSW_FreighterToDathomir->Disable\n\t\t\tSW_FreighterToGamorr->Disable\n\t\t\tSW_FreighterToHoth->Disable\n\t\t\tSW_FreighterToTaris->Disable\n\t\t\tSW_FreighterToM4->Disable\n\t\t\tSW_FreighterToNarShad->Disable\n\t\t\tSW_FreighterToNone->Disable\n\t\t\tSW_FreighterToLok->Disable\n\t\t\tSet SW_LTSPEED to 1\n\t\t\tSW_FreightPlanDath->Disable\n\t\t\tSW_FreightPlanKash->Disable\n\t\t\tSW_FreightPlanHoth->Disable\n\t\t\tSW_FreightPlanGamor->Disable\n\t\t\tSW_FreighterPlanTat->Enable\n\t\t\tSW_FreightPlanDant->Disable\n\t\t\tSW_FreightPlanNar->Disable\n\t\t\tSW_FreightPlanMana->Disable\n\t\t\tSW_FreightPlanM478->Disable\n\t\t\tSW_FreightPlanTaris->Disable\n\telse\n\t\tMessageBox \"You are already landed on Tatooine!\"\n\tendif\nEndif\n\nEnd\n"
   },
   {
     "type": "Weapon",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_DisruptPistol",
-    "name": "Disruptor Pistols",
-    "script": "",
-    "mesh": "Ig\\Weapons\\DisruptorPistol.nif",
-    "icon": "Ig\\BlasterPistols.dds",
-    "enchanting": "",
     "data": {
       "weight": 5.0,
       "value": 1500,
@@ -291,18 +310,19 @@
       "slash_max": 35,
       "thrust_min": 4,
       "thrust_max": 45,
-      "flags": ""
-    }
+      "flags": 0
+    },
+    "mesh": "Ig\\Weapons\\DisruptorPistol.nif",
+    "name": "Disruptor Pistols",
+    "icon": "Ig\\BlasterPistols.dds"
   },
   {
     "type": "Weapon",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_DocsPistols",
-    "name": "Doc's Bowcaster",
-    "script": "",
-    "mesh": "Ig\\Weapons\\bowcastunique.nif",
-    "icon": "Ig\\BowcasterUni.dds",
-    "enchanting": "",
     "data": {
       "weight": 8.0,
       "value": 1500,
@@ -317,18 +337,19 @@
       "slash_max": 30,
       "thrust_min": 8,
       "thrust_max": 40,
-      "flags": ""
-    }
+      "flags": 0
+    },
+    "mesh": "Ig\\Weapons\\bowcastunique.nif",
+    "name": "Doc's Bowcaster",
+    "icon": "Ig\\BowcasterUni.dds"
   },
   {
     "type": "Weapon",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_PistolBlastArk",
-    "name": "Arkanian Blaster Pistol",
-    "script": "",
-    "mesh": "Ig\\Weapons\\PistTest3.nif",
-    "icon": "Ig\\Pis3.dds",
-    "enchanting": "SW_SanctPist3",
     "data": {
       "weight": 8.0,
       "value": 1500,
@@ -343,18 +364,20 @@
       "slash_max": 20,
       "thrust_min": 1,
       "thrust_max": 25,
-      "flags": ""
-    }
+      "flags": 0
+    },
+    "mesh": "Ig\\Weapons\\PistTest3.nif",
+    "name": "Arkanian Blaster Pistol",
+    "icon": "Ig\\Pis3.dds",
+    "enchanting": "SW_SanctPist3"
   },
   {
     "type": "Weapon",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_PistolBlastEch",
-    "name": "Disruptor Pistol",
-    "script": "",
-    "mesh": "Ig\\Weapons\\PistTest2.nif",
-    "icon": "Ig\\Pis2.dds",
-    "enchanting": "SW_SanctPist2",
     "data": {
       "weight": 8.0,
       "value": 600,
@@ -369,96 +392,20 @@
       "slash_max": 15,
       "thrust_min": 1,
       "thrust_max": 15,
-      "flags": ""
-    }
+      "flags": 0
+    },
+    "mesh": "Ig\\Weapons\\PistTest2.nif",
+    "name": "Disruptor Pistol",
+    "icon": "Ig\\Pis2.dds",
+    "enchanting": "SW_SanctPist2"
   },
   {
     "type": "Weapon",
-    "flags": "",
-    "id": "SW_PistolBlastStrong",
-    "name": "Pistol Blaster",
-    "script": "",
-    "mesh": "Ig\\Weapons\\PistTest1.nif",
-    "icon": "Ig\\Pis1.dds",
-    "enchanting": "SW_SanctPist3",
-    "data": {
-      "weight": 8.0,
-      "value": 1500,
-      "weapon_type": "MarksmanBow",
-      "health": 800,
-      "speed": 6.0,
-      "reach": 10.0,
-      "enchantment": 80,
-      "chop_min": 3,
-      "chop_max": 20,
-      "slash_min": 3,
-      "slash_max": 20,
-      "thrust_min": 2,
-      "thrust_max": 25,
-      "flags": ""
-    }
-  },
-  {
-    "type": "Weapon",
-    "flags": "",
-    "id": "SW_PistolBlastStrongUn",
-    "name": "Pistol Blaster",
-    "script": "",
-    "mesh": "Ig\\Weapons\\PistTest1.nif",
-    "icon": "Ig\\Pis1.dds",
-    "enchanting": "",
-    "data": {
-      "weight": 8.0,
-      "value": 4500,
-      "weapon_type": "MarksmanBow",
-      "health": 800,
-      "speed": 6.0,
-      "reach": 10.0,
-      "enchantment": 80,
-      "chop_min": 3,
-      "chop_max": 20,
-      "slash_min": 3,
-      "slash_max": 20,
-      "thrust_min": 2,
-      "thrust_max": 25,
-      "flags": ""
-    }
-  },
-  {
-    "type": "Weapon",
-    "flags": "",
-    "id": "SW_PistolBlastUni",
-    "name": "Pistol Blaster",
-    "script": "",
-    "mesh": "Ig\\Weapons\\PistTest4.nif",
-    "icon": "Ig\\Pis4.dds",
-    "enchanting": "SW_SanctPist4",
-    "data": {
-      "weight": 8.0,
-      "value": 1500,
-      "weapon_type": "MarksmanBow",
-      "health": 800,
-      "speed": 6.0,
-      "reach": 10.0,
-      "enchantment": 80,
-      "chop_min": 3,
-      "chop_max": 20,
-      "slash_min": 3,
-      "slash_max": 32,
-      "thrust_min": 2,
-      "thrust_max": 25,
-      "flags": ""
-    }
-  },
-  {
-    "type": "Weapon",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_PistolBlaster",
-    "name": "Blaster Pistol",
-    "script": "",
-    "mesh": "Ig\\Weapons\\PistTest1.nif",
-    "icon": "Ig\\Pis1.dds",
-    "enchanting": "SW_SanctPist1",
     "data": {
       "weight": 8.0,
       "value": 100,
@@ -473,25 +420,103 @@
       "slash_max": 8,
       "thrust_min": 1,
       "thrust_max": 10,
-      "flags": ""
-    }
+      "flags": 0
+    },
+    "mesh": "Ig\\Weapons\\PistTest1.nif",
+    "name": "Blaster Pistol",
+    "icon": "Ig\\Pis1.dds",
+    "enchanting": "SW_SanctPist1"
+  },
+  {
+    "type": "Weapon",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "SW_PistolBlastStrong",
+    "data": {
+      "weight": 8.0,
+      "value": 1500,
+      "weapon_type": "MarksmanBow",
+      "health": 800,
+      "speed": 6.0,
+      "reach": 10.0,
+      "enchantment": 80,
+      "chop_min": 3,
+      "chop_max": 20,
+      "slash_min": 3,
+      "slash_max": 20,
+      "thrust_min": 2,
+      "thrust_max": 25,
+      "flags": 0
+    },
+    "mesh": "Ig\\Weapons\\PistTest1.nif",
+    "name": "Pistol Blaster",
+    "icon": "Ig\\Pis1.dds",
+    "enchanting": "SW_SanctPist3"
+  },
+  {
+    "type": "Weapon",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "SW_PistolBlastStrongUn",
+    "data": {
+      "weight": 8.0,
+      "value": 4500,
+      "weapon_type": "MarksmanBow",
+      "health": 800,
+      "speed": 6.0,
+      "reach": 10.0,
+      "enchantment": 80,
+      "chop_min": 3,
+      "chop_max": 20,
+      "slash_min": 3,
+      "slash_max": 20,
+      "thrust_min": 2,
+      "thrust_max": 25,
+      "flags": 0
+    },
+    "mesh": "Ig\\Weapons\\PistTest1.nif",
+    "name": "Pistol Blaster",
+    "icon": "Ig\\Pis1.dds"
+  },
+  {
+    "type": "Weapon",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "SW_PistolBlastUni",
+    "data": {
+      "weight": 8.0,
+      "value": 1500,
+      "weapon_type": "MarksmanBow",
+      "health": 800,
+      "speed": 6.0,
+      "reach": 10.0,
+      "enchantment": 80,
+      "chop_min": 3,
+      "chop_max": 20,
+      "slash_min": 3,
+      "slash_max": 32,
+      "thrust_min": 2,
+      "thrust_max": 25,
+      "flags": 0
+    },
+    "mesh": "Ig\\Weapons\\PistTest4.nif",
+    "name": "Pistol Blaster",
+    "icon": "Ig\\Pis4.dds",
+    "enchanting": "SW_SanctPist4"
   },
   {
     "type": "Armor",
-    "flags": "",
-    "id": "SW_JunkyardHelm",
-    "name": "Junkyard Helm",
-    "script": "NoHelmetAllowed",
-    "mesh": "Ig\\Armor\\JunkYHelm.nif",
-    "icon": "Ig\\JunkHelm.dds",
-    "enchanting": "",
-    "biped_objects": [
-      {
-        "biped_object_type": "Head",
-        "male_bodypart": "SW_JunkHelmBP",
-        "female_bodypart": ""
-      }
+    "flags": [
+      0,
+      0
     ],
+    "id": "SW_JunkyardHelm",
     "data": {
       "armor_type": "Helmet",
       "weight": 4.0,
@@ -499,6 +524,17 @@
       "health": 800,
       "enchantment": 60,
       "armor_rating": 22
-    }
+    },
+    "name": "Junkyard Helm",
+    "mesh": "Ig\\Armor\\JunkYHelm.nif",
+    "icon": "Ig\\JunkHelm.dds",
+    "script": "NoHelmetAllowed",
+    "biped_objects": [
+      {
+        "biped_object_type": "Head",
+        "male_bodypart": "SW_JunkHelmBP",
+        "female_bodypart": null
+      }
+    ]
   }
 ]

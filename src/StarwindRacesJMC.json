@@ -1,12 +1,15 @@
 [
   {
     "type": "Header",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "version": 1.3,
     "file_type": "Esp",
     "author": "",
     "description": "",
-    "num_objects": 30,
+    "num_objects": 37,
     "masters": [
       [
         "Morrowind.esm",
@@ -36,30 +39,43 @@
   },
   {
     "type": "Race",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_Quar",
     "name": "Quarren",
-    "spells": [
-      "argonian breathing"
-    ],
-    "description": "",
     "data": {
-      "skill_bonuses": {
-        "skill_0": "Conjuration",
-        "bonus_0": 10,
-        "skill_1": "Spear",
-        "bonus_1": 5,
-        "skill_2": "LightArmor",
-        "bonus_2": 5,
-        "skill_3": "Athletics",
-        "bonus_3": 10,
-        "skill_4": "HandToHand",
-        "bonus_4": 5,
-        "skill_5": "None",
-        "bonus_5": 0,
-        "skill_6": "None",
-        "bonus_6": 0
-      },
+      "skill_bonuses": [
+        [
+          "Conjuration",
+          10
+        ],
+        [
+          "Spear",
+          5
+        ],
+        [
+          "LightArmor",
+          5
+        ],
+        [
+          "Athletics",
+          10
+        ],
+        [
+          "HandToHand",
+          5
+        ],
+        [
+          "None",
+          0
+        ],
+        [
+          "None",
+          0
+        ]
+      ],
       "strength": [
         40,
         40
@@ -100,18 +116,23 @@
         1.0,
         1.0
       ],
-      "flags": "PLAYABLE"
-    }
+      "flags": 1
+    },
+    "spells": [
+      "argonian breathing"
+    ]
   },
   {
     "type": "Container",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_Chest_QuarSpeederMer",
     "name": "Chest",
-    "script": "",
     "mesh": "Ig\\Activators\\chestfuture.nif",
     "encumbrance": 200.0,
-    "container_flags": "IS_BASE",
+    "container_flags": 8,
     "inventory": [
       [
         -1,
@@ -137,13 +158,15 @@
   },
   {
     "type": "Container",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_Chest_Vhadeer",
     "name": "Chest",
-    "script": "",
     "mesh": "Ig\\Activators\\chestfuture.nif",
     "encumbrance": 200.0,
-    "container_flags": "IS_BASE",
+    "container_flags": 8,
     "inventory": [
       [
         -1,
@@ -310,20 +333,20 @@
         "SW_PowerWrench"
       ],
       [
-        -4,
-        "SW_RWristBlaster"
-      ],
-      [
-        -1,
-        "SW_RWristBlaster2"
-      ],
-      [
         -10,
         "SW_RepairKit"
       ],
       [
         -2,
         "SW_Revolver"
+      ],
+      [
+        -4,
+        "SW_RWristBlaster"
+      ],
+      [
+        -1,
+        "SW_RWristBlaster2"
       ],
       [
         -4,
@@ -393,13 +416,15 @@
   },
   {
     "type": "Container",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_Chest_Yortal",
     "name": "Chest",
-    "script": "",
     "mesh": "Ig\\Activators\\chestfuture.nif",
     "encumbrance": 200.0,
-    "container_flags": "IS_BASE",
+    "container_flags": 8,
     "inventory": [
       [
         1,
@@ -445,11 +470,46 @@
   },
   {
     "type": "Creature",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_Vhadeer",
+    "data": {
+      "creature_type": 3,
+      "level": 25,
+      "strength": 100,
+      "intelligence": 100,
+      "willpower": 100,
+      "agility": 255,
+      "speed": 50,
+      "endurance": 100,
+      "personality": 100,
+      "luck": 255,
+      "health": 800,
+      "magicka": 200,
+      "fatigue": 600,
+      "soul_points": 400,
+      "combat": 80,
+      "magic": 80,
+      "steath": 20,
+      "attack1": [
+        25,
+        75
+      ],
+      "attack2": [
+        25,
+        75
+      ],
+      "attack3": [
+        25,
+        75
+      ],
+      "gold": 2000
+    },
     "name": "Vhadeer",
-    "script": "",
     "mesh": "r\\AscendedSleeper.NIF",
+    "creature_flags": 2120,
     "inventory": [
       [
         1,
@@ -616,16 +676,16 @@
         "SW_PowerWrench"
       ],
       [
+        -2,
+        "SW_Revolver"
+      ],
+      [
         -4,
         "SW_RWristBlaster"
       ],
       [
         -1,
         "SW_RWristBlaster2"
-      ],
-      [
-        -2,
-        "SW_Revolver"
       ],
       [
         -4,
@@ -700,261 +760,288 @@
       "fight": 30,
       "flee": 30,
       "alarm": 0,
-      "services": "BARTERS_WEAPONS | BARTERS_ARMOR | BARTERS_CLOTHING | BARTERS_BOOKS | BARTERS_INGREDIENTS | BARTERS_LOCKPICKS | BARTERS_PROBES | BARTERS_LIGHTS | BARTERS_APPARATUS | BARTERS_REPAIR_ITEMS | BARTERS_MISC_ITEMS | OFFERS_SPELLS | BARTERS_ENCHANTED_ITEMS | BARTERS_ALCHEMY | OFFERS_REPAIRS"
+      "services": 147455
     },
     "ai_packages": [],
-    "travel_destinations": [],
-    "sound": "",
-    "creature_flags": "IS_BASE | WALKS",
-    "blood_type": 2,
-    "data": {
-      "creature_type": "Humanoid",
-      "level": 25,
-      "strength": 100,
-      "intelligence": 100,
-      "willpower": 100,
-      "agility": 255,
-      "speed": 50,
-      "endurance": 100,
-      "personality": 100,
-      "luck": 255,
-      "health": 800,
-      "magicka": 200,
-      "fatigue": 600,
-      "soul": 400,
-      "combat": 80,
-      "magic": 80,
-      "stealth": 20,
-      "attack1": [
-        25,
-        75
-      ],
-      "attack2": [
-        25,
-        75
-      ],
-      "attack3": [
-        25,
-        75
-      ],
-      "gold": 2000
-    }
+    "travel_destinations": []
   },
   {
     "type": "Bodypart",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_QuarAnk",
-    "race": "SW_Quar",
-    "mesh": "QU\\QAnkle.nif",
     "data": {
       "part": "Ankle",
       "vampire": 0,
       "female": 0,
-      "bodypart_type": "Skin"
-    }
+      "part_type": "Skin"
+    },
+    "name": "SW_Quar",
+    "mesh": "QU\\QAnkle.nif"
   },
   {
     "type": "Bodypart",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_QuarFoAr",
-    "race": "SW_Quar",
-    "mesh": "QU\\QFore.nif",
     "data": {
       "part": "Forearm",
       "vampire": 0,
       "female": 0,
-      "bodypart_type": "Skin"
-    }
+      "part_type": "Skin"
+    },
+    "name": "SW_Quar",
+    "mesh": "QU\\QFore.nif"
   },
   {
     "type": "Bodypart",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_QuarFoot",
-    "race": "SW_Quar",
-    "mesh": "QU\\QFoot.nif",
     "data": {
       "part": "Foot",
       "vampire": 0,
       "female": 0,
-      "bodypart_type": "Skin"
-    }
+      "part_type": "Skin"
+    },
+    "name": "SW_Quar",
+    "mesh": "QU\\QFoot.nif"
   },
   {
     "type": "Bodypart",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_QuarGro",
-    "race": "SW_Quar",
-    "mesh": "Ig\\Body Parts\\IthGroin.nif",
     "data": {
       "part": "Groin",
       "vampire": 0,
       "female": 0,
-      "bodypart_type": "Skin"
-    }
+      "part_type": "Skin"
+    },
+    "name": "SW_Quar",
+    "mesh": "Ig\\Body Parts\\IthGroin.nif"
   },
   {
     "type": "Bodypart",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_QuarHand",
-    "race": "SW_Quar",
-    "mesh": "QU\\QSkin.nif",
     "data": {
       "part": "Hand",
       "vampire": 0,
       "female": 0,
-      "bodypart_type": "Skin"
-    }
+      "part_type": "Skin"
+    },
+    "name": "SW_Quar",
+    "mesh": "QU\\QSkin.nif"
   },
   {
     "type": "Bodypart",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_QuarHand.1st",
-    "race": "SW_Quar",
-    "mesh": "QU\\QHand.nif",
     "data": {
       "part": "Hand",
       "vampire": 0,
       "female": 0,
-      "bodypart_type": "Skin"
-    }
+      "part_type": "Skin"
+    },
+    "name": "SW_Quar",
+    "mesh": "QU\\QHand.nif"
   },
   {
     "type": "Bodypart",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_QuarHead",
-    "race": "SW_Quar",
-    "mesh": "QU\\QHead.nif",
     "data": {
       "part": "Head",
       "vampire": 0,
       "female": 0,
-      "bodypart_type": "Skin"
-    }
+      "part_type": "Skin"
+    },
+    "name": "SW_Quar",
+    "mesh": "QU\\QHead.nif"
   },
   {
     "type": "Bodypart",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_QuarHead2",
-    "race": "SW_Quar",
-    "mesh": "QU\\QHead2.nif",
     "data": {
       "part": "Head",
       "vampire": 0,
       "female": 0,
-      "bodypart_type": "Skin"
-    }
+      "part_type": "Skin"
+    },
+    "name": "SW_Quar",
+    "mesh": "QU\\QHead2.nif"
   },
   {
     "type": "Bodypart",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_QuarHead3",
-    "race": "SW_Quar",
-    "mesh": "QU\\QHead3.nif",
     "data": {
       "part": "Head",
       "vampire": 0,
       "female": 0,
-      "bodypart_type": "Skin"
-    }
+      "part_type": "Skin"
+    },
+    "name": "SW_Quar",
+    "mesh": "QU\\QHead3.nif"
   },
   {
     "type": "Bodypart",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_QuarHead4",
-    "race": "SW_Quar",
-    "mesh": "QU\\QHead4.nif",
     "data": {
       "part": "Head",
       "vampire": 0,
       "female": 0,
-      "bodypart_type": "Skin"
-    }
+      "part_type": "Skin"
+    },
+    "name": "SW_Quar",
+    "mesh": "QU\\QHead4.nif"
   },
   {
     "type": "Bodypart",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_QuarKnee",
-    "race": "SW_Quar",
-    "mesh": "QU\\QuarKnee.nif",
     "data": {
       "part": "Knee",
       "vampire": 0,
       "female": 0,
-      "bodypart_type": "Skin"
-    }
+      "part_type": "Skin"
+    },
+    "name": "SW_Quar",
+    "mesh": "QU\\QuarKnee.nif"
   },
   {
     "type": "Bodypart",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_QuarLeg",
-    "race": "SW_Quar",
-    "mesh": "QU\\QUL.nif",
     "data": {
       "part": "UpperLeg",
       "vampire": 0,
       "female": 0,
-      "bodypart_type": "Skin"
-    }
+      "part_type": "Skin"
+    },
+    "name": "SW_Quar",
+    "mesh": "QU\\QUL.nif"
   },
   {
     "type": "Bodypart",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_QuarNeck",
-    "race": "SW_Quar",
-    "mesh": "QU\\QNeck.nif",
     "data": {
       "part": "Neck",
       "vampire": 0,
       "female": 0,
-      "bodypart_type": "Skin"
-    }
+      "part_type": "Skin"
+    },
+    "name": "SW_Quar",
+    "mesh": "QU\\QNeck.nif"
   },
   {
     "type": "Bodypart",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_QuarTor",
-    "race": "SW_Quar",
-    "mesh": "QU\\QSkin.nif",
     "data": {
       "part": "Chest",
       "vampire": 0,
       "female": 0,
-      "bodypart_type": "Skin"
-    }
+      "part_type": "Skin"
+    },
+    "name": "SW_Quar",
+    "mesh": "QU\\QSkin.nif"
   },
   {
     "type": "Bodypart",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_QuarUArm",
-    "race": "SW_Quar",
-    "mesh": "QU\\QUA.nif",
     "data": {
       "part": "UpperArm",
       "vampire": 0,
       "female": 0,
-      "bodypart_type": "Skin"
-    }
+      "part_type": "Skin"
+    },
+    "name": "SW_Quar",
+    "mesh": "QU\\QUA.nif"
   },
   {
     "type": "Bodypart",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_QuarWrist",
-    "race": "SW_Quar",
-    "mesh": "QU\\QWrist.nif",
     "data": {
       "part": "Wrist",
       "vampire": 0,
       "female": 0,
-      "bodypart_type": "Skin"
-    }
+      "part_type": "Skin"
+    },
+    "name": "SW_Quar",
+    "mesh": "QU\\QWrist.nif"
   },
   {
     "type": "Npc",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_DipManagerNPC",
     "name": "Giz Cheern",
     "script": "nolore",
-    "mesh": "",
+    "race": "SW_Quar",
+    "class": "Smuggler",
+    "head": "SW_QuarHead",
+    "npc_flags": 24,
+    "data": {
+      "level": 25,
+      "stats": null,
+      "disposition": 50,
+      "reputation": 0,
+      "rank": 0,
+      "gold": 0
+    },
     "inventory": [
       [
         1,
@@ -967,32 +1054,33 @@
       "fight": 30,
       "flee": 30,
       "alarm": 0,
-      "services": ""
+      "services": 0
     },
     "ai_packages": [],
-    "travel_destinations": [],
-    "race": "SW_Quar",
-    "class": "Smuggler",
-    "faction": "",
-    "head": "SW_QuarHead",
-    "hair": "",
-    "npc_flags": "IS_BASE | AUTO_CALCULATE",
-    "blood_type": 0,
-    "data": {
-      "level": 25,
-      "disposition": 50,
-      "reputation": 0,
-      "rank": 0,
-      "gold": 0
-    }
+    "travel_destinations": []
   },
   {
     "type": "Npc",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_NarSpeederMerchNPC",
     "name": "Melchior",
-    "script": "nolore",
     "mesh": "base_anim.nif",
+    "script": "nolore",
+    "race": "SW_Quar",
+    "class": "Merchant",
+    "head": "SW_QuarHead",
+    "npc_flags": 24,
+    "data": {
+      "level": 25,
+      "stats": null,
+      "disposition": 50,
+      "reputation": 0,
+      "rank": 0,
+      "gold": 2000
+    },
     "inventory": [
       [
         1,
@@ -1013,32 +1101,32 @@
       "fight": 30,
       "flee": 30,
       "alarm": 0,
-      "services": ""
+      "services": 0
     },
     "ai_packages": [],
-    "travel_destinations": [],
-    "race": "SW_Quar",
-    "class": "Merchant",
-    "faction": "",
-    "head": "SW_QuarHead",
-    "hair": "",
-    "npc_flags": "IS_BASE | AUTO_CALCULATE",
-    "blood_type": 0,
-    "data": {
-      "level": 25,
-      "disposition": 50,
-      "reputation": 0,
-      "rank": 0,
-      "gold": 2000
-    }
+    "travel_destinations": []
   },
   {
     "type": "Npc",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_QuarrenNPC",
     "name": "Quarren",
     "script": "nolore",
-    "mesh": "",
+    "race": "SW_Quar",
+    "class": "Commoner",
+    "head": "SW_QuarHead",
+    "npc_flags": 24,
+    "data": {
+      "level": 1,
+      "stats": null,
+      "disposition": 50,
+      "reputation": 0,
+      "rank": 0,
+      "gold": 0
+    },
     "inventory": [
       [
         1,
@@ -1051,7 +1139,7 @@
       "fight": 30,
       "flee": 30,
       "alarm": 0,
-      "services": ""
+      "services": 0
     },
     "ai_packages": [
       {
@@ -1070,29 +1158,29 @@
         "reset": 1
       }
     ],
-    "travel_destinations": [],
-    "race": "SW_Quar",
-    "class": "Commoner",
-    "faction": "",
-    "head": "SW_QuarHead",
-    "hair": "",
-    "npc_flags": "IS_BASE | AUTO_CALCULATE",
-    "blood_type": 0,
-    "data": {
-      "level": 1,
-      "disposition": 50,
-      "reputation": 0,
-      "rank": 0,
-      "gold": 0
-    }
+    "travel_destinations": []
   },
   {
     "type": "Npc",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_VhadeerNPC",
     "name": "Vhadeer",
     "script": "nolore",
-    "mesh": "",
+    "race": "SW_Quar",
+    "class": "Merchant",
+    "head": "SW_QuarHead",
+    "npc_flags": 24,
+    "data": {
+      "level": 25,
+      "stats": null,
+      "disposition": 50,
+      "reputation": 0,
+      "rank": 0,
+      "gold": 2000
+    },
     "inventory": [],
     "spells": [
       "SW_SecuritySumGreater",
@@ -1106,56 +1194,25 @@
       "fight": 30,
       "flee": 30,
       "alarm": 0,
-      "services": "BARTERS_WEAPONS | BARTERS_ARMOR | BARTERS_CLOTHING | BARTERS_BOOKS | BARTERS_INGREDIENTS | BARTERS_LOCKPICKS | BARTERS_PROBES | BARTERS_LIGHTS | BARTERS_APPARATUS | BARTERS_REPAIR_ITEMS | BARTERS_MISC_ITEMS | OFFERS_SPELLS | BARTERS_ENCHANTED_ITEMS | BARTERS_ALCHEMY | OFFERS_REPAIRS"
+      "services": 147455
     },
     "ai_packages": [],
-    "travel_destinations": [],
-    "race": "SW_Quar",
-    "class": "Merchant",
-    "faction": "",
-    "head": "SW_QuarHead",
-    "hair": "",
-    "npc_flags": "IS_BASE | AUTO_CALCULATE",
-    "blood_type": 0,
-    "data": {
-      "level": 25,
-      "disposition": 50,
-      "reputation": 0,
-      "rank": 0,
-      "gold": 2000
-    }
+    "travel_destinations": []
   },
   {
     "type": "Npc",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_YortalNPC",
     "name": "Yortal",
-    "script": "nolore",
     "mesh": "base_anim.nif",
-    "inventory": [],
-    "spells": [
-      "sleep",
-      "distracting touch",
-      "Reflect",
-      "weak spelldrinker",
-      "blood despair"
-    ],
-    "ai_data": {
-      "hello": 30,
-      "fight": 30,
-      "flee": 30,
-      "alarm": 0,
-      "services": "BARTERS_LOCKPICKS | BARTERS_PROBES | BARTERS_REPAIR_ITEMS | BARTERS_ENCHANTED_ITEMS | OFFERS_REPAIRS"
-    },
-    "ai_packages": [],
-    "travel_destinations": [],
+    "script": "nolore",
     "race": "SW_Quar",
     "class": "Merchant",
-    "faction": "",
     "head": "SW_QuarHead",
-    "hair": "",
-    "npc_flags": "IS_BASE",
-    "blood_type": 1,
+    "npc_flags": 1032,
     "data": {
       "level": 25,
       "stats": {
@@ -1206,14 +1263,34 @@
       "reputation": 0,
       "rank": 0,
       "gold": 2000
-    }
+    },
+    "inventory": [],
+    "spells": [
+      "sleep",
+      "distracting touch",
+      "Reflect",
+      "weak spelldrinker",
+      "blood despair"
+    ],
+    "ai_data": {
+      "hello": 30,
+      "fight": 30,
+      "flee": 30,
+      "alarm": 0,
+      "services": 135776
+    },
+    "ai_packages": [],
+    "travel_destinations": []
   },
   {
     "type": "Cell",
-    "flags": "",
-    "name": "Lok, Graveridge Pawnshop",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Lok, Graveridge Pawnshop",
     "data": {
-      "flags": "IS_INTERIOR",
+      "flags": 1,
       "grid": [
         0,
         1065353216
@@ -1257,7 +1334,7 @@
           0.0,
           0.0
         ],
-        "deleted": true
+        "deleted": 0
       },
       {
         "mast_index": 0,
@@ -1296,10 +1373,13 @@
   },
   {
     "type": "Cell",
-    "flags": "",
-    "name": "Manaan, Yortal's Junkpile",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Manaan, Yortal's Junkpile",
     "data": {
-      "flags": "IS_INTERIOR",
+      "flags": 1,
       "grid": [
         0,
         1065353216
@@ -1343,7 +1423,7 @@
           0.0,
           0.0
         ],
-        "deleted": true
+        "deleted": 0
       },
       {
         "mast_index": 0,
@@ -1383,10 +1463,13 @@
   },
   {
     "type": "Cell",
-    "flags": "",
-    "name": "Nar Shaddaa",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Nar Shaddaa",
     "data": {
-      "flags": "IS_INTERIOR | HAS_WATER | BEHAVES_LIKE_EXTERIOR",
+      "flags": 131,
       "grid": [
         0,
         0
@@ -1410,7 +1493,7 @@
           0.0,
           0.0
         ],
-        "deleted": true
+        "deleted": 0
       },
       {
         "mast_index": 4,
@@ -1427,7 +1510,7 @@
           0.0,
           0.0
         ],
-        "deleted": true
+        "deleted": 0
       },
       {
         "mast_index": 0,
@@ -1465,10 +1548,13 @@
   },
   {
     "type": "Cell",
-    "flags": "",
-    "name": "Nar Shaddaa, 168 Alley East",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Nar Shaddaa, 168 Alley East",
     "data": {
-      "flags": "IS_INTERIOR",
+      "flags": 1,
       "grid": [
         0,
         1065353216
@@ -1512,7 +1598,7 @@
           0.0,
           0.0
         ],
-        "deleted": true
+        "deleted": 0
       },
       {
         "mast_index": 0,
@@ -1534,10 +1620,13 @@
   },
   {
     "type": "Cell",
-    "flags": "",
-    "name": "Nar Shaddaa, Office Building",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Nar Shaddaa, Office Building",
     "data": {
-      "flags": "IS_INTERIOR | RESTING_IS_ILLEGAL",
+      "flags": 5,
       "grid": [
         0,
         1065353216
@@ -1581,7 +1670,7 @@
           0.0,
           0.0
         ],
-        "deleted": true
+        "deleted": 0
       },
       {
         "mast_index": 0,
@@ -1603,10 +1692,13 @@
   },
   {
     "type": "Cell",
-    "flags": "",
-    "name": "Nar Shaddaa, Speeder Shop",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Nar Shaddaa, Speeder Shop",
     "data": {
-      "flags": "IS_INTERIOR | RESTING_IS_ILLEGAL",
+      "flags": 5,
       "grid": [
         0,
         1065353216
@@ -1650,7 +1742,7 @@
           0.0,
           0.0
         ],
-        "deleted": true
+        "deleted": 0
       },
       {
         "mast_index": 5,
@@ -1667,7 +1759,7 @@
           0.0,
           0.0
         ],
-        "deleted": true
+        "deleted": 0
       },
       {
         "mast_index": 0,
@@ -1706,14 +1798,20 @@
   },
   {
     "type": "Dialogue",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "Greeting 7",
     "dialogue_type": "Greeting"
   },
   {
-    "type": "DialogueInfo",
-    "flags": "",
-    "id": "962516807145627149",
+    "type": "Info",
+    "flags": [
+      0,
+      0
+    ],
+    "info_id": "962516807145627149",
     "prev_id": "234119748236129525",
     "next_id": "679168001388631897",
     "data": {
@@ -1724,20 +1822,17 @@
       "player_rank": -1
     },
     "speaker_id": "SW_WyyyschokkBoss",
-    "speaker_race": "",
-    "speaker_class": "",
-    "speaker_faction": "",
-    "speaker_cell": "",
-    "player_faction": "",
-    "sound_path": "",
     "text": "My merchandise comes straight from the planet Mon Cala!",
     "filters": [],
-    "script_text": "PlaySound \"oil bubbly\""
+    "result": "PlaySound \"oil bubbly\""
   },
   {
-    "type": "DialogueInfo",
-    "flags": "",
-    "id": "679168001388631897",
+    "type": "Info",
+    "flags": [
+      0,
+      0
+    ],
+    "info_id": "679168001388631897",
     "prev_id": "962516807145627149",
     "next_id": "421324247145021288",
     "data": {
@@ -1748,26 +1843,26 @@
       "player_rank": -1
     },
     "speaker_id": "SW_NarSpeederMerchNPC",
-    "speaker_race": "",
-    "speaker_class": "",
-    "speaker_faction": "",
-    "speaker_cell": "",
-    "player_faction": "",
-    "sound_path": "",
     "text": "Looking for some faster travel?",
     "filters": [],
-    "script_text": "PlaySound \"oil bubbly\""
+    "result": "PlaySound \"oil bubbly\""
   },
   {
     "type": "Dialogue",
-    "flags": "",
+    "flags": [
+      0,
+      0
+    ],
     "id": "Pazaak Killer",
     "dialogue_type": "Topic"
   },
   {
-    "type": "DialogueInfo",
-    "flags": "",
-    "id": "479311173073221874",
+    "type": "Info",
+    "flags": [
+      0,
+      0
+    ],
+    "info_id": "479311173073221874",
     "prev_id": "521230162896924231",
     "next_id": "252441278806514603",
     "data": {
@@ -1778,14 +1873,7 @@
       "player_rank": -1
     },
     "speaker_id": "SW_NarSpeederMerchNPC",
-    "speaker_race": "",
-    "speaker_class": "",
-    "speaker_faction": "",
-    "speaker_cell": "",
-    "player_faction": "",
-    "sound_path": "",
     "text": "Never heard of him, I don't leave my shop.",
-    "filters": [],
-    "script_text": ""
+    "filters": []
   }
 ]
