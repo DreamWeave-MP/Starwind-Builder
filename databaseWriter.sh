@@ -29,8 +29,6 @@ if [ "$1" = "espParser" ]; then
     zip -r9 ../../StarwindDB.zip data/custom/Starwind/
 
 elif [ "$1" = "DFL" ]; then
-    echo "Not yet supported due to DFL bug!"
-    exit 0
     mkdir -p scripts/custom/data-files-loader/ scripts/custom/data-files-loader/dependencies/ data/custom/DFL_input data/custom/DFL_output
 
     find ../../src -type f -name "*.json" -exec cp {} data/custom/DFL_input/ \;
