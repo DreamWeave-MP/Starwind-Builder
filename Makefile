@@ -19,8 +19,10 @@ plugins-bin:
 	find ./src -type f -name "*.json" -exec sh -c 'OUT_FILE="$$(echo "$$1" | sed "s/\.json$$/.esp/")"; tes3conv "$$1" "$$OUT_FILE"; mv "$$OUT_FILE" ./build/' sh {} \;
 
 plugins-text:
-	rm -rf StarwindMPRecords.omwaddon "Starwind Community Patch Project.omwaddon"
-	cp $$HOME/.local/share/openmw/data/StarwindMPRecords.omwaddon "$$HOME/.local/share/openmw/data/Starwind Community Patch Project.omwaddon" .
+	rm -rf Starwind.omwaddon StarwindMPRecords.omwaddon "Starwind Community Patch Project.omwaddon"
+	cp $$HOME/.local/share/openmw/data/Starwind.omwaddon \
+	$$HOME/.local/share/openmw/data/StarwindMPRecords.omwaddon \
+	"$$HOME/.local/share/openmw/data/Starwind Community Patch Project.omwaddon" .
 	find . -type f -name "*.omwaddon" -exec sh -c 'OUT_FILE="$$(echo "$$1" | sed "s/\.omwaddon$$/.json/")"; tes3conv "$$1" "$$OUT_FILE"; rm -rf src/"$$OUT_FILE"; mv "$$OUT_FILE" src/' sh {} \;
 
 deploy: clean plugins-text tsi
