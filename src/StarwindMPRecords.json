@@ -6,7 +6,7 @@
     "file_type": "Esp",
     "author": "tes3cmd",
     "description": "(generated)",
-    "num_objects": 77,
+    "num_objects": 79,
     "masters": [
       [
         "Morrowind.esm",
@@ -2161,74 +2161,6 @@
           ],
           "cell": "Nar Shaddaa, Vvardenfell Hanger"
         }
-      },
-      {
-        "mast_index": 4,
-        "refr_index": 49885,
-        "id": "SW_SignDockingBay",
-        "temporary": true,
-        "translation": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "deleted": true
-      },
-      {
-        "mast_index": 4,
-        "refr_index": 49889,
-        "id": "SW_DoorNar2",
-        "temporary": true,
-        "translation": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "deleted": true
-      },
-      {
-        "mast_index": 4,
-        "refr_index": 49890,
-        "id": "SW_Nar_Walkway",
-        "temporary": true,
-        "translation": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "deleted": true
-      },
-      {
-        "mast_index": 4,
-        "refr_index": 49891,
-        "id": "SW_Nar_Walkway",
-        "temporary": true,
-        "translation": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "deleted": true
       },
       {
         "mast_index": 0,
