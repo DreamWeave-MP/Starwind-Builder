@@ -6,7 +6,7 @@
     "file_type": "Esp",
     "author": "tes3cmd",
     "description": "(generated)",
-    "num_objects": 76,
+    "num_objects": 77,
     "masters": [
       [
         "Morrowind.esm",
@@ -22,9 +22,18 @@
       ],
       [
         "Starwind.omwaddon",
-        12843443
+        12791633
       ]
     ]
+  },
+  {
+    "type": "GameSetting",
+    "flags": "",
+    "id": "fAthleticsRunBonus",
+    "value": {
+      "type": "Float",
+      "data": 2.25
+    }
   },
   {
     "type": "Script",
