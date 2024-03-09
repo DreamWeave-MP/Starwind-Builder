@@ -27,7 +27,10 @@ deploy: clean plugins-text tsi
 	mv Starwind.omwaddon $$HOME/.local/share/openmw/data/
 
 test: deploy
+	rm -rf ~/openmw/tsi-client/server/data/cell/* ~/openmw/tsi-client/server/data/player/* ~/openmw/tsi-client/server/data/world/world.json
+	~/openmw/tsi-client/tes3mp-server &
 	~/openmw/tsi-client/tes3mp
+	kill -9 $$(pgrep tes3mp-server)
 
 edit-tsi: deploy
 	openmw-cs $$HOME/.local/share/openmw/data/Starwind.omwaddon
