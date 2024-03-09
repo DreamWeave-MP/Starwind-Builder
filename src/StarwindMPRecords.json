@@ -6,7 +6,7 @@
     "file_type": "Esp",
     "author": "tes3cmd",
     "description": "(generated)",
-    "num_objects": 72,
+    "num_objects": 76,
     "masters": [
       [
         "Morrowind.esm",
@@ -22,7 +22,7 @@
       ],
       [
         "Starwind.omwaddon",
-        12844123
+        12843443
       ]
     ]
   },
@@ -284,6 +284,36 @@
   {
     "type": "Script",
     "flags": "",
+    "id": "SW_YourARepubby",
+    "header": {
+      "num_shorts": 0,
+      "num_longs": 0,
+      "num_floats": 0,
+      "bytecode_length": 160,
+      "variables_length": 0
+    },
+    "variables": "AAAAAA==",
+    "bytecode": "oAAAAAYBAQkgWCAQID09IDEkAQkBBgEGCSBYGBAgPT0gMQYBAhkgRxFIYXNKb2luZWRSZXB1YmxpYyA9PSAxABBSAEVycm9yOiBTaXRoL1JlcHVibGljIHJlbGF0aW9ucyBhcmUgaGFuZGxlZCBhdCB0aGUgTWFuYWFuIENpdmlsIEF1dGhvcml0aWVzIE9mZmljZS4AACQBBwEBFxAJAQkBAQE=",
+    "text": "Begin SW_YourARepubby\n\nif ( OnActivate == 1 )\n\tif ( GetJournalIndex SW_Republic >= 5 )\n\t\tMessageBox \"Error: Sith/Republic relations are handled at the Manaan Civil Authorities Office.\"\n\t\treturn\n\telse\n\t\tunlock\n\t\tActivate\n\tendif\nendif\n\nEnd"
+  },
+  {
+    "type": "Script",
+    "flags": "",
+    "id": "SW_YourASith",
+    "header": {
+      "num_shorts": 0,
+      "num_longs": 0,
+      "num_floats": 0,
+      "bytecode_length": 156,
+      "variables_length": 0
+    },
+    "variables": "AAAAAA==",
+    "bytecode": "nAAAAAYBAQkgWCAQID09IDEkAQkBBgEGCSBYGBAgPT0gMQYBAhUgRw1IYXNKb2luZWRTaXRoID09IDEAEFIARXJyb3I6IFNpdGgvUmVwdWJsaWMgcmVsYXRpb25zIGFyZSBoYW5kbGVkIGF0IHRoZSBNYW5hYW4gQ2l2aWwgQXV0aG9yaXRpZXMgT2ZmaWNlLgAAJAEHAQEXEAkBCQEBAQ==",
+    "text": "Begin SW_YourASith\n\nif ( OnActivate == 1 )\n\tif ( GetJournalIndex SW_Sith >= 5 )\n\t\tMessageBox \"Error: Sith/Republic relations are handled at the Manaan Civil Authorities Office.\"\n\t\treturn\n\telse\n\t\tunlock\n\t\tActivate\n\tendif\nendif\n\nEnd"
+  },
+  {
+    "type": "Script",
+    "flags": "",
     "id": "dbattackScript",
     "header": {
       "num_shorts": 8,
@@ -469,6 +499,26 @@
     "name": "Ship Captain",
     "script": "Alt_Ship",
     "mesh": "Ig\\Static\\endarpodopen.nif",
+    "open_sound": "Door Metal Open",
+    "close_sound": "Door Metal Close"
+  },
+  {
+    "type": "Door",
+    "flags": "PERSISTENT",
+    "id": "SW_RepEntr2",
+    "name": "Metal Door",
+    "script": "SW_YourASith",
+    "mesh": "Ig\\Activators\\Door1.nif",
+    "open_sound": "Door Metal Open",
+    "close_sound": "Door Metal Close"
+  },
+  {
+    "type": "Door",
+    "flags": "PERSISTENT",
+    "id": "SW_SithEntr",
+    "name": "Metal Door",
+    "script": "SW_YourARepubby",
+    "mesh": "Ig\\Activators\\Door1.nif",
     "open_sound": "Door Metal Open",
     "close_sound": "Door Metal Close"
   },
@@ -1842,6 +1892,140 @@
           -0.0,
           2.9831884
         ]
+      }
+    ]
+  },
+  {
+    "type": "Cell",
+    "flags": "",
+    "name": "Manaan, Republic Embassy",
+    "data": {
+      "flags": "IS_INTERIOR",
+      "grid": [
+        0,
+        1065353216
+      ]
+    },
+    "water_height": 0.0,
+    "atmosphere_data": {
+      "ambient_color": [
+        53,
+        53,
+        53,
+        0
+      ],
+      "sunlight_color": [
+        241,
+        243,
+        245,
+        0
+      ],
+      "fog_color": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fog_density": 1.0
+    },
+    "references": [
+      {
+        "mast_index": 4,
+        "refr_index": 6771,
+        "id": "SW_RepEntr2",
+        "temporary": false,
+        "translation": [
+          3731.2415,
+          3352.7498,
+          15561.525
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.6415915
+        ],
+        "scale": 0.8,
+        "destination": {
+          "translation": [
+            3975.8188,
+            2838.129,
+            15654.057
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            3.1999996
+          ],
+          "cell": "Manaan, Republic Embassy"
+        },
+        "lock_level": 2147483647
+      }
+    ]
+  },
+  {
+    "type": "Cell",
+    "flags": "",
+    "name": "Manaan, Sith Embassy",
+    "data": {
+      "flags": "IS_INTERIOR",
+      "grid": [
+        0,
+        1065353216
+      ]
+    },
+    "water_height": 0.0,
+    "atmosphere_data": {
+      "ambient_color": [
+        53,
+        53,
+        53,
+        0
+      ],
+      "sunlight_color": [
+        241,
+        243,
+        243,
+        0
+      ],
+      "fog_color": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fog_density": 1.0
+    },
+    "references": [
+      {
+        "mast_index": 4,
+        "refr_index": 9107,
+        "id": "SW_SithEntr",
+        "temporary": false,
+        "translation": [
+          3920.7598,
+          5867.978,
+          12181.058
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.6415915
+        ],
+        "scale": 0.8,
+        "destination": {
+          "translation": [
+            4178.672,
+            5376.628,
+            12273.589
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            3.1
+          ],
+          "cell": "Manaan, Sith Embassy"
+        },
+        "lock_level": 2147483647
       }
     ]
   },
@@ -3402,8 +3586,92 @@
   {
     "type": "Dialogue",
     "flags": "",
+    "id": "join the Republic Fleet",
+    "dialogue_type": "Topic"
+  },
+  {
+    "type": "DialogueInfo",
+    "flags": "",
+    "id": "15705249231132812307",
+    "prev_id": "206522386490733809",
+    "next_id": "1851174171328522149",
+    "data": {
+      "dialogue_type": "Topic",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "SW_RepublicReceptionist",
+    "speaker_race": "",
+    "speaker_class": "",
+    "speaker_faction": "",
+    "speaker_cell": "",
+    "player_faction": "",
+    "sound_path": "",
+    "text": "Very well, then. You are now a %NextPCRank of the Republic Fleet, %PCName. I'll update the records here and unlock the door, go find Captain Shell upstairs in the barracks. Oh, and you'd best put on this uniform before you go talk to him.",
+    "filters": [
+      {
+        "slot": "Slot0",
+        "filter_type": "Function",
+        "function": "Choice",
+        "comparison": "Equal",
+        "id": "",
+        "value": {
+          "type": "Integer",
+          "data": 1
+        }
+      }
+    ],
+    "script_text": "PCRaiseRank\nModDisposition 5\nplayer->additem SW_RepCuirassQuest 1\nplayer->additem SW_ShirtBlack 1\nplayer->additem SW_PantsBlack 1\nJournal SW_Republic 5\nSet HasJoinedRepublic to 1\nStopSound \"RepRecGreet\"\nStopSound \"RepRecJoin1\"\nPlaySound3d \"RepRecJoin2\"\nStopSound \"RepRecJoin3\"\nStopSound \"RepRecJoin4\""
+  },
+  {
+    "type": "Dialogue",
+    "flags": "",
     "id": "docking fee",
     "dialogue_type": "Topic"
+  },
+  {
+    "type": "Dialogue",
+    "flags": "",
+    "id": "join the Sith Fleet",
+    "dialogue_type": "Topic"
+  },
+  {
+    "type": "DialogueInfo",
+    "flags": "",
+    "id": "2242687701790317543",
+    "prev_id": "21577243212072121709",
+    "next_id": "18398203592722914212",
+    "data": {
+      "dialogue_type": "Topic",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "SW_SithReceptionist",
+    "speaker_race": "",
+    "speaker_class": "",
+    "speaker_faction": "",
+    "speaker_cell": "",
+    "player_faction": "",
+    "sound_path": "",
+    "text": "Gear up and head to the barracks, %NextPCRank. Report to Captain Price for your orders. And welcome to the Sith Fleet.",
+    "filters": [
+      {
+        "slot": "Slot0",
+        "filter_type": "Function",
+        "function": "Choice",
+        "comparison": "Equal",
+        "id": "",
+        "value": {
+          "type": "Integer",
+          "data": 1
+        }
+      }
+    ],
+    "script_text": "PCRaiseRank\nModDisposition 5\nJournal SW_Sith 5\nplayer->additem SW_SithCuirassQuest 1\nplayer->additem SW_ShirtBlack 1\nplayer->additem SW_PantsBlack 1\nSet HasJoinedSith to 1"
   },
   {
     "type": "Dialogue",
