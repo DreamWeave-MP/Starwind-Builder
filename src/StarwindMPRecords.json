@@ -9,7 +9,7 @@
     "file_type": "Esp",
     "author": "tes3cmd",
     "description": "(generated)",
-    "num_objects": 95,
+    "num_objects": 80,
     "masters": [
       [
         "Morrowind.esm",
@@ -809,6 +809,7 @@
     "name": "Jett Whisko",
     "race": "Breton",
     "class": "Savant Service",
+    "faction": "",
     "head": "b_n_breton_m_head_03",
     "hair": "b_n_breton_m_hair_05",
     "npc_flags": 24,
@@ -880,6 +881,7 @@
     "mesh": "Ig\\CantinaDanceTaris.nif",
     "race": "High Elf",
     "class": "Acrobat",
+    "faction": "",
     "head": "SW_Twilekhead4f",
     "hair": "SW_NoHairHighElfF",
     "npc_flags": 9,
@@ -977,6 +979,7 @@
     "name": "Medical Droid",
     "race": "Droid",
     "class": "Sorcerer",
+    "faction": "",
     "head": "SW_MedDrHead",
     "hair": "SW_NoHairWood",
     "npc_flags": 2060,
@@ -1064,6 +1067,7 @@
     "script": "nolore",
     "race": "Nord",
     "class": "Warrior",
+    "faction": "",
     "head": "b_n_nord_m_head_02",
     "hair": "b_n_nord_m_hair03",
     "npc_flags": 2056,
@@ -1191,6 +1195,7 @@
     "script": "nolore",
     "race": "Nord",
     "class": "Warrior",
+    "faction": "",
     "head": "b_n_nord_m_head_02",
     "hair": "b_n_nord_m_hair03",
     "npc_flags": 2056,
@@ -1318,7 +1323,9 @@
     "script": "nolore",
     "race": "SW_Quar",
     "class": "Merchant",
+    "faction": "",
     "head": "SW_QuarHead",
+    "hair": "",
     "npc_flags": 24,
     "data": {
       "level": 25,
@@ -1363,6 +1370,7 @@
     "name": "Brooali Meagas",
     "race": "Imperial",
     "class": "Agent",
+    "faction": "",
     "head": "b_n_imperial_f_head_02",
     "hair": "b_n_imperial_f_hair_02",
     "npc_flags": 9,
@@ -1460,6 +1468,102 @@
         "reset": 1
       }
     ],
+    "travel_destinations": []
+  },
+  {
+    "type": "Npc",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "SW_VvardenfellTranspor1",
+    "name": "Flies-Ship-Far",
+    "mesh": "base_anim.nif",
+    "script": "nolore",
+    "race": "SW_Cyborg",
+    "class": "Sharpshooter",
+    "faction": "",
+    "head": "SW_CyborgHead",
+    "hair": "SW_NoHairCyborg",
+    "npc_flags": 2060,
+    "data": {
+      "level": 20,
+      "stats": {
+        "attributes": [
+          57,
+          100,
+          86,
+          89,
+          51,
+          57,
+          57,
+          40
+        ],
+        "skills": [
+          21,
+          7,
+          64,
+          21,
+          21,
+          21,
+          21,
+          21,
+          48,
+          49,
+          49,
+          12,
+          12,
+          17,
+          17,
+          44,
+          12,
+          7,
+          34,
+          49,
+          34,
+          7,
+          7,
+          49,
+          7,
+          34,
+          7
+        ],
+        "health": 152,
+        "magicka": 200,
+        "fatigue": 289
+      },
+      "disposition": 50,
+      "reputation": 0,
+      "rank": 0,
+      "gold": 200
+    },
+    "inventory": [
+      [
+        1,
+        "common_shoes_05"
+      ],
+      [
+        1,
+        "SW_AlienHelmA"
+      ],
+      [
+        1,
+        "SW_FlightSuit1"
+      ],
+      [
+        1,
+        "SW_FlightSuit1Top"
+      ]
+    ],
+    "spells": [],
+    "ai_data": {
+      "hello": 30,
+      "fight": 30,
+      "flee": 30,
+      "alarm": 0,
+      "services": 0
+    },
+    "ai_packages": [],
     "travel_destinations": []
   },
   {
@@ -1673,8 +1777,110 @@
         ],
         "rotation": [
           0.0,
-          -0.0,
+          0.0,
           3.1000018
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Cell",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "",
+    "data": {
+      "flags": 2,
+      "grid": [
+        0,
+        -5
+      ]
+    },
+    "region": "Ascadian Isles Region",
+    "references": [
+      {
+        "mast_index": 1,
+        "refr_index": 462017,
+        "id": "terrain_rock_ai_09",
+        "temporary": true,
+        "translation": [
+          6317.6,
+          -40252.676,
+          14.270386
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.03319
+        ],
+        "scale": 2.0
+      },
+      {
+        "mast_index": 1,
+        "refr_index": 462018,
+        "id": "terrain_rock_ai_12",
+        "temporary": true,
+        "translation": [
+          6218.456,
+          -40079.98,
+          -139.46985
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          2.4081917
+        ],
+        "scale": 1.7600001
+      },
+      {
+        "mast_index": 1,
+        "refr_index": 462022,
+        "id": "Ex_barnacles_03",
+        "temporary": true,
+        "translation": [
+          6248.424,
+          -39803.508,
+          -96.23633
+        ],
+        "rotation": [
+          1.4825803,
+          0.6323939,
+          4.1169977
+        ],
+        "scale": 2.0
+      },
+      {
+        "mast_index": 1,
+        "refr_index": 462029,
+        "id": "Flora_kelp_01",
+        "temporary": true,
+        "translation": [
+          6464.765,
+          -39659.68,
+          -206.53078
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          5.366375
+        ],
+        "scale": 1.94
+      },
+      {
+        "mast_index": 1,
+        "refr_index": 462034,
+        "id": "blue coast ref 1024",
+        "temporary": true,
+        "translation": [
+          6292.616,
+          -39591.91,
+          -64.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          2.9831884
         ]
       }
     ]
@@ -1828,7 +2034,7 @@
         ],
         "rotation": [
           0.0,
-          -0.0,
+          0.0,
           1.5707964
         ]
       },
@@ -1844,7 +2050,7 @@
         ],
         "rotation": [
           0.0,
-          -0.0,
+          0.0,
           0.7
         ],
         "scale": 0.75000006
@@ -1861,7 +2067,7 @@
         ],
         "rotation": [
           0.0,
-          -0.0,
+          0.0,
           5.6831875
         ],
         "scale": 0.75000006
@@ -1878,7 +2084,7 @@
         ],
         "rotation": [
           0.0,
-          -0.0,
+          0.0,
           3.8831868
         ],
         "scale": 1.5000001
@@ -1895,7 +2101,7 @@
         ],
         "rotation": [
           0.0,
-          -0.0,
+          0.0,
           3.6831868
         ],
         "scale": 1.5000001
@@ -1912,7 +2118,7 @@
         ],
         "rotation": [
           0.0,
-          -0.0,
+          0.0,
           2.8000019
         ],
         "scale": 1.5000001
@@ -1929,7 +2135,7 @@
         ],
         "rotation": [
           0.0,
-          -0.0,
+          0.0,
           2.3000019
         ],
         "scale": 1.5000001
@@ -1946,112 +2152,10 @@
         ],
         "rotation": [
           0.0,
-          -0.0,
+          0.0,
           3.1831858
         ],
         "scale": 1.5000001
-      }
-    ]
-  },
-  {
-    "type": "Cell",
-    "flags": [
-      0,
-      0
-    ],
-    "id": "",
-    "data": {
-      "flags": 2,
-      "grid": [
-        0,
-        -5
-      ]
-    },
-    "region": "Ascadian Isles Region",
-    "references": [
-      {
-        "mast_index": 1,
-        "refr_index": 462017,
-        "id": "terrain_rock_ai_09",
-        "temporary": true,
-        "translation": [
-          6317.6,
-          -40252.676,
-          14.270386
-        ],
-        "rotation": [
-          0.0,
-          -0.0,
-          3.03319
-        ],
-        "scale": 2.0
-      },
-      {
-        "mast_index": 1,
-        "refr_index": 462018,
-        "id": "terrain_rock_ai_12",
-        "temporary": true,
-        "translation": [
-          6218.456,
-          -40079.98,
-          -139.46985
-        ],
-        "rotation": [
-          0.0,
-          -0.0,
-          2.4081917
-        ],
-        "scale": 1.7600001
-      },
-      {
-        "mast_index": 1,
-        "refr_index": 462022,
-        "id": "Ex_barnacles_03",
-        "temporary": true,
-        "translation": [
-          6248.424,
-          -39803.508,
-          -96.23633
-        ],
-        "rotation": [
-          1.4825803,
-          0.6323939,
-          4.1169977
-        ],
-        "scale": 2.0
-      },
-      {
-        "mast_index": 1,
-        "refr_index": 462029,
-        "id": "Flora_kelp_01",
-        "temporary": true,
-        "translation": [
-          6464.765,
-          -39659.68,
-          -206.53078
-        ],
-        "rotation": [
-          0.0,
-          -0.0,
-          5.366375
-        ],
-        "scale": 1.94
-      },
-      {
-        "mast_index": 1,
-        "refr_index": 462034,
-        "id": "blue coast ref 1024",
-        "temporary": true,
-        "translation": [
-          6292.616,
-          -39591.91,
-          -64.0
-        ],
-        "rotation": [
-          0.0,
-          -0.0,
-          2.9831884
-        ]
       }
     ]
   },
@@ -2235,8 +2339,8 @@
           12032.61
         ],
         "rotation": [
-          -0.0,
-          -0.0,
+          0.0,
+          0.0,
           -0.3972685
         ]
       }
@@ -2295,8 +2399,8 @@
           12531.936
         ],
         "rotation": [
-          -0.0,
-          -0.0,
+          0.0,
+          0.0,
           -1.5447778
         ],
         "door_destination_coords": [
@@ -2368,8 +2472,8 @@
           12531.936
         ],
         "rotation": [
-          -0.0,
-          -0.0,
+          0.0,
+          0.0,
           -1.5447778
         ]
       },
@@ -2464,8 +2568,8 @@
           12437.005
         ],
         "rotation": [
-          -0.0,
-          -0.0,
+          0.0,
+          0.0,
           -2.166795
         ]
       },
@@ -2558,6 +2662,111 @@
       0,
       0
     ],
+    "id": "The Outer Rim, Freighter",
+    "data": {
+      "flags": 1,
+      "grid": [
+        0,
+        1065353216
+      ]
+    },
+    "water_height": 0.0,
+    "atmosphere_data": {
+      "ambient_color": [
+        126,
+        126,
+        126,
+        0
+      ],
+      "sunlight_color": [
+        229,
+        229,
+        229,
+        0
+      ],
+      "fog_color": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fog_density": 1.0
+    },
+    "references": [
+      {
+        "mast_index": 0,
+        "refr_index": 403551,
+        "id": "SW_FreighterModder",
+        "temporary": false,
+        "translation": [
+          4082.7275,
+          6721.41,
+          11366.362
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          5.783186
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 403552,
+        "id": "SW_Meditation",
+        "temporary": false,
+        "translation": [
+          3991.9421,
+          6777.9165,
+          11383.982
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          2.8999994
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 47851,
+        "id": "tsi_bankref",
+        "temporary": true,
+        "translation": [
+          4791.468,
+          5637.364,
+          15257.219
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          1.5707964
+        ],
+        "scale": 0.7
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 403553,
+        "id": "SW_CantinaBoothBott",
+        "temporary": true,
+        "translation": [
+          4031.303,
+          6808.698,
+          11258.202
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.7831867
+        ],
+        "scale": 2.0
+      }
+    ]
+  },
+  {
+    "type": "Cell",
+    "flags": [
+      0,
+      0
+    ],
     "id": "Somewhere Out of Time",
     "data": {
       "flags": 1,
@@ -2600,8 +2809,8 @@
           292.3155
         ],
         "rotation": [
-          -0.0,
-          -0.0,
+          0.0,
+          0.0,
           -1.5707964
         ],
         "scale": 0.5,
@@ -2626,8 +2835,8 @@
           291.06973
         ],
         "rotation": [
-          -0.0,
-          -0.0,
+          0.0,
+          0.0,
           -1.5707964
         ],
         "scale": 0.5,
@@ -2782,8 +2991,8 @@
           336.7732
         ],
         "rotation": [
-          -0.0,
-          -0.0,
+          0.0,
+          0.0,
           -2.9806645
         ]
       },
@@ -2798,8 +3007,8 @@
           412.2215
         ],
         "rotation": [
-          -0.0,
-          -0.0,
+          0.0,
+          0.0,
           -1.5259749
         ]
       },
@@ -2863,8 +3072,8 @@
           410.2642
         ],
         "rotation": [
-          -0.0,
-          -0.0,
+          0.0,
+          0.0,
           3.1415927
         ]
       },
@@ -2879,8 +3088,8 @@
           407.66904
         ],
         "rotation": [
-          -0.0,
-          -0.0,
+          0.0,
+          0.0,
           1.5794538
         ]
       },
@@ -2911,8 +3120,8 @@
           409.92343
         ],
         "rotation": [
-          -0.0,
-          -0.0,
+          0.0,
+          0.0,
           3.1415927
         ]
       },
@@ -2927,8 +3136,8 @@
           410.6532
         ],
         "rotation": [
-          -0.0,
-          -0.0,
+          0.0,
+          0.0,
           3.1415927
         ]
       },
@@ -2959,8 +3168,8 @@
           410.73196
         ],
         "rotation": [
-          -0.0,
-          -0.0,
+          0.0,
+          0.0,
           -1.5039399
         ]
       },
@@ -2975,8 +3184,8 @@
           407.69714
         ],
         "rotation": [
-          -0.0,
-          -0.0,
+          0.0,
+          0.0,
           1.6014887
         ]
       },
@@ -2991,8 +3200,8 @@
           410.2642
         ],
         "rotation": [
-          -0.0,
-          -0.0,
+          0.0,
+          0.0,
           3.1415927
         ]
       },
@@ -3023,8 +3232,8 @@
           410.6532
         ],
         "rotation": [
-          -0.0,
-          -0.0,
+          0.0,
+          0.0,
           3.1415927
         ]
       },
@@ -3039,8 +3248,8 @@
           389.16333
         ],
         "rotation": [
-          -0.0,
-          -0.0,
+          0.0,
+          0.0,
           1.5707964
         ]
       },
@@ -3055,8 +3264,8 @@
           410.2642
         ],
         "rotation": [
-          -0.0,
-          -0.0,
+          0.0,
+          0.0,
           3.1415927
         ]
       },
@@ -3087,8 +3296,8 @@
           410.2642
         ],
         "rotation": [
-          -0.0,
-          -0.0,
+          0.0,
+          0.0,
           1.5707964
         ]
       },
@@ -3103,8 +3312,8 @@
           410.28473
         ],
         "rotation": [
-          -0.0,
-          -0.0,
+          0.0,
+          0.0,
           -1.5707964
         ]
       },
@@ -3167,8 +3376,8 @@
           389.16333
         ],
         "rotation": [
-          -0.0,
-          -0.0,
+          0.0,
+          0.0,
           -1.5305841
         ]
       },
@@ -3232,8 +3441,8 @@
           282.2847
         ],
         "rotation": [
-          -0.0,
-          -0.0,
+          0.0,
+          0.0,
           -1.1013292
         ],
         "scale": 0.5
@@ -3265,8 +3474,8 @@
           410.6532
         ],
         "rotation": [
-          -0.0,
-          -0.0,
+          0.0,
+          0.0,
           -3.1415927
         ]
       },
@@ -3297,8 +3506,8 @@
           389.16333
         ],
         "rotation": [
-          -0.0,
-          -0.0,
+          0.0,
+          0.0,
           -1.5305841
         ]
       },
@@ -3313,115 +3522,10 @@
           391.71222
         ],
         "rotation": [
-          -0.0,
-          -0.0,
-          1.5707964
-        ]
-      }
-    ]
-  },
-  {
-    "type": "Cell",
-    "flags": [
-      0,
-      0
-    ],
-    "id": "The Outer Rim, Freighter",
-    "data": {
-      "flags": 1,
-      "grid": [
-        0,
-        1065353216
-      ]
-    },
-    "water_height": 0.0,
-    "atmosphere_data": {
-      "ambient_color": [
-        126,
-        126,
-        126,
-        0
-      ],
-      "sunlight_color": [
-        229,
-        229,
-        229,
-        0
-      ],
-      "fog_color": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "fog_density": 1.0
-    },
-    "references": [
-      {
-        "mast_index": 0,
-        "refr_index": 403551,
-        "id": "SW_FreighterModder",
-        "temporary": false,
-        "translation": [
-          4082.7275,
-          6721.41,
-          11366.362
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          5.783186
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 403552,
-        "id": "SW_Meditation",
-        "temporary": false,
-        "translation": [
-          3991.9421,
-          6777.9165,
-          11383.982
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          2.8999994
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 47851,
-        "id": "tsi_bankref",
-        "temporary": true,
-        "translation": [
-          4791.468,
-          5637.364,
-          15257.219
-        ],
-        "rotation": [
           0.0,
           0.0,
           1.5707964
-        ],
-        "scale": 0.7
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 403553,
-        "id": "SW_CantinaBoothBott",
-        "temporary": true,
-        "translation": [
-          4031.303,
-          6808.698,
-          11258.202
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          3.7831867
-        ],
-        "scale": 2.0
+        ]
       }
     ]
   },
@@ -3553,6 +3657,45 @@
       }
     ],
     "result": "Choice \"Thanks. I'll pay it.\" 1 \"No thanks. I can take care of it.\" 2"
+  },
+  {
+    "type": "Info",
+    "flags": [
+      0,
+      0
+    ],
+    "info_id": "d8f80f5a76004d15b44a57ba12cdf189",
+    "prev_id": "16043312532573123088",
+    "next_id": "",
+    "data": {
+      "dialogue_type": "Topic",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "SW_VvardenfellTranspor1",
+    "text": "Hey, buddy. Wanna go to vvardenfell?",
+    "filters": [],
+    "result": "AddTopic \"go to vvardenfell\""
+  },
+  {
+    "type": "Dialogue",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Greeting 1",
+    "dialogue_type": "Greeting"
+  },
+  {
+    "type": "Dialogue",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Greeting 3",
+    "dialogue_type": "Greeting"
   },
   {
     "type": "Dialogue",
@@ -3713,6 +3856,152 @@
       }
     ],
     "result": "PCRaiseRank\nModDisposition 5\nJournal SW_Sith 5\nplayer->additem SW_SithCuirassQuest 1\nplayer->additem SW_ShirtBlack 1\nplayer->additem SW_PantsBlack 1\nSet HasJoinedSith to 1"
+  },
+  {
+    "type": "Dialogue",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Go To Vvardenfell",
+    "dialogue_type": "Topic"
+  },
+  {
+    "type": "Info",
+    "flags": [
+      0,
+      0
+    ],
+    "info_id": "5cf112259eac4bd88144c0a927452ab8",
+    "prev_id": "",
+    "next_id": "7c3fb0a5e9194d278b56f606eaa95c2d",
+    "data": {
+      "dialogue_type": "Topic",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "SW_VvardenfellTranspor1",
+    "text": "Come back when you've came to your senses, then.",
+    "filters": [
+      {
+        "slot": "Slot0",
+        "filter_type": "Function",
+        "filter_function": "Choice",
+        "filter_comparison": "Equal",
+        "id": "",
+        "value": {
+          "Integer": 2
+        }
+      }
+    ],
+    "result": "Goodbye"
+  },
+  {
+    "type": "Info",
+    "flags": [
+      0,
+      0
+    ],
+    "info_id": "7c3fb0a5e9194d278b56f606eaa95c2d",
+    "prev_id": "5cf112259eac4bd88144c0a927452ab8",
+    "next_id": "2c2267a85a5341608e79f7efb7813806",
+    "data": {
+      "dialogue_type": "Topic",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "SW_VvardenfellTranspor1",
+    "text": "Suit up and let's get going, then. It's a long trip.",
+    "filters": [
+      {
+        "slot": "Slot0",
+        "filter_type": "Item",
+        "filter_function": "ReactionLow",
+        "filter_comparison": "GreaterEqual",
+        "id": "Gold_001",
+        "value": {
+          "Integer": 100000
+        }
+      },
+      {
+        "slot": "Slot0",
+        "filter_type": "Function",
+        "filter_function": "Choice",
+        "filter_comparison": "Equal",
+        "id": "",
+        "value": {
+          "Integer": 1
+        }
+      }
+    ],
+    "result": "player->removeitem gold_001 100000\nplayer->PositionCell 30239,-71415,712,240 \"Vivec 3,-9\"\nGoodbye"
+  },
+  {
+    "type": "Info",
+    "flags": [
+      0,
+      0
+    ],
+    "info_id": "2c2267a85a5341608e79f7efb7813806",
+    "prev_id": "7c3fb0a5e9194d278b56f606eaa95c2d",
+    "next_id": "2181f33102c540338b43b0cb24340e31",
+    "data": {
+      "dialogue_type": "Topic",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "SW_VvardenfellTranspor1",
+    "text": "Sorry, pal. Come back when you're not too broke too afford the trip.",
+    "filters": [
+      {
+        "slot": "Slot0",
+        "filter_type": "Item",
+        "filter_function": "ReactionLow",
+        "filter_comparison": "Less",
+        "id": "Gold_001",
+        "value": {
+          "Integer": 100000
+        }
+      },
+      {
+        "slot": "Slot0",
+        "filter_type": "Function",
+        "filter_function": "Choice",
+        "filter_comparison": "Equal",
+        "id": "",
+        "value": {
+          "Integer": 1
+        }
+      }
+    ],
+    "result": "Goodbye"
+  },
+  {
+    "type": "Info",
+    "flags": [
+      0,
+      0
+    ],
+    "info_id": "2181f33102c540338b43b0cb24340e31",
+    "prev_id": "2c2267a85a5341608e79f7efb7813806",
+    "next_id": "",
+    "data": {
+      "dialogue_type": "Topic",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "SW_VvardenfellTranspor1",
+    "text": "That's right, only a hundred thousand credits a trip.",
+    "filters": [],
+    "result": "Choice \"Sure, I guess I'll pay up.\" 1\nChoice \"No way, I don't think I can trust you.\" 2"
   },
   {
     "type": "Dialogue",
