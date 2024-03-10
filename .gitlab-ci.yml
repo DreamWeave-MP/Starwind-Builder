@@ -3,7 +3,7 @@ stages:
   - dump
 
 variables:
-  build_img: "$CI_REGISTRY/magicaldave1/makron:0.0.8"
+  build_img: "$CI_REGISTRY/modding-openmw/makron:0.0.9"
   curl_img: curlimages/curl:7.83.0
   pkg_name: "${CI_PROJECT_NAME}.zip"
   pkg_url:
@@ -77,6 +77,17 @@ dump_DFL:
   artifacts:
     paths:
       - "DFLDB.zip"
+  rules:
+    - if: $CI_COMMIT_BRANCH == "master"
+
+dump_kTools:
+  image: ${build_img}
+  stage: dump
+  script:
+  - make kTools
+  artifacts:
+    paths:
+      - "kToolsDB.zip"
   rules:
     - if: $CI_COMMIT_BRANCH == "master"
 
