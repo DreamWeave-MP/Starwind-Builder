@@ -114,6 +114,8 @@ if [ "$1" = "tsi" ]; then
 
     # We laid out the cell ourselves
     tes3cmd delete --type CELL --exact-id "Nar Shaddaa, Makacheesa Market" StarwindVvardenfell.esp
+    # Moved the ramp so the door destination changed
+    tes3cmd delete --type CELL --exact-id "Nar Shaddaa, Vvardenfell Hanger" --instance-match "ObjIdx:14 " StarwindVvardenfell.esp
     # We use a different cell than the alt start mod
     tes3cmd delete --type CELL --exact-id "Imperial Prison Ship" alt_start1.5.esp
 

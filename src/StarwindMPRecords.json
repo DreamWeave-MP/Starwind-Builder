@@ -9,7 +9,7 @@
     "file_type": "Esp",
     "author": "tes3cmd",
     "description": "(generated)",
-    "num_objects": 81,
+    "num_objects": 111,
     "masters": [
       [
         "Morrowind.esm",
@@ -2684,8 +2684,8 @@
     },
     "references": [
       {
-        "mast_index": 4,
-        "refr_index": 25712,
+        "mast_index": 0,
+        "refr_index": 402596,
         "id": "SW_DoorNar2",
         "temporary": false,
         "translation": [
