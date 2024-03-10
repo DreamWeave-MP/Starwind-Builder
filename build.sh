@@ -114,7 +114,7 @@ if [ "$1" = "tsi" ]; then
 
     # Embassy doors were replaced with more lenient scripts
     tes3cmd delete --type CELL --exact-id "Manaan, Republic Embassy" --instance-match "ObjIdx:6771 " StarwindRemasteredV1.15.esm
-    tes3cmd delete --type CELL --exact-id "Manaan, Sith Embassy" --instance-match "ObjIdx:9107 " StarwindRemasteredV1.15.esm
+    tes3cmd delete --type CELL --exact-id "Manaan, Sith Embassy" --instance-match "ObjIdx:9107 " StarwindRemasteredV1.15.esm StarwindRemasteredPatch.esm
 
     # We laid out the cell ourselves
     tes3cmd delete --type CELL --exact-id "Nar Shaddaa, Makacheesa Market" StarwindVvardenfell.esp
