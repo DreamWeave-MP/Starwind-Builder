@@ -7,9 +7,6 @@ tsi: plugins-bin
 vanilla: plugins-bin
 	./build.sh vanilla | grep -v "<DATADIR> is\|Output saved in\|Original backed up to\|Can't find \"Data Files\"\|Log"
 
-test-cs: plugins-bin
-	./build.sh tsi nomp | grep -v "<DATADIR> is\|Output saved in\|Original backed up to\|Can't find \"Data Files\"\|Log"
-
 cpp: plugins-bin
 	cp -r ./src/"Community Patch Project"/Meshes .
 	cp ./build/"Starwind Community Patch Project.esp" ./"Starwind Community Patch Project.omwaddon"
@@ -28,7 +25,17 @@ plugins-text:
 deploy: clean plugins-text tsi
 	mv Starwind.omwaddon $$HOME/.local/share/openmw/data/
 
-test: deploy
+mp-start:
+	rm -rf ~/openmw/tsi-client/server/data/cell/* ~/openmw/tsi-client/server/data/player/* ~/openmw/tsi-client/server/data/world/world.json
+	~/openmw/tsi-client/tes3mp-server &
+	~/openmw/tsi-client/tes3mp
+	kill -9 $$(pgrep tes3mp-server)
+
+test-mp: deploy mp-start
+
+test-full: clean plugins-text tsi
+	mv Starwind.omwaddon $$HOME/.local/share/openmw/data/
+	openmw-cs $$HOME/.local/share/openmw/data/Starwind.omwaddon
 	rm -rf ~/openmw/tsi-client/server/data/cell/* ~/openmw/tsi-client/server/data/player/* ~/openmw/tsi-client/server/data/world/world.json
 	~/openmw/tsi-client/tes3mp-server &
 	~/openmw/tsi-client/tes3mp
@@ -37,16 +44,18 @@ test: deploy
 edit-tsi: deploy
 	openmw-cs $$HOME/.local/share/openmw/data/Starwind.omwaddon
 
-edit-cpp: deploy
+edit-cpp: clean plugins-text plugins-bin
+	mv build/"Starwind Community Patch Project.esp" $$HOME/.local/share/openmw/data/"Starwind Community Patch Project.omwaddon"
 	openmw-cs $$HOME/.local/share/openmw/data/"Starwind Community Patch Project.omwaddon"
 
-edit-mponly: clean plugins-text test-cs
+edit-mponly: clean plugins-text plugins-bin
+	./build.sh tsi nomp | grep -v "<DATADIR> is\|Output saved in\|Original backed up to\|Can't find \"Data Files\"\|Log"
 	mv Starwind.omwaddon StarwindMPRecords.omwaddon $$HOME/.local/share/openmw/data/
 	openmw-cs $$HOME/.local/share/openmw/data/"StarwindMPRecords.omwaddon"
 
 databases: requiredfiles DFL espParser MIG
 
-DFL:
+DFL: requiredfiles
 	./databaseWriter.sh DFL
 
 espParser:
