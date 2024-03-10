@@ -3762,7 +3762,7 @@
     ],
     "info_id": "d8f80f5a76004d15b44a57ba12cdf189",
     "prev_id": "16043312532573123088",
-    "next_id": "",
+    "next_id": "ffedfda5c6d7464bb44129bbf8bd14b2",
     "data": {
       "dialogue_type": "Topic",
       "disposition": 0,
@@ -3774,6 +3774,27 @@
     "text": "Hey, buddy. Wanna go to vvardenfell?",
     "filters": [],
     "result": "AddTopic \"go to vvardenfell\""
+  },
+  {
+    "type": "Info",
+    "flags": [
+      0,
+      0
+    ],
+    "info_id": "ffedfda5c6d7464bb44129bbf8bd14b2",
+    "prev_id": "d8f80f5a76004d15b44a57ba12cdf189",
+    "next_id": "",
+    "data": {
+      "dialogue_type": "Topic",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "SW_VvardenfellTranspor2",
+    "text": "Hey there. Ready to go back to Nar Shaddaa?",
+    "filters": [],
+    "result": "AddTopic \"Back to Nar Shaddaa\""
   },
   {
     "type": "Dialogue",
