@@ -2,6 +2,15 @@
 
 set -eu
 
+
+if [ "$1" = "kTools" ]; then
+    mkdir -p ./kTools_out
+    kTools requiredDataFiles.json ./kTools_out
+    zip -r9 kToolsDB.zip ./kTools_out
+    rm -rf kTools_out
+    exit 0
+fi
+
 curl -L https://github.com/TES3MP/TES3MP/releases/download/tes3mp-0.8.1/tes3mp-server-GNU+Linux-x86_64-release-0.8.1-68954091c5-6da3fdea59.tar.gz | tar -xz
 
 cd TES3MP-server/server
@@ -48,8 +57,6 @@ elif [ "$1" = "DFL" ]; then
 
     zip -r9 ../../DFLDB.zip data/custom/DFL_output/
 
-elif [ "$1" = "kTools" ]; then
-    echo "kTools, wheee!"
 fi
 
 cd ../../ && rm -rf TES3MP-server

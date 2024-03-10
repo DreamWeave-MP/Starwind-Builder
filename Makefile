@@ -61,21 +61,31 @@ DFL: requiredfiles
 espParser:
 	./databaseWriter.sh espParser
 
+kTools: config
+	t3crc --use-paths
+	./databaseWriter.sh kTools
+
 MIG:
 	merchantIndexGrabber
 
-requiredfiles:
+config:
 	if ! grep -q "data=\"$$(pwd)\"" "$$HOME/.config/openmw/openmw.cfg"; then \
 		echo "data=\"$$(pwd)\"" >> $$HOME/.config/openmw/openmw.cfg; \
 	fi; \
 
+	touch fake.esp; \
 	for m in Morrowind.esm Tribunal.esm Bloodmoon.esm Starwind.omwaddon; do \
 		if ! grep -q "content=$$m" "$$HOME/.config/openmw/openmw.cfg"; then \
 	        echo "content=$$m" >> "$$HOME/.config/openmw/openmw.cfg"; \
-			touch $$m; \
+			echo $$m; \
+			if ! [ $$m = Starwind.omwaddon ]; then \
+				tes3cmd dump --raw-with-header $$m fake.esp; \
+			fi; \
 		fi; \
 	done; \
+	rm fake.esp
 
+requiredfiles: config
 	t3crc
 
 update-dialog:
@@ -85,4 +95,4 @@ update-dialog:
 	mv ./StarwindMPRecords.omwaddon $$HOME/.local/share/openmw/data/
 
 clean:
-	rm -rf *.tmp *\~* src/*.esp *.omwaddon *.zip *.gz* *.json TES3MP-server build Meshes Morrowind.esm Tribunal.esm Bloodmoon.esm
+	rm -rf *.tmp *\~* src/*.esp *.omwaddon *.zip *.gz* *.json TES3MP-server build Meshes fake.esp Morrowind.esm Tribunal.esm Bloodmoon.esm
