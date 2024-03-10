@@ -6,7 +6,8 @@ set -eu
 if [ "$1" = "kTools" ]; then
     mkdir -p ./kTools_out
     kTools requiredDataFiles.json ./kTools_out
-    zip -r9 kToolsDB.zip ./kTools_out
+    tar -czf kToolsDB.tar.gz ./kTools_out
+    #zip -r9 kToolsDB.zip ./kTools_out
     rm -rf kTools_out
     exit 0
 fi

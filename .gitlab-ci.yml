@@ -87,7 +87,7 @@ dump_kTools:
   - make kTools
   artifacts:
     paths:
-      - "kToolsDB.zip"
+      - "kToolsDB.tar.gz"
   rules:
     - if: $CI_COMMIT_BRANCH == "master"
 
