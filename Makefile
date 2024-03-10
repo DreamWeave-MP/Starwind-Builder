@@ -69,5 +69,11 @@ requiredfiles:
 
 	t3crc
 
+update-dialog:
+	rm src/StarwindMPRecords.json
+	tes3conv $$HOME/Downloads/StarwindMPRecords.json ./StarwindMPRecords.omwaddon && rm $$HOME/Downloads/StarwindMPRecords.json
+	tes3conv ./StarwindMPRecords.omwaddon ./src/StarwindMPRecords.json
+	mv ./StarwindMPRecords.omwaddon $$HOME/.local/share/openmw/data/
+
 clean:
 	rm -rf *.tmp *\~* src/*.esp *.omwaddon *.zip *.gz* *.json TES3MP-server build Meshes Morrowind.esm Tribunal.esm Bloodmoon.esm
