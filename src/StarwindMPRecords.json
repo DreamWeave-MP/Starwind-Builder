@@ -9,7 +9,7 @@
     "file_type": "Esp",
     "author": "tes3cmd",
     "description": "(generated)",
-    "num_objects": 111,
+    "num_objects": 81,
     "masters": [
       [
         "Morrowind.esm",
@@ -25,7 +25,7 @@
       ],
       [
         "Starwind.omwaddon",
-        12791486
+        12791184
       ]
     ]
   },
@@ -2474,9 +2474,9 @@
           -1.5447778
         ],
         "door_destination_coords": [
-          1081.0,
-          1764.0,
-          11719.0,
+          4372.0,
+          3570.0,
+          12855.0,
           0.0,
           0.0,
           0.0
