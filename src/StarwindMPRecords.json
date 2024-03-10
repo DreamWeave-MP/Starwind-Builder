@@ -9,7 +9,7 @@
     "file_type": "Esp",
     "author": "tes3cmd",
     "description": "(generated)",
-    "num_objects": 80,
+    "num_objects": 81,
     "masters": [
       [
         "Morrowind.esm",
@@ -1477,6 +1477,102 @@
       0
     ],
     "id": "SW_VvardenfellTranspor1",
+    "name": "Flies-Ship-Far",
+    "mesh": "base_anim.nif",
+    "script": "nolore",
+    "race": "SW_Cyborg",
+    "class": "Sharpshooter",
+    "faction": "",
+    "head": "SW_CyborgHead",
+    "hair": "SW_NoHairCyborg",
+    "npc_flags": 2060,
+    "data": {
+      "level": 20,
+      "stats": {
+        "attributes": [
+          57,
+          100,
+          86,
+          89,
+          51,
+          57,
+          57,
+          40
+        ],
+        "skills": [
+          21,
+          7,
+          64,
+          21,
+          21,
+          21,
+          21,
+          21,
+          48,
+          49,
+          49,
+          12,
+          12,
+          17,
+          17,
+          44,
+          12,
+          7,
+          34,
+          49,
+          34,
+          7,
+          7,
+          49,
+          7,
+          34,
+          7
+        ],
+        "health": 152,
+        "magicka": 200,
+        "fatigue": 289
+      },
+      "disposition": 50,
+      "reputation": 0,
+      "rank": 0,
+      "gold": 200
+    },
+    "inventory": [
+      [
+        1,
+        "common_shoes_05"
+      ],
+      [
+        1,
+        "SW_AlienHelmA"
+      ],
+      [
+        1,
+        "SW_FlightSuit1"
+      ],
+      [
+        1,
+        "SW_FlightSuit1Top"
+      ]
+    ],
+    "spells": [],
+    "ai_data": {
+      "hello": 30,
+      "fight": 30,
+      "flee": 30,
+      "alarm": 0,
+      "services": 0
+    },
+    "ai_packages": [],
+    "travel_destinations": []
+  },
+  {
+    "type": "Npc",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "SW_VvardenfellTranspor2",
     "name": "Flies-Ship-Far",
     "mesh": "base_anim.nif",
     "script": "nolore",
@@ -4002,6 +4098,152 @@
     "text": "That's right, only a hundred thousand credits a trip.",
     "filters": [],
     "result": "Choice \"Sure, I guess I'll pay up.\" 1\nChoice \"No way, I don't think I can trust you.\" 2"
+  },
+  {
+    "type": "Dialogue",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Back to Nar Shaddaa",
+    "dialogue_type": "Topic"
+  },
+  {
+    "type": "Info",
+    "flags": [
+      0,
+      0
+    ],
+    "info_id": "fa063d5feab6456e9adb5adcad0f0171",
+    "prev_id": "",
+    "next_id": "9b438719a8ca4e01b625cf4afec39cd7",
+    "data": {
+      "dialogue_type": "Topic",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "SW_VvardenfellTranspor2",
+    "text": "Uh, well, feel free to enjoy the scenery, I guess.",
+    "filters": [
+      {
+        "slot": "Slot0",
+        "filter_type": "Function",
+        "filter_function": "Choice",
+        "filter_comparison": "Equal",
+        "id": "",
+        "value": {
+          "Integer": 2
+        }
+      }
+    ],
+    "result": "Goodbye"
+  },
+  {
+    "type": "Info",
+    "flags": [
+      0,
+      0
+    ],
+    "info_id": "9b438719a8ca4e01b625cf4afec39cd7",
+    "prev_id": "fa063d5feab6456e9adb5adcad0f0171",
+    "next_id": "7e520cc105404b5b9fefffb1d8cad9c2",
+    "data": {
+      "dialogue_type": "Topic",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "SW_VvardenfellTranspor2",
+    "text": "Let's get out of this trash pile, traveler.",
+    "filters": [
+      {
+        "slot": "Slot0",
+        "filter_type": "Function",
+        "filter_function": "Choice",
+        "filter_comparison": "Equal",
+        "id": "",
+        "value": {
+          "Integer": 1
+        }
+      },
+      {
+        "slot": "Slot0",
+        "filter_type": "Item",
+        "filter_function": "ReactionLow",
+        "filter_comparison": "GreaterEqual",
+        "id": "gold_001",
+        "value": {
+          "Integer": 25000
+        }
+      }
+    ],
+    "result": "Goodbye\nplayer->removeitem gold_001 25000\nplayer->positioncell 4145 5350 12509 0 \"Nar Shaddaa, Vvardenfell Hanger\""
+  },
+  {
+    "type": "Info",
+    "flags": [
+      0,
+      0
+    ],
+    "info_id": "7e520cc105404b5b9fefffb1d8cad9c2",
+    "prev_id": "9b438719a8ca4e01b625cf4afec39cd7",
+    "next_id": "f419d8432934471c82afca25fe539d77",
+    "data": {
+      "dialogue_type": "Topic",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "SW_VvardenfellTranspor2",
+    "text": "Welp, it looks like you're stuck here then, doesn't it?",
+    "filters": [
+      {
+        "slot": "Slot0",
+        "filter_type": "Function",
+        "filter_function": "Choice",
+        "filter_comparison": "Equal",
+        "id": "",
+        "value": {
+          "Integer": 1
+        }
+      },
+      {
+        "slot": "Slot0",
+        "filter_type": "Item",
+        "filter_function": "ReactionLow",
+        "filter_comparison": "Less",
+        "id": "gold_001",
+        "value": {
+          "Integer": 25000
+        }
+      }
+    ],
+    "result": "Goodbye"
+  },
+  {
+    "type": "Info",
+    "flags": [
+      0,
+      0
+    ],
+    "info_id": "f419d8432934471c82afca25fe539d77",
+    "prev_id": "7e520cc105404b5b9fefffb1d8cad9c2",
+    "next_id": "",
+    "data": {
+      "dialogue_type": "Topic",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "SW_VvardenfellTranspor2",
+    "text": "Uh, yeah, I mean, it's only twenty five thousand credits to get back. I'll accept whatever passes for the local currency around here.",
+    "filters": [],
+    "result": "Choice \"You're a real ass... Here\" 1\nChoice \"No, I like it here. I think I'll stay for a time.\" 2"
   },
   {
     "type": "Dialogue",
