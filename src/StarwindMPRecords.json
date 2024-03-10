@@ -9,7 +9,7 @@
     "file_type": "Esp",
     "author": "tes3cmd",
     "description": "(generated)",
-    "num_objects": 111,
+    "num_objects": 81,
     "masters": [
       [
         "Morrowind.esm",
@@ -25,7 +25,7 @@
       ],
       [
         "Starwind.omwaddon",
-        12791633
+        12791486
       ]
     ]
   },
@@ -2318,6 +2318,33 @@
         ],
         "door_destination_cell": "Manaan, Republic Embassy",
         "lock_level": 2147483647
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 402596,
+        "id": "SW_RepEntr2",
+        "temporary": false,
+        "translation": [
+          3731.2415,
+          3352.7498,
+          15561.525
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.6415915
+        ],
+        "scale": 0.8,
+        "door_destination_coords": [
+          3975.8188,
+          2838.129,
+          15654.057,
+          0.0,
+          0.0,
+          3.1999996
+        ],
+        "door_destination_cell": "Manaan, Republic Embassy",
+        "lock_level": 2147483647
       }
     ]
   },
@@ -2361,6 +2388,33 @@
       {
         "mast_index": 4,
         "refr_index": 9107,
+        "id": "SW_SithEntr",
+        "temporary": false,
+        "translation": [
+          3920.7598,
+          5867.978,
+          12181.058
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          4.6415915
+        ],
+        "scale": 0.8,
+        "door_destination_coords": [
+          4178.672,
+          5376.628,
+          12273.589,
+          0.0,
+          0.0,
+          3.1
+        ],
+        "door_destination_cell": "Manaan, Sith Embassy",
+        "lock_level": 2147483647
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 402597,
         "id": "SW_SithEntr",
         "temporary": false,
         "translation": [

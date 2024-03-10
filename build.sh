@@ -112,6 +112,10 @@ if [ "$1" = "tsi" ]; then
     tes3cmd delete --type CELL --exact-id "The Outer Rim, Freighter" --instance-match "ObjIdx:16384 " StarwindRemasteredPatch.esm StarwindRemasteredV1.15.esm # Mods Droid (replaced by MP plugin)
     tes3cmd delete --type CELL --exact-id "The Outer Rim, Freighter" --instance-match "ObjIdx:16400 " StarwindRemasteredPatch.esm StarwindRemasteredV1.15.esm # Mods Droid platform (replaced by MP plugin)
 
+    # Embassy doors were replaced with more lenient scripts
+    tes3cmd delete --type CELL --exact-id "Nar Shaddaa, Republic Embassy" --instance-match "ObjIdx:6771 " StarwindRemasteredV1.15.esm
+    tes3cmd delete --type CELL --exact-id "Nar Shaddaa, Sith Embassy" --instance-match "ObjIdx:9107 " StarwindRemasteredV1.15.esm
+
     # We laid out the cell ourselves
     tes3cmd delete --type CELL --exact-id "Nar Shaddaa, Makacheesa Market" StarwindVvardenfell.esp
     # Moved the ramp so the door destination changed
