@@ -56,11 +56,17 @@ MIG:
 	merchantIndexGrabber
 
 requiredfiles:
-	echo "data=\"$(pwd)\"" >> $$HOME/.config/openmw/openmw.cfg
+	if ! grep -q "data=\"$$(pwd)\"" "$$HOME/.config/openmw/openmw.cfg"; then \
+		echo "data=\"$$(pwd)\"" >> $$HOME/.config/openmw/openmw.cfg; \
+	fi; \
+
 	for m in Morrowind.esm Tribunal.esm Bloodmoon.esm Starwind.omwaddon; do \
-		touch $$m; \
-		echo "content=\"$$m\"" >> $$HOME/.config/openmw/openmw.cfg; \
-	done
+		if ! grep -q "content=$$m" "$$HOME/.config/openmw/openmw.cfg"; then \
+	        echo "content=$$m" >> "$$HOME/.config/openmw/openmw.cfg"; \
+			touch $$m; \
+		fi; \
+	done; \
+
 	t3crc
 
 clean:
