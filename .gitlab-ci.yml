@@ -63,7 +63,7 @@ dump_cells:
   - make espParser
   artifacts:
     paths:
-      - "StarwindDB.zip"
+      - "StarwindDB.tar.gz"
   dependencies:
     - build_tsi
   rules:
@@ -76,7 +76,7 @@ dump_DFL:
   - make DFL
   artifacts:
     paths:
-      - "DFLDB.zip"
+      - "DFLDB.tar.gz"
   rules:
     - if: $CI_COMMIT_BRANCH == "master"
 

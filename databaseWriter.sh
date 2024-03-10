@@ -7,7 +7,6 @@ if [ "$1" = "kTools" ]; then
     mkdir -p ./kTools_out
     kTools requiredDataFiles.json ./kTools_out
     tar -czf kToolsDB.tar.gz ./kTools_out
-    #zip -r9 kToolsDB.zip ./kTools_out
     rm -rf kTools_out
     exit 0
 fi
@@ -35,7 +34,7 @@ if [ "$1" = "espParser" ]; then
 
     ../tes3mp-server
 
-    zip -r9 ../../StarwindDB.zip data/custom/Starwind/
+    tar -czf ../../StarwindDB.tar.gz data/custom/Starwind/
 
 elif [ "$1" = "DFL" ]; then
     mkdir -p scripts/custom/data-files-loader/ scripts/custom/data-files-loader/dependencies/ data/custom/DFL_input data/custom/DFL_output
@@ -56,7 +55,7 @@ elif [ "$1" = "DFL" ]; then
 
     ../tes3mp-server | grep -v "morrowind.json\|tribunal.json\|bloodmoon.json"
 
-    zip -r9 ../../DFLDB.zip data/custom/DFL_output/
+    tar -czf ../../DFLDB.tar.gz data/custom/DFL_output/
 
 fi
 
