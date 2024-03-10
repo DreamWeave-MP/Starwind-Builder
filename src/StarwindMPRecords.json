@@ -2459,34 +2459,8 @@
     "region": "Ascadian Isles Region",
     "references": [
       {
-        "mast_index": 4,
-        "refr_index": 21054,
-        "id": "SW_Nar_Tower1",
-        "temporary": false,
-        "translation": [
-          1081.0712,
-          1764.6921,
-          11719.6045
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": 1.2,
-        "door_destination_coords": [
-          4358.0,
-          3545.0,
-          12921.0,
-          0.0,
-          0.0,
-          0.0
-        ],
-        "door_destination_cell": "Nar Shaddaa, Vvardenfell Hanger"
-      },
-      {
-        "mast_index": 4,
-        "refr_index": 49886,
+        "mast_index": 0,
+        "refr_index": 402659,
         "id": "SW_DoorNar2",
         "temporary": false,
         "translation": [
@@ -2500,9 +2474,9 @@
           -1.5447778
         ],
         "door_destination_coords": [
-          4407.0,
-          3462.0,
-          12856.0,
+          1081.0,
+          1764.0,
+          11719.0,
           0.0,
           0.0,
           0.0
@@ -2555,22 +2529,6 @@
           0.0,
           0.0,
           -1.5707964
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 402659,
-        "id": "SW_DoorNar2",
-        "temporary": true,
-        "translation": [
-          2252.62,
-          2838.1992,
-          12531.936
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          -1.5447778
         ]
       },
       {
