@@ -4,11 +4,15 @@ set -eu
 
 cd /home/corleycomputerrepair/TES3MP-server/server
 
-mkdir -p data/custom/Starwind data/custom/cell
+mkdir -p data/custom/Starwind
 
 curl -L 'https://gitlab.com/magicaldave1/Starwind-Builder/-/jobs/artifacts/master/download?job=dump_requiredDataFiles' | bsdtar -xvf- -C data
 
 curl -L 'https://gitlab.com/magicaldave1/Starwind-Builder/-/jobs/artifacts/master/download?job=dump_cells' | bsdtar -xvf- -O | tar -xz -C .
+
+curl -L 'https://gitlab.com/magicaldave1/Starwind-Builder/-/jobs/artifacts/master/download?job=dump_DFL' | bsdtar -xvf- -O | tar -xz -C .
+
+curl -L 'https://gitlab.com/magicaldave1/Starwind-Builder/-/jobs/artifacts/master/download?job=dump_kTools' | bsdtar -xvf- -O | tar -xz -C data/custom
 
 curl -L 'https://gitlab.com/magicaldave1/Starwind-Builder/-/jobs/artifacts/master/download?job=dump_merchants' | bsdtar -xvf- -C data/custom
 
