@@ -2,8 +2,7 @@
 
 set -eu
 
-curl -L https://github.com/TES3MP/TES3MP/releases/download/tes3mp-0.8.1/tes3mp-server-GNU+Linux-x86_64-release-0.8.1-68954091c5-6da3fdea59.tar.gz -o tes3mp.tar.gz
-tar -xvf tes3mp.tar.gz
+curl -L https://github.com/TES3MP/TES3MP/releases/download/tes3mp-0.8.1/tes3mp-server-GNU+Linux-x86_64-release-0.8.1-68954091c5-6da3fdea59.tar.gz | tar -xz
 
 cd TES3MP-server/server
 
@@ -31,8 +30,6 @@ if [ "$1" = "espParser" ]; then
 elif [ "$1" = "DFL" ]; then
     mkdir -p scripts/custom/data-files-loader/ scripts/custom/data-files-loader/dependencies/ data/custom/DFL_input data/custom/DFL_output
 
-    find ../../src -type f -name "*.json" -exec cp {} data/custom/DFL_input/ \;
-
     tes3conv ../../Starwind.omwaddon data/custom/DFL_input/Starwind.json
 
     cp ../../requiredDataFiles.json data/requiredDataFiles.json
@@ -47,9 +44,12 @@ elif [ "$1" = "DFL" ]; then
 
     echo 'require("custom.data-files-loader.dataFilesLoaderMain")' >> scripts/customScripts.lua
 
-    ../tes3mp-server
+    ../tes3mp-server | grep -v "morrowind.json\|tribunal.json\|bloodmoon.json"
+
+    zip -r9 ../../DFLDB.zip data/custom/DFL_output/
+
 elif [ "$1" = "kTools" ]; then
     echo "kTools, wheee!"
 fi
 
-cd ../../ && rm -rf TES3MP-server tes3mp.tar.gz
+cd ../../ && rm -rf TES3MP-server
