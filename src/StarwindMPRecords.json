@@ -9,7 +9,7 @@
     "file_type": "Esp",
     "author": "tes3cmd",
     "description": "(generated)",
-    "num_objects": 82,
+    "num_objects": 84,
     "masters": [
       [
         "Morrowind.esm",
@@ -796,6 +796,138 @@
         "duration": 1,
         "min_magnitude": 50,
         "max_magnitude": 50
+      }
+    ]
+  },
+  {
+    "type": "Enchantment",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "SW_SithRobeEnchant",
+    "data": {
+      "enchant_type": "ConstantEffect",
+      "enchant_cost": 0,
+      "max_charge": 0,
+      "flags": 0
+    },
+    "effects": [
+      {
+        "magic_effect": "RestoreMagicka",
+        "skill": "None",
+        "attribute": "None",
+        "range": 0,
+        "area": 0,
+        "duration": 0,
+        "min_magnitude": 1,
+        "max_magnitude": 1
+      },
+      {
+        "magic_effect": "FortifySkill",
+        "skill": "Acrobatics",
+        "attribute": "None",
+        "range": 0,
+        "area": 0,
+        "duration": 1,
+        "min_magnitude": 5,
+        "max_magnitude": 5
+      },
+      {
+        "magic_effect": "FortifySkill",
+        "skill": "BluntWeapon",
+        "attribute": "None",
+        "range": 0,
+        "area": 0,
+        "duration": 1,
+        "min_magnitude": 5,
+        "max_magnitude": 5
+      },
+      {
+        "magic_effect": "FortifyMagicka",
+        "skill": "None",
+        "attribute": "None",
+        "range": 0,
+        "area": 0,
+        "duration": 1,
+        "min_magnitude": 10,
+        "max_magnitude": 10
+      },
+      {
+        "magic_effect": "FortifySkill",
+        "skill": "Block",
+        "attribute": "None",
+        "range": 0,
+        "area": 0,
+        "duration": 1,
+        "min_magnitude": 7,
+        "max_magnitude": 7
+      }
+    ]
+  },
+  {
+    "type": "Enchantment",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "SW_SithRobeEnchant2",
+    "data": {
+      "enchant_type": "ConstantEffect",
+      "enchant_cost": 0,
+      "max_charge": 0,
+      "flags": 0
+    },
+    "effects": [
+      {
+        "magic_effect": "RestoreMagicka",
+        "skill": "None",
+        "attribute": "None",
+        "range": 0,
+        "area": 0,
+        "duration": 0,
+        "min_magnitude": 1,
+        "max_magnitude": 1
+      },
+      {
+        "magic_effect": "FortifySkill",
+        "skill": "Acrobatics",
+        "attribute": "None",
+        "range": 0,
+        "area": 0,
+        "duration": 1,
+        "min_magnitude": 5,
+        "max_magnitude": 5
+      },
+      {
+        "magic_effect": "FortifySkill",
+        "skill": "BluntWeapon",
+        "attribute": "None",
+        "range": 0,
+        "area": 0,
+        "duration": 1,
+        "min_magnitude": 5,
+        "max_magnitude": 5
+      },
+      {
+        "magic_effect": "FortifyMagicka",
+        "skill": "None",
+        "attribute": "None",
+        "range": 0,
+        "area": 0,
+        "duration": 1,
+        "min_magnitude": 10,
+        "max_magnitude": 10
+      },
+      {
+        "magic_effect": "FortifySkill",
+        "skill": "Unarmored",
+        "attribute": "None",
+        "range": 0,
+        "area": 0,
+        "duration": 1,
+        "min_magnitude": 7,
+        "max_magnitude": 7
       }
     ]
   },
