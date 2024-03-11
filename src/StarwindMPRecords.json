@@ -9,7 +9,7 @@
     "file_type": "Esp",
     "author": "tes3cmd",
     "description": "(generated)",
-    "num_objects": 84,
+    "num_objects": 85,
     "masters": [
       [
         "Morrowind.esm",
@@ -25,7 +25,7 @@
       ],
       [
         "Starwind.omwaddon",
-        12791184
+        12796381
       ]
     ]
   },
@@ -1816,6 +1816,112 @@
       "flee": 30,
       "alarm": 0,
       "services": 0
+    },
+    "ai_packages": [],
+    "travel_destinations": []
+  },
+  {
+    "type": "Npc",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "SW_WookieShaman",
+    "name": "Jharadalur",
+    "script": "nolore",
+    "race": "Wookie",
+    "class": "Trader Service",
+    "faction": "",
+    "head": "SW_Wookie_HeadF",
+    "hair": "SW_NoHairWookieF",
+    "npc_flags": 2057,
+    "data": {
+      "level": 23,
+      "stats": {
+        "attributes": [
+          90,
+          75,
+          75,
+          93,
+          71,
+          63,
+          78,
+          30
+        ],
+        "skills": [
+          63,
+          70,
+          23,
+          23,
+          53,
+          33,
+          23,
+          23,
+          23,
+          70,
+          70,
+          70,
+          70,
+          7,
+          52,
+          7,
+          7,
+          37,
+          52,
+          52,
+          37,
+          7,
+          7,
+          7,
+          52,
+          52,
+          37
+        ],
+        "health": 586,
+        "magicka": 1500,
+        "fatigue": 321
+      },
+      "disposition": 50,
+      "reputation": 0,
+      "rank": 0,
+      "gold": 0
+    },
+    "inventory": [
+      [
+        1,
+        "common_skirt_01"
+      ],
+      [
+        1,
+        "expensive_shirt_01_a"
+      ],
+      [
+        1,
+        "SW_WookieBlade"
+      ]
+    ],
+    "spells": [
+      "calm creature",
+      "calm humanoid",
+      "command creature",
+      "Poison",
+      "demoralize beast",
+      "demoralize creature",
+      "demoralize humanoid",
+      "potent poison",
+      "resist common disease",
+      "cure common disease",
+      "rally beast",
+      "rally creature",
+      "rally humanoid",
+      "SW_SummUnsor"
+    ],
+    "ai_data": {
+      "hello": 30,
+      "fight": 30,
+      "flee": 30,
+      "alarm": 0,
+      "services": 18432
     },
     "ai_packages": [],
     "travel_destinations": []
