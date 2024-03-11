@@ -9,7 +9,7 @@
     "file_type": "Esp",
     "author": "tes3cmd",
     "description": "(generated)",
-    "num_objects": 81,
+    "num_objects": 82,
     "masters": [
       [
         "Morrowind.esm",
@@ -772,6 +772,32 @@
       }
     ],
     "travel_destinations": []
+  },
+  {
+    "type": "Enchantment",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "SW_LegDefTarEnch",
+    "data": {
+      "enchant_type": "ConstantEffect",
+      "enchant_cost": 0,
+      "max_charge": 0,
+      "flags": 0
+    },
+    "effects": [
+      {
+        "magic_effect": "Jump",
+        "skill": "None",
+        "attribute": "None",
+        "range": 0,
+        "area": 0,
+        "duration": 1,
+        "min_magnitude": 50,
+        "max_magnitude": 50
+      }
+    ]
   },
   {
     "type": "Enchantment",
