@@ -9,7 +9,7 @@
     "file_type": "Esp",
     "author": "tes3cmd",
     "description": "(generated)",
-    "num_objects": 130,
+    "num_objects": 103,
     "masters": [
       [
         "Morrowind.esm",
@@ -25,7 +25,7 @@
       ],
       [
         "Starwind.omwaddon",
-        12852577
+        12796363
       ]
     ]
   },
@@ -4304,6 +4304,195 @@
     ],
     "id": "Greeting 3",
     "dialogue_type": "Greeting"
+  },
+  {
+    "type": "Info",
+    "flags": [
+      0,
+      0
+    ],
+    "info_id": "905cfe61fcbd4936b3df3154b9a3872e",
+    "prev_id": "22580190852053612072",
+    "next_id": "650c074eee114d12a02c013a9e23bcd6",
+    "data": {
+      "dialogue_type": "Topic",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "Jett Whisko",
+    "text": "I'll keep an eye out for your corpse, then.",
+    "filters": [
+      {
+        "slot": "Slot0",
+        "filter_type": "Function",
+        "filter_function": "Choice",
+        "filter_comparison": "Equal",
+        "id": "",
+        "value": {
+          "Integer": 2
+        }
+      }
+    ],
+    "result": "Goodbye"
+  },
+  {
+    "type": "Info",
+    "flags": [
+      0,
+      0
+    ],
+    "info_id": "650c074eee114d12a02c013a9e23bcd6",
+    "prev_id": "905cfe61fcbd4936b3df3154b9a3872e",
+    "next_id": "a73f969c63be4099b392c259e6ad8e56",
+    "data": {
+      "dialogue_type": "Topic",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "Jett Whisko",
+    "text": "Smart thinking, traveler. Consider it done.",
+    "filters": [
+      {
+        "slot": "Slot0",
+        "filter_type": "Global",
+        "filter_function": "ReactionLow",
+        "filter_comparison": "Equal",
+        "id": "PCHasGoldDiscount",
+        "value": {
+          "Integer": 1
+        }
+      },
+      {
+        "slot": "Slot0",
+        "filter_type": "Function",
+        "filter_function": "Choice",
+        "filter_comparison": "Equal",
+        "id": "",
+        "value": {
+          "Integer": 1
+        }
+      }
+    ],
+    "result": "Player->Removeitem gold_001 CrimeGoldDiscount\nSetPCCrimeLevel 0\nPayFineThief"
+  },
+  {
+    "type": "Info",
+    "flags": [
+      0,
+      0
+    ],
+    "info_id": "a73f969c63be4099b392c259e6ad8e56",
+    "prev_id": "650c074eee114d12a02c013a9e23bcd6",
+    "next_id": "71334b16c0294ce7b82c3b70a362d1f0",
+    "data": {
+      "dialogue_type": "Topic",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "Jett Whisko",
+    "text": "Well, I like your thinking traveler, but you seem a bit short on credits. Try again when you can afford the job.",
+    "filters": [
+      {
+        "slot": "Slot0",
+        "filter_type": "Function",
+        "filter_function": "Choice",
+        "filter_comparison": "Equal",
+        "id": "",
+        "value": {
+          "Integer": 1
+        }
+      }
+    ],
+    "result": "Goodbye"
+  },
+  {
+    "type": "Info",
+    "flags": [
+      0,
+      0
+    ],
+    "info_id": "71334b16c0294ce7b82c3b70a362d1f0",
+    "prev_id": "a73f969c63be4099b392c259e6ad8e56",
+    "next_id": "b593975991d1445b8a50432c18072006",
+    "data": {
+      "dialogue_type": "Topic",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "Jett Whisko",
+    "text": "Heard you're in a bit of a bind there, stranger. Perhaps you'd like me to take care of that for you?",
+    "filters": [
+      {
+        "slot": "Slot0",
+        "filter_type": "Function",
+        "filter_function": "PcCrimeLevel",
+        "filter_comparison": "GreaterEqual",
+        "id": "",
+        "value": {
+          "Integer": 1
+        }
+      }
+    ],
+    "result": "Choice \"Yeah, please, I barely made it here.\" 1\nChoice \"No thanks, I can handle myself out there.\" 2"
+  },
+  {
+    "type": "Info",
+    "flags": [
+      0,
+      0
+    ],
+    "info_id": "b593975991d1445b8a50432c18072006",
+    "prev_id": "71334b16c0294ce7b82c3b70a362d1f0",
+    "next_id": "57e68921279d439584a895233a1ccb7a",
+    "data": {
+      "dialogue_type": "Topic",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "Jett Whisko",
+    "text": "Pleasure to meet you, stranger. The name's Jett. I take care of the cartel's legal troubles. I can take care of yours, too... for a price.",
+    "filters": [
+      {
+        "slot": "Slot0",
+        "filter_type": "Function",
+        "filter_function": "TalkedToPc",
+        "filter_comparison": "Equal",
+        "id": "",
+        "value": {
+          "Integer": 0
+        }
+      }
+    ]
+  },
+  {
+    "type": "Info",
+    "flags": [
+      0,
+      0
+    ],
+    "info_id": "57e68921279d439584a895233a1ccb7a",
+    "prev_id": "b593975991d1445b8a50432c18072006",
+    "next_id": "",
+    "data": {
+      "dialogue_type": "Topic",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "Jett Whisko",
+    "text": "A pleasure, stranger. Did we have business to discuss?",
+    "filters": []
   },
   {
     "type": "Dialogue",
