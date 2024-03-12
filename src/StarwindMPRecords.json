@@ -788,6 +788,16 @@
     },
     "effects": [
       {
+        "magic_effect": "SlowFall",
+        "skill": "None",
+        "attribute": "None",
+        "range": 0,
+        "area": 0,
+        "duration": 1,
+        "min_magnitude": 1,
+        "max_magnitude": 1
+      },
+      {
         "magic_effect": "Jump",
         "skill": "None",
         "attribute": "None",
