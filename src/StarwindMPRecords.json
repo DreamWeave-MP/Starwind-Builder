@@ -9,7 +9,7 @@
     "file_type": "Esp",
     "author": "tes3cmd",
     "description": "(generated)",
-    "num_objects": 103,
+    "num_objects": 130,
     "masters": [
       [
         "Morrowind.esm",
@@ -4244,100 +4244,6 @@
     ],
     "id": "Greeting 0",
     "dialogue_type": "Greeting"
-  },
-  {
-    "type": "Info",
-    "flags": [
-      0,
-      0
-    ],
-    "info_id": "1883316893198517213",
-    "prev_id": "875317795149451008",
-    "next_id": "1224319899288117550",
-    "data": {
-      "dialogue_type": "Greeting",
-      "disposition": 0,
-      "speaker_rank": -1,
-      "speaker_sex": "Any",
-      "player_rank": -1
-    },
-    "speaker_id": "Jett Whisko",
-    "text": "I've heard you've got a price on your head, traveler. For a small fee, I can take care of that.",
-    "filters": [
-      {
-        "slot": "Slot1",
-        "filter_type": "Function",
-        "filter_function": "PcCrimeLevel",
-        "filter_comparison": "GreaterEqual",
-        "id": "",
-        "value": {
-          "Integer": 1
-        }
-      }
-    ]
-  },
-  {
-    "type": "Info",
-    "flags": [
-      0,
-      0
-    ],
-    "info_id": "1841853731897017756",
-    "prev_id": "3832139402051823602",
-    "next_id": "24122315662111218808",
-    "data": {
-      "dialogue_type": "Topic",
-      "disposition": 0,
-      "speaker_rank": -1,
-      "speaker_sex": "Any",
-      "player_rank": -1
-    },
-    "speaker_id": "Jett Whisko",
-    "text": "That's not a problem for you now.",
-    "filters": [
-      {
-        "slot": "Slot0",
-        "filter_type": "Function",
-        "filter_function": "PcCrimeLevel",
-        "filter_comparison": "Equal",
-        "id": "",
-        "value": {
-          "Integer": 0
-        }
-      }
-    ]
-  },
-  {
-    "type": "Info",
-    "flags": [
-      0,
-      0
-    ],
-    "info_id": "24122315662111218808",
-    "prev_id": "1841853731897017756",
-    "next_id": "7817111001232614388",
-    "data": {
-      "dialogue_type": "Topic",
-      "disposition": 0,
-      "speaker_rank": -1,
-      "speaker_sex": "Any",
-      "player_rank": -1
-    },
-    "speaker_id": "Jett Whisko",
-    "text": "Well, word on the street is that you've got a bounty of %PCCrimeLevel on your head. The Cartel doesn't discriminate when it comes to these matters - I should be able to fix that for %CrimeGoldDiscount credits. Sound fair to you?",
-    "filters": [
-      {
-        "slot": "Slot0",
-        "filter_type": "Function",
-        "filter_function": "PcCrimeLevel",
-        "filter_comparison": "GreaterEqual",
-        "id": "",
-        "value": {
-          "Integer": 1
-        }
-      }
-    ],
-    "result": "Choice \"Thanks. I'll pay it.\" 1 \"No thanks. I can take care of it.\" 2"
   },
   {
     "type": "Info",
