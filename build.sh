@@ -47,6 +47,10 @@ do_mp_merge() {
     if [ "$1" != "nomp" ]; then
         merge_to_master StarwindMPRecords.esp Starwind.omwaddon
     fi
+    # There be dragons in the dialog trees (spicy)
+    mv Starwind.omwaddon Starwind.esp
+    tes3cmd delete --type INFO --type DIAL --match "DELE" --match "Greeting 0" Starwind.esp
+    mv Starwind.esp Starwind.omwaddon
 }
 
 do_sp_merge() {
