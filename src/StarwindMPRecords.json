@@ -9,7 +9,7 @@
     "file_type": "Esp",
     "author": "tes3cmd",
     "description": "(generated)",
-    "num_objects": 100,
+    "num_objects": 101,
     "masters": [
       [
         "Morrowind.esm",
@@ -72,6 +72,89 @@
     "value": {
       "Float": 640.0
     }
+  },
+  {
+    "type": "Race",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Cow",
+    "name": "Cow",
+    "data": {
+      "skill_bonuses": [
+        [
+          "Axe",
+          15
+        ],
+        [
+          "Block",
+          15
+        ],
+        [
+          "LongBlade",
+          15
+        ],
+        [
+          "None",
+          0
+        ],
+        [
+          "None",
+          0
+        ],
+        [
+          "None",
+          0
+        ],
+        [
+          "None",
+          0
+        ]
+      ],
+      "strength": [
+        65,
+        65
+      ],
+      "intelligence": [
+        15,
+        15
+      ],
+      "willpower": [
+        25,
+        25
+      ],
+      "agility": [
+        60,
+        60
+      ],
+      "speed": [
+        20,
+        20
+      ],
+      "endurance": [
+        70,
+        70
+      ],
+      "personality": [
+        10,
+        10
+      ],
+      "luck": [
+        20,
+        20
+      ],
+      "height": [
+        1.4,
+        2.0
+      ],
+      "weight": [
+        1.4,
+        2.0
+      ],
+      "flags": 1
+    },
+    "spells": []
   },
   {
     "type": "Script",
