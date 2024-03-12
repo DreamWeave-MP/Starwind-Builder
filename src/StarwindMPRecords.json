@@ -9,7 +9,7 @@
     "file_type": "Esp",
     "author": "tes3cmd",
     "description": "(generated)",
-    "num_objects": 102,
+    "num_objects": 103,
     "masters": [
       [
         "Morrowind.esm",
@@ -25,7 +25,7 @@
       ],
       [
         "Starwind.omwaddon",
-        12796363
+        12852577
       ]
     ]
   },
@@ -2247,6 +2247,15 @@
     ],
     "id": "SW_FishTankCov",
     "mesh": "Ig\\Static\\FishTankCov.nif"
+  },
+  {
+    "type": "Activator",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "SW_FishTankEnc",
+    "mesh": "Ig\\Static\\FishTankEnc.nif"
   },
   {
     "type": "Activator",
