@@ -41,6 +41,39 @@
     }
   },
   {
+    "type": "GameSetting",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "fMagesGuildTravel",
+    "value": {
+      "Float": 625.0
+    }
+  },
+  {
+    "type": "GameSetting",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "fTravelMult",
+    "value": {
+      "Float": 800.0
+    }
+  },
+  {
+    "type": "GameSetting",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "fTravelTimeMult",
+    "value": {
+      "Float": 640.0
+    }
+  },
+  {
     "type": "Script",
     "flags": [
       0,
