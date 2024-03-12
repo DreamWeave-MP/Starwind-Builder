@@ -9,7 +9,7 @@
     "file_type": "Esp",
     "author": "tes3cmd",
     "description": "(generated)",
-    "num_objects": 120,
+    "num_objects": 100,
     "masters": [
       [
         "Morrowind.esm",
@@ -25,7 +25,7 @@
       ],
       [
         "Starwind.omwaddon",
-        12796381
+        12796363
       ]
     ]
   },
@@ -805,6 +805,118 @@
       }
     ],
     "travel_destinations": []
+  },
+  {
+    "type": "Bodypart",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "SW_GezekiHair1",
+    "data": {
+      "part": "Hair",
+      "vampire": 0,
+      "female": 0,
+      "part_type": "Skin"
+    },
+    "name": "Chiss",
+    "mesh": "Cast\\GezekiHair1.NIF"
+  },
+  {
+    "type": "Bodypart",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "SW_GezekiHead1",
+    "data": {
+      "part": "Head",
+      "vampire": 0,
+      "female": 0,
+      "part_type": "Skin"
+    },
+    "name": "Chiss",
+    "mesh": "Cast\\GezekiHead1.NIF"
+  },
+  {
+    "type": "Bodypart",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "SW_Kagrid",
+    "data": {
+      "part": "Hair",
+      "vampire": 0,
+      "female": 0,
+      "part_type": "Skin"
+    },
+    "name": "Nord",
+    "mesh": "Ig\\Heads\\KagridHair.nif"
+  },
+  {
+    "type": "Bodypart",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "SW_ShadeHair1",
+    "data": {
+      "part": "Hair",
+      "vampire": 0,
+      "female": 1,
+      "part_type": "Skin"
+    },
+    "name": "Imperial",
+    "mesh": "Cast\\ShadeHair1.nif"
+  },
+  {
+    "type": "Bodypart",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "SW_ShadeHead1",
+    "data": {
+      "part": "Head",
+      "vampire": 0,
+      "female": 1,
+      "part_type": "Skin"
+    },
+    "name": "Imperial",
+    "mesh": "Cast\\ShadeHead1.NIF"
+  },
+  {
+    "type": "Bodypart",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "SW_TheggHair1",
+    "data": {
+      "part": "Hair",
+      "vampire": 0,
+      "female": 0,
+      "part_type": "Skin"
+    },
+    "name": "Nord",
+    "mesh": "Cast\\TheggHair1.nif"
+  },
+  {
+    "type": "Bodypart",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "SW_TheggHead1",
+    "data": {
+      "part": "Head",
+      "vampire": 0,
+      "female": 0,
+      "part_type": "Skin"
+    },
+    "name": "Nord",
+    "mesh": "Cast\\TheggHead1.NIF"
   },
   {
     "type": "Enchantment",
