@@ -9,7 +9,7 @@
     "file_type": "Esp",
     "author": "tes3cmd",
     "description": "(generated)",
-    "num_objects": 103,
+    "num_objects": 102,
     "masters": [
       [
         "Morrowind.esm",
@@ -1034,42 +1034,6 @@
         "duration": 1,
         "min_magnitude": 50,
         "max_magnitude": 50
-      }
-    ]
-  },
-  {
-    "type": "Enchantment",
-    "flags": [
-      0,
-      0
-    ],
-    "id": "SW_ShipEnchant",
-    "data": {
-      "enchant_type": "CastWhenUsed",
-      "enchant_cost": 0,
-      "max_charge": 75000,
-      "flags": 0
-    },
-    "effects": [
-      {
-        "magic_effect": "FireDamage",
-        "skill": "None",
-        "attribute": "None",
-        "range": 2,
-        "area": 10,
-        "duration": 1,
-        "min_magnitude": 400,
-        "max_magnitude": 400
-      },
-      {
-        "magic_effect": "TurnUndead",
-        "skill": "None",
-        "attribute": "None",
-        "range": 1,
-        "area": 10,
-        "duration": 1,
-        "min_magnitude": 100,
-        "max_magnitude": 100
       }
     ]
   },
