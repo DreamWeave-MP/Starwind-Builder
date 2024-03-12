@@ -9,7 +9,7 @@
     "file_type": "Esp",
     "author": "tes3cmd",
     "description": "(generated)",
-    "num_objects": 85,
+    "num_objects": 120,
     "masters": [
       [
         "Morrowind.esm",
@@ -2118,6 +2118,86 @@
     "mesh": "ig/activators/datapad.nif",
     "icon": "Ig\\cb1zl-2c6my.dds",
     "text": "<FONT COLOR=\"ECE7AC\" SIZE=\"3\" FACE=\"Magic Cards\">\nHello! Thank you for playing Starwind. In this room you'll find nearly a dozen life paths to choose from, only one of which will allow you to play Starwind's original main quest. Choose your path, wanderer."
+  },
+  {
+    "type": "LevelledItem",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "tsi_gold",
+    "list_flags": 1,
+    "chance_none": 40,
+    "items": [
+      [
+        "Gold_001",
+        1
+      ]
+    ]
+  },
+  {
+    "type": "LevelledItem",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "tsi_gold_lev_05",
+    "list_flags": 1,
+    "chance_none": 40,
+    "items": [
+      [
+        "Gold_001",
+        5
+      ]
+    ]
+  },
+  {
+    "type": "LevelledItem",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "tsi_gold_lev_10",
+    "list_flags": 1,
+    "chance_none": 40,
+    "items": [
+      [
+        "Gold_001",
+        10
+      ]
+    ]
+  },
+  {
+    "type": "LevelledItem",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "tsi_gold_lev_15",
+    "list_flags": 1,
+    "chance_none": 40,
+    "items": [
+      [
+        "Gold_001",
+        15
+      ]
+    ]
+  },
+  {
+    "type": "LevelledItem",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "tsi_gold_lev_20",
+    "list_flags": 1,
+    "chance_none": 40,
+    "items": [
+      [
+        "Gold_001",
+        20
+      ]
+    ]
   },
   {
     "type": "Cell",

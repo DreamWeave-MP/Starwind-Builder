@@ -122,6 +122,8 @@ if [ "$1" = "tsi" ]; then
     tes3cmd delete --type CELL --exact-id "Nar Shaddaa, Vvardenfell Hanger" --instance-match "ObjIdx:14 " StarwindVvardenfell.esp
     # We use a different cell than the alt start mod
     tes3cmd delete --type CELL --exact-id "Imperial Prison Ship" alt_start1.5.esp
+    # Replace vanilla leveled list with our own
+    tes3cmd modify --replace "/random gold/tsi_gold/" StarwindRemasteredPatch.esm StarwindRemasteredV1.15.esm
 
     # Add interactive kolto tanks
     echo "Applying patches..."
