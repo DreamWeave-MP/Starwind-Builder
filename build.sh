@@ -156,6 +156,9 @@ if [ "$1" = "tsi" ]; then
     # Remove lateng disable script
     tes3cmd delete --type SCPT --exact-id "SW_CourteCompScript" StarwindRemasteredPatch.esm StarwindRemasteredV1.15.esm
     tes3cmd modify --type NPC_ --exact-id "sw_czerkacourte22"  --replace "/SW_CourteCompScript//" StarwindRemasteredPatch.esm
+
+    # Get rid of Killua since we don't use her
+    tes3cmd delete --type CELL --instance-match "SW_ShipQuester" StarwindRemasteredV1.15.esm StarwindRemasteredPatch.esm
 else
     tes3cmd modify --type SCPT --replace "/who's ship/whose ship/" StarwindRemasteredV1.15.esm StarwindRemasteredPatch.esm
 fi
