@@ -9,7 +9,7 @@
     "file_type": "Esp",
     "author": "tes3cmd",
     "description": "(generated)",
-    "num_objects": 108,
+    "num_objects": 109,
     "masters": [
       [
         "Morrowind.esm",
@@ -415,6 +415,23 @@
     "variables": "KLUv/QBYaQAACQAAAE1hZ2ljVmFyAA==",
     "bytecode": "KLUv/QBY7QoABtJANFCFOB10VuzMzMzMzCwC2Mgt2EqUn7D85V8BwZI1AwgbUcHwijPJlGgTQyja36fhIkY3uQM0ADMAMwA8sIrIxBSEpxzwenEZAE1WiAIKPxZ2IWGKYqggwRDDLhaS8PN2WwXsIkxR/HZj6NnFew+BlW5OqdqGZtyrAJ1Otr2CsBHs+u9fDn49NoKdbI1Srl/Rq0pNJiZshDWHRgFaFg0aDZEp/WlJr/rTkvBTTSZWvCyaTGRQVtGfliYTGdTSoBgJexbrMdMFbgQLbFr95dgIdhlHI6Qauwst9B6EmzImsf7kDnZZ51nWM4dOPIZvl8Dx4DBJ71/60zqmwfUr7ld/WtsrAScg0MIjsgNZFH92BuXORhNw7y0ONYKFnc2hEqN3AsMCBcB9AjS1wesCVkK6JR8X3qKS6ccaEWNNhQQvyQgtH7mxxQmPIjGX7JTMh5sHaRndXMamod2JAg==",
     "text": "Begin SW_FTravelTaris\n\nShort MagicVar\n\n;If ( MagicVar == 0 )\n;\tDisable\n;\tSet MagicVar to 1\n;Endif\n\nIf ( OnActivate == 1 )\n\tIf ( FreightTravel != 40 )\n\t\tSet FreightTravel to 40\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\t\tSW_FreighterToDantooine->Disable\n\t\t\tSW_FreighterToTatooine->Disable\n\t\t\tSW_FreighterToManaan->Disable\n\t\t\tSW_FreighterToKashyyk->Disable\n\t\t\tSW_FreighterToDathomir->Disable\n\t\t\tSW_FreighterToGamorr->Disable\n\t\t\tSW_FreighterToHoth->Disable\n\t\t\tSW_FreighterToTaris->Enable\n\t\t\tSW_FreighterToM4->Disable\n\t\t\tSW_FreighterToNarShad->Disable\n\t\t\tSW_FreighterToNone->Disable\n\t\t\tSW_FreighterToLok->Disable\n\t\t\tSet SW_LTSPEED to 1\n\t\t\tSW_FreightPlanDath->Disable\n\t\t\tSW_FreightPlanKash->Disable\n\t\t\tSW_FreightPlanHoth->Disable\n\t\t\tSW_FreightPlanGamor->Disable\n\t\t\tSW_FreighterPlanTat->Disable\n\t\t\tSW_FreightPlanDant->Disable\n\t\t\tSW_FreightPlanNar->Disable\n\t\t\tSW_FreightPlanMana->Disable\n\t\t\tSW_FreightPlanM478->Disable\n\t\t\tSW_FreightPlanTaris->Enable\n\telse\n\t\tMessageBox \"You are already landed on Taris!\"\n\tendif\nEndif\n\nEnd\n"
+  },
+  {
+    "type": "Script",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "SW_JunkyardReward",
+    "header": {
+      "num_shorts": 0,
+      "num_longs": 0,
+      "num_floats": 0,
+      "bytecode_length": 159,
+      "variables_length": 0
+    },
+    "bytecode": "KLUv/QBYhQQARAifAAAABgEIBSBYGBAADAEGcGxheWVyBgEEHCBY/RAsIG8OU1dfSnVua3lhcmRLZXkgPj0gMTA3ERcQ1RAKAMwQDEpvdXJuCgD//wcBAQAQKwBUaGlzIGNoZXN0IGxvb2tzIGxpa2UgaXQgcmVxdWlyZXMgdGVuIGtleXMuAAAJAQkBAQEDEAU606djhQUU",
+    "text": "Begin SW_JunkyardReward\n\nIf ( OnActivate )\n\tIf ( GetJournalIndex SW_JunkyardKey ) >= 10\n\t\tUnlock\n\t\tActivate\n\t\tReturn\n\tEndif\n\tIf ( Player->GetItemCount, \"SW_JunkyardKey\" ) >= 10\n\t\tUnlock\n\t\tActivate\n\t\tplayer->removeitem, \"SW_JunkyardKey\", 10\n\t\tJournal SW_JunkJourn 10\n\telse\n\t\tMessageBox \"This chest looks like it requires ten keys.\"\n\tendif\nendif\n\nEnd"
   },
   {
     "type": "Script",
