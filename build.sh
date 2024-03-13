@@ -165,14 +165,16 @@ fi
 # Just cleaning
 #This script is actually SW_traveltokashyyk but I figure if anybody was actually using this script the typo would have been noticed a long time ago
 # When I ran a global search against it and tried to dump instances of it out of the plugin it didn't appear to have any references
-tes3cmd delete --type SCPT --exact-id sw_ StarwindRemasteredV1.15.esm
+tes3cmd delete --type SCPT --exact-id sw_ StarwindRemasteredPatch.esm
 
 # Destroy bytecode for all plugins
-tes3cmd modify --type SCPT --sub-match "Bytecode:" --replace "/.*//" *.esm *.esp
+echo "Destroying bytecode, this may take a while..."
+tes3cmd modify --type SCPT --sub-match "Bytecode:" --replace "/.*//" *.esm *.esp 2> /dev/null > /dev/null
 
+echo "Fixing typos..."
 # Fix typos in names
-tes3cmd modify --replace "/pasma/plasma/" *.esm *.esp
-tes3cmd modify --replace "/Asteriod/Asteroid/" *.esm *.esp
+tes3cmd modify --type WEAP --exact-id "sw_grplasm" --replace "/Name:44mm Pasma Grenade/Name:44mm Plasma Grenade/" StarwindRemasteredPatch.esm
+tes3cmd modify --type ACTI --replace "/Name:Asteriod/Name:Asteroid/" StarwindRemasteredV1.15.esm StarwindRemasteredPatch.esm
 
 # Delete junk cells added by the CS bug
 echo "Cleaning junk cells..."
