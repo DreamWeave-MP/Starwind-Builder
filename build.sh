@@ -156,6 +156,8 @@ if [ "$1" = "tsi" ]; then
     # Remove lateng disable script
     tes3cmd delete --type SCPT --exact-id "SW_CourteCompScript" StarwindRemasteredPatch.esm StarwindRemasteredV1.15.esm
     tes3cmd modify --type NPC_ --exact-id "sw_czerkacourte22"  --replace "/SW_CourteCompScript//" StarwindRemasteredPatch.esm
+else
+    tes3cmd modify --type SCPT --replace "/who's ship/whose ship/" StarwindRemasteredV1.15.esm StarwindRemasteredPatch.esm
 fi
 # Just cleaning
 #This script is actually SW_traveltokashyyk but I figure if anybody was actually using this script the typo would have been noticed a long time ago
