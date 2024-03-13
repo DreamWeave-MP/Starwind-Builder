@@ -9,7 +9,7 @@
     "file_type": "Esp",
     "author": "tes3cmd",
     "description": "(generated)",
-    "num_objects": 106,
+    "num_objects": 107,
     "masters": [
       [
         "Morrowind.esm",
@@ -433,6 +433,23 @@
     "variables": "KLUv/QBYWQAABwAAAERvT25jZQA=",
     "bytecode": "KLUv/QBYCQIAPQAAAAYBAgkgcwEAID09IDDbEAUBcwEAAiAxCQEGAQEFIFgYEAAMARJTV19GcmVpZ2h0ZXJNb2RkZXLoEAkBAQE=",
     "text": "Begin SW_ModificationsScript\n\nShort DoOnce\n\n;If ( DoOnce == 0 )\n;\tDisable\n;\tSet DoOnce to 1\n;Endif\n\nIf ( OnActivate )\n\tSW_FreighterModder->ForceGreeting\nEndif\n\nEnd SW_ModificationsScript"
+  },
+  {
+    "type": "Script",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "SW_NewCzerkaOfficeDoor",
+    "header": {
+      "num_shorts": 0,
+      "num_longs": 0,
+      "num_floats": 0,
+      "bytecode_length": 65,
+      "variables_length": 0
+    },
+    "bytecode": "KLUv/QBYKQIAQQAAAAYBBwUgWBgQAAYBAgkgWGERID09IDEMARdTV19DemVya2FPZmZpY2VUYXRHdWFyZOgQJAEHAQIXECQBCQEJAQEB",
+    "text": "Begin SW_NewCzerkaOfficeDoor\n\nIf ( OnActivate )\n\tIf ( GetJournalIndex SW_CzerkaMurd == 30 )\n\t\tUnlock\n\t\tActivate\n\t\tReturn\n\tEndif\n\tIf ( GetLocked == 1 )\n\t\tSW_CzerkaOfficeTatGuard->ForceGreeting\n\t\tReturn\n\tElse\n\t\tActivate\n\t\tReturn\n\tEndif\nEndif\n\nEnd"
   },
   {
     "type": "Script",
