@@ -9,7 +9,7 @@
     "file_type": "Esp",
     "author": "tes3cmd",
     "description": "(generated)",
-    "num_objects": 103,
+    "num_objects": 106,
     "masters": [
       [
         "Morrowind.esm",
@@ -25,7 +25,7 @@
       ],
       [
         "Starwind.omwaddon",
-        12795409
+        12852169
       ]
     ]
   },
@@ -906,6 +906,54 @@
       }
     ],
     "travel_destinations": []
+  },
+  {
+    "type": "Bodypart",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "SW_CowHead",
+    "data": {
+      "part": "Head",
+      "vampire": 0,
+      "female": 0,
+      "part_type": "Skin"
+    },
+    "name": "Cow",
+    "mesh": "Ig\\Heads\\CowHead.nif"
+  },
+  {
+    "type": "Bodypart",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "SW_CowHead2",
+    "data": {
+      "part": "Head",
+      "vampire": 0,
+      "female": 0,
+      "part_type": "Skin"
+    },
+    "name": "Cow",
+    "mesh": "Ig\\Heads\\CowHead2.nif"
+  },
+  {
+    "type": "Bodypart",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "SW_CowHead3",
+    "data": {
+      "part": "Head",
+      "vampire": 0,
+      "female": 0,
+      "part_type": "Skin"
+    },
+    "name": "Cow",
+    "mesh": "Ig\\Heads\\CowHead3.nif"
   },
   {
     "type": "Bodypart",
