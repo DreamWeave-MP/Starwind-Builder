@@ -165,6 +165,10 @@ tes3cmd delete --type SCPT --exact-id sw_ StarwindRemasteredV1.15.esm
 # Destroy bytecode for all plugins
 tes3cmd modify --type SCPT --sub-match "Bytecode:" --replace "/.*//" *.esm *.esp
 
+# Fix typos in names
+tes3cmd modify --replace "/pasma/plasma/" *.esm *.esp
+tes3cmd modify --replace "/Asteriod/Asteroid/" *.esm *.esp
+
 # Delete junk cells added by the CS bug
 echo "Cleaning junk cells..."
 for cell in "${JUNK_CELL[@]}"; do tes3cmd delete --type CELL --type PGRD --hide-backups --exact-id "$cell" StarwindRemasteredV1.15.esm StarwindRemasteredPatch.esm; done
