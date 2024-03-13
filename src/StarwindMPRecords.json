@@ -9,7 +9,7 @@
     "file_type": "Esp",
     "author": "tes3cmd",
     "description": "(generated)",
-    "num_objects": 102,
+    "num_objects": 103,
     "masters": [
       [
         "Morrowind.esm",
@@ -25,7 +25,7 @@
       ],
       [
         "Starwind.omwaddon",
-        12796363
+        12795409
       ]
     ]
   },
@@ -310,6 +310,24 @@
     },
     "bytecode": "KLUv/QBYzQoAhpJEN2BFnANgQxDw51mXJEmSJMkqqjRIyt0i/VnYLBPJubSJFpTPc4SqsHODtUEHAT7NBKi8qr24P8k0ADcANAAWzC0pq9gnOuUjduIn+6SxtbI+8ZVbkk4ZaRg/D5mKePuU5PDNkk4JafhiwsUEWujoPYYVEIjsE75X4qmayVRIdMqDhl33JA0bfDe6ZQ0GBYmBA4JdYY3jG/wBKIcFc4vKKvZMt+wRO133oHTKRjtYKhVaXRczEAXg5/zCooaXCQNiGoofTsNobLXY59t6b/Yp0vByqlZP4ck+ua3ZuhTdTRARcvVNIFK2e103E0XKs4jigOi5XD5j7UpScwD8rYyrldEpH//Xc+xvMi3TKQteY9XaAhwAuBQPI5AcirVUXApEVv88Fafp5ZhRMG0fteSIQwPB2Cz3PpZVuNOxvWKmJLgEJAcSBhIB6cAOUBxIvNS2oPh3xTwD",
     "text": "begin manlyman\n    If (OnActivate)\n        ;Standard Intro Skip\n        ;SW_StorySceneAct3->Disable\n        ;SW_ShadeLandingTat->Disable\n;Journal SW_TarisChap1 5\n;journal sw_tarischap1 10\njournal sw_czerkamurd 1\n;journal sw_tarischap1 12\njournal sw_czerkamurd 5\njournal sw_czerkamurd 10\njournal sw_czerkamurd 15\njournal sw_czerkamurd 20\njournal sw_czerkamurd 25\njournal sw_czerkamurd 30\nJournal sw_work 31\n\n;journal sw_tarischap1 20\n;\"SW_CzerkaOfficeDoorTat\"->unlock\n;SW_ShadeCantinaTat->Enable\n;SW_ShadeMedicalTat->Disable\n;Tatooinewarningguy->disable\n;\"SW_CzerkaOfficeDoorTat\"->unlock\n;Set ShadeMedical to 2\n\n\n        player->additem Gold_001 300\n        player->additem SW_whip 1\n        player->additem SW_tuskenmelee 1\n        player->additem SW_shirtheavy 1\n      SW_CzerkaCourte22->Enable\n        SW_CzerkaCourte22->AIFollow Player 0, 0, 0, 0\n\t\tAddTopic \"follow\"\n\t\tAddTopic \"wait\"\n        Activate\nendif\nEnd\n"
+  },
+  {
+    "type": "Script",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "SW_BanthaSiddaTo",
+    "header": {
+      "num_shorts": 1,
+      "num_longs": 0,
+      "num_floats": 0,
+      "bytecode_length": 74,
+      "variables_length": 12
+    },
+    "variables": "KLUv/QBYgQAADAAAAERpc2FibGVPbmNlAA==",
+    "bytecode": "KLUv/QBYcQIASgAAAAYBAgkgcwEAID09IDAFAXMBAAIgMdsQCQEGAQEFIFgYEAAMAQZwbGF5ZXIFEACARsYAwN5EACAARgAAuEEIVGF0b29pbmUJAQEB",
+    "text": "Begin SW_BanthaSiddaTo\n\nIf ( OnActivate )\n\tPlayer->PositionCell, -12704, 1782, 8200, 23 \"Tatooine\"\nendif\n\nEnd"
   },
   {
     "type": "Script",
