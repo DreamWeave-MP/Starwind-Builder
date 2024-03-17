@@ -710,5 +710,60 @@
         "female_bodypart": null
       }
     ]
+  },
+  {
+    "type": "Cell",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Korriban, Ancient Structure",
+    "data": {
+      "flags": 1,
+      "grid": [
+        0,
+        1065353216
+      ]
+    },
+    "water_height": 0.0,
+    "atmosphere_data": {
+      "ambient_color": [
+        71,
+        71,
+        71,
+        0
+      ],
+      "sunlight_color": [
+        242,
+        217,
+        217,
+        0
+      ],
+      "fog_color": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fog_density": 1.0
+    },
+    "references": [
+      {
+        "mast_index": 0,
+        "refr_index": 1,
+        "id": "SW_Fenelar_G_Right",
+        "temporary": true,
+        "translation": [
+          3456.147,
+          -5814.234,
+          10921.615
+        ],
+        "rotation": [
+          -0.0,
+          -0.0,
+          0.334705
+        ]
+      }
+    ]
   }
 ]
