@@ -9,7 +9,7 @@
     "file_type": "Esp",
     "author": "",
     "description": "",
-    "num_objects": 24,
+    "num_objects": 27,
     "masters": [
       [
         "Morrowind.esm",
@@ -516,6 +516,42 @@
       0,
       0
     ],
+    "id": "SW_CanCellSpell",
+    "data": {
+      "enchant_type": "ConstantEffect",
+      "enchant_cost": 10,
+      "max_charge": 100,
+      "flags": 0
+    },
+    "effects": [
+      {
+        "magic_effect": "SlowFall",
+        "skill": "None",
+        "attribute": "None",
+        "range": 0,
+        "area": 0,
+        "duration": 10,
+        "min_magnitude": 20,
+        "max_magnitude": 20
+      },
+      {
+        "magic_effect": "Telekinesis",
+        "skill": "None",
+        "attribute": "None",
+        "range": 0,
+        "area": 0,
+        "duration": 5,
+        "min_magnitude": 10,
+        "max_magnitude": 10
+      }
+    ]
+  },
+  {
+    "type": "Enchantment",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_ShipEnchant",
     "data": {
       "enchant_type": "CastWhenUsed",
@@ -533,6 +569,118 @@
         "duration": 1,
         "min_magnitude": 400,
         "max_magnitude": 400
+      }
+    ]
+  },
+  {
+    "type": "Enchantment",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "SW_SpeedBoost200",
+    "data": {
+      "enchant_type": "ConstantEffect",
+      "enchant_cost": 10,
+      "max_charge": 100,
+      "flags": 0
+    },
+    "effects": [
+      {
+        "magic_effect": "FortifyAttribute",
+        "skill": "None",
+        "attribute": "Speed",
+        "range": 0,
+        "area": 0,
+        "duration": 5,
+        "min_magnitude": 200,
+        "max_magnitude": 200
+      },
+      {
+        "magic_effect": "Telekinesis",
+        "skill": "None",
+        "attribute": "None",
+        "range": 0,
+        "area": 0,
+        "duration": 5,
+        "min_magnitude": 10,
+        "max_magnitude": 10
+      },
+      {
+        "magic_effect": "RestoreFatigue",
+        "skill": "None",
+        "attribute": "None",
+        "range": 0,
+        "area": 0,
+        "duration": 5,
+        "min_magnitude": 100,
+        "max_magnitude": 100
+      },
+      {
+        "magic_effect": "WaterWalking",
+        "skill": "None",
+        "attribute": "None",
+        "range": 0,
+        "area": 0,
+        "duration": 60,
+        "min_magnitude": 1,
+        "max_magnitude": 1
+      }
+    ]
+  },
+  {
+    "type": "Enchantment",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "SW_SpeedBoost400",
+    "data": {
+      "enchant_type": "ConstantEffect",
+      "enchant_cost": 10,
+      "max_charge": 100,
+      "flags": 0
+    },
+    "effects": [
+      {
+        "magic_effect": "FortifyAttribute",
+        "skill": "None",
+        "attribute": "Speed",
+        "range": 0,
+        "area": 0,
+        "duration": 5,
+        "min_magnitude": 400,
+        "max_magnitude": 400
+      },
+      {
+        "magic_effect": "Telekinesis",
+        "skill": "None",
+        "attribute": "None",
+        "range": 0,
+        "area": 0,
+        "duration": 5,
+        "min_magnitude": 10,
+        "max_magnitude": 10
+      },
+      {
+        "magic_effect": "RestoreFatigue",
+        "skill": "None",
+        "attribute": "None",
+        "range": 0,
+        "area": 0,
+        "duration": 5,
+        "min_magnitude": 100,
+        "max_magnitude": 100
+      },
+      {
+        "magic_effect": "WaterWalking",
+        "skill": "None",
+        "attribute": "None",
+        "range": 0,
+        "area": 0,
+        "duration": 60,
+        "min_magnitude": 1,
+        "max_magnitude": 1
       }
     ]
   },
