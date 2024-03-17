@@ -317,6 +317,24 @@
       0,
       0
     ],
+    "id": "SW_BanthaSiddaFrom",
+    "header": {
+      "num_shorts": 1,
+      "num_longs": 0,
+      "num_floats": 0,
+      "bytecode_length": 0,
+      "variables_length": 12
+    },
+    "variables": "KLUv/QBYgQAADAAAAERpc2FibGVPbmNlAA==",
+    "bytecode": "KLUv/QBYIQAAAAAAAA==",
+    "text": "Begin SW_BanthaSiddaFrom\n\nIf ( OnActivate )\n\tPlayer->PositionCell, 22650, 34340, 8214, 69 \"Tatooine\"\nendif\n\nEnd"
+  },
+  {
+    "type": "Script",
+    "flags": [
+      0,
+      0
+    ],
     "id": "SW_BanthaSiddaTo",
     "header": {
       "num_shorts": 1,
