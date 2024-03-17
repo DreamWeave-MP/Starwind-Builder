@@ -9,7 +9,7 @@
     "file_type": "Esp",
     "author": "tes3cmd",
     "description": "(generated)",
-    "num_objects": 117,
+    "num_objects": 116,
     "masters": [
       [
         "Morrowind.esm",
@@ -25,7 +25,7 @@
       ],
       [
         "Starwind.omwaddon",
-        12561135
+        12506158
       ]
     ]
   },
@@ -2379,6 +2379,194 @@
     "travel_destinations": []
   },
   {
+    "type": "Npc",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "tsi_dancer1male",
+    "name": "Thor",
+    "mesh": "Ig\\CantinaDanceTaris.nif",
+    "race": "High Elf",
+    "class": "Acrobat",
+    "faction": "",
+    "head": "SW_Twilekhead2m",
+    "hair": "SW_NoHairHighElfF",
+    "npc_flags": 8,
+    "data": {
+      "level": 1,
+      "stats": {
+        "attributes": [
+          40,
+          35,
+          40,
+          50,
+          35,
+          50,
+          40,
+          40
+        ],
+        "skills": [
+          5,
+          5,
+          10,
+          10,
+          5,
+          10,
+          5,
+          15,
+          30,
+          5,
+          5,
+          15,
+          5,
+          15,
+          5,
+          5,
+          5,
+          30,
+          10,
+          35,
+          35,
+          25,
+          10,
+          40,
+          10,
+          20,
+          20
+        ],
+        "health": 45,
+        "magicka": 70,
+        "fatigue": 180
+      },
+      "disposition": 50,
+      "reputation": 0,
+      "rank": 0,
+      "gold": 0
+    },
+    "inventory": [],
+    "spells": [],
+    "ai_data": {
+      "hello": 0,
+      "fight": 0,
+      "flee": 100,
+      "alarm": 0,
+      "services": 0
+    },
+    "ai_packages": [
+      {
+        "type": "Wander",
+        "distance": 0,
+        "duration": 5,
+        "game_hour": 0,
+        "idle2": 0,
+        "idle3": 0,
+        "idle4": 0,
+        "idle5": 0,
+        "idle6": 0,
+        "idle7": 0,
+        "idle8": 0,
+        "idle9": 90,
+        "reset": 1
+      }
+    ],
+    "travel_destinations": []
+  },
+  {
+    "type": "Npc",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "tsi_dancer2male",
+    "name": "Odin",
+    "mesh": "Ig\\CantinaDanceTaris.nif",
+    "race": "Twi'lekBlue",
+    "class": "Acrobat",
+    "faction": "",
+    "head": "SW_TwiBlueHead",
+    "hair": "SW_NoHairHighElfF",
+    "npc_flags": 8,
+    "data": {
+      "level": 1,
+      "stats": {
+        "attributes": [
+          40,
+          35,
+          40,
+          50,
+          35,
+          50,
+          40,
+          40
+        ],
+        "skills": [
+          5,
+          5,
+          10,
+          10,
+          5,
+          10,
+          5,
+          15,
+          30,
+          5,
+          5,
+          15,
+          5,
+          15,
+          5,
+          5,
+          5,
+          30,
+          10,
+          35,
+          35,
+          25,
+          10,
+          40,
+          10,
+          20,
+          20
+        ],
+        "health": 45,
+        "magicka": 70,
+        "fatigue": 180
+      },
+      "disposition": 50,
+      "reputation": 0,
+      "rank": 0,
+      "gold": 0
+    },
+    "inventory": [],
+    "spells": [],
+    "ai_data": {
+      "hello": 0,
+      "fight": 0,
+      "flee": 100,
+      "alarm": 0,
+      "services": 0
+    },
+    "ai_packages": [
+      {
+        "type": "Wander",
+        "distance": 0,
+        "duration": 5,
+        "game_hour": 0,
+        "idle2": 0,
+        "idle3": 0,
+        "idle4": 0,
+        "idle5": 0,
+        "idle6": 0,
+        "idle7": 0,
+        "idle8": 0,
+        "idle9": 90,
+        "reset": 1
+      }
+    ],
+    "travel_destinations": []
+  },
+  {
     "type": "Clothing",
     "flags": [
       0,
@@ -3512,6 +3700,117 @@
           1.5707964
         ],
         "door_destination_cell": "Nar Shaddaa, Makacheesa Market"
+      }
+    ]
+  },
+  {
+    "type": "Cell",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Taris, Upper City Cantina",
+    "data": {
+      "flags": 1,
+      "grid": [
+        0,
+        1065353216
+      ]
+    },
+    "water_height": 0.0,
+    "atmosphere_data": {
+      "ambient_color": [
+        57,
+        63,
+        85,
+        0
+      ],
+      "sunlight_color": [
+        180,
+        148,
+        199,
+        0
+      ],
+      "fog_color": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fog_density": 1.0
+    },
+    "references": [
+      {
+        "mast_index": 0,
+        "refr_index": 1,
+        "id": "tsi_dancer2male",
+        "temporary": false,
+        "translation": [
+          3471.1099,
+          3598.8887,
+          12377.727
+        ],
+        "rotation": [
+          -0.0,
+          -0.0,
+          1.0791694
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Cell",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Tatooine, Cantina",
+    "data": {
+      "flags": 5,
+      "grid": [
+        0,
+        1065353216
+      ]
+    },
+    "water_height": 0.0,
+    "atmosphere_data": {
+      "ambient_color": [
+        166,
+        166,
+        166,
+        0
+      ],
+      "sunlight_color": [
+        242,
+        217,
+        217,
+        0
+      ],
+      "fog_color": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fog_density": 1.0
+    },
+    "references": [
+      {
+        "mast_index": 0,
+        "refr_index": 1,
+        "id": "tsi_dancer1male",
+        "temporary": false,
+        "translation": [
+          4498.07,
+          3907.0674,
+          12472.705
+        ],
+        "rotation": [
+          -0.0,
+          -0.0,
+          -2.3709495
+        ],
+        "scale": 1.5
       }
     ]
   },
