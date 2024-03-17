@@ -14,6 +14,7 @@ cpp: plugins-bin
 plugins-bin:
 	mkdir -p build
 	find ./src -type f -name "*.json" -exec sh -c 'OUT_FILE="$$(echo "$$1" | sed "s/\.json$$/.esp/")"; tes3conv "$$1" "$$OUT_FILE"; mv "$$OUT_FILE" ./build/' sh {} \;
+	mv ./build/"Starwind Enhanced.esp" ./build/"Starwind Enhanced.esm"
 
 plugins-text:
 	rm -rf Starwind.omwaddon StarwindMPRecords.omwaddon "Starwind Community Patch Project.omwaddon"
