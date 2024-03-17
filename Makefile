@@ -26,10 +26,12 @@ deploy: clean plugins-text tsi
 	mv Starwind.omwaddon $$HOME/.local/share/openmw/data/
 
 mp-start:
+	sed -i 's/destinationAddress = 34.123.56.114/destinationAddress = localhost/' ~/openmw/tsi-client/tes3mp-client-default.cfg
 	rm -rf ~/openmw/tsi-client/server/data/cell/* ~/openmw/tsi-client/server/data/player/* ~/openmw/tsi-client/server/data/world/world.json
 	~/openmw/tsi-client/tes3mp-server &
 	~/openmw/tsi-client/tes3mp
 	kill -9 $$(pgrep tes3mp-server)
+	sed -i 's/destinationAddress = localhost/destinationAddress = 34.123.56.114/' ~/openmw/tsi-client/tes3mp-client-default.cfg
 
 test-mp: deploy mp-start
 
