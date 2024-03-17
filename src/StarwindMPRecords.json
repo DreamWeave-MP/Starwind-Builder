@@ -9,7 +9,7 @@
     "file_type": "Esp",
     "author": "tes3cmd",
     "description": "(generated)",
-    "num_objects": 142,
+    "num_objects": 117,
     "masters": [
       [
         "Morrowind.esm",
@@ -25,7 +25,7 @@
       ],
       [
         "Starwind.omwaddon",
-        12559131
+        12561135
       ]
     ]
   },
@@ -681,6 +681,40 @@
     "text": "Begin tsi_koltotanks\r\n\r\nshort button\r\nshort KoltoCost\r\nshort QuestionState\r\n\r\nif ( OnActivate == 0 )\r\n        if ( QuestionState == 0 )\r\n                Return\r\n        endif\r\nendif\r\n\r\nSet KoltoCost to 35\r\n\r\nif ( Player->GetItemCount Gold_001 < KoltoCost )\r\n        MessageBox \"You do not have enough credits to use this kolto tank.\" \"OK\"\r\n        Return\r\nendif\r\n\r\nif ( QuestionState == 0 )\r\n        MessageBox \"Would you like to make a payment of %.0f and use the kolto tank?\" KoltoCost \"Yes\" \"No\"\r\n        set QuestionState to 10\r\nendif\r\n\r\n;Ask second question \r\nif ( QuestionState == 10 )\r\n\r\n        Set button to GetButtonPressed\r\n\r\n        if ( button == 0 )\r\n                MessageBox \"What services do you require from this kolto tank?\" \"Cure Disease\" \"Cure Poison\" \"Restore Skeleton and Tissue\" \"Restore Ability Cognition\"\r\n                set QuestionState to 20\r\n        elseif ( button == 1 )\r\n                set QuestionState to 0\r\n        endif\r\n\r\n        Return\r\n\r\nendif\r\n\r\n;perform cure or give message\r\nif ( QuestionState == 20 )\r\n\r\n        Set button to GetButtonPressed\r\n\r\n        if ( button == 0 )\r\n                if ( Player->GetCommonDisease == 1 )\r\n                        Cast \"Cure Common Disease Other\" Player\r\n                        Player->RemoveItem Gold_001 35\r\n                        FadeOut,1.0\r\n                        FadeIn,1.0\r\n                else\r\n                        MessageBox \"You are not afflicted with a common disease.\" \"OK\"\r\n                endif\r\n                Set QuestionState to 0\r\n        endif\r\n\r\n;Logic may be re-used later.\r\n;       if ( button == 1 )\r\n;               if ( Player->GetBlightDisease == 1 )\r\n;                       Cast \"Cure Blight Disease\" Player\r\n;                       Player->RemoveItem Gold_001 35\r\n;                       FadeOut,1.0\r\n;                       FadeIn,1.0\r\n;               else\r\n;                       MessageBox \"You are not afflicted with a blight disease.\" \"OK\"\r\n;               endif\r\n;               Set QuestionState to 0\r\n;       endif\r\n\r\n        if ( button == 1 )\r\n                if ( Player->GetEffect sEffectPoison == 1 )                             ;check for poison effect on player\r\n                        Cast \"Cure Poison Touch\" Player\r\n                        Player->RemoveItem Gold_001 35\r\n                        FadeOut,1.0\r\n                        FadeIn,1.0\r\n                else\r\n                        MessageBox \"You are not poisoned.\" \"OK\"\r\n                endif\r\n                Set QuestionState to 0\r\n        endif\r\n\r\n        if ( button == 2 )\r\n                Cast \"Almsivi Restoration\" Player                                       ;restore eight attributes\r\n                Player->RemoveItem Gold_001 35\r\n                FadeOut,1.0\r\n                FadeIn,1.0\r\n                Set QuestionState to 0\r\n        endif\r\n\r\n        if ( button == 3 )\r\n                Cast \"Almsivi Restore Fighter\" Player                                   ;restore eight fighter skills\r\n                Cast \"Almsivi Restore Mage\" Player                                      ;restore eight mage skills\r\n                Cast \"Almsivi Restore Stealth\" Player                                   ;restore eight stealth skills\r\n                Cast \"Almsivi Restore Other\" Player                                     ;restore three other skills\r\n                Player->RemoveItem Gold_001 35\r\n                FadeOut,1.0\r\n                FadeIn,1.0\r\n                Set QuestionState to 0\r\n        endif\r\n\r\nendif\r\n\r\nend\r\n"
   },
   {
+    "type": "Script",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "tsiAutoDoorJediValley",
+    "header": {
+      "num_shorts": 0,
+      "num_longs": 0,
+      "num_floats": 0,
+      "bytecode_length": 0,
+      "variables_length": 0
+    },
+    "bytecode": "KLUv/QBYIQAAAAAAAA==",
+    "text": "Begin tsiAutoDoorJediValley\n\nshort doorRaised\nshort doorDistance\nshort doOnce\nshort raiseDoor\nshort lowerDoor\n\nfloat basePos\nfloat minPos\nfloat maxPos\n\nIf ( doOnce == 0 )\n\tset doorDistance to 250\n\tset basePos to ( getpos z )\n\tset minPos to ( getpos y - doorDistance )\n\tset \tmaxPos to ( getpos y + doorDistance )\n\tset doOnce to 1\nendif\n\nIf ( OnActivate )\n\treturn\nendif\n\n; Set a new journal index for all derivative scripts!\nIf ( GetJournalIndex SW_DantJourn == 30 )\n\tIf ( player->getpos y <= maxPos )\n\t\tIf ( player->getpos y >= minPos )\n\t\t\tIf ( doorRaised == 0 )\n\t\t\t\tset raiseDoor to 1\n\t\t\tendif\n\t\tendif\n\tendif\n\n\tIf ( player->getpos y >= maxPos )\n\t\tif ( doorRaised )\n\t\t\tset lowerDoor to 1\n\t\tendif\n\telseif ( player->getpos y <= minPos )\n\t\tif ( doorRaised )\n\t\t\tset lowerDoor to 1\n\t\tendif\n\tendif\n\n\tif ( raiseDoor )\n\t\tIf ( doorRaised == 0 )\n\t\t\tsetpos z ( basePos + doorDistance )\n\t\t\tset doorRaised to 1\n\t\t\tset raiseDoor to 0\n\t\tendif\n\tElseif ( lowerDoor )\n\t\tif ( doorRaised )\n\t\t\tsetpos z basePos\n\t\t\tset doorRaised to 0\n\t\t\tset lowerDoor to 0\n\t\tendif\n\tendif\nendif\n\nEnd tsiAutoDoorJediValley"
+  },
+  {
+    "type": "Script",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "tsiAutoDoorScrBase",
+    "header": {
+      "num_shorts": 0,
+      "num_longs": 0,
+      "num_floats": 0,
+      "bytecode_length": 0,
+      "variables_length": 0
+    },
+    "bytecode": "KLUv/QBYIQAAAAAAAA==",
+    "text": "Begin tsiAutoDoorScrBase\n\nshort doorRaised\nshort doorDistance\nshort doOnce\nshort raiseDoor\nshort lowerDoor\n\nfloat basePos\nfloat minPos\nfloat maxPos\n\nIf ( doOnce == 0 )\n\tset doorDistance to 250\n\tset basePos to ( getpos z )\n\tset minPos to ( getpos y - doorDistance )\n\tset \tmaxPos to ( getpos y + doorDistance )\n\tset doOnce to 1\nendif\n\nIf ( OnActivate )\n\treturn\nendif\n\n; Set a new journal index for all derivative scripts!\nIf ( GetJournalIndex JOURN_IDX == 30 )\n\tIf ( player->getpos y <= maxPos )\n\t\tIf ( player->getpos y >= minPos )\n\t\t\tIf ( doorRaised == 0 )\n\t\t\t\tset raiseDoor to 1\n\t\t\tendif\n\t\tendif\n\tendif\n\n\tIf ( player->getpos y >= maxPos )\n\t\tif ( doorRaised )\n\t\t\tset lowerDoor to 1\n\t\tendif\n\telseif ( player->getpos y <= minPos )\n\t\tif ( doorRaised )\n\t\t\tset lowerDoor to 1\n\t\tendif\n\tendif\n\n\tif ( raiseDoor )\n\t\tIf ( doorRaised == 0 )\n\t\t\tsetpos z ( basePos + doorDistance )\n\t\t\tset doorRaised to 1\n\t\t\tset raiseDoor to 0\n\t\tendif\n\tElseif ( lowerDoor )\n\t\tif ( doorRaised )\n\t\t\tsetpos z basePos\n\t\t\tset doorRaised to 0\n\t\t\tset lowerDoor to 0\n\t\tendif\n\tendif\nendif\n\nEnd tsiAutoDoorScrBase"
+  },
+  {
     "type": "Spell",
     "flags": [
       0,
@@ -826,6 +860,32 @@
     "name": "Ship Captain",
     "mesh": "Ig\\Static\\endarpodopen.nif",
     "script": "Alt_Ship",
+    "open_sound": "Door Metal Open",
+    "close_sound": "Door Metal Close"
+  },
+  {
+    "type": "Door",
+    "flags": [
+      0,
+      1024
+    ],
+    "id": "SW_DoorEnclaveCouncil",
+    "name": "Metal Door",
+    "mesh": "Ig\\Activators\\DoorNar1.nif",
+    "script": "tsiAutoDoorJediValley",
+    "open_sound": "Door Metal Open",
+    "close_sound": "Door Metal Close"
+  },
+  {
+    "type": "Door",
+    "flags": [
+      0,
+      1024
+    ],
+    "id": "SW_DoorEnclaveTrainers",
+    "name": "Metal Door",
+    "mesh": "Ig\\Activators\\DoorNar1.nif",
+    "script": "tsiAutoDoorJediValley",
     "open_sound": "Door Metal Open",
     "close_sound": "Door Metal Close"
   },
