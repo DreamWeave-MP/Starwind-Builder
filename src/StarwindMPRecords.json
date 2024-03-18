@@ -9,7 +9,7 @@
     "file_type": "Esp",
     "author": "tes3cmd",
     "description": "(generated)",
-    "num_objects": 116,
+    "num_objects": 121,
     "masters": [
       [
         "Morrowind.esm",
@@ -25,7 +25,7 @@
       ],
       [
         "Starwind.omwaddon",
-        12506158
+        12846988
       ]
     ]
   },
@@ -661,6 +661,23 @@
     },
     "bytecode": "KLUv/QBYAQIAPAAAAAYBAQUgWBgQAAwBBnBsYXllcgUQAGDFRAAAaMIA2D9GAAAAABNUYXRvb2luZSwgU2FuZHJpdmVyCQEBAQ==",
     "text": "Begin tsi_escapechair\r\n\r\nIf ( OnActivate )\r\n\tplayer->positioncell 1579, -58, 12278, 0, \"Tatooine, Sandriver\"\r\nEndif\r\n\r\nEnd tsi_escapechair\r\n"
+  },
+  {
+    "type": "Script",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "tsi_JapTreeScript",
+    "header": {
+      "num_shorts": 0,
+      "num_longs": 0,
+      "num_floats": 0,
+      "bytecode_length": 0,
+      "variables_length": 0
+    },
+    "bytecode": "KLUv/QBYIQAAAAAAAA==",
+    "text": "Begin tsi_JapTreeScript\n\nIf ( OnActivate )\n\tIf ( GetJournalIndex \"SW_Japor\" == 1 )\n\t\tplayer->additem sw_JapSnip 1\n\t\tMessageBox \"You clip off a piece of the japor tree and stash it in your pouch. You're not sure if you feel comfortable taking another piece of the sacred tree.\"\n\t\tJournal SW_Japor 2\n\tendif\nendif\nEnd tsi_JapTreeScript\n"
   },
   {
     "type": "Script",
@@ -2712,6 +2729,17 @@
       0,
       0
     ],
+    "id": "tsi_JapTreeActi",
+    "name": "Japor Tree",
+    "mesh": "Ig\\Static\\fol_Japor.nif",
+    "script": "tsi_JapTreeScript"
+  },
+  {
+    "type": "Activator",
+    "flags": [
+      0,
+      0
+    ],
     "id": "tsi_kolto_nowall",
     "name": "Kolto Tank",
     "mesh": "Ig\\Static\\koltotank.nif",
@@ -3755,6 +3783,44 @@
           -0.0,
           1.0791694
         ]
+      }
+    ]
+  },
+  {
+    "type": "Cell",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Tatooine",
+    "data": {
+      "flags": 135,
+      "grid": [
+        706300,
+        1045220557
+      ]
+    },
+    "region": "Thirsk Region",
+    "water_height": 0.0,
+    "references": [
+      {
+        "mast_index": 0,
+        "refr_index": 404564,
+        "id": "tsi_JapTreeActi",
+        "temporary": true,
+        "translation": [
+          11629.985,
+          -5897.9517,
+          8213.893
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          6.2592435
+        ],
+        "scale": 2.0,
+        "lock_level": 2147483647,
+        "key": "SW_IvoryHarvest"
       }
     ]
   },
@@ -5041,6 +5107,38 @@
     "filters": []
   },
   {
+    "type": "Info",
+    "flags": [
+      0,
+      0
+    ],
+    "info_id": "305251794920327661",
+    "prev_id": "2558319990660320738",
+    "next_id": "1932712093173728795",
+    "data": {
+      "dialogue_type": "Greeting",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "SW_CzerkaJapor",
+    "text": "Ah, it seems you have been given access out of Sandriver. I have a business deal for you if you are interested in a little something extra while you're out there. Somewhere in the Dune Sea is a fabled tree, called the Japor Tree. Bring me some snippets of this tree to study for my research, and in return I will make you a quarterstaff from its Ivory. They say the tree has paralyzing effects.",
+    "filters": [
+      {
+        "slot": "Slot0",
+        "filter_type": "Journal",
+        "filter_function": "JournalType",
+        "filter_comparison": "GreaterEqual",
+        "id": "SW_Work",
+        "value": {
+          "Integer": 20
+        }
+      }
+    ],
+    "result": "Journal \"SW_Japor\" 1\nStopSound \"JaporGreet1\"\nPlaySound3d \"JaporGreet2\"\nStopSound \"JaporGreet3\"\nStopSound \"JaporGreet4\"\nStopSound \"Japor1\"\nStopSound \"Japor2\""
+  },
+  {
     "type": "Dialogue",
     "flags": [
       0,
@@ -5130,6 +5228,57 @@
       }
     ],
     "result": "PCRaiseRank\nModDisposition 5\nJournal SW_Sith 5\nplayer->additem SW_SithCuirassQuest 1\nplayer->additem SW_ShirtBlack 1\nplayer->additem SW_PantsBlack 1\nSet HasJoinedSith to 1"
+  },
+  {
+    "type": "Dialogue",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "japor tree",
+    "dialogue_type": "Topic"
+  },
+  {
+    "type": "Info",
+    "flags": [
+      0,
+      0
+    ],
+    "info_id": "27226226711274020928",
+    "prev_id": "1883287311056024424",
+    "next_id": "",
+    "data": {
+      "dialogue_type": "Topic",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "SW_CzerkaJapor",
+    "text": "You've brought me the Ivory? Very well, the quarterstaff was already crafted, but I need raw materials in order to study them. Enjoy your staff, adventurer, I imagine it will come in handy in  your line of work, and thank you. I will put in a good word for you with my fellow colleagues.",
+    "filters": [
+      {
+        "slot": "Slot0",
+        "filter_type": "Journal",
+        "filter_function": "JournalType",
+        "filter_comparison": "Equal",
+        "id": "SW_Japor",
+        "value": {
+          "Integer": 2
+        }
+      },
+      {
+        "slot": "Slot1",
+        "filter_type": "Item",
+        "filter_function": "ItemType",
+        "filter_comparison": "GreaterEqual",
+        "id": "SW_JapSnip",
+        "value": {
+          "Integer": 1
+        }
+      }
+    ],
+    "result": "Journal \"SW_Japor\" 3\nplayer->removeitem SW_JapSnip 1\nplayer->additem SW_JaporStaff, 1\nplayer->modReputation 1\nStopSound \"JaporGreet1\"\nStopSound \"JaporGreet2\"\nStopSound \"JaporGreet3\"\nStopSound \"JaporGreet4\"\nPlaySound3d \"Japor1\"\nStopSound \"Japor2\""
   },
   {
     "type": "Dialogue",
@@ -5422,6 +5571,54 @@
     "text": "Uh, yeah, I mean, it's only twenty five thousand credits to get back. I'll accept whatever passes for the local currency around here.",
     "filters": [],
     "result": "Choice \"You're a real ass... Here\" 1\nChoice \"No, I like it here. I think I'll stay for a time.\" 2"
+  },
+  {
+    "type": "Dialogue",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "SW_Japor",
+    "dialogue_type": "Journal"
+  },
+  {
+    "type": "Info",
+    "flags": [
+      0,
+      0
+    ],
+    "info_id": "216130741149662377",
+    "prev_id": "3570237281592927971",
+    "next_id": "0d71d2396f3b49dda0ba9eae5de3604f",
+    "data": {
+      "dialogue_type": "Journal",
+      "disposition": 3,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "text": "I have received the staff, based on the shape of it I can assume it's made for Echani fighting styles. My reputation with the Czerka Corporation has improved as well.",
+    "quest_finish": 1,
+    "filters": []
+  },
+  {
+    "type": "Info",
+    "flags": [
+      0,
+      0
+    ],
+    "info_id": "0d71d2396f3b49dda0ba9eae5de3604f",
+    "prev_id": "216130741149662377",
+    "next_id": "",
+    "data": {
+      "dialogue_type": "Topic",
+      "disposition": 2,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "text": "I have acquired a piece of the Japor tree. I should be careful with this...",
+    "filters": []
   },
   {
     "type": "Dialogue",
