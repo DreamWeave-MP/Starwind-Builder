@@ -112,6 +112,10 @@ if [ "$1" = "tsi" ]; then
     #tes3cmd delete --type CELL --exact-id "The Outer Rim, Freighter" --instance-match "ObjIdx:2955 " StarwindRemasteredPatch.esm 2> grep -v "Can't find \"Data Files\"" # Thegg
     #tes3cmd delete --type CELL --exact-id "The Outer Rim, Freighter" --instance-match "ObjIdx:2956 " StarwindRemasteredPatch.esm 2> grep -v "Can't find \"Data Files\"" # Shade
 
+    # Bing's race pack creates a duplicate of the customs npc
+    tes3cmd delete --type CELL --exact-id "Nar Shaddaa, Customs" --instance-match "ObjIdx:16453 " StarwindRemasteredPatch.esm
+    tes3cmd delete --type CELL --exact-id "Nar Shaddaa, Customs" --instance-match "ObjIdx:16507 " "bings race pack.esp"
+
     # Fuck Ny Vash
     tes3cmd delete --type CELL --exact-id "Tatooine, Sandriver" --instance-match "ObjIdx:1109 " StarwindRemasteredPatch.esm # Upgrade Droid
 
