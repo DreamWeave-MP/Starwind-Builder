@@ -194,6 +194,35 @@ tes3cmd delete --type CELL --exterior StarwindRemasteredV1.15.esm StarwindRemast
 # MTM removes deleted birthsigns, which is a problem because we don't want vanilla birthsigns
 tes3cmd dump --type BSGN --match "deleted" --raw-with-header deletedbirthsigns.esp StarwindRemasteredV1.15.esm
 
+# I'll fix gavan myself in CPP because nobody seems to know exactly what's going on here
+tes3cmd dump --type CELL --exact-id "Tatooine" --instance-match "ObjIdx:397 " StarwindRemasteredPatch.esm
+
+echo "Patching enhanced..."
+# Basically every edit Enhanced attempts to make to vanilla seems to have the refNums corrupted, so we manually handle the deletions here
+# Fortunately almost nothing is actively modified, just marked as deleted
+# Only one single object (8517) deleted appears to have accurate refNums.
+# Seems like a possible consequence of Starwind itself updating under enhanced's nose, but either way it's not a big deal.
+
+# There are two edits to this cell - one moved rock, and tiny gavan. I don't know why either exist.
+tes3cmd delete --type CELL --exact-id "Tatooine" "Starwind Enhanced.esm"
+# Enhanced deletes this one table, not sure why
+tes3cmd delete --type CELL --exact-id "Taris, Central Plaza" --instance-match "MastIdx:5" "Starwind Enhanced.esm"
+tes3cmd delete --type CELL --exact-id "Taris, Central Plaza" --instance-match "ObjIdx:8517" StarwindRemasteredPatch.esm
+# Do you have something against this table?
+tes3cmd delete --type CELL --match "Taris, Central Plaza: Government Office" --instance-match "MastIdx:5" --instance-match "SW_In_TableGround" "Starwind Enhanced.esm"
+tes3cmd delete --type CELL --match "Taris, Central Plaza: Government Office" --instance-match "SW_In_TableGround" StarwindRemasteredPatch.esm
+tes3cmd delete --type CELL --exact-id "Taris, Central Plaza: Capital Tower Upper Level" --instance-match "SW_In_TableGround" StarwindRemasteredPatch.esm
+tes3cmd delete --type CELL --exact-id "Taris, Central Plaza: Capital Tower Upper Level" --instance-match "MastIdx:5" --instance-match "SW_In_TableGround" StarwindRemasteredPatch.esm
+# Cantina Signs
+tes3cmd delete --type CELL --exact-id "Taris, Upper City Cantina" --instance-match "Sign" StarwindRemasteredPatch.esm
+tes3cmd delete --type CELL --exact-id "Taris, Upper City Cantina" --instance-match "MastIdx:5" "Starwind Enhanced.esm"
+tes3cmd delete --type CELL --exact-id "Nar Shaddaa, Lower City" --instance-match "SW_SignCantina" --instance-match "X:9336" StarwindRemasteredPatch.esm
+tes3cmd delete --type CELL --exact-id "Nar Shaddaa, Lower City" --instance-match "SW_SignCantina" --instance-match "MastIdx:5" "Starwind Enhanced.esm"
+tes3cmd delete --type CELL --exact-id "Nar Shaddaa, Customs" --instance-match "SW_SignCantina" StarwindRemasteredPatch.esm
+tes3cmd delete --type CELL --exact-id "Nar Shaddaa, Customs" --instance-match "SW_SignCantina" --instance-match "MastIdx:5" "Starwind Enhanced.esm"
+# One moved object?
+tes3cmd delete --type CELL --exact-id "Starwind test cell" --instance-match "MastIdx:5" "Starwind Enhanced.esm"
+
 if [ "$1" = "tsi" ]; then
     do_mp_merge "$2"
     mv Starwind.omwaddon ..
