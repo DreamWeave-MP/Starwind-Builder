@@ -9,7 +9,7 @@
     "file_type": "Esp",
     "author": "",
     "description": "",
-    "num_objects": 22,
+    "num_objects": 23,
     "masters": [
       [
         "Morrowind.esm",
@@ -29,7 +29,7 @@
       ],
       [
         "StarwindRemasteredPatch.esm",
-        11432889
+        11437434
       ]
     ]
   },
@@ -288,6 +288,24 @@
     },
     "bytecode": "KLUv/QBYZQoAtpA8MWCp0gEhCIIQQRAEUeo4uW9M/sEYbzaabukvBjgJjLN19acbgURZI3M0sWPXuA6PyB0zAC4ALgBVejqxYN/VIRonMiwKPBQqLO2iwhYJT0nxamlYRCZrQwCGIwfLmLDFwtDggRsIy3BOqggWZB/cMI06TLXSzzFbzT4U005JiEQY6JnIPrj1398M7IOjWwT74CY7o1TrU9QK/VmBnunPajrVn9WEJepyqaKl8XSiA7OL/qw8neigmgflTNexWM+hbOA+uIGy+rvb2IZzEm7Kl7z6k0XXZZ1nWc8hCuESoNsFgDAsUKb3N/1ZnfPQ+tRIuxUnIODCG7INQZHkz2SQ3NgoAewti0NBMGFlsxKP6TiDgUAD4JYAlVrwuh4roW/Jjgu1aMn0sEYEWFMpwesyQstHLmyBd6JIzE32SO1j2KcMq9xMxTqzE2U=",
     "text": "Begin SW_FTravelTatooine\n\nIf ( OnActivate == 1 )\n\tIf ( FreightTravel != 5 )\n\t\tSet FreightTravel to 5\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\t\tSW_FreighterToDantooine->Disable\n\t\t\tSW_FreighterToTatooine->Enable\n\t\t\tSW_FreighterToManaan->Disable\n\t\t\tSW_FreighterToKashyyk->Disable\n\t\t\tSW_FreighterToDathomir->Disable\n\t\t\tSW_FreighterToGamorr->Disable\n\t\t\tSW_FreighterToHoth->Disable\n\t\t\tSW_FreighterToTaris->Disable\n\t\t\tSW_FreighterToM4->Disable\n\t\t\tSW_FreighterToNarShad->Disable\n\t\t\tSW_FreighterToNone->Disable\n\t\t\tSW_FreighterToLok->Disable\n\t\t\tSet SW_LTSPEED to 1\n\t\t\tSW_FreightPlanDath->Disable\n\t\t\tSW_FreightPlanKash->Disable\n\t\t\tSW_FreightPlanHoth->Disable\n\t\t\tSW_FreightPlanGamor->Disable\n\t\t\tSW_FreighterPlanTat->Enable\n\t\t\tSW_FreightPlanDant->Disable\n\t\t\tSW_FreightPlanNar->Disable\n\t\t\tSW_FreightPlanMana->Disable\n\t\t\tSW_FreightPlanM478->Disable\n\t\t\tSW_FreightPlanTaris->Disable\n\telse\n\t\tMessageBox \"You are already landed on Tatooine!\"\n\tendif\nEndif\n\nEnd\n"
+  },
+  {
+    "type": "Script",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "SW_StorySceneScr2",
+    "header": {
+      "num_shorts": 2,
+      "num_longs": 0,
+      "num_floats": 1,
+      "bytecode_length": 240,
+      "variables_length": 20
+    },
+    "variables": "KLUv/QBYwQAAFAAAAGRvT25jZQBkb0Fsc28AdGltZXIA",
+    "bytecode": "KLUv/QBYzQYA0swwNHBr0gF8rj6D+1RVjQjF+h+E7SozihElqTaPJcDwasSilEhC7UkVaDgChHr97aatWkt3kgG2oaGhqyE6KzJ6cWT1g8nJNM0jMVEExsXnArFNLlEGgQRCAEOEOs+SbduCqIFhmqfKzUQno0RnuQPk4WfwKGB9jR1gjRkyTLhbVw1FjofdrUhxY1JqXpKi0mSqiCWuHj78JIVP02tGJWZSSpOpItfjx/rAxE9asLzhdFrIDfXoo61HFD/p0/R1Paz47W5HBgDiY0rHrkgH0yA0aDFiL8OAow==",
+    "text": "Begin SW_StorySceneScr2\n\nshort doOnce\nshort doAlso\nfloat timer\n\nif ( doOnce == 0 )\nif ( GetDistance \"Player\" < 250 )\nif ( GetJournalIndex \"SW_PreTaris\" == 30 )\n\nif ( doAlso == 0 )\nSW_ShadePre->AiWander 0 0 0\nSW_ShadePre->Disable\nFadeOut 2.0\nDisablePlayerControls\nset doAlso to 1\nendif\nset timer to ( timer + GetSecondsPassed )\nif ( timer > 2 )\nPlaySound \"SW_Shipblastoff\"\nJournal SW_PreTaris 40\nplayer->PositionCell 2800.889 9448.283 12415.763 315.1 \"Tatooine, Sandriver\"\nset doOnce to 1\nendif\n\nendif\nendif\nendif\n\nEnd\n"
   },
   {
     "type": "Weapon",
