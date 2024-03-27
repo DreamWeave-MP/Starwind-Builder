@@ -9,7 +9,7 @@
     "file_type": "Esp",
     "author": "",
     "description": "",
-    "num_objects": 28,
+    "num_objects": 24,
     "masters": [
       [
         "Morrowind.esm",
@@ -32,39 +32,6 @@
         11437434
       ]
     ]
-  },
-  {
-    "type": "GameSetting",
-    "flags": [
-      0,
-      0
-    ],
-    "id": "sEffectResistShock",
-    "value": {
-      "String": "Resist Energy Damage"
-    }
-  },
-  {
-    "type": "GameSetting",
-    "flags": [
-      0,
-      0
-    ],
-    "id": "sEffectShockDamage",
-    "value": {
-      "String": "Energy Damage"
-    }
-  },
-  {
-    "type": "GameSetting",
-    "flags": [
-      0,
-      0
-    ],
-    "id": "sEffectWeaknessToShock",
-    "value": {
-      "String": "Weakness to Energy"
-    }
   },
   {
     "type": "MagicEffect",
@@ -459,42 +426,6 @@
         "duration": 5,
         "min_magnitude": 10,
         "max_magnitude": 10
-      }
-    ]
-  },
-  {
-    "type": "Enchantment",
-    "flags": [
-      0,
-      0
-    ],
-    "id": "SW_LightsaberEnch",
-    "data": {
-      "enchant_type": "CastOnStrike",
-      "enchant_cost": 0,
-      "max_charge": 500,
-      "flags": 0
-    },
-    "effects": [
-      {
-        "magic_effect": "WeaknessToShock",
-        "skill": "None",
-        "attribute": "None",
-        "range": 2,
-        "area": 0,
-        "duration": 1,
-        "min_magnitude": 10,
-        "max_magnitude": 15
-      },
-      {
-        "magic_effect": "ShockDamage",
-        "skill": "None",
-        "attribute": "None",
-        "range": 2,
-        "area": 0,
-        "duration": 0,
-        "min_magnitude": 1,
-        "max_magnitude": 5
       }
     ]
   },
