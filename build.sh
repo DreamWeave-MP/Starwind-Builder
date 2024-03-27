@@ -197,6 +197,10 @@ tes3cmd dump --type BSGN --match "deleted" --raw-with-header deletedbirthsigns.e
 # I'll fix gavan myself in CPP because nobody seems to know exactly what's going on here
 tes3cmd dump --type CELL --exact-id "Tatooine" --instance-match "ObjIdx:397 " StarwindRemasteredPatch.esm
 
+# Turn undead was used on lightsabers because reasons
+tes3cmd delete --type GMST --exact-id "sEffectTurnUndead" StarwindRemasteredPatch.esm
+tes3cmd delete --type MGEF --exact-id "101" StarwindRemasteredPatch.esm # turn undead enum
+
 echo "Patching enhanced..."
 # Basically every edit Enhanced attempts to make to vanilla seems to have the refNums corrupted, so we manually handle the deletions here
 # Fortunately almost nothing is actively modified, just marked as deleted
