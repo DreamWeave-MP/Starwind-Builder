@@ -159,7 +159,16 @@ if [ "$1" = "tsi" ]; then
     #tes3cmd delete --type CELL --exterior alt_start1.5.esp "bings race pack.esp"
     #tes3cmd delete --type CELL --exact-id "Nar Shaddaa, Club Arkngthand" "bings race pack.esp"
 
-    tes3cmd delete --type CELL --exact-id "Lok, Graveridge Pawnshop" --instance-match "SW_Vhadeer" StarwindRemasteredPatch.esm
+    # Broken mp refs from JMC's
+    tes3cmd delete --type CELL --exact-id "Lok, Graveridge Pawnshop" --instance-match "SW_Vhadeer" StarwindRemasteredPatch.esm StarwindRacesJMC.esp
+    tes3cmd delete --type CELL --exact-id "nar shaddaa, 168 alley east" --exact-id "nar shaddaa, office building" --instance-match "SW_DipManager" StarwindRemasteredV1.15.esm StarwindRemasteredPatch.esm
+    # This one is extra weird as somehow both plugins have two unique definitions of the same ref under the same index
+    tes3cmd delete --type CELL --exact-id "Nar Shaddaa, Speeder Shop" --instance-match "SW_NarSpeederMerch" StarwindRemasteredV1.15.esm StarwindRemasteredPatch.esm
+    tes3cmd delete --type CELL --exact-id "manaan, yortal's junkpile" --instance-match "SW_Yortal" StarwindRemasteredV1.15.esm
+    tes3cmd delete --type CELL --exact-id "nar shaddaa" --instance-match "sw_quarren" StarwindRemasteredV1.15.esm
+    tes3cmd delete --type CELL --instance-match "Deleted" StarwindRacesJMC.esp
+
+    # Broken mp refs from bing's
     tes3cmd delete --type CELL --exact-id "Taris, Upper City Cantina" --instance-match "SW_TarisHuttRagax" StarwindRemasteredPatch.esm
     tes3cmd delete --type CELL --exact-id "Nar Shaddaa, Hutt Cartel" --instance-match "SW_HuttBadhiya" StarwindRemasteredPatch.esm
 
