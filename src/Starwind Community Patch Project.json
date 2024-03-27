@@ -9,7 +9,7 @@
     "file_type": "Esp",
     "author": "",
     "description": "",
-    "num_objects": 27,
+    "num_objects": 28,
     "masters": [
       [
         "Morrowind.esm",
@@ -65,6 +65,38 @@
     "value": {
       "String": "Weakness to Energy"
     }
+  },
+  {
+    "type": "MagicEffect",
+    "flags": [
+      0,
+      0
+    ],
+    "effect_id": "FireDamage",
+    "data": {
+      "school": "Destruction",
+      "base_cost": 5.0,
+      "flags": 1520,
+      "color": [
+        255,
+        81,
+        81
+      ],
+      "speed": 1.0,
+      "size": 3.0,
+      "size_cap": 50.0
+    },
+    "icon": "s\\Tx_S_fire_damage.tga",
+    "texture": "vfx_firealpha00A.tga",
+    "bolt_sound": "Torch Out",
+    "cast_sound": "SW_BlasterFire",
+    "hit_sound": "SW_BlasterFire",
+    "area_sound": "Torch Out",
+    "cast_visual": "VFX_LevitateHit",
+    "bolt_visual": "VFX_DestructBolt",
+    "hit_visual": "VFX_DestructArea",
+    "area_visual": "VFX_DestructArea",
+    "description": "Blaster fire, devastating and destructive energy damage."
   },
   {
     "type": "MagicEffect",
