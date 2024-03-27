@@ -9,7 +9,7 @@
     "file_type": "Esp",
     "author": "tes3cmd",
     "description": "(generated)",
-    "num_objects": 121,
+    "num_objects": 123,
     "masters": [
       [
         "Morrowind.esm",
@@ -668,6 +668,23 @@
       0,
       0
     ],
+    "id": "tsi_forthealthscr",
+    "header": {
+      "num_shorts": 0,
+      "num_longs": 0,
+      "num_floats": 0,
+      "bytecode_length": 0,
+      "variables_length": 0
+    },
+    "bytecode": "KLUv/QBYIQAAAAAAAA==",
+    "text": "Begin tsi_forthealthscr\n\nif ( player->getspell tsi_nozerohealth )\n\treturn\nendif\n\nplayer->addspell tsi_nozerohealth\n\nEnd tsi_forthealthscr\n"
+  },
+  {
+    "type": "Script",
+    "flags": [
+      0,
+      0
+    ],
     "id": "tsi_JapTreeScript",
     "header": {
       "num_shorts": 0,
@@ -730,6 +747,32 @@
     },
     "bytecode": "KLUv/QBYIQAAAAAAAA==",
     "text": "Begin tsiAutoDoorScrBase\n\nshort doorRaised\nshort doorDistance\nshort doOnce\nshort raiseDoor\nshort lowerDoor\n\nfloat basePos\nfloat minPos\nfloat maxPos\n\nIf ( doOnce == 0 )\n\tset doorDistance to 250\n\tset basePos to ( getpos z )\n\tset minPos to ( getpos y - doorDistance )\n\tset \tmaxPos to ( getpos y + doorDistance )\n\tset doOnce to 1\nendif\n\nIf ( OnActivate )\n\treturn\nendif\n\n; Set a new journal index for all derivative scripts!\nIf ( GetJournalIndex JOURN_IDX == 30 )\n\tIf ( player->getpos y <= maxPos )\n\t\tIf ( player->getpos y >= minPos )\n\t\t\tIf ( doorRaised == 0 )\n\t\t\t\tset raiseDoor to 1\n\t\t\tendif\n\t\tendif\n\tendif\n\n\tIf ( player->getpos y >= maxPos )\n\t\tif ( doorRaised )\n\t\t\tset lowerDoor to 1\n\t\tendif\n\telseif ( player->getpos y <= minPos )\n\t\tif ( doorRaised )\n\t\t\tset lowerDoor to 1\n\t\tendif\n\tendif\n\n\tif ( raiseDoor )\n\t\tIf ( doorRaised == 0 )\n\t\t\tsetpos z ( basePos + doorDistance )\n\t\t\tset doorRaised to 1\n\t\t\tset raiseDoor to 0\n\t\tendif\n\tElseif ( lowerDoor )\n\t\tif ( doorRaised )\n\t\t\tsetpos z basePos\n\t\t\tset doorRaised to 0\n\t\t\tset lowerDoor to 0\n\t\tendif\n\tendif\nendif\n\nEnd tsiAutoDoorScrBase"
+  },
+  {
+    "type": "Spell",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "tsi_nozerohealth",
+    "name": "Life Insurance",
+    "data": {
+      "spell_type": "Ability",
+      "spell_cost": 0,
+      "flags": 0
+    },
+    "effects": [
+      {
+        "magic_effect": "FortifyHealth",
+        "skill": "None",
+        "attribute": "None",
+        "range": 0,
+        "area": 0,
+        "duration": 0,
+        "min_magnitude": 1,
+        "max_magnitude": 1
+      }
+    ]
   },
   {
     "type": "Spell",
