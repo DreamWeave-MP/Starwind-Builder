@@ -25,7 +25,7 @@
       ],
       [
         "Starwind.omwaddon",
-        12904217
+        12904556
       ]
     ]
   },
@@ -677,7 +677,7 @@
       "variables_length": 0
     },
     "bytecode": "KLUv/QBYIQAAAAAAAA==",
-    "text": "Begin tsi_forthealthscr\n\nif ( player->getspell tsi_nozerohealth )\n\treturn\nendif\n\nplayer->addspell tsi_nozerohealth\n\nEnd tsi_forthealthscr\n"
+    "text": "Begin tsi_forthealthscr\n\nif ( player->getspell tsi_nozerohealth )\n\tstopscript tsi_forthealthscr\n\treturn\nendif\n\nplayer->addspell tsi_nozerohealth\n\nEnd tsi_forthealthscr\n"
   },
   {
     "type": "Script",
