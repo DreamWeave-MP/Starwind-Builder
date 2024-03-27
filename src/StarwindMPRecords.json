@@ -25,7 +25,7 @@
       ],
       [
         "Starwind.omwaddon",
-        12846988
+        12904217
       ]
     ]
   },
@@ -3780,260 +3780,6 @@
       0,
       0
     ],
-    "id": "Taris, Upper City Cantina",
-    "data": {
-      "flags": 1,
-      "grid": [
-        0,
-        1065353216
-      ]
-    },
-    "water_height": 0.0,
-    "atmosphere_data": {
-      "ambient_color": [
-        57,
-        63,
-        85,
-        0
-      ],
-      "sunlight_color": [
-        180,
-        148,
-        199,
-        0
-      ],
-      "fog_color": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "fog_density": 1.0
-    },
-    "references": [
-      {
-        "mast_index": 0,
-        "refr_index": 1,
-        "id": "tsi_dancer2male",
-        "temporary": false,
-        "translation": [
-          3471.1099,
-          3598.8887,
-          12377.727
-        ],
-        "rotation": [
-          -0.0,
-          -0.0,
-          1.0791694
-        ]
-      }
-    ]
-  },
-  {
-    "type": "Cell",
-    "flags": [
-      0,
-      0
-    ],
-    "id": "Tatooine",
-    "data": {
-      "flags": 135,
-      "grid": [
-        706300,
-        1045220557
-      ]
-    },
-    "region": "Thirsk Region",
-    "water_height": 0.0,
-    "references": [
-      {
-        "mast_index": 0,
-        "refr_index": 404564,
-        "id": "tsi_JapTreeActi",
-        "temporary": true,
-        "translation": [
-          11629.985,
-          -5897.9517,
-          8213.893
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          6.2592435
-        ],
-        "scale": 2.0,
-        "lock_level": 2147483647,
-        "key": "SW_IvoryHarvest"
-      }
-    ]
-  },
-  {
-    "type": "Cell",
-    "flags": [
-      0,
-      0
-    ],
-    "id": "Tatooine, Cantina",
-    "data": {
-      "flags": 5,
-      "grid": [
-        0,
-        1065353216
-      ]
-    },
-    "water_height": 0.0,
-    "atmosphere_data": {
-      "ambient_color": [
-        166,
-        166,
-        166,
-        0
-      ],
-      "sunlight_color": [
-        242,
-        217,
-        217,
-        0
-      ],
-      "fog_color": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "fog_density": 1.0
-    },
-    "references": [
-      {
-        "mast_index": 0,
-        "refr_index": 1,
-        "id": "tsi_dancer1male",
-        "temporary": false,
-        "translation": [
-          4498.07,
-          3907.0674,
-          12472.705
-        ],
-        "rotation": [
-          -0.0,
-          -0.0,
-          -2.3709495
-        ],
-        "scale": 1.5
-      }
-    ]
-  },
-  {
-    "type": "Cell",
-    "flags": [
-      0,
-      0
-    ],
-    "id": "The Outer Rim, Freighter",
-    "data": {
-      "flags": 1,
-      "grid": [
-        0,
-        1065353216
-      ]
-    },
-    "water_height": 0.0,
-    "atmosphere_data": {
-      "ambient_color": [
-        126,
-        126,
-        126,
-        0
-      ],
-      "sunlight_color": [
-        229,
-        229,
-        229,
-        0
-      ],
-      "fog_color": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "fog_density": 1.0
-    },
-    "references": [
-      {
-        "mast_index": 0,
-        "refr_index": 403551,
-        "id": "SW_FreighterModder",
-        "temporary": false,
-        "translation": [
-          4082.7275,
-          6721.41,
-          11366.362
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          5.783186
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 403552,
-        "id": "SW_Meditation",
-        "temporary": false,
-        "translation": [
-          3991.9421,
-          6777.9165,
-          11383.982
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          2.8999994
-        ]
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 47851,
-        "id": "tsi_bankref",
-        "temporary": true,
-        "translation": [
-          4791.468,
-          5637.364,
-          15257.219
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          1.5707964
-        ],
-        "scale": 0.7
-      },
-      {
-        "mast_index": 0,
-        "refr_index": 403553,
-        "id": "SW_CantinaBoothBott",
-        "temporary": true,
-        "translation": [
-          4031.303,
-          6808.698,
-          11258.202
-        ],
-        "rotation": [
-          0.0,
-          0.0,
-          3.7831867
-        ],
-        "scale": 2.0
-      }
-    ]
-  },
-  {
-    "type": "Cell",
-    "flags": [
-      0,
-      0
-    ],
     "id": "Somewhere Out of Time",
     "data": {
       "flags": 1,
@@ -4797,6 +4543,260 @@
     ]
   },
   {
+    "type": "Cell",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Taris, Upper City Cantina",
+    "data": {
+      "flags": 1,
+      "grid": [
+        0,
+        1065353216
+      ]
+    },
+    "water_height": 0.0,
+    "atmosphere_data": {
+      "ambient_color": [
+        57,
+        63,
+        85,
+        0
+      ],
+      "sunlight_color": [
+        180,
+        148,
+        199,
+        0
+      ],
+      "fog_color": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fog_density": 1.0
+    },
+    "references": [
+      {
+        "mast_index": 0,
+        "refr_index": 1,
+        "id": "tsi_dancer2male",
+        "temporary": false,
+        "translation": [
+          3471.1099,
+          3598.8887,
+          12377.727
+        ],
+        "rotation": [
+          -0.0,
+          -0.0,
+          1.0791694
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Cell",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Tatooine",
+    "data": {
+      "flags": 135,
+      "grid": [
+        706300,
+        1045220557
+      ]
+    },
+    "region": "Thirsk Region",
+    "water_height": 0.0,
+    "references": [
+      {
+        "mast_index": 0,
+        "refr_index": 404564,
+        "id": "tsi_JapTreeActi",
+        "temporary": true,
+        "translation": [
+          11629.985,
+          -5897.9517,
+          8213.893
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          6.2592435
+        ],
+        "scale": 2.0,
+        "lock_level": 2147483647,
+        "key": "SW_IvoryHarvest"
+      }
+    ]
+  },
+  {
+    "type": "Cell",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Tatooine, Cantina",
+    "data": {
+      "flags": 5,
+      "grid": [
+        0,
+        1065353216
+      ]
+    },
+    "water_height": 0.0,
+    "atmosphere_data": {
+      "ambient_color": [
+        166,
+        166,
+        166,
+        0
+      ],
+      "sunlight_color": [
+        242,
+        217,
+        217,
+        0
+      ],
+      "fog_color": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fog_density": 1.0
+    },
+    "references": [
+      {
+        "mast_index": 0,
+        "refr_index": 1,
+        "id": "tsi_dancer1male",
+        "temporary": false,
+        "translation": [
+          4498.07,
+          3907.0674,
+          12472.705
+        ],
+        "rotation": [
+          -0.0,
+          -0.0,
+          -2.3709495
+        ],
+        "scale": 1.5
+      }
+    ]
+  },
+  {
+    "type": "Cell",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "The Outer Rim, Freighter",
+    "data": {
+      "flags": 1,
+      "grid": [
+        0,
+        1065353216
+      ]
+    },
+    "water_height": 0.0,
+    "atmosphere_data": {
+      "ambient_color": [
+        126,
+        126,
+        126,
+        0
+      ],
+      "sunlight_color": [
+        229,
+        229,
+        229,
+        0
+      ],
+      "fog_color": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fog_density": 1.0
+    },
+    "references": [
+      {
+        "mast_index": 0,
+        "refr_index": 403551,
+        "id": "SW_FreighterModder",
+        "temporary": false,
+        "translation": [
+          4082.7275,
+          6721.41,
+          11366.362
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          5.783186
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 403552,
+        "id": "SW_Meditation",
+        "temporary": false,
+        "translation": [
+          3991.9421,
+          6777.9165,
+          11383.982
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          2.8999994
+        ]
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 47851,
+        "id": "tsi_bankref",
+        "temporary": true,
+        "translation": [
+          4791.468,
+          5637.364,
+          15257.219
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          1.5707964
+        ],
+        "scale": 0.7
+      },
+      {
+        "mast_index": 0,
+        "refr_index": 403553,
+        "id": "SW_CantinaBoothBott",
+        "temporary": true,
+        "translation": [
+          4031.303,
+          6808.698,
+          11258.202
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          3.7831867
+        ],
+        "scale": 2.0
+      }
+    ]
+  },
+  {
     "type": "Landscape",
     "flags": [
       0,
@@ -4837,30 +4837,9 @@
       0,
       0
     ],
-    "info_id": "d8f80f5a76004d15b44a57ba12cdf189",
-    "prev_id": "16043312532573123088",
-    "next_id": "ffedfda5c6d7464bb44129bbf8bd14b2",
-    "data": {
-      "dialogue_type": "Topic",
-      "disposition": 0,
-      "speaker_rank": -1,
-      "speaker_sex": "Any",
-      "player_rank": -1
-    },
-    "speaker_id": "SW_VvardenfellTranspor1",
-    "text": "Hey, buddy. Wanna go to vvardenfell?",
-    "filters": [],
-    "result": "AddTopic \"go to vvardenfell\""
-  },
-  {
-    "type": "Info",
-    "flags": [
-      0,
-      0
-    ],
     "info_id": "ffedfda5c6d7464bb44129bbf8bd14b2",
-    "prev_id": "d8f80f5a76004d15b44a57ba12cdf189",
-    "next_id": "",
+    "prev_id": "3832139402051823602",
+    "next_id": "7817111001232614388",
     "data": {
       "dialogue_type": "Topic",
       "disposition": 0,
@@ -4872,6 +4851,27 @@
     "text": "Hey there. Ready to go back to Nar Shaddaa?",
     "filters": [],
     "result": "AddTopic \"Back to Nar Shaddaa\""
+  },
+  {
+    "type": "Info",
+    "flags": [
+      0,
+      0
+    ],
+    "info_id": "d8f80f5a76004d15b44a57ba12cdf189",
+    "prev_id": "16043312532573123088",
+    "next_id": "",
+    "data": {
+      "dialogue_type": "Topic",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "SW_VvardenfellTranspor1",
+    "text": "Hey, buddy. Wanna go to vvardenfell?",
+    "filters": [],
+    "result": "AddTopic \"go to vvardenfell\""
   },
   {
     "type": "Dialogue",
@@ -5278,7 +5278,7 @@
       0,
       0
     ],
-    "id": "japor tree",
+    "id": "Back to Nar Shaddaa",
     "dialogue_type": "Topic"
   },
   {
@@ -5287,8 +5287,124 @@
       0,
       0
     ],
-    "info_id": "27226226711274020928",
-    "prev_id": "1883287311056024424",
+    "info_id": "fa063d5feab6456e9adb5adcad0f0171",
+    "prev_id": "",
+    "next_id": "9b438719a8ca4e01b625cf4afec39cd7",
+    "data": {
+      "dialogue_type": "Topic",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "SW_VvardenfellTranspor2",
+    "text": "Uh, well, feel free to enjoy the scenery, I guess.",
+    "filters": [
+      {
+        "slot": "Slot0",
+        "filter_type": "Function",
+        "filter_function": "Choice",
+        "filter_comparison": "Equal",
+        "id": "",
+        "value": {
+          "Integer": 2
+        }
+      }
+    ],
+    "result": "Goodbye"
+  },
+  {
+    "type": "Info",
+    "flags": [
+      0,
+      0
+    ],
+    "info_id": "9b438719a8ca4e01b625cf4afec39cd7",
+    "prev_id": "fa063d5feab6456e9adb5adcad0f0171",
+    "next_id": "7e520cc105404b5b9fefffb1d8cad9c2",
+    "data": {
+      "dialogue_type": "Topic",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "SW_VvardenfellTranspor2",
+    "text": "Let's get out of this trash pile, traveler.",
+    "filters": [
+      {
+        "slot": "Slot0",
+        "filter_type": "Function",
+        "filter_function": "Choice",
+        "filter_comparison": "Equal",
+        "id": "",
+        "value": {
+          "Integer": 1
+        }
+      },
+      {
+        "slot": "Slot0",
+        "filter_type": "Item",
+        "filter_function": "ReactionLow",
+        "filter_comparison": "GreaterEqual",
+        "id": "gold_001",
+        "value": {
+          "Integer": 25000
+        }
+      }
+    ],
+    "result": "Goodbye\nplayer->removeitem gold_001 25000\nplayer->positioncell 4145 5350 12509 0 \"Nar Shaddaa, Vvardenfell Hanger\""
+  },
+  {
+    "type": "Info",
+    "flags": [
+      0,
+      0
+    ],
+    "info_id": "7e520cc105404b5b9fefffb1d8cad9c2",
+    "prev_id": "9b438719a8ca4e01b625cf4afec39cd7",
+    "next_id": "f419d8432934471c82afca25fe539d77",
+    "data": {
+      "dialogue_type": "Topic",
+      "disposition": 0,
+      "speaker_rank": -1,
+      "speaker_sex": "Any",
+      "player_rank": -1
+    },
+    "speaker_id": "SW_VvardenfellTranspor2",
+    "text": "Welp, it looks like you're stuck here then, doesn't it?",
+    "filters": [
+      {
+        "slot": "Slot0",
+        "filter_type": "Function",
+        "filter_function": "Choice",
+        "filter_comparison": "Equal",
+        "id": "",
+        "value": {
+          "Integer": 1
+        }
+      },
+      {
+        "slot": "Slot0",
+        "filter_type": "Item",
+        "filter_function": "ReactionLow",
+        "filter_comparison": "Less",
+        "id": "gold_001",
+        "value": {
+          "Integer": 25000
+        }
+      }
+    ],
+    "result": "Goodbye"
+  },
+  {
+    "type": "Info",
+    "flags": [
+      0,
+      0
+    ],
+    "info_id": "f419d8432934471c82afca25fe539d77",
+    "prev_id": "7e520cc105404b5b9fefffb1d8cad9c2",
     "next_id": "",
     "data": {
       "dialogue_type": "Topic",
@@ -5297,31 +5413,10 @@
       "speaker_sex": "Any",
       "player_rank": -1
     },
-    "speaker_id": "SW_CzerkaJapor",
-    "text": "You've brought me the Ivory? Very well, the quarterstaff was already crafted, but I need raw materials in order to study them. Enjoy your staff, adventurer, I imagine it will come in handy in  your line of work, and thank you. I will put in a good word for you with my fellow colleagues.",
-    "filters": [
-      {
-        "slot": "Slot0",
-        "filter_type": "Journal",
-        "filter_function": "JournalType",
-        "filter_comparison": "Equal",
-        "id": "SW_Japor",
-        "value": {
-          "Integer": 2
-        }
-      },
-      {
-        "slot": "Slot1",
-        "filter_type": "Item",
-        "filter_function": "ItemType",
-        "filter_comparison": "GreaterEqual",
-        "id": "SW_JapSnip",
-        "value": {
-          "Integer": 1
-        }
-      }
-    ],
-    "result": "Journal \"SW_Japor\" 3\nplayer->removeitem SW_JapSnip 1\nplayer->additem SW_JaporStaff, 1\nplayer->modReputation 1\nStopSound \"JaporGreet1\"\nStopSound \"JaporGreet2\"\nStopSound \"JaporGreet3\"\nStopSound \"JaporGreet4\"\nPlaySound3d \"Japor1\"\nStopSound \"Japor2\""
+    "speaker_id": "SW_VvardenfellTranspor2",
+    "text": "Uh, yeah, I mean, it's only twenty five thousand credits to get back. I'll accept whatever passes for the local currency around here.",
+    "filters": [],
+    "result": "Choice \"You're a real ass... Here\" 1\nChoice \"No, I like it here. I think I'll stay for a time.\" 2"
   },
   {
     "type": "Dialogue",
@@ -5475,7 +5570,7 @@
       0,
       0
     ],
-    "id": "Back to Nar Shaddaa",
+    "id": "japor tree",
     "dialogue_type": "Topic"
   },
   {
@@ -5484,124 +5579,8 @@
       0,
       0
     ],
-    "info_id": "fa063d5feab6456e9adb5adcad0f0171",
-    "prev_id": "",
-    "next_id": "9b438719a8ca4e01b625cf4afec39cd7",
-    "data": {
-      "dialogue_type": "Topic",
-      "disposition": 0,
-      "speaker_rank": -1,
-      "speaker_sex": "Any",
-      "player_rank": -1
-    },
-    "speaker_id": "SW_VvardenfellTranspor2",
-    "text": "Uh, well, feel free to enjoy the scenery, I guess.",
-    "filters": [
-      {
-        "slot": "Slot0",
-        "filter_type": "Function",
-        "filter_function": "Choice",
-        "filter_comparison": "Equal",
-        "id": "",
-        "value": {
-          "Integer": 2
-        }
-      }
-    ],
-    "result": "Goodbye"
-  },
-  {
-    "type": "Info",
-    "flags": [
-      0,
-      0
-    ],
-    "info_id": "9b438719a8ca4e01b625cf4afec39cd7",
-    "prev_id": "fa063d5feab6456e9adb5adcad0f0171",
-    "next_id": "7e520cc105404b5b9fefffb1d8cad9c2",
-    "data": {
-      "dialogue_type": "Topic",
-      "disposition": 0,
-      "speaker_rank": -1,
-      "speaker_sex": "Any",
-      "player_rank": -1
-    },
-    "speaker_id": "SW_VvardenfellTranspor2",
-    "text": "Let's get out of this trash pile, traveler.",
-    "filters": [
-      {
-        "slot": "Slot0",
-        "filter_type": "Function",
-        "filter_function": "Choice",
-        "filter_comparison": "Equal",
-        "id": "",
-        "value": {
-          "Integer": 1
-        }
-      },
-      {
-        "slot": "Slot0",
-        "filter_type": "Item",
-        "filter_function": "ReactionLow",
-        "filter_comparison": "GreaterEqual",
-        "id": "gold_001",
-        "value": {
-          "Integer": 25000
-        }
-      }
-    ],
-    "result": "Goodbye\nplayer->removeitem gold_001 25000\nplayer->positioncell 4145 5350 12509 0 \"Nar Shaddaa, Vvardenfell Hanger\""
-  },
-  {
-    "type": "Info",
-    "flags": [
-      0,
-      0
-    ],
-    "info_id": "7e520cc105404b5b9fefffb1d8cad9c2",
-    "prev_id": "9b438719a8ca4e01b625cf4afec39cd7",
-    "next_id": "f419d8432934471c82afca25fe539d77",
-    "data": {
-      "dialogue_type": "Topic",
-      "disposition": 0,
-      "speaker_rank": -1,
-      "speaker_sex": "Any",
-      "player_rank": -1
-    },
-    "speaker_id": "SW_VvardenfellTranspor2",
-    "text": "Welp, it looks like you're stuck here then, doesn't it?",
-    "filters": [
-      {
-        "slot": "Slot0",
-        "filter_type": "Function",
-        "filter_function": "Choice",
-        "filter_comparison": "Equal",
-        "id": "",
-        "value": {
-          "Integer": 1
-        }
-      },
-      {
-        "slot": "Slot0",
-        "filter_type": "Item",
-        "filter_function": "ReactionLow",
-        "filter_comparison": "Less",
-        "id": "gold_001",
-        "value": {
-          "Integer": 25000
-        }
-      }
-    ],
-    "result": "Goodbye"
-  },
-  {
-    "type": "Info",
-    "flags": [
-      0,
-      0
-    ],
-    "info_id": "f419d8432934471c82afca25fe539d77",
-    "prev_id": "7e520cc105404b5b9fefffb1d8cad9c2",
+    "info_id": "27226226711274020928",
+    "prev_id": "1883287311056024424",
     "next_id": "",
     "data": {
       "dialogue_type": "Topic",
@@ -5610,10 +5589,31 @@
       "speaker_sex": "Any",
       "player_rank": -1
     },
-    "speaker_id": "SW_VvardenfellTranspor2",
-    "text": "Uh, yeah, I mean, it's only twenty five thousand credits to get back. I'll accept whatever passes for the local currency around here.",
-    "filters": [],
-    "result": "Choice \"You're a real ass... Here\" 1\nChoice \"No, I like it here. I think I'll stay for a time.\" 2"
+    "speaker_id": "SW_CzerkaJapor",
+    "text": "You've brought me the Ivory? Very well, the quarterstaff was already crafted, but I need raw materials in order to study them. Enjoy your staff, adventurer, I imagine it will come in handy in  your line of work, and thank you. I will put in a good word for you with my fellow colleagues.",
+    "filters": [
+      {
+        "slot": "Slot0",
+        "filter_type": "Journal",
+        "filter_function": "JournalType",
+        "filter_comparison": "Equal",
+        "id": "SW_Japor",
+        "value": {
+          "Integer": 2
+        }
+      },
+      {
+        "slot": "Slot1",
+        "filter_type": "Item",
+        "filter_function": "ItemType",
+        "filter_comparison": "GreaterEqual",
+        "id": "SW_JapSnip",
+        "value": {
+          "Integer": 1
+        }
+      }
+    ],
+    "result": "Journal \"SW_Japor\" 3\nplayer->removeitem SW_JapSnip 1\nplayer->additem SW_JaporStaff, 1\nplayer->modReputation 1\nStopSound \"JaporGreet1\"\nStopSound \"JaporGreet2\"\nStopSound \"JaporGreet3\"\nStopSound \"JaporGreet4\"\nPlaySound3d \"Japor1\"\nStopSound \"Japor2\""
   },
   {
     "type": "Dialogue",
