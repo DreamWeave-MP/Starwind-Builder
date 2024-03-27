@@ -636,6 +636,62 @@
       0,
       0
     ],
+    "id": "Old Mournhold: Battlefield",
+    "data": {
+      "flags": 1,
+      "grid": [
+        3223332,
+        1061158912
+      ]
+    },
+    "water_height": 0.0,
+    "atmosphere_data": {
+      "ambient_color": [
+        13,
+        14,
+        15,
+        0
+      ],
+      "sunlight_color": [
+        26,
+        49,
+        49,
+        0
+      ],
+      "fog_color": [
+        36,
+        47,
+        49,
+        0
+      ],
+      "fog_density": 0.75
+    },
+    "references": [
+      {
+        "mast_index": 2,
+        "refr_index": 9571,
+        "id": "In_M_sewer_wall",
+        "temporary": true,
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "deleted": 0
+      }
+    ]
+  },
+  {
+    "type": "Cell",
+    "flags": [
+      0,
+      0
+    ],
     "id": "Korriban, Ancient Structure",
     "data": {
       "flags": 1,
