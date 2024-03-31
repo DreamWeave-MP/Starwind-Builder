@@ -55,6 +55,8 @@ do_mp_merge() {
     # There be dragons in the dialog trees (spicy)
     mv Starwind.omwaddon Starwind.esp
     tes3cmd delete --type INFO --type DIAL --match "DELE" --match "Greeting 0" Starwind.esp
+    # Normalize enchantment values
+    tes3cmd modify --sub-no-match "ENAM:" --type CLOT --type ARMO --type WEAP --run '$R->set({f=>"enchantment"}, 375)' Starwind.esp
     mv Starwind.esp Starwind.omwaddon
 }
 
