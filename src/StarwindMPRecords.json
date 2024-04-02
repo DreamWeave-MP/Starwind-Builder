@@ -9,7 +9,7 @@
     "file_type": "Esp",
     "author": "tes3cmd",
     "description": "(generated)",
-    "num_objects": 123,
+    "num_objects": 124,
     "masters": [
       [
         "Morrowind.esm",
@@ -25,7 +25,7 @@
       ],
       [
         "Starwind.omwaddon",
-        12904556
+        12903349
       ]
     ]
   },
@@ -1308,6 +1308,52 @@
         "duration": 1,
         "min_magnitude": 50,
         "max_magnitude": 50
+      }
+    ]
+  },
+  {
+    "type": "Enchantment",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "SW_LightsaberEnch",
+    "data": {
+      "enchant_type": "CastOnStrike",
+      "enchant_cost": 0,
+      "max_charge": 500,
+      "flags": 0
+    },
+    "effects": [
+      {
+        "magic_effect": "Light",
+        "skill": "None",
+        "attribute": "None",
+        "range": 0,
+        "area": 0,
+        "duration": 0,
+        "min_magnitude": 5,
+        "max_magnitude": 5
+      },
+      {
+        "magic_effect": "WeaknessToMagicka",
+        "skill": "None",
+        "attribute": "None",
+        "range": 2,
+        "area": 0,
+        "duration": 1,
+        "min_magnitude": 10,
+        "max_magnitude": 15
+      },
+      {
+        "magic_effect": "DamageHealth",
+        "skill": "None",
+        "attribute": "None",
+        "range": 2,
+        "area": 0,
+        "duration": 0,
+        "min_magnitude": 1,
+        "max_magnitude": 5
       }
     ]
   },
