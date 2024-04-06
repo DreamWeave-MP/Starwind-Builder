@@ -789,7 +789,7 @@
     },
     "effects": [
       {
-        "magic_effect": "DamageAttribute",
+        "magic_effect": "DrainAttribute",
         "skill": "None",
         "attribute": "Willpower",
         "range": 0,
