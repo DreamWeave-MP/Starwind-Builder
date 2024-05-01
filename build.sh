@@ -41,6 +41,7 @@ do_mp_merge() {
     merge_to_master "StarwindRacesJMC.esp" "Starwind Enhanced.esm"
     merge_to_master "Starwind Enhanced.esm" StarwindRemasteredPatch.esm
     # Vanilla phase
+    merge_to_master naboo.esp StarwindRemasteredPatch.esm
     merge_to_master alt_start1.5.esp StarwindRemasteredPatch.esm
     merge_to_master StarwindVvardenfell.esp StarwindRemasteredPatch.esm
     merge_to_master "Starwind Community Patch Project.esp" StarwindRemasteredPatch.esm
@@ -181,6 +182,16 @@ if [ "$1" = "tsi" ]; then
 
     # Get rid of Killua since we don't use her
     tes3cmd delete --type CELL --instance-match "SW_ShipQuester" StarwindRemasteredV1.15.esm StarwindRemasteredPatch.esm
+
+    # Actually don't use the SP DRM in our plugin :todd:
+    # Heavyjunk object, then scripts, then global variables
+    tes3cmd delete --exact-id "Nab_HeaviestJunk" \
+        --exact-id 'passtheday' --exact-id 'nab_byebye' \
+        --exact-id 'dayispassed' --exact-id 'mothball' --exact-id 'NerevarAwakened ' naboo.esp
+
+    # Delete script attachments separately as sub-match doesn't work with the exact-id parsing
+    tes3cmd delete --sub-match "Script:Nab_ByeBye" naboo.esp
+    tes3cmd delete --sub-match "Script:passtheday" naboo.esp
 else
     tes3cmd modify --type SCPT --replace "/who's ship/whose ship/" StarwindRemasteredV1.15.esm StarwindRemasteredPatch.esm
 fi
