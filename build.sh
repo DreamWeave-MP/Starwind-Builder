@@ -44,7 +44,7 @@ do_mp_merge() {
     merge_to_master alt_start1.5.esp StarwindRemasteredPatch.esm
     merge_to_master StarwindVvardenfell.esp StarwindRemasteredPatch.esm
     merge_to_master "Starwind Community Patch Project.esp" StarwindRemasteredPatch.esm
-    # merge_to_master naboo.esp StarwindRemasteredPatch.esm
+    merge_to_master naboo.esp StarwindRemasteredPatch.esm
     merge_to_master --remove-deleted StarwindRemasteredPatch.esm StarwindRemasteredV1.15.esm
     mv StarwindRemasteredV1.15.esm Starwind.omwaddon
     merge_to_master deletedbirthsigns.esp Starwind.omwaddon
@@ -192,6 +192,7 @@ if [ "$1" = "tsi" ]; then
     # Delete script attachments separately as sub-match doesn't work with the exact-id parsing
     tes3cmd delete --sub-match "Script:Nab_ByeBye" naboo.esp
     tes3cmd delete --sub-match "Script:passtheday" naboo.esp
+    tes3cmd delete --type CELL --instance-match "MastIdx:4" --instance-match "MastIdx:5" naboo.esp
 else
     tes3cmd modify --type SCPT --replace "/who's ship/whose ship/" StarwindRemasteredV1.15.esm StarwindRemasteredPatch.esm
 fi
