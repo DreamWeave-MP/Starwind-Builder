@@ -41,10 +41,10 @@ do_mp_merge() {
     merge_to_master "StarwindRacesJMC.esp" "Starwind Enhanced.esm"
     merge_to_master "Starwind Enhanced.esm" StarwindRemasteredPatch.esm
     # Vanilla phase
-    merge_to_master naboo.esp StarwindRemasteredPatch.esm
     merge_to_master alt_start1.5.esp StarwindRemasteredPatch.esm
     merge_to_master StarwindVvardenfell.esp StarwindRemasteredPatch.esm
     merge_to_master "Starwind Community Patch Project.esp" StarwindRemasteredPatch.esm
+    # merge_to_master naboo.esp StarwindRemasteredPatch.esm
     merge_to_master --remove-deleted StarwindRemasteredPatch.esm StarwindRemasteredV1.15.esm
     mv StarwindRemasteredV1.15.esm Starwind.omwaddon
     merge_to_master deletedbirthsigns.esp Starwind.omwaddon
