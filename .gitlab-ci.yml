@@ -38,8 +38,7 @@ build_cpp:
   - make cpp
   artifacts:
     paths:
-      - "Starwind Community Patch Project.omwaddon"
-      - "./src/Community Patch Project/*"
+      - "Starwind Community Patch Project.zip"
   rules:
     - if: $CI_COMMIT_BRANCH == "master"
 

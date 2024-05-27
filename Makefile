@@ -8,7 +8,12 @@ vanilla: plugins-bin
 	./build.sh vanilla | grep -v "<DATADIR> is\|Output saved in\|Original backed up to\|Can't find \"Data Files\"\|Log"
 
 cpp: plugins-bin
-	cp ./build/"Starwind Community Patch Project.esp" ./"Starwind Community Patch Project.omwaddon"
+	cp "build/Starwind Community Patch Project.esp" "src/Community Patch Project/Starwind Community Patch Project.omwaddon"
+	cd "src/Community Patch Project" && zip -r9 --must-match --recurse-paths \
+	"Starwind Community Patch Project.zip" \
+	Meshes/ \
+	"Starwind Community Patch Project.omwaddon" \
+	&& mv "Starwind Community Patch Project.zip" ../../
 
 plugins-bin:
 	mkdir -p build
