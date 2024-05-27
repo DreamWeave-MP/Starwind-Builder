@@ -39,7 +39,7 @@ build_cpp:
   artifacts:
     paths:
       - "Starwind Community Patch Project.omwaddon"
-      - "Meshes"
+      - "./src/Community Patch Project/*"
   rules:
     - if: $CI_COMMIT_BRANCH == "master"
 

@@ -8,7 +8,6 @@ vanilla: plugins-bin
 	./build.sh vanilla | grep -v "<DATADIR> is\|Output saved in\|Original backed up to\|Can't find \"Data Files\"\|Log"
 
 cpp: plugins-bin
-	cp -r ./src/"Community Patch Project"/Meshes .
 	cp ./build/"Starwind Community Patch Project.esp" ./"Starwind Community Patch Project.omwaddon"
 
 plugins-bin:
