@@ -10,10 +10,10 @@ vanilla: plugins-bin
 cpp: plugins-bin
 	cp "build/Starwind Community Patch Project.esp" "src/Community Patch Project/Starwind Community Patch Project.omwaddon"
 	cd "src/Community Patch Project" && zip -r9 --must-match --recurse-paths \
-	"Starwind Community Patch Project.zip" \
+	Starwind_Community_Patch_Project.zip \
 	Meshes/ \
 	"Starwind Community Patch Project.omwaddon" \
-	&& mv "Starwind Community Patch Project.zip" ../../
+	&& mv Starwind_Community_Patch_Project.zip ../../
 
 plugins-bin:
 	mkdir -p build
