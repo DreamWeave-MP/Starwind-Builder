@@ -38,7 +38,7 @@ build_cpp:
   - make cpp
   artifacts:
     paths:
-      - "Starwind Community Patch Project.zip"
+      - "Starwind_Community_Patch_Project.zip"
   rules:
     - if: $CI_COMMIT_BRANCH == "master"
 
