@@ -225,6 +225,9 @@ tes3cmd dump --type CELL --exact-id "Tatooine" --instance-match "ObjIdx:397 " St
 tes3cmd delete --type GMST --exact-id "sEffectTurnUndead" StarwindRemasteredPatch.esm
 tes3cmd delete --type MGEF --exact-id "101" StarwindRemasteredPatch.esm # turn undead enum
 
+# Damn sneaky rakghouls all over the galaxy!
+tes3cmd delete --type LEVC --exact-id sw_sandcreatures --sub-match "SW_Rakhoul1" StarwindRemasteredPatch.esm StarwindRemasteredV1.15.esm
+
 echo "Patching enhanced..."
 # Basically every edit Enhanced attempts to make to vanilla seems to have the refNums corrupted, so we manually handle the deletions here
 # Fortunately almost nothing is actively modified, just marked as deleted
