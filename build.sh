@@ -255,6 +255,8 @@ tes3cmd delete --type CELL --exact-id "Nar Shaddaa, Customs" --instance-match "S
 tes3cmd delete --type CELL --exact-id "Starwind test cell" --instance-match "MastIdx:5" "Starwind Enhanced.esm"
 # Mandalorian chest pieces still use the original bodyparts
 tes3cmd delete --type ARMO --match "swe_mandochest" --sub-match "Female_Body_ID:" "Starwind Enhanced.esm"
+# Golden doors have the `DoNothing` script on them, for reasons
+tes3cmd delete --type DOOR --sub-match "DoNothing" --exact-id "in_t_door_small" StarwindVvardenfell.esp
 
 if [ "$1" = "tsi" ]; then
     do_mp_merge "$2"
