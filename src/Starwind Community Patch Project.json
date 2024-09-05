@@ -9,7 +9,7 @@
     "file_type": "Esp",
     "author": "",
     "description": "",
-    "num_objects": 26,
+    "num_objects": 27,
     "masters": [
       [
         "Morrowind.esm",
@@ -685,6 +685,44 @@
         "deleted": 0
       }
     ]
+  },
+  {
+    "type": "Cell",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Tatooine, Sewers",
+    "data": {
+      "flags": 7,
+      "grid": [
+        89144,
+        1065353216
+      ]
+    },
+    "water_height": -25.0,
+    "atmosphere_data": {
+      "ambient_color": [
+        86,
+        108,
+        85,
+        0
+      ],
+      "sunlight_color": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fog_color": [
+        56,
+        92,
+        1,
+        0
+      ],
+      "fog_density": 1.0
+    },
+    "references": []
   },
   {
     "type": "Cell",
