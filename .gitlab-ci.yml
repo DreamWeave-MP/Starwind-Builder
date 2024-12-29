@@ -52,6 +52,7 @@ dump_merchants:
     - merchantIndexGrabber
   artifacts:
     paths:
+      - echo "Starwind.omwaddon" >> $HOME/.config/openmw/openmw.cfg
       - "merchantIndexDatabase.json"
   dependencies:
     - build_tsi
