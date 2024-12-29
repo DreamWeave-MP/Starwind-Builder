@@ -3,7 +3,7 @@ stages:
   - dump
 
 variables:
-  build_img: "$CI_REGISTRY/modding-openmw/makron:0.1.2"
+  build_img: "$CI_REGISTRY/modding-openmw/makron:0.1.3"
   curl_img: curlimages/curl:7.83.0
   pkg_name: "${CI_PROJECT_NAME}.zip"
   pkg_url: "${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/generic/${CI_PROJECT_NAME}/${CI_COMMIT_TAG}"
