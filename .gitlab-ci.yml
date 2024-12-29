@@ -53,7 +53,7 @@ dump_merchants:
     - echo -e "content=Morrowind.esm\ncontent=tribunal.esm\ncontent=bloodmoon.esm\ncontent=Starwind.omwaddon" >> $HOME/.config/openmw/openmw.cfg
     - ./writeDependencyFiles.sh ${MTM_DECRYPT_KEY}
     - merchantIndexGrabber
-    - rm ./build/*es*
+    - rm ./*es*
   artifacts:
     paths:
       - "merchantIndexDatabase.json"
