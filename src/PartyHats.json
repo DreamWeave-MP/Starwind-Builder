@@ -1,10 +1,7 @@
 [
   {
     "type": "Header",
-    "flags": [
-      0,
-      0
-    ],
+    "flags": "",
     "version": 1.3,
     "file_type": "Esp",
     "author": "",
@@ -19,101 +16,72 @@
   },
   {
     "type": "Bodypart",
-    "flags": [
-      0,
-      0
-    ],
+    "flags": "",
     "id": "PartyHatBlue",
+    "race": "Argonian",
+    "mesh": "PartyHats\\PartyHatBlue.nif",
     "data": {
       "part": "Hair",
-      "vampire": 0,
-      "female": 0,
-      "part_type": "Armor"
-    },
-    "name": "Argonian",
-    "mesh": "PartyHats\\PartyHatBlue.nif"
+      "vampire": false,
+      "flags": "",
+      "bodypart_type": "Armor"
+    }
   },
   {
     "type": "Bodypart",
-    "flags": [
-      0,
-      0
-    ],
+    "flags": "",
     "id": "PartyHatGreen",
+    "race": "Argonian",
+    "mesh": "PartyHats\\PartyHatGreen.nif",
     "data": {
       "part": "Hair",
-      "vampire": 0,
-      "female": 0,
-      "part_type": "Armor"
-    },
-    "name": "Argonian",
-    "mesh": "PartyHats\\PartyHatGreen.nif"
+      "vampire": false,
+      "flags": "",
+      "bodypart_type": "Armor"
+    }
   },
   {
     "type": "Bodypart",
-    "flags": [
-      0,
-      0
-    ],
+    "flags": "",
     "id": "PartyHatRed",
+    "race": "Argonian",
+    "mesh": "PartyHats\\PartyHatRed.nif",
     "data": {
       "part": "Hair",
-      "vampire": 0,
-      "female": 0,
-      "part_type": "Armor"
-    },
-    "name": "Argonian",
-    "mesh": "PartyHats\\PartyHatRed.nif"
+      "vampire": false,
+      "flags": "",
+      "bodypart_type": "Armor"
+    }
   },
   {
     "type": "Bodypart",
-    "flags": [
-      0,
-      0
-    ],
+    "flags": "",
     "id": "PartyHatYellow",
+    "race": "Argonian",
+    "mesh": "PartyHats\\PartyHatYell.nif",
     "data": {
       "part": "Hair",
-      "vampire": 0,
-      "female": 0,
-      "part_type": "Armor"
-    },
-    "name": "Argonian",
-    "mesh": "PartyHats\\PartyHatYell.nif"
+      "vampire": false,
+      "flags": "",
+      "bodypart_type": "Armor"
+    }
   },
   {
     "type": "Armor",
-    "flags": [
-      0,
-      0
-    ],
+    "flags": "",
     "id": "BluePartyHat",
-    "data": {
-      "armor_type": "Helmet",
-      "weight": 1.0,
-      "value": 200,
-      "health": 180,
-      "enchantment": 200,
-      "armor_rating": 5
-    },
     "name": "Blue Party Hat",
+    "script": "",
     "mesh": "PartyHats\\PartyHatBlue.nif",
     "icon": "HatIconBlue.dds",
+    "enchanting": "",
     "biped_objects": [
       {
         "biped_object_type": "Hair",
         "male_bodypart": "PartyHatBlue",
-        "female_bodypart": null
+        "female_bodypart": ""
       }
-    ]
-  },
-  {
-    "type": "Armor",
-    "flags": [
-      0,
-      0
     ],
-    "id": "GreenPartyHat",
     "data": {
       "armor_type": "Helmet",
       "weight": 1.0,
@@ -121,25 +89,24 @@
       "health": 180,
       "enchantment": 200,
       "armor_rating": 5
-    },
+    }
+  },
+  {
+    "type": "Armor",
+    "flags": "",
+    "id": "GreenPartyHat",
     "name": "Green Party Hat",
+    "script": "",
     "mesh": "PartyHats\\PartyHatGreen.nif",
     "icon": "HatIconGreen.dds",
+    "enchanting": "",
     "biped_objects": [
       {
         "biped_object_type": "Hair",
         "male_bodypart": "PartyHatGreen",
-        "female_bodypart": null
+        "female_bodypart": ""
       }
-    ]
-  },
-  {
-    "type": "Armor",
-    "flags": [
-      0,
-      0
     ],
-    "id": "RedPartyHat",
     "data": {
       "armor_type": "Helmet",
       "weight": 1.0,
@@ -147,25 +114,24 @@
       "health": 180,
       "enchantment": 200,
       "armor_rating": 5
-    },
+    }
+  },
+  {
+    "type": "Armor",
+    "flags": "",
+    "id": "RedPartyHat",
     "name": "Red Party Hat",
+    "script": "",
     "mesh": "PartyHats\\PartyHatRed.nif",
     "icon": "HatIconRed.dds",
+    "enchanting": "",
     "biped_objects": [
       {
         "biped_object_type": "Hair",
         "male_bodypart": "PartyHatRed",
-        "female_bodypart": null
+        "female_bodypart": ""
       }
-    ]
-  },
-  {
-    "type": "Armor",
-    "flags": [
-      0,
-      0
     ],
-    "id": "YellowPartyHat",
     "data": {
       "armor_type": "Helmet",
       "weight": 1.0,
@@ -173,16 +139,31 @@
       "health": 180,
       "enchantment": 200,
       "armor_rating": 5
-    },
+    }
+  },
+  {
+    "type": "Armor",
+    "flags": "",
+    "id": "YellowPartyHat",
     "name": "Yellow Party Hat",
+    "script": "",
     "mesh": "PartyHats\\PartyHatYell.nif",
     "icon": "HatIconYellow.dds",
+    "enchanting": "",
     "biped_objects": [
       {
         "biped_object_type": "Hair",
         "male_bodypart": "PartyHatYellow",
-        "female_bodypart": null
+        "female_bodypart": ""
       }
-    ]
+    ],
+    "data": {
+      "armor_type": "Helmet",
+      "weight": 1.0,
+      "value": 200,
+      "health": 180,
+      "enchantment": 200,
+      "armor_rating": 5
+    }
   }
 ]
