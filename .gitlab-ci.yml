@@ -12,9 +12,10 @@ build_tsi:
   image: ${build_img}
   stage: build
   script:
-    - printf ${MTM_DECRYPT_KEY} | gpg --batch --passphrase-fd 0 --decrypt DATA.tar.gz.gpg | tar xzvf -
+    - mkdir -p build
+    - printf ${MTM_DECRYPT_KEY} | gpg --batch --passphrase-fd 0 --decrypt plugins/DATA.tar.gz.gpg | tar xzvf -
     - make tsi
-    - rm ./*[eE][sS][pPmM]
+    - rm ./build/*[eE][sS][pPmM]
   artifacts:
     paths:
       - "Starwind.omwaddon"
@@ -25,9 +26,10 @@ build_vanilla:
   image: ${build_img}
   stage: build
   script:
-    - printf ${MTM_DECRYPT_KEY} | gpg --batch --passphrase-fd 0 --decrypt DATA.tar.gz.gpg | tar xzvf -
+    - mkdir -p build
+    - printf ${MTM_DECRYPT_KEY} | gpg --batch --passphrase-fd 0 --decrypt plugins/DATA.tar.gz.gpg | tar xzvf - -C build
     - make vanilla
-    - rm ./*[eE][sS][pPmM]
+    - rm ./build/*[eE][sS][pPmM]
   artifacts:
     paths:
       - "vanilla_Starwind.omwaddon"
