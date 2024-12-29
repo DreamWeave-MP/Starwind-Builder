@@ -92,7 +92,7 @@ config:
 	done; \
 	rm fake.esp
 
-requiredfiles: config
+requiredfiles:
 	t3crc
 
 update-dialog:
