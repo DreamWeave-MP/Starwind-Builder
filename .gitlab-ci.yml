@@ -49,7 +49,6 @@ dump_merchants:
   image: ${build_img}
   stage: dump
   script:
-    - echo -e "data=\"$(pwd)\"\ncontent=Morrowind.esm\ncontent=Tribunal.esm\ncontent=Bloodmoon.esm\ncontent=Starwind.omwaddon" >> $HOME/.config/openmw/openmw.cfg
     - ./writeDependencyFiles.sh ${MTM_DECRYPT_KEY}
     - merchantIndexGrabber
     - rm ./*es*
@@ -89,7 +88,6 @@ dump_kTools:
   image: ${build_img}
   stage: dump
   script:
-    - echo -e "data=\"$(pwd)\"\ncontent=Morrowind.esm\ncontent=Tribunal.esm\ncontent=Bloodmoon.esm\ncontent=Starwind.omwaddon" >> $HOME/.config/openmw/openmw.cfg
     - ./writeDependencyFiles.sh ${MTM_DECRYPT_KEY}
     - make kTools
   artifacts:
@@ -102,7 +100,6 @@ dump_requiredDataFiles:
   image: ${build_img}
   stage: dump
   script:
-    - echo -e "data=\"$(pwd)\"\ncontent=Morrowind.esm\ncontent=Tribunal.esm\ncontent=Bloodmoon.esm\ncontent=Starwind.omwaddon" >> $HOME/.config/openmw/openmw.cfg
     - ./writeDependencyFiles.sh ${MTM_DECRYPT_KEY}
     - ls .
     - cat $HOME/.config/openmw/openmw.cfg
