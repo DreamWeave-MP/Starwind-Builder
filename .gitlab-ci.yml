@@ -13,7 +13,7 @@ build_tsi:
   stage: build
   script:
     - mkdir -p build
-    - printf ${MTM_DECRYPT_KEY} | gpg --batch --passphrase-fd 0 --decrypt plugins/DATA.tar.gz.gpg | tar xzvf -
+    - printf ${MTM_DECRYPT_KEY} | gpg --batch --passphrase-fd 0 --decrypt /plugins/DATA.tar.gz.gpg | tar xzvf -
     - make tsi
     - rm ./build/*[eE][sS][pPmM]
   artifacts:
@@ -27,7 +27,7 @@ build_vanilla:
   stage: build
   script:
     - mkdir -p build
-    - printf ${MTM_DECRYPT_KEY} | gpg --batch --passphrase-fd 0 --decrypt plugins/DATA.tar.gz.gpg | tar xzvf - -C build
+    - printf ${MTM_DECRYPT_KEY} | gpg --batch --passphrase-fd 0 --decrypt /plugins/DATA.tar.gz.gpg | tar xzvf - -C build
     - make vanilla
     - rm ./build/*[eE][sS][pPmM]
   artifacts:
