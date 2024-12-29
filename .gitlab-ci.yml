@@ -13,7 +13,7 @@ build_tsi:
   stage: build
   script:
     - mkdir -p build
-    - printf ${MTM_DECRYPT_KEY} | gpg --batch --passphrase-fd 0 --decrypt /plugins/DATA.tar.gz.gpg | tar xzvf -
+    - ./writeDependencyFiles.sh ${MTM_DECRYPT_KEY}
     - make tsi
     - rm ./build/*[eE][sS][pPmM]
   artifacts:
@@ -27,7 +27,7 @@ build_vanilla:
   stage: build
   script:
     - mkdir -p build
-    - printf ${MTM_DECRYPT_KEY} | gpg --batch --passphrase-fd 0 --decrypt /plugins/DATA.tar.gz.gpg | tar xzvf - -C build
+    - ./writeDependencyFiles.sh ${MTM_DECRYPT_KEY} build
     - make vanilla
     - rm ./build/*[eE][sS][pPmM]
   artifacts:
@@ -52,7 +52,7 @@ dump_merchants:
   stage: dump
   script:
     - echo -e "content=Morrowind.esm\ncontent=tribunal.esm\ncontent=bloodmoon.esm\ncontent=Starwind.omwaddon" >> $HOME/.config/openmw/openmw.cfg
-    - printf ${MTM_DECRYPT_KEY} | gpg --batch --passphrase-fd 0 --decrypt /plugins/DATA.tar.gz.gpg | tar xzvf -
+    - ./writeDependencyFiles.sh ${MTM_DECRYPT_KEY}
     - merchantIndexGrabber
     - rm ./*[eE][sS][pPmM]
   artifacts:
