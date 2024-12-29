@@ -37,12 +37,12 @@ JUNK_CELL=("ashinabi, smuggler den"
 do_mp_merge() {
     # Merge the plugins into the master
     # All mods dependent on enhanced are merged in the first phase
-    merge_to_master "bings race pack.esp" "Starwind Enhanced.esm"
-    merge_to_master "StarwindRacesJMC.esp" "Starwind Enhanced.esm"
-    merge_to_master "Starwind Enhanced.esm" StarwindRemasteredPatch.esm
+    # merge_to_master "bings race pack.esp" "Starwind Enhanced.esm"
+    # merge_to_master "StarwindRacesJMC.esp" "Starwind Enhanced.esm"
+    # merge_to_master "Starwind Enhanced.esm" StarwindRemasteredPatch.esm
     # Vanilla phase
-    merge_to_master alt_start1.5.esp StarwindRemasteredPatch.esm
-    merge_to_master StarwindVvardenfell.esp StarwindRemasteredPatch.esm
+    # merge_to_master alt_start1.5.esp StarwindRemasteredPatch.esm
+    # merge_to_master StarwindVvardenfell.esp StarwindRemasteredPatch.esm
     merge_to_master "Starwind Community Patch Project.esp" StarwindRemasteredPatch.esm
     merge_to_master naboo.esp StarwindRemasteredPatch.esm
     merge_to_master --remove-deleted StarwindRemasteredPatch.esm StarwindRemasteredV1.15.esm
@@ -55,8 +55,8 @@ do_mp_merge() {
     merge_to_master PartyHats.esp Starwind.omwaddon
     # There be dragons in the dialog trees (spicy)
     mv Starwind.omwaddon Starwind.esp
-    tes3cmd delete --type INFO --type DIAL --match "DELE" --match "Greeting 0" Starwind.esp
-    tes3cmd delete --type INFO --exact-id "19191290671947220251" Starwind.esp
+    # tes3cmd delete --type INFO --type DIAL --match "DELE" --match "Greeting 0" Starwind.esp
+    # tes3cmd delete --type INFO --exact-id "19191290671947220251" Starwind.esp
     # Normalize enchantment values
     tes3cmd modify --sub-no-match "ENAM:" --type CLOT --type ARMO --type WEAP --run '$R->set({f=>"enchantment"}, 375)' Starwind.esp
     mv Starwind.esp Starwind.omwaddon
