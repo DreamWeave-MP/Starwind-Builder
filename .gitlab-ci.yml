@@ -76,7 +76,7 @@ dump_DFL:
   image: ${build_img}
   stage: dump
   script:
-    - make DFL
+    - echo "No-op"
   artifacts:
     paths:
       - "DFLDB.tar.gz"
