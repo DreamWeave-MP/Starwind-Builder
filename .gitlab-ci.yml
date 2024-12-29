@@ -90,6 +90,7 @@ dump_kTools:
   stage: dump
   script:
     - echo -e "data=\"$(pwd)\"\ncontent=Morrowind.esm\ncontent=Tribunal.esm\ncontent=Bloodmoon.esm\ncontent=Starwind.omwaddon" >> $HOME/.config/openmw/openmw.cfg
+    - ./writeDependencyFiles.sh ${MTM_DECRYPT_KEY}
     - make kTools
   artifacts:
     paths:
@@ -102,6 +103,7 @@ dump_requiredDataFiles:
   stage: dump
   script:
     - echo -e "data=\"$(pwd)\"\ncontent=Morrowind.esm\ncontent=Tribunal.esm\ncontent=Bloodmoon.esm\ncontent=Starwind.omwaddon" >> $HOME/.config/openmw/openmw.cfg
+    - ./writeDependencyFiles.sh ${MTM_DECRYPT_KEY}
     - make requiredfiles
   artifacts:
     paths:
