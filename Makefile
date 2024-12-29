@@ -68,7 +68,7 @@ DFL: requiredfiles
 espParser:
 	./databaseWriter.sh espParser
 
-kTools: config
+kTools:
 	t3crc --use-paths
 	./databaseWriter.sh kTools
 
