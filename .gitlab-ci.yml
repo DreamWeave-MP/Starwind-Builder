@@ -3,17 +3,16 @@ stages:
   - dump
 
 variables:
-  build_img: "$CI_REGISTRY/modding-openmw/makron:0.0.9"
+  build_img: "$CI_REGISTRY/modding-openmw/makron:0.1.0"
   curl_img: curlimages/curl:7.83.0
   pkg_name: "${CI_PROJECT_NAME}.zip"
-  pkg_url:
-    "${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/generic/${CI_PROJECT_NAME}/${CI_COMMIT_TAG}"
+  pkg_url: "${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/generic/${CI_PROJECT_NAME}/${CI_COMMIT_TAG}"
 
 build_tsi:
   image: ${build_img}
   stage: build
   script:
-  - make tsi
+    - make tsi
   artifacts:
     paths:
       - "Starwind.omwaddon"
@@ -24,7 +23,7 @@ build_vanilla:
   image: ${build_img}
   stage: build
   script:
-  - make vanilla
+    - make vanilla
   artifacts:
     paths:
       - "vanilla_Starwind.omwaddon"
@@ -35,7 +34,7 @@ build_cpp:
   image: ${build_img}
   stage: build
   script:
-  - make cpp
+    - make cpp
   artifacts:
     paths:
       - "Starwind_Community_Patch_Project.zip"
@@ -46,7 +45,7 @@ dump_merchants:
   image: ${build_img}
   stage: dump
   script:
-  - merchantIndexGrabber
+    - merchantIndexGrabber
   artifacts:
     paths:
       - "merchantIndexDatabase.json"
@@ -59,7 +58,7 @@ dump_cells:
   image: ${build_img}
   stage: dump
   script:
-  - make espParser
+    - make espParser
   artifacts:
     paths:
       - "StarwindDB.tar.gz"
@@ -72,7 +71,7 @@ dump_DFL:
   image: ${build_img}
   stage: dump
   script:
-  - make DFL
+    - make DFL
   artifacts:
     paths:
       - "DFLDB.tar.gz"
@@ -83,7 +82,7 @@ dump_kTools:
   image: ${build_img}
   stage: dump
   script:
-  - make kTools
+    - make kTools
   artifacts:
     paths:
       - "kToolsDB.tar.gz"
@@ -94,7 +93,7 @@ dump_requiredDataFiles:
   image: ${build_img}
   stage: dump
   script:
-  - make requiredfiles
+    - make requiredfiles
   artifacts:
     paths:
       - "requiredDataFiles.json"
