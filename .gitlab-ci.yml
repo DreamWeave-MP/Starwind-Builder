@@ -13,7 +13,7 @@ build_tsi:
   stage: build
   script:
     - mkdir -p build
-    - ./writeDependencyFiles.sh ${MTM_DECRYPT_KEY}
+    - ./writeDependencyFiles.sh ${MTM_DECRYPT_KEY} build
     - make tsi
     - rm ./build/*[eE][sS][pPmM]
   artifacts:
