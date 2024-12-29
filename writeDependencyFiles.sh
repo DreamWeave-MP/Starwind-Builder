@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-set -euo pipefail
+set -euo
 
 KEY="$1"
 DIR="${2:-.}"
