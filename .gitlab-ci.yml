@@ -15,7 +15,6 @@ build_tsi:
     - mkdir -p build
     - ./writeDependencyFiles.sh ${MTM_DECRYPT_KEY} build
     - make tsi
-    - rm ./build/*[eE][sS][pPmM]
   artifacts:
     paths:
       - "Starwind.omwaddon"
@@ -29,7 +28,6 @@ build_vanilla:
     - mkdir -p build
     - ./writeDependencyFiles.sh ${MTM_DECRYPT_KEY} build
     - make vanilla
-    - rm ./build/*[eE][sS][pPmM]
   artifacts:
     paths:
       - "vanilla_Starwind.omwaddon"
@@ -54,7 +52,7 @@ dump_merchants:
     - echo -e "content=Morrowind.esm\ncontent=tribunal.esm\ncontent=bloodmoon.esm\ncontent=Starwind.omwaddon" >> $HOME/.config/openmw/openmw.cfg
     - ./writeDependencyFiles.sh ${MTM_DECRYPT_KEY}
     - merchantIndexGrabber
-    - rm ./*[eE][sS][pPmM]
+    - rm ./build/*es*
   artifacts:
     paths:
       - "merchantIndexDatabase.json"
