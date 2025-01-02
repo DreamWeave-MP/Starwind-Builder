@@ -101,8 +101,6 @@ dump_requiredDataFiles:
   stage: dump
   script:
     - ./writeDependencyFiles.sh ${MTM_DECRYPT_KEY}
-    - ls .
-    - cat $HOME/.config/openmw/openmw.cfg
     - make requiredfiles
   artifacts:
     paths:
