@@ -2,14 +2,15 @@
 Description=Tes3mp game server
 After=network.target
 StartLimitIntervalSec=0
-
+StartLimitInterval=200
+StartLimitBurst=5
 
 [Service]
 Type=simple
 Restart=always
-RestartSec=2
-User=corleycomputerrepair
-ExecStart=/home/corleycomputerrepair/tes3mp-init.sh
+RestartSec=10
+User=cyanideandfiberglass
+ExecStart=/home/cyanideandfiberglass/tes3mp-init.sh
 
 [Install]
 WantedBy=multi-user.target
