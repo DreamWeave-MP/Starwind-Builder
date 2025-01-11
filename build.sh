@@ -107,8 +107,9 @@ if [ "$1" = "tsi" ]; then
     tes3cmd delete --type CELL --exact-id "Taris, Ruined Plaza" --instance-match "ObjIdx:7205 " StarwindRemasteredPatch.esm
     tes3cmd delete --type CELL --exact-id "Taris, Ruined Plaza: Medical Bay" --instance-match "ObjIdx:6749 " StarwindRemasteredPatch.esm # Zelka Forn
 
-    # The existence of this cell is in limbo it seems, idfk what's going on
-    tes3cmd delete --type CELL --exact-id "Tatooine" --instance-match "Tatooine, Beast's Lair" StarwindRemasteredPatch.esm StarwindRemasteredV1.15.esm # Door to beasts lair (deleted cell)
+    # The cell itself reports as deleted but still loads in-engine, so this cell was... always interpreted as valid, at least
+    # Who fucking knows how it's physically possible for this to have happened or whether it is intentional, but I'm not asking questions here
+    tes3cmd modify --type CELL --exact-id "Tatooine, Beast's Lair" --run '$R->delete({f=>"deleted"})' StarwindRemasteredPatch.esm
     # These instances of shade only exist in the original esm files, we'll probably not need these later when MQ is reimplemented
     #tes3cmd delete --type CELL --exact-id "Tatooine, Cantina" --instance-match "ObjIdx:1074 " StarwindRemasteredPatch.esm 2> grep -v "Can't find \"Data Files\"" # Shade
     #tes3cmd delete --type CELL --exact-id "Tatooine, Medical Bay" --instance-match "ObjIdx:2465 " StarwindRemasteredPatch.esm 2> grep -v "Can't find \"Data Files\"" # Shade
