@@ -47,7 +47,11 @@ do_mp_merge() {
     merge_to_master naboo.esp StarwindRemasteredPatch.esm
     merge_to_master --remove-deleted StarwindRemasteredPatch.esm StarwindRemasteredV1.15.esm
     mv StarwindRemasteredV1.15.esm Starwind.omwaddon
+
+    # Patch phase to implement components which cannot otherwise be repaired, primarily due to --remove-deleted removing deleted records we actually totally did want
     merge_to_master deletedbirthsigns.esp Starwind.omwaddon
+    merge_to_master beastlair.esp Starwind.omwaddon
+
     if [ "$1" != "nomp" ]; then
         merge_to_master StarwindMPRecords.esp Starwind.omwaddon
     fi
@@ -107,9 +111,14 @@ if [ "$1" = "tsi" ]; then
     tes3cmd delete --type CELL --exact-id "Taris, Ruined Plaza" --instance-match "ObjIdx:7205 " StarwindRemasteredPatch.esm
     tes3cmd delete --type CELL --exact-id "Taris, Ruined Plaza: Medical Bay" --instance-match "ObjIdx:6749 " StarwindRemasteredPatch.esm # Zelka Forn
 
-    # The cell itself reports as deleted but still loads in-engine, so this cell was... always interpreted as valid, at least
-    # Who fucking knows how it's physically possible for this to have happened or whether it is intentional, but I'm not asking questions here
-    # tes3cmd modify --type CELL --exact-id "Tatooine, Beast's Lair" --run '$R->delete({f=>"deleted"})' StarwindRemasteredPatch.esm
+    # As it turns out, placing the DELE flag on cells, much like the pirate code, is simply a guideline. This patch was always unnecessary to begin with.
+    # However, it's MTM itself that's been deleting the cells on our behalf, since it *does* have the deleted flag and in theory, should be deleted.
+    # We dump the cell out as a separate component here, remove deleted instances manually, then merge it back in later.
+    # The resulting merged plugin should have the beast lair cell entirely removed, then have the fresh copy re-added onto it.
+    # This MIGHT mean that --remove-deleted flag cannot be used on the resulting merged plugin as the beast lair cell may be at risk of being removed again.
+    tes3cmd dump --type CELL --exact-id "Tatooine, Beast's Lair" --raw-with-header beastlair.esp StarwindRemasteredPatch.esm
+    tes3cmd delete --instance-match "DELE" beastlair.esp
+
     # These instances of shade only exist in the original esm files, we'll probably not need these later when MQ is reimplemented
     #tes3cmd delete --type CELL --exact-id "Tatooine, Cantina" --instance-match "ObjIdx:1074 " StarwindRemasteredPatch.esm 2> grep -v "Can't find \"Data Files\"" # Shade
     #tes3cmd delete --type CELL --exact-id "Tatooine, Medical Bay" --instance-match "ObjIdx:2465 " StarwindRemasteredPatch.esm 2> grep -v "Can't find \"Data Files\"" # Shade
