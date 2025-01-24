@@ -12,6 +12,9 @@ cpp: plugins-bin
 	cd "src/Community Patch Project" && zip -r9 --must-match --recurse-paths \
 	Starwind_Community_Patch_Project.zip \
 	Meshes/ \
+	Scripts/ \
+	Fonts/ \
+	Icons/ \
 	"Starwind Community Patch Project.omwaddon" \
 	&& mv Starwind_Community_Patch_Project.zip ../../
 
