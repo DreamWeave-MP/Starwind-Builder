@@ -76,7 +76,8 @@ do_sp_merge() {
 
 do_standalone_merge() {
     do_sp_merge
-    mv vanilla_Starwind.omwaddon Starwind.esp
+    merge_to_master vanilla_Starwind.omwaddon Minimal.esp
+    mv Minimal.esp Starwind.esp
     addVanillaRefs > decoupleLog.txt
 }
 

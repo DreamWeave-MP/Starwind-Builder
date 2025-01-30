@@ -1,0 +1,915 @@
+[
+  {
+    "type": "Header",
+    "flags": [
+      0,
+      0
+    ],
+    "version": 1.2,
+    "file_type": "Esm",
+    "author": "Bethesda Softworks",
+    "description": "The main data file For Morrowind",
+    "num_objects": 54,
+    "masters": []
+  },
+  {
+    "type": "Class",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Acrobat",
+    "name": "Acrobat",
+    "data": {
+      "attribute1": "Agility",
+      "attribute2": "Endurance",
+      "specialization": "Stealth",
+      "minor1": "Speechcraft",
+      "major1": "Acrobatics",
+      "minor2": "Alteration",
+      "major2": "Athletics",
+      "minor3": "Spear",
+      "major3": "Marksman",
+      "minor4": "HandToHand",
+      "major4": "Sneak",
+      "minor5": "LightArmor",
+      "major5": "Unarmored",
+      "flags": 1,
+      "auto_calc_flags": 0
+    },
+    "description": "'Acrobat' is a polite euphemism for agile burgulars and second-story men. These thieves avoid detection by stealth, and rely on mobility and cunning to avoid capture."
+  },
+  {
+    "type": "Race",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Dark Elf",
+    "name": "Dark Elf",
+    "data": {
+      "skill_bonuses": [
+        [
+          "Athletics",
+          5
+        ],
+        [
+          "Destruction",
+          10
+        ],
+        [
+          "LightArmor",
+          5
+        ],
+        [
+          "LongBlade",
+          5
+        ],
+        [
+          "Marksman",
+          5
+        ],
+        [
+          "Mysticism",
+          5
+        ],
+        [
+          "ShortBlade",
+          10
+        ]
+      ],
+      "strength": [
+        40,
+        40
+      ],
+      "intelligence": [
+        40,
+        40
+      ],
+      "willpower": [
+        30,
+        30
+      ],
+      "agility": [
+        40,
+        40
+      ],
+      "speed": [
+        50,
+        50
+      ],
+      "endurance": [
+        40,
+        30
+      ],
+      "personality": [
+        30,
+        40
+      ],
+      "luck": [
+        40,
+        40
+      ],
+      "height": [
+        1.0,
+        1.0
+      ],
+      "weight": [
+        1.0,
+        0.9
+      ],
+      "flags": 1
+    },
+    "spells": []
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Body Fall Medium",
+    "sound_path": "Fx\\bodyfallMED.wav",
+    "data": {
+      "volume": 255,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "bowPull",
+    "sound_path": "Fx\\item\\bowpull.wav",
+    "data": {
+      "volume": 255,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "bowShoot",
+    "sound_path": "Fx\\item\\bowshoot.wav",
+    "data": {
+      "volume": 255,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "critical damage",
+    "sound_path": "Fx\\criticalDMG.wav",
+    "data": {
+      "volume": 255,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "crossbowPull",
+    "sound_path": "Fx\\item\\cbowpull.wav",
+    "data": {
+      "volume": 255,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "crossbowShoot",
+    "sound_path": "Fx\\item\\cbowshoot.wav",
+    "data": {
+      "volume": 255,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Default Moan",
+    "sound_path": "Cr\\alit\\moan.wav",
+    "data": {
+      "volume": 255,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Default Roar",
+    "sound_path": "Cr\\alit\\roar.wav",
+    "data": {
+      "volume": 255,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Default Scream",
+    "sound_path": "Cr\\alit\\scrm.wav",
+    "data": {
+      "volume": 255,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "DefaultLand",
+    "sound_path": "Fx\\bodyfallMED.wav",
+    "data": {
+      "volume": 255,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "DefaultLandWater",
+    "sound_path": "Fx\\FOOT\\splsh.wav",
+    "data": {
+      "volume": 255,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "drown",
+    "sound_path": "Fx\\drown.wav",
+    "data": {
+      "volume": 255,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "drowning damage",
+    "sound_path": "Fx\\drown_DMG.wav",
+    "data": {
+      "volume": 255,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "FootBareLeft",
+    "sound_path": "Fx\\FOOT\\walkl_br.wav",
+    "data": {
+      "volume": 229,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "FootBareRight",
+    "sound_path": "Fx\\FOOT\\walkr_br.wav",
+    "data": {
+      "volume": 229,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "FootHeavyLeft",
+    "sound_path": "Fx\\FOOT\\walkl_hv.wav",
+    "data": {
+      "volume": 255,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "FootHeavyRight",
+    "sound_path": "Fx\\FOOT\\walkr_hv.wav",
+    "data": {
+      "volume": 255,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "FootLightLeft",
+    "sound_path": "Fx\\FOOT\\walkl_lt.wav",
+    "data": {
+      "volume": 255,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "FootLightRight",
+    "sound_path": "Fx\\FOOT\\walkr_lt.wav",
+    "data": {
+      "volume": 255,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "FootMedLeft",
+    "sound_path": "Fx\\FOOT\\walkl_md.wav",
+    "data": {
+      "volume": 255,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "FootMedRight",
+    "sound_path": "Fx\\FOOT\\walkr_md.wav",
+    "data": {
+      "volume": 255,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "FootWaterLeft",
+    "sound_path": "Fx\\FOOT\\swimLEFT.wav",
+    "data": {
+      "volume": 255,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "FootWaterRight",
+    "sound_path": "Fx\\FOOT\\swimRIGHT.wav",
+    "data": {
+      "volume": 255,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Hand To Hand Hit",
+    "sound_path": "Fx\\punch 1.wav",
+    "data": {
+      "volume": 255,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Hand to Hand Hit 2",
+    "sound_path": "Fx\\punch 2.wav",
+    "data": {
+      "volume": 255,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Health Damage",
+    "sound_path": "Fx\\body hit.wav",
+    "data": {
+      "volume": 255,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Heavy Armor Hit",
+    "sound_path": "Fx\\Heavy Armor Hit.wav",
+    "data": {
+      "volume": 255,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Light Armor Hit",
+    "sound_path": "Fx\\Light Armor Hit.wav",
+    "data": {
+      "volume": 255,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Medium Armor Hit",
+    "sound_path": "Fx\\Medium Armor Hit.wav",
+    "data": {
+      "volume": 255,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Menu Click",
+    "sound_path": "Fx\\menu click.wav",
+    "data": {
+      "volume": 127,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Menu Size",
+    "sound_path": "Fx\\Maximize.wav",
+    "data": {
+      "volume": 204,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "miss",
+    "sound_path": "Fx\\miss.wav",
+    "data": {
+      "volume": 204,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Swim Left",
+    "sound_path": "Fx\\FOOT\\swimLEFT.wav",
+    "data": {
+      "volume": 255,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Swim Right",
+    "sound_path": "Fx\\FOOT\\swimRIGHT.wav",
+    "data": {
+      "volume": 255,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Sound",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "Weapon Swish",
+    "sound_path": "Fx\\swoosh 1.wav",
+    "data": {
+      "volume": 255,
+      "range": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "type": "Static",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "VFX_Absorb",
+    "mesh": "e\\absorb.NIF"
+  },
+  {
+    "type": "Static",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "VFX_Hands",
+    "mesh": "e\\hand01.NIF"
+  },
+  {
+    "type": "Static",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "VFX_Reflect",
+    "mesh": "e\\magic_reflect.NIF"
+  },
+  {
+    "type": "Static",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "VFX_Soul_Trap",
+    "mesh": "e\\magic_summon.NIF"
+  },
+  {
+    "type": "Static",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "VFX_Summon_end",
+    "mesh": "e\\magic_summon.NIF"
+  },
+  {
+    "type": "Static",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "VFX_Summon_Start",
+    "mesh": "e\\magic_summon.NIF"
+  },
+  {
+    "type": "Npc",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "player",
+    "name": "player",
+    "npc_flags": 8,
+    "data": {
+      "level": 1,
+      "stats": {
+        "attributes": [
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "skills": [
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "health": 100,
+        "magicka": 100,
+        "fatigue": 100
+      },
+      "disposition": 50,
+      "reputation": 0,
+      "rank": 0,
+      "gold": 0
+    },
+    "inventory": [],
+    "spells": [],
+    "ai_packages": [],
+    "travel_destinations": []
+  },
+  {
+    "type": "Cell",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "",
+    "data": {
+      "flags": 2,
+      "grid": [
+        0,
+        0
+      ]
+    },
+    "references": []
+  },
+  {
+    "type": "Landscape",
+    "flags": [
+      0,
+      0
+    ],
+    "grid": [
+      0,
+      0
+    ],
+    "landscape_flags": 7,
+    "vertex_normals": "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",
+    "vertex_heights": "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",
+    "texture_indices": "KLUv/QBYTQAAEAAAAQD7KsAC"
+  },
+  {
+    "type": "SoundGen",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "DEFAULT0000",
+    "sound_flags": 0,
+    "sound": "FootBareLeft"
+  },
+  {
+    "type": "SoundGen",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "DEFAULT0001",
+    "sound_flags": 1,
+    "sound": "FootBareRight"
+  },
+  {
+    "type": "SoundGen",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "DEFAULT0002",
+    "sound_flags": 2,
+    "sound": "Swim Left"
+  },
+  {
+    "type": "SoundGen",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "DEFAULT0003",
+    "sound_flags": 3,
+    "sound": "Swim Right"
+  },
+  {
+    "type": "SoundGen",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "DEFAULT0004",
+    "sound_flags": 4,
+    "sound": "Default Moan"
+  },
+  {
+    "type": "SoundGen",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "DEFAULT0005",
+    "sound_flags": 5,
+    "sound": "Default Roar"
+  },
+  {
+    "type": "SoundGen",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "DEFAULT0006",
+    "sound_flags": 6,
+    "sound": "Default Scream"
+  },
+  {
+    "type": "SoundGen",
+    "flags": [
+      0,
+      0
+    ],
+    "id": "DEFAULT0007",
+    "sound_flags": 7,
+    "sound": "Body Fall Medium"
+  }
+]
