@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 JUNK_CELL=("ashinabi, smuggler den"
 "balmora, drarayne thelas' storage"
 "balmora, hecerinde's house"
