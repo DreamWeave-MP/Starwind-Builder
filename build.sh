@@ -75,15 +75,9 @@ do_sp_merge() {
 }
 
 do_standalone_merge() {
-    merge_to_master "Starwind Enhanced.esm" StarwindRemasteredPatch.esm
-    merge_to_master "Starwind Community Patch Project.esp" StarwindRemasteredPatch.esm
-    merge_to_master --remove-deleted StarwindRemasteredPatch.esm StarwindRemasteredV1.15.esm
-    mv StarwindRemasteredV1.15.esm vanilla_Starwind.omwaddon
-    merge_to_master deletedbirthsigns.esp vanilla_Starwind.omwaddon
+    do_sp_merge
     mv vanilla_Starwind.omwaddon Starwind.esp
-    echo "Merging vanilla data..."
-    addVanillaRefs
-    echo "Successfully pulled data from vanilla ESM files"
+    addVanillaRefs > decoupleLog.txt
 }
 
 cd build
@@ -286,7 +280,7 @@ if [ "$1" = "tsi" ]; then
     mv Starwind.omwaddon ..
 elif [ "$1" = "standalone" ]; then
     do_standalone_merge
-    mv Starwind.esp ..
+    mv Starwind.esp decoupleLog.txt ..
 else
     do_sp_merge
     mv vanilla_Starwind.omwaddon ..

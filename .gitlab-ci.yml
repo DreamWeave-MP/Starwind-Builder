@@ -45,6 +45,7 @@ build_standalone:
   artifacts:
     paths:
       - "Starwind.esp"
+      - "decoupleLog.txt"
   rules:
     - if: $CI_COMMIT_BRANCH == "master"
 
