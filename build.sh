@@ -81,7 +81,9 @@ do_standalone_merge() {
     mv StarwindRemasteredV1.15.esm vanilla_Starwind.omwaddon
     merge_to_master deletedbirthsigns.esp vanilla_Starwind.omwaddon
     mv vanilla_Starwind.omwaddon Starwind.esp
+    echo "Merging vanilla data..."
     addVanillaRefs
+    echo "Successfully pulled data from vanilla ESM files"
 }
 
 cd build
