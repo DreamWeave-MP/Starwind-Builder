@@ -280,6 +280,7 @@ tes3cmd delete --type ARMO --match "swe_mandochest" --sub-match "Female_Body_ID:
 # Golden doors have the `DoNothing` script on them, for reasons
 tes3cmd delete --type DOOR --sub-match "DoNothing" --exact-id "in_t_door_small" StarwindRemasteredV1.15.esm
 
+echo $1
 if [ "$1" = "tsi" ]; then
     do_mp_merge "$2"
     mv Starwind.omwaddon ..
