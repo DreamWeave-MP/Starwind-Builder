@@ -40,7 +40,8 @@ build_standalone:
   script:
     - mkdir -p build
     - ./writeDependencyFiles.sh ${MTM_DECRYPT_KEY} build
-    - make standalone
+    - make plugins-bin
+    - ./build.sh standalone
   artifacts:
     paths:
       - "Starwind.esp"
