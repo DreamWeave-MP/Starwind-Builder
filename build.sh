@@ -284,7 +284,6 @@ if [ "$1" = "tsi" ]; then
 elif [ "$1" = "standalone" ]; then
     do_standalone_merge
     mv Starwind.esp decoupleLog.txt ..
-    ls -R ..
 else
     do_sp_merge
     mv vanilla_Starwind.omwaddon ..
