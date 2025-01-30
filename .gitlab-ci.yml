@@ -34,6 +34,19 @@ build_vanilla:
   rules:
     - if: $CI_COMMIT_BRANCH == "master"
 
+build_standalone:
+  image: ${build_img}
+  stage: build
+  script:
+    - mkdir -p build
+    - ./writeDependencyFiles.sh ${MTM_DECRYPT_KEY} build
+    - make standalone
+  artifacts:
+    paths:
+      - "Starwind.esp"
+  rules:
+    - if: $CI_COMMIT_BRANCH == "master"
+
 build_cpp:
   image: ${build_img}
   stage: build

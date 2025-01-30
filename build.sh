@@ -74,6 +74,16 @@ do_sp_merge() {
     merge_to_master deletedbirthsigns.esp vanilla_Starwind.omwaddon
 }
 
+do_standalone_merge() {
+    merge_to_master "Starwind Enhanced.esm" StarwindRemasteredPatch.esm
+    merge_to_master "Starwind Community Patch Project.esp" StarwindRemasteredPatch.esm
+    merge_to_master --remove-deleted StarwindRemasteredPatch.esm StarwindRemasteredV1.15.esm
+    mv StarwindRemasteredV1.15.esm vanilla_Starwind.omwaddon
+    merge_to_master deletedbirthsigns.esp vanilla_Starwind.omwaddon
+    mv vanilla_Starwind.omwaddon Starwind.esp
+    addVanillaRefs
+}
+
 cd build
 
 if [ -f "../StarwindRemasteredV1.15.esm" ]; then
@@ -271,6 +281,9 @@ tes3cmd delete --type DOOR --sub-match "DoNothing" --exact-id "in_t_door_small" 
 if [ "$1" = "tsi" ]; then
     do_mp_merge "$2"
     mv Starwind.omwaddon ..
+elif [ "$1" = "standalone" ]; then
+    do_standalone_merge
+    mv Starwind.esp ..
 else
     do_sp_merge
     mv vanilla_Starwind.omwaddon ..
