@@ -1,0 +1,80 @@
+local ModInfo = require('scripts.sw4.modinfo')
+local I = require('openmw.interfaces')
+
+---@alias DefaultSettingRenderer
+---| '"textLine"'
+---| '"checkbox"'
+---| '"number"'
+---| '"select"'
+---| '"color"'
+---| '"inputBinding"'
+
+---@alias InputBindingType
+---| '"action"'
+---| '"trigger"'
+
+---@class InputBindingOptions
+---@field key string The (table) key of the binding
+---@field type InputBindingType The type of binding
+
+---@class ColorSettingOptions
+---@field disabled boolean? Disables changing the setting from the UI. Defaults to false.
+
+---@class SelectSettingOptions
+---@field disabled boolean? Disables changing the setting from the UI. Defaults to false.
+---@field l10n string localization context with display values for items. Required.
+---@field items string[] list of available setting options. Defaults to empty array.
+
+---@class NumberSettingOptions
+---@field disabled boolean? Disables changing the setting from the UI. Defaults to false.
+---@field integer boolean? Whether to only allow integer values. Defaults to false.
+---@field min number? If set, restricts setting values below this number. Defaults to nil.
+---@field max number? If set, restricts setting values above this number. Defaults to nil.
+
+---@class CheckboxSettingOptions
+---@field disabled boolean? Disables changing the setting from the UI. Defaults to false.
+---@field l10n string localization context with display values for items. Defaults to 'Interface'
+---@field trueLabel string? Localization key to display for the true value. Defaults to 'Yes'
+---@field falseLabel string? Localization key to display for the false value. Defaults to 'No'
+
+---@class TextLineOptions
+---@field disabled boolean? Disables changing the setting from the UI. Defaults to false.
+
+---@alias SettingRendererOptions
+---| ColorSettingOptions
+---| SelectSettingOptions
+---| CheckboxSettingOptions
+---| NumberSettingOptions
+---| TextLineOptions
+---| InputBindingOptions
+
+--- Shorthand to generate Setting tables for input into `I.Settings.registerGroup`'s `settings` argument.
+---@param key string The (table) key of the setting
+---@param renderer DefaultSettingRenderer The type of setting to create
+---@param argument SettingRendererOptions The options for the setting renderer, specific to the `renderer` type
+---@param name string The displayed name of the setting in the menu
+---@param description string The description of the setting in the menu
+---@param default any The default value of the setting
+---@return table
+local function Setting(key, renderer, argument, name, description, default)
+    return {
+        key = key,
+        renderer = renderer,
+        argument = argument,
+        name = name,
+        description = description,
+        default = default,
+    }
+end
+
+I.Settings.registerGroup {
+    key = 'SettingsGlobal' .. ModInfo.name .. 'CoreGroup',
+    page = ModInfo.name .. 'CorePage',
+    order = 0,
+    l10n = ModInfo.l10nName,
+    name = 'Core',
+    permanentStorage = true,
+    settings = {
+        Setting('DebugEnable', 'checkbox', {}, 'Show Debug Messages', 'Displays debug messages in the (classic) console.', false),
+    }
+}

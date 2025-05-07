@@ -1,0 +1,4 @@
+GLOBAL: Scripts/sw4/globalSettings.lua
+MENU: Scripts/sw4/menu/settingRegistration.lua
+GLOBAL: Scripts/sw4/freighter/planetController.lua
+PLAYER: Scripts/sw4/player/playerController.lua
