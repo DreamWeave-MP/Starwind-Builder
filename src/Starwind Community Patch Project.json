@@ -6,7 +6,7 @@
     "file_type": "Esp",
     "author": "",
     "description": "",
-    "num_objects": 27,
+    "num_objects": 34,
     "masters": [
       [
         "Morrowind.esm",
@@ -311,6 +311,167 @@
     "variables": "FAAAAGRvT25jZQBkb0Fsc28AdGltZXIA",
     "bytecode": "8AAAAAYBEQkgcwEAID09IDAGAQ8TIFgBECByBlBsYXllciA8IDI1MAYBDRggWM0QIGQLU1dfUHJlVGFyaXMgPT0gMzAGAQQJIHMCACA9PSAwDAELU1dfU2hhZGVQcmXbEDARAAAAQN4QBQFzAgACIDEJAQUBZgEACiBmAQAgWBIQICsGAQQIIGYBACA+IDICEA9TV19TaGlwYmxhc3RvZmbMEAtTV19QcmVUYXJpcygA//8MAQZwbGF5ZXIFEDkOL0UioRNGDf9BRs2MnUMTVGF0b29pbmUsIFNhbmRyaXZlcgUBcwEAAiAxCQEJAQkBCQEBAQ==",
     "text": "Begin SW_StorySceneScr2\n\nshort doOnce\nshort doAlso\nfloat timer\n\nif ( doOnce == 0 )\nif ( GetDistance \"Player\" < 250 )\nif ( GetJournalIndex \"SW_PreTaris\" == 30 )\n\nif ( doAlso == 0 )\nSW_ShadePre->AiWander 0 0 0\nSW_ShadePre->Disable\nFadeOut 2.0\nDisablePlayerControls\nset doAlso to 1\nendif\nset timer to ( timer + GetSecondsPassed )\nif ( timer > 2 )\nPlaySound \"SW_Shipblastoff\"\nJournal SW_PreTaris 40\nplayer->PositionCell 2800.889 9448.283 12415.763 315.1 \"Tatooine, Sandriver\"\nset doOnce to 1\nendif\n\nendif\nendif\nendif\n\nEnd\n"
+  },
+  {
+    "type": "Spell",
+    "flags": "",
+    "id": "CPP_MNT_AlitSpell",
+    "name": "Alit Mount buff",
+    "effects": [
+      {
+        "magic_effect": "RestoreFatigue",
+        "skill": "None",
+        "attribute": "None",
+        "range": "OnSelf",
+        "area": 0,
+        "duration": 5,
+        "min_magnitude": 5,
+        "max_magnitude": 8
+      }
+    ],
+    "data": {
+      "spell_type": "Spell",
+      "cost": 0,
+      "flags": "ALWAYS_SUCCEEDS"
+    }
+  },
+  {
+    "type": "Spell",
+    "flags": "",
+    "id": "CPP_MNT_BanthaSpell",
+    "name": "Bantha ",
+    "effects": [
+      {
+        "magic_effect": "Shield",
+        "skill": "None",
+        "attribute": "None",
+        "range": "OnSelf",
+        "area": 0,
+        "duration": 30,
+        "min_magnitude": 30,
+        "max_magnitude": 30
+      }
+    ],
+    "data": {
+      "spell_type": "Spell",
+      "cost": 0,
+      "flags": "ALWAYS_SUCCEEDS"
+    }
+  },
+  {
+    "type": "Spell",
+    "flags": "",
+    "id": "CPP_MNT_CanCellSpell",
+    "name": "Can-Cell Mount Spell",
+    "effects": [
+      {
+        "magic_effect": "Poison",
+        "skill": "None",
+        "attribute": "None",
+        "range": "OnTarget",
+        "area": 5,
+        "duration": 5,
+        "min_magnitude": 3,
+        "max_magnitude": 3
+      }
+    ],
+    "data": {
+      "spell_type": "Spell",
+      "cost": 0,
+      "flags": "ALWAYS_SUCCEEDS"
+    }
+  },
+  {
+    "type": "Spell",
+    "flags": "",
+    "id": "CPP_MNT_RancorSpell",
+    "name": "Rancor Mount Buff",
+    "effects": [
+      {
+        "magic_effect": "FortifyAttribute",
+        "skill": "None",
+        "attribute": "Strength",
+        "range": "OnSelf",
+        "area": 0,
+        "duration": 30,
+        "min_magnitude": 30,
+        "max_magnitude": 30
+      }
+    ],
+    "data": {
+      "spell_type": "Spell",
+      "cost": 0,
+      "flags": "ALWAYS_SUCCEEDS"
+    }
+  },
+  {
+    "type": "Spell",
+    "flags": "",
+    "id": "CPP_MNT_SpeederBlastStrong",
+    "name": "Strong Speeder Blast",
+    "effects": [
+      {
+        "magic_effect": "FireDamage",
+        "skill": "None",
+        "attribute": "None",
+        "range": "OnTarget",
+        "area": 5,
+        "duration": 3,
+        "min_magnitude": 10,
+        "max_magnitude": 10
+      }
+    ],
+    "data": {
+      "spell_type": "Spell",
+      "cost": 0,
+      "flags": "ALWAYS_SUCCEEDS"
+    }
+  },
+  {
+    "type": "Spell",
+    "flags": "",
+    "id": "CPP_MNT_SpeederBlastWeak",
+    "name": "Weak Speeder Blast",
+    "effects": [
+      {
+        "magic_effect": "FireDamage",
+        "skill": "None",
+        "attribute": "None",
+        "range": "OnTarget",
+        "area": 5,
+        "duration": 5,
+        "min_magnitude": 3,
+        "max_magnitude": 3
+      }
+    ],
+    "data": {
+      "spell_type": "Spell",
+      "cost": 0,
+      "flags": "ALWAYS_SUCCEEDS"
+    }
+  },
+  {
+    "type": "Spell",
+    "flags": "",
+    "id": "CPP_MNT_TankBlast",
+    "name": "Tank Blast",
+    "effects": [
+      {
+        "magic_effect": "FireDamage",
+        "skill": "None",
+        "attribute": "None",
+        "range": "OnTarget",
+        "area": 15,
+        "duration": 5,
+        "min_magnitude": 8,
+        "max_magnitude": 8
+      }
+    ],
+    "data": {
+      "spell_type": "Spell",
+      "cost": 0,
+      "flags": "ALWAYS_SUCCEEDS"
+    }
   },
   {
     "type": "Weapon",
