@@ -1,0 +1,15 @@
+player->setspeed 250
+player->setstrength 250
+
+tcl
+tgm
+
+player->addspell "fireball"
+
+
+player->additem SW_Speeder1test 1
+player->additem gold_001 25000
+player->additem sw_blastbolt 1000
+player->additem sw_blastboltarrow 1000
+player->additem sw_pistolblastech 1
+player->additem sw_blasterrifle 1
