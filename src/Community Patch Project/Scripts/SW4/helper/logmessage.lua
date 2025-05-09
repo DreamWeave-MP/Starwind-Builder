@@ -2,14 +2,17 @@ local storage = require('openmw.storage')
 local types = require('openmw.types')
 local Player = types.Player
 
-local World, Self, ui, nearby
-local isGlobal, result = pcall(function() require('openmw.world') end)
-
 local ModInfo = require('scripts.sw4.modinfo')
+local ScriptContext = require('scripts.sw4.helper.getScriptContext')
+local CurrentContext = ScriptContext.GetScriptContext()
 
-if isGlobal then
-    World = result
-else
+local CoreSettings = storage.globalSection('SettingsGlobal' .. ModInfo.name .. 'CoreGroup')
+
+local World, Self, ui, nearby
+
+if CurrentContext == ScriptContext.Types.Global then
+    World = require('openmw.world')
+elseif CurrentContext ~= ScriptContext.Types.Menu then
     Self = require('openmw.self')
 
     if Player.objectIsInstance(Self) then
@@ -19,8 +22,6 @@ else
     end
 end
 
-local CoreSettings = storage.globalSection('SettingsGlobal' .. ModInfo.name .. 'CoreGroup')
-
 --- Prints a message to the console, directly using the console OR to nearby players if the attached object isn't a player
 ---@param messageString string The message to print to the console
 local function LogMessage(messageString)
@@ -28,16 +29,16 @@ local function LogMessage(messageString)
         return
     end
 
-    if isGlobal then
+    if CurrentContext == ScriptContext.Types.Global then
         assert(World, "World is not available")
 
         for _, player in pairs(World.players) do
             player:sendEvent('SW4_LogMessage', ModInfo.logPrefix .. messageString)
         end
     else
-        if ui then
+        if CurrentContext == ScriptContext.Types.Player then
             ui.printToConsole(ModInfo.logPrefix .. messageString, ui.CONSOLE_COLOR.Success)
-        else
+        elseif CurrentContext == ScriptContext.Types.Local then
             for _, player in pairs(nearby.players) do
                 player:sendEvent('SW4_LogMessage', ModInfo.logPrefix .. messageString)
             end
