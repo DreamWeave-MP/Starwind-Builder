@@ -3,6 +3,7 @@ local input = require('openmw.input')
 local self = require('openmw.self')
 local storage = require('openmw.storage')
 local types = require('openmw.types')
+local util = require('openmw.util')
 
 local I = require('openmw.interfaces')
 
@@ -30,58 +31,85 @@ local SkillMarksman = Skills.marksman(self)
 ---@field onFrame fun(dt: number): nil If signalled by the animation handlers, will force the player to engage or release an attack
 ---@field textKeyHandler fun(_: string, key: string): nil Signals the onFrame handler to start/release an attack depending on animation state
 local ShootManager = {
+    CurrentShotCooldown = 0,
     BlasterTypes = BlasterData.Types,
-    SpeedMultipliers = {
-        [BlasterData.Types.Pistol] = 2.5,
-        [BlasterData.Types.Rifle] = 1.5,
-        [BlasterData.Types.Repeater] = 10.0,
-        [BlasterData.Types.Sniper] = 0.5,
+}
+
+function ShootManager.onFrame(dt)
+    ShootManager.CurrentShotCooldown = math.max(0.0, ShootManager.CurrentShotCooldown - dt)
+
+    if forceRelease and ShootManager.CurrentShotCooldown <= 0.0 then
+        self.controls.use = 0
+        forceRelease = false
+        ShootManager.CurrentShotCooldown = ShootManager.getBlasterDelay(ShootManager.getBlasterType())
+    end
+end
+
+local BlasterSettingNames = {
+    [BlasterData.Types.Pistol] = {
+        UseAuto = 'AutomaticPistolsEnable',
+        UseCancel = 'AutomaticPistolsCancelAnimations',
+        SpeedMult = 'SpeedMultPistol',
+        CooldownMin = 'PistolCooldownMin',
+        CooldownMax = 'PistolCooldownMax',
     },
-
-    SettingNames = {
-        AutoBlasters = 'AutomaticBlastersEnable',
-        AutoPistols = 'AutomaticPistolsEnable',
-        AutoRepeaters = 'AutomaticRepeatersEnable',
-        AutoRifles = 'AutomaticRiflesEnable',
-        AutoSnipers = 'AutomaticSnipersEnable',
-        SpeedMultPistol = 'SpeedMultPistol',
-        SpeedMultRifle = 'SpeedMultRifle',
-        SpeedMultRepeater = 'SpeedMultRepeater',
-        SpeedMultSniper = 'SpeedMultSniper',
+    [BlasterData.Types.Rifle] = {
+        UseAuto = 'AutomaticRiflesEnable',
+        UseCancel = 'AutomaticRiflesCancelAnimations',
+        SpeedMult = 'SpeedMultRifle',
+        CooldownMin = 'RifleCooldownMin',
+        CooldownMax = 'RifleCooldownMax',
     },
-
-    onFrame = function(dt)
-        if forceRelease then
-            self.controls.use = 0
-            forceRelease = false
-        end
-    end,
+    [BlasterData.Types.Repeater] = {
+        UseAuto = 'AutomaticRepeatersEnable',
+        UseCancel = 'AutomaticRepeatersCancelAnimations',
+        SpeedMult = 'SpeedMultRepeater',
+        CooldownMin = 'RepeaterCooldownMin',
+        CooldownMax = 'RepeaterCooldownMax',
+    },
+    [BlasterData.Types.Sniper] = {
+        UseAuto = 'AutomaticSnipersEnable',
+        UseCancel = 'AutomaticSnipersCancelAnimations',
+        SpeedMult = 'SpeedMultSniper',
+        CooldownMin = 'SniperCooldownMin',
+        CooldownMax = 'SniperCooldownMax',
+    },
 }
 
---- Maps blaster types to their respective speed setting names for fast access
-local BlasterTypesToAutoSettings = {
-    [BlasterData.Types.Pistol] = ShootManager.SettingNames.AutoPistols,
-    [BlasterData.Types.Rifle] = ShootManager.SettingNames.AutoRifles,
-    [BlasterData.Types.Repeater] = ShootManager.SettingNames.AutoRepeaters,
-    [BlasterData.Types.Sniper] = ShootManager.SettingNames.AutoSnipers,
-}
+function ShootManager.getBlasterDelay(blasterType)
+    local cooldownMin, cooldownMax = ShootManager.getBlasterCooldowns(blasterType)
 
-local BlasterTypesToSpeedSettings = {
-    [BlasterData.Types.Pistol] = ShootManager.SettingNames.SpeedMultPistol,
-    [BlasterData.Types.Rifle] = ShootManager.SettingNames.SpeedMultRifle,
-    [BlasterData.Types.Repeater] = ShootManager.SettingNames.SpeedMultRepeater,
-    [BlasterData.Types.Sniper] = ShootManager.SettingNames.SpeedMultSniper,
-}
+    local effectiveMarksman = math.min(100, SkillMarksman.base)
+
+    local actualDelay = util.remap(effectiveMarksman, 100, 1, cooldownMin, cooldownMax)
+
+    LogMessage('Shoot Handler: Blaster shot delay: ' .. tostring(actualDelay))
+    return actualDelay
+end
 
 ---@alias BlasterType number
 
 ---@param blasterType BlasterType
 ---@return boolean
 function ShootManager.canFireAutomatically(blasterType)
-    local blasterSetting = AutoBlasterStorage:get(ShootManager.SettingNames.AutoBlasters)
+    local blasterSetting = AutoBlasterStorage:get('AutomaticBlastersEnable')
     if not blasterSetting then return false end
 
-    return AutoBlasterStorage:get(BlasterTypesToAutoSettings[blasterType])
+    return AutoBlasterStorage:get(BlasterSettingNames[blasterType].UseAuto)
+end
+
+---@param blasterType BlasterType
+---@return boolean
+function ShootManager.canAnimCancel(blasterType)
+    return AutoBlasterStorage:get(BlasterSettingNames[blasterType].UseCancel)
+end
+
+---@param blasterType BlasterType
+---@return number TypedCooldown cooldown between shots per blaster type
+function ShootManager.getBlasterCooldowns(blasterType)
+    local blasterSettings = BlasterSettingNames[blasterType]
+    return SpeedBlasterStorage:get(blasterSettings.CooldownMin),
+        SpeedBlasterStorage:get(blasterSettings.CooldownMax)
 end
 
 function ShootManager.isRangedWeapon(equippedWeapon)
@@ -108,11 +136,10 @@ function ShootManager.getBlasterType()
 end
 
 --- Get the speed multiplier for the current blaster type
-function ShootManager.getBlasterSpeedMultiplier()
-    local blasterType = ShootManager.getBlasterType()
-
+---@param blasterType BlasterType
+function ShootManager.getBlasterSpeedMultiplier(blasterType)
     local speedFactor = math.min(100, SkillMarksman.base) / 100
-    local blasterMultiplier = SpeedBlasterStorage:get(BlasterTypesToSpeedSettings[blasterType])
+    local blasterMultiplier = SpeedBlasterStorage:get(BlasterSettingNames[blasterType].SpeedMult)
     assert(blasterMultiplier, 'Shoot Handler: No blaster multiplier found for blaster type: ' .. blasterType)
 
     local speed = blasterMultiplier * speedFactor
@@ -122,7 +149,9 @@ function ShootManager.getBlasterSpeedMultiplier()
 end
 
 function ShootManager.textKeyHandler(group, key)
-    if not ShootManager.canFireAutomatically(ShootManager.getBlasterType()) then
+    local blasterType = ShootManager.getBlasterType()
+
+    if not ShootManager.canFireAutomatically(blasterType) then
         LogMessage('Shoot Handler: Automatic fire not enabled for the current blaster type.')
         return
     end
@@ -130,14 +159,15 @@ function ShootManager.textKeyHandler(group, key)
     if key == 'shoot start' then
         LogMessage("Shoot Handler: Increasing shoot speed!")
 
-        animation.setSpeed(self, group, ShootManager.getBlasterSpeedMultiplier())
+        animation.setSpeed(self, group, ShootManager.getBlasterSpeedMultiplier(blasterType))
     elseif key == 'shoot min hit' or key == 'shoot max attack' then
         if self.controls.use == 0 or not input.getBooleanActionValue('Use') then return end
 
         LogMessage('Shoot Handler: Releasing shot!')
 
         forceRelease = true
-    elseif key == 'shoot follow start' then
+    elseif key == 'shoot follow start' and ShootManager.canAnimCancel(blasterType) then
+        LogMessage('Shoot Handler: Cancelling animation!')
         animation.cancel(self, group)
     end
 end

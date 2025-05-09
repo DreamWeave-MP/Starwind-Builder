@@ -1,3 +1,5 @@
+local time = require('openmw_aux.time')
+
 local ModInfo = require('scripts.sw4.modinfo')
 local I = require('openmw.interfaces')
 
@@ -67,6 +69,10 @@ local function Setting(key, renderer, argument, name, description, default)
     }
 end
 
+local function LimitedPrecision(value)
+    return tonumber(string.format("%.5f", value))
+end
+
 I.Settings.registerGroup {
     key = 'SettingsGlobal' .. ModInfo.name .. 'CoreGroup',
     page = ModInfo.name .. 'CorePage',
@@ -87,13 +93,18 @@ I.Settings.registerGroup {
     name = 'Blaster Settings',
     permanentStorage = true,
     settings = {
-        Setting('AutomaticBlastersEnable', 'checkbox', {}, 'Automatic Blasters', 'Controls whether any blasters are capable of automatic fire. Whether a given weapon will fire automatically depends on the below settings.', true),
-        Setting('AutomaticRepeatersEnable', 'checkbox', {}, 'Automatic Repeater Blasters', 'Make all blaster pistols capable of automatic fire', true),
+        Setting('AutomaticBlastersEnable', 'checkbox', {}, 'Enable Automatic Blasters', 'Controls whether any blasters are capable of automatic fire. Whether a given weapon will fire automatically depends on the below settings.\nAlso suspends animation cancelling.', true),
+        Setting('AutomaticRepeatersEnable', 'checkbox', {}, 'Automatic Repeater Blasters', 'Make all repeater blasters capable of automatic fire', true),
+        Setting('AutomaticRepeatersCancelAnimations', 'checkbox', {}, 'Repeaters Cancel Recoil', 'Make all repeater blasters cancel their recoil animations when firing', true),
         Setting('AutomaticRiflesEnable', 'checkbox', {}, 'Automatic Blaster Rifles', 'Make all blaster rifles capable of automatic fire', true),
+        Setting('AutomaticRiflesCancelAnimations', 'checkbox', {}, 'Rifles Cancel Recoil', 'Make all blaster rifles cancel their recoil animations when firing', true),
         Setting('AutomaticSnipersEnable', 'checkbox', {}, 'Automatic Sniper Rifles', 'Make all sniper rifles capable of automatic fire', true),
+        Setting('AutomaticSnipersCancelAnimations', 'checkbox', {}, 'Snipers Cancel Recoil', 'Make all sniper blasters cancel their recoil animations when firing', true),
         Setting('AutomaticPistolsEnable', 'checkbox', {}, 'Automatic Blaster Pistols', 'Make all blaster pistols capable of automatic fire', true),
+        Setting('AutomaticPistolsCancelAnimations', 'checkbox', {}, 'Pistols Cancel Recoil', 'Make all blaster pistols cancel their recoil animations when firing', true),
     }
 }
+
 I.Settings.registerGroup {
     key = 'SettingsGlobal' .. ModInfo.name .. 'BlasterGroupSpeed',
     page = ModInfo.name .. 'BlasterPage',
@@ -103,8 +114,16 @@ I.Settings.registerGroup {
     permanentStorage = true,
     settings = {
         Setting('SpeedMultRepeater', 'number', { min = 0.1, max = 50.0, integer = false }, 'Repeater Speed Bonus', 'Animation speed multiplier for repeater blasters. Default: 10.0', 10.0),
+        Setting('RepeaterCooldownMin', 'number', { min = 0.0, max = 0.5, integer = false }, 'Repeater Minimum Shot Delay', 'Minimum delay in seconds between shots for repeater blasters.\nBe careful setting stupid values on this one.\nDefault: 0.0003', 0.0003),
+        Setting('RepeaterCooldownMax', 'number', { min = 0.5, max = 5.0, integer = false }, 'Repeater Maximum Shot Delay', 'Maximum delay in seconds between shots for repeater blasters.\nBe careful setting stupid values on this one.\nDefault: 0.0003', LimitedPrecision(time.second / 150)),
         Setting('SpeedMultRifle', 'number', { min = 0.1, max = 50.0, integer = false }, 'Blaster Rifle Speed Multiplier', 'Animation speed multiplier for blaster rifles. Default: 1.5', 1.5),
+        Setting('RifleCooldownMin', 'number', { min = 0.0, max = 0.5, integer = false }, 'Rifle Minimum Shot Delay', 'Minimum delay in seconds between shots for repeater blasters.\nBe careful setting stupid values on this one.\nDefault: 0.0003', 0.0003),
+        Setting('RifleCooldownMax', 'number', { min = 0.5, max = 5.0, integer = false }, 'Rifle Maximum Shot Delay', 'Maximum delay in seconds between shots for repeater blasters.\nBe careful setting stupid values on this one.\nDefault: 0.0003', LimitedPrecision(time.second / 50)),
         Setting('SpeedMultSniper', 'number', { min = 0.1, max = 50.0, integer = false }, 'Sniper Speed Multiplier', 'Animation speed multiplier for sniper blasters. Default: 0.5', 0.5),
+        Setting('SniperCooldownMin', 'number', { min = 0.0, max = 0.5, integer = false }, 'Sniper Minimum Shot Delay', 'Minimum delay in seconds between shots for sniper rifles.\nBe careful setting stupid values on this one.\nDefault: 0.0003', 0.0003),
+        Setting('SniperCooldownMax', 'number', { min = 0.5, max = 5.0, integer = false }, 'Sniper Maximum Shot Delay', 'Maximum delay in seconds between shots for sniper rifles.\nBe careful setting stupid values on this one.\nDefault: 1', LimitedPrecision(time.second / 1)),
         Setting('SpeedMultPistol', 'number', { min = 0.1, max = 50.0, integer = false }, 'Pistol Speed Multiplier', 'Animation speed multiplier for blaster pistols. Default: 2.5', 2.5),
+        Setting('PistolCooldownMin', 'number', { min = 0.0, max = 0.5, integer = false }, 'Pistol Minimum Shot Delay', 'Minimum delay in seconds between shots for blaster pistols.\nBe careful setting stupid values on this one.\nDefault: 0.0003', LimitedPrecision(time.second / 125)),
+        Setting('PistolCooldownMax', 'number', { min = 0.5, max = 5.0, integer = false }, 'Pistol Maximum Shot Delay', 'Maximum delay in seconds between shots for blaster pistols.\nBe careful setting stupid values on this one.\nDefault: 0.0003', LimitedPrecision(time.second / 75)),
     }
 }
