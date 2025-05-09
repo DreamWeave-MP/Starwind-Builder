@@ -6,7 +6,6 @@ local types = require('openmw.types')
 
 local I = require('openmw.interfaces')
 
-local forceAttack = false
 local forceRelease = false
 local BlasterData = require('scripts.sw4.data.blasters')
 local LogMessage = require('scripts.sw4.helper.logmessage')
@@ -52,9 +51,7 @@ local ShootManager = {
     },
 
     onFrame = function(dt)
-        if forceAttack then
-            self.controls.use = 1
-        elseif forceRelease then
+        if forceRelease then
             self.controls.use = 0
             forceRelease = false
         end
@@ -130,7 +127,7 @@ function ShootManager.textKeyHandler(group, key)
         return
     end
 
-    if key == 'shoot start' or key == 'shoot follow start' then
+    if key == 'shoot start' then
         LogMessage("Shoot Handler: Increasing shoot speed!")
 
         animation.setSpeed(self, group, ShootManager.getBlasterSpeedMultiplier())
@@ -140,8 +137,8 @@ function ShootManager.textKeyHandler(group, key)
         LogMessage('Shoot Handler: Releasing shot!')
 
         forceRelease = true
-    elseif key == 'follow stop' then
-        forceAttack = input.getBooleanActionValue('Use')
+    elseif key == 'shoot follow start' then
+        animation.cancel(self, group)
     end
 end
 
