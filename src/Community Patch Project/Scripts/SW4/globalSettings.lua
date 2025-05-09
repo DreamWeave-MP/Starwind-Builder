@@ -78,3 +78,18 @@ I.Settings.registerGroup {
         Setting('DebugEnable', 'checkbox', {}, 'Show Debug Messages', 'Displays debug messages in the (classic) console.', false),
     }
 }
+
+I.Settings.registerGroup {
+    key = 'SettingsGlobal' .. ModInfo.name .. 'BlasterGroup',
+    page = ModInfo.name .. 'CorePage',
+    order = 1,
+    l10n = ModInfo.l10nName,
+    name = 'Blaster Settings',
+    permanentStorage = true,
+    settings = {
+        Setting('AutomaticBlastersEnable', 'checkbox', {}, 'Automatic Blasters', 'Controls whether any blasters are capable of automatic fire. Whether a given weapon will fire automatically depends on the below settings.', true),
+        Setting('AutomaticRepeatersEnable', 'checkbox', {}, 'Automatic Repeater Blasters', 'Make all blaster pistols capable of automatic fire', true),
+        Setting('AutomaticRiflesEnable', 'checkbox', {}, 'Automatic Blaster Rifles', 'Make all blaster rifles capable of automatic fire', true),
+        Setting('AutomaticPistolsEnable', 'checkbox', {}, 'Automatic Blaster Pistols', 'Make all blaster pistols capable of automatic fire', true),
+    }
+}
