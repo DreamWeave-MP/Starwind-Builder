@@ -80,9 +80,9 @@ I.Settings.registerGroup {
 }
 
 I.Settings.registerGroup {
-    key = 'SettingsGlobal' .. ModInfo.name .. 'BlasterGroup',
-    page = ModInfo.name .. 'CorePage',
-    order = 1,
+    key = 'SettingsGlobal' .. ModInfo.name .. 'BlasterGroupAutomatic',
+    page = ModInfo.name .. 'BlasterPage',
+    order = 0,
     l10n = ModInfo.l10nName,
     name = 'Blaster Settings',
     permanentStorage = true,
@@ -90,6 +90,21 @@ I.Settings.registerGroup {
         Setting('AutomaticBlastersEnable', 'checkbox', {}, 'Automatic Blasters', 'Controls whether any blasters are capable of automatic fire. Whether a given weapon will fire automatically depends on the below settings.', true),
         Setting('AutomaticRepeatersEnable', 'checkbox', {}, 'Automatic Repeater Blasters', 'Make all blaster pistols capable of automatic fire', true),
         Setting('AutomaticRiflesEnable', 'checkbox', {}, 'Automatic Blaster Rifles', 'Make all blaster rifles capable of automatic fire', true),
+        Setting('AutomaticSnipersEnable', 'checkbox', {}, 'Automatic Sniper Rifles', 'Make all sniper rifles capable of automatic fire', true),
         Setting('AutomaticPistolsEnable', 'checkbox', {}, 'Automatic Blaster Pistols', 'Make all blaster pistols capable of automatic fire', true),
+    }
+}
+I.Settings.registerGroup {
+    key = 'SettingsGlobal' .. ModInfo.name .. 'BlasterGroupSpeed',
+    page = ModInfo.name .. 'BlasterPage',
+    order = 1,
+    l10n = ModInfo.l10nName,
+    name = 'Blaster Speed Settings',
+    permanentStorage = true,
+    settings = {
+        Setting('SpeedMultRepeater', 'number', { min = 0.1, max = 50.0, integer = false }, 'Repeater Speed Bonus', 'Animation speed multiplier for repeater blasters. Default: 10.0', 10.0),
+        Setting('SpeedMultRifle', 'number', { min = 0.1, max = 50.0, integer = false }, 'Blaster Rifle Speed Multiplier', 'Animation speed multiplier for blaster rifles. Default: 1.5', 1.5),
+        Setting('SpeedMultSniper', 'number', { min = 0.1, max = 50.0, integer = false }, 'Sniper Speed Multiplier', 'Animation speed multiplier for sniper blasters. Default: 0.5', 0.5),
+        Setting('SpeedMultPistol', 'number', { min = 0.1, max = 50.0, integer = false }, 'Pistol Speed Multiplier', 'Animation speed multiplier for blaster pistols. Default: 2.5', 2.5),
     }
 }
