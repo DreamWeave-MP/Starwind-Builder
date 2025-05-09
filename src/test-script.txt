@@ -1,5 +1,6 @@
 player->setspeed 250
 player->setstrength 250
+player->setmarksman 250
 
 tcl
 tgm
@@ -15,3 +16,4 @@ player->additem sw_pistolblastech 1
 player->additem sw_blasterrifle 1
 player->additem sw_blastersniperark 1
 player->additem sw_blasterrepeaterlok 1
+player->additem sw_pistolblasternoshield 1
