@@ -1,4 +1,3 @@
-local ambient = require('openmw.ambient')
 local core = require('openmw.core')
 local self = require('openmw.self')
 local ui = require('openmw.ui')
@@ -7,15 +6,12 @@ local I = require('openmw.interfaces')
 
 local ModInfo = require('scripts.sw4.modinfo')
 local MountFunctions = require('scripts.sw4.player.mountfunctions')
-
----@class AmbientData
----@field soundFile string|nil VFS path to a sound file to play
----@field soundRecord string|nil string ID of a sound record to play
+local ShootManager = require('scripts.sw4.player.shootHandler')
 
 local ShowMessage = ui.showMessage
 
 I.AnimationController.addTextKeyHandler("", function(group, key)
-  print(group, key)
+  -- print(group, key)
 end)
 
 I.AnimationController.addTextKeyHandler("spellcast", function(group, key)
@@ -24,12 +20,18 @@ I.AnimationController.addTextKeyHandler("spellcast", function(group, key)
   end
 end)
 
+I.AnimationController.addTextKeyHandler('', function(group, key)
+end)
+
 return {
   interfaceName = ModInfo.name .. "_Player",
   interface = {
     MountFunctions = MountFunctions,
   },
   engineHandlers = {
+    onFrame = function(dt)
+      ShootManager.onFrame(dt)
+    end,
     onUpdate = function(dt)
       MountFunctions.onUpdate(dt)
     end,
@@ -60,24 +62,7 @@ return {
   },
   eventHandlers = {
     --- Plays ambient sound records or arbitrary sound files from other contexts using provided options
-    ---@param ambientData AmbientData
-    SW4_AmbientEvent = function(ambientData)
-      local soundFile = ambientData.soundFile
-      local soundRecord = ambientData.soundRecord
-      if soundFile then
-        if ambient.isSoundFilePlaying(soundFile) then
-          ambient.stopSoundFile(soundFile)
-        end
-        ambient.playSoundFile(soundFile, ambientData.options)
-      elseif soundRecord then
-        if ambient.isSoundPlaying(soundRecord) then
-          ambient.stopSound(soundRecord)
-        end
-        ambient.playSound(soundRecord, ambientData.options)
-      elseif not soundRecord and not soundFile then
-        error("Invalid sound information provided to SW4_AmbientEvent!")
-      end
-    end,
+    SW4_AmbientEvent = require('scripts.sw4.player.ambientevent'),
     SW4_UIMessage = ShowMessage,
     --- Logs a message to the console using the success color
     ---@param message string The message to log
