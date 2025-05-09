@@ -13,3 +13,5 @@ player->additem sw_blastbolt 1000
 player->additem sw_blastboltarrow 1000
 player->additem sw_pistolblastech 1
 player->additem sw_blasterrifle 1
+player->additem sw_blastersniperark 1
+player->additem sw_blasterrepeaterlok 1
