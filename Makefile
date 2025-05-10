@@ -14,7 +14,9 @@ cpp: plugins-bin
 	cp "build/Starwind Community Patch Project.esp" "src/Community Patch Project/Starwind Community Patch Project.omwaddon"
 	cd "src/Community Patch Project" && zip -r9 --must-match --recurse-paths \
 	Starwind_Community_Patch_Project.zip \
+	01\ Crash\ Resistant\ tes3mp\ meshes \
 	Meshes/ \
+	Textures/ \
 	Scripts/ \
 	Fonts/ \
 	Icons/ \
