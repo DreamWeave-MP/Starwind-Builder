@@ -322,16 +322,14 @@ function RecordReplacementManager.replaceSubscribedObjects(originalObject)
 
     if not replacementRecordId then return end
 
-    local function replaceObject(newId, newCount, originalObject)
-
-    end
-
     local replacementObjects = {}
     if not Types.NPC.records[replacementRecordId] and not Types.Creature.records[replacementRecordId] then
-        replacementObjects[#replacementObjects + 1] = replaceObject(replacementRecordId, replacementCount, originalObject)
+        replacementObjects[#replacementObjects + 1] = RecordReplacementManager.spawnAtOldObject(replacementRecordId,
+            replacementCount, originalObject)
     else
         for _ = 1, replacementCount do
-            replacementObjects[#replacementObjects + 1] = replaceObject(replacementRecordId, 1, originalObject)
+            replacementObjects[#replacementObjects + 1] = RecordReplacementManager.spawnAtOldObject(replacementRecordId,
+                1, originalObject)
         end
     end
 
