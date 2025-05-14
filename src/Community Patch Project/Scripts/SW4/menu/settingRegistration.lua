@@ -23,6 +23,13 @@ I.Settings.registerPage {
     description = "Settings related to blaster damage and automatic firing. Speed multipliers scale based on your Marksman skill, with the full multiplier value being used at >= 100 Marksman.\nRequires OpenMW 0.49."
 }
 
+I.Settings.registerPage {
+    key = modInfo.name .. 'CameraMovementPage',
+    l10n = modInfo.l10nName,
+    name = "SWAMP - Camera and Movement",
+    description = "Settings related to KOTOR-style controls and extended camera behaviors."
+}
+
 print(string.format("%s loaded version %s. Thank you for playing %s! <3",
     modInfo.logPrefix,
     modInfo.version,
