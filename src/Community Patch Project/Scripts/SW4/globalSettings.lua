@@ -38,6 +38,18 @@ I.Settings.registerGroup {
 }
 
 I.Settings.registerGroup {
+    key = 'SettingsGlobal' .. ModInfo.name .. 'BindingGroup',
+    page = ModInfo.name .. 'CorePage',
+    order = 1,
+    l10n = ModInfo.l10nName,
+    name = 'Key Bindings',
+    permanentStorage = true,
+    settings = {
+        Setting('SW4_TargetLockBinding', "inputBinding", { key = 'SW4_TargetLock', type = "action" }, 'Target Lock Toggle', 'Keybind used to lock onto targets in combat.', 'x')
+    }
+}
+
+I.Settings.registerGroup {
     key = 'SettingsGlobal' .. ModInfo.name .. 'BlasterGroupAutomatic',
     page = ModInfo.name .. 'BlasterPage',
     order = 0,
