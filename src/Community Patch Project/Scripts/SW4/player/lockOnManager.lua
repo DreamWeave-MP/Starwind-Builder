@@ -110,6 +110,7 @@ function LockOnManager.trackTargetUsingViewport(targetObject, normalizedPos)
     if camera.getMode() == camera.MODE.FirstPerson then
         self.controls.pitchChange = pitchDifference - self.rotation:getPitch()
     end
+    print(yawDifference)
     self.controls.yawChange = yawDifference
 
     return yawDifference, pitchDifference
@@ -166,22 +167,23 @@ function LockOnManager.checkForDeadTarget(targetIsActor)
 end
 
 ---@param dt number deltaTime
----@param isWielding boolean whether or not the player currently has their weapon drawn
-function LockOnManager.onFrame(dt, isWielding)
+---@param managers table<string, any> direct access to all SW4 subsystems
+function LockOnManager.onFrame(dt, managers)
     local targetIsActor = LockOnManager.targetIsActor()
     LockOnManager.checkForDeadTarget(targetIsActor)
 
     local targetObject = LockOnManager.getTargetObject()
+    local camState = managers.Camera.getState()
 
-    local canDoLockOn = targetObject and (
-        (targetIsActor and isWielding)
+    camState.canDoLockOn = targetObject and (
+        (targetIsActor and camState.isWielding)
     --or (not targetIsActor and not isWielding)
     )
 
     local markerExists = LockOnManager.getLockOnMarker() ~= nil
     local markerIsVisible = LockOnManager.getMarkerVisibility()
 
-    if canDoLockOn then
+    if camState.canDoLockOn then
         assert(targetObject)
         if not markerExists then
             LockOnManager.toggleLockOnMarkerDisplay()
@@ -208,7 +210,7 @@ function LockOnManager.onFrame(dt, isWielding)
         end
     end
 
-    return canDoLockOn
+    return camState.canDoLockOn
 end
 
 input.registerActionHandler('SW4_TargetLock', async:callback(LockOnManager.lockOnHandler))
