@@ -49,6 +49,22 @@ I.Settings.registerGroup {
     }
 }
 
+I.Settings.RegisterGroup {
+    key = 'SettingsGlobal' .. ModInfo.name .. 'LockOnGroup',
+    page = ModInfo.name .. 'CorePage',
+    order = 2,
+    l10n = ModInfo.name,
+    name = 'Lock-On and Targeting',
+    permanentStorage = true,
+    settings = {
+        Setting('TargetLockToggle', 'checkbox', {}, 'Enabled', 'If set to false, target locking is completely disabled. Recommended to leave enabled.', true),
+        Setting('TargetMinSize', 'number', { min = 0, max = 64, integer = true }, 'Minimum Target Size', 'Size of the targeting icon at minimum distance.', 32),
+        Setting('TargetMinDistance', 'number', { min = 0, max = 512, integer = true }, 'Minimum Target Distance', 'Distance from the locked target at which the icon will be at minimum size.', 256),
+        Setting('TargetMaxSize', 'number', { min = 0, max = 128, integer = true }, 'Maximum Target Size', 'Size of the targeting icon at maximum distance.', 128),
+        Setting('TargetMaxDistance', 'number', { min = 512, max = 7128, integer = true }, 'Maximum Target Distance', 'Distance from the locked target at which the icon will be at minimum size.', 3564),
+    }
+}
+
 I.Settings.registerGroup {
     key = 'SettingsGlobal' .. ModInfo.name .. 'BlasterGroupAutomatic',
     page = ModInfo.name .. 'BlasterPage',
