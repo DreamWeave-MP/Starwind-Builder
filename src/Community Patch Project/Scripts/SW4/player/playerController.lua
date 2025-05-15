@@ -13,6 +13,7 @@ local ModInfo = require('scripts.sw4.modinfo')
 
 --- System handlers added by SW4
 local Managers = {
+  ---@type CameraManager
   Camera = require 'Scripts.SW4.player.cameraManager' (),
   LockOn = require 'Scripts.SW4.player.lockOnManager' (),
   MountFunctions = require('scripts.sw4.player.mountfunctions'),
@@ -46,7 +47,7 @@ return {
     -- onKeyPress = function(key)
     -- end,
     onFrame = function(dt)
-      Managers.Camera.onFrameBegin(dt, Managers)
+      Managers.Camera:onFrameBegin(dt, Managers)
 
       Managers.Shoot.onFrame(dt, Managers)
 
