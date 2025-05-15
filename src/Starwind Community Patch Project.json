@@ -6,7 +6,7 @@
     "file_type": "Esp",
     "author": "",
     "description": "",
-    "num_objects": 34,
+    "num_objects": 36,
     "masters": [
       [
         "Morrowind.esm",
@@ -718,6 +718,234 @@
       "cost": 10,
       "max_charge": 100,
       "flags": ""
+    }
+  },
+  {
+    "type": "Npc",
+    "flags": "",
+    "id": "SWE_SandPersonHostile",
+    "name": "Sand Person",
+    "script": "",
+    "mesh": "",
+    "inventory": [
+      [
+        1,
+        "SW_TuskenMelee"
+      ],
+      [
+        1,
+        "common_glove_left_01"
+      ],
+      [
+        1,
+        "common_glove_right_01"
+      ],
+      [
+        1,
+        "common_shoes_05"
+      ],
+      [
+        1,
+        "expensive_robe_01"
+      ]
+    ],
+    "spells": [],
+    "ai_data": {
+      "hello": 0,
+      "fight": 100,
+      "flee": 30,
+      "alarm": 90,
+      "services": ""
+    },
+    "ai_packages": [
+      {
+        "type": "Wander",
+        "distance": 512,
+        "duration": 5,
+        "game_hour": 0,
+        "idle2": 60,
+        "idle3": 20,
+        "idle4": 10,
+        "idle5": 0,
+        "idle6": 0,
+        "idle7": 0,
+        "idle8": 0,
+        "idle9": 0,
+        "reset": 1
+      }
+    ],
+    "travel_destinations": [],
+    "race": "Sand Person",
+    "class": "Warrior",
+    "faction": "",
+    "head": "SW_TuskHead2",
+    "hair": "SW_NoHairTusk",
+    "npc_flags": "IS_BASE",
+    "blood_type": 0,
+    "data": {
+      "level": 10,
+      "stats": {
+        "attributes": [
+          65,
+          42,
+          37,
+          62,
+          64,
+          92,
+          35,
+          40
+        ],
+        "skills": [
+          54,
+          24,
+          48,
+          48,
+          34,
+          48,
+          34,
+          55,
+          48,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          16,
+          6,
+          6,
+          6,
+          34,
+          6,
+          6,
+          6
+        ],
+        "health": 132,
+        "magicka": 84,
+        "fatigue": 256
+      },
+      "disposition": 50,
+      "reputation": 0,
+      "rank": 0,
+      "gold": 0
+    }
+  },
+  {
+    "type": "Npc",
+    "flags": "",
+    "id": "SWE_SandPersonHostile2",
+    "name": "Sand Person",
+    "script": "",
+    "mesh": "",
+    "inventory": [
+      [
+        1,
+        "SW_TuskenMelee"
+      ],
+      [
+        1,
+        "common_glove_left_01"
+      ],
+      [
+        1,
+        "common_glove_right_01"
+      ],
+      [
+        1,
+        "common_shoes_05"
+      ],
+      [
+        1,
+        "expensive_robe_01"
+      ]
+    ],
+    "spells": [],
+    "ai_data": {
+      "hello": 0,
+      "fight": 100,
+      "flee": 30,
+      "alarm": 90,
+      "services": ""
+    },
+    "ai_packages": [
+      {
+        "type": "Wander",
+        "distance": 512,
+        "duration": 5,
+        "game_hour": 0,
+        "idle2": 60,
+        "idle3": 20,
+        "idle4": 10,
+        "idle5": 0,
+        "idle6": 0,
+        "idle7": 0,
+        "idle8": 0,
+        "idle9": 0,
+        "reset": 1
+      }
+    ],
+    "travel_destinations": [],
+    "race": "Sand Person",
+    "class": "Warrior",
+    "faction": "",
+    "head": "SW_TuskHead3",
+    "hair": "SW_NoHairTusk",
+    "npc_flags": "IS_BASE",
+    "blood_type": 0,
+    "data": {
+      "level": 10,
+      "stats": {
+        "attributes": [
+          65,
+          42,
+          37,
+          62,
+          64,
+          92,
+          35,
+          40
+        ],
+        "skills": [
+          54,
+          24,
+          48,
+          48,
+          34,
+          48,
+          34,
+          55,
+          48,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          16,
+          6,
+          6,
+          6,
+          34,
+          6,
+          6,
+          6
+        ],
+        "health": 132,
+        "magicka": 84,
+        "fatigue": 256
+      },
+      "disposition": 50,
+      "reputation": 0,
+      "rank": 0,
+      "gold": 0
     }
   },
   {
