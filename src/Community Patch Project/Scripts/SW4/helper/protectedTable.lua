@@ -16,8 +16,13 @@ local function pairsByKeys (t, f)
   return iter
 end
 
+---@class ProtectedTable:table table Read-only table which allows insertion of functions and hooks to a global storage section
+---@field notifyPlayer fun(any) shorthand to display all arguments as a table in a Morrowind MessageBox from a protectedTable. Only works on player scripts.
+---@field debuglog fun(any) If debug logging setting is enabled, then prints the arguments to log, as a concatenated table
+
 ---@param inputGroupName string Name of a global storage section where this module's settings are stored
 ---@param modInfo ModInfo
+---@return ProtectedTable
 return function(inputGroupName, modInfo)
   assert(inputGroupName ~= nil and storage.globalSection(inputGroupName) ~= nil,
          'An invalid setting group was provided!')
