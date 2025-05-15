@@ -52,7 +52,7 @@ return {
 
       Managers.LockOn.onFrame(dt, Managers)
 
-      Managers.Camera.onFrameEnd(dt, Managers)
+      Managers.Camera:onFrameEnd(dt, Managers)
     end,
     onUpdate = function(dt)
       Managers.MountFunctions.onUpdate(dt)
