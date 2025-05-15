@@ -1,6 +1,7 @@
 local camera = require 'openmw.camera'
-local input = require 'openmw.input'
 local gameSelf = require 'openmw.self'
+local input = require 'openmw.input'
+local util = require 'openmw.util'
 
 local ModInfo = require 'Scripts.SW4.modinfo'
 
@@ -16,6 +17,7 @@ local CameraManager = require 'Scripts.SW4.helper.protectedTable' (
 ---@field pitchDelta number yaw change between current and last frame
 ---@field pitchThisFrame number
 ---@field pitchLastFrame number
+---@field isLockedOn boolean
 ---@field isWielding boolean whether or not the player has a weapon or spell drawn
 CameraManager.state = {
     yawDelta = 0,
@@ -26,6 +28,7 @@ CameraManager.state = {
     pitchThisFrame = 0,
     pitchLastFrame = 0,
 
+    isLockedOn = false,
     isWielding = false,
     canDoLockOn = false,
 }
@@ -48,15 +51,24 @@ function CameraManager.isThirdPerson()
     return camera.getMode() ~= camera.MODE.FirstPerson
 end
 
+function CameraManager:setLockedOn(state)
+    self.state.isLockedOn = state
+end
+
 --- Override yawChange from mouseInput
 ---@param dt number deltaTime
 ---@param managers table<string, any> Direct access to all SW4 subsystems
-function CameraManager.onFrameBegin(dt, managers)
+function CameraManager:onFrameBegin(dt, managers)
     CameraManager:updateTransform()
 
     --- Override yawChange from mouse inputs
     if CameraManager.isMoving() then
         gameSelf.controls.yawChange = 0
+    end
+
+    -- Override first-person pitch change inputs (should really only be while locked on but whatever)
+    if self.state.isLockedOn then
+        gameSelf.controls.pitchChange = 0
     end
 end
 
@@ -69,6 +81,42 @@ function CameraManager:updateDelta()
     if self.state.pitchThisFrame ~= 0 then
         self.state.pitchDelta = self.state.pitchThisFrame - self.state.pitchLastFrame
     end
+end
+
+function CameraManager:trackTargetUsingViewport(targetObject, normalizedPos)
+    if not targetObject then return end
+
+    -- Desired screen position (center of the screen)
+    local desiredScreenPos = util.vector2(0.5, 0.5)
+
+    -- Convert the current and desired screen positions to world-space directions
+    local currentWorldDir = camera.viewportToWorldVector(normalizedPos.xy)
+    local desiredWorldDir = camera.viewportToWorldVector(desiredScreenPos)
+
+    -- Normalize the directions
+    currentWorldDir = currentWorldDir:normalize()
+    desiredWorldDir = desiredWorldDir:normalize()
+
+    -- Calculate the yaw and pitch differences
+    local yawDifference = math.atan2(currentWorldDir.x, currentWorldDir.y) -
+        math.atan2(desiredWorldDir.x, desiredWorldDir.y)
+
+    local pitchDifference = math.asin(currentWorldDir.z) - math.asin(desiredWorldDir.z)
+
+    -- Normalize yawDifference to the range [-pi, pi]
+    if yawDifference > math.pi then
+        yawDifference = yawDifference - 2 * math.pi
+    elseif yawDifference < -math.pi then
+        yawDifference = yawDifference + 2 * math.pi
+    end
+
+    camera.setYaw(util.normalizeAngle(camera.getYaw() + yawDifference))
+    camera.setPitch(util.normalizeAngle(camera.getPitch() - pitchDifference))
+
+    gameSelf.controls.yawChange = yawDifference
+    gameSelf.controls.pitchChange = -pitchDifference
+
+    return yawDifference, pitchDifference
 end
 
 ---@param dt number deltaTime
