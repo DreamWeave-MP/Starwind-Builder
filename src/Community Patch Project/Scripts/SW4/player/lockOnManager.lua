@@ -2,24 +2,47 @@ local async = require 'openmw.async'
 local camera = require 'openmw.camera'
 local input = require 'openmw.input'
 local nearby = require 'openmw.nearby'
-local self = require 'openmw.self'
+local gameSelf = require 'openmw.self'
 local types = require 'openmw.types'
 local ui = require 'openmw.ui'
+---@type openmw.util
 local util = require 'openmw.util'
+
+local CameraManager = nil
 
 local CenterVector2 = util.vector2(0.5, 0.5)
 local ZeroVector2 = util.vector2(0, 0)
 local CamForwardCastVector = util.vector3(0, camera.getViewDistance(), 0)
 
+---@class LockOnManager
 local LockOnManager = {
     targetObject = nil,
     lockOnMarker = nil,
-    markerDefaultSize = util.vector2(128, 128),
+    ---@type util.vector2
+    markerSizeRange = util.vector2(32, 128),
+    --- Half the length of an exterior cell
+    ---@type util.vector2
+    markerDistanceRange = util.vector2(256, 3564),
     markerDefaultPath = 'textures/target.dds',
 }
 
-function LockOnManager.setElementPosition(element, newPosition)
-    element.layout.props.relativePosition = newPosition
+---@alias MarkerTransform util.vector3 info about the marker; z element is distance from camera, xy are normalized screenpos of target
+
+---@class MarkerUpdateInfo
+---@field doUpdate boolean? whether to redraw or not
+---@field transform MarkerTransform Onscreen position to place the marker at
+
+
+---@param markerUpdateData MarkerUpdateInfo
+function LockOnManager:updateMarker(markerUpdateData)
+    local element = self.getLockOnMarker()
+    assert(element, 'LockOnManager: Failed to locate lock on marker to set its position!')
+
+    local elementSize = self:getIconSize(markerUpdateData.transform.z)
+    element.layout.props.size = util.vector2(elementSize, elementSize)
+    element.layout.props.relativePosition = markerUpdateData.transform.xy
+
+    if markerUpdateData.doUpdate ~= true then return end
     element:update()
 end
 
@@ -31,6 +54,8 @@ function LockOnManager.getTargetObject()
     return LockOnManager.targetObject
 end
 
+--- Returns false if the target doesn't exist, or isn't an NPC/Creature
+---@return boolean isActor
 function LockOnManager.targetIsActor()
     local target = LockOnManager.getTargetObject()
     if not target then return false end
@@ -48,7 +73,6 @@ function LockOnManager.getMarkerVisibility()
         visibility = marker.layout.props.visible
     end
 
-    print('marker visibility is:', visibility)
     return visibility
 end
 
@@ -65,55 +89,14 @@ function LockOnManager.toggleLockOnMarkerDisplay()
             props = {
                 anchor = CenterVector2,
                 relativePosition = ZeroVector2,
+                size = ZeroVector2,
                 resource = ui.texture { path = LockOnManager.markerDefaultPath },
-                size = LockOnManager.markerDefaultSize,
                 visible = false,
             },
         }
     else
         LockOnManager.setMarkerVisibility(false)
     end
-end
-
-function LockOnManager.trackTargetUsingViewport(targetObject, normalizedPos)
-    if not targetObject then return end
-
-    -- Desired screen position (center of the screen)
-    local desiredScreenPos = util.vector2(0.5, 0.5)
-
-    -- Convert the current and desired screen positions to world-space directions
-    local currentWorldDir = camera.viewportToWorldVector(normalizedPos.xy)
-    local desiredWorldDir = camera.viewportToWorldVector(desiredScreenPos)
-
-    -- Normalize the directions
-    currentWorldDir = currentWorldDir:normalize()
-    desiredWorldDir = desiredWorldDir:normalize()
-
-    -- Calculate the yaw and pitch differences
-    local yawDifference = math.atan2(currentWorldDir.x, currentWorldDir.y) -
-        math.atan2(desiredWorldDir.x, desiredWorldDir.y)
-    local pitchDifference = math.asin(currentWorldDir.z) - math.asin(desiredWorldDir.z)
-
-    -- Normalize yawDifference to the range [-pi, pi]
-    if yawDifference > math.pi then
-        yawDifference = yawDifference - 2 * math.pi
-    elseif yawDifference < -math.pi then
-        yawDifference = yawDifference + 2 * math.pi
-    end
-
-    local maxPitch = math.rad(89)
-    local newPitch = math.max(-maxPitch, math.min(maxPitch, camera.getPitch() - pitchDifference))
-
-    camera.setYaw(camera.getYaw() + yawDifference)
-    camera.setPitch(newPitch)
-
-    if camera.getMode() == camera.MODE.FirstPerson then
-        self.controls.pitchChange = pitchDifference - self.rotation:getPitch()
-    end
-    print(yawDifference)
-    self.controls.yawChange = yawDifference
-
-    return yawDifference, pitchDifference
 end
 
 --- Responds to the 'SW4_TargetLock' action, engaging or disengaging target locking as appropriate
@@ -130,24 +113,27 @@ function LockOnManager.lockOnHandler(state)
     local camTransform = CamHelper.getCameraTransform()
     local castToPos = camTransform.position + camTransform.rotation * CamForwardCastVector
 
-    local result = nearby.castRay(camTransform.position, castToPos, { ignore = { self.object, } })
+    local result = nearby.castRay(camTransform.position, castToPos, { ignore = { gameSelf.object, } })
 
     if not result.hit or not result.hitObject then return end
     if types.Actor.objectIsInstance(result.hitObject) and types.Actor.isDead(result.hitObject) then return end
 
     LockOnManager.targetObject = result.hitObject
 
-    local pitchDiff = self.rotation:getPitch() - camera.getPitch()
-    self.controls.pitchChange = pitchDiff
+    -- local pitchDiff = gameSelf.rotation:getPitch() - camera.getPitch()
+    -- gameSelf.controls.pitchChange = pitchDiff
 end
 
+--- sets marker visibility. Always triggers a redraw
 ---@param state boolean whether or not the marker should be visible
 ---@return boolean? changed whether or not the state actually updated (due to the marker not existing)
 function LockOnManager.setMarkerVisibility(state)
     local marker = LockOnManager.getLockOnMarker()
     if not marker then return end
+    assert(CameraManager)
 
     marker.layout.props.visible = state
+    CameraManager.getState().isLockedOn = state
     marker:update()
     return true
 end
@@ -166,14 +152,44 @@ function LockOnManager.checkForDeadTarget(targetIsActor)
     end
 end
 
+--- Given both the old and new ranges, map a numeric value from one to the other and round it.
+---@param inputValue number
+---@param oldRange util.vector2
+---@param newRange util.vector2
+local function remapFromRange(inputValue, oldRange, newRange)
+    return util.round(
+        math.max(
+            math.min(
+                util.remap(
+                    inputValue,
+                    oldRange.x,
+                    oldRange.y,
+                    newRange.x,
+                    newRange.y
+                ),
+                newRange.y
+            ),
+            newRange.x
+        )
+    )
+end
+
+---@param distanceFromCamera number distance in todd units from targeted object to the camera
+---@return number iconSize rounded icon size, remapped from the camera distance range to the size range
+function LockOnManager:getIconSize(distanceFromCamera)
+    return remapFromRange(distanceFromCamera, self.markerDistanceRange, self.markerSizeRange)
+end
+
 ---@param dt number deltaTime
 ---@param managers table<string, any> direct access to all SW4 subsystems
 function LockOnManager.onFrame(dt, managers)
     local targetIsActor = LockOnManager.targetIsActor()
     LockOnManager.checkForDeadTarget(targetIsActor)
 
+    if not CameraManager then CameraManager = managers.Camera end
+
     local targetObject = LockOnManager.getTargetObject()
-    local camState = managers.Camera.getState()
+    local camState = CameraManager.getState()
 
     camState.canDoLockOn = targetObject and (
         (targetIsActor and camState.isWielding)
@@ -194,10 +210,11 @@ function LockOnManager.onFrame(dt, managers)
         local normalizedPos = CamHelper.objectIsOnscreen(targetObject, not types.NPC.objectIsInstance(targetObject))
 
         if normalizedPos then
-            LockOnManager.setElementPosition(LockOnManager.getLockOnMarker(),
-                util.vector2(normalizedPos.x, normalizedPos.y))
-            LockOnManager.trackTargetUsingViewport(targetObject, normalizedPos)
-            -- LockOnManager.setMarkerVisibility(true)
+            CameraManager:trackTargetUsingViewport(targetObject, normalizedPos)
+            LockOnManager:updateMarker {
+                transform = normalizedPos,
+                doUpdate = true,
+            }
             camera.showCrosshair(false)
         else
             LockOnManager.setMarkerVisibility(false)
