@@ -49,7 +49,7 @@ I.Settings.registerGroup {
     }
 }
 
-I.Settings.RegisterGroup {
+I.Settings.registerGroup {
     key = 'SettingsGlobal' .. ModInfo.name .. 'LockOnGroup',
     page = ModInfo.name .. 'CorePage',
     order = 2,
@@ -62,6 +62,13 @@ I.Settings.RegisterGroup {
         Setting('TargetMinDistance', 'number', { min = 0, max = 512, integer = true }, 'Minimum Target Distance', 'Distance from the locked target at which the icon will be at minimum size.', 256),
         Setting('TargetMaxSize', 'number', { min = 0, max = 128, integer = true }, 'Maximum Target Size', 'Size of the targeting icon at maximum distance.', 128),
         Setting('TargetMaxDistance', 'number', { min = 512, max = 7128, integer = true }, 'Maximum Target Distance', 'Distance from the locked target at which the icon will be at minimum size.', 3564),
+        Setting('TargetColorF', 'color', {}, 'Full Target Color', 'Target Icon color when the targeted actor is at 100% health', '#ffffff'),
+        Setting('TargetColorVH', 'color', {}, 'Full Target Color', 'Target Icon color when the targeted actor is between 80-100% health', '#ffffff'),
+        Setting('TargetColorH', 'color', {}, 'Very Healthy Target Color', 'Target Icon color when the targeted actor is between 60-80% health', '#ffffff'),
+        Setting('TargetColorW', 'color', {}, 'Healthy Target Color', 'Target Icon color when the targeted actor is between 40-60% health', '#ffffff'),
+        Setting('TargetColorVW', 'color', {}, 'Wounded Target Color', 'Target Icon color when the targeted actor is between 20-40% health', '#ffffff'),
+        Setting('TargetColorWD', 'color', {}, 'Dying Target Color', 'Target Icon color when the targeted actor is between 0-20% health', '#ffffff'),
+        Setting('TargetColorD', 'color', {}, 'Dying Target Mix Color', 'Target Icon color when the targeted actor is at 0% health', '#ffffff'),
     }
 }
 
