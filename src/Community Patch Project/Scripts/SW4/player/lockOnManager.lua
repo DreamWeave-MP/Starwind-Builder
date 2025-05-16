@@ -8,22 +8,24 @@ local ui = require 'openmw.ui'
 ---@type openmw.util
 local util = require 'openmw.util'
 
+local ModInfo = require 'scripts.sw4.modinfo'
 local CameraManager = nil
 
 local CenterVector2 = util.vector2(0.5, 0.5)
 local ZeroVector2 = util.vector2(0, 0)
 local CamForwardCastVector = util.vector3(0, camera.getViewDistance(), 0)
 
+--- TODO: Make a subscript function to reconstruct the vectors for the size remapping instead of reconstructing vectors on every call
+--- expensive!
 ---@class LockOnManager
-local LockOnManager = {
+local LockOnManager = require 'Scripts.SW4.helper.protectedTable' ('SettingsGlobal' .. ModInfo.name .. 'LockOnGroup',
+    ModInfo)
+
+LockOnManager.state = {
     targetObject = nil,
+    targetHealth = nil,
     lockOnMarker = nil,
-    ---@type util.vector2
-    markerSizeRange = util.vector2(32, 128),
-    --- Half the length of an exterior cell
-    ---@type util.vector2
-    markerDistanceRange = util.vector2(256, 3564),
-    markerDefaultPath = 'textures/target.dds',
+    currentTexture = nil,
 }
 
 ---@alias MarkerTransform util.vector3 info about the marker; z element is distance from camera, xy are normalized screenpos of target
@@ -32,26 +34,36 @@ local LockOnManager = {
 ---@field doUpdate boolean? whether to redraw or not
 ---@field transform MarkerTransform Onscreen position to place the marker at
 
+function LockOnManager.getLockOnFileName(baseName)
+    return ('textures/sw4/crosshair/%s.dds'):format(baseName)
+end
 
 ---@param markerUpdateData MarkerUpdateInfo
 function LockOnManager:updateMarker(markerUpdateData)
     local element = self.getLockOnMarker()
     assert(element, 'LockOnManager: Failed to locate lock on marker to set its position!')
 
+    -- print(self:getIconColor())
     local elementSize = self:getIconSize(markerUpdateData.transform.z)
     element.layout.props.size = util.vector2(elementSize, elementSize)
+    element.layout.props.color = self:getIconColor()
     element.layout.props.relativePosition = markerUpdateData.transform.xy
+
+    if LockOnManager.TargetLockIcon ~= LockOnManager.state.currentTexture then
+        LockOnManager.state.currentTexture = LockOnManager.getLockOnFileName(LockOnManager.TargetLockIcon)
+        element.layout.props.resource = ui.texture { path = LockOnManager.state.currentTexture }
+    end
 
     if markerUpdateData.doUpdate ~= true then return end
     element:update()
 end
 
 function LockOnManager.getLockOnMarker()
-    return LockOnManager.lockOnMarker
+    return LockOnManager.state.lockOnMarker
 end
 
 function LockOnManager.getTargetObject()
-    return LockOnManager.targetObject
+    return LockOnManager.state.targetObject
 end
 
 --- Returns false if the target doesn't exist, or isn't an NPC/Creature
@@ -83,14 +95,15 @@ function LockOnManager.toggleLockOnMarkerDisplay()
     local marker = LockOnManager.getLockOnMarker()
 
     if not marker then
-        LockOnManager.lockOnMarker = ui.create {
+        LockOnManager.state.currentTexture = LockOnManager.getLockOnFileName(LockOnManager.TargetLockIcon)
+        LockOnManager.state.lockOnMarker = ui.create {
             layer = 'HUD',
             type = ui.TYPE.Image,
             props = {
                 anchor = CenterVector2,
                 relativePosition = ZeroVector2,
                 size = ZeroVector2,
-                resource = ui.texture { path = LockOnManager.markerDefaultPath },
+                resource = ui.texture { path = LockOnManager.state.currentTexture },
                 visible = false,
             },
         }
@@ -104,8 +117,9 @@ end
 function LockOnManager.lockOnHandler(state)
     if not state then return end
 
-    if LockOnManager.targetObject then
-        LockOnManager.targetObject = nil
+    if LockOnManager.state.targetObject then
+        LockOnManager.state.targetObject = nil
+        LockOnManager.state.targetHealth = nil
         LockOnManager.toggleLockOnMarkerDisplay()
         return
     end
@@ -116,12 +130,14 @@ function LockOnManager.lockOnHandler(state)
     local result = nearby.castRay(camTransform.position, castToPos, { ignore = { gameSelf.object, } })
 
     if not result.hit or not result.hitObject then return end
-    if types.Actor.objectIsInstance(result.hitObject) and types.Actor.isDead(result.hitObject) then return end
+    local isActor = types.Actor.objectIsInstance(result.hitObject)
+    if isActor and types.Actor.isDead(result.hitObject) then return end
 
-    LockOnManager.targetObject = result.hitObject
+    LockOnManager.state.targetObject = result.hitObject
 
-    -- local pitchDiff = gameSelf.rotation:getPitch() - camera.getPitch()
-    -- gameSelf.controls.pitchChange = pitchDiff
+    if isActor then
+        LockOnManager.state.targetHealth = result.hitObject.type.stats.dynamic.health(result.hitObject)
+    end
 end
 
 --- sets marker visibility. Always triggers a redraw
@@ -147,7 +163,7 @@ function LockOnManager.checkForDeadTarget(targetIsActor)
     if not targetObject.type.isDead(targetObject) then return end
 
     if LockOnManager.setMarkerVisibility(false) then
-        LockOnManager.targetObject = nil
+        LockOnManager.state.targetObject = nil
         return true
     end
 end
@@ -177,7 +193,57 @@ end
 ---@param distanceFromCamera number distance in todd units from targeted object to the camera
 ---@return number iconSize rounded icon size, remapped from the camera distance range to the size range
 function LockOnManager:getIconSize(distanceFromCamera)
-    return remapFromRange(distanceFromCamera, self.markerDistanceRange, self.markerSizeRange)
+    local markerSizeRange = util.vector2(self.TargetMinSize, self.TargetMaxSize)
+    local markerDistanceRange = util.vector2(self.TargetMinDistance, self.TargetMaxDistance)
+    return remapFromRange(distanceFromCamera, markerDistanceRange, markerSizeRange)
+end
+
+local ColorMarkerFull = util.color.hex('0df8cc')
+local ColorMarkerVeryHealthy = util.color.hex('069e00')
+local ColorMarkerHealthy = util.color.hex('047a00')
+local ColorMarkerWounded = util.color.hex('9e7100')
+local ColorMarkerVeryWounded = util.color.hex('4c3700')
+local ColorMarkerDead = util.color.hex('4c0000')
+
+function LockOnManager:getIconColor()
+    --- Figure out which of the existing log functions is most appropriate to use when this happens, as it shouldn't
+    if self.state.targetHealth == nil then
+        return ColorMarkerDead
+    end
+
+    local normalizedHealth = self.state.targetHealth.current / self.state.targetHealth.base
+
+    if normalizedHealth >= 1.0 then
+        return ColorMarkerFull
+    elseif normalizedHealth < 0.0 then
+        return ColorMarkerDead
+    end
+
+    local targetColorMin, targetColorMax
+
+    if normalizedHealth < 1.0 and normalizedHealth >= 0.8 then
+        targetColorMin = ColorMarkerVeryHealthy:asRgb()
+        targetColorMax = ColorMarkerFull:asRgb()
+    elseif normalizedHealth < 0.8 and normalizedHealth >= 0.6 then
+        targetColorMin = ColorMarkerVeryHealthy:asRgb()
+        targetColorMax = ColorMarkerHealthy:asRgb()
+    elseif normalizedHealth < 0.6 and normalizedHealth >= 0.4 then
+        targetColorMin = ColorMarkerWounded:asRgb()
+        targetColorMax = ColorMarkerHealthy:asRgb()
+    elseif normalizedHealth < 0.4 and normalizedHealth >= 0.2 then
+        targetColorMin = ColorMarkerVeryWounded:asRgb()
+        targetColorMax = ColorMarkerWounded:asRgb()
+    elseif normalizedHealth < 0.2 and normalizedHealth >= 0.0 then
+        targetColorMin = ColorMarkerDead:asRgb()
+        targetColorMax = ColorMarkerVeryWounded:asRgb()
+    end
+
+    local colorMix = {}
+    colorMix[#colorMix + 1] = util.remap(normalizedHealth, 0.0, 1.0, targetColorMin.x, targetColorMax.x)
+    colorMix[#colorMix + 1] = util.remap(normalizedHealth, 0.0, 1.0, targetColorMin.y, targetColorMax.y)
+    colorMix[#colorMix + 1] = util.remap(normalizedHealth, 0.0, 1.0, targetColorMin.z, targetColorMax.z)
+
+    return util.color.rgb(colorMix[1], colorMix[2], colorMix[3])
 end
 
 ---@param dt number deltaTime

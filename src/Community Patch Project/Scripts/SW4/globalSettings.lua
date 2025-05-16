@@ -1,4 +1,5 @@
 local time = require('openmw_aux.time')
+local vfs = require 'openmw.vfs'
 
 local ModInfo = require('scripts.sw4.modinfo')
 local I = require('openmw.interfaces')
@@ -49,6 +50,14 @@ I.Settings.registerGroup {
     }
 }
 
+local iconNames = {}
+
+for icon in vfs.pathsWithPrefix('textures/sw4/crosshair/') do
+    if icon:find('.dds') then
+        iconNames[#iconNames + 1] = icon:match(".*/(.-)%.")
+    end
+end
+
 I.Settings.registerGroup {
     key = 'SettingsGlobal' .. ModInfo.name .. 'LockOnGroup',
     page = ModInfo.name .. 'CorePage',
@@ -58,6 +67,7 @@ I.Settings.registerGroup {
     permanentStorage = true,
     settings = {
         Setting('TargetLockToggle', 'checkbox', {}, 'Enabled', 'If set to false, target locking is completely disabled. Recommended to leave enabled.', true),
+        Setting('TargetLockIcon', 'select', { items = iconNames, l10n = ModInfo.l10nName }, 'Target Lock Icon', 'Icon used for target locking.\nCustom icons can be added in the relative VFS dir textures/sw4/crosshair.\nFor health coloration to work, it is suggested to make all icons black/white.', 'starbursthd'),
         Setting('TargetMinSize', 'number', { min = 0, max = 64, integer = true }, 'Minimum Target Size', 'Size of the targeting icon at minimum distance.', 32),
         Setting('TargetMinDistance', 'number', { min = 0, max = 512, integer = true }, 'Minimum Target Distance', 'Distance from the locked target at which the icon will be at minimum size.', 256),
         Setting('TargetMaxSize', 'number', { min = 0, max = 128, integer = true }, 'Maximum Target Size', 'Size of the targeting icon at maximum distance.', 128),
