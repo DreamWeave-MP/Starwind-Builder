@@ -198,44 +198,37 @@ function LockOnManager:getIconSize(distanceFromCamera)
     return remapFromRange(distanceFromCamera, markerDistanceRange, markerSizeRange)
 end
 
-local ColorMarkerFull = util.color.hex('0df8cc')
-local ColorMarkerVeryHealthy = util.color.hex('069e00')
-local ColorMarkerHealthy = util.color.hex('047a00')
-local ColorMarkerWounded = util.color.hex('9e7100')
-local ColorMarkerVeryWounded = util.color.hex('4c3700')
-local ColorMarkerDead = util.color.hex('4c0000')
-
 function LockOnManager:getIconColor()
     --- Figure out which of the existing log functions is most appropriate to use when this happens, as it shouldn't
     if self.state.targetHealth == nil then
-        return ColorMarkerDead
+        return self.TargetColorD
     end
 
     local normalizedHealth = self.state.targetHealth.current / self.state.targetHealth.base
 
     if normalizedHealth >= 1.0 then
-        return ColorMarkerFull
+        return self.TargetColorF
     elseif normalizedHealth < 0.0 then
-        return ColorMarkerDead
+        return self.TargetColorD
     end
 
     local targetColorMin, targetColorMax
 
     if normalizedHealth < 1.0 and normalizedHealth >= 0.8 then
-        targetColorMin = ColorMarkerVeryHealthy:asRgb()
-        targetColorMax = ColorMarkerFull:asRgb()
+        targetColorMin = self.TargetColorVH:asRgb()
+        targetColorMax = self.TargetColorF:asRgb()
     elseif normalizedHealth < 0.8 and normalizedHealth >= 0.6 then
-        targetColorMin = ColorMarkerVeryHealthy:asRgb()
-        targetColorMax = ColorMarkerHealthy:asRgb()
+        targetColorMin = self.TargetColorH:asRgb()
+        targetColorMax = self.TargetColorVH:asRgb()
     elseif normalizedHealth < 0.6 and normalizedHealth >= 0.4 then
-        targetColorMin = ColorMarkerWounded:asRgb()
-        targetColorMax = ColorMarkerHealthy:asRgb()
+        targetColorMin = self.TargetColorW:asRgb()
+        targetColorMax = self.TargetColorH:asRgb()
     elseif normalizedHealth < 0.4 and normalizedHealth >= 0.2 then
-        targetColorMin = ColorMarkerVeryWounded:asRgb()
-        targetColorMax = ColorMarkerWounded:asRgb()
+        targetColorMin = self.TargetColorVW:asRgb()
+        targetColorMax = self.TargetColorW:asRgb()
     elseif normalizedHealth < 0.2 and normalizedHealth >= 0.0 then
-        targetColorMin = ColorMarkerDead:asRgb()
-        targetColorMax = ColorMarkerVeryWounded:asRgb()
+        targetColorMin = self.TargetColorD:asRgb()
+        targetColorMax = self.TargetColorVW:asRgb()
     end
 
     local colorMix = {}

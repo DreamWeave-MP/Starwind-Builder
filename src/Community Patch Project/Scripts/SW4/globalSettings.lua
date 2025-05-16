@@ -1,4 +1,5 @@
 local time = require('openmw_aux.time')
+local util = require 'openmw.util'
 local vfs = require 'openmw.vfs'
 
 local ModInfo = require('scripts.sw4.modinfo')
@@ -67,18 +68,17 @@ I.Settings.registerGroup {
     permanentStorage = true,
     settings = {
         Setting('TargetLockToggle', 'checkbox', {}, 'Enabled', 'If set to false, target locking is completely disabled. Recommended to leave enabled.', true),
-        Setting('TargetLockIcon', 'select', { items = iconNames, l10n = ModInfo.l10nName }, 'Target Lock Icon', 'Icon used for target locking.\nCustom icons can be added in the relative VFS dir textures/sw4/crosshair.\nFor health coloration to work, it is suggested to make all icons black/white.', 'starbursthd'),
         Setting('TargetMinSize', 'number', { min = 0, max = 64, integer = true }, 'Minimum Target Size', 'Size of the targeting icon at minimum distance.', 32),
         Setting('TargetMinDistance', 'number', { min = 0, max = 512, integer = true }, 'Minimum Target Distance', 'Distance from the locked target at which the icon will be at minimum size.', 256),
         Setting('TargetMaxSize', 'number', { min = 0, max = 128, integer = true }, 'Maximum Target Size', 'Size of the targeting icon at maximum distance.', 128),
         Setting('TargetMaxDistance', 'number', { min = 512, max = 7128, integer = true }, 'Maximum Target Distance', 'Distance from the locked target at which the icon will be at minimum size.', 3564),
-        Setting('TargetColorF', 'color', {}, 'Full Target Color', 'Target Icon color when the targeted actor is at 100% health', '#ffffff'),
-        Setting('TargetColorVH', 'color', {}, 'Full Target Color', 'Target Icon color when the targeted actor is between 80-100% health', '#ffffff'),
-        Setting('TargetColorH', 'color', {}, 'Very Healthy Target Color', 'Target Icon color when the targeted actor is between 60-80% health', '#ffffff'),
-        Setting('TargetColorW', 'color', {}, 'Healthy Target Color', 'Target Icon color when the targeted actor is between 40-60% health', '#ffffff'),
-        Setting('TargetColorVW', 'color', {}, 'Wounded Target Color', 'Target Icon color when the targeted actor is between 20-40% health', '#ffffff'),
-        Setting('TargetColorWD', 'color', {}, 'Dying Target Color', 'Target Icon color when the targeted actor is between 0-20% health', '#ffffff'),
-        Setting('TargetColorD', 'color', {}, 'Dying Target Mix Color', 'Target Icon color when the targeted actor is at 0% health', '#ffffff'),
+        Setting('TargetLockIcon', 'select', { items = iconNames, l10n = ModInfo.l10nName }, 'Target Lock Icon', 'Icon used for target locking.\nCustom icons can be added in the relative VFS dir textures/sw4/crosshair.\nFor health coloration to work, it is suggested to make all icons black/white.', 'starbursthd'),
+        Setting('TargetColorF', 'color', {}, 'Full Target Color', 'Target Icon color when the targeted actor is at 100% health', util.color.hex('0df8cc')),
+        Setting('TargetColorVH', 'color', {}, 'Full Target Color', 'Target Icon color when the targeted actor is between 80-100% health', util.color.hex('069e00')),
+        Setting('TargetColorH', 'color', {}, 'Very Healthy Target Color', 'Target Icon color when the targeted actor is between 60-80% health', util.color.hex('047a00')),
+        Setting('TargetColorW', 'color', {}, 'Healthy Target Color', 'Target Icon color when the targeted actor is between 40-60% health', util.color.hex('9e7100')),
+        Setting('TargetColorVW', 'color', {}, 'Wounded Target Color', 'Target Icon color when the targeted actor is between 20-40% health', util.color.hex('4c3700')),
+        Setting('TargetColorD', 'color', {}, 'Dying Target Mix Color', 'Target Icon color when the targeted actor is at 0% health', util.color.hex('4c0000')),
     }
 }
 
