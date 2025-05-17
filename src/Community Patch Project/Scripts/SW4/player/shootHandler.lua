@@ -156,8 +156,6 @@ function ShootManager.textKeyHandler(group, key)
         return
     end
 
-    if not input.getBooleanActionValue('Use') then return animation.cancel(self, group) end
-
     if key == 'shoot start' then
         LogMessage("Shoot Handler: Increasing shoot speed!")
 
