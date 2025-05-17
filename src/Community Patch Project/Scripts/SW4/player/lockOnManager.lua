@@ -18,6 +18,17 @@ local CamForwardCastVector = util.vector3(0, camera.getViewDistance(), 0)
 --- TODO: Make a subscript function to reconstruct the vectors for the size remapping instead of reconstructing vectors on every call
 --- expensive!
 ---@class LockOnManager
+---@field TargetLockIcon string baseName of the texture file used for the lock-on icon
+---@field TargetMinSize integer minimum size of the target lock icon
+---@field TargetMaxSize integer maximum size of the target lock icon
+---@field TargetMinDistance integer Distance from the target to the camera at which the target lock icon will be minimum size
+---@field TargetMaxDistance integer Distance from the target to the camera at which the target lock icon will be maximum size
+---@field TargetColorF util.color Color applied to the target icon when target has >= 100% health. Mixes with TargetColorVH below 100%.
+---@field TargetColorVH util.color Color applied to the target icon when target has 60% - 80% health. Mixes with TargetColorH below 80%.
+---@field TargetColorH util.color Color applied to the target icon when target has 40% - 60% health. Mixes with TargetColorW below 60%.
+---@field TargetColorW util.color Color applied to the target icon when target has 20% - 40% health. Mixes with TargetColorVW below 40%.
+---@field TargetColorVW util.color Color applied to the target icon when target has 0% - 20% health. Mixes with TargetColorD below 20%.
+---@field TargetColorD util.color Color applied to the target icon when target has <= 0% health.
 local LockOnManager = require 'Scripts.SW4.helper.protectedTable' ('SettingsGlobal' .. ModInfo.name .. 'LockOnGroup',
     ModInfo)
 
