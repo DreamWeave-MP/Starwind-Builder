@@ -1,3 +1,5 @@
+local async = require 'openmw.async'
+local storage = require 'openmw.storage'
 local time = require 'openmw_aux.time'
 local util = require 'openmw.util'
 local vfs = require 'openmw.vfs'
@@ -5,6 +7,14 @@ local vfs = require 'openmw.vfs'
 local I = require 'openmw.interfaces'
 
 local ModInfo = require 'scripts.sw4.modinfo'
+
+local iconNames = {}
+
+for icon in vfs.pathsWithPrefix('textures/sw4/crosshair/') do
+    if icon:find('.dds') then
+        iconNames[#iconNames + 1] = icon:match(".*/(.-)%.")
+    end
+end
 
 --- Shorthand to generate Setting tables for input into `I.Settings.registerGroup`'s `settings` argument.
 ---@param key string The (table) key of the setting
@@ -67,16 +77,10 @@ I.Settings.registerGroup {
     }
 }
 
-local iconNames = {}
-
-for icon in vfs.pathsWithPrefix('textures/sw4/crosshair/') do
-    if icon:find('.dds') then
-        iconNames[#iconNames + 1] = icon:match(".*/(.-)%.")
-    end
-end
+local LockOnGroupName = 'SettingsGlobal' .. ModInfo.name .. 'LockOnGroup'
 
 I.Settings.registerGroup {
-    key = 'SettingsGlobal' .. ModInfo.name .. 'LockOnGroup',
+    key = LockOnGroupName,
     page = ModInfo.name .. 'CorePage',
     order = 2,
     l10n = ModInfo.name,
@@ -182,6 +186,27 @@ I.Settings.registerGroup {
         ),
     }
 }
+
+local LockOnGroup = storage.globalSection(LockOnGroupName)
+LockOnGroup:subscribe(async:callback(function(groupName, _)
+    local minSize, maxSize = LockOnGroup:get('TargetMinSize'), LockOnGroup:get('TargetMaxSize')
+    local minDistance, maxDistance = LockOnGroup:get('TargetMinDistance'), LockOnGroup:get('TargetMaxDistance')
+    local disabled = not LockOnGroup:get('TargetLockToggle')
+
+    I.Settings.updateRendererArgument(groupName, 'TargetMinSize', { max = (maxSize - 1), disabled = disabled, })
+    I.Settings.updateRendererArgument(groupName, 'TargetMaxSize', { min = minSize + 1, disabled = disabled, })
+    I.Settings.updateRendererArgument(groupName, 'TargetMinDistance', { max = (maxDistance - 1), disabled = disabled, })
+    I.Settings.updateRendererArgument(groupName, 'TargetMaxDistance', { min = minDistance + 1, disabled = disabled, })
+
+    for _, settingName in ipairs { 'TargetLockIcon', 'TargetColorF', 'TargetColorVH', 'TargetColorH', 'TargetColorW', 'TargetColorVW', 'TargetColorD' } do
+        if settingName == 'TargetLockIcon' then
+            I.Settings.updateRendererArgument(groupName, settingName,
+                { disabled = disabled, items = iconNames, l10n = ModInfo.l10nName, })
+        else
+            I.Settings.updateRendererArgument(groupName, settingName, { disabled = disabled })
+        end
+    end
+end))
 
 I.Settings.registerGroup {
     key = 'SettingsGlobal' .. ModInfo.name .. 'BlasterGroupAutomatic',
