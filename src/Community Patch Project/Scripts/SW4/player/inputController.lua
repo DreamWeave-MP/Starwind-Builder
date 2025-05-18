@@ -156,7 +156,7 @@ function InputManager:processMovement(dt)
 
     gameSelf.controls.movement = movement
 
-    if strafeInsteadOfTurn and not hasSpeederEquipped then
+    if strafeInsteadOfTurn and not hasSpeederEquipped and not GlobalManagement.Cursor:getCursorVisible() then
         gameSelf.controls.sideMovement = math.min(
                 math.abs(sideMovement), SideMovementMaxSpeed
             ) *
