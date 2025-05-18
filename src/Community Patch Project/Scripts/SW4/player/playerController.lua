@@ -12,13 +12,19 @@ local CamHelper = require 'Scripts.SW4.helper.cameraHelper'
 local ModInfo = require('scripts.sw4.modinfo')
 
 --- System handlers added by SW4
+---@class ManagementStore
 local Managers = {
-  ---@type CameraManager
-  Camera = require 'Scripts.SW4.player.cameraManager' (),
-  LockOn = require 'Scripts.SW4.player.lockOnManager' (),
   MountFunctions = require('scripts.sw4.player.mountfunctions'),
-  Shoot = require('scripts.sw4.player.shootHandler'),
 }
+
+---@type CameraManager
+Managers.Camera = require 'Scripts.SW4.player.cameraManager' (Managers)
+---@type LockOnManager
+Managers.LockOn = require 'Scripts.SW4.player.lockOnManager' (Managers)
+---@type ShootManager
+Managers.Shoot = require 'scripts.sw4.player.shootHandler' (Managers)
+---@type InputManager
+Managers.Input = require 'Scripts.SW4.player.inputController' (Managers)
 
 local ShowMessage = ui.showMessage
 
@@ -32,7 +38,40 @@ I.AnimationController.addTextKeyHandler("spellcast", function(group, key)
   end
 end)
 
+local util = require 'openmw.util'
 local CursorController = {}
+CursorController.state = {
+  cursorPos = util.vector2(0, 0),
+}
+
+function CursorController:onFrameBegin(dt)
+  self.state.cursorPos = self.state.cursorPos + util.vector2(input.getMouseMoveX(), input.getMouseMoveY())
+  -- print(self.state.cursorPos)
+end
+
+local OnFrameExecutionOrder = {
+  CursorController,
+  Managers.Camera,
+  Managers.Input,
+  Managers.Shoot,
+  Managers.LockOn
+}
+
+---@enum FrameHandlerType
+local FrameHandlerType = {
+  Begin = 'onFrameBegin',
+  Middle = 'onFrame',
+  End = 'onFrameEnd',
+}
+
+---@param frameHandlerType FrameHandlerType
+local function onFrameSubsystems(frameHandlerType, dt)
+  for _, subsystem in ipairs(OnFrameExecutionOrder) do
+    if subsystem[frameHandlerType] then
+      subsystem[frameHandlerType](subsystem, dt)
+    end
+  end
+end
 
 return {
   interfaceName = ModInfo.name .. "_PlayerController",
@@ -44,16 +83,10 @@ return {
     ShootManager = Managers.Shoot,
   },
   engineHandlers = {
-    -- onKeyPress = function(key)
-    -- end,
     onFrame = function(dt)
-      Managers.Camera:onFrameBegin(dt, Managers)
-
-      Managers.Shoot.onFrame(dt, Managers)
-
-      Managers.LockOn.onFrame(dt, Managers)
-
-      Managers.Camera:onFrameEnd(dt, Managers)
+      onFrameSubsystems(FrameHandlerType.Begin, dt)
+      onFrameSubsystems(FrameHandlerType.Middle, dt)
+      onFrameSubsystems(FrameHandlerType.End, dt)
     end,
     onUpdate = function(dt)
       Managers.MountFunctions.onUpdate(dt)
