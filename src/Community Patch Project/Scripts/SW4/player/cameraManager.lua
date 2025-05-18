@@ -64,7 +64,7 @@ function CameraManager:onFrameBegin(dt)
         camera.setMode(camera.MODE.ThirdPerson)
     end
 
-    if GlobalManagement.LockOn.getMarkerVisibility() then
+    if GlobalManagement.LockOn.getMarkerVisibility() or GlobalManagement.Cursor:getCursorVisible() then
         gameSelf.controls.pitchChange = 0
     end
 end
@@ -113,7 +113,6 @@ end
 function CameraManager:onFrameEnd(dt)
     CameraManager:updateDelta()
 
-    -- No vertical camera movement, unless the player
     if not self.state.isWielding then
         camera.setPitch(0)
     end
