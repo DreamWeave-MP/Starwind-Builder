@@ -73,6 +73,11 @@ local function new(constructorData)
     requestedGroup:subscribe(async:callback(function(groupName, key)
       handler(proxy.shadowSettings, requestedGroup, groupName, key)
     end))
+  else
+    -- If the subscription is overridden entirely, nullify the cached settings when the group changes
+    requestedGroup:subscribe(async:callback(function()
+      proxy.shadowSettings = {}
+    end))
   end
 
   local state = {}
