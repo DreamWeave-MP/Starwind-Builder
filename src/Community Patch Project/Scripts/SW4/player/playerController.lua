@@ -78,6 +78,7 @@ return {
   interface = {
     CamHelper = CamHelper,
     CameraManager = Managers.Camera,
+    InputManager = Managers.Input,
     LockOnManager = Managers.LockOn,
     MountFunctions = Managers.MountFunctions,
     ShootManager = Managers.Shoot,
