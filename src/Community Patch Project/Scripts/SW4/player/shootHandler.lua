@@ -1,6 +1,6 @@
 local animation = require('openmw.animation')
 local input = require('openmw.input')
-local self = require('openmw.self')
+local gameSelf = require('openmw.self')
 local storage = require('openmw.storage')
 local types = require('openmw.types')
 local util = require('openmw.util')
@@ -15,31 +15,33 @@ local ModInfo = require('scripts.sw4.modinfo')
 local AutoBlasterStorage = storage.globalSection('SettingsGlobal' .. ModInfo.name .. 'BlasterGroupAutomatic')
 local SpeedBlasterStorage = storage.globalSection('SettingsGlobal' .. ModInfo.name .. 'BlasterGroupSpeed')
 
-local WeaponSlot = self.type.EQUIPMENT_SLOT.CarriedRight
+local WeaponSlot = gameSelf.type.EQUIPMENT_SLOT.CarriedRight
 local CrossbowType = types.Weapon.TYPE.MarksmanCrossbow
 local BowType = types.Weapon.TYPE.MarksmanBow
 
-local Stats = self.type.stats
+local Stats = gameSelf.type.stats
 local Skills = Stats.skills
 local Attributes = Stats.attributes
 
-local SkillMarksman = Skills.marksman(self)
+local SkillMarksman = Skills.marksman(gameSelf)
+
+local GlobalManagement
 
 --- Handles animation text keys and shoot overrides for the player
 --- Allows automatic shooting of blasters
 ---@class ShootManager
----@field onFrame fun(dt: number): nil If signalled by the animation handlers, will force the player to engage or release an attack
+---@field onFrame fun(self, dt: number): nil If signalled by the animation handlers, will force the player to engage or release an attack
 ---@field textKeyHandler fun(_: string, key: string): nil Signals the onFrame handler to start/release an attack depending on animation state
 local ShootManager = {
     CurrentShotCooldown = 0,
     BlasterTypes = BlasterData.Types,
 }
 
-function ShootManager.onFrame(dt)
+function ShootManager:onFrame(dt)
     ShootManager.CurrentShotCooldown = math.max(0.0, ShootManager.CurrentShotCooldown - dt)
 
     if forceRelease and ShootManager.CurrentShotCooldown <= 0.0 then
-        self.controls.use = 0
+        gameSelf.controls.use = 0
         forceRelease = false
         ShootManager.CurrentShotCooldown = ShootManager.getBlasterDelay(ShootManager.getBlasterType())
     end
@@ -118,7 +120,7 @@ function ShootManager.isRangedWeapon(equippedWeapon)
 end
 
 function ShootManager.getBlasterType()
-    local blaster = self.type.getEquipment(self, WeaponSlot)
+    local blaster = gameSelf.type.getEquipment(gameSelf, WeaponSlot)
 
     if not blaster or not ShootManager.isRangedWeapon(blaster) then return BlasterData.Types.None end
 
@@ -159,20 +161,26 @@ function ShootManager.textKeyHandler(group, key)
     if key == 'shoot start' then
         LogMessage("Shoot Handler: Increasing shoot speed!")
 
-        animation.setSpeed(self, group, ShootManager.getBlasterSpeedMultiplier(blasterType))
+        animation.setSpeed(gameSelf, group, ShootManager.getBlasterSpeedMultiplier(blasterType))
     elseif key == 'shoot min hit' or key == 'shoot max attack' then
-        if self.controls.use == 0 or not input.getBooleanActionValue('Use') then return end
+        if gameSelf.controls.use == 0 or not input.getBooleanActionValue('Use') then return end
 
         LogMessage('Shoot Handler: Releasing shot!')
 
         forceRelease = true
     elseif key == 'shoot follow start' and ShootManager.canAnimCancel(blasterType) then
         LogMessage('Shoot Handler: Cancelling animation!')
-        animation.cancel(self, group)
+        animation.cancel(gameSelf, group)
     end
 end
 
 I.AnimationController.addTextKeyHandler('crossbow', ShootManager.textKeyHandler)
 I.AnimationController.addTextKeyHandler('bowandarrow', ShootManager.textKeyHandler)
 
-return ShootManager
+---@param managementStore ManagementStore
+---@return ShootManager
+return function(managementStore)
+    assert(managementStore)
+    GlobalManagement = managementStore
+    return ShootManager
+end
