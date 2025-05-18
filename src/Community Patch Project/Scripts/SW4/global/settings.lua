@@ -513,3 +513,54 @@ I.Settings.registerGroup {
         ),
     }
 }
+
+I.Settings.registerGroup {
+    key = 'SettingsGlobal' .. ModInfo.name .. 'CursorGroup',
+    page = ModInfo.name .. 'CursorPage',
+    order = 0,
+    l10n = ModInfo.l10nName,
+    name = 'Cursor Settings',
+    permanentStorage = true,
+    settings = {
+        Setting(
+            'Sensitivity',
+            'number',
+            { min = 0.001, max = 10.0, integer = false, },
+            'Cursor Sensitivity',
+            '',
+            1.0
+        ),
+        Setting(
+            'TargetFlickThreshold',
+            'number',
+            { min = 50, max = 500, integer = true, },
+            'Target Switch Flick Threshold',
+            'Length of continuous mouse movement required to change locked targets.\nDoes not reset until mouse movement stops.',
+            50
+        ),
+        Setting(
+            'CursorSize',
+            'number',
+            { min = 8, max = 64, integer = true },
+            'Cursor Size',
+            '',
+            32
+        ),
+        Setting(
+            'XAnchor',
+            'number',
+            { min = 0.0, max = 1.0, integer = false },
+            'X Axis Anchor',
+            'Center point for the crosshair image on the X axis.\n0 is all the way to the left, while 1 is all the way to the right.',
+            0.5
+        ),
+        Setting(
+            'YAnchor',
+            'number',
+            { min = 0.0, max = 1.0, integer = false },
+            'Y Axis Anchor',
+            'Center point for the crosshair image on the Y axis.\n0 is all the way at the top, while 1 is all the way at the bottom.',
+            0.5
+        ),
+    }
+}

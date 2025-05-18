@@ -34,6 +34,13 @@ I.Settings.registerPage {
     description = "Settings related to KOTOR-style controls and extended camera behaviors."
 }
 
+I.Settings.registerPage {
+    key = ModInfo.name .. 'CursorPage',
+    l10n = ModInfo.l10nName,
+    name = 'SWAMP - Cursor Settings',
+    description = 'Settings for the custom cursor implemented by StarwindV4'
+}
+
 print(string.format("%s loaded version %s. Thank you for playing %s! <3",
     ModInfo.logPrefix,
     ModInfo.version,
