@@ -25,6 +25,7 @@ local GlobalManagement
 --- TODO: Make a subscript function to reconstruct the vectors for the size remapping instead of reconstructing vectors on every call expensive!
 --- Refer to globalSettings.lua for field default values
 ---@class LockOnManager:ProtectedTable
+---@field SwitchOnDeadTarget boolean whether or not to automatically select the nearest (screen-space) target when the current one dies
 ---@field TargetLockIcon string baseName of the texture file used for the lock-on icon
 ---@field TargetMinSize integer minimum size of the target lock icon
 ---@field TargetMaxSize integer maximum size of the target lock icon
@@ -111,7 +112,7 @@ function LockOnManager.getMarkerVisibility()
     return visibility
 end
 
----@param goLeft boolean whether to check the right or left side of screen space
+---@param goLeft boolean? whether to check the right or left side of screen space. Nil indicates both sides should be checked.
 function LockOnManager:selectNearestTarget(goLeft)
     local result = aux_util.findMinScore(nearby.actors, function(actor)
         if actor.recordId == 'player' or actor == self.state.targetObject or actor.type.isDead(actor) then return false end
@@ -119,8 +120,8 @@ function LockOnManager:selectNearestTarget(goLeft)
         local screenPos = CamHelper.objectIsOnscreen(actor)
 
         if not screenPos
-            or (goLeft and screenPos.x > 0.5)
-            or (not goLeft and screenPos.x < 0.5) then
+            or (goLeft == true and screenPos.x > 0.5)
+            or (goLeft == false and screenPos.x < 0.5) then
             return false
         end
 
@@ -304,7 +305,11 @@ end
 ---@param dt number deltaTime
 function LockOnManager:onFrame(dt)
     local targetIsActor = LockOnManager.targetIsActor()
-    LockOnManager.checkForDeadTarget(targetIsActor)
+    local targetWasDead = LockOnManager.checkForDeadTarget(targetIsActor)
+
+    if targetWasDead and self.SwitchOnDeadTarget then
+        self:selectNearestTarget()
+    end
 
     local targetObject = LockOnManager.getTargetObject()
     local camState = GlobalManagement.Camera.state

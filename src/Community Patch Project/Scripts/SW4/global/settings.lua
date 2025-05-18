@@ -96,6 +96,14 @@ I.Settings.registerGroup {
             true
         ),
         Setting(
+            'SwitchOnDeadTarget',
+            'checkbox',
+            {},
+            'Auto-Switch on Dead Target',
+            'If the current target is dead, and this setting is true, a new one will be automatically selected once the dead target has been identified.',
+            true
+        ),
+        Setting(
             'TargetMinSize',
             'number',
             { min = 0, max = 64, integer = true },
