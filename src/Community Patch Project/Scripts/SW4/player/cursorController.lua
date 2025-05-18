@@ -31,8 +31,6 @@ CursorController.state = {
     cursorPos = CursorController:startPos(),
     changeThisFrame = util.vector2(0, 0),
     cumulativeXMove = 0,
-    sensitivity = 1,
-    flickThreshold = 150,
     flickTriggered = false,
 }
 

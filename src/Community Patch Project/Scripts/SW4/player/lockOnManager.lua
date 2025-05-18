@@ -66,7 +66,6 @@ function LockOnManager:updateMarker(markerUpdateData)
     local element = self.getLockOnMarker()
     assert(element, 'LockOnManager: Failed to locate lock on marker to set its position!')
 
-    -- print(self:getIconColor())
     local elementSize = self:getIconSize(markerUpdateData.transform.z)
     element.layout.props.size = util.vector2(elementSize, elementSize)
     element.layout.props.color = self:getIconColor()
@@ -120,6 +119,7 @@ function LockOnManager:selectNearestTarget(goLeft)
         local screenPos = CamHelper.objectIsOnscreen(actor)
 
         if not screenPos
+            or screenPos.z > self.TargetMaxDistance
             or (goLeft == true and screenPos.x > 0.5)
             or (goLeft == false and screenPos.x < 0.5) then
             return false
@@ -188,20 +188,7 @@ function LockOnManager.lockOnHandler(state)
         return
     end
 
-    local camTransform = CamHelper.getCameraTransform()
-    local castToPos = camTransform.position + camTransform.rotation * CamForwardCastVector
-
-    local result = nearby.castRay(camTransform.position, castToPos, { ignore = { gameSelf.object, } })
-
-    if not result.hit or not result.hitObject then return end
-    local isActor = types.Actor.objectIsInstance(result.hitObject)
-    if isActor and types.Actor.isDead(result.hitObject) then return end
-
-    LockOnManager.state.targetObject = result.hitObject
-
-    if isActor then
-        LockOnManager.state.targetHealth = result.hitObject.type.stats.dynamic.health(result.hitObject)
-    end
+    LockOnManager:selectNearestTarget()
 end
 
 --- sets marker visibility. Always triggers a redraw
@@ -332,7 +319,7 @@ function LockOnManager:onFrame(dt)
 
         local normalizedPos = CamHelper.objectIsOnscreen(targetObject, not types.NPC.objectIsInstance(targetObject))
 
-        if normalizedPos then
+        if normalizedPos and normalizedPos.z <= self.TargetMaxDistance then
             GlobalManagement.Camera:trackTargetUsingViewport(targetObject, normalizedPos)
             LockOnManager:updateMarker {
                 transform = normalizedPos,
