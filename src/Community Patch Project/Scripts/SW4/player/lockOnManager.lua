@@ -9,14 +9,17 @@ local ui = require 'openmw.ui'
 local util = require 'openmw.util'
 
 local ModInfo = require 'scripts.sw4.modinfo'
-local CameraManager = nil
 
 local CenterVector2 = util.vector2(0.5, 0.5)
 local ZeroVector2 = util.vector2(0, 0)
+--- TODO: Need to reconstruct this on distance change or something, doesn't update properly
 local CamForwardCastVector = util.vector3(0, camera.getViewDistance(), 0)
 
---- TODO: Make a subscript function to reconstruct the vectors for the size remapping instead of reconstructing vectors on every call
---- expensive!
+---@type ManagementStore
+local GlobalManagement
+
+--- TODO: Make a subscript function to reconstruct the vectors for the size remapping instead of reconstructing vectors on every call expensive!
+--- Refer to globalSettings.lua for field default values
 ---@class LockOnManager
 ---@field TargetLockIcon string baseName of the texture file used for the lock-on icon
 ---@field TargetMinSize integer minimum size of the target lock icon
@@ -158,10 +161,9 @@ end
 function LockOnManager.setMarkerVisibility(state)
     local marker = LockOnManager.getLockOnMarker()
     if not marker then return end
-    assert(CameraManager)
+    assert(GlobalManagement.Camera)
 
     marker.layout.props.visible = state
-    CameraManager.getState().isLockedOn = state
     marker:update()
     return true
 end
@@ -252,18 +254,15 @@ function LockOnManager:getIconColor()
 end
 
 ---@param dt number deltaTime
----@param managers table<string, any> direct access to all SW4 subsystems
-function LockOnManager.onFrame(dt, managers)
+function LockOnManager:onFrame(dt)
     local targetIsActor = LockOnManager.targetIsActor()
     LockOnManager.checkForDeadTarget(targetIsActor)
 
-    if not CameraManager then CameraManager = managers.Camera end
-
     local targetObject = LockOnManager.getTargetObject()
-    local camState = CameraManager.getState()
+    local camState = GlobalManagement.Camera.state
 
-    camState.canDoLockOn = targetObject and (
-        (targetIsActor and camState.isWielding)
+    camState.canDoLockOn = targetObject ~= nil and (
+        (targetIsActor and GlobalManagement.Camera:isWielding())
     --or (not targetIsActor and not isWielding)
     )
 
@@ -281,7 +280,7 @@ function LockOnManager.onFrame(dt, managers)
         local normalizedPos = CamHelper.objectIsOnscreen(targetObject, not types.NPC.objectIsInstance(targetObject))
 
         if normalizedPos then
-            CameraManager:trackTargetUsingViewport(targetObject, normalizedPos)
+            GlobalManagement.Camera:trackTargetUsingViewport(targetObject, normalizedPos)
             LockOnManager:updateMarker {
                 transform = normalizedPos,
                 doUpdate = true,
@@ -303,6 +302,10 @@ end
 
 input.registerActionHandler('SW4_TargetLock', async:callback(LockOnManager.lockOnHandler))
 
-return function()
+---@param managementStore ManagementStore
+return function(managementStore)
+    assert(managementStore)
+    GlobalManagement = managementStore
+
     return LockOnManager
 end
