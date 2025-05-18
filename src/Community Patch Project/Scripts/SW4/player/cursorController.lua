@@ -1,3 +1,4 @@
+local async = require 'openmw.async'
 local camera = require 'openmw.camera'
 local input = require 'openmw.input'
 local util = require 'openmw.util'
@@ -84,6 +85,7 @@ function CursorController:onFrameBegin(dt)
     local showCursor = input.getBooleanActionValue('Run') and not markerVisible
 
     camera.showCrosshair(not showCursor)
+    I.Controls.overrideCombatControls(showCursor)
     self:setCursorPosition(self.state.cursorPos)
 
     Cursor.layout.props.size = util.vector2(CursorController.CursorSize, CursorController.CursorSize)
@@ -91,6 +93,12 @@ function CursorController:onFrameBegin(dt)
 
     self:setCursorVisible(showCursor)
 end
+
+input.bindAction('Use', async:callback(function()
+        if CursorController:getCursorVisible() then return false end
+        return input.isActionPressed(input.ACTION.Use)
+    end),
+    {})
 
 function CursorController:onFrame(dt)
     if self.state.changeThisFrame:length() == 0 then return end
