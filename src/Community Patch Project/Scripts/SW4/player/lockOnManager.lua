@@ -32,8 +32,11 @@ local GlobalManagement
 ---@field TargetColorW util.color Color applied to the target icon when target has 20% - 40% health. Mixes with TargetColorVW below 40%.
 ---@field TargetColorVW util.color Color applied to the target icon when target has 0% - 20% health. Mixes with TargetColorD below 20%.
 ---@field TargetColorD util.color Color applied to the target icon when target has <= 0% health.
-local LockOnManager = require 'Scripts.SW4.helper.protectedTable' ('SettingsGlobal' .. ModInfo.name .. 'LockOnGroup',
-    ModInfo)
+local LockOnManager = require 'Scripts.SW4.helper.protectedTable' {
+    inputGroupName = 'SettingsGlobal' .. ModInfo.name .. 'LockOnGroup',
+    logPrefix = ModInfo.logPrefix,
+    modName = ModInfo.name
+}
 
 LockOnManager.state = {
     targetObject = nil,

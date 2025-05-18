@@ -8,9 +8,11 @@ local ModInfo = require 'Scripts.SW4.modinfo'
 local GlobalManagement
 
 ---@class CameraManager
-local CameraManager = require 'Scripts.SW4.helper.protectedTable' (
-    'SettingsGlobal' .. ModInfo.name .. 'CoreGroup',
-    ModInfo)
+local CameraManager = require 'Scripts.SW4.helper.protectedTable' {
+    inputGroupName = 'SettingsGlobal' .. ModInfo.name .. 'CoreGroup',
+    modName = ModInfo.name,
+    logPrefix = ModInfo.logPrefix
+}
 
 ---@class CameraManagerState
 ---@field yawDelta number yaw change between current and last frame

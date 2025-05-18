@@ -31,7 +31,11 @@ local EngineMovementSettings = storage.playerSection('SettingsOMWControls')
 ---@field TurnDegreesPerSecondMax number
 ---@field TurnDegreesPerSecondMin number
 ---@field SideMovementMaxSpeed number
-local InputManager = require 'Scripts.SW4.helper.protectedTable' (SW4InputSectionName, ModInfo)
+local InputManager = require 'Scripts.SW4.helper.protectedTable' {
+    modName = ModInfo.name,
+    logPrefix = ModInfo.logPrefix,
+    inputGroupName = SW4InputSectionName,
+}
 
 local Enabled,
 MoveRampUpTimeMax,
@@ -121,7 +125,6 @@ function InputManager:processMovement(dt)
 
         movement = util.remap(CurrentForwardRampTime, 0.0, MoveRampUpTimeMax, MoveRampUpMinSpeed, newMax) *
             (movement < 0 and -1 or 1)
-
     elseif movement == -1 then
         CurrentForwardRampTime = math.min(MoveBackRampUpTimeMax, CurrentForwardRampTime + dt)
 
@@ -129,7 +132,6 @@ function InputManager:processMovement(dt)
 
         movement = util.remap(CurrentForwardRampTime, 0.0, MoveBackRampUpTimeMax, MoveBackRampUpMinSpeed,
             MoveBackRampUpMaxSpeed)
-
     else
         CurrentForwardRampTime = math.min(
             math.max(
@@ -139,7 +141,6 @@ function InputManager:processMovement(dt)
 
         movement = util.remap(CurrentForwardRampTime, 0.0, MoveRampDownTimeMax, 0.0, newMax)
             * (gameSelf.controls.movement < 0 and -1 or 1)
-
     end
 
     gameSelf.controls.movement = movement
