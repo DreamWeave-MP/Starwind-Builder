@@ -206,7 +206,7 @@ LockOnGroup:subscribe(async:callback(function(groupName, _)
     I.Settings.updateRendererArgument(groupName, 'TargetMinDistance', { max = (maxDistance - 1), disabled = disabled, })
     I.Settings.updateRendererArgument(groupName, 'TargetMaxDistance', { min = minDistance + 1, disabled = disabled, })
 
-    for _, settingName in ipairs { 'TargetLockIcon', 'TargetColorF', 'TargetColorVH', 'TargetColorH', 'TargetColorW', 'TargetColorVW', 'TargetColorD' } do
+    for _, settingName in ipairs { 'TargetLockIcon', 'SwitchOnDeadTarget', 'TargetColorF', 'TargetColorVH', 'TargetColorH', 'TargetColorW', 'TargetColorVW', 'TargetColorD' } do
         if settingName == 'TargetLockIcon' then
             I.Settings.updateRendererArgument(groupName, settingName,
                 { disabled = disabled, items = iconNames, l10n = ModInfo.l10nName, })
