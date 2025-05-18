@@ -4,6 +4,15 @@ local input = require 'openmw.input'
 local self = require('openmw.self')
 local ui = require('openmw.ui')
 
+--- [[
+--- FIX LIST:
+--- 1. Double-firing, use animation cancelling
+--- 2. Validation functions for Camera, Shoot, and Input settings
+--- 3. Break lock-on when LOS is broken
+--- 4. Better default values for blaster settings
+--- 5. Implement menus on the doors
+--- ]]
+
 require 'Scripts.SW4.input.actionRegistrations'
 
 local I = require('openmw.interfaces')
@@ -25,6 +34,8 @@ Managers.LockOn = require 'Scripts.SW4.player.lockOnManager' (Managers)
 Managers.Shoot = require 'scripts.sw4.player.shootHandler' (Managers)
 ---@type InputManager
 Managers.Input = require 'Scripts.SW4.player.inputController' (Managers)
+---@type CursorController
+Managers.Cursor = require 'Scripts.SW4.player.cursorController' (Managers)
 
 local ShowMessage = ui.showMessage
 
@@ -38,19 +49,8 @@ I.AnimationController.addTextKeyHandler("spellcast", function(group, key)
   end
 end)
 
-local util = require 'openmw.util'
-local CursorController = {}
-CursorController.state = {
-  cursorPos = util.vector2(0, 0),
-}
-
-function CursorController:onFrameBegin(dt)
-  self.state.cursorPos = self.state.cursorPos + util.vector2(input.getMouseMoveX(), input.getMouseMoveY())
-  -- print(self.state.cursorPos)
-end
-
 local OnFrameExecutionOrder = {
-  CursorController,
+  Managers.Cursor,
   Managers.Camera,
   Managers.Input,
   Managers.Shoot,
@@ -78,6 +78,7 @@ return {
   interface = {
     CamHelper = CamHelper,
     CameraManager = Managers.Camera,
+    CursorController = Managers.Cursor,
     InputManager = Managers.Input,
     LockOnManager = Managers.LockOn,
     MountFunctions = Managers.MountFunctions,
