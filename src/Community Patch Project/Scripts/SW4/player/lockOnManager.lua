@@ -1,4 +1,5 @@
 local async = require 'openmw.async'
+local aux_util = require 'openmw_aux.util'
 local camera = require 'openmw.camera'
 local gameSelf = require 'openmw.self'
 local input = require 'openmw.input'
@@ -10,6 +11,7 @@ local util = require 'openmw.util'
 
 local I = require 'openmw.interfaces'
 
+local CamHelper = require 'Scripts.SW4.helper.cameraHelper'
 local ModInfo = require 'scripts.sw4.modinfo'
 
 local CenterVector2 = util.vector2(0.5, 0.5)
@@ -107,6 +109,46 @@ function LockOnManager.getMarkerVisibility()
     end
 
     return visibility
+end
+
+---@param goLeft boolean whether to check the right or left side of screen space
+function LockOnManager:selectNearestTarget(goLeft)
+    local result = aux_util.findMinScore(nearby.actors, function(actor)
+        if actor.recordId == 'player' or actor == self.state.targetObject or actor.type.isDead(actor) then return false end
+
+        local screenPos = CamHelper.objectIsOnscreen(actor)
+
+        if not screenPos
+            or (goLeft and screenPos.x > 0.5)
+            or (not goLeft and screenPos.x < 0.5) then
+            return false
+        end
+
+        local LOSCheckPos = util.vector3(actor.position.x, actor.position.y,
+            actor.position.z + actor:getBoundingBox().halfSize.z * 2)
+
+        local checkLOSRay = nearby.castRay(camera.getPosition(), LOSCheckPos, {
+            ignore = {
+                gameSelf,
+            }
+        })
+
+        -- What if there's no hit...?
+        if checkLOSRay.hit then
+            if not checkLOSRay.hitObject or checkLOSRay.hitObject ~= actor then
+                return false
+            end
+        end
+
+        return (screenPos.xy - util.vector2(0.5, 0.5)):length()
+    end)
+
+    if not result then return end
+
+    self.state.targetObject = result
+    self.state.targetHealth = result.type.stats.dynamic.health(result)
+
+    return result
 end
 
 --- Depending on whether it already exists or not, creates the lock on marker

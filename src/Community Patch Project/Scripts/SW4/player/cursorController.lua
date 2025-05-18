@@ -7,6 +7,7 @@ local ModInfo = require 'scripts.sw4.modinfo'
 
 local I = require 'openmw.interfaces'
 
+---@type ManagementStore
 local GlobalManagement
 
 ---@class CursorController
@@ -59,6 +60,7 @@ function CursorController:onFrameBegin(dt)
     local ScreenSize = ui.screenSize()
 
     local changeThisFrame = util.vector2(input.getMouseMoveX(), input.getMouseMoveY()) * self.Sensitivity
+    local markerVisible = GlobalManagement.LockOn.getMarkerVisibility()
 
     self.state.changeThisFrame = changeThisFrame
 
@@ -69,10 +71,11 @@ function CursorController:onFrameBegin(dt)
 
     self.state.cumulativeXMove = self.state.cumulativeXMove + changeThisFrame.x
 
-    --- Need to check if the crosshair is actually visible when doing this
     if math.abs(self.state.cumulativeXMove) >= (self.TargetFlickThreshold * self.Sensitivity) and not self.state.flickTriggered then
-        print('Enage target switch please!')
-        self.state.flickTriggered = true
+        if not I.UI.getMode() and markerVisible then
+            GlobalManagement.LockOn:selectNearestTarget(self.state.cumulativeXMove < 0)
+            self.state.flickTriggered = true
+        end
     end
 
     if changeThisFrame:length() == 0 then
@@ -80,7 +83,7 @@ function CursorController:onFrameBegin(dt)
         self.state.flickTriggered = false
     end
 
-    local showCursor = input.getBooleanActionValue('Run')
+    local showCursor = input.getBooleanActionValue('Run') and not markerVisible
 
     camera.showCrosshair(not showCursor)
     self:setCursorPosition(self.state.cursorPos)
