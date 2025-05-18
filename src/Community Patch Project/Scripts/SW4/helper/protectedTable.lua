@@ -51,7 +51,7 @@ end
 
 ---@param constructorData ProtectedTableConstructor
 ---@return ProtectedTable
-return function(constructorData)
+local function new(constructorData)
   local requestedGroup = storage.globalSection(constructorData.inputGroupName)
 
   assert(constructorData.inputGroupName ~= nil and requestedGroup ~= nil,
@@ -61,6 +61,10 @@ return function(constructorData)
     thisGroup = requestedGroup,
     shadowSettings = {},
   }
+
+  if constructorData.subscribeHandler then
+    assert(type(constructorData.subscribeHandler) == 'function')
+  end
 
   ---@type ShadowTableSubscriptionHandler
   local handler = constructorData.subscribeHandler or defaultSubscribeHandler
@@ -154,3 +158,10 @@ This table is not writable and values must be updated through its associated sto
 
   return proxy
 end
+
+return {
+  interfaceName = 'StarwindVersion4ProtectedTable',
+  interface = {
+    new = new,
+  }
+}

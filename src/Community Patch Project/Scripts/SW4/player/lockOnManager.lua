@@ -8,6 +8,8 @@ local ui = require 'openmw.ui'
 ---@type openmw.util
 local util = require 'openmw.util'
 
+local I = require 'openmw.interfaces'
+
 local ModInfo = require 'scripts.sw4.modinfo'
 
 local CenterVector2 = util.vector2(0.5, 0.5)
@@ -20,7 +22,7 @@ local GlobalManagement
 
 --- TODO: Make a subscript function to reconstruct the vectors for the size remapping instead of reconstructing vectors on every call expensive!
 --- Refer to globalSettings.lua for field default values
----@class LockOnManager
+---@class LockOnManager:ProtectedTable
 ---@field TargetLockIcon string baseName of the texture file used for the lock-on icon
 ---@field TargetMinSize integer minimum size of the target lock icon
 ---@field TargetMaxSize integer maximum size of the target lock icon
@@ -32,7 +34,7 @@ local GlobalManagement
 ---@field TargetColorW util.color Color applied to the target icon when target has 20% - 40% health. Mixes with TargetColorVW below 40%.
 ---@field TargetColorVW util.color Color applied to the target icon when target has 0% - 20% health. Mixes with TargetColorD below 20%.
 ---@field TargetColorD util.color Color applied to the target icon when target has <= 0% health.
-local LockOnManager = require 'Scripts.SW4.helper.protectedTable' {
+local LockOnManager = I.StarwindVersion4ProtectedTable.new {
     inputGroupName = 'SettingsGlobal' .. ModInfo.name .. 'LockOnGroup',
     logPrefix = ModInfo.logPrefix,
     modName = ModInfo.name

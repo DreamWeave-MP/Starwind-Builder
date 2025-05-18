@@ -17,7 +17,7 @@ local SW4InputSection = storage.globalSection(SW4InputSectionName)
 local EngineMovementSettings = storage.playerSection('SettingsOMWControls')
 
 -- Setting-related movement state
----@class InputManager
+---@class InputManager:ProtectedTable
 ---@field Enabled boolean
 ---@field MoveRampUpTimeMax number
 ---@field MoveRampUpMinSpeed number
@@ -31,7 +31,7 @@ local EngineMovementSettings = storage.playerSection('SettingsOMWControls')
 ---@field TurnDegreesPerSecondMax number
 ---@field TurnDegreesPerSecondMin number
 ---@field SideMovementMaxSpeed number
-local InputManager = require 'Scripts.SW4.helper.protectedTable' {
+local InputManager = I.StarwindVersion4ProtectedTable.new {
     modName = ModInfo.name,
     logPrefix = ModInfo.logPrefix,
     inputGroupName = SW4InputSectionName,

@@ -4,11 +4,13 @@ local util = require 'openmw.util'
 
 local ModInfo = require 'Scripts.SW4.modinfo'
 
+local I = require 'openmw.interfaces'
+
 ---@type ManagementStore
 local GlobalManagement
 
----@class CameraManager
-local CameraManager = require 'Scripts.SW4.helper.protectedTable' {
+---@class CameraManager:ProtectedTable
+local CameraManager = I.StarwindVersion4ProtectedTable.new {
     inputGroupName = 'SettingsGlobal' .. ModInfo.name .. 'CoreGroup',
     modName = ModInfo.name,
     logPrefix = ModInfo.logPrefix
