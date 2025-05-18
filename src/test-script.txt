@@ -17,3 +17,5 @@ player->additem sw_blasterrifle 1
 player->additem sw_blastersniperark 1
 player->additem sw_blasterrepeaterlok 1
 player->additem sw_pistolblasternoshield 1
+player->additem sw_grenadelauncharkanian 1
+player->additem sw_grion 75
