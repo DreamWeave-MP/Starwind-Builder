@@ -523,6 +523,14 @@ I.Settings.registerGroup {
     permanentStorage = true,
     settings = {
         Setting(
+            'StartFromCenter',
+            'checkbox',
+            {},
+            'Reset Cursor Position',
+            'If this setting is enabled, the cursor will always reset back to the center point when it is no longger visible.',
+            true
+        ),
+        Setting(
             'Sensitivity',
             'number',
             { min = 0.001, max = 10.0, integer = false, },
