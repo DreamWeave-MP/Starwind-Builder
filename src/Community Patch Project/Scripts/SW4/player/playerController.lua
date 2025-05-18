@@ -1,6 +1,4 @@
-local camera = require('openmw.camera')
 local core = require('openmw.core')
-local input = require 'openmw.input'
 local self = require('openmw.self')
 local ui = require('openmw.ui')
 
@@ -11,6 +9,9 @@ local ui = require('openmw.ui')
 --- 3. Break lock-on when LOS is broken
 --- 4. Better default values for blaster settings
 --- 5. Implement menus on the doors
+--- 6. Make mousing to the edges of the screen turn the camera
+--- 7. Make the portraits!
+--- 8. Make cursor icons, and remake the crosshair icons at 128x128
 --- ]]
 
 require 'Scripts.SW4.input.actionRegistrations'
