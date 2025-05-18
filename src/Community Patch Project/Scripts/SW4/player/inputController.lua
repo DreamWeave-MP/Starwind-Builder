@@ -108,6 +108,7 @@ function InputManager:processMovement(dt)
     local sideMovement = input.getRangeActionValue('MoveRight') - input.getRangeActionValue('MoveLeft')
     local run = EngineMovementSettings:get('alwaysRun')
     local strafeInsteadOfTurn = input.getBooleanActionValue('Run') or GlobalManagement.LockOn.getMarkerVisibility()
+    local hasSpeederEquipped = GlobalManagement.MountFunctions.hasSpeederEquipped()
 
     if movement ~= 0 then
         autoMove = false
@@ -124,7 +125,11 @@ function InputManager:processMovement(dt)
         CurrentForwardRampTime = CurrentForwardRampTime * MoveRampUpMaxSpeed
     end
 
-    if movement == 1 or autoMove then
+    --- Don't ramp, walk, or strafe on a speeder
+    if hasSpeederEquipped then
+        CurrentForwardRampTime = 0.0
+        run = true
+    elseif movement == 1 or autoMove then
         CurrentForwardRampTime = math.min(MoveRampUpTimeMax, CurrentForwardRampTime + dt)
 
         newMax = strafeInsteadOfTurn and MoveSpeedPeak or MoveRampUpMaxSpeed
@@ -151,7 +156,7 @@ function InputManager:processMovement(dt)
 
     gameSelf.controls.movement = movement
 
-    if strafeInsteadOfTurn then
+    if strafeInsteadOfTurn and not hasSpeederEquipped then
         gameSelf.controls.sideMovement = math.min(
                 math.abs(sideMovement), SideMovementMaxSpeed
             ) *
