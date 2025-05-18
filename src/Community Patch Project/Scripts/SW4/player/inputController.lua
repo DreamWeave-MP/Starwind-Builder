@@ -95,8 +95,14 @@ SW4InputSection:subscribe(async:callback(function()
     InputManager:updateSettings()
 end))
 
+local function controlsAllowed()
+    return not core.isWorldPaused()
+        and Player.getControlSwitch(gameSelf, Player.CONTROL_SWITCH.Controls)
+        and not I.UI.getMode()
+end
+
 function InputManager:processMovement(dt)
-    if I.UI.getMode() then return end
+    if not controlsAllowed() then return end
 
     local movement = input.getRangeActionValue('MoveForward') - input.getRangeActionValue('MoveBackward')
     local sideMovement = input.getRangeActionValue('MoveRight') - input.getRangeActionValue('MoveLeft')
@@ -175,12 +181,6 @@ function InputManager:processMovement(dt)
     if not EngineMovementSettings:get('toggleSneak') then
         gameSelf.controls.sneak = input.getBooleanActionValue('Sneak')
     end
-end
-
-local function controlsAllowed()
-    return not core.isWorldPaused()
-        and Player.getControlSwitch(gameSelf, Player.CONTROL_SWITCH.Controls)
-        and not I.UI.getMode()
 end
 
 local function movementAllowed()
