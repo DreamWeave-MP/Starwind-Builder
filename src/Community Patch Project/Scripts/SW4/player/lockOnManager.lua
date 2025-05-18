@@ -1,8 +1,8 @@
 local async = require 'openmw.async'
 local camera = require 'openmw.camera'
+local gameSelf = require 'openmw.self'
 local input = require 'openmw.input'
 local nearby = require 'openmw.nearby'
-local gameSelf = require 'openmw.self'
 local types = require 'openmw.types'
 local ui = require 'openmw.ui'
 ---@type openmw.util
@@ -37,7 +37,8 @@ local GlobalManagement
 local LockOnManager = I.StarwindVersion4ProtectedTable.new {
     inputGroupName = 'SettingsGlobal' .. ModInfo.name .. 'LockOnGroup',
     logPrefix = ModInfo.logPrefix,
-    modName = ModInfo.name
+    modName = ModInfo.name,
+    subscribeHandler = false,
 }
 
 LockOnManager.state = {
