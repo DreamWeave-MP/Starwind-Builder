@@ -60,9 +60,10 @@ function LockOnManager:updateMarker(markerUpdateData)
     element.layout.props.color = self:getIconColor()
     element.layout.props.relativePosition = markerUpdateData.transform.xy
 
-    if LockOnManager.TargetLockIcon ~= LockOnManager.state.currentTexture then
-        LockOnManager.state.currentTexture = LockOnManager.getLockOnFileName(LockOnManager.TargetLockIcon)
-        element.layout.props.resource = ui.texture { path = LockOnManager.state.currentTexture }
+    local configuredTexture = LockOnManager.TargetLockIcon
+    if configuredTexture ~= LockOnManager.state.currentTexture then
+        LockOnManager.state.currentTexture = configuredTexture
+        element.layout.props.resource = ui.texture { path = LockOnManager.getLockOnFileName(configuredTexture) }
     end
 
     if markerUpdateData.doUpdate ~= true then return end
