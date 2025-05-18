@@ -20,8 +20,8 @@ local function pairsByKeys(t, f)
 end
 
 ---@type ShadowTableSubscriptionHandler
-local function defaultSubscribeHandler(shadowSettings, group, _)
-  for k, v in pairs(storage.globalSection(group):asTable()) do
+local function defaultSubscribeHandler(shadowSettings, group, groupName, key)
+  for k, v in pairs(group:asTable()) do
     shadowSettings[k] = v
   end
 end
@@ -40,14 +40,14 @@ end
 ---@field debuglog fun(any) If debug logging setting is enabled, then prints the arguments to log, as a concatenated table
 
 ---@alias ShadowSettingsTable table<string, any>
----@alias ShadowTableSubscriptionHandler fun(shadowSettings: ShadowSettingsTable, group: string, key: string)
+---@alias ShadowTableSubscriptionHandler fun(shadowSettings: ShadowSettingsTable, group: StorageSection, groupName: string, key: string)
 
 ---@class ProtectedTableConstructor
 ---@field modName string Used for the __tostring method
 ---@field logPrefix string
 ---@field inputGroupName string name of the *global* storage section to use
 ---@field managerName string? optional name to override inputGroupName in the __tostring method
----@field subscribeHandler ShadowTableSubscriptionHandler? override function to use instead of the default subscription handler
+---@field subscribeHandler ShadowTableSubscriptionHandler|false? override function to use instead of the default subscription handler. Since global sections may not be written from local scripts, an explicit value of `false` can be used to indicate no subscription at all.
 
 ---@param constructorData ProtectedTableConstructor
 ---@return ProtectedTable
@@ -67,10 +67,13 @@ local function new(constructorData)
   end
 
   ---@type ShadowTableSubscriptionHandler
-  local handler = constructorData.subscribeHandler or defaultSubscribeHandler
-  requestedGroup:subscribe(async:callback(function(group, key)
-    handler(proxy.shadowSettings, group, key)
-  end))
+  local handler = constructorData.subscribeHandler ~= nil and constructorData.subscribeHandler or defaultSubscribeHandler
+
+  if not (type(constructorData.subscribeHandler) == 'boolean' and constructorData.subscribeHandler == false) then
+    requestedGroup:subscribe(async:callback(function(groupName, key)
+      handler(proxy.shadowSettings, requestedGroup, groupName, key)
+    end))
+  end
 
   local state = {}
   local methods = {}
