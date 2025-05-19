@@ -26,6 +26,7 @@ local GlobalManagement
 --- Refer to globalSettings.lua for field default values
 ---@class LockOnManager:ProtectedTable
 ---@field SwitchOnDeadTarget boolean whether or not to automatically select the nearest (screen-space) target when the current one dies
+---@field CheckLOS boolean whether to use line-of-sight when deciding whether to break a target lock
 ---@field TargetLockIcon string baseName of the texture file used for the lock-on icon
 ---@field TargetMinSize integer minimum size of the target lock icon
 ---@field TargetMaxSize integer maximum size of the target lock icon
@@ -300,6 +301,16 @@ function LockOnManager:onFrame(dt)
 
     local targetObject = LockOnManager.getTargetObject()
     local camState = GlobalManagement.Camera.state
+
+    if self.CheckLOS and targetObject then
+        local LOStest = nearby.castRay(camera.getPosition(), targetObject:getBoundingBox().center,
+            { ignore = { gameSelf, } })
+
+        if not LOStest.hit or not LOStest.hitObject or LOStest.hitObject ~= targetObject then
+            LockOnManager.state.targetObject = nil
+            LockOnManager.state.targetHealth = nil
+        end
+    end
 
     camState.canDoLockOn = targetObject ~= nil and (
         (targetIsActor and GlobalManagement.Camera:isWielding())

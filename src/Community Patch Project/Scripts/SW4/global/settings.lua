@@ -111,6 +111,14 @@ I.Settings.registerGroup {
             true
         ),
         Setting(
+            'CheckLOS',
+            'checkbox',
+            {},
+            'Use Line-of-Sight Checks',
+            'If enabled, uses line of sight to break target locking if you can\'t see the enemy. DISabled by default to improve performance.',
+            false
+        ),
+        Setting(
             'TargetMinSize',
             'number',
             { min = 0, max = 64, integer = true },
