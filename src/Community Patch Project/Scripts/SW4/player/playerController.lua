@@ -60,9 +60,11 @@ local OnFrameExecutionOrder = {
 
 ---@enum FrameHandlerType
 local FrameHandlerType = {
+  Early = 'onFrameEarly',
   Begin = 'onFrameBegin',
   Middle = 'onFrame',
   End = 'onFrameEnd',
+  Late = 'onFrameLate',
 }
 
 ---@param frameHandlerType FrameHandlerType
@@ -87,9 +89,11 @@ return {
   },
   engineHandlers = {
     onFrame = function(dt)
+      onFrameSubsystems(FrameHandlerType.Early, dt)
       onFrameSubsystems(FrameHandlerType.Begin, dt)
       onFrameSubsystems(FrameHandlerType.Middle, dt)
       onFrameSubsystems(FrameHandlerType.End, dt)
+      onFrameSubsystems(FrameHandlerType.Late, dt)
     end,
     onUpdate = function(dt)
       Managers.MountFunctions.onUpdate(dt)
