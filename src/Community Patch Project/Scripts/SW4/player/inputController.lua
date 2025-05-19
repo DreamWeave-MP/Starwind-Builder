@@ -212,11 +212,15 @@ function InputManager:processMovement(dt)
                 (mouseMoveThisFrame.x < 0 and -1 or 1)
 
             gameSelf.controls.yawChange = math.rad(turnRadiusBase)
+
+            gameSelf.controls.sideMovement = math.min(
+                    math.abs(sideMovement), SideMovementMaxSpeed
+                ) *
+                (sideMovement < 0 and -1 or 1)
         else
             gameSelf.controls.yawChange = math.rad(sideMovement * turnSpeed * dt)
+            gameSelf.controls.sideMovement = 0
         end
-
-        gameSelf.controls.sideMovement = 0
     end
 
     if doQuickTurn then
