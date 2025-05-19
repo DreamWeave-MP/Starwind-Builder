@@ -145,7 +145,7 @@ function CursorController:setCursorSize(newSize)
 end
 
 function CursorController:getNormalizedCursorPosition()
-    return self.state.cursorPos:normalize()
+    return self.state.cursorPos:ediv(ui.screenSize())
 end
 
 function CursorController:getCursorMove()
