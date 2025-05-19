@@ -19,6 +19,10 @@ local EngineMovementSettings = storage.playerSection('SettingsOMWControls')
 -- Setting-related movement state
 ---@class InputManager:ProtectedTable
 ---@field Enabled boolean
+---@field TurnByWheel boolean
+---@field UseQuickTurn boolean
+---@field QuickTurnMult integer
+---@field QuickTurnTimeWindow number
 ---@field MoveRampUpTimeMax number
 ---@field MoveRampUpMinSpeed number
 ---@field MoveRampUpMaxSpeed number
@@ -55,10 +59,13 @@ newMax
 -- non-setting movement state
 local CurrentForwardRampTime = 0.0
 local CurrentTurnRampTime = 0.0
+local lastPressedBackTime = 0.0
+local degreesTurned = 0
 local autoMove = false
 local attemptToJump = false
 local movementControlsOverridden = false
 local didPressRun = false
+local doQuickTurn = false
 
 ---@type ManagementStore
 local GlobalManagement
@@ -101,10 +108,32 @@ local function controlsAllowed()
         and not I.UI.getMode()
 end
 
-function InputManager:processMovement(dt)
-    if not controlsAllowed() then return end
+local function movementAllowed()
+    return controlsAllowed() and not movementControlsOverridden
+end
 
-    local movement = input.getRangeActionValue('MoveForward') - input.getRangeActionValue('MoveBackward')
+input.registerActionHandler('MoveBackward',
+    async:callback(
+        function(state)
+            if not InputManager.Enabled or not InputManager.UseQuickTurn or not state or state == 0 then return end
+
+            local currentTime = core.getRealTime()
+
+            if currentTime - lastPressedBackTime < InputManager.QuickTurnTimeWindow then
+                doQuickTurn = true
+            end
+
+            lastPressedBackTime = currentTime
+        end
+    )
+)
+
+function InputManager:processMovement(dt)
+    if not movementAllowed() then return end
+
+    local MoveBackward = input.getRangeActionValue('MoveBackward')
+
+    local movement = input.getRangeActionValue('MoveForward') - MoveBackward
     local sideMovement = input.getRangeActionValue('MoveRight') - input.getRangeActionValue('MoveLeft')
     local run = EngineMovementSettings:get('alwaysRun')
     local strafeInsteadOfTurn = input.getBooleanActionValue('Run') or GlobalManagement.LockOn.getMarkerVisibility()
@@ -155,8 +184,9 @@ function InputManager:processMovement(dt)
     end
 
     gameSelf.controls.movement = movement
+    local CursorManager = GlobalManagement.Cursor
 
-    if strafeInsteadOfTurn and not hasSpeederEquipped and not GlobalManagement.Cursor:getCursorVisible() then
+    if strafeInsteadOfTurn and not hasSpeederEquipped and not CursorManager:getCursorVisible() then
         gameSelf.controls.sideMovement = math.min(
                 math.abs(sideMovement), SideMovementMaxSpeed
             ) *
@@ -174,8 +204,30 @@ function InputManager:processMovement(dt)
                 TurnDegreesPerSecondMax)
         )
 
-        gameSelf.controls.yawChange = math.rad(sideMovement * turnSpeed * dt)
+        if self.TurnByWheel and input.isMouseButtonPressed(2) and CursorManager:getCursorVisible()
+        then
+            local mouseMoveThisFrame = CursorManager.state.changeThisFrame
+
+            local turnRadiusBase = mouseMoveThisFrame:length() * CursorManager.Sensitivity *
+                (mouseMoveThisFrame.x < 0 and -1 or 1)
+
+            gameSelf.controls.yawChange = math.rad(turnRadiusBase)
+        else
+            gameSelf.controls.yawChange = math.rad(sideMovement * turnSpeed * dt)
+        end
+
         gameSelf.controls.sideMovement = 0
+    end
+
+    if doQuickTurn then
+        local turnThisFrame = math.rad(180 * dt * self.QuickTurnMult)
+        gameSelf.controls.yawChange = turnThisFrame
+
+        degreesTurned = degreesTurned + turnThisFrame
+        if degreesTurned >= math.rad(180) then
+            doQuickTurn = false
+            degreesTurned = 0
+        end
     end
 
     gameSelf.controls.run = run
@@ -186,10 +238,6 @@ function InputManager:processMovement(dt)
     if not EngineMovementSettings:get('toggleSneak') then
         gameSelf.controls.sneak = input.getBooleanActionValue('Sneak')
     end
-end
-
-local function movementAllowed()
-    return controlsAllowed() and not movementControlsOverridden
 end
 
 input.registerTriggerHandler('Jump', async:callback(function()
