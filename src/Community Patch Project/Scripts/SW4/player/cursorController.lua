@@ -20,8 +20,16 @@ local GlobalManagement
 
 ---@class CursorController
 ---@field StartFromCenter boolean whether or not the cursor starts from the center of the screen each time it is brought back up
+---@field ShowBanner boolean
 ---@field IconName string basename of the icon path for the cursor
 ---@field TargetFlickThreshold number Length of continuous movement required to switch targets
+---@field BannerFontSize integer
+---@field DefaultColor util.color Default cursor color for non-interactive or out-of-range objects
+---@field FriendlyActorColor util.color Cursor color used for friendly actors but whom are not vendors or service providers
+---@field FightingActorColor util.color Cursor color used for actors whom are in combat
+---@field ServiceActorColor util.color Cursor color used for actors whom provide some service
+---@field LockedColor util.color Cursor color used for locked objects
+---@field TeleportDoorColor util.color Cursor color used for teleport doors
 ---@field Sensitivity number input sensitivity (multiplier)
 ---@field CursorSize number integer size of the icon
 ---@field XAnchor number float X-axis anchor
@@ -31,6 +39,10 @@ local CursorController = I.StarwindVersion4ProtectedTable.new {
     logPrefix = ModInfo.logPrefix,
     inputGroupName = 'SettingsGlobal' .. ModInfo.name .. 'CursorGroup',
 }
+
+function CursorController.getCursorIcon(baseName)
+    return ('textures/sw4/cursor/%s.dds'):format(baseName)
+end
 
 function CursorController:startPos()
     return ui.screenSize() / 2
@@ -95,7 +107,7 @@ local CursorBanner = ui.create {
                 size = BannerSize,
                 text = '',
                 textColor = Constants.normalColor,
-                textSize = 24,
+                textSize = CursorController.BannerFontSize,
                 textAlignH = ui.ALIGNMENT.Center,
                 textAlignV = ui.ALIGNMENT.Center,
                 wordWrap = true,
@@ -104,10 +116,6 @@ local CursorBanner = ui.create {
         },
     }
 }
-
-function CursorController.getCursorIcon(baseName)
-    return ('textures/sw4/cursor/%s.dds'):format(baseName)
-end
 
 function CursorController:getCursor()
     return Cursor
@@ -157,13 +165,15 @@ function CursorController:onFrameBegin(dt)
     I.Controls.overrideCombatControls(showCursor)
     self:setCursorPosition(self.state.cursorPos)
 
+    local cursorProps = Cursor.layout.props
     if CursorController.IconName ~= CursorController.state.configuredTexture then
         CursorController.state.configuredTexture = CursorController.IconName
-        Cursor.layout.props.resource = ui.texture { path = CursorController.getCursorIcon(CursorController.IconName) }
+        cursorProps.resource = ui.texture { path = CursorController.getCursorIcon(CursorController.IconName) }
     end
 
-    Cursor.layout.props.size = util.vector2(CursorController.CursorSize, CursorController.CursorSize)
-    Cursor.layout.props.anchor = util.vector2(CursorController.XAnchor, CursorController.YAnchor)
+    cursorProps.size = util.vector2(CursorController.CursorSize, CursorController.CursorSize)
+    cursorProps.anchor = util.vector2(CursorController.XAnchor, CursorController.YAnchor)
+    cursorProps.color = self:getCursorColor(self.state.currentTarget)
 
     self:setCursorVisible(showCursor)
 end
@@ -194,28 +204,71 @@ input.registerActionHandler('Run', async:callback(function(state)
     CursorController.state.shouldShow = not CursorController.state.shouldShow
 end))
 
-function CursorController:onFrame(dt)
-    if not self:shouldShowCursor() then return end
-    local rayResult = self:getObjectUnderMouse()
+---@param targetActor userdata
+---@return boolean hasServices whether the actor provides any service or not
+function CursorController.actorProvidesServices(targetActor)
+    assert(types.Actor.objectIsInstance(targetActor))
+    local services = targetActor.type.records[targetActor.recordId].servicesOffered
 
-    if not rayResult then return end
-    local scannedObject = rayResult.hitObject
-    local objectName = scannedObject.type.records[scannedObject.recordId].name
+    for _, hasService in pairs(services) do
+        if hasService then return true end
+    end
+
+    return false
+end
+
+function CursorController:getCursorColor(targetObject)
+    if not targetObject or types.Static.objectIsInstance(targetObject) then
+        return self.DefaultColor
+    elseif types.Actor.objectIsInstance(targetObject) then
+        if targetObject.type.getStance(targetObject) == targetObject.type.STANCE.Nothing then
+            if canActivate then
+                if self.actorProvidesServices(targetObject) then
+                    return self.ServiceActorColor
+                end
+
+                return self.FriendlyActorColor
+            end
+        else
+            return self.FightingActorColor
+        end
+    elseif types.Lockable.objectIsInstance(targetObject) and types.Lockable.isLocked(targetObject) and canActivate then
+        return self.LockedColor
+    elseif types.Door.objectIsInstance(targetObject) and types.Door.isTeleport(targetObject) and canActivate then
+        return self.TeleportDoorColor
+    end
+
+    return canActivate and self.FriendlyActorColor or self.DefaultColor
+end
+
+function CursorController:updateBanner(targetObject)
+    local objectName = targetObject.type.records[targetObject.recordId].name
 
     local bannerProps = CursorBanner.layout.props
-    bannerProps.visible = objectName ~= nil
+    bannerProps.visible = self.ShowBanner and objectName ~= nil
 
     if objectName then
-        self.state.currentTarget = scannedObject
+        self.state.currentTarget = targetObject
 
         local bannerTextProps = CursorBanner.layout.content.SW4_CursorBannerText.props
         bannerTextProps.textColor = canActivate and LightColor or DarkColor
         bannerTextProps.text = objectName
+        bannerTextProps.textSize = self.BannerFontSize
     else
         self.state.currentTarget = nil
     end
 
     CursorBanner:update()
+end
+
+function CursorController:onFrame(dt)
+    if not self:shouldShowCursor() then return end
+    local rayResult = self:getObjectUnderMouse()
+
+    if rayResult then
+        self:updateBanner(rayResult.hitObject)
+    end
+
 
     if self.state.changeThisFrame:length() == 0 then return end
 end

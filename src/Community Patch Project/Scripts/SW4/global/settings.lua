@@ -586,6 +586,14 @@ I.Settings.registerGroup {
             true
         ),
         Setting(
+            'ShowBanner',
+            'checkbox',
+            {},
+            'Show Selection Banner',
+            'When an object is highlighted by the SW4 cursor, its name (or destination, if it\'s a teleport door) will appear on screen.\nSet this to false, to hide that window entirely.',
+            true
+        ),
+        Setting(
             'Sensitivity',
             'number',
             { min = 0.001, max = 10.0, integer = false, },
@@ -624,6 +632,63 @@ I.Settings.registerGroup {
             'Y Axis Anchor',
             'Center point for the crosshair image on the Y axis.\n0 is all the way at the top, while 1 is all the way at the bottom.',
             0.5
+        ),
+        Setting(
+            'BannerFontSize',
+            'number',
+            { min = 8, max = 40, integer = true },
+            'Banner Font Size',
+            'Font size of area/object names',
+            24
+        ),
+        Setting(
+            'DefaultColor',
+            'color',
+            {},
+            'Default Color',
+            'Cursor color when there is no highlighted object or it is non-interactive',
+            util.color.hex('034a3d')
+        ),
+        Setting(
+            'FriendlyActorColor',
+            'color',
+            {},
+            'Friendly Color',
+            'Cursor color for friendly actors',
+            util.color.hex('0df8cc')
+        ),
+        -- This should probably be changed to explicitly being for enemies
+        Setting(
+            'FightingActorColor',
+            'color',
+            {},
+            'Hostile Color',
+            'Cursor color for actors in combat',
+            util.color.hex('f80d39')
+        ),
+        Setting(
+            'ServiceActorColor',
+            'color',
+            {},
+            'Service/Vendor Cursor Color',
+            'Cursor color for vendors/servicepeople',
+            util.color.hex('f8cc0d')
+        ),
+        Setting(
+            'LockedColor',
+            'color',
+            {},
+            'Locked Cursor Color',
+            'Cursor color for locked objects',
+            util.color.hex('166305')
+        ),
+        Setting(
+            'TeleportDoorColor',
+            'color',
+            {},
+            'Teleport Door Cursor Color',
+            'Cursor color for teleport doors.',
+            util.color.hex('cc0df8')
         ),
     }
 }
