@@ -20,6 +20,7 @@ local GlobalManagement
 
 ---@class CursorController
 ---@field StartFromCenter boolean whether or not the cursor starts from the center of the screen each time it is brought back up
+---@field IconName string basename of the icon path for the cursor
 ---@field TargetFlickThreshold number Length of continuous movement required to switch targets
 ---@field Sensitivity number input sensitivity (multiplier)
 ---@field CursorSize number integer size of the icon
@@ -42,6 +43,7 @@ CursorController.state = {
     currentTarget = nil,
     cumulativeXMove = 0,
     flickTriggered = false,
+    configuredTexture = CursorController.IconName,
 }
 
 local Cursor = ui.create {
@@ -51,7 +53,7 @@ local Cursor = ui.create {
     props = {
         size = util.vector2(CursorController.CursorSize, CursorController.CursorSize),
         anchor = util.vector2(CursorController.XAnchor, CursorController.YAnchor),
-        resource = ui.texture { path = 'textures/target.dds' },
+        resource = ui.texture { path = CursorController.getCursorIcon(CursorController.IconName) },
         position = CursorController:startPos(),
         visible = false,
     }
@@ -154,6 +156,11 @@ function CursorController:onFrameBegin(dt)
     camera.showCrosshair(not showCursor)
     I.Controls.overrideCombatControls(showCursor)
     self:setCursorPosition(self.state.cursorPos)
+
+    if CursorController.IconName ~= CursorController.state.configuredTexture then
+        CursorController.state.configuredTexture = CursorController.IconName
+        Cursor.layout.props.resource = ui.texture { path = CursorController.getCursorIcon(CursorController.IconName) }
+    end
 
     Cursor.layout.props.size = util.vector2(CursorController.CursorSize, CursorController.CursorSize)
     Cursor.layout.props.anchor = util.vector2(CursorController.XAnchor, CursorController.YAnchor)

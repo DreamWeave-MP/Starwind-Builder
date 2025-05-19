@@ -9,10 +9,17 @@ local I = require 'openmw.interfaces'
 local ModInfo = require 'scripts.sw4.modinfo'
 
 local iconNames = {}
+local cursorIconNames = {}
 
 for icon in vfs.pathsWithPrefix('textures/sw4/crosshair/') do
     if icon:find('.dds') then
         iconNames[#iconNames + 1] = icon:match(".*/(.-)%.")
+    end
+end
+
+for icon in vfs.pathsWithPrefix('textures/sw4/cursor/') do
+    if icon:find('.dds') then
+        cursorIconNames[#cursorIconNames + 1] = icon:match(".*/(.-)%.")
     end
 end
 
@@ -562,6 +569,14 @@ I.Settings.registerGroup {
     name = 'Cursor Settings',
     permanentStorage = true,
     settings = {
+        Setting(
+            'IconName',
+            'select',
+            { items = cursorIconNames, l10n = ModInfo.l10nName },
+            'Cursor Icon',
+            '',
+            'starburst'
+        ),
         Setting(
             'StartFromCenter',
             'checkbox',
