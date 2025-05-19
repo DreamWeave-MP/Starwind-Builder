@@ -424,6 +424,22 @@ I.Settings.registerGroup {
             true
         ),
         Setting(
+            'TurnByWheel',
+            'checkbox',
+            {},
+            'Turn With Mouse Wheel',
+            'If enabled, can turn whilst holding the mouse wheel and moving the mouse left or right. Respects mouse sensitivity setting.',
+            true
+        ),
+        Setting(
+            'UseQuickTurn',
+            'checkbox',
+            {},
+            'Enable quick turning',
+            'Double-tap the Move Backward input to do a 180 turn.',
+            true
+        ),
+        Setting(
             'MoveRampUpTimeMax',
             'number',
             { min = 0.0, max = 5.0, integer = false },
@@ -518,6 +534,22 @@ I.Settings.registerGroup {
             'Side Movement Max Speed',
             'Maximum speed when moving sideways, as a percentage.',
             0.75
+        ),
+        Setting(
+            'QuickTurnMult',
+            'number',
+            { min = 1, max = 60, integer = true, },
+            'Quick Turn Speed Multiplier',
+            'Multiplier for turn speed when using quick turn. When set to 1, it will take a full second to turn all the way around.\nSet to 5, it will take 1/5th of a second, etc.',
+            5
+        ),
+        Setting(
+            'QuickTurnTimeWindow',
+            'number',
+            { min = 0.01, max = 1.0, },
+            'Quick Turn Time Window',
+            'Duration of time allowed between presses to engage a quick turn.',
+            0.2
         ),
     }
 }
