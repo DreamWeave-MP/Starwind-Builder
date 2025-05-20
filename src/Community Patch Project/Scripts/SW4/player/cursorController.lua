@@ -202,6 +202,11 @@ input.registerActionHandler('Run', async:callback(function(state)
     if not state then return end
 
     CursorController.state.shouldShow = not CursorController.state.shouldShow
+
+    --- Start from the center only when the user *manually* disables the cursor, other UI mode changes should preserve the original position like the engine cursor
+    if CursorController.StartFromCenter and not CursorController.state.shouldShow then
+        CursorController:setCursorPosition(ui.screenSize() / 2)
+    end
 end))
 
 ---@param targetActor userdata

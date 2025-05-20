@@ -634,7 +634,7 @@ I.Settings.registerGroup {
             {},
             'Reset Cursor Position',
             'If this setting is enabled, the cursor will always reset back to the center point when it is no longger visible.',
-            true
+            false
         ),
         Setting(
             'ShowBanner',
