@@ -132,7 +132,13 @@ function CursorController:shouldShowCursor()
         and camera.getMode() ~= camera.MODE.FirstPerson
 end
 
+--- However appropriate, implement X and Y axis scaling and inversion
 function CursorController:onFrameBegin(dt)
+    -- HACK: The internal cursor's position does not change if a UI mode is not up
+    -- However, ours does. We have to disable position tracking when a UI mode is up.
+    -- Which, naturally, is quite a bitch, as we will essentially have to roll our own UI modes to use this cursor if it actually works.
+    -- Or, maybe later, we *could* just make the normal cursor icon invisible.
+
     local ScreenSize = ui.screenSize()
 
     local changeThisFrame = util.vector2(input.getMouseMoveX(), input.getMouseMoveY()) * self.Sensitivity
@@ -140,10 +146,12 @@ function CursorController:onFrameBegin(dt)
 
     self.state.changeThisFrame = changeThisFrame
 
-    self.state.cursorPos = util.vector2(
-        util.clamp(self.state.cursorPos.x + changeThisFrame.x, 0, ScreenSize.x),
-        util.clamp(self.state.cursorPos.y + changeThisFrame.y, 0, ScreenSize.y)
-    )
+    if not I.UI.getMode() then
+        self.state.cursorPos = util.vector2(
+            util.clamp(self.state.cursorPos.x + changeThisFrame.x, 0, ScreenSize.x),
+            util.clamp(self.state.cursorPos.y + changeThisFrame.y, 0, ScreenSize.y)
+        )
+    end
 
     self.state.cumulativeXMove = self.state.cumulativeXMove + changeThisFrame.x
 
