@@ -1,4 +1,5 @@
 local camera = require 'openmw.camera'
+local gameSelf = require 'openmw.self'
 local ui = require 'openmw.ui'
 local util = require 'openmw.util'
 
@@ -90,8 +91,9 @@ function CrosshairManager:onFrameLate(dt)
     if not self.ReplaceCrosshair then return end
 
     local show = not GlobalManagement.LockOn.getMarkerVisibility()
-        and not GlobalManagement.Cursor:getCursorVisible() and
-        not I.UI.getMode()
+        and not GlobalManagement.Cursor:getCursorVisible()
+        and not I.UI.getMode()
+        and not gameSelf.controls.sneak
 
     local crosshairProps = SW4Crosshair.layout.props
     if show ~= crosshairProps.visible then
