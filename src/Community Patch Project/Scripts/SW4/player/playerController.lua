@@ -37,6 +37,8 @@ Managers.Shoot = require 'scripts.sw4.player.shootHandler' (Managers)
 Managers.Input = require 'Scripts.SW4.player.inputController' (Managers)
 ---@type CursorController
 Managers.Cursor = require 'Scripts.SW4.player.cursorController' (Managers)
+---@type CrosshairManager
+Managers.Crosshair = require 'Scripts.SW4.player.crosshairManager' (Managers)
 
 local ShowMessage = ui.showMessage
 
@@ -55,7 +57,8 @@ local OnFrameExecutionOrder = {
   Managers.Camera,
   Managers.Input,
   Managers.Shoot,
-  Managers.LockOn
+  Managers.LockOn,
+  Managers.Crosshair,
 }
 
 ---@enum FrameHandlerType

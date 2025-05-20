@@ -232,6 +232,49 @@ LockOnGroup:subscribe(async:callback(function(groupName, _)
 end))
 
 I.Settings.registerGroup {
+    key = 'SettingsGlobal' .. ModInfo.name .. 'CrosshairGroup',
+    page = ModInfo.name .. 'CorePage',
+    order = 3,
+    l10n = ModInfo.name,
+    name = 'Crosshair',
+    permanentStorage = true,
+    settings = {
+        Setting(
+            'ReplaceCrosshair',
+            'checkbox',
+            {},
+            'Replace Crosshair',
+            'Whether to use SW4\'s replacement crosshair or not.\nCrosshairs are stored as an 8x8 texture atlas.',
+            true
+        ),
+        Setting(
+            'CrosshairRow',
+            'number',
+            { min = 0, max = 7, integer = true, },
+            'Crosshair Selection Row',
+            'Crosshairs are stored as an 8x8 texture atlas. This setting determines what row the used crosshair is selected from.',
+            7
+        ),
+        Setting(
+            'CrosshairColumn',
+            'number',
+            { min = 0, max = 7, integer = true, },
+            'Crosshair Selection Column',
+            'Crosshairs are stored as an 8x8 texture atlas. This setting determines what column the used crosshair is selected from.',
+            7
+        ),
+        Setting(
+            'CrosshairColor',
+            'color',
+            {},
+            'Crosshair Color',
+            '',
+            util.color.hex('0df8cc')
+        ),
+    },
+}
+
+I.Settings.registerGroup {
     key = 'SettingsGlobal' .. ModInfo.name .. 'BlasterGroupAutomatic',
     page = ModInfo.name .. 'BlasterPage',
     order = 0,
