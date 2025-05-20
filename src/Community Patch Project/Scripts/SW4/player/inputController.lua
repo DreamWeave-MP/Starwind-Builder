@@ -102,14 +102,14 @@ SW4InputSection:subscribe(async:callback(function()
     InputManager:updateSettings()
 end))
 
-local function controlsAllowed()
+function InputManager.controlsAllowed()
     return not core.isWorldPaused()
         and Player.getControlSwitch(gameSelf, Player.CONTROL_SWITCH.Controls)
         and not I.UI.getMode()
 end
 
-local function movementAllowed()
-    return controlsAllowed() and not movementControlsOverridden
+function InputManager.movementAllowed()
+    return InputManager.controlsAllowed() and not movementControlsOverridden
 end
 
 input.registerActionHandler('MoveBackward',
@@ -129,7 +129,7 @@ input.registerActionHandler('MoveBackward',
 )
 
 function InputManager:processMovement(dt)
-    if not movementAllowed() then return end
+    if not InputManager.movementAllowed() then return end
 
     local MoveBackward = input.getRangeActionValue('MoveBackward')
 
@@ -245,25 +245,25 @@ function InputManager:processMovement(dt)
 end
 
 input.registerTriggerHandler('Jump', async:callback(function()
-    if not movementAllowed() then return end
+    if not InputManager.movementAllowed() then return end
 
     attemptToJump = Player.getControlSwitch(gameSelf, Player.CONTROL_SWITCH.Jumping)
 end))
 
 input.registerTriggerHandler('ToggleSneak', async:callback(function()
-    if not movementAllowed() or not EngineMovementSettings:get('toggleSneak') then return end
+    if not InputManager.movementAllowed() or not EngineMovementSettings:get('toggleSneak') then return end
 
     gameSelf.controls.sneak = not gameSelf.controls.sneak
 end))
 
 input.registerTriggerHandler('AlwaysRun', async:callback(function()
-    if not movementAllowed() then return end
+    if not InputManager.movementAllowed() then return end
 
     EngineMovementSettings:set('alwaysRun', not EngineMovementSettings:get('alwaysRun'))
 end))
 
 input.registerTriggerHandler('AutoMove', async:callback(function()
-    if not movementAllowed() then return end
+    if not InputManager.movementAllowed() then return end
 
     autoMove = not autoMove
 end))
