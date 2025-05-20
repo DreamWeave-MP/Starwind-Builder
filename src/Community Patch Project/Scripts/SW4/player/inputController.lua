@@ -136,7 +136,6 @@ function InputManager:processMovement(dt)
     local movement = input.getRangeActionValue('MoveForward') - MoveBackward
     local sideMovement = input.getRangeActionValue('MoveRight') - input.getRangeActionValue('MoveLeft')
     local run = EngineMovementSettings:get('alwaysRun')
-    local strafeInsteadOfTurn = input.getBooleanActionValue('Run') or GlobalManagement.LockOn.getMarkerVisibility()
     local hasSpeederEquipped = GlobalManagement.MountFunctions.hasSpeederEquipped()
 
     if movement ~= 0 then
@@ -148,6 +147,16 @@ function InputManager:processMovement(dt)
     if sideMovement == 0 then
         CurrentTurnRampTime = 0.0
     end
+
+    local wheelTurnEngaged = self.TurnByWheel and input.isMouseButtonPressed(2)
+
+    --- Strafe if the marker is up
+    local strafeInsteadOfTurn = GlobalManagement.LockOn.getMarkerVisibility()
+    --- But not if you're wearing a speeder and the marker is off
+    strafeInsteadOfTurn = strafeInsteadOfTurn and not hasSpeederEquipped
+    --- If wheel turning is enabled, then allow strafing
+    strafeInsteadOfTurn = strafeInsteadOfTurn or
+        (wheelTurnEngaged and not hasSpeederEquipped)
 
     --- When the player first starts running, bring their ramp down to match where they were before
     if strafeInsteadOfTurn and not didPressRun then
@@ -204,7 +213,7 @@ function InputManager:processMovement(dt)
                 TurnDegreesPerSecondMax)
         )
 
-        if self.TurnByWheel and input.isMouseButtonPressed(2) and CursorManager:getCursorVisible()
+        if wheelTurnEngaged and CursorManager:getCursorVisible()
         then
             local mouseMoveThisFrame = CursorManager.state.changeThisFrame
 
