@@ -89,6 +89,16 @@ end
 function CrosshairManager:onFrameLate(dt)
     if not self.ReplaceCrosshair then return end
 
+    local show = not GlobalManagement.LockOn.getMarkerVisibility()
+        and not GlobalManagement.Cursor:getCursorVisible() and
+        not I.UI.getMode()
+
+    local crosshairProps = SW4Crosshair.layout.props
+    if show ~= crosshairProps.visible then
+        crosshairProps.visible = show
+        SW4Crosshair:update()
+    end
+
     camera.showCrosshair(false)
 end
 
