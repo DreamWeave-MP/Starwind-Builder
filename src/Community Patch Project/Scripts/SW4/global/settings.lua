@@ -62,6 +62,30 @@ I.Settings.registerGroup {
             'Displays debug messages in the (classic) console.',
             false
         ),
+        Setting(
+            'QuickCastEnable',
+            'checkbox',
+            {},
+            'Enable Quick Casting',
+            '',
+            true
+        ),
+        Setting(
+            'QuickCastNoTransition',
+            'checkbox',
+            {},
+            'Skip Stance Transitions',
+            'If enabled, skips equip/unequip animations during quick casting.',
+            true
+        ),
+        Setting(
+            'QuickWithKeys',
+            'checkbox',
+            { disabled = true },
+            'Use QuickKeys for QuickCast',
+            'Not yet implemented.',
+            true
+        ),
     }
 }
 
