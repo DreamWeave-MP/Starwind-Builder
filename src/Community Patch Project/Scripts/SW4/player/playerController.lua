@@ -89,12 +89,7 @@ return {
   interfaceName = ModInfo.name .. "_PlayerController",
   interface = {
     CamHelper = CamHelper,
-    CameraManager = Managers.Camera,
-    CursorController = Managers.Cursor,
-    InputManager = Managers.Input,
-    LockOnManager = Managers.LockOn,
-    MountFunctions = Managers.MountFunctions,
-    ShootManager = Managers.Shoot,
+    Subsystems = Managers
   },
   engineHandlers = {
     onFrame = function(dt)
