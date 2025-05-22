@@ -182,7 +182,7 @@ end
 function LockOnManager.lockOnHandler(state)
     if not state then return end
 
-    if LockOnManager.state.targetObject then
+    if LockOnManager.getMarkerVisibility() then
         LockOnManager.state.targetObject = nil
         LockOnManager.state.targetHealth = nil
         LockOnManager.toggleLockOnMarkerDisplay()
