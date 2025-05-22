@@ -181,7 +181,7 @@ I.Settings.registerGroup {
                 l10n = ModInfo.l10nName },
             'Target Lock Icon',
             'Icon used for target locking.\nCustom icons can be added in the relative VFS dir textures/sw4/crosshair.\nFor health coloration to work, it is suggested to make all icons black/white.',
-            'starbursthd'
+            'starburst'
         ),
         Setting(
             'TargetColorF',
