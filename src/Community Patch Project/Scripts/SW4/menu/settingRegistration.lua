@@ -41,6 +41,13 @@ I.Settings.registerPage {
     description = 'Settings for the custom cursor implemented by StarwindV4'
 }
 
+I.Settings.registerPage {
+    key = ModInfo.name .. 'QuickActionsPage',
+    l10n = ModInfo.l10nName,
+    name = 'SWAMP - Quick Actions',
+    description = 'Settings related to quick attacks and casting.'
+}
+
 print(string.format("%s loaded version %s. Thank you for playing %s! <3",
     ModInfo.logPrefix,
     ModInfo.version,

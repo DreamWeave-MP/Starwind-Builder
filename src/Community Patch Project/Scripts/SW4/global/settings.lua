@@ -62,6 +62,17 @@ I.Settings.registerGroup {
             'Displays debug messages in the (classic) console.',
             false
         ),
+    }
+}
+
+I.Settings.registerGroup {
+    key = 'SettingsGlobal' .. ModInfo.name .. 'QuickActionsGroup',
+    page = ModInfo.name .. 'QuickActionsPage',
+    order = 0,
+    l10n = ModInfo.l10nName,
+    name = 'Quick Actions',
+    permanentStorage = true,
+    settings = {
         Setting(
             'QuickCastEnable',
             'checkbox',
