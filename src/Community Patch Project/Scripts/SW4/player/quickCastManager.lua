@@ -69,6 +69,8 @@ function Quick:onFrame(dt, Managers)
     elseif Quick.state.status == QuickStates.CastFinish then
         gameSelf.type.setStance(gameSelf, Quick.state.prevStance)
         gameSelf.controls.use = 0
+    elseif Quick.state.status == QuickStates.None and gameSelf.type.getStance(gameSelf) == gameSelf.type.STANCE.Spell then
+        gameSelf.type.setStance(gameSelf, gameSelf.type.STANCE.Nothing)
     end
 end
 
