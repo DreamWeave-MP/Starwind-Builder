@@ -28,7 +28,7 @@ local QuickStates = {
 local Quick = I.StarwindVersion4ProtectedTable.new {
     modName = ModInfo.name,
     logPrefix = ModInfo.logPrefix,
-    inputGroupName = 'SettingsGlobal' .. ModInfo.name .. 'CoreGroup',
+    inputGroupName = 'SettingsGlobal' .. ModInfo.name .. 'QuickActionsGroup',
 }
 
 local currentStance = gameSelf.type.getStance(gameSelf)
