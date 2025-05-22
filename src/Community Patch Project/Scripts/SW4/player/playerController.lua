@@ -77,7 +77,7 @@ local FrameHandlerType = {
 local function onFrameSubsystems(frameHandlerType, dt)
   for _, subsystem in ipairs(OnFrameExecutionOrder) do
     if subsystem[frameHandlerType] then
-      subsystem[frameHandlerType](subsystem, dt)
+      subsystem[frameHandlerType](subsystem, dt, Managers)
     end
   end
 end
