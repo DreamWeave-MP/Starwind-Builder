@@ -105,6 +105,14 @@ I.Settings.registerGroup {
             'Keybind used to lock onto targets in combat.',
             'x'
         ),
+        -- Setting(
+        --     'SW4_WeaponCycle',
+        --     "inputBinding",
+        --     { key = 'SW4_WeaponCycle', type = "trigger" },
+        --     'Weapon Cycle',
+        --     'Switch between melee, ranged, or the last of the two used.',
+        --     'v'
+        -- ),
     }
 }
 
@@ -519,6 +527,22 @@ I.Settings.registerGroup {
             {},
             'Enable quick turning',
             'Double-tap the Move Backward input to do a 180 turn.',
+            true
+        ),
+        Setting(
+            'NoThirdPerson',
+            'checkbox',
+            {},
+            'Disallow First Person',
+            '',
+            true
+        ),
+        Setting(
+            'PitchLocked',
+            'checkbox',
+            {},
+            'Lock Camera Pitch',
+            'Locks camera pitch (Y axis) when outside combat.',
             true
         ),
         Setting(
