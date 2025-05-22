@@ -41,6 +41,8 @@ Managers.Cursor = require 'Scripts.SW4.player.cursorController' (Managers)
 Managers.Crosshair = require 'Scripts.SW4.player.crosshairManager' (Managers)
 ---@type QuickCastManager
 Managers.Quick = require 'Scripts.SW4.player.quickCastManager' (Managers)
+---@type QuickAttackManager
+Managers.AttackQuick = require 'Scripts.SW4.player.quickAttackManager' (Managers)
 
 local ShowMessage = ui.showMessage
 
@@ -61,6 +63,7 @@ local OnFrameExecutionOrder = {
   Managers.Shoot,
   Managers.LockOn,
   Managers.Crosshair,
+  Managers.AttackQuick,
   Managers.Quick,
 }
 
