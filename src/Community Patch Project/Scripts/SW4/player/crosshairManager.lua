@@ -57,6 +57,12 @@ local CrosshairManager = I.StarwindVersion4ProtectedTable.new {
             SW4Crosshair.layout.props.color = color
         end
 
+        if not key or key == 'CrosshairSize' then
+            local size = group:get('CrosshairSize')
+            shadowTable.CrosshairSize = size
+            SW4Crosshair.layout.props.size = util.vector2(size, size)
+        end
+
         local replaceCrosshair = group:get('ReplaceCrosshair')
         shadowTable.ReplaceCrosshair = replaceCrosshair
 
@@ -76,6 +82,11 @@ CrosshairManager.state = {
 SW4CrosshairDefaultOptions.offset = util.vector2(
     CrosshairManager.CrosshairRow * 64,
     CrosshairManager.CrosshairColumn * 64
+)
+
+SW4CrosshairDefaultOptions.size = util.vector2(
+    CrosshairManager.CrosshairSize,
+    CrosshairManager.CrosshairSize
 )
 
 SW4Crosshair.layout.props.resource = ui.texture(SW4CrosshairDefaultOptions)

@@ -296,6 +296,14 @@ I.Settings.registerGroup {
             7
         ),
         Setting(
+            'CrosshairSize',
+            'number',
+            { min = 0, max = 64, integer = true },
+            'Crosshair Size',
+            '',
+            64
+        ),
+        Setting(
             'CrosshairColor',
             'color',
             {},
