@@ -13,9 +13,10 @@ local GlobalManagement
 local QuickStates = {
     Begin = 1,
     CastStart = 2,
-    CastFinish = 3,
+    Casting = 3,
+    CastFinish = 4,
     WeaponTransition = 5,
-    None = 4,
+    None = 6,
 }
 
 --- Put this into its own file
@@ -53,7 +54,7 @@ function Quick:onFrameBegin(dt, Managers)
 
     if prevStance == gameSelf.type.STANCE.Spell then
         Quick.state.prevStance = gameSelf.type.STANCE.Nothing
-        gameSelf.type.setStance(gameSelf, gameSelf.type.STANCE.Nothing)
+        gameSelf.type.setStance(gameSelf, Quick.state.prevStance)
     else
         Quick.state.prevStance = prevStance
     end
@@ -62,8 +63,12 @@ end
 function Quick:onFrame(dt, Managers)
     if Quick.state.status == QuickStates.CastStart then
         gameSelf.controls.use = 1
+        Quick.state.status = QuickStates.Casting
+    elseif Quick.state.status == QuickStates.Begin then
+        gameSelf.type.setStance(gameSelf, gameSelf.type.STANCE.Spell)
     elseif Quick.state.status == QuickStates.CastFinish then
         gameSelf.type.setStance(gameSelf, Quick.state.prevStance)
+        gameSelf.controls.use = 0
     end
 end
 
@@ -71,7 +76,7 @@ function Quick.handleQuickCast(group, key)
     if not Quick.QuickCastEnable then return end
 
     if group == 'spellcast' and not GlobalManagement.MountFunctions.hasSpeederEquipped() then
-        if key == 'equip stop' then
+        if key == 'equip stop' and Quick.state.status == QuickStates.Begin then
             Quick.state.status = QuickStates.CastStart
             -- Once we figure out a formula to ramp the cast speed on, use this
             -- elseif key:find('start') then
@@ -91,6 +96,7 @@ end
 function Quick.trigger()
     local canCast = Quick:canQuickCast()
 
+    print(canCast)
     if canCast then
         Quick.state.status = QuickStates.Begin
     end
