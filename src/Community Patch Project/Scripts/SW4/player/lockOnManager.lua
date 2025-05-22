@@ -115,7 +115,13 @@ end
 ---@param goLeft boolean? whether to check the right or left side of screen space. Nil indicates both sides should be checked.
 function LockOnManager:selectNearestTarget(goLeft)
     local result = aux_util.findMinScore(nearby.actors, function(actor)
-        if actor.recordId == 'player' or actor == self.state.targetObject or actor.type.isDead(actor) then return false end
+        if actor.recordId == 'player'
+            or actor == self.state.targetObject
+            or actor.type.isDead(actor)
+            or actor.type.getStance(actor) == actor.type.STANCE.Nothing
+        then
+            return false
+        end
 
         local screenPos = CamHelper.objectIsOnscreen(actor)
 
