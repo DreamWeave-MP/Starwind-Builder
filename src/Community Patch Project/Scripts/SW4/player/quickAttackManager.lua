@@ -156,7 +156,6 @@ end
 --- Actually perform equipment and stance changes
 function QuickAttackManager:onFrame(dt, Managers)
     if QuickAttackManager.state.switchState == SwitchStates.Swinging then
-        print('forcing attack!')
         gameSelf.controls.use = 1
         return
     else
