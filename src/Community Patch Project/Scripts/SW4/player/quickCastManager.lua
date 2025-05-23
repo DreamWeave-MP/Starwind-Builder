@@ -69,7 +69,6 @@ end
 function Quick:onFrame(dt, Managers)
     if Quick.state.status == QuickStates.CastStart then
         gameSelf.controls.use = 1
-        Quick.state.status = QuickStates.Casting
     elseif Quick.state.status == QuickStates.Begin then
         gameSelf.type.setStance(gameSelf, gameSelf.type.STANCE.Spell)
     elseif Quick.state.status == QuickStates.CastFinish then
@@ -92,6 +91,9 @@ function Quick.handleQuickCast(group, key)
         elseif key:find('release') then
             Quick.state.status = QuickStates.CastFinish
         end
+    elseif key == 'cast start' and Quick.state.status == QuickStates.CastStart then
+        gameSelf.controls.use = 0
+        Quick.state.status = QuickStates.Casting
     elseif group:find('idle') and key == 'start' and Quick.state.status == QuickStates.CastFinish then
         Quick.state.status = QuickStates.None
     end
@@ -104,7 +106,6 @@ end
 function Quick.trigger()
     local canCast = Quick:canQuickCast()
 
-    print(canCast)
     if canCast then
         Quick.state.status = QuickStates.Begin
     end
