@@ -40,8 +40,14 @@ Quick.state = {
 function Quick:canQuickCast()
     local canCast = Quick.state.status == QuickStates.None and Quick.QuickCastEnable
 
-    if I.StarwindV4_PlayerController then
-        canCast = canCast and not I.StarwindV4_PlayerController.Subsystems.MountFunctions.hasSpeederEquipped()
+    local SW4 = I.StarwindV4_PlayerController
+    if SW4 then
+        ---@type CursorController
+        local Cursor = SW4.Subsystems.Cursor
+        local MountFunctions = SW4.Subsystems.MountFunctions
+
+        canCast = canCast and not MountFunctions.hasSpeederEquipped()
+        canCast = canCast and not Cursor:getCursorVisible()
     end
 
     return canCast
