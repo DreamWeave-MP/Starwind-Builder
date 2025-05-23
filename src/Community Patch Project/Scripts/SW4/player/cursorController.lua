@@ -348,12 +348,10 @@ function CursorController:getObjectUnderMouse()
 
     local options, result = { ignore = { gameSelf, } }, nil
 
-    for _, rayType in pairs { nearby.castRay, nearby.castRenderingRay } do
-        result = rayType(basePos, endPos, options)
-        if result.hitObject and self.checkTarget(result) then
-            canActivate = (basePos - result.hitPos):length() < RealActivationRange
-            return result
-        end
+    result = nearby.castRenderingRay(basePos, endPos, options)
+    if result.hitObject and self.checkTarget(result) then
+        canActivate = (gameSelf.position - result.hitPos):length() < RealActivationRange
+        return result
     end
 end
 
