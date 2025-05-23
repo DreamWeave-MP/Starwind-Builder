@@ -256,11 +256,12 @@ end
 
 function CursorController:updateBanner(targetObject)
     local objectName = targetObject.type.records[targetObject.recordId].name
+    local hasValidName = (objectName ~= nil and objectName ~= '')
 
     local bannerProps = CursorBanner.layout.props
-    bannerProps.visible = self.ShowBanner and objectName ~= nil
+    bannerProps.visible = self.ShowBanner and hasValidName
 
-    if objectName then
+    if hasValidName then
         self.state.currentTarget = targetObject
 
         local bannerTextProps = CursorBanner.layout.content.SW4_CursorBannerText.props
