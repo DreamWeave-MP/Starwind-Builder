@@ -103,6 +103,8 @@ return {
       Managers.MountFunctions.onUpdate(dt)
     end,
     onTeleported = function()
+      if not self.cell then return end
+
       core.sendGlobalEvent('SW4_PlayerCellChanged', { player = self.object, prevCell = self.cell.name })
     end,
     onSave = function()
