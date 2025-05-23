@@ -62,6 +62,14 @@ I.Settings.registerGroup {
             'Displays debug messages in the (classic) console.',
             false
         ),
+        Setting(
+            'RightClickExit',
+            'checkbox',
+            {},
+            'Right Click Menu Exit',
+            'Use RMB to exit all menus',
+            true
+        ),
     }
 }
 

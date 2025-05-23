@@ -1,5 +1,6 @@
 local core = require('openmw.core')
 local self = require('openmw.self')
+local storage = require 'openmw.storage'
 local ui = require('openmw.ui')
 
 --- [[
@@ -20,6 +21,8 @@ local I = require('openmw.interfaces')
 
 local CamHelper = require 'Scripts.SW4.helper.cameraHelper'
 local ModInfo = require('scripts.sw4.modinfo')
+
+local CoreGroup = storage.globalSection('SettingsGlobal' .. ModInfo.name .. 'CoreGroup')
 
 --- System handlers added by SW4
 ---@class ManagementStore
@@ -126,6 +129,14 @@ return {
         Managers.MountFunctions.SavedState.prevSpellOrEnchantedItem = data.mountState.prevSpellOrEnchantedItem
         Managers.MountFunctions.SavedState.currentMountSpell = data.mountState.currentMountSpell
         Managers.MountFunctions.SavedState.equipState = data.mountState.equipState
+      end
+    end,
+    onMouseButtonPress = function(button)
+      if button == 3
+          and I.UI.getMode()
+          and CoreGroup:get('RightClickExit')
+      then
+        I.UI.setMode()
       end
     end,
   },
