@@ -207,7 +207,7 @@ input.registerActionHandler('Use', async:callback(function(state)
 end))
 
 input.registerActionHandler('Run', async:callback(function(state)
-    if not state then return end
+    if not state or I.UI.getMode() then return end
 
     CursorController.state.shouldShow = not CursorController.state.shouldShow
 
