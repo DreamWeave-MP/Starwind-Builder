@@ -573,6 +573,14 @@ I.Settings.registerGroup {
             true
         ),
         Setting(
+            'CursorCamPitch',
+            'number',
+            { min = -180, max = 180, integer = true, },
+            'Cursor Camera Pitch',
+            'Vertical camera angle when cursor is visible, in degrees.\nRecommended value is between 20-45, values between -180 and 180 are accepted.',
+            30
+        ),
+        Setting(
             'MoveRampUpTimeMax',
             'number',
             { min = 0.0, max = 5.0, integer = false },

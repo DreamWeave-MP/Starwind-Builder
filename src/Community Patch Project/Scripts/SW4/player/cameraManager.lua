@@ -12,6 +12,7 @@ local GlobalManagement
 ---@class CameraManager:ProtectedTable
 ---@field NoThirdPerson boolean
 ---@field PitchLocked boolean
+---@field CursorCamPitch number configured pitch lock
 local CameraManager = I.StarwindVersion4ProtectedTable.new {
     inputGroupName = 'SettingsGlobal' .. ModInfo.name .. 'MoveTurnGroup',
     modName = ModInfo.name,
@@ -114,15 +115,23 @@ end
 --- Add settings for forcing third person and locking pitch
 --- Figure out how to handle perspective out of combat
 ---@param dt number deltaTime
-function CameraManager:onFrameEnd(dt)
+---@param Managers ManagementStore
+function CameraManager:onFrameEnd(dt, Managers)
     CameraManager:updateDelta()
 
     if self.NoThirdPerson and camera.getMode() == camera.MODE.FirstPerson then
         camera.setMode(camera.MODE.ThirdPerson)
     end
 
-    if self.PitchLocked and not self.state.isWielding then
-        camera.setPitch(0)
+    local targetPitch
+    if Managers.Cursor:getCursorVisible() then
+        targetPitch = math.rad(self.CursorCamPitch)
+    elseif self.PitchLocked and not self.state.isWielding then
+        targetPitch = 0
+    end
+
+    if targetPitch then
+        camera.setPitch(targetPitch)
     end
 
     self.state.yawLastFrame = self.state.yawThisFrame
