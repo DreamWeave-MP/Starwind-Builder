@@ -41,7 +41,7 @@ function Quick:canQuickCast()
     local canCast = Quick.state.status == QuickStates.None and Quick.QuickCastEnable
 
     if I.StarwindV4_PlayerController then
-        canCast = canCast and not I.StarwindV4_PlayerController.MountFunctions.hasSpeederEquipped()
+        canCast = canCast and not I.StarwindV4_PlayerController.Subsystems.MountFunctions.hasSpeederEquipped()
     end
 
     return canCast
