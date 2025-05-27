@@ -15,6 +15,7 @@ cpp: plugins-bin
 	cd "src/Community Patch Project" && zip -r9 --must-match --recurse-paths \
 	Starwind_Community_Patch_Project.zip \
 	"01 Crash Resistant tes3mp meshes" \
+	Animations/ \
 	Meshes/ \
 	Textures/ \
 	Scripts/ \
