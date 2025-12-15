@@ -6,6 +6,7 @@ KEY="$1"
 DIR="${2:-.}"
 
 mkdir -p $HOME/.local/share/openmw/data
+mkdir -p $HOME/.config/openmw
 
 echo "data=\"$(pwd)\"\ncontent=Morrowind.esm\ncontent=Tribunal.esm\ncontent=Bloodmoon.esm\ncontent=Starwind.omwaddon" >> $HOME/.config/openmw/openmw.cfg
 
