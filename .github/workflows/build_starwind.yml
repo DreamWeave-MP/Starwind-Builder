@@ -47,8 +47,8 @@ jobs:
         env:
           MTM_DECRYPT_KEY: ${{ secrets.MTM_DECRYPT_KEY }}
 
-        run: ./writeDependencyFiles.sh build
+        run: mkdir -p build && ./writeDependencyFiles build
 
       - name: Build TSI
-        run: mkdir -p build && make tsi
+        run: make tsi
 
