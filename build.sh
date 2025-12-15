@@ -179,28 +179,22 @@ if [ "$1" = "tsi" ]; then
 
     # Original plugin is dirty
     echo "Cleaning bings race pack..."
-    tes3cmd delete --type GMST "bings race pack.esp"
     tes3cmd delete --type CELL --exterior "bings race pack.esp"
     tes3cmd delete --type CELL --exact-id "nar shaddaa, h.t. parnell's oddities" "bings race pack.esp"
 
     # Hack to remove Enhanced dependency and any modifications to its references
     # Keep the patches just in case we decide to remove enhanced for some reason
     #echo "Stripping dependency on Starwind Enhanced..."
-    #tes3cmd modify --type TES3 --replace "/Starwind Enhanced/StarwindRemasteredPatch/" "bings race pack.esp" StarwindRacesJMC.esp
-    #tes3cmd modify --type TES3 --replace "/431652/11437434/" "bings race pack.esp" StarwindRacesJMC.esp
-    #tes3cmd delete --type CELL --instance-match "MastIdx:6" "bings race pack.esp" StarwindRacesJMC.esp
+    #tes3cmd modify --type TES3 --replace "/Starwind Enhanced/StarwindRemasteredPatch/" "bings race pack.esp"
     #tes3cmd delete --type CELL --instance-match "SWE_DoorFrameLight1" "bings race pack.esp"
     #tes3cmd delete --type CELL --exterior alt_start1.5.esp "bings race pack.esp"
     #tes3cmd delete --type CELL --exact-id "Nar Shaddaa, Club Arkngthand" "bings race pack.esp"
 
-    # Broken mp refs from JMC's
-    tes3cmd delete --type CELL --exact-id "Lok, Graveridge Pawnshop" --instance-match "SW_Vhadeer" StarwindRemasteredPatch.esm StarwindRacesJMC.esp
-    tes3cmd delete --type CELL --exact-id "nar shaddaa, 168 alley east" --exact-id "nar shaddaa, office building" --instance-match "SW_DipManager" StarwindRemasteredV1.15.esm StarwindRemasteredPatch.esm
     # This one is extra weird as somehow both plugins have two unique definitions of the same ref under the same index
-    tes3cmd delete --type CELL --exact-id "Nar Shaddaa, Speeder Shop" --instance-match "SW_NarSpeederMerch" StarwindRemasteredV1.15.esm StarwindRemasteredPatch.esm
-    tes3cmd delete --type CELL --exact-id "manaan, yortal's junkpile" --instance-match "SW_Yortal" StarwindRemasteredV1.15.esm
-    tes3cmd delete --type CELL --exact-id "nar shaddaa" --instance-match "sw_quarren" StarwindRemasteredV1.15.esm
-    tes3cmd delete --type CELL --instance-match "Deleted" StarwindRacesJMC.esp
+    # tes3cmd delete --type CELL --exact-id "Nar Shaddaa, Speeder Shop" --instance-match "SW_NarSpeederMerch" StarwindRemasteredV1.15.esm StarwindRemasteredPatch.esm
+    # tes3cmd delete --type CELL --exact-id "manaan, yortal's junkpile" --instance-match "SW_Yortal" StarwindRemasteredV1.15.esm
+    # tes3cmd delete --type CELL --exact-id "nar shaddaa" --instance-match "sw_quarren" StarwindRemasteredV1.15.esm
+    # tes3cmd delete --type CELL --instance-match "Deleted" StarwindRacesJMC.esp
 
     # Broken mp refs from bing's
     tes3cmd delete --type CELL --exact-id "Taris, Upper City Cantina" --instance-match "SW_TarisHuttRagax" StarwindRemasteredPatch.esm
