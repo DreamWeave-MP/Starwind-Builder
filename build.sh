@@ -42,6 +42,7 @@ do_mp_merge() {
     merge_to_master "bings race pack.esp" "Starwind Enhanced.esm"
     merge_to_master "Starwind Enhanced.esm" StarwindRemasteredPatch.esm
     # Vanilla phase
+    merge_to_master StarwindPlanExp.esp StarwindRemasteredPatch.esm
     merge_to_master alt_start1.5.esp StarwindRemasteredPatch.esm
     merge_to_master StarwindVvardenfell.esp StarwindRemasteredPatch.esm
     merge_to_master "Starwind Community Patch Project.esp" StarwindRemasteredPatch.esm
@@ -69,10 +70,21 @@ do_mp_merge() {
 
 do_sp_merge() {
     merge_to_master "Starwind Enhanced.esm" StarwindRemasteredPatch.esm
+
+    merge_to_master StarwindPlanExp.esp StarwindRemasteredPatch.esm
+    merge_to_master alt_start1.5.esp StarwindRemasteredPatch.esm
+    merge_to_master StarwindVvardenfell.esp StarwindRemasteredPatch.esm
+
     merge_to_master "Starwind Community Patch Project.esp" StarwindRemasteredPatch.esm
+
+    merge_to_master naboo.esp StarwindRemasteredPatch.esm
+
     merge_to_master --remove-deleted StarwindRemasteredPatch.esm StarwindRemasteredV1.15.esm
     mv StarwindRemasteredV1.15.esm vanilla_Starwind.omwaddon
+
+    # Patch phase to implement components which cannot otherwise be repaired, primarily due to --remove-deleted removing deleted records we actually totally did want
     merge_to_master deletedbirthsigns.esp vanilla_Starwind.omwaddon
+    merge_to_master beastlair.esp Starwind.omwaddon
 }
 
 do_standalone_merge() {
