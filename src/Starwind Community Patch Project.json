@@ -128,8 +128,8 @@
       "bytecode_length": 124,
       "variables_length": 7
     },
-    "variables": "BwAAAERvT25jZQA=",
-    "bytecode": "fAAAAAYBAgkgcwEAICE9IDHbEAUBcwEAAiAxCQEGAQQJIFjwECA9PSAxBgECGyBYzRAgZA5TV19Cb3VudHlRdWVzdCA9PSA1NQwBF1RhdG9vaW5lQ3plcmthQm91bnR5Qm9p2xDMEA5TV19Cb3VudHlRdWVzdEEA//8JAQkBAQE=",
+    "variables": "KLUv/QBYWQAABwAAAERvT25jZQA=",
+    "bytecode": "KLUv/QBYrQMAtAZ8AAAABgECCSBzAQAgIT0gMdsQBQFzAQACIDEJAQYBBAkgWPAQID09IDEGAQIbIFjNECBkDlNXX0JvdW50eVF1ZXN0ID09IDU1DAEXVGF0b29pbmVDemVya2FCb2nbEMwQQQD//wkBCQEBAQIAVnXTyqDM",
     "text": "Begin NisavMeanieScript\n\nshort DoOnce\n\nIf (DoOnce != 1)\n\tdisable\n\tset doonce to 1\nendif\n\nif (GetJournalIndex \"SW_BountyQuest\" == 55)\n\tenable\nendif\n\n\tif (OnDeath == 1)\n\t\tif (GetJournalIndex \"SW_BountyQuest\" == 55)\n\t\t\tTatooineCzerkaBountyBoi->Disable\n\t\t\tJournal SW_BountyQuest 65\n\t\tendif\n\tendif\nend"
   },
   {
@@ -143,8 +143,8 @@
       "bytecode_length": 695,
       "variables_length": 36
     },
-    "variables": "JAAAAE9uUENFcXVpcABEb1R3aWNlAEZseWluZwBSZXNldENoZWNrAA==",
-    "bytecode": "twIAAAYBFAkgcwEAID09IDEFAXMDAAIgMQUBcwQAAiAwDAEGcGxheWVyBQFHDVNQSGVhbHRoQ2hlY2sFIFiMEAAGAQkTIEcLVHJhdmVsU3RhdGUgPT0gMCwRD1NoaXBUcmF2ZWxTb3VuZD0RWhHjEEwRDAEGcGxheWVyBRAAWPVFAJiKRQDEiEYAAOZCDVRoZSBPdXRlciBSaW0MAQZwbGF5ZXIdEQxTV19TaGlwQnVmZjEFAUcLVHJhdmVsU3RhdGUCIDEAEGIAQWN0aXZhdGUgdGhlIEZyZWlnaHRlciBTcGVsbCBpbiB5b3VyIFNwZWxsIE1lbnUgYW5kIHByZXNzIF5BY3Rpb25SZWFkeU1hZ2ljIHRvIGVuYWJsZSB0aGUgY29ja3BpdC4AAQNPSwAJAQYBBAkgcwMAID09IDAGAQIaIFgSESwgYw1UaGUgT3V0ZXIgUmltID09IDEAEGIAQWN0aXZhdGUgdGhlIEZyZWlnaHRlciBTcGVsbCBpbiB5b3VyIFNwZWxsIE1lbnUgYW5kIHByZXNzIF5BY3Rpb25SZWFkeU1hZ2ljIHRvIGVuYWJsZSB0aGUgY29ja3BpdC4AAQNPSwAFAXMDAAIgMQkBCQEIAQoJIHMBACA9PSAwBQFzAwACIDAGAQcaIFgSESwgYw1UaGUgT3V0ZXIgUmltID09IDEGAQUJIHMEACA9PSAwDAEGcGxheWVyBRAAYHdFAHChRQAUb0YAgKNDGFRoZSBPdXRlciBSaW0sIEZyZWlnaHRlcgwBBnBsYXllch4RDFNXX1NoaXBCdWZmMQUBRwtUcmF2ZWxTdGF0ZQIgMAUBcwQAAiAxABAtAFlvdSBjYW5ub3QgdGFrZSBvZmYgeW91ciBzaGlwIHdoaWxlIGluIHNwYWNlLgABA09LAAkBCQEJAQEB",
+    "variables": "KLUv/QBYQQEAJAAAAE9uUENFcXVpcABEb1R3aWNlAEZseWluZwBSZXNldENoZWNrAA==",
+    "bytecode": "KLUv/QBYVQwAZtZQO1BNmwMwraiqyqiIKunqijtIaOH/FvtICW5Pyt9k5UUgo8D/z/cp2mh7uUDdOVNT4JgDx1kPaJCoG0kpQABEAD8AVcaLgCSZvKr877tX9hhPqxhwcQOuIY42YPzRwI+VeLP3DSBckEs/2m9eVqF+TO6ww+GG7YfyqnJu6y7SELPzIa79jRfyNYt/vP73YcgLJ2wRMeVOPxSGbZQq41UhwvWQElyQFK793Sb8YwWEIoLZkgEEWxo4sDUCw5H0IAohTZCqzNxo7aBLpAIYR+A0NDWsO0dD7djBRKOZwZVVAynMLN58p9ehvHgSm8x7iknlhRMKbu1r1TPz+TZfYqMbn9Kz7OsV3e3aPXzV+pT+mYwZXmW0GEb9Ne/6pXM+6BuVwAsipiYFkgMVDxjYQiNsdahsZVjg6HFYd09DABqaJgEdoF0YAAu3BFzXwF4kE9nV7moJt93utJ3w22KzNhiXCQTuVq823iUgcSwB1AogaDKVWdEChVEUQ+gyPmCmJVNh00FnxmtLEw==",
     "text": "Begin SW_EnterSpace\n\nshort OnPCEquip\nShort DoTwice\nShort Flying\nShort ResetCheck\n\nIf ( OnPCEquip == 1 )\n\tSet Flying to 1\n\tSet ResetCheck to 0\n\tSet SPHealthCheck to ( Player->GetHealth )\n\tIf ( TravelState == 0 )\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\tPCForce1stPerson\n\t\tDisableplayerfighting\n\t\tDisablePlayerViewSwitch\n\t\tDisableVanityMode\n          Player->PositionCell, 7851, 4435, 17506, 115, \"The Outer Rim\"\n          Player->AddSpell, \"SW_ShipBuff1\"\n\t\tset TravelState to 1\n\t\tMessageBox \"Activate the Freighter Spell in your Spell Menu and press ^ActionReadyMagic to enable the cockpit.\" \"OK\"\n\tEndif\n\tIf ( Flying == 0 )\n\t\tIf (  GetPCCell, \"The Outer Rim\" == 1 )\n\t\t\tMessageBox \"Activate the Freighter Spell in your Spell Menu and press ^ActionReadyMagic to enable the cockpit.\" \"OK\"\n\t\t\tSet Flying to 1\n\t\tEndif\n\tEndif\nElseif ( OnPCEquip == 0 )\n\tSet Flying to 0\n\tIf ( GetPCCell, \"The Outer Rim\" == 1 )\n\t\tIf ( ResetCheck == 0 )\n\t\t\tplayer->additem \"SW_SpCarNone\", 1\n\t\t\tplayer->equip, \"SW_SpCarNone\"\n\t\t\tplayer->removeitem \"SW_SpCarNone\", 1\n\t\t\tEnableplayerfighting\n\t\t\tEnablePlayerViewSwitch\n\t\t\tEnableVanityMode\n\t\t\tPlayer->PositionCell, 3958, 5166, 15301, 327 \"The Outer Rim, Freighter\"\n\t\t\tPlayer->RemoveSpell, \"SW_ShipBuff1\"\n\t\t\tSet TravelState to 0\n\t\t\tSet ResetCheck to 1\n\t\t\tMessageBox \"You cannot take off your ship while in space.\" \"OK\"\n\t\tEndif\n\tEndif\nEndif\n\nEnd"
   },
   {
@@ -158,8 +158,8 @@
       "bytecode_length": 741,
       "variables_length": 0
     },
-    "variables": "AAAAAA==",
-    "bytecode": "5QIAAAYBIAkgWBgQID09IDEGARwWIEcNRnJlaWdodFRyYXZlbCAhPSAxMAUBRw1GcmVpZ2h0VHJhdmVsAyAxMCwRD1NoaXBUcmF2ZWxTb3VuZAwBF1NXX0ZyZWlnaHRlclRvRGFudG9vaW5l2hAMARZTV19GcmVpZ2h0ZXJUb1RhdG9vaW5l2xAMARRTV19GcmVpZ2h0ZXJUb01hbmFhbtsQDAEVU1dfRnJlaWdodGVyVG9LYXNoeXlr2xAMARZTV19GcmVpZ2h0ZXJUb0RhdGhvbWly2xAMARRTV19GcmVpZ2h0ZXJUb0dhbW9yctsQDAESU1dfRnJlaWdodGVyVG9Ib3Ro2xAMARNTV19GcmVpZ2h0ZXJUb1Rhcmlz2xAMARBTV19GcmVpZ2h0ZXJUb0002xAMARVTV19GcmVpZ2h0ZXJUb05hclNoYWTbEAwBElNXX0ZyZWlnaHRlclRvTm9uZdsQDAEWU1dfRnJlaWdodGVyVG9EZXJlbGljdNsQDAERU1dfRnJlaWdodGVyVG9Mb2vbEAwBClNXX1BsYW5Mb2vbEAUBRwpTV19MVFNQRUVEAiAxDAESU1dfRnJlaWdodFBsYW5EYXRo2xAMARJTV19GcmVpZ2h0UGxhbkthc2jbEAwBElNXX0ZyZWlnaHRQbGFuSG90aNsQDAETU1dfRnJlaWdodFBsYW5HYW1vctsQDAETU1dfRnJlaWdodGVyUGxhblRhdNsQDAESU1dfRnJlaWdodFBsYW5EYW502hAMARFTV19GcmVpZ2h0UGxhbk5hctsQDAESU1dfRnJlaWdodFBsYW5NYW5h2xAMARJTV19GcmVpZ2h0UGxhbk00NzjbEAwBE1NXX0ZyZWlnaHRQbGFuVGFyaXPbEAwBE1NXX0ZyZWlnaHREZXJlbGljdDHbEAcBAQAQJABZb3UgYXJlIGFscmVhZHkgbGFuZGVkIG9uIERhbnRvb2luZSEAAAkBCQEBAQ==",
+    "variables": "KLUv/QBYIQAAAAAAAA==",
+    "bytecode": "KLUv/QBYDQsAhpE/NGBFlA7AOxAEQRAEQRAcjd83oJWtGeNdNKbGJbwYs5MwdEZxYX0Y63V9RKGftDK2Svf6yx01ADAAMQAXjZ4OPFgJ69CEFVoGCSALFIoDlkGh2DJhGQGcXjWb0CJ1GMCwJGEbFFss/BAg2MHbcG4RICCN/oqs9LaszoeJ0vk5hmqfmdVXG4VIlIGeMVjpbf33NwUrve2XZKU3iq3NWfvVDNICPdOX1vSqLy2KF9XlYsFL4+nAB2YZfWl5OvAxNZAqoclIY+zJmbBnkJ5T2byV3ha761iHcxPuyVjE+pJF2COV50jPoRnhFJ7bFXgbFYk0MFSm9zd9aZ0zqj3VX/0sIOBCGyoPvJPyOAl8n6AikhsbTcC9tvgaRAehGHLwGOylZQ+acEKgAdyfAE2N8CYNK9dvCY53bZEws5uFpnLLmsoTvJMRqnzlYssTHqnHr7JPag+G/crAys1lbFa7pQc=",
     "text": "Begin SW_FTravelDantooine\n\nIf ( OnActivate == 1 )\n\tIf ( FreightTravel != 10 )\n\t\tSet FreightTravel to 10\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\t\tSW_FreighterToDantooine->Enable\n\t\t\tSW_FreighterToTatooine->Disable\n\t\t\tSW_FreighterToManaan->Disable\n\t\t\tSW_FreighterToKashyyk->Disable\n\t\t\tSW_FreighterToDathomir->Disable\n\t\t\tSW_FreighterToGamorr->Disable\n\t\t\tSW_FreighterToHoth->Disable\n\t\t\tSW_FreighterToTaris->Disable\n\t\t\tSW_FreighterToM4->Disable\n\t\t\tSW_FreighterToNarShad->Disable\n\t\t\tSW_FreighterToNone->Disable\n\t\t\tSW_FreighterToDerelict->Disable\n\t\t\tSW_FreighterToLok->Disable\n\t\t\tSet SW_LTSPEED to 1\n\t\t\tSW_FreightPlanDath->Disable\n\t\t\tSW_FreightPlanKash->Disable\n\t\t\tSW_FreightPlanHoth->Disable\n\t\t\tSW_FreightPlanGamor->Disable\n\t\t\tSW_FreighterPlanTat->Disable\n\t\t\tSW_FreightPlanDant->Enable\n\t\t\tSW_FreightPlanNar->Disable\n\t\t\tSW_FreightPlanMana->Disable\n\t\t\tSW_FreightPlanM478->Disable\n\t\t\tSW_FreightPlanTaris->Disable\n\t\t\tSW_FreightDerelict1->Disable\n\telse\n\t\tMessageBox \"You are already landed on Dantooine!\"\n\tendif\nEndif\n\nEnd"
   },
   {
@@ -173,8 +173,8 @@
       "bytecode_length": 740,
       "variables_length": 0
     },
-    "variables": "AAAAAA==",
-    "bytecode": "5AIAAAYBIAkgWBgQID09IDEGARwWIEcNRnJlaWdodFRyYXZlbCAhPSAzNQUBRw1GcmVpZ2h0VHJhdmVsAyAzNSwRD1NoaXBUcmF2ZWxTb3VuZAwBF1NXX0ZyZWlnaHRlclRvRGFudG9vaW5l2xAMARZTV19GcmVpZ2h0ZXJUb1RhdG9vaW5l2xAMARRTV19GcmVpZ2h0ZXJUb01hbmFhbtsQDAEVU1dfRnJlaWdodGVyVG9LYXNoeXlr2xAMARZTV19GcmVpZ2h0ZXJUb0RhdGhvbWly2hAMARRTV19GcmVpZ2h0ZXJUb0dhbW9yctsQDAESU1dfRnJlaWdodGVyVG9Ib3Ro2xAMARNTV19GcmVpZ2h0ZXJUb1Rhcmlz2xAMARBTV19GcmVpZ2h0ZXJUb0002xAMARVTV19GcmVpZ2h0ZXJUb05hclNoYWTbEAwBElNXX0ZyZWlnaHRlclRvTm9uZdsQDAEWU1dfRnJlaWdodGVyVG9EZXJlbGljdNsQDAERU1dfRnJlaWdodGVyVG9Mb2vbEAwBClNXX1BsYW5Mb2vbEAUBRwpTV19MVFNQRUVEAiAxDAESU1dfRnJlaWdodFBsYW5EYXRo2hAMARJTV19GcmVpZ2h0UGxhbkthc2jbEAwBElNXX0ZyZWlnaHRQbGFuSG90aNsQDAETU1dfRnJlaWdodFBsYW5HYW1vctsQDAETU1dfRnJlaWdodGVyUGxhblRhdNsQDAESU1dfRnJlaWdodFBsYW5EYW502xAMARFTV19GcmVpZ2h0UGxhbk5hctsQDAESU1dfRnJlaWdodFBsYW5NYW5h2xAMARJTV19GcmVpZ2h0UGxhbk00NzjbEAwBE1NXX0ZyZWlnaHRQbGFuVGFyaXPbEAwBE1NXX0ZyZWlnaHREZXJlbGljdDHbEAcBAQAQIwBZb3UgYXJlIGFscmVhZHkgbGFuZGVkIG9uIERhdGhvbWlyIQAACQEJAQEB",
+    "variables": "KLUv/QBYIQAAAAAAAA==",
+    "bytecode": "KLUv/QBYLQsA1tFANWC1SgdgHAiCIAiCIAin4+R+Y/IfjBxsj9GULu+1HH8C+mz51A6JGwirKmFak+BgyG7adZMkNwAyADEAFr1q9HRgwk5YhygckElo8GioTHhgF5UJWyI8I4HXS5MBslghCjAMWViGhC0WdgoS3OBlSJKiQBzKxu3kNlBWf1U7uU1qNIKqlX6OGdXsQ6V2S4BIJEHPIOzktv77m4NfkJ3cFjujVOsHVX++/nyUBD3Tn28ktVv9+SSssC6XBy+NpwMdmF305/N0oINqHhqAbMYaLcqhsEtYH7vb2IYkRbgpYxHrTxZhj3WeYz2H6ITE4KRdArdJqurBgUK9v+nPd05Tv/rzBSwg8MIaMg9sEPI4E8A+QUUgF2yUAHtn8bURCaJo6PAj3Ou6rXy1cKKW3Ce6FxYXhHyuuyUe72oxYbFR72uJiDUVJ3hBRmj5yM2WeyfSxFxlj2QuuHmRlpWby9isdlkP",
     "text": "Begin SW_FTravelDathomir\n\nIf ( OnActivate == 1 )\n\tIf ( FreightTravel != 35 )\n\t\tSet FreightTravel to 35\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\t\tSW_FreighterToDantooine->Disable\n\t\t\tSW_FreighterToTatooine->Disable\n\t\t\tSW_FreighterToManaan->Disable\n\t\t\tSW_FreighterToKashyyk->Disable\n\t\t\tSW_FreighterToDathomir->Enable\n\t\t\tSW_FreighterToGamorr->Disable\n\t\t\tSW_FreighterToHoth->Disable\n\t\t\tSW_FreighterToTaris->Disable\n\t\t\tSW_FreighterToM4->Disable\n\t\t\tSW_FreighterToNarShad->Disable\n\t\t\tSW_FreighterToNone->Disable\n\t\t\tSW_FreighterToDerelict->Disable\n\t\t\tSW_FreighterToLok->Disable\n\t\t\tSet SW_LTSPEED to 1\n\t\t\tSW_FreightPlanDath->Enable\n\t\t\tSW_FreightPlanKash->Disable\n\t\t\tSW_FreightPlanHoth->Disable\n\t\t\tSW_FreightPlanGamor->Disable\n\t\t\tSW_FreighterPlanTat->Disable\n\t\t\tSW_FreightPlanDant->Disable\n\t\t\tSW_FreightPlanNar->Disable\n\t\t\tSW_FreightPlanMana->Disable\n\t\t\tSW_FreightPlanM478->Disable\n\t\t\tSW_FreightPlanTaris->Disable\n\t\t\tSW_FreightDerelict1->Disable\n\telse\n\t\tMessageBox \"You are already landed on Dathomir!\"\n\tendif\nEndif\n\nEnd\n\n"
   },
   {
@@ -188,8 +188,8 @@
       "bytecode_length": 738,
       "variables_length": 0
     },
-    "variables": "AAAAAA==",
-    "bytecode": "4gIAAAYBIAkgWBgQID09IDEGARwWIEcNRnJlaWdodFRyYXZlbCAhPSA1MAUBRw1GcmVpZ2h0VHJhdmVsAyA1MCwRD1NoaXBUcmF2ZWxTb3VuZAwBF1NXX0ZyZWlnaHRlclRvRGFudG9vaW5l2xAMARZTV19GcmVpZ2h0ZXJUb1RhdG9vaW5l2xAMARRTV19GcmVpZ2h0ZXJUb01hbmFhbtsQDAEVU1dfRnJlaWdodGVyVG9LYXNoeXlr2xAMARZTV19GcmVpZ2h0ZXJUb0RhdGhvbWly2xAMARRTV19GcmVpZ2h0ZXJUb0dhbW9yctoQDAESU1dfRnJlaWdodGVyVG9Ib3Ro2xAMARNTV19GcmVpZ2h0ZXJUb1Rhcmlz2xAMARBTV19GcmVpZ2h0ZXJUb0002xAMARVTV19GcmVpZ2h0ZXJUb05hclNoYWTbEAwBElNXX0ZyZWlnaHRlclRvTm9uZdsQDAEWU1dfRnJlaWdodGVyVG9EZXJlbGljdNsQDAERU1dfRnJlaWdodGVyVG9Mb2vbEAwBClNXX1BsYW5Mb2vbEAUBRwpTV19MVFNQRUVEAiAxDAESU1dfRnJlaWdodFBsYW5EYXRo2xAMARJTV19GcmVpZ2h0UGxhbkthc2jbEAwBElNXX0ZyZWlnaHRQbGFuSG90aNsQDAETU1dfRnJlaWdodFBsYW5HYW1vctoQDAETU1dfRnJlaWdodGVyUGxhblRhdNsQDAESU1dfRnJlaWdodFBsYW5EYW502xAMARFTV19GcmVpZ2h0UGxhbk5hctsQDAESU1dfRnJlaWdodFBsYW5NYW5h2xAMARJTV19GcmVpZ2h0UGxhbk00NzjbEAwBE1NXX0ZyZWlnaHRQbGFuVGFyaXPbEAwBE1NXX0ZyZWlnaHREZXJlbGljdDHbEAcBAQAQIQBZb3UgYXJlIGFscmVhZHkgbGFuZGVkIG9uIEdhbW9yciEAAAkBCQEBAQ==",
+    "variables": "KLUv/QBYIQAAAAAAAA==",
+    "bytecode": "KLUv/QBY3QoAVhE/M1CppgOoFlVVVVVVVVWNwbCvGZN/niz3yLsGwZIFZhD6aIXYYxgxHAoZmpO/R0FQYKAkATUAMAAxABmNng40WErr0IQT3AYHHgkTCwMsY2Lhi4RlpDjN6hbBRcogkOEIwjYofLnwO3DgibchSYuKHYijzyBLvW6rs6Fa6o0onZ9nKPeZW70lIRJtoGsKlnpd//2L4FlkqdfF5uasfWsGl9gIdE1fYtWtvsQovLAwGAxmG08HOjLL6EvM04GOuXlUCE5GGq3JqbRvkJ5Tud5SL7s77SRJEso9WYtaX7JIe6TyHOk5NB8kyZN2A15HgSwoVK7q/Yue86hd1WcdKiDgQhvrAXRSPA4C7SsHrQMQ3FG5ZcktmeXCEI+DvbXsQfBOXsyCuxOgqR3eZLFy/ZbgeNcWCTMb9b5GBFhTeYJ3MkLLh+yZ8AgTc5MdyRxw8yctKzeXsVntlh4=",
     "text": "Begin SW_FTravelGamorr\n\nIf ( OnActivate == 1 )\n\tIf ( FreightTravel != 50 )\n\t\tSet FreightTravel to 50\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\t\tSW_FreighterToDantooine->Disable\n\t\t\tSW_FreighterToTatooine->Disable\n\t\t\tSW_FreighterToManaan->Disable\n\t\t\tSW_FreighterToKashyyk->Disable\n\t\t\tSW_FreighterToDathomir->Disable\n\t\t\tSW_FreighterToGamorr->Enable\n\t\t\tSW_FreighterToHoth->Disable\n\t\t\tSW_FreighterToTaris->Disable\n\t\t\tSW_FreighterToM4->Disable\n\t\t\tSW_FreighterToNarShad->Disable\n\t\t\tSW_FreighterToNone->Disable\n\t\t\tSW_FreighterToDerelict->Disable\n\t\t\tSW_FreighterToLok->Disable\n\t\t\tSet SW_LTSPEED to 1\n\t\t\tSW_FreightPlanDath->Disable\n\t\t\tSW_FreightPlanKash->Disable\n\t\t\tSW_FreightPlanHoth->Disable\n\t\t\tSW_FreightPlanGamor->Enable\n\t\t\tSW_FreighterPlanTat->Disable\n\t\t\tSW_FreightPlanDant->Disable\n\t\t\tSW_FreightPlanNar->Disable\n\t\t\tSW_FreightPlanMana->Disable\n\t\t\tSW_FreightPlanM478->Disable\n\t\t\tSW_FreightPlanTaris->Disable\n\t\t\tSW_FreightDerelict1->Disable\n\telse\n\t\tMessageBox \"You are already landed on Gamorr!\"\n\tendif\nEndif\n\nEnd"
   },
   {
@@ -203,8 +203,8 @@
       "bytecode_length": 736,
       "variables_length": 0
     },
-    "variables": "AAAAAA==",
-    "bytecode": "4AIAAAYBIAkgWBgQID09IDEGARwWIEcNRnJlaWdodFRyYXZlbCAhPSAzMAUBRw1GcmVpZ2h0VHJhdmVsAyAzMCwRD1NoaXBUcmF2ZWxTb3VuZAwBF1NXX0ZyZWlnaHRlclRvRGFudG9vaW5l2xAMARZTV19GcmVpZ2h0ZXJUb1RhdG9vaW5l2xAMARRTV19GcmVpZ2h0ZXJUb01hbmFhbtsQDAEVU1dfRnJlaWdodGVyVG9LYXNoeXlr2xAMARZTV19GcmVpZ2h0ZXJUb0RhdGhvbWly2xAMARRTV19GcmVpZ2h0ZXJUb0dhbW9yctsQDAESU1dfRnJlaWdodGVyVG9Ib3Ro2hAMARNTV19GcmVpZ2h0ZXJUb1Rhcmlz2xAMARBTV19GcmVpZ2h0ZXJUb0002xAMARVTV19GcmVpZ2h0ZXJUb05hclNoYWTbEAwBElNXX0ZyZWlnaHRlclRvTm9uZdsQDAEWU1dfRnJlaWdodGVyVG9EZXJlbGljdNsQDAERU1dfRnJlaWdodGVyVG9Mb2vbEAwBClNXX1BsYW5Mb2vbEAUBRwpTV19MVFNQRUVEAiAxDAESU1dfRnJlaWdodFBsYW5EYXRo2xAMARJTV19GcmVpZ2h0UGxhbkthc2jbEAwBElNXX0ZyZWlnaHRQbGFuSG90aNoQDAETU1dfRnJlaWdodFBsYW5HYW1vctsQDAETU1dfRnJlaWdodGVyUGxhblRhdNsQDAESU1dfRnJlaWdodFBsYW5EYW502xAMARFTV19GcmVpZ2h0UGxhbk5hctsQDAESU1dfRnJlaWdodFBsYW5NYW5h2xAMARJTV19GcmVpZ2h0UGxhbk00NzjbEAwBE1NXX0ZyZWlnaHRQbGFuVGFyaXPbEAwBE1NXX0ZyZWlnaHREZXJlbGljdDHbEAcBAQAQHwBZb3UgYXJlIGFscmVhZHkgbGFuZGVkIG9uIEhvdGghAAAJAQkBAQE=",
+    "variables": "KLUv/QBYIQAAAAAAAA==",
+    "bytecode": "KLUv/QBYzQoAhtE/NFCFKh2UaqqqqqqqqqqaIGJfMSb/eBzfjtHBYDBngSVA34IDfh1jxlxuwjZAWh/hMYBGkgQ1ADAAMQAYhSHQO1gqa9J8FFp8BJAFioUDlkGxMGbCElacYjVKaJA6DGhYkrCNCmMw7BAe2MHbmKZFgG4pt400eiyylAMQ69xUlE7RNVQTzVhvTZRKcXSOwVJu67/vKTgmWcptsLU5a9+aAVhfXtvonL68qlhv9eVV4YWVyVwP64RA76FZRl9eIdB7zA6kRmgSUmjNT5U9PvrPxRO761jHNE1inRvuyRnM+pJL2SGVZ0jPpAkxKbhpV8BtlUikgeHyvqcvr38gtav6KSAQQxvyOAl4n6Aiyh07lDRfi2BhyBqHzbJa+yDIJ89sxb0J0NTCFcuvuSU83tViYcdGva8REdZUmuC9jNDylYstTnj0iblkj2QOuHmWlo2ba2xWu6oH",
     "text": "Begin SW_FTravelHoth\n\nIf ( OnActivate == 1 )\n\tIf ( FreightTravel != 30 )\n\t\tSet FreightTravel to 30\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\t\tSW_FreighterToDantooine->Disable\n\t\t\tSW_FreighterToTatooine->Disable\n\t\t\tSW_FreighterToManaan->Disable\n\t\t\tSW_FreighterToKashyyk->Disable\n\t\t\tSW_FreighterToDathomir->Disable\n\t\t\tSW_FreighterToGamorr->Disable\n\t\t\tSW_FreighterToHoth->Enable\n\t\t\tSW_FreighterToTaris->Disable\n\t\t\tSW_FreighterToM4->Disable\n\t\t\tSW_FreighterToNarShad->Disable\n\t\t\tSW_FreighterToNone->Disable\n\t\t\tSW_FreighterToDerelict->Disable\n\t\t\tSW_FreighterToLok->Disable\n\t\t\tSet SW_LTSPEED to 1\n\t\t\tSW_FreightPlanDath->Disable\n\t\t\tSW_FreightPlanKash->Disable\n\t\t\tSW_FreightPlanHoth->Enable\n\t\t\tSW_FreightPlanGamor->Disable\n\t\t\tSW_FreighterPlanTat->Disable\n\t\t\tSW_FreightPlanDant->Disable\n\t\t\tSW_FreightPlanNar->Disable\n\t\t\tSW_FreightPlanMana->Disable\n\t\t\tSW_FreightPlanM478->Disable\n\t\t\tSW_FreightPlanTaris->Disable\n\t\t\tSW_FreightDerelict1->Disable\n\telse\n\t\tMessageBox \"You are already landed on Hoth!\"\n\tendif\nEndif\n\nEnd\n\n"
   },
   {
@@ -218,8 +218,8 @@
       "bytecode_length": 739,
       "variables_length": 0
     },
-    "variables": "AAAAAA==",
-    "bytecode": "4wIAAAYBIAkgWBgQID09IDEGARwWIEcNRnJlaWdodFRyYXZlbCAhPSAxNQUBRw1GcmVpZ2h0VHJhdmVsAyAxNSwRD1NoaXBUcmF2ZWxTb3VuZAwBF1NXX0ZyZWlnaHRlclRvRGFudG9vaW5l2xAMARZTV19GcmVpZ2h0ZXJUb1RhdG9vaW5l2xAMARRTV19GcmVpZ2h0ZXJUb01hbmFhbtsQDAEVU1dfRnJlaWdodGVyVG9LYXNoeXlr2hAMARZTV19GcmVpZ2h0ZXJUb0RhdGhvbWly2xAMARRTV19GcmVpZ2h0ZXJUb0dhbW9yctsQDAESU1dfRnJlaWdodGVyVG9Ib3Ro2xAMARNTV19GcmVpZ2h0ZXJUb1Rhcmlz2xAMARBTV19GcmVpZ2h0ZXJUb0002xAMARVTV19GcmVpZ2h0ZXJUb05hclNoYWTbEAwBElNXX0ZyZWlnaHRlclRvTm9uZdsQDAEWU1dfRnJlaWdodGVyVG9EZXJlbGljdNsQDAERU1dfRnJlaWdodGVyVG9Mb2vbEAwBClNXX1BsYW5Mb2vbEAUBRwpTV19MVFNQRUVEAiAxDAESU1dfRnJlaWdodFBsYW5EYXRo2xAMARJTV19GcmVpZ2h0UGxhbkthc2jaEAwBElNXX0ZyZWlnaHRQbGFuSG90aNsQDAETU1dfRnJlaWdodFBsYW5HYW1vctsQDAETU1dfRnJlaWdodGVyUGxhblRhdNsQDAESU1dfRnJlaWdodFBsYW5EYW502xAMARFTV19GcmVpZ2h0UGxhbk5hctsQDAESU1dfRnJlaWdodFBsYW5NYW5h2xAMARJTV19GcmVpZ2h0UGxhbk00NzjbEAwBE1NXX0ZyZWlnaHRQbGFuVGFyaXPbEAwBE1NXX0ZyZWlnaHREZXJlbGljdDHbEAcBAQAQIgBZb3UgYXJlIGFscmVhZHkgbGFuZGVkIG9uIEthc2h5eWshAAAJAQkBAQE=",
+    "variables": "KLUv/QBYIQAAAAAAAA==",
+    "bytecode": "KLUv/QBYBQsAFtJANFCFKh1QEVRVVVVVVVU1AQzkFmzy/yPZ2zE6GAzm6/FoiLfgBsEOuKPPk1kcEeojPAbQSJI3ADIAMgC36FVjhwMRdsI6RGGATMKCBwOlYoFdUCquSHhGAa+XJgFksT4QXDiisIyKKxV2CRHc4GVIkmJA9ZuJxu3kNlBWf1E7uU1qFAJSK/38UrMPldqtkUckkqBjDnZyW/99jcGvyE5ui51RqnWP6s/Xn28kQcf054Pc6s9XscKyWB68Mh0OdFx20Z+vw4GOndzmoZmHNpHNWKNFN9glDLvb2IYkSbgpYxHrTxZhj3WeYz2HqIS04KTdAbdVFOXQMIG8r+nP903f0n71Zygg0EKbMg88kfw4E+g+QYsgV2yUAHvb4msQH4QikBFKDD5bOFFL7k1IhrzDmyxWrrxFXJWIslyfD4dNTKUJXskILR+5scUJj8bjt+yTzAc3L9Kyc3ONzWqX9Q==",
     "text": "Begin SW_FTravelKashyyk\n\nIf ( OnActivate == 1 )\n\tIf ( FreightTravel != 15 )\n\t\tSet FreightTravel to 15\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\t\tSW_FreighterToDantooine->Disable\n\t\t\tSW_FreighterToTatooine->Disable\n\t\t\tSW_FreighterToManaan->Disable\n\t\t\tSW_FreighterToKashyyk->Enable\n\t\t\tSW_FreighterToDathomir->Disable\n\t\t\tSW_FreighterToGamorr->Disable\n\t\t\tSW_FreighterToHoth->Disable\n\t\t\tSW_FreighterToTaris->Disable\n\t\t\tSW_FreighterToM4->Disable\n\t\t\tSW_FreighterToNarShad->Disable\n\t\t\tSW_FreighterToNone->Disable\n\t\t\tSW_FreighterToDerelict->Disable\n\t\t\tSW_FreighterToLok->Disable\n\t\t\tSet SW_LTSPEED to 1\n\t\t\tSW_FreightPlanDath->Disable\n\t\t\tSW_FreightPlanKash->Enable\n\t\t\tSW_FreightPlanHoth->Disable\n\t\t\tSW_FreightPlanGamor->Disable\n\t\t\tSW_FreighterPlanTat->Disable\n\t\t\tSW_FreightPlanDant->Disable\n\t\t\tSW_FreightPlanNar->Disable\n\t\t\tSW_FreightPlanMana->Disable\n\t\t\tSW_FreightPlanM478->Disable\n\t\t\tSW_FreightPlanTaris->Disable\t\n\t\t\tSW_FreightDerelict1->Disable\n\t\telse\n\t\tMessageBox \"You are already landed on Kashyyk!\"\n\tendif\nEndif\n\nEnd"
   },
   {
@@ -233,8 +233,8 @@
       "bytecode_length": 737,
       "variables_length": 0
     },
-    "variables": "AAAAAA==",
-    "bytecode": "4QIAAAYBIAkgWBgQID09IDEGARwWIEcNRnJlaWdodFRyYXZlbCAhPSA0NQUBRw1GcmVpZ2h0VHJhdmVsAyA0NSwRD1NoaXBUcmF2ZWxTb3VuZAwBF1NXX0ZyZWlnaHRlclRvRGFudG9vaW5l2xAMARZTV19GcmVpZ2h0ZXJUb1RhdG9vaW5l2xAMARRTV19GcmVpZ2h0ZXJUb01hbmFhbtsQDAEVU1dfRnJlaWdodGVyVG9LYXNoeXlr2xAMARZTV19GcmVpZ2h0ZXJUb0RhdGhvbWly2xAMARRTV19GcmVpZ2h0ZXJUb0dhbW9yctsQDAESU1dfRnJlaWdodGVyVG9Ib3Ro2xAMARNTV19GcmVpZ2h0ZXJUb1Rhcmlz2xAMARBTV19GcmVpZ2h0ZXJUb0002hAMARVTV19GcmVpZ2h0ZXJUb05hclNoYWTbEAwBElNXX0ZyZWlnaHRlclRvTm9uZdsQDAEWU1dfRnJlaWdodGVyVG9EZXJlbGljdNsQDAERU1dfRnJlaWdodGVyVG9Mb2vbEAwBClNXX1BsYW5Mb2vbEAUBRwpTV19MVFNQRUVEAiAxDAESU1dfRnJlaWdodFBsYW5EYXRo2xAMARJTV19GcmVpZ2h0UGxhbkthc2jbEAwBElNXX0ZyZWlnaHRQbGFuSG90aNsQDAETU1dfRnJlaWdodFBsYW5HYW1vctsQDAETU1dfRnJlaWdodGVyUGxhblRhdNsQDAESU1dfRnJlaWdodFBsYW5EYW502xAMARFTV19GcmVpZ2h0UGxhbk5hctsQDAESU1dfRnJlaWdodFBsYW5NYW5h2xAMARJTV19GcmVpZ2h0UGxhbk00NzjaEAwBE1NXX0ZyZWlnaHRQbGFuVGFyaXPbEAwBE1NXX0ZyZWlnaHREZXJlbGljdDHbEAcBAQAQIABZb3UgYXJlIGFscmVhZHkgbGFuZGVkIG9uIE00LTc4IQAACQEJAQEB",
+    "variables": "KLUv/QBYIQAAAAAAAA==",
+    "bytecode": "KLUv/QBYBQsAhlFANECFajrPZ46iKIqiKIqixqRi3zMm/wCz2jGLZD4XHthD6J1kiG8ELYcIHiF9+wNtXD4DJQk2ADAAMQAZjZ4OPNhJ69CEE9wGCR4KlIoDdkGp+CJhGQGcZnWL4CJlGMhwJGEZE75c+CE4cIOXIUmKAAFvp9eBOPoMstPrtjobKErn5xnKfeZWb0mIRBvoGoOdXtd//yp4FtnpdbG5OWvfmgH1WV9ioGv6EqNu9SU2YYWFwWAw23g60JHZRV9ing50zM2jQnAy0mhNDqV9g/ScUXUFu9vYhiRJLJWF6uKerEWtL1mkPVJ5jvQcmg8SP2lX4HUTyMhSqaj3r77EznnUpgIrIPBCm+oBOAl4n+AVCIC9JE2AvbX4GgQRBtZ4bJbN2oedcVLAAdybAEXN8CaJleu3JMe7t1hY2aj3NSLOmkq9sZIRWj5ys+UJjzAxl+yTzIebd2lZubmKzWp39A==",
     "text": "Begin SW_FTravelM478\n\nIf ( OnActivate == 1 )\n\tIf ( FreightTravel != 45 )\n\t\tSet FreightTravel to 45\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\t\tSW_FreighterToDantooine->Disable\n\t\t\tSW_FreighterToTatooine->Disable\n\t\t\tSW_FreighterToManaan->Disable\n\t\t\tSW_FreighterToKashyyk->Disable\n\t\t\tSW_FreighterToDathomir->Disable\n\t\t\tSW_FreighterToGamorr->Disable\n\t\t\tSW_FreighterToHoth->Disable\n\t\t\tSW_FreighterToTaris->Disable\n\t\t\tSW_FreighterToM4->Enable\n\t\t\tSW_FreighterToNarShad->Disable\n\t\t\tSW_FreighterToNone->Disable\n\t\t\tSW_FreighterToDerelict->Disable\n\t\t\tSW_FreighterToLok->Disable\n\t\t\tSet SW_LTSPEED to 1\n\t\t\tSW_FreightPlanDath->Disable\n\t\t\tSW_FreightPlanKash->Disable\n\t\t\tSW_FreightPlanHoth->Disable\n\t\t\tSW_FreightPlanGamor->Disable\n\t\t\tSW_FreighterPlanTat->Disable\n\t\t\tSW_FreightPlanDant->Disable\n\t\t\tSW_FreightPlanNar->Disable\n\t\t\tSW_FreightPlanMana->Disable\n\t\t\tSW_FreightPlanM478->Enable\n\t\t\tSW_FreightPlanTaris->Disable\n\t\t\tSW_FreightDerelict1->Disable\n\telse\n\t\tMessageBox \"You are already landed on M4-78!\"\n\tendif\nEndif\n\nEnd\n"
   },
   {
@@ -248,8 +248,8 @@
       "bytecode_length": 762,
       "variables_length": 0
     },
-    "variables": "AAAAAA==",
-    "bytecode": "+gIAAAYBIQkgWBgQID09IDEGAR0WIEcNRnJlaWdodFRyYXZlbCAhPSAyMAUBRw1GcmVpZ2h0VHJhdmVsAyAyMCwRD1NoaXBUcmF2ZWxTb3VuZAwBF1NXX0ZyZWlnaHRlclRvRGFudG9vaW5l2xAMARZTV19GcmVpZ2h0ZXJUb1RhdG9vaW5l2xAMARRTV19GcmVpZ2h0ZXJUb01hbmFhbtoQDAEVU1dfRnJlaWdodGVyVG9LYXNoeXlr2xAMARZTV19GcmVpZ2h0ZXJUb0RhdGhvbWly2xAMARRTV19GcmVpZ2h0ZXJUb0dhbW9yctsQDAESU1dfRnJlaWdodGVyVG9Ib3Ro2xAMARNTV19GcmVpZ2h0ZXJUb1Rhcmlz2xAMARBTV19GcmVpZ2h0ZXJUb0002xAMARVTV19GcmVpZ2h0ZXJUb05hclNoYWTbEAwBElNXX0ZyZWlnaHRlclRvTm9uZdsQDAETU1dfRnJlaWdodERlcmVsaWN0MdsQDAEWU1dfRnJlaWdodGVyVG9EZXJlbGljdNsQDAERU1dfRnJlaWdodGVyVG9Mb2vbEAwBClNXX1BsYW5Mb2vbEAUBRwpTV19MVFNQRUVEAiAxDAESU1dfRnJlaWdodFBsYW5EYXRo2xAMARJTV19GcmVpZ2h0UGxhbkthc2jbEAwBElNXX0ZyZWlnaHRQbGFuSG90aNsQDAETU1dfRnJlaWdodFBsYW5HYW1vctsQDAETU1dfRnJlaWdodGVyUGxhblRhdNsQDAESU1dfRnJlaWdodFBsYW5EYW502xAMARFTV19GcmVpZ2h0UGxhbk5hctsQDAESU1dfRnJlaWdodFBsYW5NYW5h2hAMARJTV19GcmVpZ2h0UGxhbk00NzjbEAwBE1NXX0ZyZWlnaHRQbGFuVGFyaXPbEAwBE1NXX0ZyZWlnaHREZXJlbGljdDHbEAcBAQAQIQBZb3UgYXJlIGFscmVhZHkgbGFuZGVkIG9uIE1hbmFhbiEAAAkBCQEBAQ==",
+    "variables": "KLUv/QBYIQAAAAAAAA==",
+    "bytecode": "KLUv/QBYFQsAJtE+NGCJ0wEwDLsDQRAEQRAEwRV/bx8rUbn69shrgfvTvHUP8fQMfaDDkN27BqbWUJml0rh+2QI1AC8AMQA0ejrQYCmtQxNOcBsceCRIKAywDAmFLRbLSHGa1S2Ci5RBAMMRhG1M2GLhd+DAk7UNSVpUBEu9DsTRZ5ClXrfV2VDR+TmGcp+51V8SItEGeqZgqTfqv78heBZZ6nWxuTlr/5pZGI2gZ/oSq371JTbhxXW5YDDTeDrQgVlGX2KeDnRMzWNSITgZabwgk1Np3yA9p6tsXrs77SRJFvdkLWp9ySLtkcpzpOfQfJCsJ+0GQBYUKqP3N32JnfOoXdVnfRktIMDCGzIPwZLxVBnAPk0VEwD7biiSMyiChZk1HrbLZkkyvT+2ZY0HEqBQC97wsXLgW+Lxui0SPrPXDUTpCa9+DAkjuyv2xkpGKPIhLyPoJDzixNyyXzIXbh6kZe7mMjar3dID",
     "text": "Begin SW_FTravelManaan\n\nIf ( OnActivate == 1 )\n\tIf ( FreightTravel != 20 )\n\t\tSet FreightTravel to 20\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\t\tSW_FreighterToDantooine->Disable\n\t\t\tSW_FreighterToTatooine->Disable\n\t\t\tSW_FreighterToManaan->Enable\n\t\t\tSW_FreighterToKashyyk->Disable\n\t\t\tSW_FreighterToDathomir->Disable\n\t\t\tSW_FreighterToGamorr->Disable\n\t\t\tSW_FreighterToHoth->Disable\n\t\t\tSW_FreighterToTaris->Disable\n\t\t\tSW_FreighterToM4->Disable\n\t\t\tSW_FreighterToNarShad->Disable\n\t\t\tSW_FreighterToNone->Disable\n\t\t\tSW_FreightDerelict1->Disable\n\t\t\tSW_FreighterToDerelict->Disable\n\t\t\tSW_FreighterToLok->Disable\n\t\t\tSet SW_LTSPEED to 1\n\t\t\tSW_FreightPlanDath->Disable\n\t\t\tSW_FreightPlanKash->Disable\n\t\t\tSW_FreightPlanHoth->Disable\n\t\t\tSW_FreightPlanGamor->Disable\n\t\t\tSW_FreighterPlanTat->Disable\n\t\t\tSW_FreightPlanDant->Disable\n\t\t\tSW_FreightPlanNar->Disable\n\t\t\tSW_FreightPlanMana->Enable\n\t\t\tSW_FreightPlanM478->Disable\n\t\t\tSW_FreightPlanTaris->Disable\n\t\t\tSW_FreightDerelict1->Disable\n\telse\n\t\tMessageBox \"You are already landed on Manaan!\"\n\tendif\nEndif\n\nEnd"
   },
   {
@@ -263,8 +263,8 @@
       "bytecode_length": 692,
       "variables_length": 0
     },
-    "variables": "AAAAAA==",
-    "bytecode": "tAIAAAYBHgkgWBgQID09IDEGARoWIEcNRnJlaWdodFRyYXZlbCAhPSAyNQUBRw1GcmVpZ2h0VHJhdmVsAyAyNSwRD1NoaXBUcmF2ZWxTb3VuZAwBF1NXX0ZyZWlnaHRlclRvRGFudG9vaW5l2xAMARZTV19GcmVpZ2h0ZXJUb1RhdG9vaW5l2xAMARRTV19GcmVpZ2h0ZXJUb01hbmFhbtsQDAEVU1dfRnJlaWdodGVyVG9LYXNoeXlr2xAMARZTV19GcmVpZ2h0ZXJUb0RhdGhvbWly2xAMARRTV19GcmVpZ2h0ZXJUb0dhbW9yctsQDAESU1dfRnJlaWdodGVyVG9Ib3Ro2xAMARNTV19GcmVpZ2h0ZXJUb1Rhcmlz2xAMARBTV19GcmVpZ2h0ZXJUb0002xAMARVTV19GcmVpZ2h0ZXJUb05hclNoYWTaEAwBElNXX0ZyZWlnaHRlclRvTm9uZdsQDAERU1dfRnJlaWdodGVyVG9Mb2vbEAwBClNXX1BsYW5Mb2vbEAUBRwpTV19MVFNQRUVEAiAxDAESU1dfRnJlaWdodFBsYW5EYXRo2xAMARJTV19GcmVpZ2h0UGxhbkthc2jbEAwBElNXX0ZyZWlnaHRQbGFuSG90aNsQDAETU1dfRnJlaWdodFBsYW5HYW1vctsQDAETU1dfRnJlaWdodGVyUGxhblRhdNsQDAESU1dfRnJlaWdodFBsYW5EYW502xAMARFTV19GcmVpZ2h0UGxhbk5hctoQDAESU1dfRnJlaWdodFBsYW5NYW5h2xAMARJTV19GcmVpZ2h0UGxhbk00NzjbEAwBE1NXX0ZyZWlnaHRQbGFuVGFyaXPbEAcBAQAQJgBZb3UgYXJlIGFscmVhZHkgbGFuZGVkIG9uIE5hciBTaGFkZGFhIQAACQEJAQEB",
+    "variables": "KLUv/QBYIQAAAAAAAA==",
+    "bytecode": "KLUv/QBYjQoAJlE+NFCFKh10ZmZKV1VVVdVKDOQWbPKPx/H9JudlwJyUEAqMW3CDo1cnjkBLwjZAWh/hMYBGkgQ1AC8AMAA1fjwPYSfYIvoAZPIVQBouFRZYxqXCmAnPGOAV0yRFFisEgYYlCtugMAbDLkGCHQvbkKSFgJPbQlk9FtnJbVKjEVStFHRNzUBUaq8qRiMZ+uZgJ7f13+8YHJPs5LbYGaVav6JYtyBaU9qx/rxC3/TnRb3qz4vCiyqTuR7G+XjeQ7OM/rw+nvegHAi1BsDLV29ZOm4Du+tYhyRNfggvH9db3JRhhP3JI/hY5znWs4hOSAxO2h2IPDhYqPc7/XnVJyDQwqO6AWczWG5stAD2ZnG53ZQrhjgc780yupzAUOABcEmAQg14XcJKKLfE40JbRDK9sBbGixWStpA7mnzkYgsSHmliLtkpmQ83D9IyurmMzWp39A==",
     "text": "Begin SW_FTravelNarShaddaa\n\nIf ( OnActivate == 1 )\n\tIf ( FreightTravel != 25 )\n\t\tSet FreightTravel to 25\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\t\tSW_FreighterToDantooine->Disable\n\t\t\tSW_FreighterToTatooine->Disable\n\t\t\tSW_FreighterToManaan->Disable\n\t\t\tSW_FreighterToKashyyk->Disable\n\t\t\tSW_FreighterToDathomir->Disable\n\t\t\tSW_FreighterToGamorr->Disable\n\t\t\tSW_FreighterToHoth->Disable\n\t\t\tSW_FreighterToTaris->Disable\n\t\t\tSW_FreighterToM4->Disable\n\t\t\tSW_FreighterToNarShad->Enable\n\t\t\tSW_FreighterToNone->Disable\n\t\t\tSW_FreighterToLok->Disable\n\t\t\tSet SW_LTSPEED to 1\n\t\t\tSW_FreightPlanDath->Disable\n\t\t\tSW_FreightPlanKash->Disable\n\t\t\tSW_FreightPlanHoth->Disable\n\t\t\tSW_FreightPlanGamor->Disable\n\t\t\tSW_FreighterPlanTat->Disable\n\t\t\tSW_FreightPlanDant->Disable\n\t\t\tSW_FreightPlanNar->Enable\n\t\t\tSW_FreightPlanMana->Disable\n\t\t\tSW_FreightPlanM478->Disable\n\t\t\tSW_FreightPlanTaris->Disable\n\telse\n\t\tMessageBox \"You are already landed on Nar Shaddaa!\"\n\tendif\nEndif\n\nEnd"
   },
   {
@@ -278,8 +278,8 @@
       "bytecode_length": 711,
       "variables_length": 9
     },
-    "variables": "CQAAAE1hZ2ljVmFyAA==",
-    "bytecode": "xwIAAAYBAgkgcwEAID09IDDbEAUBcwEAAiAxCQEGAR4JIFgYECA9PSAxBgEaFiBHDUZyZWlnaHRUcmF2ZWwgIT0gNDAFAUcNRnJlaWdodFRyYXZlbAMgNDAsEQ9TaGlwVHJhdmVsU291bmQMARdTV19GcmVpZ2h0ZXJUb0RhbnRvb2luZdsQDAEWU1dfRnJlaWdodGVyVG9UYXRvb2luZdsQDAEUU1dfRnJlaWdodGVyVG9NYW5hYW7bEAwBFVNXX0ZyZWlnaHRlclRvS2FzaHl5a9sQDAEWU1dfRnJlaWdodGVyVG9EYXRob21pctsQDAEUU1dfRnJlaWdodGVyVG9HYW1vcnLbEAwBElNXX0ZyZWlnaHRlclRvSG90aNsQDAETU1dfRnJlaWdodGVyVG9UYXJpc9oQDAEQU1dfRnJlaWdodGVyVG9NNNsQDAEVU1dfRnJlaWdodGVyVG9OYXJTaGFk2xAMARJTV19GcmVpZ2h0ZXJUb05vbmXbEAwBEVNXX0ZyZWlnaHRlclRvTG9r2xAMAQpTV19QbGFuTG9r2xAFAUcKU1dfTFRTUEVFRAIgMQwBElNXX0ZyZWlnaHRQbGFuRGF0aNsQDAESU1dfRnJlaWdodFBsYW5LYXNo2xAMARJTV19GcmVpZ2h0UGxhbkhvdGjbEAwBE1NXX0ZyZWlnaHRQbGFuR2Ftb3LbEAwBE1NXX0ZyZWlnaHRlclBsYW5UYXTbEAwBElNXX0ZyZWlnaHRQbGFuRGFudNsQDAERU1dfRnJlaWdodFBsYW5OYXLbEAwBElNXX0ZyZWlnaHRQbGFuTWFuYdsQDAESU1dfRnJlaWdodFBsYW5NNDc42xAMARNTV19GcmVpZ2h0UGxhblRhcmlz2hAHAQEAECAAWW91IGFyZSBhbHJlYWR5IGxhbmRlZCBvbiBUYXJpcyEAAAkBCQEBAQ==",
+    "variables": "KLUv/QBYaQAACQAAAE1hZ2ljVmFyAA==",
+    "bytecode": "KLUv/QBY7QoABtJANFCFOB10VuzMzMzMzCwC2Mgt2EqUn7D85V8BwZI1AwgbUcHwijPJlGgTQyja36fhIkY3uQM0ADMAMwA8sIrIxBSEpxzwenEZAE1WiAIKPxZ2IWGKYqggwRDDLhaS8PN2WwXsIkxR/HZj6NnFew+BlW5OqdqGZtyrAJ1Otr2CsBHs+u9fDn49NoKdbI1Srl/Rq0pNJiZshDWHRgFaFg0aDZEp/WlJr/rTkvBTTSZWvCyaTGRQVtGfliYTGdTSoBgJexbrMdMFbgQLbFr95dgIdhlHI6Qauwst9B6EmzImsf7kDnZZ51nWM4dOPIZvl8Dx4DBJ71/60zqmwfUr7ld/WtsrAScg0MIjsgNZFH92BuXORhNw7y0ONYKFnc2KEqN3AsMCBcB9AjS1wesCVkK6JR8X3qKS6ccaEWNNhQQvyQgtH7mxxQmPIjGX7JTMh5sHaRndXMamod2JAg==",
     "text": "Begin SW_FTravelTaris\n\nShort MagicVar\n\nIf ( MagicVar == 0 )\n\tDisable\n\tSet MagicVar to 1\nEndif\n\nIf ( OnActivate == 1 )\n\tIf ( FreightTravel != 40 )\n\t\tSet FreightTravel to 40\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\t\tSW_FreighterToDantooine->Disable\n\t\t\tSW_FreighterToTatooine->Disable\n\t\t\tSW_FreighterToManaan->Disable\n\t\t\tSW_FreighterToKashyyk->Disable\n\t\t\tSW_FreighterToDathomir->Disable\n\t\t\tSW_FreighterToGamorr->Disable\n\t\t\tSW_FreighterToHoth->Disable\n\t\t\tSW_FreighterToTaris->Enable\n\t\t\tSW_FreighterToM4->Disable\n\t\t\tSW_FreighterToNarShad->Disable\n\t\t\tSW_FreighterToNone->Disable\n\t\t\tSW_FreighterToLok->Disable\n\t\t\tSet SW_LTSPEED to 1\n\t\t\tSW_FreightPlanDath->Disable\n\t\t\tSW_FreightPlanKash->Disable\n\t\t\tSW_FreightPlanHoth->Disable\n\t\t\tSW_FreightPlanGamor->Disable\n\t\t\tSW_FreighterPlanTat->Disable\n\t\t\tSW_FreightPlanDant->Disable\n\t\t\tSW_FreightPlanNar->Disable\n\t\t\tSW_FreightPlanMana->Disable\n\t\t\tSW_FreightPlanM478->Disable\n\t\t\tSW_FreightPlanTaris->Enable\n\telse\n\t\tMessageBox \"You are already landed on Taris!\"\n\tendif\nEndif\n\nEnd\n"
   },
   {
@@ -293,8 +293,8 @@
       "bytecode_length": 687,
       "variables_length": 0
     },
-    "variables": "AAAAAA==",
-    "bytecode": "rwIAAAYBHgkgWBgQID09IDEGARoVIEcNRnJlaWdodFRyYXZlbCAhPSA1BQFHDUZyZWlnaHRUcmF2ZWwCIDUsEQ9TaGlwVHJhdmVsU291bmQMARdTV19GcmVpZ2h0ZXJUb0RhbnRvb2luZdsQDAEWU1dfRnJlaWdodGVyVG9UYXRvb2luZdoQDAEUU1dfRnJlaWdodGVyVG9NYW5hYW7bEAwBFVNXX0ZyZWlnaHRlclRvS2FzaHl5a9sQDAEWU1dfRnJlaWdodGVyVG9EYXRob21pctsQDAEUU1dfRnJlaWdodGVyVG9HYW1vcnLbEAwBElNXX0ZyZWlnaHRlclRvSG90aNsQDAETU1dfRnJlaWdodGVyVG9UYXJpc9sQDAEQU1dfRnJlaWdodGVyVG9NNNsQDAEVU1dfRnJlaWdodGVyVG9OYXJTaGFk2xAMARJTV19GcmVpZ2h0ZXJUb05vbmXbEAwBEVNXX0ZyZWlnaHRlclRvTG9r2xAMAQpTV19QbGFuTG9r2xAFAUcKU1dfTFRTUEVFRAIgMQwBElNXX0ZyZWlnaHRQbGFuRGF0aNsQDAESU1dfRnJlaWdodFBsYW5LYXNo2xAMARJTV19GcmVpZ2h0UGxhbkhvdGjbEAwBE1NXX0ZyZWlnaHRQbGFuR2Ftb3LbEAwBE1NXX0ZyZWlnaHRlclBsYW5UYXTaEAwBElNXX0ZyZWlnaHRQbGFuRGFudNsQDAERU1dfRnJlaWdodFBsYW5OYXLbEAwBElNXX0ZyZWlnaHRQbGFuTWFuYdsQDAESU1dfRnJlaWdodFBsYW5NNDc42xAMARNTV19GcmVpZ2h0UGxhblRhcmlz2xAHAQEAECMAWW91IGFyZSBhbHJlYWR5IGxhbmRlZCBvbiBUYXRvb2luZSEAAAkBCQEBAQ==",
+    "variables": "KLUv/QBYIQAAAAAAAA==",
+    "bytecode": "KLUv/QBYZQoAtpA8MWCp0gEhCIIQQRAEUeo4uW9M/sEYbzaabukvBjgJjLN19acbgURZI3M0sWPXuA6PyB0zAC4ALgBVejqxYN/VIRonMiwKPBQqLO2iwhYJT0nxamlYRCZrQwCGIwfLmLDFwtDggRsIy3BOqggWZB/cMI06TLXSzzFbzT4U005JiEQY6JnIPrj1398M7IOjWwT74CY7o1TrU9QK/VmBnunPajrVn9WEJepyqaKl8XSiA7OL/qw8neigmgflTNexWM+hbOA+uIGy+rvb2IZzEm7Kl7z6k0XXZZ1nWc8hCuESoNsFgDAsUKb3N/1ZnfPQ+tRIuxUnIODCG7INQZHkz2SQ3NgoAewti0NBMGFlsxKP6TiDgUAD4JYAlVrwuh4roW/Jjgu1aMn0sEYEWFMpwesyQstHLmyBd6JIzE32SO1j2KcMq9xMxTqzE2U=",
     "text": "Begin SW_FTravelTatooine\n\nIf ( OnActivate == 1 )\n\tIf ( FreightTravel != 5 )\n\t\tSet FreightTravel to 5\n\t\tPlaySound3d \"ShipTravelSound\"\n\t\t\tSW_FreighterToDantooine->Disable\n\t\t\tSW_FreighterToTatooine->Enable\n\t\t\tSW_FreighterToManaan->Disable\n\t\t\tSW_FreighterToKashyyk->Disable\n\t\t\tSW_FreighterToDathomir->Disable\n\t\t\tSW_FreighterToGamorr->Disable\n\t\t\tSW_FreighterToHoth->Disable\n\t\t\tSW_FreighterToTaris->Disable\n\t\t\tSW_FreighterToM4->Disable\n\t\t\tSW_FreighterToNarShad->Disable\n\t\t\tSW_FreighterToNone->Disable\n\t\t\tSW_FreighterToLok->Disable\n\t\t\tSet SW_LTSPEED to 1\n\t\t\tSW_FreightPlanDath->Disable\n\t\t\tSW_FreightPlanKash->Disable\n\t\t\tSW_FreightPlanHoth->Disable\n\t\t\tSW_FreightPlanGamor->Disable\n\t\t\tSW_FreighterPlanTat->Enable\n\t\t\tSW_FreightPlanDant->Disable\n\t\t\tSW_FreightPlanNar->Disable\n\t\t\tSW_FreightPlanMana->Disable\n\t\t\tSW_FreightPlanM478->Disable\n\t\t\tSW_FreightPlanTaris->Disable\n\telse\n\t\tMessageBox \"You are already landed on Tatooine!\"\n\tendif\nEndif\n\nEnd\n"
   },
   {
@@ -308,8 +308,8 @@
       "bytecode_length": 240,
       "variables_length": 20
     },
-    "variables": "FAAAAGRvT25jZQBkb0Fsc28AdGltZXIA",
-    "bytecode": "8AAAAAYBEQkgcwEAID09IDAGAQ8TIFgBECByBlBsYXllciA8IDI1MAYBDRggWM0QIGQLU1dfUHJlVGFyaXMgPT0gMzAGAQQJIHMCACA9PSAwDAELU1dfU2hhZGVQcmXbEDARAAAAQN4QBQFzAgACIDEJAQUBZgEACiBmAQAgWBIQICsGAQQIIGYBACA+IDICEA9TV19TaGlwYmxhc3RvZmbMEAtTV19QcmVUYXJpcygA//8MAQZwbGF5ZXIFEDkOL0UioRNGDf9BRs2MnUMTVGF0b29pbmUsIFNhbmRyaXZlcgUBcwEAAiAxCQEJAQkBCQEBAQ==",
+    "variables": "KLUv/QBYwQAAFAAAAGRvT25jZQBkb0Fsc28AdGltZXIA",
+    "bytecode": "KLUv/QBYzQYA0swwNHBr0gF8rj6D+1RVjQjF+h+E7SozihElqTaPJcDwasSilEhC7UkVaDgChHr97aatWkt3kgG2oaGhqyE6KzJ6cWT1g8nJNM0jMVEExsXnArFNLlEGgQRCAEOEOs+SbduCqIFhmqfKzUQno0RnuQPk4WfwKGB9jR1gjRkyTLhbVw1FjofdrUhxY1JqXpKi0mSqiCWuHj78JIVP02tGJWZSSpOpItfjx/rAxE9asLzhdFrIDfXoo61HFD/p0/R1Paz47W5HBgDiY0rHrkgH0yA0aDFiL8OAow==",
     "text": "Begin SW_StorySceneScr2\n\nshort doOnce\nshort doAlso\nfloat timer\n\nif ( doOnce == 0 )\nif ( GetDistance \"Player\" < 250 )\nif ( GetJournalIndex \"SW_PreTaris\" == 30 )\n\nif ( doAlso == 0 )\nSW_ShadePre->AiWander 0 0 0\nSW_ShadePre->Disable\nFadeOut 2.0\nDisablePlayerControls\nset doAlso to 1\nendif\nset timer to ( timer + GetSecondsPassed )\nif ( timer > 2 )\nPlaySound \"SW_Shipblastoff\"\nJournal SW_PreTaris 40\nplayer->PositionCell 2800.889 9448.283 12415.763 315.1 \"Tatooine, Sandriver\"\nset doOnce to 1\nendif\n\nendif\nendif\nendif\n\nEnd\n"
   },
   {
@@ -742,11 +742,11 @@
       ],
       [
         1,
-        "common_shoes_05"
+        "expensive_robe_01"
       ],
       [
         1,
-        "expensive_robe_01"
+        "common_shoes_05"
       ]
     ],
     "spells": [],
@@ -856,11 +856,11 @@
       ],
       [
         1,
-        "common_shoes_05"
+        "expensive_robe_01"
       ],
       [
         1,
-        "expensive_robe_01"
+        "common_shoes_05"
       ]
     ],
     "spells": [],
@@ -976,58 +976,6 @@
   {
     "type": "Cell",
     "flags": "",
-    "name": "Korriban, Ancient Structure",
-    "data": {
-      "flags": "IS_INTERIOR",
-      "grid": [
-        0,
-        1065353216
-      ]
-    },
-    "water_height": 0.0,
-    "atmosphere_data": {
-      "ambient_color": [
-        71,
-        71,
-        71,
-        0
-      ],
-      "sunlight_color": [
-        242,
-        217,
-        217,
-        0
-      ],
-      "fog_color": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "fog_density": 1.0
-    },
-    "references": [
-      {
-        "mast_index": 0,
-        "refr_index": 1,
-        "id": "SW_Fenelar_G_Right",
-        "temporary": true,
-        "translation": [
-          3456.147,
-          -5814.234,
-          10921.615
-        ],
-        "rotation": [
-          -0.0,
-          -0.0,
-          0.334705
-        ]
-      }
-    ]
-  },
-  {
-    "type": "Cell",
-    "flags": "",
     "name": "Old Mournhold: Battlefield",
     "data": {
       "flags": "IS_INTERIOR",
@@ -1112,5 +1060,57 @@
       "fog_density": 1.0
     },
     "references": []
+  },
+  {
+    "type": "Cell",
+    "flags": "",
+    "name": "Korriban, Ancient Structure",
+    "data": {
+      "flags": "IS_INTERIOR",
+      "grid": [
+        0,
+        1065353216
+      ]
+    },
+    "water_height": 0.0,
+    "atmosphere_data": {
+      "ambient_color": [
+        71,
+        71,
+        71,
+        0
+      ],
+      "sunlight_color": [
+        242,
+        217,
+        217,
+        0
+      ],
+      "fog_color": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fog_density": 1.0
+    },
+    "references": [
+      {
+        "mast_index": 0,
+        "refr_index": 1,
+        "id": "SW_Fenelar_G_Right",
+        "temporary": true,
+        "translation": [
+          3456.147,
+          -5814.234,
+          10921.615
+        ],
+        "rotation": [
+          -0.0,
+          -0.0,
+          0.334705
+        ]
+      }
+    ]
   }
 ]
