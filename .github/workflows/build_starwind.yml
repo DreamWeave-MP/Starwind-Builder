@@ -45,7 +45,9 @@ jobs:
       - name: Extract Dependency Files
         env:
           MTM_DECRYPT_KEY: ${{ secrets.MTM_DECRYPT_KEY }}
-        run: ./writeDependencyFiles.sh
+        run: |
+          echo "Key length: ${#MTM_DECRYPT_KEY}"
+          ./writeDependencyFiles.sh
 
       - name: Build TSI
         run: mkdir -p build && make tsi
