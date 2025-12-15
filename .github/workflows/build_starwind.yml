@@ -1,6 +1,9 @@
 name: Build Starwind
+
 on:
   push:
+    branches: main
+    tags: ['*']
 
 jobs:
   cleanup:
@@ -33,60 +36,38 @@ jobs:
             fi
           fi
 
-  build-tsi:
+  build-variants:
+    needs: cleanup
     runs-on: ubuntu-latest
-    container: ghcr.io/dreamweave-mp/makron:latest
-    permissions: write-all
-    steps:
 
+    container: ghcr.io/dreamweave-mp/makron:latest
+
+    permissions:
+      contents: write
+
+    strategy:
+      matrix:
+        include:
+          - make_target: tsi
+            output_file: Starwind.omwaddon
+            variant_name: TSI
+          
+          - make_target: vanilla
+            output_file: vanilla_Starwind.omwaddon
+            variant_name: Vanilla
+    
+    outputs:
+      variant_file: ${{ steps.rename.outputs.variant_file }}
+      variant_name: ${{ matrix.variant_name }}
+    
+    steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Extract Dependency Files
-
         env:
           MTM_DECRYPT_KEY: ${{ secrets.MTM_DECRYPT_KEY }}
-
         run: mkdir -p build && ./writeDependencyFiles build
-
-      - name: Build TSI
-        run: make tsi
-
-  build-vanilla:
-    runs-on: ubuntu-latest
-    container: ghcr.io/dreamweave-mp/makron:latest
-    permissions: write-all
-    steps:
-
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Extract Dependency Files
-
-        env:
-          MTM_DECRYPT_KEY: ${{ secrets.MTM_DECRYPT_KEY }}
-
-        run: mkdir -p build && ./writeDependencyFiles build
-
-      - name: Build TSI
-        run: make vanilla
-
-  build-standalone:
-    runs-on: ubuntu-latest
-    container: ghcr.io/dreamweave-mp/makron:latest
-    permissions: write-all
-    steps:
-
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Extract Dependency Files
-
-        env:
-          MTM_DECRYPT_KEY: ${{ secrets.MTM_DECRYPT_KEY }}
-
-        run: mkdir -p build && ./writeDependencyFiles build
-
-      - name: Build TSI
-        run: make standalone
-
+      
+      - name: Build Variant
+        run: make ${{ matrix.make_target }}
