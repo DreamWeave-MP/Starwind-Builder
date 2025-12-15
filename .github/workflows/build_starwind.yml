@@ -43,11 +43,11 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Extract Dependency Files
+
         env:
           MTM_DECRYPT_KEY: ${{ secrets.MTM_DECRYPT_KEY }}
-        run: |
-          echo "Key length: ${#MTM_DECRYPT_KEY}"
-          ./writeDependencyFiles.sh
+
+        run: ./writeDependencyFiles.sh
 
       - name: Build TSI
         run: mkdir -p build && make tsi
