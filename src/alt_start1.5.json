@@ -41,8 +41,8 @@
       "bytecode_length": 0,
       "variables_length": 0
     },
-    "variables": "AAAAAA==",
-    "bytecode": "AAAAAA==",
+    "variables": "KLUv/QBYIQAAAAAAAA==",
+    "bytecode": "KLUv/QBYIQAAAAAAAA==",
     "text": ""
   },
   {
@@ -56,8 +56,8 @@
       "bytecode_length": 652,
       "variables_length": 0
     },
-    "variables": "AAAAAA==",
-    "bytecode": "jAIAAAYBGQUgWBgQAAwBEVNXX1N0b3J5U2NlbmVBY3Qz2xAMARJTV19TaGFkZUxhbmRpbmdUYXTbEMwQDVNXX1RhcmlzQ2hhcDEKAP//DAESU1dfU2hhZGVDYW50aW5hVGF02xAMARJTV19TaGFkZU1lZGljYWxUYXTaEAwBFFNXX01hbmRvU3RhcnRGb2xsb3cxABEAAPBBDAEUU1dfTWFuZG9TdGFydEZvbGxvdzEJEQAA8EEMARRTV19NYW5kb1N0YXJ0Rm9sbG93MgARAADwQQwBFFNXX01hbmRvU3RhcnRGb2xsb3cyCREAAPBBDAEUU1dfTWFuZG9TdGFydEZvbGxvdzH2EAZQbGF5ZXIAAAAAAAAAAAAAAAAAAAAMARRTV19NYW5kb1N0YXJ0Rm9sbG93MvYQBlBsYXllcgAAAAAAAAAAAAAAAAAAAAwBBnBsYXllctQQDlNXX0ltcGxhbnRDb21iAQAMAQZwbGF5ZXLUEAxTV19CZWx0UG93ZXIBAAwBBnBsYXllctQQDVNXX01hbmRvQm9vdHMBAAwBBnBsYXllctQQDVNXX01hbmRvQ2hlc3QBAAwBBnBsYXllctQQDFNXX01hbmRvTGVmdAEADAEGcGxheWVy1BANU1dfTWFuZG9SaWdodAEADAEGcGxheWVy1BAMU1dfTWFuZG9MZWdzAQAMAQZwbGF5ZXLUEApTV19NYW5IZWxtAQAMAQZwbGF5ZXLUEBNTV19CbGFzdEJvbHRHcmVhdGVyZAAMAQZwbGF5ZXLUEBRTV19CbGFzdGVyUmlmbGVNYW5kbwEADAEGcGxheWVy1BAIR29sZF8wMDHQByIQBmZvbGxvdyIQBHdhaXQXEAkBAQE=",
+    "variables": "KLUv/QBYIQAAAAAAAA==",
+    "bytecode": "KLUv/QBY/QkAVlA9NXDFaQO8dldHBnNeVVVV8ep1DFLIdjUlZDulZX4SQ/oApoCGUf76xl+7EJP2SAwKNaJgJG4ZLwAuAC8AfU0ZJUgBPd9X5lZ623LaWJwyHrgHPQ1/kfj1S+xk/HHK2HCvQYUIhoEFB7UWMBEBpqhFIgmA1hpt4mBrscPn/ojpbcqU0eEevPi+bF8qdUrf+rerz6cxpk1jVVZzbj0sUy0Sxq33mWNV9hhTUnYOrrx1asr4nIQGV3/bbjQQU0YDaLGBIi17p20FggHOuQgmfG2OAHxgIPggqJggkEktnhS4xVRLdgfN/u158hZTn7WlpowIGusPjEwdAPQrlBG3vNddQLBEcXfnSRhYG6QDr/ApCby3pxzwXnBoH6UUlGB7Ht8PBwW3TaotCaMAnOwgZIBpIBQBqpbOaIEwxxnKDA==",
     "text": "Begin Alt_Mando\r\n\r\n    If (OnActivate)\r\n        ;Standard Intro Skip\r\n        SW_StorySceneAct3->Disable\r\n        SW_ShadeLandingTat->Disable\r\n        Journal SW_TarisChap1 10\r\n\t   SW_ShadeCantinaTat->Disable\r\n\t   SW_ShadeMedicalTat->Enable\r\n        ;End Intro Skip\r\n        SW_MandoStartFollow1->SetFight 30\r\n        SW_MandoStartFollow1->SetHello 30\r\n        SW_MandoStartFollow2->SetFight 30\r\n        SW_MandoStartFollow2->SetHello 30\r\n        SW_MandoStartFollow1->AIFollow Player 0, 0, 0, 0\r\n        SW_MandoStartFollow2->AIFollow Player 0, 0, 0, 0\r\n        player->additem SW_ImplantComb 1\r\n        player->additem SW_BeltPower 1\r\n        player->additem SW_MandoBoots 1\r\n        player->additem SW_MandoChest 1\r\n        player->additem SW_MandoLeft 1\r\n        player->additem SW_MandoRight 1\r\n        player->additem SW_MandoLegs 1\r\n        player->additem SW_ManHelm 1\r\n        player->additem SW_BlastBoltGreater 100\r\n        player->additem SW_BlasterRifleMando 1\r\n        player->additem Gold_001 2000\r\n\t\tAddTopic \"follow\"\r\n\t\tAddTopic \"wait\"\r\n        Activate\r\n    Endif\r\n\r\nEnd"
   },
   {
@@ -71,8 +71,8 @@
       "bytecode_length": 293,
       "variables_length": 0
     },
-    "variables": "AAAAAA==",
-    "bytecode": "JQEAAAYBDwUgWBgQAAwBEVNXX1N0b3J5U2NlbmVBY3Qz2xAMARJTV19TaGFkZUxhbmRpbmdUYXTbEAwBElNXX1NoYWRlQ2FudGluYVRhdNsQDAESU1dfU2hhZGVNZWRpY2FsVGF02xDMEA1TV19UYXJpc0NoYXAxIwD//wwBBnBsYXllctQQD1NXX1NwQ2FyRnJlaWdodAEAzBAPU1dfVGFyaXNDaGFwMS0yDwD//8wQClNXX1NoaXBPd24PAP//DAERU1dfU3RvcnlTY2VuZUFjdDTbEAwBDlNXX1NoaXBRdWVzdGVy2xAMAQ9TV19TaGFkZU1hbmFhbjHbEAwBBnBsYXllctQQCEdvbGRfMDAxiBMiEAZmb2xsb3ciEAR3YWl0FxAJAQEB",
+    "variables": "KLUv/QBYIQAAAAAAAA==",
+    "bytecode": "KLUv/QBYxQYAEowtL4BLczOwuq0GZmCGMEeTISldlq4kNkwymTDMiGXjQYwx2sHgbNDmIBuF9Y+9VpIBqjqwCvObAtgHNb03aSz7SOBoIBAXvalCYK0GdsOONGXWkj4pvoER30CiQeoiPsFW18UaxEPFdEqTd0kh24nsHm7bIb3SLy7KXBdraGJLDuVlS9zDBVu9hj7ySMOfsJ3Zkgn8CLaFRy2xexhBmbUiJjTh0CGuyGmye/hAGbYLGQwBTRfG1CEMAAQzR9KQgjuw2GbTHiHlYe5RtUBuNggEAxCDekwo",
     "text": "Begin Alt_Ship\r\n    If (OnActivate)\r\n\t\t;Standard Intro Skip\r\n\t\tSW_StorySceneAct3->Disable\r\n\t\tSW_ShadeLandingTat->Disable\r\n\t\tSW_ShadeCantinaTat->Disable\r\n\t\tSW_ShadeMedicalTat->Disable\r\n\t\tJournal SW_TarisChap1 35\r\n\t\t;End Intro Skip\r\n\t\tplayer->additem SW_SpCarFreight 1\r\n\t\tJournal SW_TarisChap1-2 15\r\n\t\tJournal SW_ShipOwn 15\r\n\t\tSW_StorySceneAct4->Disable\r\n\t\tSW_ShipQuester->Disable\r\n\t\tSW_ShadeManaan1->Disable\r\n        player->additem Gold_001 5000\r\n\t\tAddTopic \"follow\"\r\n\t\tAddTopic \"wait\"\r\n        Activate\r\n    Endif\r\nEnd"
   },
   {
@@ -86,8 +86,8 @@
       "bytecode_length": 583,
       "variables_length": 0
     },
-    "variables": "AAAAAA==",
-    "bytecode": "RwIAAAYBGgUgWBgQAAwBEVNXX1N0b3J5U2NlbmVBY3Qz2xAMARJTV19TaGFkZUxhbmRpbmdUYXTbEMwQDVNXX1RhcmlzQ2hhcDEFAP//DAESU1dfU2hhZGVMYW5kaW5nVGF02xAMARJTV19TaGFkZU1lZGljYWxUYXTaEMwQDXN3X2N6ZXJrYW11cmQPAP//zBANc3dfdGFyaXNjaGFwMQoA///MEA5TV19KaXRhaWlKb3Vybg8A///MEA9TV19aYW5vdHRpSm91cm4PAP//zBAPU1dfRGFudGFyaUpvdXJuCgD//8wQDFNXX0RhbnRKb3Vybh4A//8MAQZwbGF5ZXLUEAhHb2xkXzAwMbgLDAEGcGxheWVy1BAUU1dfTGlnaHRTYWJHcmRHcmVlbkIBAAwBBnBsYXllctQQEFNXX0pSb2JlQnJvd25Ub3ABAAwBBnBsYXllctQQEVNXX0pSb2JlQnJvd25QYW50AQAMAQZwbGF5ZXLUEBNTV19JbXBsYW50TWFuYU1pbm9yAQAMAQZwbGF5ZXJdEAAAcEIMAQZwbGF5ZXKQEAAASEMMAQZwbGF5ZXIdEQxTV19mb3JjZXB1c2gMARZTV19Eb29yRW5jbGF2ZVRyYWluZXJz2xAMARFTV19DemVya2FDb3VydGUyMtoQDAERU1dfQ3plcmthQ291cnRlMjL2EAZQbGF5ZXIAAAAAAAAAAAAAAAAAAAAMAQ9TV19DemVya2FDb3VydGXbECIQBmZvbGxvdyIQBHdhaXQXEAkBAQE=",
+    "variables": "KLUv/QBYIQAAAAAAAA==",
+    "bytecode": "KLUv/QBYrQsABhVNPGBnnAMg6TDAJk8dES5JsiRIoIs0ybxEpA8WNpPdk2QmKLN0pkUP1ZQOSGr/YIEXIsZCoM/iM2x0hYpSBjwAPAA9AG7Zq2a+DzImmmPTZt8rOqWjQe1lrzrXXtcx9XJM0ikdotQegGwFqLda8vM4SzolJEqwJwxcMChiBCECFRmmFNrB149nWmQhNd7zdUvO+PoBOuXjPocv1nq2FzplQ2OiOWZt9j1/H3xcz3k8wdcFFu02R4M6lL3KAtMACJtBRYOwETy+NuPXM/l6pnkI0Ckf8nUNRMPV7fBX6gYXuNApG8bKrfWp66mNy4x1LIZOCcHQYCKR0CsxxoWWyNa7hI50OMswJ+pIe48oQU3UD0IUSs3P4Wlqb/t6rX9VFXhmXQGPsYVOGRElbOO0aj3m0CklSEUZAEXoBpeXYgkk58+M2lU1xQUUKLNARBlXqCPBwQZ1wKKMkGO39U5AA+AOCAYGmBN1TE0Fd+LmIJ2GOa5WZw==",
     "text": "begin BornaJedi \r\n\tIf (OnActivate)\r\n\t\t;Standard Intro Skip\r\n\t\tSW_StorySceneAct3->Disable\r\n\t\tSW_ShadeLandingTat->Disable\r\n\t\tJournal SW_TarisChap1 5\r\n\t\tSW_ShadeLandingTat->Disable\r\n\t\tSW_ShadeMedicalTat->Enable\r\n\t\tjournal sw_czerkamurd 15\r\n\t\tjournal sw_tarischap1 10\r\n\t\tJournal SW_JitaiiJourn 15\r\n\t\tJournal SW_ZanottiJourn 15\r\n\t\tJournal SW_DantariJourn 10\r\n\t\tJournal SW_DantJourn 30\r\n\t\tplayer->additem Gold_001 3000\r\n\t\tplayer->additem SW_LightSabGrdGreenB 1\r\n\t\tplayer->additem SW_JRobeBrownTop 1\r\n\t\tplayer->additem SW_JRobeBrownPant 1\r\n\t\tplayer->additem SW_ImplantManaMinor 1\r\n\t\tplayer->setalteration 60\r\n\t\tplayer->setmagicka 200\r\n\t\tplayer->addspell SW_forcepush \r\n\t\tSW_DoorEnclaveTrainers->Disable\r\n\t\tSW_CzerkaCourte22->Enable\r\n\t\tSW_CzerkaCourte22->AIFollow Player 0, 0, 0, 0\r\n\t\tSW_CzerkaCourte->Disable\r\n\t\tAddTopic \"follow\"\r\n\t\tAddTopic \"wait\"\r\n\t\tActivate\r\n\tendif\r\nEnd"
   },
   {
@@ -101,8 +101,8 @@
       "bytecode_length": 291,
       "variables_length": 0
     },
-    "variables": "AAAAAA==",
-    "bytecode": "IwEAAAYBDgUgWBgQAAwBEVNXX1N0b3J5U2NlbmVBY3Qz2xAMARJTV19TaGFkZUxhbmRpbmdUYXTbEMwQDVNXX1RhcmlzQ2hhcDEFAP//DAESU1dfU2hhZGVMYW5kaW5nVGF02xAMARJTV19TaGFkZU1lZGljYWxUYXTaEMwQDXN3X2N6ZXJrYW11cmQPAP//zBANc3dfdGFyaXNjaGFwMQoA//8MAQZwbGF5ZXLUEAhHb2xkXzAwMbgLDAEGcGxheWVy1BAIU1dfc3BpY2X0AQwBBnBsYXllctQQDFNXX2h1bWFubWVhdAEADAEGcGxheWVy1BAZbWlzY19jb21fc2lsdmVyd2FyZV9zcG9vbgEAIhAGZm9sbG93IhAEd2FpdBcQCQEBAQ==",
+    "variables": "KLUv/QBYIQAAAAAAAA==",
+    "bytecode": "KLUv/QBY5QYAgk0xL4BL2ssQlbOAwETQBE1QrQRbbCFC82L8mGS69TrObWCUCErPRngmen4sA7HQY9oBuyvACfW5BMARSUIoKxiOqIWkjGj/dGk+Bny0o2zd6IsLaqt/hDxSnmar2Y5vL6LNFoGGI5G0gzIigDfmVxxGzIAT+dPom16nSRm4SYl+MT+jtUQhbGGO6hPo7bmfmCb1cCJ/IOibPmm2IGzhS/WJBfQc5BLv/FnNFsI2fHGo7eGhb6syZV3N1sE2ihUoGB4Fyyi1DQEHAFOZCowuh1mGm8dN/DoNcFytzA==",
     "text": "begin Drugdealer\r\n    If (OnActivate)\r\n        ;Standard Intro Skip\r\n        SW_StorySceneAct3->Disable\r\n        SW_ShadeLandingTat->Disable\r\nJournal SW_TarisChap1 5\r\nSW_ShadeLandingTat->Disable\r\nSW_ShadeMedicalTat->Enable\r\njournal sw_czerkamurd 15\r\njournal sw_tarischap1 10\r\n        player->additem Gold_001 3000\r\n        player->additem SW_spice 500\r\n        player->additem SW_humanmeat 1\r\n        player->additem misc_com_silverware_spoon 1\r\n\t\tAddTopic \"follow\"\r\n\t\tAddTopic \"wait\"\r\n\t\tActivate\r\nendif\r\nEnd\r\n"
   },
   {
@@ -116,8 +116,8 @@
       "bytecode_length": 270,
       "variables_length": 0
     },
-    "variables": "AAAAAA==",
-    "bytecode": "DgEAAAYBDQUgWBgQAAwBEVNXX1N0b3J5U2NlbmVBY3Qz2xAMARJTV19TaGFkZUxhbmRpbmdUYXTbEMwQDVNXX1RhcmlzQ2hhcDEFAP//DAESU1dfU2hhZGVMYW5kaW5nVGF02xAMARJTV19TaGFkZU1lZGljYWxUYXTaEMwQDXN3X3RhcmlzY2hhcDEKAP//zBANc3dfY3plcmthbXVyZA8A//8MAQZwbGF5ZXLUEAhHb2xkXzAwMaCGDAERU1dfQ3plcmthQ291cnRlMjLaEAwBEVNXX0N6ZXJrYUNvdXJ0ZTIy9hAGUGxheWVyAAAAAAAAAAAAAAAAAAAAIhAGZm9sbG93IhAEd2FpdBcQCQEBAQ==",
+    "variables": "KLUv/QBYIQAAAAAAAA==",
+    "bytecode": "KLUv/QBYTQYAMgsrLnBJ3LzTz3PH/v9fV/VLb4SuNUqDbosqdyanAB99pQRAMH879kNE0if0f26NpQzvvYYPaPvXwpcL34sboC9uAXqFa45Tdbbw80hMNAwj6cUIDKfIFftLQQCaLYh/yDVi7u0cDfXSrGx+La9K8cw1/dD9aWlV2NshDfXSU9n8kIyi4plv+iGHydLpEyp9KcooCrzENwM9D+pUZ8Qy1lFGMeAlzgkYChDlQefeIwkAuBRDEEhOik3FBbNhWbgeN8frNMBxtTID",
     "text": "begin dickrich\r\n\tIf (OnActivate)\r\n\t\t;Standard Intro Skip\r\n\t\tSW_StorySceneAct3->Disable\r\n\t\tSW_ShadeLandingTat->Disable\r\n\t\tJournal SW_TarisChap1 5\r\n\t\tSW_ShadeLandingTat->Disable\r\n\t\tSW_ShadeMedicalTat->Enable\r\n\t\tjournal sw_tarischap1 10\r\n\t\tjournal sw_czerkamurd 15\r\n\t\tplayer->additem Gold_001 100000\r\n\t\tSW_CzerkaCourte22->Enable\r\n\t\tSW_CzerkaCourte22->AIFollow Player 0, 0, 0, 0\r\n\t\tAddTopic \"follow\"\r\n\t\tAddTopic \"wait\"\r\n\t\tActivate\r\n\tendif\r\nEnd\r\n"
   },
   {
@@ -131,8 +131,8 @@
       "bytecode_length": 824,
       "variables_length": 0
     },
-    "variables": "AAAAAA==",
-    "bytecode": "OAMAAAYBHwUgWBgQAAwBEVNXX1N0b3J5U2NlbmVBY3Qz2xAMARJTV19TaGFkZUxhbmRpbmdUYXTbEMwQDVNXX1RhcmlzQ2hhcDEFAP//DAESU1dfU2hhZGVMYW5kaW5nVGF02xAMARJTV19TaGFkZU1lZGljYWxUYXTaEMwQDXN3X3RhcmlzY2hhcDEKAP//zBANc3dfY3plcmthbXVyZA8A//8MAQZwbGF5ZXLUEAhHb2xkXzAwMSwBDAEGcGxheWVy1BATU1dfVmlicm9ibGFkZXN0cm9uZwEADAEGcGxheWVy1BAOU1dfVHVza2VucmlmbGUBAAwBBnBsYXllctQQFlNXX0JsYXN0ZXJQaXN0b2xUd2l0Y2gBAAwBBnBsYXllctQQDFNXX2JsYXN0Ym9sdAEADAEGcGxheWVy1BAIR29sZF8wMDG4CwwBF1NXX1JvZGlhbl9aaWxsb3dfd2Vha2VyABEAAPBBDAEXU1dfUm9kaWFuX1ppbGxvd193ZWFrZXIJEQAA8EEMARdTV19Sb2RpYW5fWmlsbG93X3dlYWtyUAARAADwQQwBF1NXX1JvZGlhbl9aaWxsb3dfd2Vha3JQCREAAPBBDAEVU1dfUm9kaWFuX1ppbGxvd193ZWFrABEAAPBBDAEVU1dfUm9kaWFuX1ppbGxvd193ZWFrCREAAPBBDAEXU1dfUm9kaWFuX1ppbGxvd193ZWFrUGkAEQAA8EEMARdTV19Sb2RpYW5fWmlsbG93X3dlYWtQaQkRAADwQQwBF1NXX1JvZGlhbl9aaWxsb3dfTm9ybWFsABEAAPBBDAEXU1dfUm9kaWFuX1ppbGxvd19Ob3JtYWwJEQAA8EEMARdTV19Sb2RpYW5fWmlsbG93X05vcm1TdAARAADwQQwBF1NXX1JvZGlhbl9aaWxsb3dfTm9ybVN0CREAAPBBDAEXU1dfUm9kaWFuX1ppbGxvd19TdHJvbmcAEQAA8EEMARdTV19Sb2RpYW5fWmlsbG93X1N0cm9uZwkRAADwQQwBBnBsYXllctQQEVNXX0JsYXN0Qm9sdEFycm93KAAiEAZmb2xsb3ciEAR3YWl0FxAJAQEB",
+    "variables": "KLUv/QBYIQAAAAAAAA==",
+    "bytecode": "KLUv/QBYJQsA5lJFN3BF6nxwdUK6z3/j6v//D2e3EznKymbjsoRIuSdXHfDHIjsMUiK/hvEasiMRywxECcQNPJGjkDI3ADgANADOYen0RZHVb0pGjkAQDN2mNFidWFvQ2RfLyAovgiGJa10oRi3+vL0sI0te5GDDxoPD4T2cG5gIXtmvqoaMvPAiLJWKnG4rCuCAp5/2ziNhvofTm6cBrG1zBpZOX1ZWv6/UsggEQQK3KW+rTnqxbQFeAUis67QZMrL0ogMB121VycjRZd2qUW5vVqenN2vHyMgM1DP1MbrJPJSMjOCeBrN/Mzo77z0IlG5tjQBSNOtuMw9IcRCa/b9ctxgJX77szXmLUSepTtJkAnHTQy4FnJO4p5ummtSsByIg4ELDGgMTksiLBSYwHCAsLCjcNk7ERAwYuF0GbcRnAaL55UcA/gWI8I+MbZy30GD2KdNAP0KgHx/NfyoSI+TtZtyJyyDdMMfV8Qw=",
     "text": "begin gangster\r\n    If (OnActivate)\r\n\t\t;Standard Intro Skip\r\n\t\tSW_StorySceneAct3->Disable\r\n\t\tSW_ShadeLandingTat->Disable\r\n\t\tJournal SW_TarisChap1 5\r\n\t\tSW_ShadeLandingTat->Disable\r\n\t\tSW_ShadeMedicalTat->Enable\r\n\t\tjournal sw_tarischap1 10\r\n\t\tjournal sw_czerkamurd 15\r\n\t\tplayer->additem Gold_001 300\r\n\t\tplayer->additem SW_Vibrobladestrong 1\r\n\t\tplayer->additem SW_Tuskenrifle 1\r\n\t\tplayer->additem SW_BlasterPistolTwitch 1\r\n\t\tplayer->additem SW_blastbolt 1\r\n\t\tplayer->additem Gold_001 3000\r\n\t\tSW_Rodian_Zillow_weaker->SetFight 30\r\n\t\tSW_Rodian_Zillow_weaker->SetHello 30\r\n\t\tSW_Rodian_Zillow_weakrP->SetFight 30\r\n\t\tSW_Rodian_Zillow_weakrP->SetHello 30\r\n\t\tSW_Rodian_Zillow_weak->SetFight 30\r\n\t\tSW_Rodian_Zillow_weak->SetHello 30\r\n\t\tSW_Rodian_Zillow_weakPi->SetFight 30\r\n\t\tSW_Rodian_Zillow_weakPi->SetHello 30\r\n\t\tSW_Rodian_Zillow_Normal->SetFight 30\r\n\t\tSW_Rodian_Zillow_Normal->SetHello 30\r\n\t\tSW_Rodian_Zillow_NormSt->SetFight 30\r\n\t\tSW_Rodian_Zillow_NormSt->SetHello 30\r\n\t\tSW_Rodian_Zillow_Strong->SetFight 30\r\n\t\tSW_Rodian_Zillow_Strong->SetHello 30\r\n\t\tplayer->additem SW_BlastBoltArrow 40\r\n\t\t\t\tAddTopic \"follow\"\r\n\t\tAddTopic \"wait\"\r\n\t\tActivate\r\n\tendif\r\nEnd\r\n"
   },
   {
@@ -146,8 +146,8 @@
       "bytecode_length": 616,
       "variables_length": 0
     },
-    "variables": "AAAAAA==",
-    "bytecode": "aAIAAAYBHQUgWBgQAAwBEVNXX1N0b3J5U2NlbmVBY3Qz2xAMARJTV19TaGFkZUxhbmRpbmdUYXTbEMwQDVNXX1RhcmlzQ2hhcDEFAP//zBANc3dfdGFyaXNjaGFwMQoA///MEA1zd19jemVya2FtdXJkAQD//8wQDXN3X3RhcmlzY2hhcDEMAP//zBANc3dfY3plcmthbXVyZAUA///MEA1zd19jemVya2FtdXJkCgD//8wQDXN3X2N6ZXJrYW11cmQPAP//zBANc3dfY3plcmthbXVyZBQA///MEA1zd19jemVya2FtdXJkGQD//8wQDXN3X2N6ZXJrYW11cmQeAP//zBAHc3dfd29yax8A///MEA1zd190YXJpc2NoYXAxFAD//wwBFlNXX0N6ZXJrYU9mZmljZURvb3JUYXQ3EQwBElNXX1NoYWRlQ2FudGluYVRhdNoQDAESU1dfU2hhZGVNZWRpY2FsVGF02xAMARJUYXRvb2luZVdhcm5pbmdHdXnbEAwBFlNXX0N6ZXJrYU9mZmljZURvb3JUYXQ3EQUBRwxTaGFkZU1lZGljYWwCIDIMAQZwbGF5ZXLUEAhHb2xkXzAwMSwBDAEGcGxheWVy1BAHU1dfd2hpcAEADAEGcGxheWVy1BAOU1dfdHVza2VubWVsZWUBAAwBBnBsYXllctQQDVNXX3NoaXJ0aGVhdnkBAAwBEVNXX0N6ZXJrYUNvdXJ0ZTIy2hAMARFTV19DemVya2FDb3VydGUyMvYQBlBsYXllcgAAAAAAAAAAAAAAAAAAACIQBmZvbGxvdyIQBHdhaXQXEAkBAQE=",
+    "variables": "KLUv/QBYIQAAAAAAAA==",
+    "bytecode": "KLUv/QBYzQoAhpJEN2BFnANgQxDw51mXJEmSJMkqqjRIyt0i/VnYLBPJubSJFpTPc4SqsHODtUEHAT7NBKi8qr24P8k0ADcANAAWzC0pq9gnOuUjduIn+6SxtbI+8ZVbkk4ZaRg/D5mKePuU5PDNkk4JafhiwsUEWujoPYYVEIjsE75X4qmayVRIdMqDhl33JA0bfDe6ZQ0GBYmBA4JdYY3jG/wBKIcFc4vKKvZMt+wRO133oHTKRjtYKhVaXRczEAXg5/zCooaXCQNiGoofTsNobLXY59t6b/Yp0vByqlZP4ck+ua3ZuhTdTRARcvVNIFK2e103E0XKs4jigOi5XD5j7UpScwD8rYyrldEpH//Xc+xvMi3TKQteY9XaAhwAuBQPI5AcirVUXApEVv88Fafp5ZhRMG0fteSIQwPB2Cz3PpZVuNOxvWKmJLgEJAcSBhIB6cAOUBxIvNS2oPh3xTwD",
     "text": "begin manlyman\r\n    If (OnActivate)\r\n        ;Standard Intro Skip\r\n        SW_StorySceneAct3->Disable\r\n        SW_ShadeLandingTat->Disable\r\nJournal SW_TarisChap1 5\r\njournal sw_tarischap1 10\r\njournal sw_czerkamurd 1\r\njournal sw_tarischap1 12\r\njournal sw_czerkamurd 5\r\njournal sw_czerkamurd 10\r\njournal sw_czerkamurd 15\r\njournal sw_czerkamurd 20\r\njournal sw_czerkamurd 25\r\njournal sw_czerkamurd 30\r\nJournal sw_work 31\r\n\r\njournal sw_tarischap1 20\r\n\"SW_CzerkaOfficeDoorTat\"->unlock\r\nSW_ShadeCantinaTat->Enable\r\nSW_ShadeMedicalTat->Disable\r\nTatooinewarningguy->disable\r\n\"SW_CzerkaOfficeDoorTat\"->unlock\r\nSet ShadeMedical to 2\r\n\r\n\r\n        player->additem Gold_001 300\r\n        player->additem SW_whip 1\r\n        player->additem SW_tuskenmelee 1\r\n        player->additem SW_shirtheavy 1\r\n      SW_CzerkaCourte22->Enable\r\n        SW_CzerkaCourte22->AIFollow Player 0, 0, 0, 0\r\n\t\tAddTopic \"follow\"\r\n\t\tAddTopic \"wait\"\r\n        Activate\r\nendif\r\nEnd\r\n"
   },
   {
@@ -2336,9 +2336,7 @@
     "player_faction": "",
     "sound_path": "",
     "text": "[]",
-    "quest_state": {
-      "type": "Finished"
-    },
+    "quest_state": "Finished",
     "filters": [],
     "script_text": ""
   },
