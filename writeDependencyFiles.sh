@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
 set -euo
+export GPG_TTY=$(tty)
 
 DIR="${1:-.}"
 
