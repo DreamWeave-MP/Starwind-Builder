@@ -38,8 +38,10 @@
     "type": "GlobalVariable",
     "flags": "",
     "id": "Bng_Vows",
-    "global_type": "Short",
-    "value": 0.0
+    "value": {
+      "type": "Short",
+      "data": 0
+    }
   },
   {
     "type": "Race",
@@ -807,8 +809,8 @@
       "bytecode_length": 71,
       "variables_length": 24
     },
-    "variables": "GAAAAG5vbG9yZQBjb21wYW5pb24ARG9PbmNlAA==",
-    "bytecode": "RwAAAAYBBBsgWM0QIGQOQm5nX0Rlc2VydEplZGkgPT0gMjcGAQIJIHMDACA9PSAwBQFzAgACIDEFAXMDAAIgMQkBBwEBJAEJAQEB",
+    "variables": "KLUv/QBY4QAAGAAAAG5vbG9yZQBjb21wYW5pb24ARG9PbmNlAA==",
+    "bytecode": "KLUv/QBYWQIARwAAAAYBBBsgWM0QIGQOQm5nX0Rlc2VydEplZGkgPT0gMjcGAQIJIHMDACA9PSAwBQFzAgACIDEFAXMDAAIgMQkBBwEBJAEJAQEB",
     "text": "Begin Bng_JanJorden\r\n\r\nshort nolore\r\nshort companion\r\nshort DoOnce\r\n\r\n\r\nIf ( GetJournalIndex \"Bng_DesertJedi\" == 27 )\r\n\tIf ( DoOnce == 0 )\r\n\t\tSet Companion to 1\r\n\t\tset DoOnce to 1\r\n\tendif\r\nelse\r\n\treturn\r\nendif\r\n\r\nEnd"
   },
   {
@@ -822,8 +824,8 @@
       "bytecode_length": 288,
       "variables_length": 0
     },
-    "variables": "AAAAAA==",
-    "bytecode": "IAEAAAYBBQkgWPAQID09IDHMEAxCbmdfV2F0ZXJ0YXgjAP//DAERQm5nX1JvaGxhbl9EYXJhY2gFEPaGoEWFnMtFp+0ZRgAAtEIZVGF0b29pbmUsIFJvZGlhbiBEaXN0cmljdAwBDkJuZ19KYW5fSm9yZGVuBRC2MF1FZj15RZqBVkYAAAAAFlRhdG9vaW5lIEN6ZXJrYSBPZmZpY2UMARVCbmdfRGVubmlzX1NhbmRob3BwZXIFEA1MhEVoBXVFmoFWRgAAXEMWVGF0b29pbmUgQ3plcmthIE9mZmljZQwBFUJuZ19Sb2JlcnRfU2FuZGhvcHBlcgUQB85zRb4HdEWagVZGAADwQhZUYXRvb2luZSBDemVya2EgT2ZmaWNlCQEBAQ==",
+    "variables": "KLUv/QBYIQAAAAAAAA==",
+    "bytecode": "KLUv/QBY1QYAwowxMnBN2vznrarDw9e4LtCp8sePqHzZ1EaYJSEiIZNIQIhIf+CapFzvFiETHgkW07Q246YU3W2BnFshiddJ5do5USNMhAWz4oZCgGN2bjbVmt4Z5EX/JySrhwTdpkQpauE5hZ0ZmFfAzJxx0PCIGA8VJRBGHPs52aqR7xpZPRTodiVq70Wh906nGr2D+bTW6w0XKMKcuaCExJIPjgjSkeKYJbl1SL5XWDWS1cOBbp0OG1z4tfP6g6weNmeS8J7nOQ7Es7AGYO4XBgCgYuAacBQQ+ES4ggDegAY=",
     "text": "Begin Bng_Narvascript\r\n\r\nif ( OnDeath == 1 )\r\n    Journal \"Bng_Watertax\" 35\r\n    Bng_Rohlan_Darach->PositionCell, 5136.870117, 6515.564941, 9851.413086, 90, \"Tatooine, Rodian District\"\r\n    Bng_Jan_Jorden->PositionCell, 3539.044434, 3987.837402, 13728.400391,0, \"Tatooine Czerka Office\"\r\n    Bng_Dennis_Sandhopper->PositionCell, 4233.506348, 3920.337891, 13728.400391, 220, \"Tatooine Czerka Office\"\r\n    Bng_Robert_Sandhopper->PositionCell, 3900.876709, 3904.483887, 13728.400391, 120, \"Tatooine Czerka Office\"\r\nendif\r\n\r\nEnd Narvascript"
   },
   {
@@ -837,8 +839,8 @@
       "bytecode_length": 107,
       "variables_length": 24
     },
-    "variables": "GAAAAG5vbG9yZQBjb21wYW5pb24ARG9PbmNlAA==",
-    "bytecode": "awAAAAYBAQkgWPAQID09IDHMEA5CbmdfRGVzZXJ0SmVkaRcA//8JAQYBBBsgWM0QIGQOQm5nX0Rlc2VydEplZGkgPT0gNDAGAQIJIHMDACA9PSAwBQFzAgACIDEFAXMDAAIgMQkBBwEBJAEJAQEB",
+    "variables": "KLUv/QBY4QAAGAAAAG5vbG9yZQBjb21wYW5pb24ARG9PbmNlAA==",
+    "bytecode": "KLUv/QBYHQMAAoYWIaApHQ//zwYAAIAPk7Pf8MtFN/OQ0RmYM1XvK6ztblsmGbbTBTvgXMcz67OOh+ujrvoz+0QjZbjqlScJOwFg5FyWGzCUloA82jaEYuE4CFJkXfVpwp42urtGAQAiOgUF",
     "text": "Begin Bng_RohlanScript\r\n\r\nshort nolore\r\nshort companion\r\nshort DoOnce\r\n\r\nif ( OnDeath == 1 )\r\n     Journal \"Bng_DesertJedi\" 23\r\nendif\r\n\r\nIf ( GetJournalIndex \"Bng_DesertJedi\" == 40 )\r\n\tIf ( DoOnce == 0 )\r\n\t\tSet Companion to 1\r\n\t\tset DoOnce to 1\r\n\tendif\r\nelse\r\n\treturn\r\nendif\r\n\r\nEnd"
   },
   {
@@ -852,8 +854,8 @@
       "bytecode_length": 65,
       "variables_length": 0
     },
-    "variables": "AAAAAA==",
-    "bytecode": "QQAAAAYBARcgWM0QIGQMQm5nX1dhdGVyVGF4IDw0NtsQCQEGAQEYIFjNECBkDEJuZ19XYXRlclRheCA+IDQ12hAJAQEB",
+    "variables": "KLUv/QBYIQAAAAAAAA==",
+    "bytecode": "KLUv/QBYzQEAFANBAAAABgEBFyBYzRAgZAxCbmdfV2F0ZXJUYXggPDQ22xAJAQYBARg+IDQ12hAJAQEBAQAXtHoC",
     "text": "Begin Bng_Rohlan_Darach\r\n\r\n if (GetJournalIndex \"Bng_WaterTax\" <46)\r\n     disable\r\n endif\r\n\r\n if ( GetJournalIndex \"Bng_WaterTax\" > 45 )\r\n        enable\r\n endif\r\n\r\nend"
   },
   {
@@ -867,8 +869,8 @@
       "bytecode_length": 23,
       "variables_length": 0
     },
-    "variables": "AAAAAA==",
-    "bytecode": "FwAAAMwQDkJuZ19EZXNlcnRKZWRpCgD//wEB",
+    "variables": "KLUv/QBYIQAAAAAAAA==",
+    "bytecode": "KLUv/QBY2QAAFwAAAMwQDkJuZ19EZXNlcnRKZWRpCgD//wEB",
     "text": "begin Bng_Sandwich_Order\r\n\r\njournal \"Bng_DesertJedi\" 10\r\n\r\nend"
   },
   {
@@ -882,8 +884,8 @@
       "bytecode_length": 42,
       "variables_length": 0
     },
-    "variables": "AAAAAA==",
-    "bytecode": "KgAAAAYBARAgRwhCbmdfVm93cyA9PSA0zBALQm5nX1dlZGRpbmcUAP//CQEBAQ==",
+    "variables": "KLUv/QBYIQAAAAAAAA==",
+    "bytecode": "KLUv/QBYcQEAKgAAAAYBARAgRwhCbmdfVm93cyA9PSA0zBALQm5nX1dlZGRpbmcUAP//CQEBAQ==",
     "text": "Begin Vowcheck\r\n\r\nif Bng_Vows == 4\r\n\r\n     Journal, \"Bng_Wedding\" 20\r\n\r\nendif\r\n\r\nend"
   },
   {
@@ -897,8 +899,8 @@
       "bytecode_length": 423,
       "variables_length": 20
     },
-    "variables": "FAAAAE9uUENFcXVpcABhcm1vcnR5cGUA",
-    "bytecode": "pwEAAAYBCwkgcwEAID09IDAMAQZwbGF5ZXIOERhhZGFuX3RzYWVzY2lfcmVtb3ZlX2xlZ3MGAQMJIFggECA9PSAxBgEBFSBHDENoYXJHZW5TdGF0ZSA9PSAtMQAQGwBUc2Flc2NpIGNhbiBub3Qgd2VhciBwYW50cy4AAAkBCQEGAQEbIFiIESBiD0l0ZW0gQ2xvdGhlcyBVcCA9PSAxUREPSXRlbSBDbG90aGVzIFVwCAEBHSBYiBEgYhFJdGVtIENsb3RoZXMgRG93biA9PSAxURERSXRlbSBDbG90aGVzIERvd24JAQkBDAEGcGxheWVyBQFzAgAHIFiYEQQAAAYBBAogcwIAICE9IC0xDAEGcGxheWVy1BAaYWRhbl90c2Flc2NpX3JlbW92ZV9mZWV0XzIBAAwBBnBsYXllcg4RGmFkYW5fdHNhZXNjaV9yZW1vdmVfZmVldF8yDAEGcGxheWVy1RAaYWRhbl90c2Flc2NpX3JlbW92ZV9mZWV0XzIBAAAQHQBUc2Flc2NpIGNhbiBub3Qgd2VhciBncmVhdmVzLgAACQEBAQ==",
+    "variables": "KLUv/QBYwQAAFAAAAE9uUENFcXVpcABhcm1vcnR5cGUA",
+    "bytecode": "KLUv/QBYlQcAUs4xLnBr0gGpquoBBD0ADZbuRBHaQegmub0RlhCb4Db3zqLE+yabuGqNNhsz/b19m2S2m2pFbgeupZk8qn42XETNIM1dioRHA6L8KVwd8gQPM9WHw4guoA7pADe3eFEXFy/q4ib2gHOoIi53M6nJcs7OBgOJu4voEpu5ualW5IywugX3+qTiI8wcQiWPQpS/951wPsTFWHBjgWB+YDPo7/159AZgJjU7SduhOGtJFRm5UE4pwgmI4CLWWsCpYoYs/L2r5VuBmaozAg8ALEvRIGBSWgABL9U4wKLjo3pwTRHBEVZlBM6laiA6iAnECyAw4DM=",
     "text": "begin adan_forceequip_01\r\n\r\nshort OnPCEquip\r\nshort armortype\r\n\r\nif ( OnPCEquip == 0 )\r\n  \tplayer-> Equip \"adan_tsaesci_remove_legs\"\r\n\tIf (MenuMode == 1 )\r\n\t\tIf ( ChargenState == -1 ) ;not during character generation\r\n     \t\tMessageBox \"Tsaesci can not wear pants.\"; only displayed in inventory and not during race selection\r\n\t\tEndif\r\n\tEndif\r\n\tIf ( GetSoundPlaying \"Item Clothes Up\" == 1 )\r\n\t\tStopSound \"Item Clothes Up\"\r\n\tElseIf ( GetSoundPlaying \"Item Clothes Down\" == 1 )\r\n\t\tStopSound \"Item Clothes Down\"\t\r\n\tEndif\r\nEndif\r\n\r\nset armortype to ( Player-> GetArmorType, 4 )\r\n\r\nIf ( armortype != -1 )  ;Greaves not equal to unarmored.\r\n\tPlayer-> AddItem, \"adan_tsaesci_remove_feet_2\", 1\r\n\tPlayer-> Equip, \"adan_tsaesci_remove_feet_2\"\r\n\tPlayer-> RemoveItem, \"adan_tsaesci_remove_feet_2\", 1\r\n\tMessageBox \"Tsaesci can not wear greaves.\"\r\nEndif\r\n\r\n\r\n\r\n\r\nEnd"
   },
   {
@@ -912,8 +914,8 @@
       "bytecode_length": 266,
       "variables_length": 0
     },
-    "variables": "AAAAAA==",
-    "bytecode": "CgEAAAYBARUgRwxDaGFyR2VuU3RhdGUgPT0gLTEcEBRhZGFuX3RzYWVzY2lfY2hhcmdlbgkBDAEGcGxheWVyBgEDEyBYOREgYQdUc2Flc2NpID09IDEMAQZwbGF5ZXIGAQEkIFj9ECBvGGFkYW5fdHNhZXNjaV9yZW1vdmVfbGVncyA9PSAwDAEGcGxheWVy1BAYYWRhbl90c2Flc2NpX3JlbW92ZV9sZWdzAQAJAQcBAwwBBnBsYXllcgYBASMgWP0QIG8YYWRhbl90c2Flc2NpX3JlbW92ZV9sZWdzID4gMAwBBnBsYXllctUQGGFkYW5fdHNhZXNjaV9yZW1vdmVfbGVncwEACQEJAQEB",
+    "variables": "KLUv/QBYIQAAAAAAAA==",
+    "bytecode": "KLUv/QBYxQQAxAcKAQAABgEBFSBHDENoYXJHZW5TdGF0ZSA9PSAtMRwQFGFkYW5fdHNhZXNjaV9jaGFyZ2VuCQEMAQZwbGF5ZXIGAQMTIFg5ESBhB1QgPT0gMQEkIFj9ECBvGHJlbW92ZV9sZWdzID09IDDUEAEACQEHAQMGAQEjPtUJAQEBCQAgxIv4fgETpzTD1MKoFqsJ5wxldEGDOgM=",
     "text": "begin adan_tsaesci_chargen\r\n\r\n; If not in character generation mode, there is nothing left to do.\r\nif ( CharGenState == -1 )\r\n\tStopScript \"adan_tsaesci_chargen\"\r\nendif\r\n\r\n; Tsaesci race chosen, so make sure the special items are given\r\nif ( ( player->GetRace \"Tsaesci\" ) == 1 )\r\n\tif ( ( player->GetItemCount \"adan_tsaesci_remove_legs\" ) == 0 )\r\n\t\tPlayer-> AddItem \"adan_tsaesci_remove_legs\" 1\r\n\tendif\r\nelse\r\n\tif ( ( player-> GetItemCount \"adan_tsaesci_remove_legs\" ) > 0 )\r\n\t\tPlayer-> RemoveItem \"adan_tsaesci_remove_legs\" 1\r\n\tendif\r\nendif\r\n\r\nEnd\r\n"
   },
   {
@@ -927,8 +929,8 @@
       "bytecode_length": 89,
       "variables_length": 0
     },
-    "variables": "AAAAAA==",
-    "bytecode": "WQAAAAYBAQkgWCAQID09IDEkAQcBAgwBBnBsYXllctQQGGFkYW5fdHNhZXNjaV9yZW1vdmVfbGVncwEAHBAaYWRhbl90c2Flc2NpX3NlcnZpY2VzY3JpcHQJAQEB",
+    "variables": "KLUv/QBYIQAAAAAAAA==",
+    "bytecode": "KLUv/QBYxQIABAVZAAAABgEBCSBYIBAgPT0gMSQBBwECDAEGcGxheWVy1BAYYWRhbl90c2Flc2NpX3JlbW92ZV9sZWdzAQAcEBpzZXJ2aWNlc2NyaXB0CQEBAQEADw4FBQ==",
     "text": "begin adan_tsaesci_servicescript\r\n\r\n;Makes sure invisible bodyparts can't be sold, repaired, enchanted, etc. Called through dialogue.\r\n\r\nif ( MenuMode == 1 )\r\n\treturn\r\nelse\r\n\tplayer->AddItem \"adan_tsaesci_remove_legs\" 1\r\n\tStopScript \"adan_tsaesci_servicescript\"\r\nendif\r\n\r\nend\r\n"
   },
   {
@@ -17879,7 +17881,7 @@
         "connection_count": 1
       }
     ],
-    "connections": "AgAAAAEAAAAAAAAA"
+    "connections": "KLUv/QBYYQAAAgAAAAEAAAAAAAAA"
   },
   {
     "type": "PathGrid",
@@ -17949,7 +17951,7 @@
         "connection_count": 1
       }
     ],
-    "connections": "BgAAAAEAAAAAAAAABQAAAAQAAAADAAAAAgAAAA=="
+    "connections": "KLUv/QBY4QAABgAAAAEAAAAAAAAABQAAAAQAAAADAAAAAgAAAA=="
   },
   {
     "type": "Dialogue",
@@ -18074,9 +18076,7 @@
     "player_faction": "",
     "sound_path": "",
     "text": "Jan Jorden paid me for assisting the sith, and decided to aid me on my travels",
-    "quest_state": {
-      "type": "Finished"
-    },
+    "quest_state": "Finished",
     "filters": [],
     "script_text": ""
   },
@@ -18125,9 +18125,7 @@
     "player_faction": "",
     "sound_path": "",
     "text": "I told Rohlan Darach He was on his own to get to Kashyyyk.",
-    "quest_state": {
-      "type": "Finished"
-    },
+    "quest_state": "Finished",
     "filters": [],
     "script_text": ""
   },
@@ -18152,9 +18150,7 @@
     "player_faction": "",
     "sound_path": "",
     "text": "I brought the prototype tonfa lightsabers to the gray jedi smith on Kashyyyk and he added them to his shop selection",
-    "quest_state": {
-      "type": "Finished"
-    },
+    "quest_state": "Finished",
     "filters": [],
     "script_text": ""
   },
@@ -18401,9 +18397,7 @@
     "player_faction": "",
     "sound_path": "",
     "text": "Predne Balu paid me for helping M'iiyoom Onith with her flight and said he's out of work for me.",
-    "quest_state": {
-      "type": "Finished"
-    },
+    "quest_state": "Finished",
     "filters": [],
     "script_text": ""
   },
@@ -18428,9 +18422,7 @@
     "player_faction": "",
     "sound_path": "",
     "text": "Predne Balu heard what happened in the cantina and said it would be best if we parted ways",
-    "quest_state": {
-      "type": "Finished"
-    },
+    "quest_state": "Finished",
     "filters": [],
     "script_text": ""
   },
@@ -18461,9 +18453,7 @@
     "player_faction": "",
     "sound_path": "",
     "text": "Water Tax",
-    "quest_state": {
-      "type": "Name"
-    },
+    "quest_state": "Name",
     "filters": [],
     "script_text": ""
   },
@@ -18680,9 +18670,7 @@
     "player_faction": "",
     "sound_path": "",
     "text": "Predne Balu thanked me for collecting Narva's overdue tax.",
-    "quest_state": {
-      "type": "Finished"
-    },
+    "quest_state": "Finished",
     "filters": [],
     "script_text": ""
   },
@@ -18833,9 +18821,7 @@
     "player_faction": "",
     "sound_path": "",
     "text": "M'iiyoom and Vishki have completed their Pursuits, and Mama Gorsak is getting her grandkids, so it looks like everything worked out.",
-    "quest_state": {
-      "type": "Finished"
-    },
+    "quest_state": "Finished",
     "filters": [],
     "script_text": ""
   },
