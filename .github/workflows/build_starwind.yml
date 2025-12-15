@@ -1,0 +1,50 @@
+name: Build Starwind
+on:
+  push:
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    permissions: write-all
+    outputs:
+      release_name: ${{ steps.release_type.outputs.release_name }}
+      tagged: ${{ steps.release_type.outputs.tagged }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Determine Release Type and Cleanup
+        id: release_type
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [[ "${{ github.ref }}" == refs/tags/* ]]; then
+            echo "tagged=true" >> $GITHUB_OUTPUT
+            echo "release_name=${{ github.ref_name }}" >> $GITHUB_OUTPUT
+          else
+            echo "tagged=false" >> $GITHUB_OUTPUT
+            echo "release_name=development" >> $GITHUB_OUTPUT
+            
+            release_id=$(gh release list --limit 100 | grep "development" | awk '{print $1}' | head -1)
+            if [ -n "$release_id" ]; then
+              echo "Deleting existing development release: $release_id"
+              gh release delete "$release_id" --yes
+            else
+              echo "No existing development release found"
+            fi
+          fi
+
+  build-tsi:
+    runs-on: ubuntu-latest
+    container: ghcr.io/DreamWeave-MP/makron:latest
+    permissions: write-all
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Extract Dependency Files
+        run: ./writeDependencyFiles.sh ${{ secrets.MTM_DECRYPT_KEY }}
+
+      - name: Build TSI
+        run: mkdir -p build && make tsi
+
