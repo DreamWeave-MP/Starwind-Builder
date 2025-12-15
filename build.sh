@@ -294,6 +294,6 @@ else
     mv vanilla_Starwind.omwaddon ..
 fi
 
-cd .. && rm -rf build
+cd - && rm -rf build
 
 echo "Done!"

@@ -50,5 +50,43 @@ jobs:
         run: mkdir -p build && ./writeDependencyFiles build
 
       - name: Build TSI
-        run: make tsi vanilla standalone cpp
+        run: make tsi
+
+  build-vanilla:
+    runs-on: ubuntu-latest
+    container: ghcr.io/dreamweave-mp/makron:latest
+    permissions: write-all
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Extract Dependency Files
+
+        env:
+          MTM_DECRYPT_KEY: ${{ secrets.MTM_DECRYPT_KEY }}
+
+        run: mkdir -p build && ./writeDependencyFiles build
+
+      - name: Build TSI
+        run: make vanilla
+
+  build-standalone:
+    runs-on: ubuntu-latest
+    container: ghcr.io/dreamweave-mp/makron:latest
+    permissions: write-all
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Extract Dependency Files
+
+        env:
+          MTM_DECRYPT_KEY: ${{ secrets.MTM_DECRYPT_KEY }}
+
+        run: mkdir -p build && ./writeDependencyFiles build
+
+      - name: Build TSI
+        run: make standalone
 
