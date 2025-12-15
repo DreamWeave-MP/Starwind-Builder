@@ -1,9 +1,11 @@
+local core = require 'openmw.core'
 local util = require('openmw.util')
 
+local usingANH = core.contentFiles.has('a new hope - chargen reworked.esp')
 return {
     CellName = 'The Outer Rim, Freighter',
 
-    InteriorTeleportPosition = util.vector3(3947, 5156, 15353),
+    InteriorTeleportPosition = usingANH and util.vector3(4081, 7249, 15221) or util.vector3(3947, 5156, 15353),
     InteriorTeleportRotation = util.transform.rotateZ(math.rad(270), util.transform.identity),
 
     ButtonRecordIdsToDestinationCells = {
