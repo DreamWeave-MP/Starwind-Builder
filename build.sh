@@ -40,7 +40,6 @@ do_mp_merge() {
     # Merge the plugins into the master
     # All mods dependent on enhanced are merged in the first phase
     merge_to_master "bings race pack.esp" "Starwind Enhanced.esm"
-    # merge_to_master "StarwindRacesJMC.esp" "Starwind Enhanced.esm"
     merge_to_master "Starwind Enhanced.esm" StarwindRemasteredPatch.esm
     # Vanilla phase
     # merge_to_master alt_start1.5.esp StarwindRemasteredPatch.esm
