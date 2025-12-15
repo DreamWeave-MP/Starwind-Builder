@@ -50,5 +50,5 @@ jobs:
         run: mkdir -p build && ./writeDependencyFiles build
 
       - name: Build TSI
-        run: make tsi
+        run: make tsi vanilla standalone cpp
 
