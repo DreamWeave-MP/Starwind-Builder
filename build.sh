@@ -84,7 +84,6 @@ do_sp_merge() {
 
     # Patch phase to implement components which cannot otherwise be repaired, primarily due to --remove-deleted removing deleted records we actually totally did want
     merge_to_master deletedbirthsigns.esp vanilla_Starwind.omwaddon
-    merge_to_master beastlair.esp Starwind.omwaddon
 }
 
 do_standalone_merge() {
