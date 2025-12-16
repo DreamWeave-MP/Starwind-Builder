@@ -10,10 +10,6 @@ if [ "$1" = "kTools" ]; then
     exit 0
 fi
 
-if [ $GITHUB_ACTIONS ]; then
-    cp /plugins/* .
-fi
-
 curl -L https://github.com/TES3MP/TES3MP/releases/download/tes3mp-0.8.1/tes3mp-server-GNU+Linux-x86_64-release-0.8.1-68954091c5-6da3fdea59.tar.gz | tar -xz
 
 cd TES3MP-server/server
@@ -21,7 +17,11 @@ cd TES3MP-server/server
 if [ "$1" = "espParser" ]; then
     mkdir -p data/custom/Starwind data/custom/esps data/custom/Starwind/Cell scripts/custom/DataManager scripts/custom/espParser
 
-    cp ../../Starwind-TSI.omwaddon data/custom/esps/
+    if [ $GITHUB_ACTIONS ]; then
+        cp /plugins/* data/custom/esps
+    else
+        cp ../../Starwind-TSI.omwaddon data/custom/esps/
+    fi
 
     cp ../../src/DataBaseScript.lua scripts/custom/
 
@@ -42,7 +42,15 @@ if [ "$1" = "espParser" ]; then
 elif [ "$1" = "DFL" ]; then
     mkdir -p scripts/custom/data-files-loader/ scripts/custom/data-files-loader/dependencies/ data/custom/DFL_input data/custom/DFL_output
 
-    tes3conv ../../Starwind-TSI.omwaddon data/custom/DFL_input/Starwind.json
+    if [ $GITHUB_ACTIONS ]; then
+
+        for plugin in Morrowind.esm Tribunal.esm Bloodmoon.esm Starwind-TSI.omwaddon; do
+            tes3conv "/plugins/$plugin" "data/custom/DFL_input/${plugin%.*}.json"
+        done
+
+    else
+        tes3conv ../../Starwind-TSI.omwaddon data/custom/DFL_input/Starwind.json
+    fi
 
     cp ../../requiredDataFiles.json data/requiredDataFiles.json
 
