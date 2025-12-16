@@ -127,7 +127,11 @@ jobs:
           files: ${{ matrix.output_file }}
 
   build-databases:
-    working-directory: /plugins
+    defaults:
+      run:
+        shell: bash
+        working-directory: /plugins
+
     needs: build-tsi
     runs-on: ubuntu-latest
 
