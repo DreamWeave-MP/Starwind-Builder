@@ -125,3 +125,61 @@ jobs:
           tag_name: ${{ needs.cleanup.outputs.release_name }}
           prerelease: ${{ needs.cleanup.outputs.tagged == 'false' }}
           files: ${{ matrix.output_file }}
+
+  build-databases:
+    needs: build-tsi
+    runs-on: ubuntu-latest
+
+    container: ghcr.io/dreamweave-mp/makron:latest
+
+    permissions:
+      contents: write
+
+    strategy:
+      matrix:
+        include:
+          - make_target: MIG
+            output_file: merchantIndexDatabase.json
+            variant_name: Merchant Database
+          
+          - make_target: espParser
+            output_file: StarwindDB.tar.gz
+            variant_name: Cell Database
+          
+          - make_target: kTools
+            output_file: kToolsDB.tar.gz
+            variant_name: kDump
+          
+          - make_target: requiredfiles
+            output_file: requiredDataFiles.json
+            variant_name: Required Data Files
+    
+    outputs:
+      variant_file: ${{ steps.rename.outputs.variant_file }}
+      variant_name: ${{ matrix.variant_name }}
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+    
+      - name: Download TSI Build
+        uses: actions/download-artifact@v4
+        with:
+          name: starwind-tsi-build
+
+      - name: Extract Dependency Files
+        env:
+          MTM_DECRYPT_KEY: ${{ secrets.MTM_DECRYPT_KEY }}
+        run: mkdir -p build && ./writeDependencyFiles
+      
+      - name: Build Variant
+        run: make ${{ matrix.make_target }} && rm *.es*
+
+      - name: Upload Release
+        uses: softprops/action-gh-release@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ needs.cleanup.outputs.release_name }}
+          prerelease: ${{ needs.cleanup.outputs.tagged == 'false' }}
+          files: ${{ matrix.output_file }}
