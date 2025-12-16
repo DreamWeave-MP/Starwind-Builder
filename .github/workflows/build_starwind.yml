@@ -158,6 +158,10 @@ jobs:
           - make_target: requiredfiles
             output_file: requiredDataFiles.json
             variant_name: Required Data Files
+          
+          - make_target: DFL
+            output_file: DFLDB.tar.gz
+            variant_name: Data Files Loader
     
     outputs:
       variant_file: ${{ steps.rename.outputs.variant_file }}
@@ -175,9 +179,9 @@ jobs:
       - name: Extract Dependency Files
         env:
           MTM_DECRYPT_KEY: ${{ secrets.MTM_DECRYPT_KEY }}
-        run: ${GITHUB_WORKSPACE}/writeDependencyFiles && cat $HOME/.config/openmw/openmw.cfg && ls -la1 . && ls -la1 ${GITHUB_WORKSPACE}
+        run: ${GITHUB_WORKSPACE}/writeDependencyFiles && mv ${GITHUB_WORKSPACE}/Starwind-TSI.omwaddon .
       
-      - name: Build Variant
+      - name: Build Database Variant
         run: make -C ${GITHUB_WORKSPACE} ${{ matrix.make_target }} && rm *.es*
 
       - name: Upload Release
