@@ -158,6 +158,10 @@ jobs:
           - make_target: requiredfiles
             output_file: requiredDataFiles.json
             variant_name: Required Data Files
+          
+          - make_target: DFL
+            output_file: DFLDB.tar.gz
+            variant_name: Data Files Loader
     
     outputs:
       variant_file: ${{ steps.rename.outputs.variant_file }}

@@ -3,6 +3,8 @@
 set -eu
 
 
+ls -la1 .
+
 if [ "$1" = "kTools" ]; then
     mkdir -p ./kTools_out
     kTools requiredDataFiles.json ./kTools_out
