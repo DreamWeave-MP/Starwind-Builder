@@ -175,7 +175,7 @@ jobs:
       - name: Extract Dependency Files
         env:
           MTM_DECRYPT_KEY: ${{ secrets.MTM_DECRYPT_KEY }}
-        run: ${GITHUB_WORKSPACE}/writeDependencyFiles && cat $HOME/.config/openmw && ls -la1 .
+        run: ${GITHUB_WORKSPACE}/writeDependencyFiles && cat $HOME/.config/openmw/openmw.cfg && ls -la1 .
       
       - name: Build Variant
         run: make ${{ matrix.make_target }} && rm *.es*
