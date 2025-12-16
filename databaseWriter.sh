@@ -57,6 +57,7 @@ elif [ "$1" = "DFL" ]; then
     curl -L https://raw.githubusercontent.com/VidiAquam/TES3MP-Data-Files-Loader/main/dataFilesLoaderMain.lua -o scripts/custom/data-files-loader/dataFilesLoaderMain.lua
     curl -L https://raw.githubusercontent.com/VidiAquam/TES3MP-Data-Files-Loader/main/dataFilesLoaderUtilities.lua -o scripts/custom/data-files-loader/dataFilesLoaderUtilities.lua
     curl -L https://raw.githubusercontent.com/VidiAquam/TES3MP-Data-Files-Loader/main/dependencies/lua_string.lua -o scripts/custom/data-files-loader/dependencies/lua_string.lua
+    curl -L https://github.com/DreamWeave-MP/lua-cjson/releases/download/Stable-CI/cjson-Release-Linux.so -o lib/cjson.so
 
     sed -i 's/trimend("esm") \.\. "json"/trimend("esm") \.\. "json" elseif string.lower(entryIndex):endswith("omwaddon") then jsonDataFileList[listIndex] = string.lower(entryIndex):trimend("omwaddon") .. "json"''/g' scripts/custom/data-files-loader/dataFilesLoaderMain.lua
     sed -i "s/parseOnServerStart = false/parseOnServerStart = true/" scripts/custom/data-files-loader/dataFilesLoaderMain.lua
