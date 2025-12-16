@@ -75,7 +75,7 @@ jobs:
         with:
           name: starwind-tsi-build
           path: Starwind-TSI.omwaddon
-          retention-days: 7
+          retention-days: 1
 
   build-variants:
     needs: cleanup
