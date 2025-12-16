@@ -164,13 +164,14 @@ jobs:
     
       - name: Download TSI Build
         uses: actions/download-artifact@v4
+        working-directory: /plugins
         with:
           name: starwind-tsi-build
 
       - name: Extract Dependency Files
         env:
           MTM_DECRYPT_KEY: ${{ secrets.MTM_DECRYPT_KEY }}
-        run: mkdir -p build && ./writeDependencyFiles
+        run: ./writeDependencyFiles /plugins && cat $HOME/.config/openmw && ls -la1 /plugins
       
       - name: Build Variant
         run: make ${{ matrix.make_target }} && rm *.es*
