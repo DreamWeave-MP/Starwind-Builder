@@ -132,7 +132,7 @@ jobs:
         shell: bash
         working-directory: /plugins
 
-    needs: build-tsi
+    needs: [cleanup, build-tsi]
     runs-on: ubuntu-latest
 
     container: ghcr.io/dreamweave-mp/makron:latest
