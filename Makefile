@@ -69,7 +69,7 @@ edit-mponly: clean plugins-text plugins-bin
 	mv Starwind.omwaddon StarwindMPRecords.omwaddon $$HOME/.local/share/openmw/data/
 	openmw-cs $$HOME/.local/share/openmw/data/"StarwindMPRecords.omwaddon"
 
-databases: requiredfiles DFL espParser MIG
+databases: requiredfiles kTools espParser MIG
 
 DFL: requiredfiles
 	./databaseWriter.sh DFL
