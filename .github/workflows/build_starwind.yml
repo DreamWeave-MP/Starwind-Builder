@@ -116,3 +116,12 @@ jobs:
       
       - name: Build Variant
         run: make ${{ matrix.make_target }}
+
+      - name: Upload Release
+        uses: softprops/action-gh-release@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ needs.cleanup.outputs.release_name }}
+          prerelease: ${{ needs.cleanup.outputs.tagged == 'false' }}
+          files: ${{ matrix.output_file }}
