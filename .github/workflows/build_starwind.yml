@@ -9,9 +9,11 @@ jobs:
   cleanup:
     runs-on: ubuntu-latest
     permissions: write-all
+
     outputs:
       release_name: ${{ steps.release_type.outputs.release_name }}
       tagged: ${{ steps.release_type.outputs.tagged }}
+
     steps:
       - uses: actions/checkout@v4
 
@@ -36,6 +38,42 @@ jobs:
             fi
           fi
 
+  # TSI Job runs separately due to database scripts depending on it
+  build-tsi:
+    runs-on: ubuntu-latest
+    container: ghcr.io/dreamweave-mp/makron:latest
+    permissions: write-all
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Extract Dependency Files
+
+        env:
+          MTM_DECRYPT_KEY: ${{ secrets.MTM_DECRYPT_KEY }}
+
+        run: mkdir -p build && ./writeDependencyFiles build
+
+      - name: Build TSI
+        run: make tsi
+
+      - name: Upload Release
+        uses: softprops/action-gh-release@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ needs.cleanup.outputs.release_name }}
+          prerelease: ${{ needs.cleanup.outputs.tagged == 'false' }}
+          files: Starwind-TSI.omwaddon
+
+      - name: Upload Database Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: starwind-tsi-build
+          path: Starwind-TSI.omwaddon
+          retention-days: 7
+
   build-variants:
     needs: cleanup
     runs-on: ubuntu-latest
@@ -48,13 +86,17 @@ jobs:
     strategy:
       matrix:
         include:
-          - make_target: tsi
-            output_file: Starwind.omwaddon
-            variant_name: TSI
-          
           - make_target: vanilla
-            output_file: vanilla_Starwind.omwaddon
+            output_file: Starwind-Solo.omwaddon
             variant_name: Vanilla
+          
+          - make_target: standalone
+            output_file: Starwind-Standalone.omwaddon
+            variant_name: Vanilla
+          
+          - make_target: cpp
+            output_file: Starwind_Community_Patch_Project.zip
+            variant_name: Community Patch Project
     
     outputs:
       variant_file: ${{ steps.rename.outputs.variant_file }}

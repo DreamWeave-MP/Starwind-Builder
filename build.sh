@@ -284,13 +284,14 @@ tes3cmd delete --type DOOR --sub-match "DoNothing" --exact-id "in_t_door_small" 
 echo $1
 if [ "$1" = "tsi" ]; then
     do_mp_merge "$2"
-    mv Starwind.omwaddon ..
+    mv Starwind.omwaddon ../Starwind-TSI.omwaddon
 elif [ "$1" = "standalone" ]; then
     do_standalone_merge
-    mv Starwind.esp decoupleLog.txt ..
+    mv Starwind.esp Starwind-Standalone.esp
+    mv Starwind-Standalone.esp decoupleLog.txt ..
 else
     do_sp_merge
-    mv vanilla_Starwind.omwaddon ..
+    mv Starwind-Solo.omwaddon ..
 fi
 
 cd - && rm -rf build
