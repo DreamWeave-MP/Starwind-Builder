@@ -40,8 +40,11 @@ jobs:
 
   # TSI Job runs separately due to database scripts depending on it
   build-tsi:
+    needs: cleanup
     runs-on: ubuntu-latest
+
     container: ghcr.io/dreamweave-mp/makron:latest
+
     permissions: write-all
     steps:
 
