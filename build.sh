@@ -80,16 +80,16 @@ do_sp_merge() {
     merge_to_master naboo.esp StarwindRemasteredPatch.esm
 
     merge_to_master --remove-deleted StarwindRemasteredPatch.esm StarwindRemasteredV1.15.esm
-    mv StarwindRemasteredV1.15.esm vanilla_Starwind.omwaddon
+    mv StarwindRemasteredV1.15.esm Starwind-Vanilla.omwaddon
 
     # Patch phase to implement components which cannot otherwise be repaired, primarily due to --remove-deleted removing deleted records we actually totally did want
-    merge_to_master deletedbirthsigns.esp vanilla_Starwind.omwaddon
+    merge_to_master deletedbirthsigns.esp Starwind-Vanilla.omwaddon
 }
 
 do_standalone_merge() {
     do_sp_merge
     merge_to_master vanilla_Starwind.omwaddon Minimal.esp
-    mv Minimal.esp Starwind.esp
+    mv Minimal.esp Starwind-Standalone.omwaddon
     addVanillaRefs > decoupleLog.txt
 }
 
@@ -287,8 +287,7 @@ if [ "$1" = "tsi" ]; then
     mv Starwind.omwaddon ../Starwind-TSI.omwaddon
 elif [ "$1" = "standalone" ]; then
     do_standalone_merge
-    mv Starwind.esp Starwind-Standalone.esp
-    mv Starwind-Standalone.esp decoupleLog.txt ..
+    mv Starwind-Standalone.omwaddon decoupleLog.txt ..
 else
     do_sp_merge
     mv Starwind-Solo.omwaddon ..
