@@ -89,8 +89,9 @@ do_sp_merge() {
 do_standalone_merge() {
     do_sp_merge
     merge_to_master Starwind-Solo.omwaddon Minimal.esp
-    mv Minimal.esp Starwind-Standalone.omwaddon
+    mv Minimal.esp Starwind.esp
     addVanillaRefs > decoupleLog.txt
+    mv Starwind.esp Starwind-Standalone.omwaddon
 }
 
 cd build
