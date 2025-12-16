@@ -178,7 +178,7 @@ jobs:
         run: ${GITHUB_WORKSPACE}/writeDependencyFiles && cat $HOME/.config/openmw/openmw.cfg && ls -la1 .
       
       - name: Build Variant
-        run: make ${{ matrix.make_target }} && rm *.es*
+        run: make -C ${GITHUB_WORKSPACE} ${{ matrix.make_target }} && rm *.es*
 
       - name: Upload Release
         uses: softprops/action-gh-release@v2
