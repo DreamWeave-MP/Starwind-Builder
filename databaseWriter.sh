@@ -11,7 +11,7 @@ if [ "$1" = "kTools" ]; then
 fi
 
 if [ $GITHUB_ACTIONS ]; then
-    cd /plugins
+    cp /plugins/* .
 fi
 
 curl -L https://github.com/TES3MP/TES3MP/releases/download/tes3mp-0.8.1/tes3mp-server-GNU+Linux-x86_64-release-0.8.1-68954091c5-6da3fdea59.tar.gz | tar -xz
