@@ -18,7 +18,7 @@ cd TES3MP-server/server
 if [ "$1" = "espParser" ]; then
     mkdir -p data/custom/Starwind data/custom/esps data/custom/Starwind/Cell scripts/custom/DataManager scripts/custom/espParser
 
-    cp ../../Starwind.omwaddon data/custom/esps/
+    cp ../../Starwind-TSI.omwaddon data/custom/esps/
 
     cp ../../src/DataBaseScript.lua scripts/custom/
 
@@ -39,7 +39,7 @@ if [ "$1" = "espParser" ]; then
 elif [ "$1" = "DFL" ]; then
     mkdir -p scripts/custom/data-files-loader/ scripts/custom/data-files-loader/dependencies/ data/custom/DFL_input data/custom/DFL_output
 
-    tes3conv ../../Starwind.omwaddon data/custom/DFL_input/Starwind.json
+    tes3conv ../../Starwind-TSI.omwaddon data/custom/DFL_input/Starwind.json
 
     cp ../../requiredDataFiles.json data/requiredDataFiles.json
 
