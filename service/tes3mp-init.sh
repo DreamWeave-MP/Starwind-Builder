@@ -5,7 +5,7 @@ set -eu
 cd $HOME/TES3MP-server/server
 
 VERSION_FILE="$HOME/TES3MP-server/server/.starwind_version"
-LATEST_COMMIT=$(curl -s https://api.github.com/repos/DreamWeave-MP/Starwind-Builder/commits/HEAD | grep '"sha": *"[^"]*' | head -1 | cut -f 4 -d \")
+LATEST_COMMIT=$(curl -L -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" https://api.github.com/repos/DreamWeave-MP/Starwind-Builder/commits | jq .[0].sha)
 
 if [ ! -f "$VERSION_FILE" ] || [ "$(cat $VERSION_FILE)" != "$LATEST_COMMIT" ]; then
     echo "New version detected, updating data..."
