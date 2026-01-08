@@ -12,9 +12,9 @@ if [ ! -f "$VERSION_FILE" ] || [ "$(cat $VERSION_FILE)" != "$LATEST_COMMIT" ]; t
 
     # bsdtar provided by libarchive-tools on ubuntu 22.04 and up
     # It's needed here because other archivers don't necessarily allow reading from stdin
-    curl -L https://github.com/DreamWeave-MP/Starwind-Builder/releases/download/development/requiredDataFiles.json | bsdtar -xvf- -C data
-    curl -L https://github.com/DreamWeave-MP/Starwind-Builder/releases/download/development/kToolsDB.tar.gz | bsdtar -xvf- -O | tar -xz -C data/custom
-    curl -L https://github.com/DreamWeave-MP/Starwind-Builder/releases/download/development/merchantIndexDatabase.json | bsdtar -xvf- -C data/custom
+    curl -L https://github.com/DreamWeave-MP/Starwind-Builder/releases/download/development/requiredDataFiles.json -o data/requiredDataFiles.json
+    curl -L https://github.com/DreamWeave-MP/Starwind-Builder/releases/download/development/merchantIndexDatabase.json -o data/custom/merchantIndexDatabase.json
+    curl -L https://github.com/DreamWeave-MP/Starwind-Builder/releases/download/development/kToolsDB.tar.gz | bsdtar -xvf- -C data/custom
 
     echo "$LATEST_COMMIT" > "$VERSION_FILE"
 else
