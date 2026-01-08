@@ -21,4 +21,6 @@ else
     echo "Data is up to date, skipping download"
 fi
 
+git pull
+
 ../tes3mp-server
