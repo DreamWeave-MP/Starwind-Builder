@@ -41,7 +41,6 @@ jobs:
   build-variants:
     needs: cleanup
     runs-on: ubuntu-latest
-
     container: ghcr.io/dreamweave-mp/makron:latest
 
     permissions:
