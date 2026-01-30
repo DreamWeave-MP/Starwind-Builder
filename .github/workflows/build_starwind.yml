@@ -143,25 +143,9 @@ jobs:
     strategy:
       matrix:
         include:
-          - make_target: MIG
-            output_file: merchantIndexDatabase.json
-            variant_name: Merchant Database
-          
-          - make_target: espParser
-            output_file: StarwindDB.tar.gz
-            variant_name: Cell Database
-          
-          - make_target: kTools
-            output_file: kToolsDB.tar.gz
-            variant_name: kDump
-          
           - make_target: requiredfiles
             output_file: requiredDataFiles.json
             variant_name: Required Data Files
-          
-          # - make_target: DFL
-          #   output_file: DFLDB.tar.gz
-          #   variant_name: Data Files Loader
     
     outputs:
       variant_file: ${{ steps.rename.outputs.variant_file }}
