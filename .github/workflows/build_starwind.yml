@@ -92,7 +92,6 @@ jobs:
 
       - name: Webhook
         if: matrix.make_target == 'tsi'
-        needs: [release, format-release-notification]
         uses: DreamWeave-MP/StroggForge/.github/workflows/discord.yml@v6
         secrets:
           WEBHOOK_URL: ${{ secrets.TSI_UPDATE_CHANNEL_HOOK }}
