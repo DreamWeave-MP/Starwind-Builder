@@ -93,7 +93,7 @@ jobs:
       - name: Webhook
         if: matrix.make_target == 'tsi'
         uses: DreamWeave-MP/StroggForge/.github/workflows/discord.yml@v6
-        secrets:
+        env:
           WEBHOOK_URL: ${{ secrets.TSI_UPDATE_CHANNEL_HOOK }}
         with:
           title: The Starwind initiative has updated!
