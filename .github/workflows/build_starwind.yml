@@ -38,45 +38,6 @@ jobs:
             fi
           fi
 
-  # TSI Job runs separately due to database scripts depending on it
-  build-tsi:
-    needs: cleanup
-    runs-on: ubuntu-latest
-
-    container: ghcr.io/dreamweave-mp/makron:latest
-
-    permissions: write-all
-    steps:
-
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Extract Dependency Files
-
-        env:
-          MTM_DECRYPT_KEY: ${{ secrets.MTM_DECRYPT_KEY }}
-
-        run: mkdir -p build && ./writeDependencyFiles build
-
-      - name: Build TSI
-        run: make tsi
-
-      - name: Upload Release
-        uses: softprops/action-gh-release@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ needs.cleanup.outputs.release_name }}
-          prerelease: ${{ needs.cleanup.outputs.tagged == 'false' }}
-          files: Starwind-TSI.omwaddon
-
-      - name: Upload Database Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: starwind-tsi-build
-          path: Starwind-TSI.omwaddon
-          retention-days: 1
-
   build-variants:
     needs: cleanup
     runs-on: ubuntu-latest
@@ -100,6 +61,10 @@ jobs:
           - make_target: cpp
             output_file: Starwind_Community_Patch_Project.zip
             variant_name: Community Patch Project
+
+          - make_target: tsi
+            output_file: Starwind-TSI.omwaddon
+            variant_name: The Starwind Initiative
     
     outputs:
       variant_file: ${{ steps.rename.outputs.variant_file }}
@@ -116,57 +81,6 @@ jobs:
       
       - name: Build Variant
         run: make ${{ matrix.make_target }}
-
-      - name: Upload Release
-        uses: softprops/action-gh-release@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ needs.cleanup.outputs.release_name }}
-          prerelease: ${{ needs.cleanup.outputs.tagged == 'false' }}
-          files: ${{ matrix.output_file }}
-
-  build-databases:
-    defaults:
-      run:
-        shell: bash
-        working-directory: /plugins
-
-    needs: [cleanup, build-tsi]
-    runs-on: ubuntu-latest
-
-    container: ghcr.io/dreamweave-mp/makron:latest
-
-    permissions:
-      contents: write
-
-    strategy:
-      matrix:
-        include:
-          - make_target: requiredfiles
-            output_file: requiredDataFiles.json
-            variant_name: Required Data Files
-    
-    outputs:
-      variant_file: ${{ steps.rename.outputs.variant_file }}
-      variant_name: ${{ matrix.variant_name }}
-    
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-    
-      - name: Download TSI Build
-        uses: actions/download-artifact@v4
-        with:
-          name: starwind-tsi-build
-
-      - name: Extract Dependency Files
-        env:
-          MTM_DECRYPT_KEY: ${{ secrets.MTM_DECRYPT_KEY }}
-        run: ${GITHUB_WORKSPACE}/writeDependencyFiles && mv ${GITHUB_WORKSPACE}/Starwind-TSI.omwaddon .
-      
-      - name: Build Database Variant
-        run: make -C ${GITHUB_WORKSPACE} ${{ matrix.make_target }} && rm *.es*
 
       - name: Upload Release
         uses: softprops/action-gh-release@v2
