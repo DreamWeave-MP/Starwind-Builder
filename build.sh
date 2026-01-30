@@ -47,12 +47,14 @@ do_mp_merge() {
     merge_to_master StarwindVvardenfell.esp StarwindRemasteredPatch.esm
     merge_to_master "Starwind Community Patch Project.esp" StarwindRemasteredPatch.esm
     merge_to_master naboo.esp StarwindRemasteredPatch.esm
-    merge_to_master --remove-deleted StarwindRemasteredPatch.esm StarwindRemasteredV1.15.esm
-    mv StarwindRemasteredV1.15.esm Starwind.omwaddon
+    merge_to_master StarwindRemasteredPatch.esm StarwindRemasteredV1.15.esm
 
-    # Patch phase to implement components which cannot otherwise be repaired, primarily due to --remove-deleted removing deleted records we actually totally did want
-    merge_to_master deletedbirthsigns.esp Starwind.omwaddon
-    merge_to_master beastlair.esp Starwind.omwaddon
+    # The beast lair had a bunch of deleted instances in it due to being reworked.
+    # LIKELY, deleting those instances, and preserving the cell, is the best solution.
+    # We can only do it after the merge since
+    tes3cmd delete --instance-match "DELE" StarwindRemasteredV1.15.esm
+
+    mv StarwindRemasteredV1.15.esm Starwind.omwaddon
 
     if [ "$1" != "nomp" ]; then
         merge_to_master StarwindMPRecords.esp Starwind.omwaddon
@@ -79,11 +81,8 @@ do_sp_merge() {
 
     merge_to_master naboo.esp StarwindRemasteredPatch.esm
 
-    merge_to_master --remove-deleted StarwindRemasteredPatch.esm StarwindRemasteredV1.15.esm
+    merge_to_master StarwindRemasteredPatch.esm StarwindRemasteredV1.15.esm
     mv StarwindRemasteredV1.15.esm Starwind-Solo.omwaddon
-
-    # Patch phase to implement components which cannot otherwise be repaired, primarily due to --remove-deleted removing deleted records we actually totally did want
-    merge_to_master deletedbirthsigns.esp Starwind-Solo.omwaddon
 }
 
 do_standalone_merge() {
@@ -238,9 +237,6 @@ tes3cmd modify --type ACTI --replace "/Name:Asteriod/Name:Asteroid/" StarwindRem
 echo "Cleaning junk cells..."
 for cell in "${JUNK_CELL[@]}"; do tes3cmd delete --type CELL --type PGRD --hide-backups --exact-id "$cell" StarwindRemasteredV1.15.esm StarwindRemasteredPatch.esm; done
 tes3cmd delete --type CELL --exterior StarwindRemasteredV1.15.esm StarwindRemasteredPatch.esm
-
-# MTM removes deleted birthsigns, which is a problem because we don't want vanilla birthsigns
-tes3cmd dump --type BSGN --match "deleted" --raw-with-header deletedbirthsigns.esp StarwindRemasteredV1.15.esm
 
 # I'll fix gavan myself in CPP because nobody seems to know exactly what's going on here
 tes3cmd dump --type CELL --exact-id "Tatooine" --instance-match "ObjIdx:397 " StarwindRemasteredPatch.esm
