@@ -89,3 +89,13 @@ jobs:
           tag_name: ${{ needs.cleanup.outputs.release_name }}
           prerelease: ${{ needs.cleanup.outputs.tagged == 'false' }}
           files: ${{ matrix.output_file }}
+
+      - name: Webhook
+        if: matrix.make_target == 'tsi'
+        needs: [release, format-release-notification]
+        uses: DreamWeave-MP/StroggForge/.github/workflows/discord.yml@v6
+        secrets:
+          WEBHOOK_URL: ${{ secrets.TSI_UPDATE_CHANNEL_HOOK }}
+        with:
+          title: The Starwind initiative has updated!
+          description: Please download the latest [Starwind-TSI.omwaddon](https://github.com/DreamWeave-MP/Starwind-Builder/releases/download/development/Starwind-TSI.omwaddon)
