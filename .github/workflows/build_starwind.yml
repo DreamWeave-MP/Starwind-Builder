@@ -107,7 +107,7 @@ jobs:
     steps:
       - name: Reboot Live Server
         run: |
-          echo "${{ secrets.LIVE_SERVER_KEY }}" > TSI_KEY
           mkdir $HOME/.ssh
-          echo "${{ secrets.LIVE_SERVER_HOSTS }}" >> $HOME/.ssh/known_hosts
+          echo "${{ secrets.LIVE_SERVER_KEY }}" > TSI_KEY && chmod 600 TSI_KEY
+          echo "${{ secrets.LIVE_SERVER_HOSTS }}" >> $HOME/.ssh/known_hosts && chmod 600 $HOME/.ssh/known_hosts
           ssh -i TSI_KEY "${{ secrets.LIVE_SERVER_USER }}@${{ secrets.LIVE_SERVER_IP }}"
