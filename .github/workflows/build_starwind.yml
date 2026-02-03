@@ -102,7 +102,7 @@ jobs:
       description: Please download the latest [Starwind-TSI.omwaddon](https://github.com/DreamWeave-MP/Starwind-Builder/releases/download/development/Starwind-TSI.omwaddon)
 
   restart-tes3mp-server:
-    needs: call-discord-webhook
+    needs: build-variants
     runs-on: ubuntu-latest
     steps:
       - name: Reboot Live Server
