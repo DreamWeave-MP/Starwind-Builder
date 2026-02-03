@@ -71,15 +71,15 @@ do_mp_merge() {
 }
 
 do_sp_merge() {
-    merge_to_master "Starwind Enhanced.esm" StarwindRemasteredPatch.esm
+    # merge_to_master "Starwind Enhanced.esm" StarwindRemasteredPatch.esm
 
-    merge_to_master StarwindPlanExp.esp StarwindRemasteredPatch.esm
-    merge_to_master alt_start1.5.esp StarwindRemasteredPatch.esm
-    merge_to_master StarwindVvardenfell.esp StarwindRemasteredPatch.esm
+    # merge_to_master StarwindPlanExp.esp StarwindRemasteredPatch.esm
+    # merge_to_master alt_start1.5.esp StarwindRemasteredPatch.esm
+    # merge_to_master StarwindVvardenfell.esp StarwindRemasteredPatch.esm
 
-    merge_to_master "Starwind Community Patch Project.esp" StarwindRemasteredPatch.esm
+    # merge_to_master "Starwind Community Patch Project.esp" StarwindRemasteredPatch.esm
 
-    merge_to_master naboo.esp StarwindRemasteredPatch.esm
+    # merge_to_master naboo.esp StarwindRemasteredPatch.esm
 
     merge_to_master StarwindRemasteredPatch.esm StarwindRemasteredV1.15.esm
     mv StarwindRemasteredV1.15.esm Starwind-Solo.omwaddon
