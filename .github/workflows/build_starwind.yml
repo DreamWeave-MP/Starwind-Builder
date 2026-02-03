@@ -92,7 +92,7 @@ jobs:
           files: ${{ matrix.output_file }}
 
   call-discord-webhook:
-    if: always() && github.event_name == 'push'
+    if: github.event_name == 'push'
     needs: [build-variants]
     uses: DreamWeave-MP/StroggForge/.github/workflows/discord.yml@v6
     secrets:
