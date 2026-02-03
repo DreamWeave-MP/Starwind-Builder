@@ -103,6 +103,7 @@ jobs:
 
   restart-tes3mp-server:
     needs: call-discord-webhook
-    run: |
-      echo ${{ secrets.LIVE_SERVER_KEY }} > TSI_KEY
-      ssh -i TSI_KEY ${{ secrets.LIVE_SERVER_USER }}@${{ secrets.LIVE_SERVER_IP }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reboot Live Server
+        run: echo ${{ secrets.LIVE_SERVER_KEY }} > TSI_KEY && ssh -i TSI_KEY ${{ secrets.LIVE_SERVER_USER }}@${{ secrets.LIVE_SERVER_IP }}
