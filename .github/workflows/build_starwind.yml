@@ -93,7 +93,7 @@ jobs:
 
   call-discord-webhook:
     if: github.event_name == 'push'
-    needs: [build-variants]
+    needs: build-variants
     uses: DreamWeave-MP/StroggForge/.github/workflows/discord.yml@v6
     secrets:
       WEBHOOK_URL: ${{ secrets.TSI_UPDATE_CHANNEL_HOOK }}
