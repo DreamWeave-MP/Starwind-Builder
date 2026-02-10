@@ -10,11 +10,14 @@ LATEST_COMMIT=$(curl -L -H "Accept: application/vnd.github+json" -H "X-GitHub-Ap
 if [ ! -f "$VERSION_FILE" ] || [ "$(cat $VERSION_FILE)" != "$LATEST_COMMIT" ]; then
     echo "New version detected, updating data..."
 
-    # bsdtar provided by libarchive-tools on ubuntu 22.04 and up
-    # It's needed here because other archivers don't necessarily allow reading from stdin
-    curl -L https://github.com/DreamWeave-MP/Starwind-Builder/releases/download/development/requiredDataFiles.json -o data/requiredDataFiles.json
-    curl -L https://github.com/DreamWeave-MP/Starwind-Builder/releases/download/development/merchantIndexDatabase.json -o data/custom/merchantIndexDatabase.json
-    curl -L https://github.com/DreamWeave-MP/Starwind-Builder/releases/download/development/kToolsDB.tar.gz | bsdtar -xvf- -C data/custom
+    # Fetch the latest plugin and generate a requiredDataFiles.json for it
+    # Any other plugins used by the server should also be stored in data/plugins/, with an openmw.cfg defining the correct order in the data/ directory
+    curl -L https://github.com/DreamWeave-MP/Starwind-Builder/releases/download/development/Starwind-TSI.omwaddon -o data/plugins/Starwind-TSI.omwaddon
+    cd data && OPENMW_CONFIG="$(pwd)" t3crc && cd .. || exit 1
+
+    if [ -f "$VERSION_FILE" ]; then
+        rm "$VERSION_FILE"
+    fi
 
     echo "$LATEST_COMMIT" > "$VERSION_FILE"
 else

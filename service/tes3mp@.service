@@ -1,0 +1,18 @@
+[Unit]
+Description=Tes3mp game server for %i
+After=network-online.target
+Wants=network-online.target
+StartLimitIntervalSec=0
+StartLimitInterval=200
+StartLimitBurst=5
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=45
+User=%i
+ExecStart=/home/%i/tes3mp-init.sh
+WorkingDirectory=/home/%i
+
+[Install]
+WantedBy=multi-user.target
