@@ -2,8 +2,17 @@
 
 This folder contains files necessary for the automatic updating and deployment of your DreamScripts server.
 
-1. Download the tes3mp server and extract it into the root of the home folder
-2. Download `t3crc` from [here](https://github.com/DreamWeave-MP/motherJungle/releases/download/development/t3crc-Linux-X64.zip) and install it into your $PATH (such as `/usr/bin`)
+1. Install [`t3crc`](https://github.com/DreamWeave-MP/motherJungle/releases/download/development/t3crc-Linux-X64.zip), which is used to automatically generate `requiredDataFiles.json` for your server:
+```sh
+wget https://github.com/DreamWeave-MP/motherJungle/releases/download/development/t3crc-Linux-X64.zip
+unzip t3crc-Linux-X64.zip
+# OPTIONAL: If you have cosign installed, verify the t3crc binary's integrity
+cosign verify-blob ./t3crc --certificate-identity-regexp="https://github.com/DreamWeave-MP/motherJungle/.github/workflows/" --certificate-oidc-issuer="https://token.actions.githubusercontent.com" --bundle ./t3crc-Linux-X64.bundle
+rm t3crc-Linux-X64.bundle
+chmod +x ./t3crc
+sudo mv ./t3crc /usr/bin/t3crc
+```
+2. Download the tes3mp server and extract it into the root of the home folder
 3. Place `tes3mp-init.sh` in the root of your home folder
 4. Copy `tes3mp@service` to `/etc/systemd/system`
 5. Create the `tes3mp-update-deploy` user, and prepare their account for SSH setup:
